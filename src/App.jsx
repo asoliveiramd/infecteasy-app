@@ -1,30 +1,27 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import './App.css'
 
 function App() {
-  // Estados simples
+  // Estados principais
   const [currentView, setCurrentView] = useState('login')
   const [currentUser, setCurrentUser] = useState(null)
   const [currentModule, setCurrentModule] = useState(null)
   const [currentLesson, setCurrentLesson] = useState(null)
   const [currentSection, setCurrentSection] = useState(0)
-  
-  // Estados de login - USANDO HTML PURO
-  const [loginUsername, setLoginUsername] = useState('')
-  const [loginPassword, setLoginPassword] = useState('')
-  
-  // Estados de registro
-  const [registerNome, setRegisterNome] = useState('')
-  const [registerCpf, setRegisterCpf] = useState('')
-  const [registerDataNascimento, setRegisterDataNascimento] = useState('')
-  const [registerTelefone, setRegisterTelefone] = useState('')
-  const [registerEmail, setRegisterEmail] = useState('')
-  const [registerLogin, setRegisterLogin] = useState('')
-  const [registerAtividadeProfissional, setRegisterAtividadeProfissional] = useState('')
-  const [registerSenha, setRegisterSenha] = useState('')
-  const [registerConfirmarSenha, setRegisterConfirmarSenha] = useState('')
-  
   const [message, setMessage] = useState('')
+
+  // Refs para inputs não controlados (SOLUÇÃO RADICAL)
+  const loginUsernameRef = useRef(null)
+  const loginPasswordRef = useRef(null)
+  const registerNomeRef = useRef(null)
+  const registerCpfRef = useRef(null)
+  const registerDataNascimentoRef = useRef(null)
+  const registerTelefoneRef = useRef(null)
+  const registerEmailRef = useRef(null)
+  const registerLoginRef = useRef(null)
+  const registerAtividadeProfissionalRef = useRef(null)
+  const registerSenhaRef = useRef(null)
+  const registerConfirmarSenhaRef = useRef(null)
 
   // Carregar usuário do localStorage
   useEffect(() => {
@@ -175,14 +172,17 @@ Esta informação permite o início de terapia empírica enquanto aguarda-se a c
     }
   }
 
-  // Funções de autenticação
+  // Funções de autenticação usando refs (inputs não controlados)
   const handleLogin = () => {
-    if (loginUsername === 'demo' && loginPassword === 'demo') {
+    const username = loginUsernameRef.current?.value || ''
+    const password = loginPasswordRef.current?.value || ''
+    
+    if (username === 'demo' && password === 'demo') {
       const user = {
         id: 'demo123',
         nome: 'Usuário Demo',
-        login: loginUsername,
-        xp: 965,
+        login: username,
+        xp: 1000,
         nivel: 2,
         sequencia: 5,
         licoesCompletas: [],
@@ -198,26 +198,32 @@ Esta informação permite o início de terapia empírica enquanto aguarda-se a c
   }
 
   const handleRegister = () => {
-    if (!registerNome || !registerCpf || !registerLogin || !registerSenha) {
+    const nome = registerNomeRef.current?.value || ''
+    const cpf = registerCpfRef.current?.value || ''
+    const login = registerLoginRef.current?.value || ''
+    const senha = registerSenhaRef.current?.value || ''
+    const confirmarSenha = registerConfirmarSenhaRef.current?.value || ''
+    
+    if (!nome || !cpf || !login || !senha) {
       setMessage('Preencha todos os campos obrigatórios')
       return
     }
     
-    if (registerSenha !== registerConfirmarSenha) {
+    if (senha !== confirmarSenha) {
       setMessage('Senhas não coincidem')
       return
     }
 
     const newUser = {
       id: Date.now().toString(),
-      nome: registerNome,
-      cpf: registerCpf,
-      dataNascimento: registerDataNascimento,
-      telefone: registerTelefone,
-      email: registerEmail,
-      login: registerLogin,
-      atividadeProfissional: registerAtividadeProfissional,
-      senha: registerSenha,
+      nome: nome,
+      cpf: cpf,
+      dataNascimento: registerDataNascimentoRef.current?.value || '',
+      telefone: registerTelefoneRef.current?.value || '',
+      email: registerEmailRef.current?.value || '',
+      login: login,
+      atividadeProfissional: registerAtividadeProfissionalRef.current?.value || '',
+      senha: senha,
       xp: 0,
       nivel: 1,
       sequencia: 0,
@@ -235,9 +241,10 @@ Esta informação permite o início de terapia empírica enquanto aguarda-se a c
     setCurrentUser(null)
     localStorage.removeItem('currentUser')
     setCurrentView('login')
-    setLoginUsername('')
-    setLoginPassword('')
     setMessage('')
+    // Limpar campos
+    if (loginUsernameRef.current) loginUsernameRef.current.value = ''
+    if (loginPasswordRef.current) loginPasswordRef.current.value = ''
   }
 
   // Funções de navegação
@@ -306,9 +313,6 @@ Esta informação permite o início de terapia empírica enquanto aguarda-se a c
       outline: 'none',
       transition: 'border-color 0.2s',
       boxSizing: 'border-box'
-    },
-    inputFocus: {
-      borderColor: '#3b82f6'
     },
     button: {
       width: '100%',
@@ -419,7 +423,7 @@ Esta informação permite o início de terapia empírica enquanto aguarda-se a c
     }
   }
 
-  // Componente de Login com HTML PURO
+  // Componente de Login com INPUTS NÃO CONTROLADOS
   const LoginView = () => (
     <div style={{...styles.container, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem'}}>
       <div style={styles.card}>
@@ -435,18 +439,18 @@ Esta informação permite o início de terapia empírica enquanto aguarda-se a c
         
         <div>
           <input
+            ref={loginUsernameRef}
             style={styles.input}
             type="text"
             placeholder="Login"
-            value={loginUsername}
-            onChange={(e) => setLoginUsername(e.target.value)}
+            defaultValue=""
           />
           <input
+            ref={loginPasswordRef}
             style={styles.input}
             type="password"
             placeholder="Senha"
-            value={loginPassword}
-            onChange={(e) => setLoginPassword(e.target.value)}
+            defaultValue=""
           />
           <button style={styles.button} onClick={handleLogin}>
             Entrar
@@ -462,7 +466,7 @@ Esta informação permite o início de terapia empírica enquanto aguarda-se a c
     </div>
   )
 
-  // Componente de Registro
+  // Componente de Registro com INPUTS NÃO CONTROLADOS
   const RegisterView = () => (
     <div style={{...styles.container, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem'}}>
       <div style={styles.card}>
@@ -478,51 +482,51 @@ Esta informação permite o início de terapia empírica enquanto aguarda-se a c
         
         <div>
           <input
+            ref={registerNomeRef}
             style={styles.input}
             type="text"
             placeholder="Nome Completo *"
-            value={registerNome}
-            onChange={(e) => setRegisterNome(e.target.value)}
+            defaultValue=""
           />
           <input
+            ref={registerCpfRef}
             style={styles.input}
             type="text"
             placeholder="CPF *"
-            value={registerCpf}
-            onChange={(e) => setRegisterCpf(e.target.value)}
+            defaultValue=""
           />
           <input
+            ref={registerDataNascimentoRef}
             style={styles.input}
             type="date"
             placeholder="Data de Nascimento"
-            value={registerDataNascimento}
-            onChange={(e) => setRegisterDataNascimento(e.target.value)}
+            defaultValue=""
           />
           <input
+            ref={registerTelefoneRef}
             style={styles.input}
             type="tel"
             placeholder="Telefone"
-            value={registerTelefone}
-            onChange={(e) => setRegisterTelefone(e.target.value)}
+            defaultValue=""
           />
           <input
+            ref={registerEmailRef}
             style={styles.input}
             type="email"
             placeholder="Email"
-            value={registerEmail}
-            onChange={(e) => setRegisterEmail(e.target.value)}
+            defaultValue=""
           />
           <input
+            ref={registerLoginRef}
             style={styles.input}
             type="text"
             placeholder="Login *"
-            value={registerLogin}
-            onChange={(e) => setRegisterLogin(e.target.value)}
+            defaultValue=""
           />
           <select
+            ref={registerAtividadeProfissionalRef}
             style={styles.input}
-            value={registerAtividadeProfissional}
-            onChange={(e) => setRegisterAtividadeProfissional(e.target.value)}
+            defaultValue=""
           >
             <option value="">Atividade Profissional *</option>
             <option value="medico">Médico</option>
@@ -533,18 +537,18 @@ Esta informação permite o início de terapia empírica enquanto aguarda-se a c
             <option value="outro">Outro</option>
           </select>
           <input
+            ref={registerSenhaRef}
             style={styles.input}
             type="password"
             placeholder="Senha *"
-            value={registerSenha}
-            onChange={(e) => setRegisterSenha(e.target.value)}
+            defaultValue=""
           />
           <input
+            ref={registerConfirmarSenhaRef}
             style={styles.input}
             type="password"
             placeholder="Confirmar Senha *"
-            value={registerConfirmarSenha}
-            onChange={(e) => setRegisterConfirmarSenha(e.target.value)}
+            defaultValue=""
           />
           <button style={styles.button} onClick={handleRegister}>
             Criar Conta
