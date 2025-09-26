@@ -1,29 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
-import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card'
-import { Button } from './components/ui/button'
-import { Input } from './components/ui/input'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './components/ui/select'
-import { Progress } from './components/ui/progress'
-import { Badge } from './components/ui/badge'
-import { Eye, EyeOff, Settings, LogOut, ArrowLeft, ArrowRight, BookOpen, Trophy, Calendar, User, Phone, Mail, Lock, Stethoscope } from 'lucide-react'
-import Glossary from './components/Glossary'
 
 function App() {
-  // Estados principais
+  // Estados simples
+  const [currentView, setCurrentView] = useState('login')
   const [currentUser, setCurrentUser] = useState(null)
-  const [authView, setAuthView] = useState('login')
-  const [showPasswordRecovery, setShowPasswordRecovery] = useState(false)
-  const [showSettings, setShowSettings] = useState(false)
-  const [currentView, setCurrentView] = useState('home')
   const [currentModule, setCurrentModule] = useState(null)
   const [currentLesson, setCurrentLesson] = useState(null)
   const [currentSection, setCurrentSection] = useState(0)
-
-  // Estados de formulários - SOLUÇÃO SIMPLES: Estados separados para cada campo
+  
+  // Estados de login - USANDO HTML PURO
   const [loginUsername, setLoginUsername] = useState('')
   const [loginPassword, setLoginPassword] = useState('')
   
+  // Estados de registro
   const [registerNome, setRegisterNome] = useState('')
   const [registerCpf, setRegisterCpf] = useState('')
   const [registerDataNascimento, setRegisterDataNascimento] = useState('')
@@ -34,117 +24,192 @@ function App() {
   const [registerSenha, setRegisterSenha] = useState('')
   const [registerConfirmarSenha, setRegisterConfirmarSenha] = useState('')
   
-  const [recoveryEmail, setRecoveryEmail] = useState('')
-  
-  const [editNome, setEditNome] = useState('')
-  const [editCpf, setEditCpf] = useState('')
-  const [editDataNascimento, setEditDataNascimento] = useState('')
-  const [editTelefone, setEditTelefone] = useState('')
-  const [editEmail, setEditEmail] = useState('')
-  
-  const [passwordSenhaAtual, setPasswordSenhaAtual] = useState('')
-  const [passwordNovaSenha, setPasswordNovaSenha] = useState('')
-  const [passwordConfirmarNovaSenha, setPasswordConfirmarNovaSenha] = useState('')
-
-  // Estados de visibilidade
-  const [showPassword, setShowPassword] = useState(false)
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
-  const [showCurrentPassword, setShowCurrentPassword] = useState(false)
-  const [showNewPassword, setShowNewPassword] = useState(false)
-  const [showConfirmNewPassword, setShowConfirmNewPassword] = useState(false)
-  const [editMode, setEditMode] = useState(false)
-
-  // Funções de formatação
-  const formatCPF = (value) => {
-    const numbers = value.replace(/\D/g, '')
-    return numbers.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4')
-  }
-
-  const formatTelefone = (value) => {
-    const numbers = value.replace(/\D/g, '')
-    if (numbers.length <= 10) {
-      return numbers.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3')
-    }
-    return numbers.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3')
-  }
-
-  // Handlers para CPF e Telefone com formatação
-  const handleCpfChange = (e) => {
-    const formatted = formatCPF(e.target.value)
-    setRegisterCpf(formatted)
-  }
-
-  const handleTelefoneChange = (e) => {
-    const formatted = formatTelefone(e.target.value)
-    setRegisterTelefone(formatted)
-  }
+  const [message, setMessage] = useState('')
 
   // Carregar usuário do localStorage
   useEffect(() => {
     const savedUser = localStorage.getItem('currentUser')
     if (savedUser) {
-      try {
-        setCurrentUser(JSON.parse(savedUser))
-      } catch (error) {
-        console.error('Erro ao carregar usuário:', error)
-        localStorage.removeItem('currentUser')
-      }
+      const user = JSON.parse(savedUser)
+      setCurrentUser(user)
+      setCurrentView('dashboard')
     }
   }, [])
 
+  // Dados dos módulos
+  const modules = {
+    infectologia: {
+      id: 'infectologia',
+      title: 'Fundamentos da Infectologia',
+      description: 'Conceitos básicos e fundamentais da infectologia clínica',
+      lessons: [
+        {
+          id: 'gram',
+          title: 'O Método de Gram na Prática',
+          duration: '10 min',
+          xp: 50,
+          sections: [
+            {
+              title: 'Introdução ao Método de Gram',
+              content: `O método de coloração de Gram é uma das técnicas mais fundamentais em microbiologia clínica. Desenvolvido por Hans Christian Gram em 1884, este método permite a classificação inicial das bactérias em dois grandes grupos: Gram-positivas e Gram-negativas.
+
+Esta diferenciação é crucial para:
+- Orientação terapêutica inicial
+- Compreensão da patogênese
+- Seleção de antibióticos apropriados`
+            },
+            {
+              title: 'Fundamentos da Técnica',
+              content: `A coloração de Gram baseia-se nas diferenças estruturais da parede celular bacteriana:
+
+**Bactérias Gram-positivas:**
+- Parede celular espessa (20-80 nm)
+- Rica em peptidoglicano
+- Retém o corante primário (cristal violeta)
+- Aparecem roxas/azuis ao microscópio
+
+**Bactérias Gram-negativas:**
+- Parede celular fina (5-10 nm)
+- Membrana externa adicional
+- Perdem o corante primário durante a descoloração
+- Coram-se com safranina (rosa/vermelha)`
+            },
+            {
+              title: 'Procedimento Passo a Passo',
+              content: `**Etapas da Coloração de Gram:**
+
+1. **Fixação:** Fixar o esfregaço pelo calor
+2. **Corante primário:** Cristal violeta (1 minuto)
+3. **Mordente:** Lugol (1 minuto)  
+4. **Descoloração:** Álcool-acetona (10-15 segundos)
+5. **Corante secundário:** Safranina (1 minuto)
+
+**Dica Clínica:** O tempo de descoloração é crítico - muito pouco não remove o corante das Gram-negativas, muito tempo pode descolorir as Gram-positivas.`
+            },
+            {
+              title: 'Interpretação Clínica',
+              content: `**Correlação Clínica:**
+
+A identificação de bactérias Gram-positivas ou Gram-negativas orienta decisões terapêuticas imediatas:
+
+**Cocos Gram-positivos em cadeia:** Suspeitar de Streptococcus
+**Cocos Gram-positivos em cachos:** Suspeitar de Staphylococcus  
+**Bacilos Gram-negativos:** Considerar enterobactérias
+**Diplococos Gram-negativos:** Suspeitar de Neisseria
+
+Esta informação permite o início de terapia empírica enquanto aguarda-se a cultura e antibiograma.`
+            },
+            {
+              title: 'Limitações e Cuidados',
+              content: `**Limitações do Método:**
+
+- Algumas bactérias são Gram-variáveis
+- Bactérias muito jovens ou muito velhas podem corar inadequadamente
+- Mycobacterium não cora pelo método de Gram
+- Alguns microrganismos requerem colorações especiais
+
+**Controle de Qualidade:**
+- Usar controles positivos e negativos
+- Verificar a qualidade dos reagentes
+- Observar a morfologia além da coloração
+
+**Dica Prática:** Sempre correlacionar os achados microscópicos com o quadro clínico do paciente.`
+            }
+          ]
+        }
+      ]
+    },
+    antibiograma: {
+      id: 'antibiograma',
+      title: 'Interpretação de Antibiograma',
+      description: 'Aprenda a interpretar testes de sensibilidade antimicrobiana',
+      lessons: [
+        {
+          id: 'conceitos',
+          title: 'Conceitos Fundamentais',
+          duration: '12 min',
+          xp: 75,
+          sections: [
+            {
+              title: 'Introdução ao Antibiograma',
+              content: `O antibiograma é um teste laboratorial essencial que determina a sensibilidade de microrganismos a diferentes antimicrobianos. Este teste é fundamental para:
+
+- Orientar a terapia antimicrobiana específica
+- Reduzir o uso inadequado de antibióticos
+- Minimizar o desenvolvimento de resistência
+- Otimizar resultados clínicos`
+            },
+            {
+              title: 'Métodos de Teste',
+              content: `**Principais Métodos:**
+
+**1. Disco-difusão (Kirby-Bauer):**
+- Método qualitativo
+- Baseado em halos de inibição
+- Padronizado pelo CLSI/EUCAST
+
+**2. Microdiluição em caldo:**
+- Determina CIM (Concentração Inibitória Mínima)
+- Método quantitativo mais preciso
+- Padrão-ouro para testes de sensibilidade
+
+**3. E-test:**
+- Combina disco-difusão com determinação de CIM
+- Útil para organismos fastidiosos`
+            },
+            {
+              title: 'Interpretação dos Resultados',
+              content: `**Categorias de Interpretação:**
+
+**Sensível (S):** O microrganismo é inibido pelas concentrações usuais do antimicrobiano
+
+**Intermediário (I):** Sensibilidade reduzida; pode ser eficaz com doses aumentadas ou em sítios de concentração elevada
+
+**Resistente (R):** O microrganismo não é inibido pelas concentrações usuais do antimicrobiano
+
+**Pontos de Corte:** Valores estabelecidos pelo CLSI/EUCAST baseados em dados farmacocinéticos, farmacodinâmicos e desfechos clínicos.`
+            }
+          ]
+        }
+      ]
+    }
+  }
+
   // Funções de autenticação
   const handleLogin = () => {
-    if (!loginUsername || !loginPassword) {
-      alert('Por favor, preencha todos os campos.')
-      return
-    }
-
-    const users = JSON.parse(localStorage.getItem('users') || '[]')
-    const user = users.find(u => u.login === loginUsername && u.senha === loginPassword)
-
-    if (user) {
+    if (loginUsername === 'demo' && loginPassword === 'demo') {
+      const user = {
+        id: 'demo123',
+        nome: 'Usuário Demo',
+        login: loginUsername,
+        xp: 965,
+        nivel: 2,
+        sequencia: 5,
+        licoesCompletas: [],
+        progresso: {}
+      }
       setCurrentUser(user)
       localStorage.setItem('currentUser', JSON.stringify(user))
-      setLoginUsername('')
-      setLoginPassword('')
+      setCurrentView('dashboard')
+      setMessage('Login realizado com sucesso!')
     } else {
-      alert('Login ou senha incorretos.')
+      setMessage('Credenciais inválidas')
     }
   }
 
   const handleRegister = () => {
-    // Validações
-    if (!registerNome || !registerCpf || !registerDataNascimento || 
-        !registerTelefone || !registerEmail || !registerLogin || 
-        !registerAtividadeProfissional || !registerSenha || !registerConfirmarSenha) {
-      alert('Por favor, preencha todos os campos obrigatórios.')
+    if (!registerNome || !registerCpf || !registerLogin || !registerSenha) {
+      setMessage('Preencha todos os campos obrigatórios')
       return
     }
-
-    if (registerSenha !== registerConfirmarSenha) {
-      alert('As senhas não coincidem.')
-      return
-    }
-
-    if (registerSenha.length < 6) {
-      alert('A senha deve ter pelo menos 6 caracteres.')
-      return
-    }
-
-    const users = JSON.parse(localStorage.getItem('users') || '[]')
     
-    if (users.some(u => u.login === registerLogin)) {
-      alert('Este login já está em uso.')
-      return
-    }
-
-    if (users.some(u => u.email === registerEmail)) {
-      alert('Este email já está cadastrado.')
+    if (registerSenha !== registerConfirmarSenha) {
+      setMessage('Senhas não coincidem')
       return
     }
 
     const newUser = {
-      id: Date.now(),
+      id: Date.now().toString(),
       nome: registerNome,
       cpf: registerCpf,
       dataNascimento: registerDataNascimento,
@@ -153,538 +218,614 @@ function App() {
       login: registerLogin,
       atividadeProfissional: registerAtividadeProfissional,
       senha: registerSenha,
-      dataCadastro: new Date().toISOString()
+      xp: 0,
+      nivel: 1,
+      sequencia: 0,
+      licoesCompletas: [],
+      progresso: {}
     }
 
-    users.push(newUser)
-    localStorage.setItem('users', JSON.stringify(users))
-    
-    alert('Cadastro realizado com sucesso! Faça login para continuar.')
-    setAuthView('login')
-    
-    // Limpar todos os campos
-    setRegisterNome('')
-    setRegisterCpf('')
-    setRegisterDataNascimento('')
-    setRegisterTelefone('')
-    setRegisterEmail('')
-    setRegisterLogin('')
-    setRegisterAtividadeProfissional('')
-    setRegisterSenha('')
-    setRegisterConfirmarSenha('')
-  }
-
-  const handlePasswordRecovery = () => {
-    if (!recoveryEmail) {
-      alert('Por favor, digite seu email.')
-      return
-    }
-
-    const users = JSON.parse(localStorage.getItem('users') || '[]')
-    const user = users.find(u => u.email === recoveryEmail)
-
-    if (user) {
-      alert(`Instruções de recuperação enviadas para ${recoveryEmail}`)
-      setRecoveryEmail('')
-      setShowPasswordRecovery(false)
-    } else {
-      alert('Email não encontrado.')
-    }
+    setCurrentUser(newUser)
+    localStorage.setItem('currentUser', JSON.stringify(newUser))
+    setCurrentView('dashboard')
+    setMessage('Conta criada com sucesso!')
   }
 
   const handleLogout = () => {
     setCurrentUser(null)
     localStorage.removeItem('currentUser')
-    setCurrentView('home')
-    setShowSettings(false)
+    setCurrentView('login')
+    setLoginUsername('')
+    setLoginPassword('')
+    setMessage('')
   }
 
-  // Dados dos módulos e lições
-  const modules = [
-    {
-      id: 1,
-      title: "Fundamentos da Infectologia",
-      description: "Conceitos básicos e fundamentais da infectologia clínica",
-      lessons: [
-        {
-          id: 1,
-          title: "O Método de Gram na Prática",
-          duration: "10 min",
-          xp: 50,
-          sections: [
-            {
-              title: "Introdução ao Método de Gram",
-              content: `O método de coloração de Gram é uma das técnicas mais importantes na microbiologia clínica. Desenvolvido por Hans Christian Gram em 1884, este método permite a classificação inicial das bactérias em dois grandes grupos: Gram-positivas e Gram-negativas.
-
-Esta diferenciação é fundamental para:
-- Orientação terapêutica inicial
-- Seleção de antibióticos apropriados
-- Compreensão da patogênese
-- Interpretação de resultados de cultura`,
-              clinicalTip: "A coloração de Gram deve ser sempre o primeiro passo na identificação bacteriana, fornecendo informações cruciais em minutos."
-            },
-            {
-              title: "Procedimento de Coloração",
-              content: `O procedimento envolve quatro etapas principais:
-
-**1. Coloração Primária (Cristal Violeta)**
-- Todas as bactérias ficam roxas
-- Tempo: 1 minuto
-
-**2. Mordente (Lugol)**
-- Fixa o corante nas células
-- Tempo: 1 minuto
-
-**3. Descoloração (Álcool-Acetona)**
-- Remove o corante das Gram-negativas
-- Tempo: 10-30 segundos (crítico!)
-
-**4. Coloração Secundária (Safranina)**
-- Cora as Gram-negativas de rosa/vermelho
-- Tempo: 1 minuto`,
-              clinicalTip: "O tempo de descoloração é crítico - muito pouco pode resultar em falsos Gram-positivos, muito pode causar falsos Gram-negativos."
-            },
-            {
-              title: "Interpretação dos Resultados",
-              content: `**Bactérias Gram-Positivas (Roxas/Azuis):**
-- Parede celular espessa com peptidoglicano
-- Exemplos: Staphylococcus, Streptococcus, Enterococcus
-- Geralmente sensíveis a penicilinas
-
-**Bactérias Gram-Negativas (Rosa/Vermelhas):**
-- Parede celular fina, membrana externa
-- Exemplos: E. coli, Klebsiella, Pseudomonas
-- Resistência natural a alguns antibióticos
-
-**Morfologia Associada:**
-- Cocos: esféricos
-- Bacilos: bastonetes
-- Arranjo: isolados, pares, cadeias, cachos`,
-              clinicalTip: "Sempre correlacione a morfologia com a coloração - cocos Gram-positivos em cachos sugerem Staphylococcus."
-            },
-            {
-              title: "Aplicações Clínicas",
-              content: `**Orientação Terapêutica Empírica:**
-
-*Cocos Gram-positivos:*
-- Pneumonia: Penicilina G ou Amoxicilina
-- Infecção de pele: Cefalexina ou Clindamicina
-
-*Bacilos Gram-negativos:*
-- ITU: Ciprofloxacino ou Nitrofurantoína
-- Sepse: Ceftriaxona ou Piperacilina-Tazobactam
-
-**Limitações:**
-- Não identifica espécie específica
-- Algumas bactérias são Gram-variáveis
-- Qualidade da amostra afeta resultado`,
-              clinicalTip: "Use sempre em conjunto com dados clínicos - a coloração de Gram orienta, mas não substitui a cultura e antibiograma."
-            },
-            {
-              title: "Controle de Qualidade",
-              content: `**Controles Diários:**
-- Gram-positivo: Staphylococcus epidermidis
-- Gram-negativo: Escherichia coli
-
-**Critérios de Qualidade:**
-- Coloração uniforme
-- Contraste adequado entre Gram+ e Gram-
-- Ausência de precipitados
-- Morfologia bacteriana preservada
-
-**Causas de Erro:**
-- Reagentes vencidos ou contaminados
-- Tempos inadequados de coloração
-- Fixação inadequada da lâmina
-- Espessura inadequada do esfregaço`,
-              clinicalTip: "Sempre inclua controles positivos e negativos - a qualidade da coloração de Gram impacta diretamente na conduta clínica."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      id: 2,
-      title: "Interpretação de Antibiograma",
-      description: "Aprenda a interpretar testes de sensibilidade antimicrobiana",
-      lessons: [
-        {
-          id: 1,
-          title: "Fundamentos do Antibiograma",
-          duration: "15 min",
-          xp: 75,
-          sections: [
-            {
-              title: "Introdução ao Antibiograma",
-              content: `O antibiograma é um teste laboratorial que determina a sensibilidade de bactérias a diferentes antibióticos. É essencial para:
-
-- Seleção da terapia antimicrobiana adequada
-- Redução da resistência bacteriana
-- Otimização do tratamento
-- Melhoria dos desfechos clínicos
-
-**Métodos Principais:**
-- Disco-difusão (Kirby-Bauer)
-- Microdiluição em caldo
-- E-test (gradiente de concentração)`,
-              clinicalTip: "O antibiograma deve sempre ser interpretado considerando o sítio de infecção e as características do paciente."
-            }
-          ]
-        }
-      ]
+  // Funções de navegação
+  const openModule = (moduleId) => {
+    const module = modules[moduleId]
+    if (module) {
+      setCurrentModule(module)
+      setCurrentView('module')
     }
-  ]
-
-  // Dados de progresso do usuário
-  const userProgress = {
-    level: 2,
-    xp: 965,
-    streak: 5,
-    completedLessons: []
   }
 
-  // Componente de Login
+  const openLesson = (lesson) => {
+    setCurrentLesson(lesson)
+    setCurrentSection(0)
+    setCurrentView('lesson')
+  }
+
+  const nextSection = () => {
+    if (currentLesson && currentSection < currentLesson.sections.length - 1) {
+      setCurrentSection(currentSection + 1)
+    }
+  }
+
+  const prevSection = () => {
+    if (currentSection > 0) {
+      setCurrentSection(currentSection - 1)
+    }
+  }
+
+  const completeLesson = () => {
+    if (currentUser && currentLesson) {
+      const updatedUser = {
+        ...currentUser,
+        xp: currentUser.xp + currentLesson.xp,
+        licoesCompletas: [...(currentUser.licoesCompletas || []), currentLesson.id]
+      }
+      setCurrentUser(updatedUser)
+      localStorage.setItem('currentUser', JSON.stringify(updatedUser))
+      setCurrentView('dashboard')
+      setMessage(`Lição concluída! +${currentLesson.xp} XP`)
+    }
+  }
+
+  // Estilos CSS inline
+  const styles = {
+    container: {
+      minHeight: '100vh',
+      background: 'linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%)',
+      fontFamily: 'system-ui, -apple-system, sans-serif'
+    },
+    card: {
+      backgroundColor: 'white',
+      borderRadius: '12px',
+      boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+      padding: '2rem',
+      maxWidth: '400px',
+      margin: '0 auto'
+    },
+    input: {
+      width: '100%',
+      padding: '12px 16px',
+      border: '2px solid #e5e7eb',
+      borderRadius: '8px',
+      fontSize: '16px',
+      marginBottom: '16px',
+      outline: 'none',
+      transition: 'border-color 0.2s',
+      boxSizing: 'border-box'
+    },
+    inputFocus: {
+      borderColor: '#3b82f6'
+    },
+    button: {
+      width: '100%',
+      padding: '12px 16px',
+      backgroundColor: '#3b82f6',
+      color: 'white',
+      border: 'none',
+      borderRadius: '8px',
+      fontSize: '16px',
+      fontWeight: '600',
+      cursor: 'pointer',
+      marginBottom: '12px',
+      transition: 'background-color 0.2s'
+    },
+    buttonSecondary: {
+      backgroundColor: 'transparent',
+      color: '#3b82f6',
+      border: '2px solid #3b82f6'
+    },
+    header: {
+      textAlign: 'center',
+      marginBottom: '2rem'
+    },
+    title: {
+      fontSize: '2rem',
+      fontWeight: 'bold',
+      color: '#1f2937',
+      marginBottom: '0.5rem'
+    },
+    subtitle: {
+      color: '#6b7280',
+      fontSize: '1rem'
+    },
+    logo: {
+      width: '48px',
+      height: '48px',
+      backgroundColor: '#3b82f6',
+      borderRadius: '12px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      margin: '0 auto 1rem auto',
+      color: 'white',
+      fontSize: '24px'
+    },
+    message: {
+      padding: '12px 16px',
+      backgroundColor: '#fef3c7',
+      border: '1px solid #f59e0b',
+      borderRadius: '8px',
+      marginBottom: '16px',
+      color: '#92400e'
+    },
+    dashboardContainer: {
+      minHeight: '100vh',
+      backgroundColor: '#f9fafb'
+    },
+    dashboardHeader: {
+      backgroundColor: 'white',
+      borderBottom: '1px solid #e5e7eb',
+      padding: '1rem 2rem',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center'
+    },
+    dashboardContent: {
+      maxWidth: '1200px',
+      margin: '0 auto',
+      padding: '2rem'
+    },
+    statsGrid: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+      gap: '1rem',
+      marginBottom: '2rem'
+    },
+    statCard: {
+      backgroundColor: 'white',
+      padding: '1.5rem',
+      borderRadius: '12px',
+      boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
+      textAlign: 'center'
+    },
+    modulesGrid: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+      gap: '2rem'
+    },
+    moduleCard: {
+      backgroundColor: 'white',
+      padding: '2rem',
+      borderRadius: '12px',
+      boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+      border: '1px solid #e5e7eb'
+    },
+    progressBar: {
+      width: '100%',
+      height: '8px',
+      backgroundColor: '#e5e7eb',
+      borderRadius: '4px',
+      overflow: 'hidden',
+      marginBottom: '1rem'
+    },
+    progressFill: {
+      height: '100%',
+      backgroundColor: '#3b82f6',
+      transition: 'width 0.3s ease'
+    }
+  }
+
+  // Componente de Login com HTML PURO
   const LoginView = () => (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-      <Card className="w-full max-w-md">
-        <CardHeader className="text-center">
-          <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-            <Stethoscope className="w-8 h-8 text-white" />
-          </div>
-          <CardTitle className="text-2xl font-bold text-gray-900">Infecteasy</CardTitle>
-          <p className="text-gray-600">Acesse o aplicativo de infectologia e doenças infecciosas</p>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="space-y-2">
-            <Input
-              placeholder="Login"
-              value={loginUsername}
-              onChange={(e) => setLoginUsername(e.target.value)}
-              className="w-full"
-            />
-          </div>
-          <div className="space-y-2">
-            <div className="relative">
-              <Input
-                type={showPassword ? "text" : "password"}
-                placeholder="Senha"
-                value={loginPassword}
-                onChange={(e) => setLoginPassword(e.target.value)}
-                className="w-full pr-10"
-              />
-              <Button
-                type="button"
-                variant="ghost"
-                size="sm"
-                className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
-                onClick={() => setShowPassword(!showPassword)}
-              >
-                {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-              </Button>
-            </div>
-          </div>
-          <Button onClick={handleLogin} className="w-full">
+    <div style={{...styles.container, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem'}}>
+      <div style={styles.card}>
+        <div style={styles.header}>
+          <div style={styles.logo}>🩺</div>
+          <h1 style={styles.title}>Infecteasy</h1>
+          <p style={styles.subtitle}>Acesse o aplicativo de infectologia e doenças infecciosas</p>
+        </div>
+        
+        {message && (
+          <div style={styles.message}>{message}</div>
+        )}
+        
+        <div>
+          <input
+            style={styles.input}
+            type="text"
+            placeholder="Login"
+            value={loginUsername}
+            onChange={(e) => setLoginUsername(e.target.value)}
+          />
+          <input
+            style={styles.input}
+            type="password"
+            placeholder="Senha"
+            value={loginPassword}
+            onChange={(e) => setLoginPassword(e.target.value)}
+          />
+          <button style={styles.button} onClick={handleLogin}>
             Entrar
-          </Button>
-          <div className="text-center space-y-2">
-            <Button
-              variant="link"
-              onClick={() => setShowPasswordRecovery(true)}
-              className="text-sm text-blue-600"
-            >
-              Esqueci minha senha
-            </Button>
-            <div className="text-sm text-gray-600">
-              Não tem uma conta?{' '}
-              <Button
-                variant="link"
-                onClick={() => setAuthView('register')}
-                className="text-blue-600 p-0 h-auto font-normal"
-              >
-                Cadastre-se
-              </Button>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+          </button>
+          <button 
+            style={{...styles.button, ...styles.buttonSecondary}} 
+            onClick={() => setCurrentView('register')}
+          >
+            Cadastre-se
+          </button>
+        </div>
+      </div>
     </div>
   )
 
   // Componente de Registro
   const RegisterView = () => (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-      <Card className="w-full max-w-md">
-        <CardHeader className="text-center">
-          <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-            <Stethoscope className="w-8 h-8 text-white" />
-          </div>
-          <CardTitle className="text-2xl font-bold text-gray-900">Criar Conta</CardTitle>
-          <p className="text-gray-600">Bem-vindo ao Infecteasy!</p>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <Input
+    <div style={{...styles.container, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem'}}>
+      <div style={styles.card}>
+        <div style={styles.header}>
+          <div style={styles.logo}>🩺</div>
+          <h1 style={styles.title}>Criar Conta</h1>
+          <p style={styles.subtitle}>Bem-vindo ao Infecteasy!</p>
+        </div>
+        
+        {message && (
+          <div style={styles.message}>{message}</div>
+        )}
+        
+        <div>
+          <input
+            style={styles.input}
+            type="text"
             placeholder="Nome Completo *"
             value={registerNome}
             onChange={(e) => setRegisterNome(e.target.value)}
           />
-          <Input
+          <input
+            style={styles.input}
+            type="text"
             placeholder="CPF *"
             value={registerCpf}
-            onChange={handleCpfChange}
-            maxLength={14}
+            onChange={(e) => setRegisterCpf(e.target.value)}
           />
-          <Input
+          <input
+            style={styles.input}
             type="date"
-            placeholder="Data de Nascimento *"
+            placeholder="Data de Nascimento"
             value={registerDataNascimento}
             onChange={(e) => setRegisterDataNascimento(e.target.value)}
           />
-          <Input
-            placeholder="Telefone *"
+          <input
+            style={styles.input}
+            type="tel"
+            placeholder="Telefone"
             value={registerTelefone}
-            onChange={handleTelefoneChange}
-            maxLength={15}
+            onChange={(e) => setRegisterTelefone(e.target.value)}
           />
-          <Input
+          <input
+            style={styles.input}
             type="email"
-            placeholder="Email *"
+            placeholder="Email"
             value={registerEmail}
             onChange={(e) => setRegisterEmail(e.target.value)}
           />
-          <Input
+          <input
+            style={styles.input}
+            type="text"
             placeholder="Login *"
             value={registerLogin}
             onChange={(e) => setRegisterLogin(e.target.value)}
           />
-          <Select value={registerAtividadeProfissional} onValueChange={setRegisterAtividadeProfissional}>
-            <SelectTrigger>
-              <SelectValue placeholder="Atividade Profissional *" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="medico">Médico</SelectItem>
-              <SelectItem value="enfermeiro">Enfermeiro</SelectItem>
-              <SelectItem value="farmaceutico">Farmacêutico</SelectItem>
-              <SelectItem value="biomedico">Biomédico</SelectItem>
-              <SelectItem value="estudante-medicina">Estudante de Medicina</SelectItem>
-              <SelectItem value="estudante-enfermagem">Estudante de Enfermagem</SelectItem>
-              <SelectItem value="residente">Residente</SelectItem>
-              <SelectItem value="outro">Outro</SelectItem>
-            </SelectContent>
-          </Select>
-          <div className="relative">
-            <Input
-              type={showPassword ? "text" : "password"}
-              placeholder="Senha *"
-              value={registerSenha}
-              onChange={(e) => setRegisterSenha(e.target.value)}
-              className="pr-10"
-            />
-            <Button
-              type="button"
-              variant="ghost"
-              size="sm"
-              className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
-              onClick={() => setShowPassword(!showPassword)}
-            >
-              {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-            </Button>
-          </div>
-          <div className="relative">
-            <Input
-              type={showConfirmPassword ? "text" : "password"}
-              placeholder="Confirmar Senha *"
-              value={registerConfirmarSenha}
-              onChange={(e) => setRegisterConfirmarSenha(e.target.value)}
-              className="pr-10"
-            />
-            <Button
-              type="button"
-              variant="ghost"
-              size="sm"
-              className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent"
-              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-            >
-              {showConfirmPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-            </Button>
-          </div>
-          <Button onClick={handleRegister} className="w-full">
-            Criar Conta
-          </Button>
-          <div className="text-center">
-            <p className="text-sm text-gray-600">
-              Já tem uma conta?{' '}
-              <Button
-                variant="link"
-                onClick={() => setAuthView('login')}
-                className="text-blue-600 p-0 h-auto font-normal"
-              >
-                Faça login
-              </Button>
-            </p>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  )
-
-  // Componente de Recuperação de Senha
-  const PasswordRecoveryView = () => (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-      <Card className="w-full max-w-md">
-        <CardHeader className="text-center">
-          <CardTitle className="text-2xl font-bold text-gray-900">Recuperar Senha</CardTitle>
-          <p className="text-gray-600">Digite seu email para receber instruções</p>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <Input
-            type="email"
-            placeholder="Email"
-            value={recoveryEmail}
-            onChange={(e) => setRecoveryEmail(e.target.value)}
+          <select
+            style={styles.input}
+            value={registerAtividadeProfissional}
+            onChange={(e) => setRegisterAtividadeProfissional(e.target.value)}
+          >
+            <option value="">Atividade Profissional *</option>
+            <option value="medico">Médico</option>
+            <option value="enfermeiro">Enfermeiro</option>
+            <option value="farmaceutico">Farmacêutico</option>
+            <option value="biomedico">Biomédico</option>
+            <option value="estudante">Estudante</option>
+            <option value="outro">Outro</option>
+          </select>
+          <input
+            style={styles.input}
+            type="password"
+            placeholder="Senha *"
+            value={registerSenha}
+            onChange={(e) => setRegisterSenha(e.target.value)}
           />
-          <Button onClick={handlePasswordRecovery} className="w-full">
-            Enviar Instruções
-          </Button>
-          <div className="text-center">
-            <Button
-              variant="link"
-              onClick={() => setShowPasswordRecovery(false)}
-              className="text-blue-600"
-            >
-              Voltar ao login
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  )
-
-  // Componente principal da tela inicial
-  const HomeView = () => (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="max-w-6xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
-                <Stethoscope className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-gray-900">Infecteasy</h1>
-                <p className="text-sm text-gray-600">Infectologia e Doenças Infecciosas</p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setShowSettings(true)}
-              >
-                <Settings className="w-4 h-4 mr-2" />
-                Configurações
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={handleLogout}
-              >
-                <LogOut className="w-4 h-4 mr-2" />
-                Sair
-              </Button>
-            </div>
-          </div>
+          <input
+            style={styles.input}
+            type="password"
+            placeholder="Confirmar Senha *"
+            value={registerConfirmarSenha}
+            onChange={(e) => setRegisterConfirmarSenha(e.target.value)}
+          />
+          <button style={styles.button} onClick={handleRegister}>
+            Criar Conta
+          </button>
+          <button 
+            style={{...styles.button, ...styles.buttonSecondary}} 
+            onClick={() => setCurrentView('login')}
+          >
+            Voltar ao Login
+          </button>
         </div>
       </div>
+    </div>
+  )
 
-      {/* Conteúdo Principal */}
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        {/* Stats do Usuário */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-          <Card>
-            <CardContent className="p-4 text-center">
-              <Trophy className="w-8 h-8 text-yellow-500 mx-auto mb-2" />
-              <p className="text-sm text-gray-600">Nível</p>
-              <p className="text-2xl font-bold">{userProgress.level}</p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="p-4 text-center">
-              <BookOpen className="w-8 h-8 text-blue-500 mx-auto mb-2" />
-              <p className="text-sm text-gray-600">XP Total</p>
-              <p className="text-2xl font-bold">{userProgress.xp}</p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="p-4 text-center">
-              <Calendar className="w-8 h-8 text-green-500 mx-auto mb-2" />
-              <p className="text-sm text-gray-600">Sequência</p>
-              <p className="text-2xl font-bold">{userProgress.streak} dias</p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="p-4 text-center">
-              <User className="w-8 h-8 text-purple-500 mx-auto mb-2" />
-              <p className="text-sm text-gray-600">Lições</p>
-              <p className="text-2xl font-bold">{userProgress.completedLessons.length}</p>
-            </CardContent>
-          </Card>
+  // Componente de Dashboard
+  const DashboardView = () => (
+    <div style={styles.dashboardContainer}>
+      <header style={styles.dashboardHeader}>
+        <div style={{display: 'flex', alignItems: 'center'}}>
+          <div style={{...styles.logo, width: '32px', height: '32px', marginRight: '12px', margin: '0 12px 0 0'}}>🩺</div>
+          <div>
+            <h1 style={{margin: '0', fontSize: '1.25rem', fontWeight: '600'}}>Infecteasy</h1>
+            <p style={{margin: '0', fontSize: '0.875rem', color: '#6b7280'}}>Infectologia e Doenças Infecciosas</p>
+          </div>
+        </div>
+        <div style={{display: 'flex', gap: '12px'}}>
+          <button 
+            style={{...styles.button, width: 'auto', marginBottom: '0', padding: '8px 16px'}}
+            onClick={handleLogout}
+          >
+            Sair
+          </button>
+        </div>
+      </header>
+
+      <main style={styles.dashboardContent}>
+        {message && (
+          <div style={{...styles.message, marginBottom: '2rem'}}>{message}</div>
+        )}
+
+        <div style={styles.statsGrid}>
+          <div style={styles.statCard}>
+            <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>🏆</div>
+            <p style={{margin: '0', fontSize: '0.875rem', color: '#6b7280'}}>Nível</p>
+            <p style={{margin: '0', fontSize: '2rem', fontWeight: 'bold'}}>{currentUser?.nivel || 1}</p>
+          </div>
+          
+          <div style={styles.statCard}>
+            <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>📚</div>
+            <p style={{margin: '0', fontSize: '0.875rem', color: '#6b7280'}}>XP Total</p>
+            <p style={{margin: '0', fontSize: '2rem', fontWeight: 'bold'}}>{currentUser?.xp || 0}</p>
+          </div>
+          
+          <div style={styles.statCard}>
+            <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>📅</div>
+            <p style={{margin: '0', fontSize: '0.875rem', color: '#6b7280'}}>Sequência</p>
+            <p style={{margin: '0', fontSize: '2rem', fontWeight: 'bold'}}>{currentUser?.sequencia || 0} dias</p>
+          </div>
+          
+          <div style={styles.statCard}>
+            <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>👤</div>
+            <p style={{margin: '0', fontSize: '0.875rem', color: '#6b7280'}}>Lições</p>
+            <p style={{margin: '0', fontSize: '2rem', fontWeight: 'bold'}}>{currentUser?.licoesCompletas?.length || 0}</p>
+          </div>
         </div>
 
-        {/* Módulos */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {modules.map((module) => (
-            <Card key={module.id} className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <BookOpen className="w-5 h-5 mr-2 text-blue-600" />
-                  {module.title}
-                </CardTitle>
-                <p className="text-gray-600">{module.description}</p>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  <div className="flex justify-between text-sm text-gray-600">
-                    <span>{module.lessons.length} lições</span>
-                    <span>0% concluído</span>
-                  </div>
-                  <Progress value={0} className="w-full" />
-                  <Button 
-                    className="w-full"
-                    onClick={() => {
-                      setCurrentModule(module)
-                      setCurrentView('module')
-                    }}
-                  >
-                    Continuar
-                  </Button>
+        <div style={styles.modulesGrid}>
+          <div style={styles.moduleCard}>
+            <h3 style={{margin: '0 0 1rem 0', display: 'flex', alignItems: 'center'}}>
+              📚 Fundamentos da Infectologia
+            </h3>
+            <p style={{margin: '0 0 1rem 0', color: '#6b7280'}}>
+              Conceitos básicos e fundamentais da infectologia clínica
+            </p>
+            <div style={{display: 'flex', justifyContent: 'space-between', fontSize: '0.875rem', marginBottom: '1rem'}}>
+              <span>1 lições</span>
+              <span>0% concluído</span>
+            </div>
+            <div style={styles.progressBar}>
+              <div style={{...styles.progressFill, width: '0%'}}></div>
+            </div>
+            <button 
+              style={styles.button}
+              onClick={() => openModule('infectologia')}
+            >
+              Continuar
+            </button>
+          </div>
+
+          <div style={styles.moduleCard}>
+            <h3 style={{margin: '0 0 1rem 0', display: 'flex', alignItems: 'center'}}>
+              📊 Interpretação de Antibiograma
+            </h3>
+            <p style={{margin: '0 0 1rem 0', color: '#6b7280'}}>
+              Aprenda a interpretar testes de sensibilidade antimicrobiana
+            </p>
+            <div style={{display: 'flex', justifyContent: 'space-between', fontSize: '0.875rem', marginBottom: '1rem'}}>
+              <span>1 lições</span>
+              <span>0% concluído</span>
+            </div>
+            <div style={styles.progressBar}>
+              <div style={{...styles.progressFill, width: '0%'}}></div>
+            </div>
+            <button 
+              style={styles.button}
+              onClick={() => openModule('antibiograma')}
+            >
+              Continuar
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+  )
+
+  // Componente de Módulo
+  const ModuleView = () => (
+    <div style={styles.dashboardContainer}>
+      <header style={styles.dashboardHeader}>
+        <div style={{display: 'flex', alignItems: 'center'}}>
+          <button 
+            style={{...styles.button, width: 'auto', marginBottom: '0', padding: '8px 16px', marginRight: '16px'}}
+            onClick={() => setCurrentView('dashboard')}
+          >
+            ← Voltar
+          </button>
+          <div>
+            <h1 style={{margin: '0', fontSize: '1.25rem', fontWeight: '600'}}>{currentModule?.title}</h1>
+            <p style={{margin: '0', fontSize: '0.875rem', color: '#6b7280'}}>{currentModule?.description}</p>
+          </div>
+        </div>
+      </header>
+
+      <main style={styles.dashboardContent}>
+        <div style={{display: 'flex', flexDirection: 'column', gap: '1.5rem'}}>
+          {currentModule?.lessons?.map((lesson, index) => (
+            <div key={lesson.id} style={styles.moduleCard}>
+              <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '1rem'}}>
+                <div>
+                  <h3 style={{margin: '0 0 0.5rem 0'}}>{lesson.title}</h3>
+                  <p style={{margin: '0', color: '#6b7280', fontSize: '0.875rem'}}>
+                    {lesson.duration} • {lesson.xp} XP
+                  </p>
                 </div>
-              </CardContent>
-            </Card>
+                <span style={{
+                  padding: '4px 12px',
+                  backgroundColor: currentUser?.licoesCompletas?.includes(lesson.id) ? '#dcfce7' : '#f3f4f6',
+                  color: currentUser?.licoesCompletas?.includes(lesson.id) ? '#166534' : '#374151',
+                  borderRadius: '16px',
+                  fontSize: '0.75rem',
+                  fontWeight: '500'
+                }}>
+                  {currentUser?.licoesCompletas?.includes(lesson.id) ? 'Concluída' : 'Disponível'}
+                </span>
+              </div>
+              <button 
+                style={styles.button}
+                onClick={() => openLesson(lesson)}
+              >
+                {currentUser?.licoesCompletas?.includes(lesson.id) ? 'Revisar' : 'Iniciar'}
+              </button>
+            </div>
           ))}
         </div>
-      </div>
+      </main>
     </div>
   )
 
-  // Renderização principal
-  if (!currentUser) {
-    if (showPasswordRecovery) {
-      return <PasswordRecoveryView />
-    }
-    
-    if (authView === 'register') {
+  // Componente de Lição
+  const LessonView = () => {
+    const currentSectionData = currentLesson?.sections[currentSection]
+    const isLastSection = currentSection === currentLesson?.sections.length - 1
+    const progress = ((currentSection + 1) / currentLesson?.sections.length) * 100
+
+    return (
+      <div style={styles.dashboardContainer}>
+        <header style={styles.dashboardHeader}>
+          <div style={{display: 'flex', alignItems: 'center'}}>
+            <button 
+              style={{...styles.button, width: 'auto', marginBottom: '0', padding: '8px 16px', marginRight: '16px'}}
+              onClick={() => setCurrentView('module')}
+            >
+              ← Voltar
+            </button>
+            <div>
+              <h1 style={{margin: '0', fontSize: '1.25rem', fontWeight: '600'}}>{currentLesson?.title}</h1>
+              <p style={{margin: '0', fontSize: '0.875rem', color: '#6b7280'}}>
+                Seção {currentSection + 1} de {currentLesson?.sections.length} • {currentLesson?.xp} XP
+              </p>
+            </div>
+          </div>
+        </header>
+
+        <main style={styles.dashboardContent}>
+          <div style={{marginBottom: '2rem'}}>
+            <div style={styles.progressBar}>
+              <div style={{...styles.progressFill, width: `${progress}%`}}></div>
+            </div>
+          </div>
+
+          <div style={styles.moduleCard}>
+            <h2 style={{margin: '0 0 1.5rem 0'}}>{currentSectionData?.title}</h2>
+            <div style={{lineHeight: '1.7', color: '#374151'}}>
+              {currentSectionData?.content.split('\n\n').map((paragraph, index) => {
+                if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
+                  return (
+                    <div key={index} style={{
+                      backgroundColor: '#eff6ff',
+                      borderLeft: '4px solid #3b82f6',
+                      padding: '1rem',
+                      margin: '1rem 0',
+                      borderRadius: '0 8px 8px 0'
+                    }}>
+                      <h4 style={{margin: '0 0 0.5rem 0', color: '#1e40af', fontWeight: '600'}}>
+                        {paragraph.replace(/\*\*/g, '')}
+                      </h4>
+                    </div>
+                  )
+                }
+                return (
+                  <p key={index} style={{margin: '0 0 1rem 0'}}>
+                    {paragraph.split('**').map((part, i) => 
+                      i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+                    )}
+                  </p>
+                )
+              })}
+            </div>
+          </div>
+
+          <div style={{display: 'flex', justifyContent: 'space-between', marginTop: '2rem'}}>
+            <button 
+              style={{
+                ...styles.button,
+                ...styles.buttonSecondary,
+                width: 'auto',
+                padding: '12px 24px',
+                opacity: currentSection === 0 ? 0.5 : 1,
+                cursor: currentSection === 0 ? 'not-allowed' : 'pointer'
+              }}
+              onClick={prevSection}
+              disabled={currentSection === 0}
+            >
+              ← Anterior
+            </button>
+            
+            {isLastSection ? (
+              <button 
+                style={{...styles.button, width: 'auto', padding: '12px 24px'}}
+                onClick={completeLesson}
+              >
+                Concluir Lição
+              </button>
+            ) : (
+              <button 
+                style={{...styles.button, width: 'auto', padding: '12px 24px'}}
+                onClick={nextSection}
+              >
+                Próximo →
+              </button>
+            )}
+          </div>
+        </main>
+      </div>
+    )
+  }
+
+  // Renderização condicional
+  switch (currentView) {
+    case 'register':
       return <RegisterView />
-    }
-    
-    return <LoginView />
+    case 'dashboard':
+      return <DashboardView />
+    case 'module':
+      return <ModuleView />
+    case 'lesson':
+      return <LessonView />
+    default:
+      return <LoginView />
   }
-
-  if (showSettings) {
-    return <div>Configurações (implementar)</div>
-  }
-
-  return <HomeView />
 }
 
 export default App
