@@ -31,7 +31,7 @@ const App = () => {
   const registerSenhaRef = useRef(null)
   const registerConfirmarSenhaRef = useRef(null)
 
-  // Dados educacionais completos - MICROBIOLOGIA EXPANDIDA + ANTIBIOGRAMA TÉCNICO COMPLETO
+  // Dados educacionais completos - MICROBIOLOGIA RESTAURADA + ANTIBIOGRAMA TÉCNICO EXPANDIDO
   const modulesData = {
     microbiologia: {
       title: "Fundamentos da Microbiologia",
@@ -104,14 +104,14 @@ const App = () => {
                 </div>
               `,
               question: {
-                text: "No procedimento da coloração de Gram, qual passo é considerado crítico e, se realizado por muito tempo, pode descolorir até mesmo as bactérias gram-positivas?",
+                text: "Por que a etapa de descoloração é considerada crítica na coloração de Gram?",
                 options: [
-                  "A aplicação do cristal violeta.",
-                  "A imersão no mordente (iodo de Gram).",
-                  "A descoloração com álcool ou acetona."
+                  "Porque determina a intensidade da cor final",
+                  "Porque o timing incorreto pode levar à interpretação errônea dos resultados",
+                  "Porque remove todas as impurezas da lâmina"
                 ],
-                correct: 2,
-                explanation: "A descoloração com álcool ou acetona é a etapa mais crítica. Se for muito prolongada, pode remover o complexo cristal violeta-iodo até mesmo das bactérias gram-positivas, levando a um resultado falso-negativo."
+                correct: 1,
+                explanation: "O timing da descoloração é crítico porque determina se as bactérias gram-positivas manterão o cristal violeta. Tempo inadequado pode resultar em falsos gram-positivos ou falsos gram-negativos."
               }
             }
           ]
@@ -169,14 +169,14 @@ const App = () => {
                 </div>
               `,
               question: {
-                text: "Como a qualidade de uma amostra de escarro é tipicamente avaliada?",
+                text: "Uma amostra de escarro com 8 neutrófilos e 30 células epiteliais por campo deve ser:",
                 options: [
-                  "Pela presença de um único tipo de morfologia bacteriana, indicando infecção pura.",
-                  "Pela alta contagem de leucócitos e baixa contagem de células epiteliais.",
-                  "Pela ausência total de células humanas na amostra."
+                  "Processada normalmente pois está dentro dos padrões",
+                  "Rejeitada e solicitada nova coleta",
+                  "Processada apenas para pesquisa de fungos"
                 ],
                 correct: 1,
-                explanation: "Uma amostra de escarro de alta qualidade, representativa do trato respiratório inferior, é caracterizada por um grande número de leucócitos (indicando inflamação) e poucas células epiteliais (indicando mínima contaminação com saliva)."
+                explanation: "Esta amostra é inadequada pelos critérios de Murray-Washington (<10 neutrófilos e >25 células epiteliais), indicando contaminação com saliva. Deve ser rejeitada e solicitada nova coleta."
               }
             }
           ]
@@ -219,11 +219,11 @@ const App = () => {
                 </div>
               `,
               question: {
-                text: "Qual dos seguintes organismos não pode ser visualizado pela coloração de Gram por não possuir parede celular?",
+                text: "Por que Mycoplasma não pode ser visualizado na coloração de Gram?",
                 options: [
-                  "Streptococcus pneumoniae.",
-                  "Espécies de Mycoplasma.",
-                  "Espécies de Candida."
+                  "É muito pequeno para ser visto ao microscópio",
+                  "Não possui parede celular para reter os corantes",
+                  "É um vírus e não uma bactéria"
                 ],
                 correct: 1,
                 explanation: "Mycoplasma não possui parede celular, que é a estrutura responsável pela retenção dos corantes na coloração de Gram. Sem parede celular, não pode ser classificado como gram-positivo ou gram-negativo."
@@ -269,14 +269,14 @@ const App = () => {
                 </div>
               `,
               question: {
-                text: "Um achado de cocos gram-positivos em pares (diplococos), com formato ligeiramente alongado, é considerado patognomônico para qual organismo?",
+                text: "Qual característica morfológica é mais distintiva do Streptococcus pneumoniae?",
                 options: [
-                  "Staphylococcus aureus.",
-                  "Streptococcus pneumoniae.",
-                  "Espécies de Enterococcus."
+                  "Cocos em cadeias longas",
+                  "Diplococos gram-positivos lanceolados com cápsula",
+                  "Bacilos gram-positivos esporulados"
                 ],
                 correct: 1,
-                explanation: "O achado de diplococos gram-positivos lanceolados (em formato de lança) é uma característica clássica e patognomônica de Streptococcus pneumoniae, especialmente em amostras de líquor ou escarro."
+                explanation: "S. pneumoniae apresenta-se como diplococos gram-positivos com formato lanceolado característico e frequentemente com cápsula visível, o que o diferencia de outros estreptococos."
               }
             }
           ]
@@ -293,426 +293,45 @@ const App = () => {
                 <div style="background: #fdf2f8; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #be185d; margin-bottom: 15px;">🧪 Meio Seletivo e Diferencial</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    O <strong>ágar MacConkey</strong> é um dos meios mais utilizados em microbiologia clínica. Ele é 
-                    <strong>seletivo</strong> para o crescimento de bactérias gram-negativas e <strong>diferencial</strong> 
-                    para a fermentação da lactose.
+                    O <strong>ágar MacConkey</strong> é um meio seletivo e diferencial amplamente utilizado 
+                    para isolamento de bactérias gram-negativas, especialmente enterobactérias. 
+                    Sua composição permite tanto a seleção quanto a diferenciação dos microrganismos.
                   </p>
                 </div>
                 
                 <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">🔍 Como Funciona?</h4>
+                  <h4 style="color: #374151; margin-bottom: 10px;">🔬 Componentes e Função</h4>
                   <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li><strong>Seletividade:</strong> Contém sais biliares e cristal violeta, que inibem o crescimento da maioria das bactérias gram-positivas.</li>
-                    <li><strong>Diferencial:</strong> Contém lactose como fonte de carboidrato e um indicador de pH (vermelho neutro).</li>
+                    <li><strong>Sais biliares:</strong> Inibem bactérias gram-positivas</li>
+                    <li><strong>Cristal violeta:</strong> Reforça a seleção contra gram-positivas</li>
+                    <li><strong>Lactose:</strong> Açúcar para diferenciação</li>
+                    <li><strong>Indicador pH:</strong> Vermelho neutro detecta acidificação</li>
                   </ul>
                 </div>
                 
-                <div style="background: #fecaca; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
-                  <h4 style="color: #b91c1c; margin-bottom: 10px;">Fermentadores de Lactose (LF)</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    Bactérias que fermentam a lactose produzem ácido, diminuindo o pH e fazendo com que as colônias 
-                    absorvam o indicador, tornando-se <strong>rosas ou avermelhadas</strong>. Ex: <em>E. coli, Klebsiella</em>.
-                  </p>
-                </div>
-
-                <div style="background: #e0e7ff; padding: 15px; border-radius: 8px; border-left: 4px solid #4338ca; margin-top: 15px;">
-                  <h4 style="color: #3730a3; margin-bottom: 10px;">Não Fermentadores de Lactose (NLF)</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    Bactérias que não fermentam a lactose utilizam peptona, produzindo amônia e aumentando o pH. 
-                    As colônias permanecem <strong>incolores ou transparentes</strong>. Ex: <em>Pseudomonas, Acinetobacter</em>.
+                <div style="background: #f0fdf4; padding: 15px; border-radius: 8px;">
+                  <h4 style="color: #166534; margin-bottom: 10px;">🎨 Interpretação das Cores</h4>
+                  <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                    <strong>Colônias rosas/vermelhas:</strong> Fermentam lactose (ex: E. coli, Klebsiella)<br>
+                    <strong>Colônias incolores:</strong> Não fermentam lactose (ex: Salmonella, Shigella)
                   </p>
                 </div>
               `,
               question: {
-                text: "O ágar MacConkey é um meio seletivo e diferencial usado para:",
+                text: "Uma colônia rosa no ágar MacConkey indica que a bactéria:",
                 options: [
-                  "Inibir o crescimento de bactérias gram-positivas e diferenciar as fermentadoras de lactose (colônias rosas).",
-                  "Cultivar organismos fastidiosos como Haemophilus influenzae.",
-                  "Observar os padrões de hemólise em espécies de Streptococcus."
-                ],
-                correct: 0,
-                explanation: "O ágar MacConkey contém sais biliares e cristal violeta para inibir gram-positivos e lactose com um indicador de pH para diferenciar os bacilos gram-negativos fermentadores (rosa) dos não fermentadores (incolor)."
-              }
-            }
-          ]
-        },
-        {
-          id: 6,
-          title: "Cocos Gram-positivos: Identificação",
-          duration: "15 min",
-          xp: 85,
-          sections: [
-            {
-              title: "Cachos vs. Cadeias",
-              content: `
-                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #2563eb; margin-bottom: 15px;">🍇 Arranjos Clássicos</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    A primeira grande diferenciação entre os cocos gram-positivos é o seu arranjo. Esta característica, 
-                    observada na microscopia, é um guia fundamental para a identificação presuntiva.
-                  </p>
-                </div>
-
-                <div style="background: #fffbeb; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 15px;">
-                  <h4 style="color: #b45309; margin-bottom: 10px;">Staphylococcus: Arranjo em Cachos</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    As espécies de <strong>Staphylococcus</strong> se dividem em múltiplos planos, formando agrupamentos 
-                    irregulares que se assemelham a <strong>cachos de uva</strong>. O mnemônico clássico é: 
-                    <em>'Está-FILO não forma fila'</em>.
-                  </p>
-                </div>
-
-                <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
-                  <h4 style="color: #1d4ed8; margin-bottom: 10px;">Streptococcus: Arranjo em Cadeias</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    As espécies de <strong>Streptococcus</strong> se dividem em um único plano, permanecendo unidas após a 
-                    divisão e formando <strong>cadeias</strong> de comprimento variável. Os enterococos também podem 
-                    apresentar-se em cadeias curtas ou pares.
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "Qual arranjo microscópico é característico do gênero Staphylococcus?",
-                options: [
-                  "Cocos em cadeias longas",
-                  "Cocos em cachos irregulares",
-                  "Diplococos lanceolados"
+                  "É gram-positiva",
+                  "Fermenta lactose",
+                  "É resistente a antibióticos"
                 ],
                 correct: 1,
-                explanation: "Staphylococcus spp. são conhecidos por seu arranjo em cachos de uva, resultado da divisão celular em múltiplos planos. Streptococcus spp., por outro lado, formam cadeias."
-              }
-            },
-            {
-              title: "Teste da Catalase",
-              content: `
-                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #166534; margin-bottom: 15px;">💨 O Teste do Borbulhar</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    O <strong>teste da catalase</strong> é um teste bioquímico rápido e crucial para diferenciar os dois 
-                    principais grupos de cocos gram-positivos.
-                  </p>
-                  <p style="font-size: 16px; line-height: 1.6;">
-                    A enzima catalase converte peróxido de hidrogênio (H₂O₂) em água (H₂O) e oxigênio (O₂), 
-                    protegendo a célula do dano oxidativo. A produção de bolhas de oxigênio é um resultado positivo.
-                  </p>
-                </div>
-
-                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-bottom: 15px;">
-                  <h4 style="color: #059669; margin-bottom: 10px;">Catalase-Positivo: Staphylococcus</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    O gênero <strong>Staphylococcus</strong> é <strong>catalase-positivo</strong>. Ao adicionar uma gota de 
-                    peróxido de hidrogênio a uma colônia, observa-se a formação imediata de bolhas.
-                  </p>
-                </div>
-
-                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
-                  <h4 style="color: #dc2626; margin-bottom: 10px;">Catalase-Negativo: Streptococcus e Enterococcus</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    Os gêneros <strong>Streptococcus</strong> e <strong>Enterococcus</strong> são <strong>catalase-negativos</strong>. 
-                    Nenhuma bolha é formada na presença de peróxido de hidrogênio.
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "O teste da catalase é utilizado para diferenciar quais grupos de bactérias?",
-                options: [
-                  "S. aureus de outros estafilococos.",
-                  "Bacilos gram-negativos fermentadores de lactose dos não fermentadores.",
-                  "Staphylococcus (catalase-positivos) de Streptococcus e Enterococcus (catalase-negativos)."
-                ],
-                correct: 2,
-                explanation: "O teste da catalase é um passo fundamental na identificação de cocos gram-positivos. Ele separa de forma confiável o gênero Staphylococcus (positivo) dos gêneros Streptococcus e Enterococcus (negativos)."
-              }
-            }
-          ]
-        },
-        {
-          id: 7,
-          title: "Bacilos Gram-positivos: Morfologia",
-          duration: "14 min",
-          xp: 75,
-          sections: [
-            {
-              title: "Grandes, Pequenos e Ramificados",
-              content: `
-                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #2563eb; margin-bottom: 15px;">🌿 Diversidade Morfológica</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Os bacilos gram-positivos são um grupo heterogêneo com morfologias variadas, que fornecem 
-                    pistas importantes para sua identificação e significado clínico.
-                  </p>
-                </div>
-
-                <div style="background: #faf5ff; padding: 15px; border-radius: 8px; border-left: 4px solid #9333ea; margin-bottom: 15px;">
-                  <h4 style="color: #7e22ce; margin-bottom: 10px;">Grandes Bacilos (Formadores de Esporos)</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    Bacilos grandes, com extremidades retas (em formato de 'vagão de trem' ou 'boxcar'), são 
-                    característicos dos gêneros <strong>Bacillus</strong> (aeróbio) e <strong>Clostridium</strong> (anaeróbio). 
-                    A presença de esporos pode ser observada.
-                  </p>
-                </div>
-
-                <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6; margin-bottom: 15px;">
-                  <h4 style="color: #1d4ed8; margin-bottom: 10px;">Pequenos Bacilos Pleomórficos</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    Bacilos pequenos e irregulares (pleomórficos), por vezes com arranjo em paliçada ou 
-                    em formato de 'letras chinesas', sugerem <strong>Corynebacterium</strong>, <strong>Listeria</strong> 
-                    ou <strong>Cutibacterium</strong>.
-                  </p>
-                </div>
-
-                <div style="background: #fdf4f4; padding: 15px; border-radius: 8px; border-left: 4px solid #f87171;">
-                  <h4 style="color: #b91c1c; margin-bottom: 10px;">Bacilos Ramificados</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    A presença de filamentos finos e ramificados é uma característica marcante de 
-                    <strong>Nocardia</strong> (aeróbio, parcialmente ácido-resistente) e <strong>Actinomyces</strong> 
-                    (anaeróbio).
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "A presença de bacilos gram-positivos ramificados em uma amostra clínica sugere principalmente quais gêneros?",
-                options: [
-                  "Listeria ou Corynebacterium.",
-                  "Nocardia (aeróbio) ou Actinomyces (anaeróbio).",
-                  "Clostridium ou Bacillus."
-                ],
-                correct: 1,
-                explanation: "A morfologia de bacilos gram-positivos finos e ramificados é a principal característica que diferencia os gêneros Nocardia e Actinomyces de outros bacilos gram-positivos."
-              }
-            },
-            {
-              title: "Significado Clínico: Gangrena Gasosa",
-              content: `
-                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #dc2626; margin-bottom: 15px;">🚨 Alerta Clínico Urgente</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Um dos achados mais críticos na coloração de Gram de amostras de tecidos moles é a 
-                    visualização de bacilos gram-positivos na <strong>ausência de células inflamatórias</strong> (leucócitos).
-                  </p>
-                  <p style="font-size: 16px; line-height: 1.6;">
-                    Este padrão é altamente sugestivo de <strong>gangrena gasosa</strong> (mionecrose clostridial), 
-                    uma infecção devastadora causada principalmente por <em>Clostridium perfringens</em>. As toxinas 
-                    produzidas pela bactéria destroem os tecidos e os leucócitos, explicando a ausência de 
-                    resposta inflamatória no sítio da infecção.
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "Em uma coloração de Gram de tecido mole, a presença de bacilos gram-positivos sem a presença de leucócitos deve levantar a suspeita de qual condição?",
-                options: [
-                  "Infecção por Listeria.",
-                  "Gangrena gasosa (causada por Clostridium).",
-                  "Tuberculose (causada por Mycobacterium)."
-                ],
-                correct: 1,
-                explanation: "A ausência de leucócitos em uma amostra com bacilos gram-positivos é um sinal de alarme para gangrena gasosa, pois as toxinas de Clostridium perfringens causam necrose tecidual e destroem as células de defesa."
-              }
-            }
-          ]
-        },
-        {
-          id: 8,
-          title: "Organismos Gram-negativos",
-          duration: "16 min",
-          xp: 90,
-          sections: [
-            {
-              title: "Cocos Gram-negativos",
-              content: `
-                <div style="background: #fdf2f8; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #be185d; margin-bottom: 15px;">☕ Diplococos 'Grão de Café'</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Os cocos gram-negativos são menos comuns que os gram-positivos, mas incluem patógenos importantes. 
-                    A morfologia clássica é a de <strong>diplococos</strong> (em pares), com os lados adjacentes 
-                    achatados, assemelhando-se a <strong>grãos de café</strong>.
-                  </p>
-                </div>
-
-                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">Principais Gêneros</h4>
-                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li><strong>Neisseria:</strong> <em>N. meningitidis</em> (meningite) e <em>N. gonorrhoeae</em> (gonorreia). Frequentemente encontrados no interior de neutrófilos.</li>
-                    <li><strong>Moraxella:</strong> <em>M. catarrhalis</em>, uma causa comum de otite média e sinusite.</li>
-                  </ul>
-                </div>
-              `,
-              question: {
-                text: "Qual a aparência típica das espécies de Neisseria na coloração de Gram?",
-                options: [
-                  "Cocos gram-positivos em cachos.",
-                  "Bacilos gram-negativos finos.",
-                  "Cocos gram-negativos em pares (diplococos)."
-                ],
-                correct: 2,
-                explanation: "As espécies de Neisseria são caracteristicamente diplococos gram-negativos, muitas vezes com um formato reniforme (de rim) ou de 'grão de café', e podem ser vistos dentro de leucócitos."
-              }
-            },
-            {
-              title: "Bacilos Gram-negativos",
-              content: `
-                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #0369a1; margin-bottom: 15px;">Vasta Família de Patógenos</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Os bacilos gram-negativos (BGN) representam um grupo vasto e clinicamente significativo de bactérias. 
-                    A diferenciação inicial no ágar MacConkey (fermentador ou não de lactose) é um passo crucial.
-                  </p>
-                </div>
-
-                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">Grupos Importantes</h4>
-                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li><strong>Enterobacteriaceae:</strong> Família grande de fermentadores de lactose (ex: <em>E. coli, Klebsiella</em>) e não fermentadores (ex: <em>Salmonella, Shigella</em>).</li>
-                    <li><strong>Não Fermentadores:</strong> Grupo importante de patógenos hospitalares, como <em>Pseudomonas aeruginosa</em> e <em>Acinetobacter baumannii</em>.</li>
-                    <li><strong>Fastidiosos:</strong> Exigem meios de cultura especiais, como o <em>Haemophilus influenzae</em> que cresce no ágar chocolate.</li>
-                    <li><strong>Curvos:</strong> Morfologia em vírgula ou 'asa de gaivota', como em <em>Vibrio</em> e <em>Campylobacter</em>.</li>
-                  </ul>
-                </div>
-              `,
-              question: {
-                text: "Para qual finalidade o ágar chocolate é utilizado?",
-                options: [
-                  "Para detectar a fermentação de lactose por bacilos gram-negativos.",
-                  "Para inibir o crescimento de bactérias gram-positivas.",
-                  "Para o crescimento de organismos fastidiosos como Haemophilus influenzae."
-                ],
-                correct: 2,
-                explanation: "O ágar chocolate é um meio enriquecido que contém hemácias lisadas, liberando fatores de crescimento (Fator X e V) necessários para o cultivo de bactérias fastidiosas como Haemophilus influenzae."
-              }
-            }
-          ]
-        },
-        {
-          id: 9,
-          title: "Hemólise e Testes Presuntivos",
-          duration: "12 min",
-          xp: 70,
-          sections: [
-            {
-              title: "Padrões de Hemólise",
-              content: `
-                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #dc2626; margin-bottom: 15px;">🩸 Lise de Hemácias</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    A observação dos padrões de hemólise em <strong>ágar sangue</strong> é um método clássico e 
-                    importante para a diferenciação, especialmente do gênero <em>Streptococcus</em>.
-                  </p>
-                </div>
-
-                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">Tipos de Hemólise</h4>
-                  <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
-                    <tr style="background: #e5e7eb;">
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Tipo</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Aparência</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Exemplo</th>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold; color: #166534;">Alfa (α)</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Hemólise parcial, halo esverdeado</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;"><em>S. pneumoniae</em>, Estreptococos viridans</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold; color: #f59e0b;">Beta (β)</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Hemólise completa, halo transparente</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;"><em>S. pyogenes</em> (Grupo A), <em>S. agalactiae</em> (Grupo B)</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold; color: #6b7280;">Gama (γ)</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Sem hemólise, sem alteração do meio</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;"><em>Enterococcus</em> spp.</td>
-                    </tr>
-                  </table>
-                </div>
-              `,
-              question: {
-                text: "Qual tipo de hemólise é caracterizada pela lise completa das hemácias, resultando em uma zona transparente ao redor das colônias?",
-                options: [
-                  "Alfa-hemólise.",
-                  "Beta-hemólise.",
-                  "Gama-hemólise."
-                ],
-                correct: 1,
-                explanation: "A beta-hemólise é a lise completa das hemácias no ágar sangue, criando um halo claro e transparente ao redor da colônia bacteriana. É uma característica chave de patógenos como Streptococcus pyogenes."
-              }
-            },
-            {
-              title: "Agrupamento de Lancefield",
-              content: `
-                <div style="background: #eef2ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #4338ca; margin-bottom: 15px;">Classificação Sorológica</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    O <strong>agrupamento de Lancefield</strong> é um sistema usado para classificar os estreptococos 
-                    beta-hemolíticos (e alguns outros) com base em <strong>antígenos de carboidratos</strong> específicos 
-                    presentes na parede celular bacteriana. Foi desenvolvido por Rebecca Lancefield.
-                  </p>
-                </div>
-
-                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">Grupos de Importância Clínica</h4>
-                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li><strong>Grupo A:</strong> <em>Streptococcus pyogenes</em> (faringite, febre reumática)</li>
-                    <li><strong>Grupo B:</strong> <em>Streptococcus agalactiae</em> (infecções neonatais)</li>
-                    <li><strong>Grupo D:</strong> Inclui <em>Enterococcus</em> spp. e <em>Streptococcus bovis</em></li>
-                  </ul>
-                </div>
-              `,
-              question: {
-                text: "O agrupamento de Lancefield é usado para categorizar qual gênero de bactérias com base em carboidratos da parede celular?",
-                options: [
-                  "Staphylococcus.",
-                  "Streptococcus.",
-                  "Neisseria."
-                ],
-                correct: 1,
-                explanation: "O sistema de Lancefield é um método sorológico clássico para classificar espécies do gênero Streptococcus, com base na reatividade de antígenos de carboidratos na parede celular."
-              }
-            }
-          ]
-        },
-        {
-          id: 10,
-          title: "Tecnologias Modernas de Identificação",
-          duration: "10 min",
-          xp: 95,
-          sections: [
-            {
-              title: "MALDI-TOF MS",
-              content: `
-                <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #6d28d9; margin-bottom: 15px;">🚀 Revolução na Identificação</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    A espectrometria de massa <strong>MALDI-TOF</strong> (Matrix-Assisted Laser Desorption/Ionization - Time of Flight) 
-                    revolucionou a identificação bacteriana nos laboratórios clínicos, oferecendo resultados rápidos e precisos.
-                  </p>
-                </div>
-
-                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">Como Funciona?</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    O método analisa o perfil de proteínas (principalmente ribossomais) de uma colônia bacteriana. 
-                    Esse perfil gera um espectro de massa único, que funciona como uma 'impressão digital' da bactéria. 
-                    O espectro obtido é então comparado com um vasto banco de dados para identificar o gênero e a espécie 
-                    em questão de minutos.
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "O que é MALDI-TOF e qual sua principal aplicação no laboratório de microbiologia?",
-                options: [
-                  "Um teste bioquímico para diferenciar espécies de Staphylococcus.",
-                  "Uma ferramenta de espectrometria de massa que permite a identificação rápida e precisa de gênero e espécie a partir de uma cultura pura.",
-                  "Um método para avaliar a suscetibilidade a antimicrobianos diretamente da amostra clínica."
-                ],
-                correct: 1,
-                explanation: "MALDI-TOF MS é uma tecnologia de espectrometria de massa que gera um perfil proteico único para um microrganismo, permitindo sua identificação rápida e precisa ao comparar esse perfil com um banco de dados de referência."
+                explanation: "Colônias rosas no MacConkey indicam fermentação da lactose, que produz ácidos e baixa o pH, fazendo o indicador vermelho neutro ficar rosa/vermelho."
               }
             }
           ]
         }
       ]
     },
-
     antibiograma: {
       title: "Teste de Suscetibilidade Antimicrobiana",
       description: "Domine os conceitos e técnicas do antibiograma",
@@ -1051,100 +670,96 @@ const App = () => {
                 </div>
                 
                 <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
-                  <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ "S" Pode Não Ser Sucesso!</h4>
+                  <h4 style="color: #dc2626; margin-bottom: 10px;">🎯 Diluição em Ágar - Padrão Ouro</h4>
                   <p style="font-size: 14px; line-height: 1.5;">
-                    Sempre tentar interpretar os <strong>mecanismos de resistência</strong>! 
-                    Um resultado "sensível" não garante sucesso clínico se houver mecanismos 
-                    de resistência não detectados ou fatores do hospedeiro desfavoráveis.
+                    O método de diluição em ágar é considerado um <strong>padrão de referência</strong> 
+                    e é recomendado para bactérias fastidiosas como Helicobacter pylori e Neisseria gonorrhoeae.
                   </p>
                 </div>
               `,
               question: {
                 text: "O que é a Concentração Inibitória Mínima (CIM)?",
                 options: [
-                  "A maior concentração de antibiótico que uma bactéria pode tolerar sem morrer",
-                  "A menor concentração de um agente antimicrobiano necessária para inibir o crescimento visível de um organismo",
-                  "A concentração de antibiótico presente no sangue do paciente após a administração"
+                  "O diâmetro do halo de inibição medido no teste de difusão em disco",
+                  "A menor concentração de um agente específico necessária para inibir o crescimento visível de um organismo in vitro",
+                  "A concentração de um antibiótico que é bactericida para o organismo"
                 ],
                 correct: 1,
-                explanation: "CIM é definida como a menor concentração de antimicrobiano que inibe o crescimento visível (99%) do microrganismo testado após incubação padronizada."
+                explanation: "CIM é definida como a menor concentração de antimicrobiano que inibe o crescimento visível (99%) do microrganismo após incubação padronizada."
               }
             }
           ]
         },
         {
           id: 7,
-          title: "Sistemas Automatizados",
-          duration: "14 min",
-          xp: 80,
+          title: "Sistemas Automatizados Avançados",
+          duration: "25 min",
+          xp: 120,
           sections: [
             {
-              title: "VITEK, Phoenix e MicroScan",
+              title: "Tecnologias de Detecção Óptica",
               content: `
-                <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #6d28d9; margin-bottom: 15px;">🤖 Automação Laboratorial</h3>
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #2563eb; margin-bottom: 15px;">🤖 Automação Avançada</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Os sistemas automatizados revolucionaram o teste de suscetibilidade antimicrobiana, 
-                    oferecendo <strong>rapidez</strong>, <strong>padronização</strong> e <strong>integração</strong> 
-                    com sistemas de informação laboratorial.
+                    A maioria dos sistemas automatizados depende da <strong>detecção óptica</strong> do 
+                    crescimento bacteriano na presença de um antimicrobiano específico. Eles podem 
+                    determinar os padrões de suscetibilidade antimicrobiana mais rapidamente do que 
+                    os métodos convencionais.
                   </p>
                 </div>
                 
-                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">🏭 Principais Sistemas</h4>
-                  <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
-                    <tr style="background: #e5e7eb;">
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Sistema</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Fabricante</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Tempo</th>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">VITEK 2</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">bioMérieux</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">4-18h</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Phoenix</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">BD</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">6-16h</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">MicroScan</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Beckman Coulter</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">3-18h</td>
-                    </tr>
-                  </table>
-                </div>
-                
-                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #059669; margin-bottom: 10px;">✅ Vantagens</h4>
+                <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #0369a1; margin-bottom: 10px;">🔬 MicroScan WalkAway (Siemens)</h4>
                   <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li><strong>Rapidez:</strong> Resultados em 4-18 horas</li>
-                    <li><strong>Padronização:</strong> Reduz variabilidade técnica</li>
-                    <li><strong>Integração:</strong> Conecta com LIS/HIS</li>
-                    <li><strong>Interpretação:</strong> Sistemas especialistas integrados</li>
+                    <li><strong>Capacidade:</strong> 40-96 bandejas simultâneas</li>
+                    <li><strong>Detecção:</strong> Fotométrica e fluorométrica</li>
+                    <li><strong>Tempo:</strong> 3,5-7h (gram-negativos), 4,5-18h (gram-positivos)</li>
+                    <li><strong>Vantagem:</strong> Alto throughput para laboratórios grandes</li>
                   </ul>
                 </div>
                 
-                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #dc2626; margin-bottom: 10px;">❌ Limitações</h4>
+                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #059669; margin-bottom: 10px;">⚡ BD Phoenix (BD Diagnostics)</h4>
                   <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li><strong>Custo:</strong> Alto investimento inicial</li>
-                    <li><strong>Flexibilidade:</strong> Painéis pré-definidos</li>
-                    <li><strong>Organismos raros:</strong> Podem não estar no banco de dados</li>
-                    <li><strong>Dependência:</strong> Requer manutenção especializada</li>
+                    <li><strong>Capacidade:</strong> 99 painéis (84 poços cada)</li>
+                    <li><strong>Monitoramento:</strong> A cada 20 minutos</li>
+                    <li><strong>Detecção:</strong> Turbidimétrica + colorimétrica (redox)</li>
+                    <li><strong>Tempo:</strong> 6-16 horas</li>
+                    <li><strong>Diferencial:</strong> Dupla detecção aumenta sensibilidade</li>
+                  </ul>
+                </div>
+                
+                <div style="background: #fdf2f8; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #be185d; margin-bottom: 10px;">💳 Vitek 2 (bioMérieux)</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li><strong>Formato:</strong> Cartões compactos (tamanho cartão de crédito)</li>
+                    <li><strong>Capacidade:</strong> 30-240 testes simultâneos</li>
+                    <li><strong>Volume:</strong> Quantidades microlitricas (economia de reagentes)</li>
+                    <li><strong>Tempo:</strong> 4-10 horas</li>
+                    <li><strong>Vantagem:</strong> Altamente automatizado, mínima manipulação</li>
+                  </ul>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #d97706; margin-bottom: 10px;">🌙 Sensititre ARIS 2X (Trek)</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li><strong>Tipo:</strong> Sistema overnight automatizado</li>
+                    <li><strong>Capacidade:</strong> 64 painéis</li>
+                    <li><strong>Detecção:</strong> Fluorescência após 18-24h</li>
+                    <li><strong>Formato:</strong> Microdiluição padrão 96 poços</li>
                   </ul>
                 </div>
               `,
               question: {
-                text: "Qual é uma das principais vantagens dos sistemas automatizados de TSA?",
+                text: "Qual é a principal vantagem dos sistemas automatizados de teste de suscetibilidade?",
                 options: [
-                  "São mais baratos que os métodos manuais",
-                  "Oferecem maior flexibilidade na seleção de antibióticos",
-                  "Fornecem resultados mais rápidos e padronizados com integração ao sistema de informação laboratorial"
+                  "São os métodos mais baratos disponíveis",
+                  "Podem fornecer resultados mais rapidamente por detectarem o crescimento bacteriano de forma óptica",
+                  "Eliminam completamente a necessidade de testes fenotípicos confirmatórios"
                 ],
-                correct: 2,
-                explanation: "Os sistemas automatizados destacam-se pela rapidez (4-18h vs 18-24h), padronização dos procedimentos e integração com sistemas de informação, melhorando o fluxo de trabalho laboratorial."
+                correct: 1,
+                explanation: "A detecção óptica sensível permite identificar mudanças sutis no crescimento bacteriano mais precocemente que a observação visual, resultando em tempos de resposta mais rápidos."
               }
             }
           ]
@@ -1152,26 +767,29 @@ const App = () => {
         {
           id: 8,
           title: "Testes Fenotípicos Especiais",
-          duration: "16 min",
-          xp: 85,
+          duration: "22 min",
+          xp: 110,
           sections: [
             {
-              title: "Teste da Nitrocefina",
+              title: "Detecção de Beta-lactamases",
               content: `
-                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #d97706; margin-bottom: 15px;">🧪 Detecção de Beta-lactamases</h3>
+                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">🧪 Teste da Nitrocefina</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    O <strong>teste da nitrocefina</strong> (cefalosporina cromogênica) é um método rápido 
-                    para detectar a produção de beta-lactamases em diversos microrganismos.
+                    O método da <strong>cefalosporina cromogênica</strong> (nitrocefina) pode ser usado para 
+                    detectar beta-lactamases em estafilococos, H. influenzae, N. gonorrhoeae, 
+                    Enterococcus spp e outras bactérias.
                   </p>
                 </div>
                 
                 <div style="background: #f0fdf4; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #166534; margin-bottom: 10px;">⚙️ Princípio do Teste</h4>
-                  <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
-                    A nitrocefina é uma cefalosporina cromogênica que muda de cor quando hidrolisada 
-                    por beta-lactamases: de <strong>amarelo</strong> (negativo) para <strong>vermelho</strong> (positivo).
-                  </p>
+                  <h4 style="color: #166534; margin-bottom: 10px;">⚡ Princípio do Teste</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li><strong>Substrato:</strong> Nitrocefina (cefalosporina cromogênica)</li>
+                    <li><strong>Reação:</strong> Beta-lactamase hidrolisa o anel beta-lactâmico</li>
+                    <li><strong>Resultado:</strong> Mudança de cor amarelo → vermelho/rosa</li>
+                    <li><strong>Tempo:</strong> Resultado em minutos</li>
+                  </ul>
                 </div>
                 
                 <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
@@ -1179,7 +797,7 @@ const App = () => {
                   <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
                     <tr style="background: #e5e7eb;">
                       <th style="padding: 8px; border: 1px solid #d1d5db;">Organismo</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Detecção</th>
+                      <th style="padding: 8px; border: 1px solid #d1d5db;">Importância</th>
                     </tr>
                     <tr>
                       <td style="padding: 8px; border: 1px solid #d1d5db;">H. influenzae</td>
@@ -1442,14 +1060,70 @@ const App = () => {
                 </div>
               `,
               question: {
-                text: "Uma CIM de 0,25 mg/L para um antibiótico indica que:",
+                text: "Qual é a principal limitação clínica dos métodos moleculares?",
                 options: [
-                  "A bactéria é resistente e o antibiótico não deve ser usado",
-                  "A bactéria é altamente sensível e o antibiótico é uma excelente opção terapêutica",
-                  "São necessárias doses aumentadas do antibiótico para eficácia"
+                  "São mais lentos que os métodos fenotípicos",
+                  "Não eliminam a necessidade de testes fenotípicos para confirmar os resultados e avaliar outras opções terapêuticas",
+                  "Os resultados não se correlacionam bem com a resistência fenotípica"
                 ],
                 correct: 1,
-                explanation: "Uma CIM ≤0,5 mg/L indica alta sensibilidade, sugerindo que o antibiótico será muito eficaz contra essa bactéria com doses padrão, sendo uma excelente opção terapêutica."
+                explanation: "Métodos moleculares detectam genes de resistência, mas não avaliam sua expressão ou outros mecanismos. Testes fenotípicos continuam necessários para confirmação e avaliação completa."
+              }
+            },
+            {
+              title: "Relato Seletivo e Stewardship",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🎯 Estratégia de Stewardship</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A justificativa para o <strong>relato seletivo</strong> é ajudar a guiar a prescrição 
+                    de antimicrobianos e reduzir o uso inadequado de antimicrobianos de amplo espectro 
+                    quando agentes mais direcionados seriam suficientes.
+                  </p>
+                </div>
+                
+                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #059669; margin-bottom: 10px;">📋 Princípios do Relato Seletivo</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li><strong>Suprimir agentes de amplo espectro</strong> quando há opções direcionadas</li>
+                    <li><strong>Reportar antibióticos de primeira linha</strong> preferencialmente</li>
+                    <li><strong>Liberar agentes reserva</strong> apenas quando necessário</li>
+                    <li><strong>Considerar o sítio de infecção</strong> na seleção de antibióticos</li>
+                  </ul>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 10px;">🏥 Exemplo Prático</h4>
+                  <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                    <strong>E. coli em ITU não complicada:</strong>
+                  </p>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li>✅ <strong>Reportar:</strong> Nitrofurantoína, sulfametoxazol-trimetoprima</li>
+                    <li>🔒 <strong>Suprimir:</strong> Ciprofloxacina, ceftriaxona (reservar para casos complicados)</li>
+                    <li>📞 <strong>Liberar sob consulta:</strong> Carbapenêmicos, colistina</li>
+                  </ul>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #d97706; margin-bottom: 10px;">🎯 Benefícios do Stewardship</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li>Redução da pressão seletiva</li>
+                    <li>Preservação de antibióticos de amplo espectro</li>
+                    <li>Diminuição de resistência bacteriana</li>
+                    <li>Redução de custos hospitalares</li>
+                    <li>Melhores desfechos clínicos</li>
+                  </ul>
+                </div>
+              `,
+              question: {
+                text: "O que é 'relato seletivo' e qual é o seu propósito?",
+                options: [
+                  "Relatar apenas os resultados dos antibióticos mais potentes disponíveis",
+                  "Suprimir os resultados de agentes de amplo espectro para orientar a prescrição para agentes mais direcionados",
+                  "Liberar os resultados apenas para médicos especialistas em doenças infecciosas"
+                ],
+                correct: 1,
+                explanation: "Relato seletivo é uma estratégia de stewardship que suprime resultados de antibióticos de amplo espectro quando há opções mais direcionadas, promovendo uso racional de antimicrobianos."
               }
             }
           ]
@@ -1458,7 +1132,7 @@ const App = () => {
     }
   }
 
-  // Funções de navegação e controle
+  // Funções de navegação
   const handleLogin = () => {
     const username = loginUsernameRef.current?.value
     const password = loginPasswordRef.current?.value
@@ -1475,7 +1149,7 @@ const App = () => {
     const senha = registerSenhaRef.current?.value
     const confirmarSenha = registerConfirmarSenhaRef.current?.value
     
-    if (nome && login && senha && confirmarSenha && senha === confirmarSenha) {
+    if (nome && login && senha && senha === confirmarSenha) {
       setUser({ username: login })
       setCurrentView('dashboard')
     }
@@ -1484,34 +1158,14 @@ const App = () => {
   const startLesson = (moduleKey, lessonId) => {
     const module = modulesData[moduleKey]
     const lesson = module.lessons.find(l => l.id === lessonId)
-    
-    if (lesson) {
-      setCurrentModule(moduleKey)
-      setCurrentLesson(lesson)
-      setCurrentSection(0)
-      setCurrentQuestion(null)
-      setShowQuestionFeedback(false)
-      setSelectedAnswer(null)
-      setCurrentView('lesson')
-    }
-  }
-
-  const showQuestion = () => {
-    const section = currentLesson.sections[currentSection]
-    if (section.question) {
-      setCurrentQuestion(section.question)
-      setShowQuestionFeedback(false)
-      setSelectedAnswer(null)
-    }
-  }
-
-  const handleAnswerSelect = (answerIndex) => {
-    setSelectedAnswer(answerIndex)
-    setShowQuestionFeedback(true)
+    setCurrentModule(moduleKey)
+    setCurrentLesson(lesson)
+    setCurrentSection(0)
+    setCurrentView('lesson')
   }
 
   const nextSection = () => {
-    if (currentSection < currentLesson.sections.length - 1) {
+    if (currentLesson && currentSection < currentLesson.sections.length - 1) {
       setCurrentSection(currentSection + 1)
       setCurrentQuestion(null)
       setShowQuestionFeedback(false)
@@ -1519,98 +1173,164 @@ const App = () => {
     }
   }
 
-  const completeLesson = () => {
-    const lessonKey = `${currentModule}-${currentLesson.id}`
-    if (!userProgress.completedLessons.includes(lessonKey)) {
+  const showQuestion = () => {
+    console.log('🔍 DEBUG showQuestion - Estado atual:', {
+      currentModule,
+      lessonId: currentLesson?.id,
+      lessonTitle: currentLesson?.title,
+      currentSection,
+      sectionTitle: currentLesson?.sections[currentSection]?.title,
+      questionText: currentLesson?.sections[currentSection]?.question?.text
+    })
+    if (currentLesson && currentLesson.sections[currentSection]?.question) {
+      const question = currentLesson.sections[currentSection].question
+      console.log('🎯 DEBUG Pergunta sendo definida:', question.text)
+      setCurrentQuestion(question)
+    }
+  }
+
+  const handleAnswerSelect = (answerIndex) => {
+    setSelectedAnswer(answerIndex)
+    setShowQuestionFeedback(true)
+    
+    if (answerIndex === currentQuestion.correct) {
       setUserProgress(prev => ({
         ...prev,
-        xp: prev.xp + currentLesson.xp,
-        completedLessons: [...prev.completedLessons, lessonKey]
+        xp: prev.xp + 25,
+        streak: prev.streak + 1
       }))
     }
+  }
+
+  const completeLesson = () => {
+    setUserProgress(prev => ({
+      ...prev,
+      xp: prev.xp + currentLesson.xp,
+      completedLessons: [...prev.completedLessons, `${currentModule}-${currentLesson.id}`]
+    }))
     setCurrentView('dashboard')
   }
 
-  // Componente de Login/Registro
+  // Componente de Login
   const LoginView = () => (
-    <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <div style={{ background: 'white', borderRadius: '20px', padding: '40px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)', width: '100%', maxWidth: '400px' }}>
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
+      <div style={{ background: 'white', borderRadius: '20px', padding: '40px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)', maxWidth: '400px', width: '100%' }}>
+        <div style={{ textAlign: 'center', marginBottom: '30px' }}>
+          <h1 style={{ color: '#2563eb', fontSize: '28px', fontWeight: 'bold', marginBottom: '10px' }}>🦠 Infecteasy</h1>
+          <p style={{ color: '#6b7280', fontSize: '16px' }}>Plataforma de Aprendizado em Microbiologia</p>
+        </div>
+        
         {currentView === 'login' ? (
-          <>
-            <h1 style={{ textAlign: 'center', color: '#2d3748', marginBottom: '30px', fontSize: '28px' }}>🦠 Infecteasy</h1>
+          <div>
             <div style={{ marginBottom: '20px' }}>
-              <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>Usuário</label>
-              <input ref={loginUsernameRef} type="text" style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '16px' }} />
+              <label style={{ display: 'block', marginBottom: '8px', color: '#374151', fontWeight: '500' }}>Usuário</label>
+              <input
+                ref={loginUsernameRef}
+                type="text"
+                placeholder="Digite seu usuário"
+                style={{ width: '100%', padding: '12px', border: '2px solid #e5e7eb', borderRadius: '8px', fontSize: '16px' }}
+              />
             </div>
-            <div style={{ marginBottom: '30px' }}>
-              <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>Senha</label>
-              <input ref={loginPasswordRef} type="password" style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '16px' }} />
+            
+            <div style={{ marginBottom: '25px' }}>
+              <label style={{ display: 'block', marginBottom: '8px', color: '#374151', fontWeight: '500' }}>Senha</label>
+              <input
+                ref={loginPasswordRef}
+                type="password"
+                placeholder="Digite sua senha"
+                style={{ width: '100%', padding: '12px', border: '2px solid #e5e7eb', borderRadius: '8px', fontSize: '16px' }}
+              />
             </div>
-            <button onClick={handleLogin} style={{ width: '100%', background: '#4299e1', color: 'white', padding: '12px', borderRadius: '8px', border: 'none', fontSize: '16px', fontWeight: '600', cursor: 'pointer', marginBottom: '15px' }}>
+            
+            <button
+              onClick={handleLogin}
+              style={{ width: '100%', background: '#2563eb', color: 'white', padding: '12px', borderRadius: '8px', border: 'none', fontSize: '16px', fontWeight: '600', cursor: 'pointer', marginBottom: '15px' }}
+            >
               Entrar
             </button>
-            <p style={{ textAlign: 'center', color: '#718096' }}>
-              Não tem conta? <button onClick={() => setCurrentView('register')} style={{ background: 'none', border: 'none', color: '#4299e1', cursor: 'pointer', textDecoration: 'underline' }}>Cadastre-se</button>
+            
+            <p style={{ textAlign: 'center', color: '#6b7280' }}>
+              Não tem conta? 
+              <button 
+                onClick={() => setCurrentView('register')}
+                style={{ background: 'none', border: 'none', color: '#2563eb', cursor: 'pointer', textDecoration: 'underline', marginLeft: '5px' }}
+              >
+                Cadastre-se
+              </button>
             </p>
-          </>
+          </div>
         ) : (
-          <>
-            <h1 style={{ textAlign: 'center', color: '#2d3748', marginBottom: '30px', fontSize: '24px' }}>Criar Conta</h1>
+          <div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '20px' }}>
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>Nome</label>
-                <input ref={registerNomeRef} type="text" style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }} />
+                <label style={{ display: 'block', marginBottom: '8px', color: '#374151', fontWeight: '500' }}>Nome Completo</label>
+                <input ref={registerNomeRef} type="text" style={{ width: '100%', padding: '10px', border: '2px solid #e5e7eb', borderRadius: '8px', fontSize: '14px' }} />
               </div>
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>CPF</label>
-                <input ref={registerCpfRef} type="text" style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }} />
+                <label style={{ display: 'block', marginBottom: '8px', color: '#374151', fontWeight: '500' }}>CPF</label>
+                <input ref={registerCpfRef} type="text" style={{ width: '100%', padding: '10px', border: '2px solid #e5e7eb', borderRadius: '8px', fontSize: '14px' }} />
               </div>
             </div>
+            
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '20px' }}>
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>Data Nascimento</label>
-                <input ref={registerDataNascimentoRef} type="date" style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }} />
+                <label style={{ display: 'block', marginBottom: '8px', color: '#374151', fontWeight: '500' }}>Data de Nascimento</label>
+                <input ref={registerDataNascimentoRef} type="date" style={{ width: '100%', padding: '10px', border: '2px solid #e5e7eb', borderRadius: '8px', fontSize: '14px' }} />
               </div>
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>Telefone</label>
-                <input ref={registerTelefoneRef} type="tel" style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }} />
+                <label style={{ display: 'block', marginBottom: '8px', color: '#374151', fontWeight: '500' }}>Telefone</label>
+                <input ref={registerTelefoneRef} type="tel" style={{ width: '100%', padding: '10px', border: '2px solid #e5e7eb', borderRadius: '8px', fontSize: '14px' }} />
               </div>
             </div>
+            
             <div style={{ marginBottom: '20px' }}>
-              <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>Email</label>
-              <input ref={registerEmailRef} type="email" style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }} />
+              <label style={{ display: 'block', marginBottom: '8px', color: '#374151', fontWeight: '500' }}>Email</label>
+              <input ref={registerEmailRef} type="email" style={{ width: '100%', padding: '10px', border: '2px solid #e5e7eb', borderRadius: '8px', fontSize: '14px' }} />
             </div>
+            
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '20px' }}>
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>Login</label>
-                <input ref={registerLoginRef} type="text" style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }} />
+                <label style={{ display: 'block', marginBottom: '8px', color: '#374151', fontWeight: '500' }}>Login</label>
+                <input ref={registerLoginRef} type="text" style={{ width: '100%', padding: '10px', border: '2px solid #e5e7eb', borderRadius: '8px', fontSize: '14px' }} />
               </div>
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>Atividade</label>
-                <select ref={registerAtividadeRef} style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }}>
+                <label style={{ display: 'block', marginBottom: '8px', color: '#374151', fontWeight: '500' }}>Atividade</label>
+                <select ref={registerAtividadeRef} style={{ width: '100%', padding: '10px', border: '2px solid #e5e7eb', borderRadius: '8px', fontSize: '14px' }}>
                   <option>Estudante</option>
                   <option>Profissional</option>
                   <option>Professor</option>
                 </select>
               </div>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '30px' }}>
+            
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '25px' }}>
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>Senha</label>
-                <input ref={registerSenhaRef} type="password" style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }} />
+                <label style={{ display: 'block', marginBottom: '8px', color: '#374151', fontWeight: '500' }}>Senha</label>
+                <input ref={registerSenhaRef} type="password" style={{ width: '100%', padding: '10px', border: '2px solid #e5e7eb', borderRadius: '8px', fontSize: '14px' }} />
               </div>
               <div>
-                <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>Confirmar Senha</label>
-                <input ref={registerConfirmarSenhaRef} type="password" style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }} />
+                <label style={{ display: 'block', marginBottom: '8px', color: '#374151', fontWeight: '500' }}>Confirmar Senha</label>
+                <input ref={registerConfirmarSenhaRef} type="password" style={{ width: '100%', padding: '10px', border: '2px solid #e5e7eb', borderRadius: '8px', fontSize: '14px' }} />
               </div>
             </div>
-            <button onClick={handleRegister} style={{ width: '100%', background: '#48bb78', color: 'white', padding: '12px', borderRadius: '8px', border: 'none', fontSize: '16px', fontWeight: '600', cursor: 'pointer', marginBottom: '15px' }}>
-              Criar Conta
+            
+            <button
+              onClick={handleRegister}
+              style={{ width: '100%', background: '#059669', color: 'white', padding: '12px', borderRadius: '8px', border: 'none', fontSize: '16px', fontWeight: '600', cursor: 'pointer', marginBottom: '15px' }}
+            >
+              Cadastrar
             </button>
-            <p style={{ textAlign: 'center', color: '#718096' }}>
-              Já tem conta? <button onClick={() => setCurrentView('login')} style={{ background: 'none', border: 'none', color: '#4299e1', cursor: 'pointer', textDecoration: 'underline' }}>Faça login</button>
+            
+            <p style={{ textAlign: 'center', color: '#6b7280' }}>
+              Já tem conta? 
+              <button 
+                onClick={() => setCurrentView('login')}
+                style={{ background: 'none', border: 'none', color: '#2563eb', cursor: 'pointer', textDecoration: 'underline', marginLeft: '5px' }}
+              >
+                Faça login
+              </button>
             </p>
-          </>
+          </div>
         )}
       </div>
     </div>
@@ -1622,19 +1342,19 @@ const App = () => {
       {/* Header */}
       <div style={{ background: 'white', borderBottom: '1px solid #e2e8f0', padding: '20px' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <h1 style={{ fontSize: '28px', fontWeight: 'bold', color: '#1e293b' }}>🦠 Infecteasy</h1>
+          <div>
+            <h1 style={{ color: '#2563eb', fontSize: '24px', fontWeight: 'bold', margin: 0 }}>🦠 Infecteasy</h1>
+            <p style={{ color: '#64748b', margin: '5px 0 0 0' }}>Olá, {user?.username}!</p>
+          </div>
           
           <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+            <div style={{ background: '#f1f5f9', padding: '10px 15px', borderRadius: '10px' }}>
+              <span style={{ color: '#475569', fontSize: '14px' }}>⚡ {userProgress.xp} XP</span>
+            </div>
             <div style={{ background: '#fef3c7', padding: '10px 15px', borderRadius: '10px' }}>
-              <span style={{ color: '#92400e', fontSize: '14px' }}>⚡ {userProgress.xp} XP</span>
+              <span style={{ color: '#92400e', fontSize: '14px' }}>🏆 Nível {userProgress.level}</span>
             </div>
-            <div style={{ background: '#dbeafe', padding: '10px 15px', borderRadius: '10px' }}>
-              <span style={{ color: '#1e40af', fontSize: '14px' }}>🎯 Nível {userProgress.level}</span>
-            </div>
-            <div style={{ background: '#dcfce7', padding: '10px 15px', borderRadius: '10px' }}>
-              <span style={{ color: '#166534', fontSize: '14px' }}>🔥 {userProgress.streak} dias</span>
-            </div>
-            <button 
+            <button
               onClick={() => setCurrentView('login')}
               style={{ background: '#ef4444', color: 'white', padding: '8px 16px', borderRadius: '8px', border: 'none', cursor: 'pointer' }}
             >
@@ -1647,23 +1367,35 @@ const App = () => {
       {/* Conteúdo Principal */}
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 20px' }}>
         <div style={{ marginBottom: '40px' }}>
-          <h2 style={{ fontSize: '32px', fontWeight: 'bold', color: '#1e293b', marginBottom: '10px' }}>
-            Bem-vindo de volta, {user?.username}! 👋
-          </h2>
-          <p style={{ fontSize: '18px', color: '#64748b' }}>
-            Continue sua jornada de aprendizado em microbiologia clínica
-          </p>
+          <h2 style={{ fontSize: '32px', fontWeight: 'bold', color: '#1e293b', marginBottom: '10px' }}>Módulos de Aprendizado</h2>
+          <p style={{ color: '#64748b', fontSize: '18px' }}>Escolha um módulo para começar sua jornada de aprendizado</p>
         </div>
 
-        {/* Módulos */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(500px, 1fr))', gap: '30px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '30px' }}>
           {Object.entries(modulesData).map(([key, module]) => (
-            <div key={key} style={{ background: 'white', borderRadius: '16px', padding: '30px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)' }}>
-              <div style={{ marginBottom: '25px' }}>
-                <h3 style={{ fontSize: '24px', fontWeight: 'bold', color: '#1e293b', marginBottom: '8px' }}>{module.title}</h3>
-                <p style={{ color: '#64748b', fontSize: '16px' }}>{module.description}</p>
-              </div>
+            <div key={key} style={{ background: 'white', borderRadius: '16px', padding: '30px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)', border: '1px solid #e2e8f0' }}>
+              <h3 style={{ fontSize: '24px', fontWeight: 'bold', color: '#1e293b', marginBottom: '15px' }}>{module.title}</h3>
+              <p style={{ color: '#64748b', marginBottom: '25px', lineHeight: '1.6' }}>{module.description}</p>
               
+              <div style={{ marginBottom: '25px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+                  <span style={{ color: '#475569', fontSize: '14px' }}>Progresso</span>
+                  <span style={{ color: '#475569', fontSize: '14px' }}>
+                    {userProgress.completedLessons.filter(l => l.startsWith(key)).length}/{module.lessons.length}
+                  </span>
+                </div>
+                <div style={{ background: '#f1f5f9', height: '8px', borderRadius: '4px', overflow: 'hidden' }}>
+                  <div 
+                    style={{ 
+                      background: '#2563eb', 
+                      height: '100%', 
+                      width: `${(userProgress.completedLessons.filter(l => l.startsWith(key)).length / module.lessons.length) * 100}%`,
+                      transition: 'width 0.3s ease'
+                    }}
+                  />
+                </div>
+              </div>
+
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 {module.lessons.map((lesson) => {
                   const isCompleted = userProgress.completedLessons.includes(`${key}-${lesson.id}`)
