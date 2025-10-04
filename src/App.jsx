@@ -31,7 +31,7 @@ const App = () => {
   const registerSenhaRef = useRef(null)
   const registerConfirmarSenhaRef = useRef(null)
 
-  // Dados educacionais completos - MICROBIOLOGIA EXPANDIDA + ANTIBIOGRAMA TÉCNICO COMPLETO
+  // Dados educacionais completos - MICROBIOLOGIA EXPANDIDA + ANTIBIOGRAMA TÉCNICO EXPANDIDO + ANTIBIOTICOTERAPIA AMBULATORIAL
   const modulesData = {
     microbiologia: {
       title: "Fundamentos da Microbiologia",
@@ -49,7 +49,7 @@ const App = () => {
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #2563eb; margin-bottom: 15px;">🔬 Conceito Fundamental</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    A <strong>coloração de Gram</strong> é uma das técnicas mais importantes na microbiologia clínica. 
+                    A <strong>coloração de Gram</strong>, também conhecida como bacterioscopia, é uma das técnicas mais importantes na microbiologia clínica. 
                     Desenvolvida pelo médico dinamarquês Hans Christian Gram em 1884, esta técnica revolucionou 
                     o diagnóstico microbiológico.
                   </p>
@@ -82,6 +82,38 @@ const App = () => {
               }
             },
             {
+              title: "Procedimentos",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🧪 Etapas do Procedimento</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A primeira etapa consiste na aplicação do <strong>corante violeta de cristal</strong> sobre a lâmina. 
+                    Em seguida a lâmina é mergulhada em solução de <strong>iodo (lugol)</strong> que atua como mordente, 
+                    aumentando a afinidade entre o corante e o material a ser corado, formando um complexo cristal violeta-iodo.
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Depois realiza-se uma <strong>descoloração rápida</strong> (questão de segundos) com acetona ou álcool 
+                    onde as bactérias Gram-negativas perdem o complexo cristal violeta-iodo e ficam incolores devido à sua 
+                    parede celular mais fina e rica em lipídios.
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Por último, aplica-se a <strong>fucsina básica</strong> que cora todas as bactérias presentes na lâmina. 
+                    As bactérias Gram-negativas, que perderam o primeiro corante, ficam vermelhas ou rosas pela ação da fucsina.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Na primeira etapa da coloração de Gram:",
+                options: [
+                  "A violeta de cristal cora todas as bactérias em roxo",
+                  "A fucsina ou safranina cora as bactérias Gram negativas.",
+                  "O lugol garante que as bactérias Gram positivas vão ficar na cor violeta"
+                ],
+                correct: 0,
+                explanation: "Na primeira etapa, o corante violeta de cristal cora todas as bactérias presentes na lâmina em roxo/violeta, independentemente de serem Gram-positivas ou Gram-negativas. A diferenciação ocorre nas etapas subsequentes."
+              }
+            },
+            {
               title: "Etapa Crítica: Descoloração",
               content: `
                 <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -111,17 +143,91 @@ const App = () => {
                   "A descoloração com álcool ou acetona."
                 ],
                 correct: 2,
-                explanation: "A descoloração com álcool ou acetona é a etapa mais crítica. Se for muito prolongada, pode remover o complexo cristal violeta-iodo até mesmo das bactérias gram-positivas, levando a um resultado falso-negativo."
+                explanation: "A etapa de descoloração com álcool ou acetona é o passo mais crítico. Se for muito longa, pode remover o complexo cristal violeta-iodo das bactérias gram-positivas, levando a uma interpretação incorreta como gram-negativas."
               }
             }
           ]
         },
         {
           id: 2,
-          title: "Qualidade de Amostras Clínicas",
-          duration: "10 min",
-          xp: 60,
+          title: "Espécimes Clínicos",
+          duration: "8 min",
+          xp: 45,
           sections: [
+            {
+              title: "Espécimes de Locais Estéreis",
+              content: `
+                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #15803d; margin-bottom: 15px;">🏥 Espécimes de Locais Estéreis</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    São locais anatômicos nos quais as bactérias não estão presentes na ausência de infecção 
+                    (Ex: líquor, líquidos de serosas, líquido sinovial, tecido de órgão parenquimatoso). 
+                    Qualquer bactéria detectada em espécime de local estéril deve ser considerada significativa 
+                    e potencialmente causadora de infecção.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Sobre os espécimes de local estéril é correto afirmar:",
+                options: [
+                  "Um único organismo visualizado no Gram de líquor pode ser indicativo de meningite bacteriana, exigindo intervenção imediata.",
+                  "Um estreptococo em cultura de saliva é altamente significativo de infecção por essa bactéria",
+                  "Se o local é estéril, não se espera nunca encontrar uma infecção nele."
+                ],
+                correct: 0,
+                explanation: "Em locais normalmente estéreis como o líquor, a visualização de qualquer bactéria no Gram é altamente significativa e pode indicar meningite bacteriana, uma emergência médica que requer intervenção imediata."
+              }
+            },
+            {
+              title: "Limitações",
+              content: `
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d97706; margin-bottom: 15px;">⚠️ Limitações</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A coloração de Gram negativa (sem visualização de bactérias) não exclui infecção por diversos motivos:
+                  </p>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li>Baixa concentração bacteriana (abaixo do limite de detecção)</li>
+                    <li>Uso prévio de antibióticos</li>
+                    <li>Presença de microrganismos não visualizáveis pelo Gram</li>
+                    <li>Problemas técnicos na coleta ou processamento</li>
+                  </ul>
+                </div>
+              `,
+              question: {
+                text: "Em um paciente em uso de amoxacilina com clavulanato espera-se sempre que:",
+                options: [
+                  "A amostra esteja com bactéria Gram positiva",
+                  "A bactéria visualizada no Gram já esteja morta",
+                  "A ausência de bactéria não significa ausência de infecção."
+                ],
+                correct: 2,
+                explanation: "O uso prévio de antibióticos pode reduzir significativamente a carga bacteriana ou eliminar completamente as bactérias da amostra, resultando em um Gram negativo mesmo na presença de infecção ativa."
+              }
+            },
+            {
+              title: "Espécimes de Locais Não Estéreis",
+              content: `
+                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">🦠 Espécimes de Locais Não Estéreis</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    São espécimes de locais anatômicos com presença normal de microrganismos colonizadores ("microbiota normal"). 
+                    Exemplos: escarro, swab de garganta, feridas superficiais, secreção de genitais. Geralmente contêm células 
+                    humanas (epiteliais e glóbulos brancos) que são coradas pela fucsina/safranina (rosa ou vermelho).
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Em um paciente com uma ferida por mordida de cão seguramente podemos afirmar que:",
+                options: [
+                  "Se a cultura mostrar estreptococos e bacilos certamente são infectantes por são agentes comuns na boca dos caninos.",
+                  "Se a amostra for colhida após uma importante higiene local, certamente o Gram será muito útil.",
+                  "O Gram da secreção superficial é de pouca valia clínica a revelia do resultado."
+                ],
+                correct: 2,
+                explanation: "Em feridas superficiais, especialmente por mordida, o Gram tem valor limitado devido à presença de microbiota normal e contaminantes. A interpretação clínica deve considerar outros fatores além do resultado do Gram."
+              }
+            },
             {
               title: "Critérios para Escarro",
               content: `
@@ -176,7 +282,31 @@ const App = () => {
                   "Pela ausência total de células humanas na amostra."
                 ],
                 correct: 1,
-                explanation: "Uma amostra de escarro de alta qualidade, representativa do trato respiratório inferior, é caracterizada por um grande número de leucócitos (indicando inflamação) e poucas células epiteliais (indicando mínima contaminação com saliva)."
+                explanation: "Uma amostra de escarro de alta qualidade é caracterizada por um alto número de leucócitos (indicativo de inflamação) e um baixo número de células epiteliais (indicativo de menor contaminação com saliva)."
+              }
+            },
+            {
+              title: "Amostras de Locais Estéreis vs. Não Estéreis",
+              content: `
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #2563eb; margin-bottom: 15px;">🏥 Locais Estéreis vs. Não Estéreis</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A interpretação do Gram depende fundamentalmente da origem da amostra. Em <strong>locais estéreis</strong> 
+                    (ex: líquido cefalorraquidiano, sangue, líquido pleural), qualquer bactéria visualizada é potencialmente 
+                    significativa. Em <strong>locais não estéreis</strong> (ex: trato respiratório, pele), a presença de 
+                    bactérias deve ser interpretada no contexto da microbiota normal e da resposta inflamatória.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual a principal diferença na interpretação de um Gram de líquido pleural vs. um de orofaringe?",
+                options: [
+                  "Nenhuma, a interpretação é a mesma.",
+                  "No líquido pleural, qualquer bactéria é significativa, enquanto na orofaringe, deve-se considerar a microbiota normal.",
+                  "Apenas bactérias gram-negativas são relevantes no líquido pleural."
+                ],
+                correct: 1,
+                explanation: "O líquido pleural é um sítio estéril, então qualquer bactéria é um achado crítico. A orofaringe possui uma microbiota comensal rica, e os achados devem ser correlacionados com a clínica e a presença de inflamação."
               }
             }
           ]
@@ -226,17 +356,216 @@ const App = () => {
                   "Espécies de Candida."
                 ],
                 correct: 1,
-                explanation: "Mycoplasma não possui parede celular, que é a estrutura responsável pela retenção dos corantes na coloração de Gram. Sem parede celular, não pode ser classificado como gram-positivo ou gram-negativo."
+                explanation: "Mycoplasma não possui parede celular, que é a estrutura alvo da coloração de Gram. Portanto, não pode ser classificado como gram-positivo ou gram-negativo por este método."
+              }
+            },
+            {
+              title: "Agentes Não Bacterianos",
+              content: `
+                <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #6d28d9; margin-bottom: 15px;">🍄 Nem Tudo é Bactéria</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Nem tudo que se cora pelo Gram é bactéria. Agentes não bacterianos podem corar de roxo 
+                    (como espécies de <strong>Candida</strong>), mas geralmente são diferenciados pela morfologia:
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 10px;">🔍 Características Morfológicas</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li><strong>Leveduras:</strong> estruturas ovais maiores que bactérias, por vezes com brotamentos</li>
+                    <li><strong>Hifas:</strong> estruturas filamentosas ramificadas</li>
+                    <li><strong>Esporos:</strong> estruturas refringentes</li>
+                  </ul>
+                </div>
+              `,
+              question: {
+                text: "Na coloração de Gram, grandes estruturas ovais, por vezes com brotamentos provavelmente se trata de:",
+                options: [
+                  "Candida",
+                  "Aspergillus",
+                  "Histoplasma"
+                ],
+                correct: 0,
+                explanation: "Estruturas ovais maiores que bactérias, frequentemente com brotamentos, são características morfológicas típicas de leveduras, especialmente Candida spp., que podem ser visualizadas na coloração de Gram."
+              }
+            },
+            {
+              title: "Organismos Gram-Variáveis",
+              content: `
+                <div style="background: #fef9c3; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #ca8a04; margin-bottom: 15px;">🤔 Gram-Variáveis</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Alguns organismos, como <strong>Gardnerella vaginalis</strong> e <strong>Acinetobacter spp.</strong>, 
+                    podem apresentar coloração inconsistente, aparecendo como gram-positivos e gram-negativos na mesma lâmina. 
+                    Isso ocorre por características da parede celular ou por fatores técnicos.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual bactéria é classicamente descrita como gram-variável e associada à vaginose bacteriana?",
+                options: [
+                  "Lactobacillus spp.",
+                  "Gardnerella vaginalis.",
+                  "Candida albicans."
+                ],
+                correct: 1,
+                explanation: "Gardnerella vaginalis é a principal bactéria associada à vaginose bacteriana e é caracteristicamente gram-variável, o que pode ser uma pista diagnóstica importante."
               }
             }
           ]
         },
         {
           id: 4,
-          title: "Morfologias Bacterianas Características",
+          title: "Morfologias e Arranjos Bacterianos",
           duration: "12 min",
           xp: 70,
           sections: [
+            {
+              title: "Morfologias Bacterianas",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🔬 Morfologias Bacterianas</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    As bactérias apresentam diferentes formas morfológicas que auxiliam na sua identificação:
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 10px;">🎯 Principais Morfologias</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li><strong>Cocos:</strong> Bactérias de forma esférica ou ovóide. Exemplos: Staphylococcus, Streptococcus, Enterococcus.</li>
+                    <li><strong>Bacilos:</strong> Bactérias em forma de bastonete. Exemplos: Escherichia coli, Klebsiella, Pseudomonas.</li>
+                    <li><strong>Cocobacilos:</strong> Forma intermediária entre cocos e bacilos. Exemplos: Haemophilus, Bordetella.</li>
+                    <li><strong>Curvas:</strong> Bacilos com curvatura em forma de vírgula ou S. Exemplos: Vibrio, Campylobacter.</li>
+                  </ul>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
+                  <h4 style="color: #dc2626; margin-bottom: 10px;">🚨 Importância Clínica</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Dessas, as morfologias de maior impacto clínico são as duas primeiras.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual das espécies abaixo são cocos?",
+                options: [
+                  "Staphylococcus aureus.",
+                  "Haemophilus influenzae",
+                  "Vibrio vulníficus"
+                ],
+                correct: 0,
+                explanation: "Staphylococcus aureus são cocos (bactérias de forma esférica). Haemophilus influenzae são cocobacilos e Vibrio vulníficus são bacilos curvos."
+              }
+            },
+            {
+              title: "Arranjos Bacterianos",
+              content: `
+                <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #b45309; margin-bottom: 15px;">🔗 Arranjos Bacterianos</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    As bactérias podem ser descritas de acordo com seu arranjo característico quando observadas ao microscópio:
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 10px;">📊 Tipos de Arranjos</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li><strong>Em cadeias:</strong> células bacterianas conectadas em sequência linear (típico de Streptococcus, Enterococcus)</li>
+                    <li><strong>Em aglomerados:</strong> células agrupadas como cachos de uva (típico de Staphylococcus)</li>
+                    <li><strong>Em pares (diplococos):</strong> células aos pares (típico de Neisseria, Streptococcus pneumoniae)</li>
+                    <li><strong>Em tétrades:</strong> grupos de quatro células (típico de Micrococcus)</li>
+                  </ul>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
+                  <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ Importante</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    O uso prévio de antibióticos pode induzir morfologia atípica nas bactérias. Bacilos Gram negativos podem se tornar longos e filamentosos quando expostas a antibióticos beta-lactâmicos, pois estes interferem na síntese da parede celular.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Sobre uma lâmina com cocos Gram positivos em cadeia, é certo afirmar:",
+                options: [
+                  "Certamente é um Streptococcus.",
+                  "Arranjo em cadeia não é característico de nenhuma espécie de cocos",
+                  "Possivelmente é um Streptococcus, Enterococcus"
+                ],
+                correct: 2,
+                explanation: "Cocos Gram positivos em cadeia podem ser Streptococcus ou Enterococcus, entre outros gêneros menos comuns. Não se pode afirmar com certeza apenas pela morfologia."
+              }
+            },
+            {
+              title: "Cocos Gram Positivos em Cachos",
+              content: `
+                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #166534; margin-bottom: 15px;">🍇 Cocos Gram Positivos em Cachos</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Cocos Gram positivos em cachos são geralmente do gênero Staphylococcus.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 10px;">💡 Dica Mnemônica</h4>
+                  <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                    <strong>"EstaFILO não forma fila (cadeia)"</strong>
+                  </p>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    A disposição em cachos ocorre devido ao padrão de divisão celular em múltiplos planos. Outros Cocos Gram Positivos em Cachos: Micrococcus, Dermacoccus; Alloiococcus; Rothia, Aerococcus.
+                  </p>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
+                  <h4 style="color: #dc2626; margin-bottom: 10px;">🚨 Importância Clínica</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Estes gêneros são menos frequentes em amostras clínicas e geralmente representam contaminação ou colonização.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Se você ligar para o laboratório e for informado que o Gram da hemocultura identificou um coco Gram positivo em cachos o que é razoável pensar:",
+                options: [
+                  "Trata-se de provável contaminação de amostra por bactéria de pele.",
+                  "Deve-se ficar atento devido a possibilidade de Staphylococcus aureus que é um agente agressivo.",
+                  "A presença de cocos em cachos sugere o gênero Staphylococcus, portanto, de baixa importância clínica."
+                ],
+                correct: 1,
+                explanation: "Cocos Gram positivos em cachos em hemocultura sugerem Staphylococcus, que pode incluir S. aureus, um patógeno agressivo. É importante ficar atento e aguardar identificação e antibiograma."
+              }
+            },
+            {
+              title: "Cocos Gram Positivos em Cadeia",
+              content: `
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d97706; margin-bottom: 15px;">⛓️ Cocos Gram Positivos em Cadeia</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Cocos Gram positivos que se organizam em cadeias são geralmente do gênero Streptococcus ou Enterococcus.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 10px;">💡 Dica Mnemônica</h4>
+                  <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                    Sempre lembrar da dica mnemônica anterior: <strong>"EstaFILO não forma fila (cadeia)"</strong>. Se for cadeia, provavelmente é Streptococcus.
+                  </p>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Outros gêneros em cadeia são: Leuconostoc, Abiotrophia, Granulicatella, Pediococcus
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Um paciente com três hemoculturas positivas para cocos Gram positivos em cadeia e em franca instabilidade hemodinâmica, trata-se de um caso de:",
+                options: [
+                  "Paciente séptico por Streptococcus ou Enterococcus devendo-se imediatamente investigar possíveis focos como endocardite infecciosa.",
+                  "Bactérias de fácil tratamento com betalactâmicos, portanto, não é grave.",
+                  "Exceção, já que cocos Gram positivos em cadeia não costumam fazer bacteremia."
+                ],
+                correct: 0,
+                explanation: "Três hemoculturas positivas com cocos Gram positivos em cadeia em paciente instável sugere sepse por Streptococcus ou Enterococcus. Deve-se investigar focos como endocardite infecciosa imediatamente."
+              }
+            },
             {
               title: "Streptococcus pneumoniae",
               content: `
@@ -276,7 +605,7 @@ const App = () => {
                   "Espécies de Enterococcus."
                 ],
                 correct: 1,
-                explanation: "O achado de diplococos gram-positivos lanceolados (em formato de lança) é uma característica clássica e patognomônica de Streptococcus pneumoniae, especialmente em amostras de líquor ou escarro."
+                explanation: "O achado de diplococos gram-positivos lanceolados (formato de lança) é uma característica clássica e patognomônica de Streptococcus pneumoniae, auxiliando na sua rápida identificação presuntiva."
               }
             }
           ]
@@ -291,35 +620,16 @@ const App = () => {
               title: "Ágar MacConkey",
               content: `
                 <div style="background: #fdf2f8; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #be185d; margin-bottom: 15px;">🧪 Meio Seletivo e Diferencial</h3>
+                  <h3 style="color: #be185d; margin-bottom: 15px;">🩷 Ágar MacConkey</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    O <strong>ágar MacConkey</strong> é um dos meios mais utilizados em microbiologia clínica. Ele é 
-                    <strong>seletivo</strong> para o crescimento de bactérias gram-negativas e <strong>diferencial</strong> 
-                    para a fermentação da lactose.
+                    O <strong>ágar MacConkey</strong> é um meio de cultura seletivo e diferencial, fundamental para o isolamento de bacilos gram-negativos. 
+                    Ele contém sais biliares e cristal violeta, que inibem o crescimento da maioria das bactérias gram-positivas.
                   </p>
-                </div>
-                
-                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">🔍 Como Funciona?</h4>
-                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li><strong>Seletividade:</strong> Contém sais biliares e cristal violeta, que inibem o crescimento da maioria das bactérias gram-positivas.</li>
-                    <li><strong>Diferencial:</strong> Contém lactose como fonte de carboidrato e um indicador de pH (vermelho neutro).</li>
-                  </ul>
-                </div>
-                
-                <div style="background: #fecaca; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
-                  <h4 style="color: #b91c1c; margin-bottom: 10px;">Fermentadores de Lactose (LF)</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    Bactérias que fermentam a lactose produzem ácido, diminuindo o pH e fazendo com que as colônias 
-                    absorvam o indicador, tornando-se <strong>rosas ou avermelhadas</strong>. Ex: <em>E. coli, Klebsiella</em>.
-                  </p>
-                </div>
-
-                <div style="background: #e0e7ff; padding: 15px; border-radius: 8px; border-left: 4px solid #4338ca; margin-top: 15px;">
-                  <h4 style="color: #3730a3; margin-bottom: 10px;">Não Fermentadores de Lactose (NLF)</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    Bactérias que não fermentam a lactose utilizam peptona, produzindo amônia e aumentando o pH. 
-                    As colônias permanecem <strong>incolores ou transparentes</strong>. Ex: <em>Pseudomonas, Acinetobacter</em>.
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Além disso, ele diferencia as bactérias com base na sua capacidade de fermentar a <strong>lactose</strong>. 
+                    Bactérias fermentadoras de lactose (ex: E. coli, Klebsiella) produzem ácido, o que diminui o pH e faz com que o indicador vermelho de fenol 
+                    torne as colônias <span style="color: #db2777; font-weight: bold;">rosas ou vermelhas</span>. 
+                    Bactérias não fermentadoras (ex: Pseudomonas, Salmonella) permanecem incolores.
                   </p>
                 </div>
               `,
@@ -331,85 +641,51 @@ const App = () => {
                   "Observar os padrões de hemólise em espécies de Streptococcus."
                 ],
                 correct: 0,
-                explanation: "O ágar MacConkey contém sais biliares e cristal violeta para inibir gram-positivos e lactose com um indicador de pH para diferenciar os bacilos gram-negativos fermentadores (rosa) dos não fermentadores (incolor)."
+                explanation: "O ágar MacConkey inibe o crescimento de gram-positivos e diferencia os gram-negativos pela fermentação da lactose. Fermentadores de lactose formam colônias rosas/vermelhas, enquanto não fermentadores permanecem incolores."
+              }
+            },
+            {
+              title: "Ágar Chocolate",
+              content: `
+                <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #6d28d9; margin-bottom: 15px;">🍫 Ágar Chocolate</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    O <strong>ágar chocolate</strong> é um meio enriquecido, não seletivo, usado para cultivar bactérias fastidiosas 
+                    (exigentes nutricionalmente), como <strong>Haemophilus influenzae</strong> e <strong>Neisseria gonorrhoeae</strong>. 
+                    Ele contém hemácias lisadas pelo calor, que liberam fatores de crescimento essenciais como o Fator V (NAD) 
+                    e o Fator X (hemina) no meio.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Para qual finalidade o ágar chocolate é utilizado?",
+                options: [
+                  "Para detectar a fermentação de lactose por bacilos gram-negativos.",
+                  "Para inibir o crescimento de bactérias gram-positivas.",
+                  "Para o crescimento de organismos fastidiosos como Haemophilus influenzae."
+                ],
+                correct: 2,
+                explanation: "O ágar chocolate é um meio rico que fornece nutrientes essenciais (Fator V e X) para o crescimento de bactérias fastidiosas, que não crescem em meios de cultura mais simples como o ágar sangue."
               }
             }
           ]
         },
         {
           id: 6,
-          title: "Cocos Gram-positivos: Identificação",
-          duration: "15 min",
-          xp: 85,
+          title: "Testes Bioquímicos Rápidos",
+          duration: "10 min",
+          xp: 55,
           sections: [
-            {
-              title: "Cachos vs. Cadeias",
-              content: `
-                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #2563eb; margin-bottom: 15px;">🍇 Arranjos Clássicos</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    A primeira grande diferenciação entre os cocos gram-positivos é o seu arranjo. Esta característica, 
-                    observada na microscopia, é um guia fundamental para a identificação presuntiva.
-                  </p>
-                </div>
-
-                <div style="background: #fffbeb; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 15px;">
-                  <h4 style="color: #b45309; margin-bottom: 10px;">Staphylococcus: Arranjo em Cachos</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    As espécies de <strong>Staphylococcus</strong> se dividem em múltiplos planos, formando agrupamentos 
-                    irregulares que se assemelham a <strong>cachos de uva</strong>. O mnemônico clássico é: 
-                    <em>'Está-FILO não forma fila'</em>.
-                  </p>
-                </div>
-
-                <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
-                  <h4 style="color: #1d4ed8; margin-bottom: 10px;">Streptococcus: Arranjo em Cadeias</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    As espécies de <strong>Streptococcus</strong> se dividem em um único plano, permanecendo unidas após a 
-                    divisão e formando <strong>cadeias</strong> de comprimento variável. Os enterococos também podem 
-                    apresentar-se em cadeias curtas ou pares.
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "Qual arranjo microscópico é característico do gênero Staphylococcus?",
-                options: [
-                  "Cocos em cadeias longas",
-                  "Cocos em cachos irregulares",
-                  "Diplococos lanceolados"
-                ],
-                correct: 1,
-                explanation: "Staphylococcus spp. são conhecidos por seu arranjo em cachos de uva, resultado da divisão celular em múltiplos planos. Streptococcus spp., por outro lado, formam cadeias."
-              }
-            },
             {
               title: "Teste da Catalase",
               content: `
-                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #166534; margin-bottom: 15px;">💨 O Teste do Borbulhar</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    O <strong>teste da catalase</strong> é um teste bioquímico rápido e crucial para diferenciar os dois 
-                    principais grupos de cocos gram-positivos.
-                  </p>
+                <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #059669; margin-bottom: 15px;">💨 Teste da Catalase</h3>
                   <p style="font-size: 16px; line-height: 1.6;">
-                    A enzima catalase converte peróxido de hidrogênio (H₂O₂) em água (H₂O) e oxigênio (O₂), 
-                    protegendo a célula do dano oxidativo. A produção de bolhas de oxigênio é um resultado positivo.
-                  </p>
-                </div>
-
-                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-bottom: 15px;">
-                  <h4 style="color: #059669; margin-bottom: 10px;">Catalase-Positivo: Staphylococcus</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    O gênero <strong>Staphylococcus</strong> é <strong>catalase-positivo</strong>. Ao adicionar uma gota de 
-                    peróxido de hidrogênio a uma colônia, observa-se a formação imediata de bolhas.
-                  </p>
-                </div>
-
-                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
-                  <h4 style="color: #dc2626; margin-bottom: 10px;">Catalase-Negativo: Streptococcus e Enterococcus</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    Os gêneros <strong>Streptococcus</strong> e <strong>Enterococcus</strong> são <strong>catalase-negativos</strong>. 
-                    Nenhuma bolha é formada na presença de peróxido de hidrogênio.
+                    O <strong>teste da catalase</strong> é um teste rápido e crucial para diferenciar cocos gram-positivos. 
+                    A enzima catalase converte peróxido de hidrogênio (H₂O₂) em água e oxigênio, produzindo bolhas visíveis. 
+                    <strong>Staphylococcus spp.</strong> são catalase-positivos, enquanto <strong>Streptococcus spp.</strong> 
+                    e <strong>Enterococcus spp.</strong> são catalase-negativos.
                   </p>
                 </div>
               `,
@@ -421,52 +697,51 @@ const App = () => {
                   "Staphylococcus (catalase-positivos) de Streptococcus e Enterococcus (catalase-negativos)."
                 ],
                 correct: 2,
-                explanation: "O teste da catalase é um passo fundamental na identificação de cocos gram-positivos. Ele separa de forma confiável o gênero Staphylococcus (positivo) dos gêneros Streptococcus e Enterococcus (negativos)."
+                explanation: "A presença da enzima catalase (resultado positivo, com bolhas) é uma característica chave para diferenciar o gênero Staphylococcus de Streptococcus e Enterococcus, que são catalase-negativos."
+              }
+            },
+            {
+              title: "Teste da Coagulase",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🩸 Teste da Coagulase</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Dentro do gênero Staphylococcus, o <strong>teste da coagulase</strong> é usado para diferenciar 
+                    <strong>Staphylococcus aureus</strong> (coagulase-positivo) dos estafilococos coagulase-negativos (ECN), 
+                    como o S. epidermidis. A coagulase é uma enzima que converte fibrinogênio em fibrina, formando um coágulo 
+                    visível no plasma.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual teste é fundamental para diferenciar Staphylococcus aureus de outros estafilococos?",
+                options: [
+                  "Teste da catalase",
+                  "Teste da coagulase",
+                  "Teste de hemólise"
+                ],
+                correct: 1,
+                explanation: "O teste da coagulase é o principal teste fenotípico para identificar S. aureus, que é coagulase-positivo, distinguindo-o dos estafilococos coagulase-negativos (ECN)."
               }
             }
           ]
         },
         {
           id: 7,
-          title: "Bacilos Gram-positivos: Morfologia",
-          duration: "14 min",
-          xp: 75,
+          title: "Bacilos Gram-Positivos de Importância Clínica",
+          duration: "16 min",
+          xp: 80,
           sections: [
             {
-              title: "Grandes, Pequenos e Ramificados",
+              title: "Bacilos Ramificados: Nocardia e Actinomyces",
               content: `
-                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #2563eb; margin-bottom: 15px;">🌿 Diversidade Morfológica</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Os bacilos gram-positivos são um grupo heterogêneo com morfologias variadas, que fornecem 
-                    pistas importantes para sua identificação e significado clínico.
-                  </p>
-                </div>
-
-                <div style="background: #faf5ff; padding: 15px; border-radius: 8px; border-left: 4px solid #9333ea; margin-bottom: 15px;">
-                  <h4 style="color: #7e22ce; margin-bottom: 10px;">Grandes Bacilos (Formadores de Esporos)</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    Bacilos grandes, com extremidades retas (em formato de 'vagão de trem' ou 'boxcar'), são 
-                    característicos dos gêneros <strong>Bacillus</strong> (aeróbio) e <strong>Clostridium</strong> (anaeróbio). 
-                    A presença de esporos pode ser observada.
-                  </p>
-                </div>
-
-                <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6; margin-bottom: 15px;">
-                  <h4 style="color: #1d4ed8; margin-bottom: 10px;">Pequenos Bacilos Pleomórficos</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    Bacilos pequenos e irregulares (pleomórficos), por vezes com arranjo em paliçada ou 
-                    em formato de 'letras chinesas', sugerem <strong>Corynebacterium</strong>, <strong>Listeria</strong> 
-                    ou <strong>Cutibacterium</strong>.
-                  </p>
-                </div>
-
-                <div style="background: #fdf4f4; padding: 15px; border-radius: 8px; border-left: 4px solid #f87171;">
-                  <h4 style="color: #b91c1c; margin-bottom: 10px;">Bacilos Ramificados</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    A presença de filamentos finos e ramificados é uma característica marcante de 
-                    <strong>Nocardia</strong> (aeróbio, parcialmente ácido-resistente) e <strong>Actinomyces</strong> 
-                    (anaeróbio).
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #374151; margin-bottom: 15px;">🌿 Bacilos Ramificados</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    A observação de bacilos gram-positivos com filamentos ramificados é uma pista importante. 
+                    <strong>Nocardia spp.</strong> são aeróbios e parcialmente ácido-resistentes, enquanto 
+                    <strong>Actinomyces spp.</strong> são anaeróbios e não ácido-resistentes. Essa distinção é 
+                    crucial para o diagnóstico de nocardiose e actinomicose.
                   </p>
                 </div>
               `,
@@ -478,23 +753,19 @@ const App = () => {
                   "Clostridium ou Bacillus."
                 ],
                 correct: 1,
-                explanation: "A morfologia de bacilos gram-positivos finos e ramificados é a principal característica que diferencia os gêneros Nocardia e Actinomyces de outros bacilos gram-positivos."
+                explanation: "A morfologia de bacilos gram-positivos ramificados é característica de Nocardia e Actinomyces, e a coloração de Ziehl-Neelsen modificada pode ajudar a diferenciá-los (Nocardia é parcialmente ácido-resistente)."
               }
             },
             {
-              title: "Significado Clínico: Gangrena Gasosa",
+              title: "Suspeita de Gangrena Gasosa",
               content: `
                 <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #dc2626; margin-bottom: 15px;">🚨 Alerta Clínico Urgente</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Um dos achados mais críticos na coloração de Gram de amostras de tecidos moles é a 
-                    visualização de bacilos gram-positivos na <strong>ausência de células inflamatórias</strong> (leucócitos).
-                  </p>
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">☠️ Gangrena Gasosa</h3>
                   <p style="font-size: 16px; line-height: 1.6;">
-                    Este padrão é altamente sugestivo de <strong>gangrena gasosa</strong> (mionecrose clostridial), 
-                    uma infecção devastadora causada principalmente por <em>Clostridium perfringens</em>. As toxinas 
-                    produzidas pela bactéria destroem os tecidos e os leucócitos, explicando a ausência de 
-                    resposta inflamatória no sítio da infecção.
+                    Um achado de alerta no Gram de amostras de tecidos moles é a presença de bacilos gram-positivos 
+                    grandes (em forma de caixa de trem ou 'boxcar') na <strong>ausência de células inflamatórias (leucócitos)</strong>. 
+                    Isso deve levantar a suspeita de gangrena gasosa, uma infecção necrosante causada por 
+                    <strong>Clostridium perfringens</strong>, que produz toxinas que lisam os leucócitos.
                   </p>
                 </div>
               `,
@@ -506,35 +777,28 @@ const App = () => {
                   "Tuberculose (causada por Mycobacterium)."
                 ],
                 correct: 1,
-                explanation: "A ausência de leucócitos em uma amostra com bacilos gram-positivos é um sinal de alarme para gangrena gasosa, pois as toxinas de Clostridium perfringens causam necrose tecidual e destroem as células de defesa."
+                explanation: "A ausência de leucócitos apesar da presença de bactérias é um sinal de alarme para gangrena gasosa, pois as toxinas produzidas por Clostridium perfringens destroem as células de defesa."
               }
             }
           ]
         },
         {
           id: 8,
-          title: "Organismos Gram-negativos",
-          duration: "16 min",
-          xp: 90,
+          title: "Bactérias Gram-Negativas Relevantes",
+          duration: "18 min",
+          xp: 85,
           sections: [
             {
-              title: "Cocos Gram-negativos",
+              title: "Cocos Gram-Negativos: Neisseria",
               content: `
                 <div style="background: #fdf2f8; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #be185d; margin-bottom: 15px;">☕ Diplococos 'Grão de Café'</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Os cocos gram-negativos são menos comuns que os gram-positivos, mas incluem patógenos importantes. 
-                    A morfologia clássica é a de <strong>diplococos</strong> (em pares), com os lados adjacentes 
-                    achatados, assemelhando-se a <strong>grãos de café</strong>.
+                  <h3 style="color: #be185d; margin-bottom: 15px;">☕ Diplococos Gram-Negativos</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Cocos gram-negativos são menos comuns, e sua visualização é muito significativa. 
+                    <strong>Neisseria spp.</strong> (como N. meningitidis e N. gonorrhoeae) classicamente se apresentam 
+                    como <strong>diplococos gram-negativos</strong> com lados achatados, lembrando grãos de café. 
+                    A observação de diplococos intracelulares em neutrófilos é altamente sugestiva de infecção por Neisseria.
                   </p>
-                </div>
-
-                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">Principais Gêneros</h4>
-                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li><strong>Neisseria:</strong> <em>N. meningitidis</em> (meningite) e <em>N. gonorrhoeae</em> (gonorreia). Frequentemente encontrados no interior de neutrófilos.</li>
-                    <li><strong>Moraxella:</strong> <em>M. catarrhalis</em>, uma causa comum de otite média e sinusite.</li>
-                  </ul>
                 </div>
               `,
               question: {
@@ -545,84 +809,52 @@ const App = () => {
                   "Cocos gram-negativos em pares (diplococos)."
                 ],
                 correct: 2,
-                explanation: "As espécies de Neisseria são caracteristicamente diplococos gram-negativos, muitas vezes com um formato reniforme (de rim) ou de 'grão de café', e podem ser vistos dentro de leucócitos."
+                explanation: "As espécies de Neisseria são caracterizadas por sua morfologia de diplococos gram-negativos, frequentemente com formato de 'grão de café' e localização intracelular em leucócitos."
               }
             },
             {
-              title: "Bacilos Gram-negativos",
+              title: "Bacilos Gram-Negativos Curvos",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #0369a1; margin-bottom: 15px;">Vasta Família de Patógenos</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Os bacilos gram-negativos (BGN) representam um grupo vasto e clinicamente significativo de bactérias. 
-                    A diferenciação inicial no ágar MacConkey (fermentador ou não de lactose) é um passo crucial.
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🌙 Bacilos Curvos</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    A morfologia curva de bacilos gram-negativos pode sugerir certos patógenos. <strong>Vibrio spp.</strong> 
+                    tem formato de vírgula, <strong>Campylobacter spp.</strong> tem formato de 'asa de gaivota' ou 'S', 
+                    e <strong>Helicobacter spp.</strong> é espiralado. Essas pistas morfológicas são importantes para 
+                    orientar a cultura em meios específicos.
                   </p>
-                </div>
-
-                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">Grupos Importantes</h4>
-                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li><strong>Enterobacteriaceae:</strong> Família grande de fermentadores de lactose (ex: <em>E. coli, Klebsiella</em>) e não fermentadores (ex: <em>Salmonella, Shigella</em>).</li>
-                    <li><strong>Não Fermentadores:</strong> Grupo importante de patógenos hospitalares, como <em>Pseudomonas aeruginosa</em> e <em>Acinetobacter baumannii</em>.</li>
-                    <li><strong>Fastidiosos:</strong> Exigem meios de cultura especiais, como o <em>Haemophilus influenzae</em> que cresce no ágar chocolate.</li>
-                    <li><strong>Curvos:</strong> Morfologia em vírgula ou 'asa de gaivota', como em <em>Vibrio</em> e <em>Campylobacter</em>.</li>
-                  </ul>
                 </div>
               `,
               question: {
-                text: "Para qual finalidade o ágar chocolate é utilizado?",
+                text: "Um bacilo gram-negativo com formato de 'asa de gaivota' é sugestivo de qual gênero?",
                 options: [
-                  "Para detectar a fermentação de lactose por bacilos gram-negativos.",
-                  "Para inibir o crescimento de bactérias gram-positivas.",
-                  "Para o crescimento de organismos fastidiosos como Haemophilus influenzae."
+                  "Vibrio",
+                  "Campylobacter",
+                  "Helicobacter"
                 ],
-                correct: 2,
-                explanation: "O ágar chocolate é um meio enriquecido que contém hemácias lisadas, liberando fatores de crescimento (Fator X e V) necessários para o cultivo de bactérias fastidiosas como Haemophilus influenzae."
+                correct: 1,
+                explanation: "A morfologia em 'asa de gaivota' ou em 'S' é uma característica clássica do gênero Campylobacter, especialmente C. jejuni, um importante causador de gastroenterite."
               }
             }
           ]
         },
         {
           id: 9,
-          title: "Hemólise e Testes Presuntivos",
+          title: "Hemólise e Agrupamento de Lancefield",
           duration: "12 min",
-          xp: 70,
+          xp: 65,
           sections: [
             {
               title: "Padrões de Hemólise",
               content: `
                 <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #dc2626; margin-bottom: 15px;">🩸 Lise de Hemácias</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    A observação dos padrões de hemólise em <strong>ágar sangue</strong> é um método clássico e 
-                    importante para a diferenciação, especialmente do gênero <em>Streptococcus</em>.
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">🩸 Padrões de Hemólise</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    A hemólise em ágar sangue é uma característica fundamental para classificar Streptococcus spp. 
+                    <strong>Beta-hemólise (β)</strong> é a lise completa das hemácias, criando um halo transparente. 
+                    <strong>Alfa-hemólise (α)</strong> é a lise parcial, resultando em um halo esverdeado. 
+                    <strong>Gama-hemólise (γ)</strong> indica ausência de hemólise.
                   </p>
-                </div>
-
-                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">Tipos de Hemólise</h4>
-                  <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
-                    <tr style="background: #e5e7eb;">
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Tipo</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Aparência</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Exemplo</th>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold; color: #166534;">Alfa (α)</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Hemólise parcial, halo esverdeado</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;"><em>S. pneumoniae</em>, Estreptococos viridans</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold; color: #f59e0b;">Beta (β)</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Hemólise completa, halo transparente</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;"><em>S. pyogenes</em> (Grupo A), <em>S. agalactiae</em> (Grupo B)</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold; color: #6b7280;">Gama (γ)</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Sem hemólise, sem alteração do meio</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;"><em>Enterococcus</em> spp.</td>
-                    </tr>
-                  </table>
                 </div>
               `,
               question: {
@@ -633,28 +865,20 @@ const App = () => {
                   "Gama-hemólise."
                 ],
                 correct: 1,
-                explanation: "A beta-hemólise é a lise completa das hemácias no ágar sangue, criando um halo claro e transparente ao redor da colônia bacteriana. É uma característica chave de patógenos como Streptococcus pyogenes."
+                explanation: "A beta-hemólise é a lise total das hemácias no ágar sangue, indicada por um halo claro e transparente ao redor da colônia. É característica de patógenos importantes como Streptococcus pyogenes."
               }
             },
             {
               title: "Agrupamento de Lancefield",
               content: `
-                <div style="background: #eef2ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #4338ca; margin-bottom: 15px;">Classificação Sorológica</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    O <strong>agrupamento de Lancefield</strong> é um sistema usado para classificar os estreptococos 
-                    beta-hemolíticos (e alguns outros) com base em <strong>antígenos de carboidratos</strong> específicos 
-                    presentes na parede celular bacteriana. Foi desenvolvido por Rebecca Lancefield.
+                <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #6d28d9; margin-bottom: 15px;">🏷️ Agrupamento de Lancefield</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    O <strong>agrupamento de Lancefield</strong> é um sistema usado para classificar estreptococos 
+                    beta-hemolíticos com base em antígenos de carboidratos específicos na parede celular. Por exemplo, 
+                    <strong>Streptococcus pyogenes</strong> pertence ao Grupo A de Lancefield (GAS), e 
+                    <strong>Streptococcus agalactiae</strong> ao Grupo B (GBS).
                   </p>
-                </div>
-
-                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">Grupos de Importância Clínica</h4>
-                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li><strong>Grupo A:</strong> <em>Streptococcus pyogenes</em> (faringite, febre reumática)</li>
-                    <li><strong>Grupo B:</strong> <em>Streptococcus agalactiae</em> (infecções neonatais)</li>
-                    <li><strong>Grupo D:</strong> Inclui <em>Enterococcus</em> spp. e <em>Streptococcus bovis</em></li>
-                  </ul>
                 </div>
               `,
               question: {
@@ -665,35 +889,27 @@ const App = () => {
                   "Neisseria."
                 ],
                 correct: 1,
-                explanation: "O sistema de Lancefield é um método sorológico clássico para classificar espécies do gênero Streptococcus, com base na reatividade de antígenos de carboidratos na parede celular."
+                explanation: "O sistema de Lancefield foi desenvolvido por Rebecca Lancefield para sorotipar espécies de Streptococcus com base nos antígenos de carboidratos da parede celular, sendo fundamental na epidemiologia e diagnóstico."
               }
             }
           ]
         },
         {
           id: 10,
-          title: "Tecnologias Modernas de Identificação",
+          title: "Identificação Avançada por MALDI-TOF",
           duration: "10 min",
-          xp: 95,
+          xp: 60,
           sections: [
             {
-              title: "MALDI-TOF MS",
+              title: "Princípio do MALDI-TOF",
               content: `
-                <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #6d28d9; margin-bottom: 15px;">🚀 Revolução na Identificação</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    A espectrometria de massa <strong>MALDI-TOF</strong> (Matrix-Assisted Laser Desorption/Ionization - Time of Flight) 
-                    revolucionou a identificação bacteriana nos laboratórios clínicos, oferecendo resultados rápidos e precisos.
-                  </p>
-                </div>
-
-                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">Como Funciona?</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    O método analisa o perfil de proteínas (principalmente ribossomais) de uma colônia bacteriana. 
-                    Esse perfil gera um espectro de massa único, que funciona como uma 'impressão digital' da bactéria. 
-                    O espectro obtido é então comparado com um vasto banco de dados para identificar o gênero e a espécie 
-                    em questão de minutos.
+                <div style="background: #eef2ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #4338ca; margin-bottom: 15px;">🚀 MALDI-TOF MS</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    A tecnologia de <strong>MALDI-TOF (Matrix-Assisted Laser Desorption/Ionization - Time of Flight)</strong> 
+                    revolucionou a identificação bacteriana. É uma técnica de espectrometria de massa que analisa o perfil 
+                    de proteínas (principalmente ribossomais) de um microrganismo. O espectro de massa gerado é uma 
+                    'impressão digital' proteica, que é comparada a um banco de dados para identificação rápida e precisa da espécie.
                   </p>
                 </div>
               `,
@@ -705,14 +921,37 @@ const App = () => {
                   "Um método para avaliar a suscetibilidade a antimicrobianos diretamente da amostra clínica."
                 ],
                 correct: 1,
-                explanation: "MALDI-TOF MS é uma tecnologia de espectrometria de massa que gera um perfil proteico único para um microrganismo, permitindo sua identificação rápida e precisa ao comparar esse perfil com um banco de dados de referência."
+                explanation: "MALDI-TOF MS é uma tecnologia de espectrometria de massa que fornece identificação de espécies bacterianas e fúngicas em minutos a partir de colônias isoladas, acelerando drasticamente o diagnóstico microbiológico."
+              }
+            },
+            {
+              title: "Vantagens e Limitações",
+              content: `
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #374151; margin-bottom: 15px;">✅ Vantagens e ❌ Limitações</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    A principal vantagem do MALDI-TOF é a <strong>rapidez e precisão</strong> na identificação a partir 
+                    de uma cultura pura. No entanto, ele não fornece informações sobre suscetibilidade a antimicrobianos 
+                    e depende da qualidade do banco de dados e da pureza da amostra. A identificação direta de amostras 
+                    clínicas (sem cultura) ainda é um desafio.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal limitação do MALDI-TOF na rotina clínica?",
+                options: [
+                  "É um método muito lento, levando dias para o resultado.",
+                  "Não fornece informações sobre o perfil de resistência da bactéria aos antibióticos.",
+                  "Só consegue identificar bactérias gram-positivas."
+                ],
+                correct: 1,
+                explanation: "Apesar de sua rapidez na identificação, o MALDI-TOF não realiza testes de suscetibilidade. Portanto, após a identificação, ainda são necessários métodos fenotípicos ou genotípicos para determinar o perfil de resistência do microrganismo."
               }
             }
           ]
         }
       ]
     },
-
     antibiograma: {
       title: "Teste de Suscetibilidade Antimicrobiana",
       description: "Domine os conceitos e técnicas do antibiograma",
@@ -726,49 +965,59 @@ const App = () => {
             {
               title: "Resistência Intrínseca vs Adquirida",
               content: `
-                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #2563eb; margin-bottom: 15px;">🧬 Tipos de Resistência</h3>
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🧬 Tipos de Resistência</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    O objetivo do teste de suscetibilidade a antimicrobianos é determinar o grau de 
-                    <strong>resistência adquirida</strong> a antibióticos que podem ser empregados terapeuticamente. 
-                    É fundamental distinguir entre resistência intrínseca e adquirida.
+                    A <strong>resistência intrínseca</strong> é uma característica natural e inerente de uma espécie bacteriana. 
+                    Por exemplo, todas as bactérias gram-negativas são intrinsecamente resistentes à vancomicina devido à 
+                    sua estrutura de parede celular.
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Já a <strong>resistência adquirida</strong> é desenvolvida por uma bactéria que anteriormente era sensível 
+                    a um antimicrobiano. Isso pode ocorrer por mutações genéticas ou aquisição de genes de resistência.
                   </p>
                 </div>
                 
-                <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #0369a1; margin-bottom: 10px;">🔒 Resistência Intrínseca</h4>
-                  <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
-                    A resistência intrínseca é a resistência inerente a um antimicrobiano que todos ou 
-                    quase todos os membros de uma espécie exibem, tornando o teste de suscetibilidade 
-                    <strong>desnecessário</strong>.
-                  </p>
-                  <p style="font-size: 14px; line-height: 1.5; color: #059669;">
-                    <strong>Exemplo:</strong> Enterococcus é intrinsecamente resistente às cefalosporinas 
-                    devido à baixa afinidade das PBPs por estes antibióticos.
-                  </p>
-                </div>
-                
-                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #d97706; margin-bottom: 10px;">🔄 Resistência Adquirida</h4>
-                  <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
-                    A resistência adquirida desenvolve-se através de mutações cromossômicas ou 
-                    aquisição de elementos genéticos móveis (plasmídeos, transposons).
-                  </p>
-                  <p style="font-size: 14px; line-height: 1.5; color: #dc2626;">
-                    <strong>Exemplo:</strong> Staphylococcus aureus resistente à meticilina (MRSA) 
-                    através da aquisição do gene mecA.
+                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #d97706; margin-bottom: 10px;">⚠️ Importância Clínica</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    O teste de suscetibilidade só é necessário para resistência adquirida, pois a resistência 
+                    intrínseca é previsível e conhecida para cada espécie.
                   </p>
                 </div>
               `,
               question: {
-                text: "Qual é o principal objetivo do teste de suscetibilidade a antimicrobianos?",
+                text: "O que define a resistência intrínseca?",
                 options: [
-                  "Prever a resistência intrínseca de uma bactéria",
-                  "Determinar o grau de resistência adquirida a antibióticos que podem ser usados terapeuticamente",
-                  "Identificar a espécie bacteriana isolada de uma amostra clínica"
+                  "Resistência desenvolvida após a exposição a um agente indutor.",
+                  "Uma resistência inerente a um antimicrobiano que quase todos os membros de uma espécie bacteriana exibem.",
+                  "Resistência adquirida através da transferência horizontal de genes."
                 ],
                 correct: 1,
-                explanation: "O TSA visa determinar a resistência adquirida, pois a resistência intrínseca é previsível e não requer teste. O foco é identificar resistências que podem impactar a terapia."
+                explanation: "A resistência intrínseca é uma característica natural e inerente de uma espécie bacteriana, presente em todos ou quase todos os membros da espécie, tornando o teste de suscetibilidade desnecessário para esses antimicrobianos."
+              }
+            },
+            {
+              title: "Mecanismos Moleculares",
+              content: `
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #374151; margin-bottom: 15px;">🔬 Mecanismos de Ação</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Os mecanismos de resistência podem ser <strong>constitutivos</strong> (expressos continuamente) 
+                    ou <strong>induzíveis</strong> (expressos apenas na presença do antimicrobiano). A resistência 
+                    induzível pode ser mais difícil de detectar in vitro, mas clinicamente significativa.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a diferença entre resistência constitutiva e induzível?",
+                options: [
+                  "A resistência constitutiva é transferida por plasmídeos, enquanto a induzível é cromossômica.",
+                  "A resistência constitutiva é expressa continuamente, enquanto a induzível ocorre após a exposição a um agente incitante.",
+                  "A resistência constitutiva afeta apenas os beta-lactâmicos, enquanto a induzível afeta os macrolídeos."
+                ],
+                correct: 1,
+                explanation: "A resistência constitutiva é expressa de forma contínua pela bactéria, enquanto a resistência induzível só é expressa quando a bactéria é exposta ao antimicrobiano ou a um agente indutor específico."
               }
             }
           ]
@@ -780,53 +1029,55 @@ const App = () => {
           xp: 70,
           sections: [
             {
-              title: "Expressão Constitutiva vs Induzível",
+              title: "Beta-lactamases",
               content: `
-                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #166534; margin-bottom: 15px;">⚙️ Mecanismos de Expressão</h3>
+                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">🧪 Enzimas Beta-lactamases</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Mecanismos de resistência expressos <strong>constitutivamente</strong> são expressos 
-                    continuamente, enquanto a expressão <strong>induzível</strong> ocorre após a exposição 
-                    a um agente incitante específico.
+                    As <strong>beta-lactamases</strong> são enzimas que hidrolisam o anel beta-lactâmico presente 
+                    em penicilinas, cefalosporinas, carbapenêmicos e monobactâmicos. Existem diferentes classes 
+                    com espectros de ação variados.
                   </p>
-                </div>
-                
-                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #059669; margin-bottom: 10px;">🔄 Resistência Constitutiva</h4>
-                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li>Expressão contínua do mecanismo de resistência</li>
-                    <li>Facilmente detectável em testes de rotina</li>
-                    <li>Exemplo: Beta-lactamases cromossômicas de Enterobacter</li>
-                  </ul>
-                </div>
-                
-                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #d97706; margin-bottom: 10px;">⚡ Resistência Induzível</h4>
-                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li>Ativada apenas na presença do antibiótico indutor</li>
-                    <li>Pode não ser detectada em testes padrão</li>
-                    <li>Exemplo: Resistência à clindamicina induzida por eritromicina</li>
-                    <li>Requer testes especiais (D-zone test)</li>
-                  </ul>
-                </div>
-                
-                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
-                  <h4 style="color: #dc2626; margin-bottom: 10px;">🚨 Implicação Clínica</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    Resistência induzível pode levar à falha terapêutica mesmo com resultado "sensível" 
-                    in vitro, pois a resistência se desenvolve durante o tratamento.
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    As <strong>ESBLs (Extended-Spectrum Beta-Lactamases)</strong> são particularmente preocupantes 
+                    pois conferem resistência a cefalosporinas de amplo espectro e monobactâmicos, mas são inibidas 
+                    por ácido clavulânico.
                   </p>
                 </div>
               `,
               question: {
-                text: "Qual é a diferença entre resistência constitutiva e induzível?",
+                text: "O que caracteriza uma ESBL (Extended-Spectrum Beta-Lactamase)?",
                 options: [
-                  "A resistência constitutiva é transferida por plasmídeos, enquanto a induzível é cromossômica",
-                  "A resistência constitutiva é expressa continuamente, enquanto a induzível ocorre após a exposição a um agente incitante",
-                  "A resistência constitutiva afeta apenas os beta-lactâmicos, enquanto a induzível afeta os macrolídeos"
+                  "Enzima que confere resistência apenas às penicilinas.",
+                  "Enzima que confere resistência a cefalosporinas de amplo espectro, mas é inibida por ácido clavulânico.",
+                  "Enzima que confere resistência a todos os beta-lactâmicos, incluindo carbapenêmicos."
                 ],
                 correct: 1,
-                explanation: "A diferença fundamental está no padrão de expressão: constitutiva é contínua, enquanto induzível requer um estímulo (geralmente o próprio antibiótico) para ser expressa."
+                explanation: "As ESBLs conferem resistência a cefalosporinas de terceira geração e monobactâmicos, mas são inibidas por inibidores de beta-lactamases como o ácido clavulânico, característica usada nos testes de detecção."
+              }
+            },
+            {
+              title: "Alteração de Alvo",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🎯 Modificação do Sítio de Ação</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Algumas bactérias desenvolvem resistência alterando o sítio de ação do antimicrobiano. 
+                    O exemplo clássico é a resistência à meticilina em <strong>Staphylococcus aureus</strong> (MRSA), 
+                    onde a bactéria produz uma PBP (Penicillin-Binding Protein) alternativa com baixa afinidade 
+                    pelos beta-lactâmicos.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Como o MRSA desenvolve resistência aos beta-lactâmicos?",
+                options: [
+                  "Produzindo beta-lactamases que destroem o antibiótico.",
+                  "Produzindo uma PBP alternativa com baixa afinidade pelos beta-lactâmicos.",
+                  "Aumentando o efluxo do antibiótico para fora da célula."
+                ],
+                correct: 1,
+                explanation: "O MRSA produz PBP2a, uma proteína ligadora de penicilina alternativa codificada pelo gene mecA, que tem baixa afinidade pelos beta-lactâmicos, permitindo que a síntese da parede celular continue mesmo na presença do antibiótico."
               }
             }
           ]
@@ -838,45 +1089,34 @@ const App = () => {
           xp: 50,
           sections: [
             {
-              title: "Subpopulações com Resistência Variável",
+              title: "Conceito e Detecção",
               content: `
-                <div style="background: #fdf2f8; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #be185d; margin-bottom: 15px;">🧪 Fenômeno Complexo</h3>
+                <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #6d28d9; margin-bottom: 15px;">🧬 Heterorresistência</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    A expressão heterogênea, ou <strong>heterorresistência</strong>, pode levar a 
-                    subpopulações bacterianas dentro de uma amostra microbiológica que possuem 
-                    graus variados de resistência fenotípica, tornando a identificação in vitro 
-                    da resistência mais difícil.
+                    A <strong>heterorresistência</strong> é um fenômeno onde uma população bacteriana aparentemente 
+                    homogênea contém subpopulações com diferentes níveis de resistência ao mesmo antimicrobiano. 
+                    Isso pode levar a falhas terapêuticas mesmo quando o teste de suscetibilidade indica sensibilidade.
                   </p>
                 </div>
                 
-                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">🔬 Características</h4>
-                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li>Coexistência de células sensíveis e resistentes</li>
-                    <li>Expressão variável do mecanismo de resistência</li>
-                    <li>Dificuldade na detecção pelos métodos convencionais</li>
-                    <li>Pode levar a resultados falso-sensíveis</li>
-                  </ul>
-                </div>
-                
-                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
-                  <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ Exemplos Clínicos</h4>
-                  <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
-                    <strong>MRSA heterorresistente:</strong> Subpopulações com diferentes níveis de resistência à oxacilina<br>
-                    <strong>VISA (Vancomycin-Intermediate S. aureus):</strong> Heterorresistência à vancomicina
+                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #d97706; margin-bottom: 10px;">⚠️ Desafio Diagnóstico</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    A heterorresistência é difícil de detectar pelos métodos convencionais de teste de suscetibilidade, 
+                    pois as subpopulações resistentes podem representar menos de 1% da população total.
                   </p>
                 </div>
               `,
               question: {
                 text: "O que é heterorresistência?",
                 options: [
-                  "A resistência de uma única bactéria a múltiplas classes de antibióticos",
-                  "A expressão heterogênea de um mecanismo de resistência, levando a subpopulações com diferentes graus de resistência fenotípica",
-                  "Uma resistência que só se manifesta in vivo, mas não in vitro"
+                  "A resistência de uma única bactéria a múltiplas classes de antibióticos.",
+                  "A expressão heterogênea de um mecanismo de resistência, levando a subpopulações com diferentes graus de resistência fenotípica.",
+                  "Uma resistência que só se manifesta in vivo, mas não in vitro."
                 ],
                 correct: 1,
-                explanation: "Heterorresistência refere-se à coexistência de subpopulações bacterianas com diferentes níveis de resistência dentro da mesma amostra, dificultando a detecção laboratorial."
+                explanation: "A heterorresistência refere-se à presença de subpopulações bacterianas com diferentes níveis de resistência dentro de uma cultura aparentemente homogênea, o que pode resultar em falhas terapêuticas inesperadas."
               }
             }
           ]
@@ -888,110 +1128,116 @@ const App = () => {
           xp: 40,
           sections: [
             {
-              title: "Indicações e Contraindicações",
+              title: "Indicações Clínicas",
               content: `
-                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #0369a1; margin-bottom: 15px;">📋 Critérios para TSA</h3>
+                <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #059669; margin-bottom: 15px;">📋 Critérios para TSA</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    O teste de suscetibilidade NÃO é rotineiramente realizado quando o padrão de 
-                    suscetibilidade antimicrobiana de um organismo particular é previsível. Como exemplo, 
-                    o teste de <strong>Streptococcus pyogenes</strong> para suscetibilidade à penicilina 
-                    não é realizado rotineiramente porque isolados não suscetíveis à penicilina não foram relatados.
+                    O teste de suscetibilidade antimicrobiana (TSA) deve ser realizado quando:
                   </p>
-                </div>
-                
-                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #059669; margin-bottom: 10px;">✅ Indicações para TSA</h4>
                   <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li>Bactérias com resistência adquirida conhecida</li>
-                    <li>Isolados de sítios normalmente estéreis</li>
-                    <li>Infecções graves ou em pacientes imunocomprometidos</li>
-                    <li>Falha terapêutica com antibiótico de primeira linha</li>
+                    <li>Bactéria clinicamente significativa é isolada de sítio normalmente estéril</li>
+                    <li>Padrão de resistência é imprevisível para a espécie</li>
+                    <li>Paciente não responde à terapia empírica</li>
+                    <li>Infecção grave que requer terapia direcionada</li>
                   </ul>
                 </div>
                 
-                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #dc2626; margin-bottom: 10px;">❌ Quando NÃO Realizar</h4>
-                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li>S. pyogenes (sempre sensível à penicilina)</li>
-                    <li>S. agalactiae (sempre sensível à penicilina)</li>
-                    <li>Anaeróbios (padrões previsíveis)</li>
-                    <li>Contaminantes ou flora normal</li>
-                  </ul>
+                <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                  <h4 style="color: #1d4ed8; margin-bottom: 10px;">💡 Exemplo Prático</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    <strong>Streptococcus pyogenes</strong> não necessita teste para penicilina, pois nunca foi 
+                    relatada resistência. Já <strong>Staphylococcus aureus</strong> sempre requer teste devido 
+                    à possibilidade de MRSA.
+                  </p>
                 </div>
               `,
               question: {
                 text: "Em qual situação o teste de suscetibilidade NÃO é rotineiramente realizado?",
                 options: [
-                  "Quando uma bactéria clinicamente significativa é isolada de um sítio normalmente estéril",
-                  "Quando o padrão de suscetibilidade do organismo é previsível, como o de Streptococcus pyogenes à penicilina",
-                  "Quando o paciente está imunossuprimido e o organismo isolado pode ser um patógeno oportunista"
+                  "Quando uma bactéria clinicamente significativa é isolada de um sítio normalmente estéril.",
+                  "Quando o padrão de suscetibilidade do organismo é previsível, como o de Streptococcus pyogenes à penicilina.",
+                  "Quando o paciente está imunossuprimido e o organismo isolado pode ser um patógeno oportunista."
                 ],
                 correct: 1,
-                explanation: "TSA não é necessário quando o padrão de suscetibilidade é previsível. S. pyogenes nunca desenvolveu resistência à penicilina, tornando o teste desnecessário."
+                explanation: "O TSA não é necessário quando o padrão de suscetibilidade é previsível e bem estabelecido, como a sensibilidade universal de S. pyogenes à penicilina, onde resistência nunca foi documentada."
               }
             }
           ]
         },
         {
-          id: 5,
+          id: 4,
           title: "Métodos Qualitativos - Disco-Difusão",
           duration: "18 min",
           xp: 90,
           sections: [
             {
-              title: "Método de Kirby-Bauer",
+              title: "Princípio do Método Kirby-Bauer",
               content: `
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #2563eb; margin-bottom: 15px;">💿 Método Clássico</h3>
+                  <h3 style="color: #2563eb; margin-bottom: 15px;">🎯 Método de Disco-Difusão</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    O método de teste convencional qualitativo mais comumente usado pelos laboratórios 
-                    de microbiologia clínica é o <strong>método de difusão em disco</strong>, ou Kirby-Bauer, 
-                    devido à sua simplicidade, confiabilidade e alto grau de padronização.
+                    O método de <strong>disco-difusão (Kirby-Bauer)</strong> é o teste qualitativo mais utilizado 
+                    devido à sua simplicidade e padronização. O antimicrobiano difunde do disco através do ágar, 
+                    criando um gradiente de concentração. O diâmetro do halo de inibição é inversamente proporcional 
+                    à CIM.
                   </p>
-                </div>
-                
-                <div style="background: #f0fdf4; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #166534; margin-bottom: 10px;">⚙️ Princípio do Método</h4>
-                  <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
-                    O teste baseia-se na difusão do antibiótico do disco através do ágar, criando um 
-                    gradiente de concentração. A zona de inibição é inversamente proporcional à CIM.
-                  </p>
-                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li>Maior zona = menor CIM = mais sensível</li>
-                    <li>Menor zona = maior CIM = mais resistente</li>
-                  </ul>
                 </div>
                 
                 <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">📏 Padronização Crítica</h4>
-                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li><strong>Inóculo:</strong> 1-2 × 10⁸ CFU/mL (padrão 0,5 McFarland)</li>
-                    <li><strong>Meio:</strong> Ágar Mueller-Hinton (pH 7,2-7,4)</li>
-                    <li><strong>Incubação:</strong> 35°C por 16-18 horas</li>
-                    <li><strong>Atmosfera:</strong> Ar ambiente (CO₂ para fastidiosos)</li>
-                    <li><strong>Leitura:</strong> Medição precisa ao milímetro mais próximo</li>
-                  </ul>
-                </div>
-                
-                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
-                  <h4 style="color: #d97706; margin-bottom: 10px;">💰 Vantagens Econômicas</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    <strong>Custo:</strong> $2,50-$5,00 por teste (mais econômico)<br>
-                    <strong>Flexibilidade:</strong> Seleção livre de antibióticos<br>
-                    <strong>Simplicidade:</strong> Não requer equipamentos especiais
-                  </p>
+                  <h4 style="color: #374151; margin-bottom: 10px;">📏 Interpretação dos Halos</h4>
+                  <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                    <tr style="background: #e5e7eb;">
+                      <th style="padding: 8px; border: 1px solid #d1d5db;">Categoria</th>
+                      <th style="padding: 8px; border: 1px solid #d1d5db;">Interpretação</th>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold; color: #059669;">Sensível (S)</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Halo ≥ ponto de corte superior</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold; color: #d97706;">Intermediário (I)</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Halo entre os pontos de corte</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold; color: #dc2626;">Resistente (R)</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Halo ≤ ponto de corte inferior</td>
+                    </tr>
+                  </table>
                 </div>
               `,
               question: {
                 text: "O método de difusão em disco (Kirby-Bauer) fornece que tipo de resultado?",
                 options: [
-                  "Um resultado qualitativo, categorizando o isolado como sensível, sensível dose-dependente, intermediário ou resistente",
-                  "Um resultado quantitativo na forma de Concentração Inibitória Mínima (CIM)",
-                  "Um resultado genotípico, indicando a presença de genes de resistência"
+                  "Um resultado qualitativo, categorizando o isolado como sensível, sensível dose-dependente, intermediário ou resistente.",
+                  "Um resultado quantitativo na forma de Concentração Inibitória Mínima (CIM).",
+                  "Um resultado genotípico, indicando a presença de genes de resistência."
                 ],
                 correct: 0,
-                explanation: "O método de disco-difusão fornece resultados qualitativos (categorias S, I, R) baseados no diâmetro da zona de inibição, não valores quantitativos de CIM."
+                explanation: "O método de disco-difusão fornece resultados qualitativos, categorizando os isolados em diferentes classes de suscetibilidade baseadas no diâmetro dos halos de inibição comparados aos pontos de corte estabelecidos."
+              }
+            },
+            {
+              title: "Controle de Qualidade",
+              content: `
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d97706; margin-bottom: 15px;">✅ Controle de Qualidade</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    O controle de qualidade é essencial para garantir a confiabilidade dos resultados. 
+                    Cepas de referência ATCC com perfis de suscetibilidade conhecidos devem ser testadas 
+                    regularmente. Os halos devem estar dentro das faixas esperadas estabelecidas pelo CLSI/EUCAST.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que o controle de qualidade é crucial no teste de disco-difusão?",
+                options: [
+                  "Para acelerar o processo de teste.",
+                  "Para garantir a confiabilidade e precisão dos resultados usando cepas de referência com perfis conhecidos.",
+                  "Para reduzir o custo dos reagentes."
+                ],
+                correct: 1,
+                explanation: "O controle de qualidade com cepas ATCC de referência garante que o sistema de teste está funcionando corretamente, validando a precisão dos resultados antes de reportar os dados clínicos."
               }
             }
           ]
@@ -999,457 +1245,1523 @@ const App = () => {
         {
           id: 6,
           title: "Métodos Quantitativos - CIM",
-          duration: "20 min",
-          xp: 100,
+          duration: "16 min",
+          xp: 80,
           sections: [
             {
               title: "Concentração Inibitória Mínima",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #0369a1; margin-bottom: 15px;">🎯 Definição de CIM</h3>
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🔢 CIM - Concentração Inibitória Mínima</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Métodos quantitativos para o teste de suscetibilidade antimicrobiana permitem a 
-                    determinação da <strong>CIM</strong>, que é a menor concentração de um agente específico 
-                    necessária para inibir o crescimento visível de um organismo.
+                    A <strong>CIM</strong> é a menor concentração de um antimicrobiano capaz de inibir o crescimento 
+                    visível de uma bactéria após 16-20 horas de incubação. É expressa em mg/L ou μg/mL e fornece 
+                    informação quantitativa precisa sobre a suscetibilidade.
                   </p>
                 </div>
                 
-                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #059669; margin-bottom: 10px;">📊 Características da CIM</h4>
+                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                  <h4 style="color: #059669; margin-bottom: 10px;">💡 Vantagens da CIM</h4>
                   <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li><strong>Menor concentração</strong> para inibir 99% da bactéria</li>
-                    <li><strong>Melhor marcador</strong> de eficiência do antimicrobiano</li>
-                    <li><strong>Quanto menor, melhor</strong> - Em geral, <1 é sensível</li>
-                    <li><strong>Única para cada combinação</strong> antibiótico-bactéria</li>
+                    <li>Resultado quantitativo preciso</li>
+                    <li>Permite ajuste de dose baseado em PK/PD</li>
+                    <li>Melhor para infecções graves</li>
+                    <li>Padrão-ouro para pesquisa</li>
                   </ul>
-                </div>
-                
-                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">⚗️ Métodos para Determinação</h4>
-                  <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
-                    <tr style="background: #e5e7eb;">
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Método</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Precisão</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Custo</th>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Macrodiluição</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">±1 diluição</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Alto</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Microdiluição</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">±1 diluição</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">$10-22/painel</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">E-test</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Boa correlação</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">$2-3/fita</td>
-                    </tr>
-                  </table>
-                </div>
-                
-                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
-                  <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ "S" Pode Não Ser Sucesso!</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    Sempre tentar interpretar os <strong>mecanismos de resistência</strong>! 
-                    Um resultado "sensível" não garante sucesso clínico se houver mecanismos 
-                    de resistência não detectados ou fatores do hospedeiro desfavoráveis.
-                  </p>
                 </div>
               `,
               question: {
                 text: "O que é a Concentração Inibitória Mínima (CIM)?",
                 options: [
-                  "A maior concentração de antibiótico que uma bactéria pode tolerar sem morrer",
-                  "A menor concentração de um agente antimicrobiano necessária para inibir o crescimento visível de um organismo",
-                  "A concentração de antibiótico presente no sangue do paciente após a administração"
+                  "O diâmetro do halo de inibição medido no teste de difusão em disco.",
+                  "A menor concentração de um agente específico necessária para inibir o crescimento visível de um organismo in vitro.",
+                  "A concentração de um antibiótico que é bactericida para o organismo."
                 ],
                 correct: 1,
-                explanation: "CIM é definida como a menor concentração de antimicrobiano que inibe o crescimento visível (99%) do microrganismo testado após incubação padronizada."
+                explanation: "A CIM é definida como a menor concentração de um antimicrobiano que inibe completamente o crescimento visível de uma bactéria após incubação padronizada, fornecendo uma medida quantitativa precisa da suscetibilidade."
+              }
+            },
+            {
+              title: "Métodos de Determinação da CIM",
+              content: `
+                <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #6d28d9; margin-bottom: 15px;">🧪 Métodos para CIM</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    <strong>Diluição em caldo:</strong> Método de referência onde o antimicrobiano é diluído 
+                    seriadamente em caldo de cultura. Permite determinação precisa da CIM.
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    <strong>Diluição em ágar:</strong> Antimicrobiano incorporado ao ágar em diferentes concentrações. 
+                    Permite testar múltiplos isolados simultaneamente.
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    <strong>E-test (gradiente):</strong> Fita plástica com gradiente de concentração do antimicrobiano. 
+                    Combina facilidade do disco-difusão com precisão da CIM.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Como o teste de gradiente antimicrobiano (E-test) determina a CIM?",
+                options: [
+                  "Pela cor do meio de cultura após a incubação.",
+                  "Pela intersecção da zona elíptica de inibição do crescimento com a fita que contém um gradiente de concentração do antimicrobiano.",
+                  "Pela ausência de turbidez no tubo com a menor concentração do antibiótico."
+                ],
+                correct: 1,
+                explanation: "No E-test, a CIM é determinada no ponto onde a zona elíptica de inibição intersecta a fita com gradiente de concentração, fornecendo um valor quantitativo direto da concentração inibitória mínima."
               }
             }
           ]
         },
         {
           id: 7,
-          title: "Sistemas Automatizados",
+          title: "Interpretação Clínica dos Resultados",
           duration: "14 min",
-          xp: 80,
+          xp: 70,
           sections: [
             {
-              title: "VITEK, Phoenix e MicroScan",
+              title: "Categorias de Interpretação",
               content: `
-                <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #6d28d9; margin-bottom: 15px;">🤖 Automação Laboratorial</h3>
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #2563eb; margin-bottom: 15px;">📊 Categorias Clínicas</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Os sistemas automatizados revolucionaram o teste de suscetibilidade antimicrobiana, 
-                    oferecendo <strong>rapidez</strong>, <strong>padronização</strong> e <strong>integração</strong> 
-                    com sistemas de informação laboratorial.
+                    <strong>Sensível (S):</strong> A concentração do antibiótico que inibe o isolado é geralmente 
+                    alcançada com a dose recomendada para o tipo de infecção e organismo infectante.
                   </p>
-                </div>
-                
-                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">🏭 Principais Sistemas</h4>
-                  <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
-                    <tr style="background: #e5e7eb;">
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Sistema</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Fabricante</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Tempo</th>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">VITEK 2</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">bioMérieux</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">4-18h</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Phoenix</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">BD</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">6-16h</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">MicroScan</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Beckman Coulter</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">3-18h</td>
-                    </tr>
-                  </table>
-                </div>
-                
-                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #059669; margin-bottom: 10px;">✅ Vantagens</h4>
-                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li><strong>Rapidez:</strong> Resultados em 4-18 horas</li>
-                    <li><strong>Padronização:</strong> Reduz variabilidade técnica</li>
-                    <li><strong>Integração:</strong> Conecta com LIS/HIS</li>
-                    <li><strong>Interpretação:</strong> Sistemas especialistas integrados</li>
-                  </ul>
-                </div>
-                
-                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #dc2626; margin-bottom: 10px;">❌ Limitações</h4>
-                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li><strong>Custo:</strong> Alto investimento inicial</li>
-                    <li><strong>Flexibilidade:</strong> Painéis pré-definidos</li>
-                    <li><strong>Organismos raros:</strong> Podem não estar no banco de dados</li>
-                    <li><strong>Dependência:</strong> Requer manutenção especializada</li>
-                  </ul>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    <strong>Sensível Dose-Dependente (SDD):</strong> Para atingir a concentração inibitória, 
+                    é necessário usar um regime de dosagem que resulte em maior exposição ao medicamento.
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    <strong>Resistente (R):</strong> A concentração do antibiótico que inibe o isolado não é 
+                    alcançada com doses seguras, ou a bactéria possui mecanismos de resistência específicos.
+                  </p>
                 </div>
               `,
               question: {
-                text: "Qual é uma das principais vantagens dos sistemas automatizados de TSA?",
+                text: "O que indica a categoria 'sensível'?",
                 options: [
-                  "São mais baratos que os métodos manuais",
-                  "Oferecem maior flexibilidade na seleção de antibióticos",
-                  "Fornecem resultados mais rápidos e padronizados com integração ao sistema de informação laboratorial"
+                  "Que a concentração do antibiótico que inibe o isolado é geralmente alcançada com a dose recomendada.",
+                  "Que o antibiótico só funcionará se for usado em doses mais altas que as convencionais.",
+                  "Que a eficácia clínica pode ser alcançada apenas se o antibiótico se concentrar no local da infecção."
                 ],
-                correct: 2,
-                explanation: "Os sistemas automatizados destacam-se pela rapidez (4-18h vs 18-24h), padronização dos procedimentos e integração com sistemas de informação, melhorando o fluxo de trabalho laboratorial."
+                correct: 0,
+                explanation: "A categoria 'sensível' indica que as concentrações do antimicrobiano necessárias para inibir o crescimento bacteriano são facilmente alcançadas no local da infecção com as doses padrão recomendadas."
+              }
+            },
+            {
+              title: "Correlação PK/PD",
+              content: `
+                <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #059669; margin-bottom: 15px;">⚖️ Farmacocinética/Farmacodinâmica</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    A interpretação dos resultados deve considerar a <strong>farmacocinética</strong> (como o 
+                    organismo processa o medicamento) e a <strong>farmacodinâmica</strong> (como o medicamento 
+                    afeta a bactéria). Fatores como penetração tecidual, metabolismo e excreção influenciam 
+                    a eficácia clínica.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "O que significa a categoria 'sensível dose-dependente'?",
+                options: [
+                  "Que a bactéria é resistente a doses padrão, mas pode ser tratada com qualquer outro antibiótico.",
+                  "Que, para atingir a inibição, é necessário um regime de dosagem que resulte em maior exposição ao medicamento.",
+                  "Que a resposta ao tratamento é incerta e deve-se usar um agente alternativo."
+                ],
+                correct: 1,
+                explanation: "Sensível dose-dependente indica que a eficácia pode ser alcançada, mas requer otimização da dosagem (doses mais altas, intervalos menores, ou infusão prolongada) para atingir concentrações adequadas no local da infecção."
               }
             }
           ]
         },
         {
           id: 8,
-          title: "Testes Fenotípicos Especiais",
-          duration: "16 min",
-          xp: 85,
+          title: "Sistemas Automatizados",
+          duration: "12 min",
+          xp: 60,
           sections: [
             {
-              title: "Teste da Nitrocefina",
+              title: "Princípios dos Sistemas Automatizados",
               content: `
-                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #d97706; margin-bottom: 15px;">🧪 Detecção de Beta-lactamases</h3>
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🤖 Automação em Microbiologia</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    O <strong>teste da nitrocefina</strong> (cefalosporina cromogênica) é um método rápido 
-                    para detectar a produção de beta-lactamases em diversos microrganismos.
+                    Os sistemas automatizados (como VITEK, Phoenix, MicroScan) utilizam <strong>detecção óptica</strong> 
+                    do crescimento bacteriano na presença de diferentes concentrações de antimicrobianos. 
+                    Isso permite determinação rápida da CIM e interpretação automática.
                   </p>
                 </div>
                 
-                <div style="background: #f0fdf4; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #166534; margin-bottom: 10px;">⚙️ Princípio do Teste</h4>
-                  <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
-                    A nitrocefina é uma cefalosporina cromogênica que muda de cor quando hidrolisada 
-                    por beta-lactamases: de <strong>amarelo</strong> (negativo) para <strong>vermelho</strong> (positivo).
-                  </p>
-                </div>
-                
-                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">🎯 Aplicações Clínicas</h4>
-                  <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
-                    <tr style="background: #e5e7eb;">
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Organismo</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Detecção</th>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">H. influenzae</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Resistência à ampicilina</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">N. gonorrhoeae</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Resistência à penicilina</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Staphylococcus</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Resistência à penicilina</td>
-                    </tr>
-                  </table>
-                </div>
-              `,
-              question: {
-                text: "O teste da cefalosporina cromogênica (nitrocefina) é usado para detectar rapidamente o quê?",
-                options: [
-                  "Resistência induzível à clindamicina",
-                  "A produção de beta-lactamases em bactérias como Staphylococcus spp. e H. influenzae",
-                  "Resistência de alto nível a aminoglicosídeos em enterococos"
-                ],
-                correct: 1,
-                explanation: "O teste da nitrocefina detecta especificamente a produção de beta-lactamases através da hidrólise de uma cefalosporina cromogênica, resultando em mudança de cor."
-              }
-            },
-            {
-              title: "D-Zone Test",
-              content: `
-                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #d97706; margin-bottom: 15px;">🔄 Resistência Induzível</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    O Clinical and Laboratory Standards Institute (CLSI) recomenda que o teste para 
-                    <strong>resistência induzível à clindamicina</strong> seja realizado em todos os 
-                    isolados de Staphylococcus spp e Streptococcus pneumoniae.
-                  </p>
-                </div>
-                
-                <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #0369a1; margin-bottom: 10px;">⚙️ Metodologia</h4>
+                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                  <h4 style="color: #059669; margin-bottom: 10px;">✅ Vantagens</h4>
                   <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li><strong>Discos:</strong> Eritromicina (15μg) e clindamicina (2μg)</li>
-                    <li><strong>Distância:</strong> 15-26mm entre centros dos discos</li>
-                    <li><strong>Princípio:</strong> Eritromicina induz resistência à clindamicina</li>
-                    <li><strong>Resultado:</strong> Zona "D" (achatamento) ao redor da clindamicina</li>
+                    <li>Resultados em 4-8 horas (vs 16-24h métodos convencionais)</li>
+                    <li>Padronização e redução de erros técnicos</li>
+                    <li>Identificação simultânea de espécie e TSA</li>
+                    <li>Interpretação automática com alertas de resistência</li>
                   </ul>
                 </div>
-                
-                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
-                  <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ Interpretação Clínica</h4>
-                  <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
-                    <strong>D-zone positivo:</strong> Reportar clindamicina como resistente<br>
-                    <strong>D-zone negativo:</strong> Clindamicina pode ser usada<br>
-                    <strong>Importância:</strong> Previne falha terapêutica por resistência emergente
-                  </p>
-                </div>
               `,
               question: {
-                text: "O 'D-zone test' é utilizado para detectar qual mecanismo de resistência?",
+                text: "Qual é a principal vantagem dos sistemas automatizados de teste de suscetibilidade?",
                 options: [
-                  "Produção de beta-lactamase de espectro estendido (ESBL)",
-                  "Resistência induzível à clindamicina em Staphylococcus spp. e Streptococcus spp.",
-                  "Resistência à meticilina em S. aureus"
+                  "São os métodos mais baratos disponíveis.",
+                  "Podem fornecer resultados mais rapidamente por detectarem o crescimento bacteriano de forma óptica.",
+                  "Eliminam completamente a necessidade de testes fenotípicos confirmatórios."
                 ],
                 correct: 1,
-                explanation: "O D-zone test detecta resistência induzível à clindamicina mediada pelo gene erm, onde a eritromicina induz resistência cruzada à clindamicina."
+                explanation: "A principal vantagem dos sistemas automatizados é a rapidez, fornecendo resultados de identificação e suscetibilidade em 4-8 horas através da detecção óptica automatizada do crescimento, comparado às 16-24 horas dos métodos convencionais."
               }
             }
           ]
         },
         {
           id: 9,
-          title: "Métodos Moleculares",
-          duration: "18 min",
-          xp: 90,
+          title: "Testes Fenotípicos Especiais",
+          duration: "20 min",
+          xp: 100,
           sections: [
             {
-              title: "Detecção Genotípica de Resistência",
+              title: "Detecção de Beta-lactamases",
               content: `
-                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #0369a1; margin-bottom: 15px;">🧬 Revolução Molecular</h3>
+                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">🧪 Teste da Nitrocefina</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Alguns ensaios moleculares podem ser realizados diretamente em amostras clínicas 
-                    ou culturas primárias, resultando em <strong>tempos de resposta substancialmente 
-                    mais rápidos</strong> comparados aos métodos fenotípicos convencionais.
+                    O teste da <strong>nitrocefina (cefalosporina cromogênica)</strong> é um método rápido para 
+                    detectar a produção de beta-lactamases. A enzima hidrolisa a nitrocefina, causando mudança 
+                    de cor de amarelo para vermelho/rosa em poucos minutos.
                   </p>
                 </div>
                 
-                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #059669; margin-bottom: 10px;">⚡ Vantagens dos Métodos Moleculares</h4>
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 10px;">🎯 Aplicações Clínicas</h4>
                   <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li><strong>Rapidez:</strong> Resultados em 1-3 horas vs 18-48h</li>
-                    <li><strong>Amostra direta:</strong> Não requer isolamento prévio</li>
-                    <li><strong>Especificidade:</strong> Detecção de genes específicos</li>
-                    <li><strong>Sensibilidade:</strong> Detecção de baixas concentrações</li>
+                    <li><strong>Haemophilus spp.:</strong> Detecção de resistência à ampicilina</li>
+                    <li><strong>Neisseria gonorrhoeae:</strong> Orientação terapêutica rápida</li>
+                    <li><strong>Staphylococcus spp.:</strong> Detecção de penicilinase</li>
+                    <li><strong>Enterococcus spp.:</strong> Diferenciação de mecanismos de resistência</li>
                   </ul>
                 </div>
-                
-                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">🎯 Principais Aplicações</h4>
-                  <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
-                    <tr style="background: #e5e7eb;">
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Gene/Mecanismo</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Resistência</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Organismo</th>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">mecA/mecC</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Meticilina</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Staphylococcus</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">vanA/vanB</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Vancomicina</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Enterococcus</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">blaKPC</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Carbapenêmicos</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Enterobactérias</td>
-                    </tr>
-                  </table>
+              `,
+              question: {
+                text: "O teste da cefalosporina cromogênica (nitrocefina) é usado para detectar rapidamente o quê?",
+                options: [
+                  "Resistência induzível à clindamicina.",
+                  "A produção de beta-lactamases em bactérias como Staphylococcus spp. e H. influenzae.",
+                  "Resistência de alto nível a aminoglicosídeos em enterococos."
+                ],
+                correct: 1,
+                explanation: "O teste da nitrocefina detecta rapidamente a produção de beta-lactamases através da mudança de cor de amarelo para vermelho/rosa, sendo especialmente útil para H. influenzae, N. gonorrhoeae e Staphylococcus spp."
+              }
+            },
+            {
+              title: "Teste D (Clindamicina)",
+              content: `
+                <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #6d28d9; margin-bottom: 15px;">🧬 Resistência Induzível à Clindamicina</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    O <strong>teste D</strong> detecta resistência induzível à clindamicina em Staphylococcus spp. 
+                    e Streptococcus spp. Um disco de eritromicina é colocado próximo ao disco de clindamicina. 
+                    Se houver achatamento do halo de clindamicina próximo à eritromicina (formato de "D"), 
+                    indica resistência induzível.
+                  </p>
                 </div>
                 
-                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
-                  <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ Limitações Importantes</h4>
+                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #d97706; margin-bottom: 10px;">⚠️ Importância Clínica</h4>
                   <p style="font-size: 14px; line-height: 1.5;">
-                    Resultados genotípicos <strong>não eliminam a necessidade</strong> de testes de 
-                    suscetibilidade antimicrobiana fenotípicos. O teste fenotípico ainda é necessário 
-                    para confirmar esses resultados e fornecer informações sobre outras possíveis 
-                    opções terapêuticas.
+                    Isolados com teste D positivo devem ser reportados como resistentes à clindamicina, 
+                    mesmo que o teste isolado de clindamicina seja sensível, pois pode haver falha terapêutica.
                   </p>
                 </div>
               `,
               question: {
-                text: "Qual é uma das principais vantagens dos métodos genotípicos?",
+                text: "O 'D-zone test' é utilizado para detectar qual mecanismo de resistência?",
                 options: [
-                  "São menos caros que os métodos fenotípicos",
-                  "Podem ser realizados diretamente em amostras clínicas, resultando em tempos de resposta substancialmente mais rápidos",
-                  "Fornecem uma visão completa de todos os possíveis mecanismos de resistência"
+                  "Produção de beta-lactamase de espectro estendido (ESBL).",
+                  "Resistência induzível à clindamicina em Staphylococcus spp. e Streptococcus spp..",
+                  "Resistência à meticilina em S. aureus."
                 ],
                 correct: 1,
-                explanation: "A principal vantagem dos métodos moleculares é a rapidez, permitindo detecção direta em amostras clínicas sem necessidade de cultivo prévio, reduzindo significativamente o tempo para resultado."
+                explanation: "O teste D detecta resistência induzível à clindamicina mediada pelo gene erm, onde a eritromicina induz a produção de metilase que confere resistência cruzada à clindamicina, formando uma zona de inibição em formato de 'D'."
               }
             }
           ]
         },
         {
           id: 10,
-          title: "Interpretação Avançada de Resultados",
+          title: "Métodos Moleculares em TSA",
+          duration: "16 min",
+          xp: 80,
+          sections: [
+            {
+              title: "Detecção Genotípica de Resistência",
+              content: `
+                <div style="background: #eef2ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #4338ca; margin-bottom: 15px;">🧬 Métodos Moleculares</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Os métodos moleculares detectam genes de resistência específicos através de PCR, 
+                    hibridização ou sequenciamento. Podem ser realizados diretamente em amostras clínicas 
+                    ou culturas, fornecendo resultados em 1-3 horas.
+                  </p>
+                </div>
+                
+                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                  <h4 style="color: #059669; margin-bottom: 10px;">✅ Vantagens</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li>Rapidez: resultados em horas vs dias</li>
+                    <li>Detecção direta em amostras clínicas</li>
+                    <li>Identificação de mecanismos específicos</li>
+                    <li>Útil para bactérias de crescimento lento</li>
+                  </ul>
+                </div>
+              `,
+              question: {
+                text: "Qual é uma das principais vantagens dos métodos genotípicos?",
+                options: [
+                  "São menos caros que os métodos fenotípicos.",
+                  "Podem ser realizados diretamente em amostras clínicas, resultando em tempos de resposta substancialmente mais rápidos.",
+                  "Fornecem uma visão completa de todos os possíveis mecanismos de resistência."
+                ],
+                correct: 1,
+                explanation: "A principal vantagem dos métodos moleculares é a rapidez, permitindo detecção de genes de resistência diretamente em amostras clínicas em 1-3 horas, comparado aos métodos fenotípicos que requerem crescimento bacteriano (18-48 horas)."
+              }
+            },
+            {
+              title: "Limitações dos Métodos Moleculares",
+              content: `
+                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">⚠️ Limitações Importantes</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Embora rápidos, os métodos moleculares têm limitações importantes:
+                  </p>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li>Detectam apenas genes conhecidos nos painéis</li>
+                    <li>Não diferenciam genes expressos vs silenciosos</li>
+                    <li>Não fornecem informação sobre outros antimicrobianos</li>
+                    <li>Podem não detectar novos mecanismos de resistência</li>
+                  </ul>
+                </div>
+                
+                <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                  <h4 style="color: #1d4ed8; margin-bottom: 10px;">💡 Complementaridade</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Os métodos moleculares complementam, mas não substituem completamente os testes fenotípicos. 
+                    A combinação de ambos fornece informação mais completa para o manejo clínico.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal limitação clínica dos métodos moleculares?",
+                options: [
+                  "São mais lentos que os métodos fenotípicos.",
+                  "Não eliminam a necessidade de testes fenotípicos para confirmar os resultados e avaliar outras opções terapêuticas.",
+                  "Os resultados não se correlacionam com a resistência clínica."
+                ],
+                correct: 1,
+                explanation: "A principal limitação é que os métodos moleculares detectam apenas genes específicos conhecidos, não fornecendo informação sobre outros antimicrobianos ou novos mecanismos, mantendo a necessidade de testes fenotípicos complementares."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    antibioticoterapia: {
+      title: "Antibioticoterapia Ambulatorial",
+      description: "Aprenda os fundamentos da prescrição de antibióticos no ambulatório",
+      lessons: [
+        {
+          id: 1,
+          title: "Fundamentos da Antibioticoterapia",
+          duration: "15 min",
+          xp: 80,
+          sections: [
+            {
+              title: "Princípios Gerais",
+              content: `
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #7c3aed; margin-bottom: 15px;">💊 Princípios da Antibioticoterapia</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A <strong>antibioticoterapia ambulatorial</strong> envolve a seleção de antibióticos para tratar 
+                    infecções em pacientes fora do ambiente hospitalar. A escolha do antibiótico deve considerar 
+                    o espectro de ação, a farmacocinética, a farmacodinâmica, o perfil de segurança e o custo.
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    O sucesso do tratamento depende da identificação correta do patógeno provável, 
+                    da escolha do antibiótico adequado e da adesão do paciente ao tratamento.
+                  </p>
+                </div>
+                
+                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                  <h4 style="color: #059669; margin-bottom: 10px;">💡 Fatores Importantes</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li>Espectro de ação adequado</li>
+                    <li>Penetração no sítio de infecção</li>
+                    <li>Perfil de segurança</li>
+                    <li>Facilidade de administração</li>
+                    <li>Custo-efetividade</li>
+                  </ul>
+                </div>
+              `,
+              question: {
+                text: "Qual dos seguintes fatores NÃO é um princípio fundamental na escolha de um antibiótico?",
+                options: [
+                  "Espectro de ação",
+                  "Custo do tratamento",
+                  "Preferência do paciente",
+                  "Perfil de segurança"
+                ],
+                correct: 2,
+                explanation: "A preferência do paciente não é um princípio fundamental na escolha de um antibiótico, embora a adesão ao tratamento seja importante. A escolha deve ser baseada em critérios clínicos e farmacológicos."
+              }
+            },
+            {
+              title: "Classificação dos Antibióticos",
+              content: `
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d97706; margin-bottom: 15px;">🔬 Classes de Antibióticos</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Os antibióticos podem ser classificados com base em seu <strong>mecanismo de ação</strong>, 
+                    espectro de atividade (amplo ou estreito) e estrutura química. As principais classes incluem 
+                    beta-lactâmicos, macrolídeos, quinolonas, aminoglicosídeos e tetraciclinas.
+                  </p>
+                  
+                  <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+                    <tr style="background: #f59e0b; color: white;">
+                      <th style="padding: 8px; border: 1px solid #d1d5db;">Classe</th>
+                      <th style="padding: 8px; border: 1px solid #d1d5db;">Exemplos</th>
+                      <th style="padding: 8px; border: 1px solid #d1d5db;">Mecanismo</th>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold;">Beta-lactâmicos</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Penicilinas, Cefalosporinas</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Inibição da parede celular</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold;">Macrolídeos</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Azitromicina, Claritromicina</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Inibição da síntese proteica</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold;">Quinolonas</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Ciprofloxacino, Levofloxacino</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Inibição da DNA girase</td>
+                    </tr>
+                  </table>
+                </div>
+              `,
+              question: {
+                text: "Qual das seguintes classes de antibióticos NÃO é mencionada como uma das principais?",
+                options: [
+                  "Beta-lactâmicos",
+                  "Macrolídeos",
+                  "Antifúngicos",
+                  "Quinolonas"
+                ],
+                correct: 2,
+                explanation: "Antifúngicos são uma classe de medicamentos diferente, usados para tratar infecções fúngicas, não bacterianas."
+              }
+            }
+          ]
+        },
+        {
+          id: 2,
+          title: "Mecanismos de Ação dos Antibióticos",
+          duration: "18 min",
+          xp: 90,
+          sections: [
+            {
+              title: "Inibição da Síntese da Parede Celular",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🧱 Parede Celular Bacteriana</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Os antibióticos <strong>beta-lactâmicos</strong>, como penicilinas e cefalosporinas, 
+                    atuam inibindo a síntese da parede celular bacteriana. Eles se ligam às proteínas 
+                    ligadoras de penicilina (PBPs), impedindo a formação do peptidoglicano.
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Isso leva à <strong>lise da bactéria</strong> e à sua morte, caracterizando um 
+                    mecanismo bactericida. A parede celular é essencial para a sobrevivência bacteriana, 
+                    especialmente em ambientes hipotônicos.
+                  </p>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
+                  <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ Resistência</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    A resistência aos beta-lactâmicos pode ocorrer por produção de beta-lactamases, 
+                    alteração das PBPs ou redução da permeabilidade da membrana externa.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é o principal mecanismo de ação dos antibióticos beta-lactâmicos?",
+                options: [
+                  "Inibição da síntese de proteínas",
+                  "Inibição da síntese da parede celular",
+                  "Inibição da replicação do DNA",
+                  "Alteração da permeabilidade da membrana"
+                ],
+                correct: 1,
+                explanation: "Os beta-lactâmicos atuam especificamente na inibição da síntese da parede celular, uma estrutura essencial para a sobrevivência da bactéria."
+              }
+            },
+            {
+              title: "Inibição da Síntese de Proteínas",
+              content: `
+                <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #6d28d9; margin-bottom: 15px;">🧬 Síntese Proteica</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    <strong>Macrolídeos, tetraciclinas e aminoglicosídeos</strong> atuam inibindo a síntese 
+                    de proteínas bacterianas, ligando-se a diferentes subunidades do ribossomo. 
+                    Isso impede a produção de proteínas essenciais para o crescimento e a replicação bacteriana.
+                  </p>
+                  
+                  <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+                    <tr style="background: #6d28d9; color: white;">
+                      <th style="padding: 8px; border: 1px solid #d1d5db;">Antibiótico</th>
+                      <th style="padding: 8px; border: 1px solid #d1d5db;">Subunidade</th>
+                      <th style="padding: 8px; border: 1px solid #d1d5db;">Efeito</th>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold;">Macrolídeos</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">50S</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Bacteriostático</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold;">Aminoglicosídeos</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">30S</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Bactericida</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold;">Tetraciclinas</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">30S</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Bacteriostático</td>
+                    </tr>
+                  </table>
+                </div>
+              `,
+              question: {
+                text: "Qual das seguintes classes de antibióticos atua inibindo a síntese de proteínas?",
+                options: [
+                  "Penicilinas",
+                  "Cefalosporinas",
+                  "Macrolídeos",
+                  "Quinolonas"
+                ],
+                correct: 2,
+                explanation: "Macrolídeos, como a azitromicina, são conhecidos por seu mecanismo de ação que envolve a inibição da síntese de proteínas bacterianas."
+              }
+            }
+          ]
+        },
+        {
+          id: 3,
+          title: "Cefalosporinas",
+          duration: "20 min",
+          xp: 100,
+          sections: [
+            {
+              title: "Gerações de Cefalosporinas",
+              content: `
+                <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #059669; margin-bottom: 15px;">🏥 Classificação por Gerações</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    As <strong>cefalosporinas</strong> são classificadas em gerações (1ª a 5ª) com base em seu 
+                    espectro de atividade. As primeiras gerações são mais ativas contra bactérias Gram-positivas, 
+                    enquanto as gerações posteriores têm maior atividade contra Gram-negativas.
+                  </p>
+                  
+                  <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+                    <tr style="background: #059669; color: white;">
+                      <th style="padding: 8px; border: 1px solid #d1d5db;">Geração</th>
+                      <th style="padding: 8px; border: 1px solid #d1d5db;">Espectro Principal</th>
+                      <th style="padding: 8px; border: 1px solid #d1d5db;">Exemplo</th>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold;">1ª Geração</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Gram-positivos</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Cefalexina</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold;">2ª Geração</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Gram-positivos + alguns Gram-negativos</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Cefuroxima</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold;">3ª Geração</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Amplo espectro</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Ceftriaxona</td>
+                    </tr>
+                  </table>
+                </div>
+              `,
+              question: {
+                text: "O que diferencia as gerações de cefalosporinas?",
+                options: [
+                  "O mecanismo de ação",
+                  "O espectro de atividade",
+                  "A via de administração",
+                  "O custo do tratamento"
+                ],
+                correct: 1,
+                explanation: "As gerações de cefalosporinas são definidas principalmente por seu espectro de atividade contra bactérias Gram-positivas e Gram-negativas."
+              }
+            },
+            {
+              title: "Cefalosporinas de 1ª Geração",
+              content: `
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d97706; margin-bottom: 15px;">💊 Primeira Geração</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    As cefalosporinas de <strong>1ª geração</strong>, como a cefalexina, são eficazes contra 
+                    cocos Gram-positivos (Staphylococcus e Streptococcus) e algumas bactérias Gram-negativas. 
+                    São comumente usadas para infecções de pele e tecidos moles.
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    A <strong>cefalexina</strong> é amplamente utilizada no ambulatório devido à sua 
+                    boa biodisponibilidade oral, perfil de segurança favorável e eficácia contra 
+                    patógenos comuns de pele.
+                  </p>
+                </div>
+                
+                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                  <h4 style="color: #059669; margin-bottom: 10px;">💡 Indicações Principais</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li>Infecções de pele e tecidos moles</li>
+                    <li>Infecções do trato urinário não complicadas</li>
+                    <li>Profilaxia cirúrgica em alguns procedimentos</li>
+                    <li>Alternativa em alergia à penicilina (não anafilática)</li>
+                  </ul>
+                </div>
+              `,
+              question: {
+                text: "Para qual tipo de infecção a cefalexina é comumente usada?",
+                options: [
+                  "Infecções urinárias complicadas",
+                  "Infecções de pele e tecidos moles",
+                  "Meningite bacteriana",
+                  "Pneumonia hospitalar"
+                ],
+                correct: 1,
+                explanation: "A cefalexina, uma cefalosporina de 1ª geração, é uma escolha comum para infecções de pele e tecidos moles devido à sua eficácia contra cocos Gram-positivos."
+              }
+            }
+          ]
+        },
+        {
+          id: 4,
+          title: "Inibidores da Síntese de Ácido Nucleico",
+          duration: "16 min",
+          xp: 85,
+          sections: [
+            {
+              title: "Quinolonas",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🧬 Quinolonas</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    As <strong>quinolonas</strong> são uma classe de antibióticos que atuam inibindo a síntese de DNA bacteriano 
+                    através da inibição das enzimas <strong>DNA girase</strong> e <strong>topoisomerase IV</strong>. 
+                    São classificadas em gerações com espectros de ação distintos.
+                  </p>
+                  
+                  <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #0277bd; margin-bottom: 10px;">📊 Gerações de Quinolonas</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                      <thead>
+                        <tr style="background: #b3e5fc;">
+                          <th style="padding: 8px; border: 1px solid #81d4fa; text-align: left;">Geração</th>
+                          <th style="padding: 8px; border: 1px solid #81d4fa; text-align: left;">Exemplos</th>
+                          <th style="padding: 8px; border: 1px solid #81d4fa; text-align: left;">Espectro Principal</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #b3e5fc;">2ª Geração</td>
+                          <td style="padding: 8px; border: 1px solid #b3e5fc;">Ciprofloxacino, Norfloxacino</td>
+                          <td style="padding: 8px; border: 1px solid #b3e5fc;">Gram-negativos, Pseudomonas</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #b3e5fc;">3ª Geração</td>
+                          <td style="padding: 8px; border: 1px solid #b3e5fc;">Levofloxacino</td>
+                          <td style="padding: 8px; border: 1px solid #b3e5fc;">Gram-positivos + atípicos</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #b3e5fc;">4ª Geração</td>
+                          <td style="padding: 8px; border: 1px solid #b3e5fc;">Moxifloxacino</td>
+                          <td style="padding: 8px; border: 1px solid #b3e5fc;">Amplo + anaeróbios</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Indicações Clínicas</h4>
+                    <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                      <li><strong>Ciprofloxacino:</strong> ITUs complicadas, infecções por Pseudomonas</li>
+                      <li><strong>Levofloxacino:</strong> Pneumonia comunitária, sinusite</li>
+                      <li><strong>Moxifloxacino:</strong> Pneumonia com suspeita de anaeróbios</li>
+                    </ul>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual das seguintes quinolonas é mais ativa contra Pseudomonas aeruginosa?",
+                options: [
+                  "Norfloxacino",
+                  "Ciprofloxacino",
+                  "Levofloxacino",
+                  "Moxifloxacino"
+                ],
+                correct: 1,
+                explanation: "O ciprofloxacino (2ª geração) é a quinolona com maior atividade antipseudomonas, sendo uma escolha importante para infecções causadas por este patógeno."
+              }
+            },
+            {
+              title: "Nitrofuranos",
+              content: `
+                <div style="background: #fef7ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #a21caf; margin-bottom: 15px;">💊 Nitrofuranos</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A <strong>nitrofurantoína</strong> é um antibiótico da classe dos nitrofuranos, usado 
+                    exclusivamente para o tratamento de <strong>infecções do trato urinário (ITUs) não complicadas</strong>. 
+                    Sua ação se concentra na bexiga, com baixa penetração em outros tecidos.
+                  </p>
+                  
+                  <div style="background: #fce7f3; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #be185d; margin-bottom: 10px;">🎯 Espectro de Ação</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                      <div>
+                        <h5 style="color: #059669; margin-bottom: 8px;">✅ Ativo contra:</h5>
+                        <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                          <li>Escherichia coli</li>
+                          <li>Staphylococcus saprophyticus</li>
+                          <li>Enterococcus faecalis</li>
+                          <li>Klebsiella spp.</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h5 style="color: #dc2626; margin-bottom: 8px;">❌ Não ativo contra:</h5>
+                        <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                          <li>Proteus spp.</li>
+                          <li>Pseudomonas aeruginosa</li>
+                          <li>Serratia spp.</li>
+                          <li>Enterobacter spp.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fff7ed; padding: 15px; border-radius: 8px; border-left: 4px solid #ea580c;">
+                    <h4 style="color: #c2410c; margin-bottom: 10px;">⚠️ Limitações</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      A nitrofurantoína não deve ser usada em pielonefrites ou ITUs complicadas, 
+                      pois não atinge concentrações terapêuticas adequadas no parênquima renal.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual dos seguintes patógenos NÃO é coberto pela nitrofurantoína?",
+                options: [
+                  "Escherichia coli",
+                  "Staphylococcus saprophyticus",
+                  "Proteus mirabilis",
+                  "Enterococcus faecalis"
+                ],
+                correct: 2,
+                explanation: "A nitrofurantoína não tem atividade contra Proteus, Pseudomonas e Serratia, sendo uma escolha inadequada para infecções causadas por esses microrganismos."
+              }
+            }
+          ]
+        },
+        {
+          id: 5,
+          title: "Infecções da Pele - Celulite e Erisipela",
+          duration: "22 min",
+          xp: 110,
+          sections: [
+            {
+              title: "Diferenças entre Celulite e Erisipela",
+              content: `
+                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">🔍 Diagnóstico Diferencial</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A <strong>erisipela</strong> é uma infecção superficial da pele (derme superior) com bordas bem definidas, 
+                    enquanto a <strong>celulite</strong> atinge camadas mais profundas (derme e tecido subcutâneo) e tem bordas mal definidas. 
+                    Ambas são causadas principalmente por <strong>Streptococcus pyogenes</strong> e <strong>Staphylococcus aureus</strong>.
+                  </p>
+                  
+                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #b91c1c; margin-bottom: 10px;">📊 Características Comparativas</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                      <thead>
+                        <tr style="background: #fecaca;">
+                          <th style="padding: 8px; border: 1px solid #f87171; text-align: left;">Característica</th>
+                          <th style="padding: 8px; border: 1px solid #f87171; text-align: left;">Erisipela</th>
+                          <th style="padding: 8px; border: 1px solid #f87171; text-align: left;">Celulite</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #fecaca;"><strong>Localização</strong></td>
+                          <td style="padding: 8px; border: 1px solid #fecaca;">Derme superior</td>
+                          <td style="padding: 8px; border: 1px solid #fecaca;">Derme + subcutâneo</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #fecaca;"><strong>Bordas</strong></td>
+                          <td style="padding: 8px; border: 1px solid #fecaca;">Bem definidas, elevadas</td>
+                          <td style="padding: 8px; border: 1px solid #fecaca;">Mal definidas, difusas</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #fecaca;"><strong>Aparência</strong></td>
+                          <td style="padding: 8px; border: 1px solid #fecaca;">Lesão elevada, vermelha</td>
+                          <td style="padding: 8px; border: 1px solid #fecaca;">Eritema difuso</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #fecaca;"><strong>Patógeno principal</strong></td>
+                          <td style="padding: 8px; border: 1px solid #fecaca;">Streptococcus pyogenes</td>
+                          <td style="padding: 8px; border: 1px solid #fecaca;">S. pyogenes + S. aureus</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Dica Clínica</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      A erisipela frequentemente acomete a face (especialmente região nasal) e membros inferiores, 
+                      apresentando-se como uma placa eritematosa, quente, dolorosa e com bordas nítidas.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual das seguintes características é mais comum na erisipela do que na celulite?",
+                options: [
+                  "Bordas mal definidas",
+                  "Envolvimento do tecido subcutâneo",
+                  "Lesão elevada com bordas nítidas",
+                  "Presença de abscessos"
+                ],
+                correct: 2,
+                explanation: "A erisipela é caracterizada por uma lesão cutânea elevada, vermelha e com bordas bem demarcadas, o que a diferencia da celulite, que tem bordas mais difusas."
+              }
+            },
+            {
+              title: "Tratamento Ambulatorial",
+              content: `
+                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #15803d; margin-bottom: 15px;">💊 Tratamento Ambulatorial</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    O tratamento ambulatorial de <strong>celulite e erisipela não purulentas</strong> geralmente envolve 
+                    o uso de antibióticos com boa cobertura para <strong>Streptococcus</strong> e <strong>Staphylococcus</strong>. 
+                    A <strong>cefalexina</strong> é uma excelente opção de primeira linha.
+                  </p>
+                  
+                  <div style="background: #dcfce7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #166534; margin-bottom: 10px;">🎯 Opções Terapêuticas</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                      <thead>
+                        <tr style="background: #bbf7d0;">
+                          <th style="padding: 8px; border: 1px solid #86efac; text-align: left;">Antibiótico</th>
+                          <th style="padding: 8px; border: 1px solid #86efac; text-align: left;">Dose</th>
+                          <th style="padding: 8px; border: 1px solid #86efac; text-align: left;">Indicação</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;"><strong>Cefalexina</strong></td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">500mg 6/6h VO</td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">Primeira linha</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;"><strong>Clindamicina</strong></td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">300mg 8/8h VO</td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">Alergia à penicilina</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;"><strong>Amoxacilina + Clavulanato</strong></td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">875mg 12/12h VO</td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">Celulite purulenta</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #d97706;">
+                    <h4 style="color: #b45309; margin-bottom: 10px;">⚠️ Considerações Especiais</h4>
+                    <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                      <li><strong>Duração:</strong> 7-10 dias para casos não complicados</li>
+                      <li><strong>Celulite purulenta:</strong> Considerar cobertura para MRSA (clindamicina)</li>
+                      <li><strong>Sinais de alarme:</strong> Febre alta, linfangite, necrose tecidual</li>
+                      <li><strong>Medidas adjuvantes:</strong> Elevação do membro, analgesia, hidratação</li>
+                    </ul>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual dos seguintes antibióticos é a melhor escolha para o tratamento ambulatorial de uma celulite não purulenta?",
+                options: [
+                  "Ciprofloxacino",
+                  "Cefalexina",
+                  "Doxiciclina",
+                  "Clindamicina"
+                ],
+                correct: 1,
+                explanation: "A cefalexina (cefalosporina de 1ª geração) tem excelente atividade contra Streptococcus pyogenes e Staphylococcus aureus sensíveis à meticilina, sendo a escolha ideal para o tratamento de celulite e erisipela não purulentas."
+              }
+            }
+          ]
+        },
+        {
+          id: 6,
+          title: "Infecções de Vias Aéreas",
+          duration: "25 min",
+          xp: 120,
+          sections: [
+            {
+              title: "Diagnóstico Diferencial Viral vs. Bacteriano",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🦠 Diagnóstico Diferencial</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A maioria das <strong>infecções de vias aéreas superiores (IVAS)</strong> é de etiologia viral. 
+                    A diferenciação entre causas virais e bacterianas é crucial para evitar o uso desnecessário 
+                    de antibióticos.
+                  </p>
+                  
+                  <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #075985; margin-bottom: 10px;">🎯 Critérios de Centor</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      Os <strong>critérios de Centor</strong> são utilizados para estimar a probabilidade de 
+                      faringite por <em>Streptococcus pyogenes</em> (bacteriana):
+                    </p>
+                    <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                      <li>Febre > 38°C</li>
+                      <li>Ausência de tosse</li>
+                      <li>Exsudato amigdaliano</li>
+                      <li>Linfonodomegalia cervical anterior</li>
+                    </ul>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual dos seguintes critérios de Centor aumenta a probabilidade de faringite bacteriana?",
+                options: [
+                  "Tosse persistente",
+                  "Febre > 38°C",
+                  "Coriza hialina",
+                  "Congestão nasal"
+                ],
+                correct: 1,
+                explanation: "A febre acima de 38°C é um dos quatro critérios de Centor que aumentam a suspeita de faringite bacteriana. A ausência de tosse também é um critério, enquanto tosse e coriza sugerem etiologia viral."
+              }
+            },
+            {
+              title: "Tratamento de IVAS Bacterianas",
+              content: `
+                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #15803d; margin-bottom: 15px;">💊 Tratamento de IVAS</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    O tratamento de <strong>faringite bacteriana</strong> confirmada visa erradicar o 
+                    <em>S. pyogenes</em> e prevenir complicações como a febre reumática. A 
+                    <strong>penicilina</strong> ou <strong>amoxicilina</strong> são as drogas de escolha.
+                  </p>
+                  
+                  <div style="background: #dcfce7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #166534; margin-bottom: 10px;">🎯 Opções Terapêuticas</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                      <thead>
+                        <tr style="background: #bbf7d0;">
+                          <th style="padding: 8px; border: 1px solid #86efac; text-align: left;">Antibiótico</th>
+                          <th style="padding: 8px; border: 1px solid #86efac; text-align: left;">Dose</th>
+                          <th style="padding: 8px; border: 1px solid #86efac; text-align: left;">Indicação</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;"><strong>Amoxicilina</strong></td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">50mg/kg/dia 8/8h</td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">Primeira linha</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;"><strong>Penicilina Benzatina</strong></td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">Dose única IM</td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">Alternativa</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;"><strong>Azitromicina</strong></td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">12mg/kg/dia 1x/dia</td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">Alergia à penicilina</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é o antibiótico de primeira linha para o tratamento de faringite estreptocócica?",
+                options: [
+                  "Ciprofloxacino",
+                  "Amoxicilina",
+                  "Doxiciclina",
+                  "Clindamicina"
+                ],
+                correct: 1,
+                explanation: "A amoxicilina é o antibiótico de primeira linha para faringite estreptocócica devido à sua eficácia, segurança, baixo custo e espectro de ação adequado."
+              }
+            }
+          ]
+        },
+        {
+          id: 7,
+          title: "Pneumonia Ambulatorial",
           duration: "30 min",
           xp: 150,
           sections: [
             {
-              title: "Categorias CLSI vs EUCAST/BrCast",
+              title: "Critérios de Gravidade (CURB-65)",
               content: `
-                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #2563eb; margin-bottom: 15px;">🌍 Padrões Internacionais</h3>
+                <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d97706; margin-bottom: 15px;">📊 Critérios de Gravidade</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Existem diferenças importantes entre os critérios de interpretação do 
-                    <strong>CLSI</strong> (Clinical and Laboratory Standards Institute) e do 
-                    <strong>EUCAST/BrCast</strong> (European Committee/Brazilian Committee on Antimicrobial Susceptibility Testing).
+                    A <strong>pneumonia adquirida na comunidade (PAC)</strong> pode ser tratada ambulatorialmente 
+                    ou requerer hospitalização. O escore <strong>CURB-65</strong> ajuda a definir a gravidade e 
+                    o local de tratamento.
                   </p>
-                </div>
-                
-                <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #0369a1; margin-bottom: 10px;">🇺🇸 Sistema CLSI</h4>
-                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li><strong>S (Sensível):</strong> Concentração alcançada com dose padrão</li>
-                    <li><strong>I (Intermediário):</strong> Eficácia com doses aumentadas ou sítios que concentram</li>
-                    <li><strong>R (Resistente):</strong> Concentrações não alcançadas com doses usuais</li>
-                  </ul>
-                </div>
-                
-                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #059669; margin-bottom: 10px;">🇪🇺 Sistema EUCAST/BrCast</h4>
-                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li><strong>S (Sensível dose padrão):</strong> Sucesso com dosagem padrão</li>
-                    <li><strong>I (Sensível aumento exposição):</strong> Requer maior exposição</li>
-                    <li><strong>R (Resistente):</strong> Falha altamente provável</li>
-                  </ul>
-                  <p style="font-size: 14px; line-height: 1.5; color: #059669; margin-top: 10px;">
-                    <strong>BrCast reduz pontos de corte</strong> para garantir sensibilidade e 
-                    <strong>exclui categoria intermediário</strong> em muitos casos.
-                  </p>
-                </div>
-                
-                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #d97706; margin-bottom: 10px;">⚠️ Evidências Insuficientes</h4>
-                  <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
-                    Quando não há evidências suficientes para uso do antibiótico para o microrganismo testado:
-                  </p>
-                  <p style="font-size: 14px; line-height: 1.5; color: #dc2626;">
-                    <strong>Exemplo:</strong> Burkholderia cepacia não há ponto de corte no BrCast para cotrimoxazol!
-                  </p>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #b45309; margin-bottom: 10px;">🎯 Escore CURB-65</h4>
+                    <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                      <li><strong>C</strong>onfusão mental</li>
+                      <li><strong>U</strong>reia > 50 mg/dL</li>
+                      <li><strong>R</strong>espiração ≥ 30 ipm</li>
+                      <li><strong>B</strong>aixa pressão arterial (PAS < 90 ou PAD ≤ 60)</li>
+                      <li><strong>65</strong> anos ou mais</li>
+                    </ul>
+                  </div>
                 </div>
               `,
               question: {
-                text: "Qual é a principal diferença entre os sistemas CLSI e EUCAST/BrCast?",
+                text: "Qual dos seguintes parâmetros NÃO faz parte do escore CURB-65?",
                 options: [
-                  "CLSI é mais rigoroso que EUCAST",
-                  "BrCast reduz pontos de corte para garantir sensibilidade e frequentemente exclui a categoria intermediário",
-                  "EUCAST só é usado na Europa"
+                  "Confusão mental",
+                  "Frequência respiratória ≥ 30 ipm",
+                  "Saturação de oxigênio < 90%",
+                  "Idade ≥ 65 anos"
                 ],
-                correct: 1,
-                explanation: "BrCast tende a ser mais conservador, reduzindo pontos de corte para aumentar a probabilidade de sucesso terapêutico e simplificando a interpretação ao eliminar a categoria intermediário quando possível."
+                correct: 2,
+                explanation: "O escore CURB-65 inclui Confusão mental, Ureia > 50, Respiração ≥ 30, Baixa pressão arterial e Idade ≥ 65. A saturação de oxigênio não faz parte do escore original."
               }
             },
             {
-              title: "Interpretação da CIM",
+              title: "Tratamento Ambulatorial da PAC",
               content: `
-                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #166534; margin-bottom: 15px;">📊 Entendendo a CIM</h3>
+                <div style="background: #f0fdfa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0f766e; margin-bottom: 15px;">💊 Tratamento da PAC</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Devemos entender o que é a CIM: menor concentração para inibir 99% da bactéria. 
-                    É o <strong>melhor marcador de eficiência</strong> do antimicrobiano. Quanto menor, melhor - 
-                    Em geral, <strong>&lt;1 é sensível</strong>. É única para um antibiótico em relação a uma bactéria.
+                    O tratamento ambulatorial da <strong>PAC em pacientes sem comorbidades</strong> geralmente 
+                    envolve o uso de <strong>amoxicilina</strong> ou <strong>macrolídeos</strong>. Em pacientes com 
+                    comorbidades, a combinação de um beta-lactâmico com um macrolídeo é recomendada.
                   </p>
+                  
+                  <div style="background: #ccfbf1; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #115e59; margin-bottom: 10px;">🎯 Esquemas Terapêuticos</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                      <thead>
+                        <tr style="background: #99f6e4;">
+                          <th style="padding: 8px; border: 1px solid #5eead4; text-align: left;">Paciente</th>
+                          <th style="padding: 8px; border: 1px solid #5eead4; text-align: left;">Tratamento</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #99f6e4;"><strong>Sem comorbidades</strong></td>
+                          <td style="padding: 8px; border: 1px solid #99f6e4;">Amoxicilina 1g 8/8h VO</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #99f6e4;"><strong>Com comorbidades</strong></td>
+                          <td style="padding: 8px; border: 1px solid #99f6e4;">Amoxicilina + Clavulanato 875mg 12/12h VO + Azitromicina 500mg 1x/dia</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é o tratamento de primeira linha para PAC em um paciente de 45 anos sem comorbidades?",
+                options: [
+                  "Levofloxacino",
+                  "Amoxicilina",
+                  "Ceftriaxona",
+                  "Clindamicina"
+                ],
+                correct: 1,
+                explanation: "Para pacientes com PAC sem comorbidades, a amoxicilina é o tratamento de primeira linha recomendado devido à sua eficácia contra os patógenos mais comuns, como o Streptococcus pneumoniae."
+              }
+            }
+          ]
+        },
+        {
+          id: 8,
+          title: "Infecções do Trato Gastrointestinal",
+          duration: "25 min",
+          xp: 125,
+          sections: [
+            {
+              title: "Diarreia Aguda - Classificação",
+              content: `
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d97706; margin-bottom: 15px;">🔬 Classificação da Diarreia</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A <strong>diarreia aguda</strong> é definida como a eliminação de três ou mais evacuações 
+                    amolecidas ou líquidas por dia, com duração menor que 14 dias. Pode ser classificada em 
+                    <strong>inflamatória</strong> (disenteria) e <strong>não-inflamatória</strong> (aquosa).
+                  </p>
+                  
+                  <div style="background: #fef9c3; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #b45309; margin-bottom: 10px;">📋 Características Diferenciais</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                      <thead>
+                        <tr style="background: #fde68a;">
+                          <th style="padding: 8px; border: 1px solid #fcd34d; text-align: left;">Tipo</th>
+                          <th style="padding: 8px; border: 1px solid #fcd34d; text-align: left;">Características</th>
+                          <th style="padding: 8px; border: 1px solid #fcd34d; text-align: left;">Patógenos</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #fde68a;"><strong>Não-inflamatória</strong></td>
+                          <td style="padding: 8px; border: 1px solid #fde68a;">Aquosa, sem sangue, sem febre alta</td>
+                          <td style="padding: 8px; border: 1px solid #fde68a;">Vírus, E. coli enterotoxigênica, Vibrio cholerae</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #fde68a;"><strong>Inflamatória</strong></td>
+                          <td style="padding: 8px; border: 1px solid #fde68a;">Sangue/muco, febre, dor abdominal</td>
+                          <td style="padding: 8px; border: 1px solid #fde68a;">Shigella, Salmonella, Campylobacter, E. coli O157:H7</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
                 
-                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">🎯 Interpretação Prática</h4>
-                  <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
-                    <tr style="background: #e5e7eb;">
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">CIM (mg/L)</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Interpretação Geral</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Significado Clínico</th>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; color: #059669; font-weight: bold;">≤0,5</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Altamente sensível</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Excelente opção terapêutica</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; color: #059669;">0,5-1</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Sensível</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Boa opção com dose padrão</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; color: #d97706;">2-8</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Intermediário</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Requer doses aumentadas</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; color: #dc2626; font-weight: bold;">≥16</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Resistente</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Falha terapêutica provável</td>
-                    </tr>
-                  </table>
-                </div>
-                
-                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
-                  <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ "S" Pode Não Ser Sucesso!</h4>
+                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                  <h4 style="color: #059669; margin-bottom: 10px;">💡 Importância Clínica</h4>
                   <p style="font-size: 14px; line-height: 1.5;">
-                    Sempre tentar interpretar os <strong>mecanismos de resistência</strong>! 
-                    Um resultado "sensível" não garante sucesso clínico se houver mecanismos 
-                    de resistência não detectados ou fatores do hospedeiro desfavoráveis.
+                    A distinção entre diarreia inflamatória e não-inflamatória é fundamental para guiar 
+                    a decisão de tratamento antibiótico, já que a maioria das diarreias aquosas é autolimitada 
+                    e não requer antibioticoterapia.
                   </p>
                 </div>
               `,
               question: {
-                text: "Uma CIM de 0,25 mg/L para um antibiótico indica que:",
+                text: "Qual das seguintes características sugere diarreia inflamatória?",
                 options: [
-                  "A bactéria é resistente e o antibiótico não deve ser usado",
-                  "A bactéria é altamente sensível e o antibiótico é uma excelente opção terapêutica",
-                  "São necessárias doses aumentadas do antibiótico para eficácia"
+                  "Fezes aquosas sem sangue",
+                  "Ausência de febre",
+                  "Presença de sangue e muco nas fezes",
+                  "Duração menor que 24 horas"
+                ],
+                correct: 2,
+                explanation: "A presença de sangue e muco nas fezes é característica da diarreia inflamatória (disenteria), indicando invasão da mucosa intestinal por patógenos como Shigella, Salmonella ou Campylobacter."
+              }
+            },
+            {
+              title: "Indicações de Antibioticoterapia",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">💊 Quando Tratar com Antibióticos</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A maioria dos casos de diarreia aguda é <strong>autolimitada</strong> e não requer 
+                    antibioticoterapia. O tratamento antibiótico está indicado em situações específicas, 
+                    principalmente na presença de sinais de invasão bacteriana.
+                  </p>
+                  
+                  <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #075985; margin-bottom: 10px;">✅ Indicações de Tratamento</h4>
+                    <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                      <li><strong>Diarreia com sangue</strong> (disenteria)</li>
+                      <li><strong>Febre alta</strong> (>38.5°C) com sinais de toxemia</li>
+                      <li><strong>Diarreia do viajante</strong> moderada a grave</li>
+                      <li><strong>Pacientes imunocomprometidos</strong></li>
+                      <li><strong>Suspeita de cólera</strong> com desidratação grave</li>
+                      <li><strong>Idosos com comorbidades</strong></li>
+                    </ul>
+                  </div>
+                  
+                  <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
+                    <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ Contraindicações</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>Evitar antibióticos</strong> em casos de suspeita de infecção por E. coli O157:H7 
+                      (síndrome hemolítico-urêmica), pois podem aumentar o risco de complicações.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Em qual das seguintes situações o tratamento antibiótico está CONTRAINDICADO?",
+                options: [
+                  "Diarreia do viajante com febre alta",
+                  "Suspeita de infecção por E. coli O157:H7",
+                  "Disenteria em paciente imunocomprometido",
+                  "Diarreia sanguinolenta por Shigella"
                 ],
                 correct: 1,
-                explanation: "Uma CIM ≤0,5 mg/L indica alta sensibilidade, sugerindo que o antibiótico será muito eficaz contra essa bactéria com doses padrão, sendo uma excelente opção terapêutica."
+                explanation: "O uso de antibióticos em infecções por E. coli O157:H7 está contraindicado, pois pode aumentar o risco de síndrome hemolítico-urêmica (SHU) devido à liberação de toxinas Shiga."
+              }
+            },
+            {
+              title: "Escolha do Antibiótico",
+              content: `
+                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #166534; margin-bottom: 15px;">🎯 Antibióticos de Escolha</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A escolha do antibiótico depende do <strong>contexto epidemiológico</strong>, 
+                    gravidade do quadro e suspeita etiológica. As fluoroquinolonas e a azitromicina 
+                    são as opções mais utilizadas no tratamento empírico.
+                  </p>
+                  
+                  <div style="background: #dcfce7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #15803d; margin-bottom: 10px;">💊 Esquemas Terapêuticos</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                      <thead>
+                        <tr style="background: #bbf7d0;">
+                          <th style="padding: 8px; border: 1px solid #86efac; text-align: left;">Situação</th>
+                          <th style="padding: 8px; border: 1px solid #86efac; text-align: left;">Antibiótico</th>
+                          <th style="padding: 8px; border: 1px solid #86efac; text-align: left;">Dose</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;"><strong>Diarreia do viajante</strong></td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">Ciprofloxacino</td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">500mg 12/12h por 3 dias</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;"><strong>Disenteria (Shigella)</strong></td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">Ciprofloxacino</td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">500mg 12/12h por 3-5 dias</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;"><strong>Áreas com resistência</strong></td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">Azitromicina</td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">1g dose única ou 500mg/dia por 3 dias</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;"><strong>Campylobacter</strong></td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">Azitromicina</td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">500mg/dia por 3 dias</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                    <h4 style="color: #d97706; margin-bottom: 10px;">📌 Considerações Especiais</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      A <strong>azitromicina</strong> tem se tornado preferencial em muitas regiões devido ao 
+                      aumento da resistência de Campylobacter às fluoroquinolonas. Em crianças, a azitromicina 
+                      é preferida devido ao perfil de segurança.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é o antibiótico de primeira escolha para tratamento empírico de diarreia do viajante?",
+                options: [
+                  "Amoxicilina",
+                  "Ciprofloxacino",
+                  "Metronidazol",
+                  "Cefalexina"
+                ],
+                correct: 1,
+                explanation: "O ciprofloxacino é o antibiótico de primeira escolha para diarreia do viajante devido ao seu amplo espectro contra patógenos entéricos, incluindo E. coli enterotoxigênica, Shigella e Salmonella."
+              }
+            }
+          ]
+        },
+        {
+          id: 9,
+          title: "Infecções do Trato Urinário",
+          duration: "28 min",
+          xp: 140,
+          sections: [
+            {
+              title: "Classificação das ITUs",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🔬 Tipos de Infecção Urinária</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    As <strong>infecções do trato urinário (ITU)</strong> são classificadas em 
+                    <strong>não complicadas</strong> e <strong>complicadas</strong>, o que determina 
+                    a abordagem terapêutica. Também podem ser classificadas anatomicamente em 
+                    <strong>cistite</strong> (bexiga) e <strong>pielonefrite</strong> (rins).
+                  </p>
+                  
+                  <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #075985; margin-bottom: 10px;">📋 Classificação Clínica</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                      <thead>
+                        <tr style="background: #bae6fd;">
+                          <th style="padding: 8px; border: 1px solid #7dd3fc; text-align: left;">Tipo</th>
+                          <th style="padding: 8px; border: 1px solid #7dd3fc; text-align: left;">Características</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #bae6fd;"><strong>ITU não complicada</strong></td>
+                          <td style="padding: 8px; border: 1px solid #bae6fd;">Mulheres saudáveis, não gestantes, sem anormalidades urológicas</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #bae6fd;"><strong>ITU complicada</strong></td>
+                          <td style="padding: 8px; border: 1px solid #bae6fd;">Homens, gestantes, anormalidades urológicas, cateter, imunocomprometidos</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #bae6fd;"><strong>Cistite</strong></td>
+                          <td style="padding: 8px; border: 1px solid #bae6fd;">Disúria, polaciúria, urgência, sem febre ou sinais sistêmicos</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #bae6fd;"><strong>Pielonefrite</strong></td>
+                          <td style="padding: 8px; border: 1px solid #bae6fd;">Febre, dor lombar, náuseas/vômitos, sinais sistêmicos</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #d97706; margin-bottom: 10px;">💡 Importância da Classificação</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    A distinção entre ITU complicada e não complicada é crucial, pois determina a duração 
+                    do tratamento, a escolha do antibiótico e a necessidade de investigação adicional.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual das seguintes situações caracteriza uma ITU complicada?",
+                options: [
+                  "Cistite em mulher de 25 anos saudável",
+                  "ITU em homem de 45 anos",
+                  "Cistite recorrente em mulher sem comorbidades",
+                  "Bacteriúria assintomática em mulher jovem"
+                ],
+                correct: 1,
+                explanation: "ITU em homens é sempre considerada complicada devido à maior probabilidade de anormalidades urológicas subjacentes, como hiperplasia prostática ou estenose uretral."
+              }
+            },
+            {
+              title: "Cistite Não Complicada",
+              content: `
+                <div style="background: #fdf2f8; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #be185d; margin-bottom: 15px;">💊 Tratamento da Cistite</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A <strong>cistite não complicada</strong> é uma das infecções mais comuns em mulheres. 
+                    O tratamento empírico é baseado nos padrões locais de resistência de <strong>E. coli</strong>, 
+                    responsável por 75-95% dos casos.
+                  </p>
+                  
+                  <div style="background: #fce7f3; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #9f1239; margin-bottom: 10px;">🎯 Opções Terapêuticas</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                      <thead>
+                        <tr style="background: #fbcfe8;">
+                          <th style="padding: 8px; border: 1px solid #f9a8d4; text-align: left;">Antibiótico</th>
+                          <th style="padding: 8px; border: 1px solid #f9a8d4; text-align: left;">Dose</th>
+                          <th style="padding: 8px; border: 1px solid #f9a8d4; text-align: left;">Duração</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #fbcfe8;"><strong>Nitrofurantoína</strong></td>
+                          <td style="padding: 8px; border: 1px solid #fbcfe8;">100mg 12/12h</td>
+                          <td style="padding: 8px; border: 1px solid #fbcfe8;">5 dias</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #fbcfe8;"><strong>Fosfomicina</strong></td>
+                          <td style="padding: 8px; border: 1px solid #fbcfe8;">3g dose única</td>
+                          <td style="padding: 8px; border: 1px solid #fbcfe8;">Dose única</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #fbcfe8;"><strong>SMX-TMP</strong></td>
+                          <td style="padding: 8px; border: 1px solid #fbcfe8;">800/160mg 12/12h</td>
+                          <td style="padding: 8px; border: 1px solid #fbcfe8;">3 dias</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #fbcfe8;"><strong>Ciprofloxacino</strong></td>
+                          <td style="padding: 8px; border: 1px solid #fbcfe8;">250mg 12/12h</td>
+                          <td style="padding: 8px; border: 1px solid #fbcfe8;">3 dias</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">✅ Recomendações Atuais</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>Nitrofurantoína</strong> e <strong>fosfomicina</strong> são preferidas devido às 
+                      baixas taxas de resistência e menor impacto na microbiota intestinal. As fluoroquinolonas 
+                      devem ser reservadas para casos mais graves devido ao risco de efeitos adversos.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é o antibiótico de primeira escolha para cistite não complicada?",
+                options: [
+                  "Amoxicilina",
+                  "Nitrofurantoína",
+                  "Cefalexina",
+                  "Azitromicina"
+                ],
+                correct: 1,
+                explanation: "A nitrofurantoína é considerada primeira linha para cistite não complicada devido à sua alta eficácia, baixas taxas de resistência e mínimo impacto na microbiota intestinal."
+              }
+            },
+            {
+              title: "Pielonefrite Aguda",
+              content: `
+                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">🚨 Tratamento da Pielonefrite</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A <strong>pielonefrite aguda</strong> é uma infecção do parênquima renal que requer 
+                    tratamento mais agressivo. A decisão entre tratamento ambulatorial ou hospitalar 
+                    depende da gravidade do quadro clínico.
+                  </p>
+                  
+                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #b91c1c; margin-bottom: 10px;">⚠️ Critérios de Hospitalização</h4>
+                    <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                      <li>Incapacidade de manter hidratação oral</li>
+                      <li>Sinais de sepse ou instabilidade hemodinâmica</li>
+                      <li>Gestantes</li>
+                      <li>Imunocomprometidos</li>
+                      <li>Suspeita de obstrução urinária</li>
+                      <li>Falha do tratamento ambulatorial</li>
+                    </ul>
+                  </div>
+                  
+                  <div style="background: #f0fdf4; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #166534; margin-bottom: 10px;">💊 Esquemas Terapêuticos</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                      <thead>
+                        <tr style="background: #bbf7d0;">
+                          <th style="padding: 8px; border: 1px solid #86efac; text-align: left;">Cenário</th>
+                          <th style="padding: 8px; border: 1px solid #86efac; text-align: left;">Tratamento</th>
+                          <th style="padding: 8px; border: 1px solid #86efac; text-align: left;">Duração</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;"><strong>Ambulatorial leve</strong></td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">Ciprofloxacino 500mg 12/12h VO</td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">7 dias</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;"><strong>Ambulatorial moderado</strong></td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">Ceftriaxona 1g IM/IV + Ciprofloxacino VO</td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">10-14 dias</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;"><strong>Hospitalar</strong></td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">Ceftriaxona 1-2g IV 24/24h ou Ciprofloxacino IV</td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">14 dias total</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;"><strong>Sepse/grave</strong></td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">Piperacilina-tazobactam ou Meropenem IV</td>
+                          <td style="padding: 8px; border: 1px solid #bbf7d0;">14-21 dias</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                    <h4 style="color: #d97706; margin-bottom: 10px;">📌 Considerações Importantes</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      A escolha do antibiótico deve considerar os padrões locais de resistência. 
+                      Em áreas com alta prevalência de E. coli produtora de ESBL (>10%), considerar 
+                      carbapenêmicos ou aminoglicosídeos.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é a duração recomendada do tratamento para pielonefrite aguda não complicada?",
+                options: [
+                  "3 dias",
+                  "5 dias",
+                  "7 dias",
+                  "14 dias"
+                ],
+                correct: 2,
+                explanation: "O tratamento da pielonefrite aguda não complicada deve ser mantido por pelo menos 7 dias com fluoroquinolonas, ou 10-14 dias com beta-lactâmicos, para garantir a erradicação da infecção do parênquima renal."
+              }
+            },
+            {
+              title: "ITU em Situações Especiais",
+              content: `
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #374151; margin-bottom: 15px;">🔍 Populações Especiais</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Algumas populações requerem abordagens específicas no tratamento de ITU, 
+                    incluindo <strong>gestantes</strong>, <strong>homens</strong>, <strong>idosos</strong> 
+                    e <strong>pacientes com cateter vesical</strong>.
+                  </p>
+                  
+                  <div style="background: #e5e7eb; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #1f2937; margin-bottom: 10px;">👶 ITU na Gestação</h4>
+                    <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                      Gestantes com ITU devem sempre ser tratadas, mesmo se assintomáticas 
+                      (bacteriúria assintomática), devido ao risco de pielonefrite e parto prematuro.
+                    </p>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>Opções seguras:</strong> Amoxicilina, Cefalexina, Nitrofurantoína (evitar no 3º trimestre), 
+                      Fosfomicina. <strong>Evitar:</strong> Fluoroquinolonas, SMX-TMP (1º trimestre).
+                    </p>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #1e40af; margin-bottom: 10px;">👨 ITU em Homens</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      ITU em homens é sempre considerada complicada. Tratamento deve ser por 
+                      <strong>7-14 dias</strong>. Investigar causas subjacentes (hiperplasia prostática, 
+                      estenose uretral). Considerar prostatite se sintomas persistentes.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #92400e; margin-bottom: 10px;">👴 ITU em Idosos</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      Bacteriúria assintomática é comum em idosos e <strong>não deve ser tratada</strong> 
+                      na ausência de sintomas. Tratar apenas ITU sintomática. Atenção para sintomas 
+                      atípicos (confusão mental, quedas).
+                    </p>
+                  </div>
+                  
+                  <div style="background: #fce7f3; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #831843; margin-bottom: 10px;">🩺 ITU Associada a Cateter</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      Tratar apenas se sintomática. <strong>Trocar o cateter</strong> antes de iniciar 
+                      antibiótico. Duração: 7 dias se sintomas resolvem rapidamente, 10-14 dias se 
+                      resposta lenta.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual das seguintes afirmações sobre bacteriúria assintomática está CORRETA?",
+                options: [
+                  "Deve sempre ser tratada em idosos institucionalizados",
+                  "Deve ser tratada em gestantes",
+                  "Deve ser tratada em pacientes com cateter vesical de longa permanência",
+                  "Deve ser tratada em diabéticos"
+                ],
+                correct: 1,
+                explanation: "Bacteriúria assintomática deve ser tratada apenas em gestantes (risco de pielonefrite e parto prematuro) e antes de procedimentos urológicos invasivos. Em outras populações, incluindo idosos e diabéticos, não há benefício no tratamento."
               }
             }
           ]
@@ -1458,13 +2770,13 @@ const App = () => {
     }
   }
 
-  // Funções de navegação e controle
+  // Funções de autenticação
   const handleLogin = () => {
     const username = loginUsernameRef.current?.value
     const password = loginPasswordRef.current?.value
     
     if (username && password) {
-      setUser({ username })
+      setUser({ username, name: username })
       setCurrentView('dashboard')
     }
   }
@@ -1475,43 +2787,39 @@ const App = () => {
     const senha = registerSenhaRef.current?.value
     const confirmarSenha = registerConfirmarSenhaRef.current?.value
     
-    if (nome && login && senha && confirmarSenha && senha === confirmarSenha) {
-      setUser({ username: login })
+    if (nome && login && senha && senha === confirmarSenha) {
+      setUser({ username: login, name: nome })
       setCurrentView('dashboard')
     }
   }
 
-  const startLesson = (moduleKey, lessonId) => {
-    const module = modulesData[moduleKey]
+  const handleLogout = () => {
+    setUser(null)
+    setCurrentView('login')
+    setCurrentModule(null)
+    setCurrentLesson(null)
+    setCurrentSection(0)
+    setCurrentQuestion(null)
+    setShowQuestionFeedback(false)
+    setSelectedAnswer(null)
+  }
+
+  // Funções de navegação
+  const startLesson = (moduleId, lessonId) => {
+    const module = modulesData[moduleId]
     const lesson = module.lessons.find(l => l.id === lessonId)
     
-    if (lesson) {
-      setCurrentModule(moduleKey)
-      setCurrentLesson(lesson)
-      setCurrentSection(0)
-      setCurrentQuestion(null)
-      setShowQuestionFeedback(false)
-      setSelectedAnswer(null)
-      setCurrentView('lesson')
-    }
-  }
-
-  const showQuestion = () => {
-    const section = currentLesson.sections[currentSection]
-    if (section.question) {
-      setCurrentQuestion(section.question)
-      setShowQuestionFeedback(false)
-      setSelectedAnswer(null)
-    }
-  }
-
-  const handleAnswerSelect = (answerIndex) => {
-    setSelectedAnswer(answerIndex)
-    setShowQuestionFeedback(true)
+    setCurrentModule(moduleId)
+    setCurrentLesson(lesson)
+    setCurrentSection(0)
+    setCurrentQuestion(null)
+    setShowQuestionFeedback(false)
+    setSelectedAnswer(null)
+    setCurrentView('lesson')
   }
 
   const nextSection = () => {
-    if (currentSection < currentLesson.sections.length - 1) {
+    if (currentLesson && currentSection < currentLesson.sections.length - 1) {
       setCurrentSection(currentSection + 1)
       setCurrentQuestion(null)
       setShowQuestionFeedback(false)
@@ -1519,345 +2827,93 @@ const App = () => {
     }
   }
 
+  const showQuestion = () => {
+    if (currentLesson && currentLesson.sections[currentSection]?.question) {
+      setCurrentQuestion(currentLesson.sections[currentSection].question)
+      setShowQuestionFeedback(false)
+      setSelectedAnswer(null)
+    }
+  }
+
+  const selectAnswer = (answerIndex) => {
+    setSelectedAnswer(answerIndex)
+  }
+
+  const submitAnswer = () => {
+    if (selectedAnswer !== null && currentQuestion) {
+      setShowQuestionFeedback(true)
+      if (selectedAnswer === currentQuestion.correct) {
+        setUserProgress(prev => ({
+          ...prev,
+          xp: prev.xp + 25
+        }))
+      }
+    }
+  }
+
   const completeLesson = () => {
-    const lessonKey = `${currentModule}-${currentLesson.id}`
-    if (!userProgress.completedLessons.includes(lessonKey)) {
+    if (currentLesson) {
       setUserProgress(prev => ({
         ...prev,
         xp: prev.xp + currentLesson.xp,
-        completedLessons: [...prev.completedLessons, lessonKey]
+        completedLessons: [...prev.completedLessons, currentLesson.id]
       }))
+      setCurrentView('dashboard')
+      setCurrentModule(null)
+      setCurrentLesson(null)
+      setCurrentSection(0)
+      setCurrentQuestion(null)
+      setShowQuestionFeedback(false)
+      setSelectedAnswer(null)
     }
-    setCurrentView('dashboard')
   }
 
-  // Componente de Login/Registro
-  const LoginView = () => (
-    <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <div style={{ background: 'white', borderRadius: '20px', padding: '40px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)', width: '100%', maxWidth: '400px' }}>
-        {currentView === 'login' ? (
-          <>
-            <h1 style={{ textAlign: 'center', color: '#2d3748', marginBottom: '30px', fontSize: '28px' }}>🦠 Infecteasy</h1>
-            <div style={{ marginBottom: '20px' }}>
-              <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>Usuário</label>
-              <input ref={loginUsernameRef} type="text" style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '16px' }} />
+  // Renderização condicional
+  if (currentView === 'login') {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
+          <div className="text-center mb-8">
+            <h1 className="text-3xl font-bold text-gray-800 mb-2">🧬 Infecteasy</h1>
+            <p className="text-gray-600">Plataforma de Aprendizado em Microbiologia</p>
+          </div>
+          
+          <div className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Usuário</label>
+              <input
+                ref={loginUsernameRef}
+                type="text"
+                placeholder="Digite seu usuário"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              />
             </div>
-            <div style={{ marginBottom: '30px' }}>
-              <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>Senha</label>
-              <input ref={loginPasswordRef} type="password" style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '16px' }} />
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Senha</label>
+              <input
+                ref={loginPasswordRef}
+                type="password"
+                placeholder="Digite sua senha"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              />
             </div>
-            <button onClick={handleLogin} style={{ width: '100%', background: '#4299e1', color: 'white', padding: '12px', borderRadius: '8px', border: 'none', fontSize: '16px', fontWeight: '600', cursor: 'pointer', marginBottom: '15px' }}>
+            
+            <button
+              onClick={handleLogin}
+              className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors font-medium"
+            >
               Entrar
             </button>
-            <p style={{ textAlign: 'center', color: '#718096' }}>
-              Não tem conta? <button onClick={() => setCurrentView('register')} style={{ background: 'none', border: 'none', color: '#4299e1', cursor: 'pointer', textDecoration: 'underline' }}>Cadastre-se</button>
-            </p>
-          </>
-        ) : (
-          <>
-            <h1 style={{ textAlign: 'center', color: '#2d3748', marginBottom: '30px', fontSize: '24px' }}>Criar Conta</h1>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '20px' }}>
-              <div>
-                <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>Nome</label>
-                <input ref={registerNomeRef} type="text" style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }} />
-              </div>
-              <div>
-                <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>CPF</label>
-                <input ref={registerCpfRef} type="text" style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }} />
-              </div>
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '20px' }}>
-              <div>
-                <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>Data Nascimento</label>
-                <input ref={registerDataNascimentoRef} type="date" style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }} />
-              </div>
-              <div>
-                <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>Telefone</label>
-                <input ref={registerTelefoneRef} type="tel" style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }} />
-              </div>
-            </div>
-            <div style={{ marginBottom: '20px' }}>
-              <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>Email</label>
-              <input ref={registerEmailRef} type="email" style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }} />
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '20px' }}>
-              <div>
-                <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>Login</label>
-                <input ref={registerLoginRef} type="text" style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }} />
-              </div>
-              <div>
-                <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>Atividade</label>
-                <select ref={registerAtividadeRef} style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }}>
-                  <option>Estudante</option>
-                  <option>Profissional</option>
-                  <option>Professor</option>
-                </select>
-              </div>
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '30px' }}>
-              <div>
-                <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>Senha</label>
-                <input ref={registerSenhaRef} type="password" style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }} />
-              </div>
-              <div>
-                <label style={{ display: 'block', marginBottom: '8px', color: '#4a5568', fontWeight: '600' }}>Confirmar Senha</label>
-                <input ref={registerConfirmarSenhaRef} type="password" style={{ width: '100%', padding: '12px', border: '2px solid #e2e8f0', borderRadius: '8px', fontSize: '14px' }} />
-              </div>
-            </div>
-            <button onClick={handleRegister} style={{ width: '100%', background: '#48bb78', color: 'white', padding: '12px', borderRadius: '8px', border: 'none', fontSize: '16px', fontWeight: '600', cursor: 'pointer', marginBottom: '15px' }}>
-              Criar Conta
-            </button>
-            <p style={{ textAlign: 'center', color: '#718096' }}>
-              Já tem conta? <button onClick={() => setCurrentView('login')} style={{ background: 'none', border: 'none', color: '#4299e1', cursor: 'pointer', textDecoration: 'underline' }}>Faça login</button>
-            </p>
-          </>
-        )}
-      </div>
-    </div>
-  )
-
-  // Componente do Dashboard
-  const DashboardView = () => (
-    <div style={{ minHeight: '100vh', background: '#f8fafc' }}>
-      {/* Header */}
-      <div style={{ background: 'white', borderBottom: '1px solid #e2e8f0', padding: '20px' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <h1 style={{ fontSize: '28px', fontWeight: 'bold', color: '#1e293b' }}>🦠 Infecteasy</h1>
-          
-          <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-            <div style={{ background: '#fef3c7', padding: '10px 15px', borderRadius: '10px' }}>
-              <span style={{ color: '#92400e', fontSize: '14px' }}>⚡ {userProgress.xp} XP</span>
-            </div>
-            <div style={{ background: '#dbeafe', padding: '10px 15px', borderRadius: '10px' }}>
-              <span style={{ color: '#1e40af', fontSize: '14px' }}>🎯 Nível {userProgress.level}</span>
-            </div>
-            <div style={{ background: '#dcfce7', padding: '10px 15px', borderRadius: '10px' }}>
-              <span style={{ color: '#166534', fontSize: '14px' }}>🔥 {userProgress.streak} dias</span>
-            </div>
-            <button 
-              onClick={() => setCurrentView('login')}
-              style={{ background: '#ef4444', color: 'white', padding: '8px 16px', borderRadius: '8px', border: 'none', cursor: 'pointer' }}
-            >
-              Sair
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Conteúdo Principal */}
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 20px' }}>
-        <div style={{ marginBottom: '40px' }}>
-          <h2 style={{ fontSize: '32px', fontWeight: 'bold', color: '#1e293b', marginBottom: '10px' }}>
-            Bem-vindo de volta, {user?.username}! 👋
-          </h2>
-          <p style={{ fontSize: '18px', color: '#64748b' }}>
-            Continue sua jornada de aprendizado em microbiologia clínica
-          </p>
-        </div>
-
-        {/* Módulos */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(500px, 1fr))', gap: '30px' }}>
-          {Object.entries(modulesData).map(([key, module]) => (
-            <div key={key} style={{ background: 'white', borderRadius: '16px', padding: '30px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)' }}>
-              <div style={{ marginBottom: '25px' }}>
-                <h3 style={{ fontSize: '24px', fontWeight: 'bold', color: '#1e293b', marginBottom: '8px' }}>{module.title}</h3>
-                <p style={{ color: '#64748b', fontSize: '16px' }}>{module.description}</p>
-              </div>
-              
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                {module.lessons.map((lesson) => {
-                  const isCompleted = userProgress.completedLessons.includes(`${key}-${lesson.id}`)
-                  return (
-                    <button
-                      key={lesson.id}
-                      onClick={() => startLesson(key, lesson.id)}
-                      style={{
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        padding: '15px',
-                        background: isCompleted ? '#f0f9ff' : '#f8fafc',
-                        border: `2px solid ${isCompleted ? '#2563eb' : '#e2e8f0'}`,
-                        borderRadius: '12px',
-                        cursor: 'pointer',
-                        transition: 'all 0.2s ease'
-                      }}
-                      onMouseEnter={(e) => {
-                        e.target.style.transform = 'translateY(-2px)'
-                        e.target.style.boxShadow = '0 8px 25px rgba(0,0,0,0.1)'
-                      }}
-                      onMouseLeave={(e) => {
-                        e.target.style.transform = 'translateY(0)'
-                        e.target.style.boxShadow = 'none'
-                      }}
-                    >
-                      <div style={{ textAlign: 'left' }}>
-                        <div style={{ fontWeight: '600', color: '#1e293b', marginBottom: '4px' }}>{lesson.title}</div>
-                        <div style={{ fontSize: '14px', color: '#64748b' }}>{lesson.duration} • {lesson.xp} XP</div>
-                      </div>
-                      <div style={{ fontSize: '20px' }}>
-                        {isCompleted ? '✅' : '▶️'}
-                      </div>
-                    </button>
-                  )
-                })}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  )
-
-  // Componente da Lição
-  const LessonView = () => {
-    if (!currentLesson) return null
-
-    const section = currentLesson.sections[currentSection]
-    const isLastSection = currentSection === currentLesson.sections.length - 1
-
-    return (
-      <div style={{ minHeight: '100vh', background: '#f8fafc' }}>
-        {/* Header da Lição */}
-        <div style={{ background: 'white', borderBottom: '1px solid #e2e8f0', padding: '20px' }}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <div>
+            
+            <div className="text-center">
+              <span className="text-gray-600">Não tem conta? </span>
               <button
-                onClick={() => setCurrentView('dashboard')}
-                style={{ background: '#f1f5f9', color: '#475569', padding: '8px 16px', borderRadius: '8px', border: 'none', cursor: 'pointer', marginBottom: '10px' }}
+                onClick={() => setCurrentView('register')}
+                className="text-indigo-600 hover:text-indigo-800 font-medium"
               >
-                ← Voltar ao Dashboard
+                Cadastre-se
               </button>
-              <h1 style={{ fontSize: '24px', fontWeight: 'bold', color: '#1e293b', margin: 0 }}>{currentLesson.title}</h1>
-              <p style={{ color: '#64748b', margin: '5px 0 0 0' }}>Seção {currentSection + 1} de {currentLesson.sections.length}</p>
-            </div>
-            
-            <div style={{ background: '#fef3c7', padding: '10px 15px', borderRadius: '10px' }}>
-              <span style={{ color: '#92400e', fontSize: '14px' }}>🎯 {currentLesson.xp} XP</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Conteúdo da Seção */}
-        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
-          <div style={{ background: 'white', borderRadius: '16px', padding: '40px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)' }}>
-            <h2 style={{ fontSize: '28px', fontWeight: 'bold', color: '#1e293b', marginBottom: '30px' }}>{section.title}</h2>
-            
-            <div 
-              style={{ fontSize: '16px', lineHeight: '1.8', color: '#374151', marginBottom: '40px' }}
-              dangerouslySetInnerHTML={{ __html: section.content }}
-            />
-
-            {/* Sistema de Perguntas */}
-            {!currentQuestion && section.question && (
-              <div style={{ textAlign: 'center', marginBottom: '30px' }}>
-                <button
-                  onClick={showQuestion}
-                  style={{ background: '#2563eb', color: 'white', padding: '15px 30px', borderRadius: '12px', border: 'none', fontSize: '16px', fontWeight: '600', cursor: 'pointer' }}
-                >
-                  📝 Responder Pergunta
-                </button>
-              </div>
-            )}
-
-            {currentQuestion && (
-              <div style={{ background: '#f8fafc', padding: '30px', borderRadius: '12px', border: '2px solid #e2e8f0', marginBottom: '30px' }}>
-                <h3 style={{ fontSize: '20px', fontWeight: '600', color: '#1e293b', marginBottom: '20px' }}>
-                {console.log('🎨 DEBUG Renderizando pergunta:', currentQuestion.text) || currentQuestion.text}
-              </h3>
-                
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '20px' }}>
-                  {currentQuestion.options.map((option, index) => (
-                    <button
-                      key={index}
-                      onClick={() => handleAnswerSelect(index)}
-                      disabled={showQuestionFeedback}
-                      style={{
-                        padding: '15px',
-                        textAlign: 'left',
-                        background: showQuestionFeedback 
-                          ? (index === currentQuestion.correct ? '#dcfce7' : selectedAnswer === index ? '#fecaca' : 'white')
-                          : 'white',
-                        border: showQuestionFeedback
-                          ? (index === currentQuestion.correct ? '2px solid #16a34a' : selectedAnswer === index ? '2px solid #dc2626' : '2px solid #e2e8f0')
-                          : '2px solid #e2e8f0',
-                        borderRadius: '8px',
-                        cursor: showQuestionFeedback ? 'default' : 'pointer',
-                        fontSize: '16px',
-                        color: '#374151'
-                      }}
-                    >
-                      {String.fromCharCode(97 + index)}) {option}
-                    </button>
-                  ))}
-                </div>
-
-                {showQuestionFeedback && (
-                  <div style={{ 
-                    background: selectedAnswer === currentQuestion.correct ? '#dcfce7' : '#fecaca', 
-                    padding: '20px', 
-                    borderRadius: '8px',
-                    border: selectedAnswer === currentQuestion.correct ? '1px solid #16a34a' : '1px solid #dc2626'
-                  }}>
-                    <div style={{ 
-                      fontSize: '18px', 
-                      fontWeight: '600', 
-                      color: selectedAnswer === currentQuestion.correct ? '#15803d' : '#dc2626',
-                      marginBottom: '10px'
-                    }}>
-                      {selectedAnswer === currentQuestion.correct ? '✅ Correto!' : '❌ Incorreto'}
-                    </div>
-                    <p style={{ fontSize: '16px', color: '#374151', lineHeight: '1.6', margin: 0 }}>
-                      {currentQuestion.explanation}
-                    </p>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* Navegação */}
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <div style={{ color: '#64748b' }}>
-                Seção {currentSection + 1} de {currentLesson.sections.length}
-              </div>
-              
-              <div>
-                {!isLastSection ? (
-                  <button
-                    onClick={nextSection}
-                    disabled={section.question && !showQuestionFeedback}
-                    style={{
-                      background: (section.question && !showQuestionFeedback) ? '#9ca3af' : '#059669',
-                      color: 'white',
-                      padding: '12px 24px',
-                      borderRadius: '8px',
-                      border: 'none',
-                      fontSize: '16px',
-                      fontWeight: '600',
-                      cursor: (section.question && !showQuestionFeedback) ? 'not-allowed' : 'pointer'
-                    }}
-                  >
-                    Próxima Seção →
-                  </button>
-                ) : (
-                  <button
-                    onClick={completeLesson}
-                    disabled={section.question && !showQuestionFeedback}
-                    style={{
-                      background: (section.question && !showQuestionFeedback) ? '#9ca3af' : '#7c3aed',
-                      color: 'white',
-                      padding: '12px 24px',
-                      borderRadius: '8px',
-                      border: 'none',
-                      fontSize: '16px',
-                      fontWeight: '600',
-                      cursor: (section.question && !showQuestionFeedback) ? 'not-allowed' : 'pointer'
-                    }}
-                  >
-                    🎉 Concluir Lição
-                  </button>
-                )}
-              </div>
             </div>
           </div>
         </div>
@@ -1865,13 +2921,422 @@ const App = () => {
     )
   }
 
-  // Renderização principal
-  if (currentView === 'login' || currentView === 'register') {
-    return <LoginView />
-  } else if (currentView === 'dashboard') {
-    return <DashboardView />
-  } else if (currentView === 'lesson') {
-    return <LessonView />
+  if (currentView === 'register') {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
+          <div className="text-center mb-8">
+            <h1 className="text-3xl font-bold text-gray-800 mb-2">📝 Cadastro</h1>
+            <p className="text-gray-600">Crie sua conta no Infecteasy</p>
+          </div>
+          
+          <div className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
+              <input
+                ref={registerNomeRef}
+                type="text"
+                placeholder="Digite seu nome completo"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">CPF</label>
+              <input
+                ref={registerCpfRef}
+                type="text"
+                placeholder="000.000.000-00"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Data de Nascimento</label>
+              <input
+                ref={registerDataNascimentoRef}
+                type="date"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
+              <input
+                ref={registerTelefoneRef}
+                type="tel"
+                placeholder="(00) 00000-0000"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+              <input
+                ref={registerEmailRef}
+                type="email"
+                placeholder="seu@email.com"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Login</label>
+              <input
+                ref={registerLoginRef}
+                type="text"
+                placeholder="Digite seu login"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Atividade</label>
+              <input
+                ref={registerAtividadeRef}
+                type="text"
+                placeholder="Ex: Estudante de Medicina"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Senha</label>
+              <input
+                ref={registerSenhaRef}
+                type="password"
+                placeholder="Digite sua senha"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Confirmar Senha</label>
+              <input
+                ref={registerConfirmarSenhaRef}
+                type="password"
+                placeholder="Confirme sua senha"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              />
+            </div>
+            
+            <button
+              onClick={handleRegister}
+              className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors font-medium"
+            >
+              Cadastrar
+            </button>
+            
+            <div className="text-center">
+              <button
+                onClick={() => setCurrentView('login')}
+                className="text-indigo-600 hover:text-indigo-800 font-medium"
+              >
+                ← Voltar ao Login
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  if (currentView === 'dashboard') {
+    return (
+      <div className="min-h-screen bg-gray-50">
+        <header className="bg-white shadow-sm border-b">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16">
+              <div className="flex items-center">
+                <h1 className="text-2xl font-bold text-indigo-600">🧬 Infecteasy</h1>
+                <span className="ml-4 text-gray-600">Olá, {user?.name}!</span>
+              </div>
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-2">
+                  <span className="text-sm text-gray-600">💎 {userProgress.xp} XP</span>
+                  <span className="text-sm text-gray-600">🏆 Nível {userProgress.level}</span>
+                </div>
+                <button
+                  onClick={handleLogout}
+                  className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors"
+                >
+                  Sair
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">Módulos de Aprendizado</h2>
+            <p className="text-gray-600">Escolha um módulo para começar sua jornada de aprendizado</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Módulo de Microbiologia */}
+            <div className="bg-white rounded-xl shadow-lg p-6">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Fundamentos da Microbiologia</h3>
+              <p className="text-gray-600 mb-4">Aprenda os conceitos essenciais da microbiologia clínica</p>
+              <div className="mb-4">
+                <div className="flex justify-between text-sm text-gray-600 mb-1">
+                  <span>Progresso</span>
+                  <span>0/10</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-blue-600 h-2 rounded-full" style={{width: '0%'}}></div>
+                </div>
+              </div>
+              
+              <div className="space-y-3">
+                {modulesData.microbiologia.lessons.map((lesson, index) => (
+                  <button
+                    key={lesson.id}
+                    onClick={() => startLesson('microbiologia', lesson.id)}
+                    className="w-full text-left p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h4 className="font-medium text-gray-900">{lesson.title}</h4>
+                        <p className="text-sm text-gray-600">{lesson.duration} • {lesson.xp} XP</p>
+                      </div>
+                      <div className="text-blue-600">▶️</div>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Módulo de Antibiograma */}
+            <div className="bg-white rounded-xl shadow-lg p-6">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Teste de Suscetibilidade Antimicrobiana</h3>
+              <p className="text-gray-600 mb-4">Domine os conceitos e técnicas do antibiograma</p>
+              <div className="mb-4">
+                <div className="flex justify-between text-sm text-gray-600 mb-1">
+                  <span>Progresso</span>
+                  <span>0/10</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-green-600 h-2 rounded-full" style={{width: '0%'}}></div>
+                </div>
+              </div>
+              
+              <div className="space-y-3">
+                {modulesData.antibiograma.lessons.map((lesson, index) => (
+                  <button
+                    key={lesson.id}
+                    onClick={() => startLesson('antibiograma', lesson.id)}
+                    className="w-full text-left p-4 rounded-lg border border-gray-200 hover:border-green-300 hover:bg-green-50 transition-colors"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h4 className="font-medium text-gray-900">{lesson.title}</h4>
+                        <p className="text-sm text-gray-600">{lesson.duration} • {lesson.xp} XP</p>
+                      </div>
+                      <div className="text-green-600">▶️</div>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Módulo de Antibioticoterapia Ambulatorial */}
+            <div className="bg-white rounded-xl shadow-lg p-6">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Antibioticoterapia Ambulatorial</h3>
+              <p className="text-gray-600 mb-4">Aprenda os fundamentos da prescrição de antibióticos no ambulatório</p>
+              <div className="mb-4">
+                <div className="flex justify-between text-sm text-gray-600 mb-1">
+                  <span>Progresso</span>
+                  <span>0/3</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="bg-purple-600 h-2 rounded-full" style={{width: '0%'}}></div>
+                </div>
+              </div>
+              
+              <div className="space-y-3">
+                {modulesData.antibioticoterapia?.lessons.map((lesson, index) => (
+                  <button
+                    key={lesson.id}
+                    onClick={() => startLesson('antibioticoterapia', lesson.id)}
+                    className="w-full text-left p-4 rounded-lg border border-gray-200 hover:border-purple-300 hover:bg-purple-50 transition-colors"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h4 className="font-medium text-gray-900">{lesson.title}</h4>
+                        <p className="text-sm text-gray-600">{lesson.duration} • {lesson.xp} XP</p>
+                      </div>
+                      <div className="text-purple-600">▶️</div>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    )
+  }
+
+  if (currentView === 'lesson') {
+    return (
+      <div className="min-h-screen bg-gray-50">
+        <header className="bg-white shadow-sm border-b">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16">
+              <button
+                onClick={() => setCurrentView('dashboard')}
+                className="flex items-center text-gray-600 hover:text-gray-900"
+              >
+                ← Voltar ao Dashboard
+              </button>
+              <div className="flex items-center space-x-4">
+                <span className="text-sm bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">
+                  💎 {currentLesson?.xp} XP
+                </span>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          {currentLesson && (
+            <>
+              <div className="mb-8">
+                <h1 className="text-3xl font-bold text-gray-900 mb-2">{currentLesson.title}</h1>
+                <p className="text-gray-600">
+                  Seção {currentSection + 1} de {currentLesson.sections.length}
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  {currentLesson.sections[currentSection]?.title}
+                </h2>
+                
+                <div 
+                  className="prose max-w-none"
+                  dangerouslySetInnerHTML={{
+                    __html: currentLesson.sections[currentSection]?.content || ''
+                  }}
+                />
+
+                {!currentQuestion && (
+                  <div className="mt-8 flex justify-between">
+                    <button
+                      onClick={showQuestion}
+                      className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                    >
+                      📝 Responder Pergunta
+                    </button>
+                    
+                    {currentSection < currentLesson.sections.length - 1 ? (
+                      <button
+                        onClick={nextSection}
+                        className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors"
+                      >
+                        Próxima Seção →
+                      </button>
+                    ) : (
+                      <button
+                        onClick={completeLesson}
+                        className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
+                      >
+                        🎉 Concluir Lição
+                      </button>
+                    )}
+                  </div>
+                )}
+
+                {currentQuestion && (
+                  <div className="mt-8 p-6 bg-gray-50 rounded-lg">
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">
+                      {currentQuestion.text}
+                    </h3>
+                    
+                    <div className="space-y-3 mb-6">
+                      {currentQuestion.options.map((option, index) => (
+                        <button
+                          key={index}
+                          onClick={() => selectAnswer(index)}
+                          className={`w-full text-left p-4 rounded-lg border transition-colors ${
+                            selectedAnswer === index
+                              ? 'border-blue-500 bg-blue-50'
+                              : 'border-gray-200 hover:border-gray-300'
+                          }`}
+                        >
+                          {String.fromCharCode(97 + index)}) {option}
+                        </button>
+                      ))}
+                    </div>
+
+                    {!showQuestionFeedback && (
+                      <button
+                        onClick={submitAnswer}
+                        disabled={selectedAnswer === null}
+                        className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors disabled:bg-gray-400"
+                      >
+                        Confirmar Resposta
+                      </button>
+                    )}
+
+                    {showQuestionFeedback && (
+                      <div className={`p-4 rounded-lg ${
+                        selectedAnswer === currentQuestion.correct
+                          ? 'bg-green-100 border border-green-300'
+                          : 'bg-red-100 border border-red-300'
+                      }`}>
+                        <h4 className={`font-bold mb-2 ${
+                          selectedAnswer === currentQuestion.correct
+                            ? 'text-green-800'
+                            : 'text-red-800'
+                        }`}>
+                          {selectedAnswer === currentQuestion.correct ? '✅ Correto!' : '❌ Incorreto'}
+                        </h4>
+                        <p className="text-gray-700">{currentQuestion.explanation}</p>
+                        
+                        <div className="mt-4 flex justify-between">
+                          <button
+                            onClick={() => {
+                              setCurrentQuestion(null)
+                              setShowQuestionFeedback(false)
+                              setSelectedAnswer(null)
+                            }}
+                            className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                          >
+                            Continuar
+                          </button>
+                          
+                          {currentSection < currentLesson.sections.length - 1 ? (
+                            <button
+                              onClick={nextSection}
+                              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                            >
+                              Próxima Seção →
+                            </button>
+                          ) : (
+                            <button
+                              onClick={completeLesson}
+                              className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
+                            >
+                              🎉 Concluir Lição
+                            </button>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+
+              <div className="text-center text-gray-600">
+                Seção {currentSection + 1} de {currentLesson.sections.length}
+              </div>
+            </>
+          )}
+        </main>
+      </div>
+    )
   }
 
   return null
