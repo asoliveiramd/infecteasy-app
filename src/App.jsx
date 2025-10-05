@@ -607,6 +607,254 @@ const App = () => {
                 correct: 1,
                 explanation: "O achado de diplococos gram-positivos lanceolados (formato de lança) é uma característica clássica e patognomônica de Streptococcus pneumoniae, auxiliando na sua rápida identificação presuntiva."
               }
+            },
+            {
+              title: "A prova da catalase",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🧪 A Prova da Catalase</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Para distinguir os grupos e até espécies de bactérias, são realizadas provas enzimáticas. 
+                    Algumas dessas provas são tão corriqueiras que se tornaram prática comum da linguagem médica. 
+                    Frequentemente falamos "tem um estafilo coagulase positiva na hemocultura" ou "temos um não 
+                    fermentador na cultura do abscesso abdominal".
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 10px;">🎯 Catalase em Cocos Gram Positivos</h4>
+                  <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                    No caso dos cocos Gram positivos, duas provas são essenciais. A primeira é a <strong>catalase</strong>. 
+                    Ela distingue entre o grupo dos <strong>estafilococos</strong> (prova da catalase positiva) e dos 
+                    <strong>estreptococos/enterococos</strong> (catalase negativa).
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "O laboratório te liga para avisar de um resultado crítico: Doutor seu paciente tem crescimento em três hemoculturas. Trata-se de um coco Gram positivo em cachos. Sobre essa bactéria, qual afirmação é adequada?",
+                options: [
+                  "Trata-se, provavelmente, de um agente catalase positiva.",
+                  "Espera-se que seja um Enterococcus faecalis.",
+                  "Certamente trata-se de um S aureus."
+                ],
+                correct: 0,
+                explanation: "Cocos Gram positivos em cachos são tipicamente do gênero Staphylococcus, que são catalase positivos. Não podemos afirmar com certeza que é S. aureus sem a prova da coagulase, e Enterococcus não forma cachos."
+              }
+            },
+            {
+              title: "A prova da coagulase",
+              content: `
+                <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #b45309; margin-bottom: 15px;">🔬 A Prova da Coagulase</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Sabe-se que no gênero Staphylococcus, a espécie <strong>S. aureus</strong> é habitualmente produtora 
+                    de quadros mais graves, sendo, portanto, de maior importância clínica. Para distinguir essa espécie 
+                    de outras "não aureus" existe a prova da coagulase. Dessa forma, todo <strong>S. aureus é um coagulase positiva</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
+                  <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ Alerta: Não Confunda!</h4>
+                  <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                    No meio de siglas e nomenclaturas, é comum a confusão. Existe uma outra classificação muito popular 
+                    para o S. aureus que se refere a sua capacidade de resistir à meticilina. Assim, um S. aureus 
+                    resistente à meticilina é conhecido por <strong>MRSA</strong> (pronuncia-se "marsa").
+                  </p>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Não é infrequente colegas confundirem essa classificação com a da prova da coagulase e acharem 
+                    que um coagulase positiva é sinônimo de MRSA. <strong>Fique atento!</strong>
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "O resultado parcial da cultura mostrou que o seu paciente tem uma cultura do fragmento ósseo com um Gram positivo catalase positiva e coagulase negativa. Qual a afirmação te parece mais correta?",
+                options: [
+                  "Trata-se provavelmente de um S aureus",
+                  "O arranjo dessa bactéria é provavelmente em cadeia.",
+                  "Possivelmente esse paciente tem uma infecção por um estafilococos \"não aureus\"."
+                ],
+                correct: 2,
+                explanation: "Um coco Gram positivo catalase positivo indica Staphylococcus. Se é coagulase negativo, não é S. aureus, mas sim um estafilococo \"não aureus\" (como S. epidermidis). O arranjo de Staphylococcus é em cachos, não em cadeia."
+              }
+            },
+            {
+              title: "Bacilos Gram Positivos",
+              content: `
+                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #166534; margin-bottom: 15px;">🦠 Bacilos Gram Positivos</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Esse é um grupo bastante heterogêneo compreendendo bactérias com formas diversas.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 10px;">📊 Tipos Morfológicos</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li><strong>Grandes com extremidades quadradas:</strong> Clostridium (anaeróbio), Bacillus (aeróbio)</li>
+                    <li><strong>Tamanho médio:</strong> Corynebacterium, Listeria</li>
+                    <li><strong>Pequenos em paliçada:</strong> Cutibacterium, Gardnerella</li>
+                    <li><strong>Filamentosos:</strong> Nocardia (aeróbica), Actinomyces (anaeróbica)</li>
+                  </ul>
+                  <p style="font-size: 14px; line-height: 1.5; margin-top: 10px;">
+                    <strong>Mas não fique confuso:</strong> para o clínico geral, esse grupo é menos importante clinicamente.
+                  </p>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
+                  <h4 style="color: #dc2626; margin-bottom: 10px;">🚨 Importância Clínica</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Desse grupo a <strong>Listeria monocytogenes</strong> e a <strong>Nocardia</strong> podem causar 
+                    infecções graves em imunossuprimidos. Já o <strong>Actinomyces</strong> comumente faz abscessos 
+                    firmes e indolores em geral em abdome.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Entre as bactérias citadas, qual associação entre microrganismo e característica clínica está correta?",
+                options: [
+                  "Corynebacterium — causa abscessos firmes e indolores em abdome.",
+                  "Listeria monocytogenes — pode causar infecções graves em imunossuprimidos.",
+                  "Actinomyces — provoca infecções agudas e disseminadas em pacientes hospitalizados."
+                ],
+                correct: 1,
+                explanation: "Listeria monocytogenes pode causar infecções graves em imunossuprimidos, incluindo meningite e bacteremia. Actinomyces causa abscessos firmes e indolores (não Corynebacterium), e geralmente causa infecções crônicas localizadas (não agudas e disseminadas)."
+              }
+            },
+            {
+              title: "Cocos Gram Negativos",
+              content: `
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d97706; margin-bottom: 15px;">⚪ Cocos Gram Negativos</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Nesse grupo temos o gênero <strong>Neisseria</strong> com as seguintes espécies:
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 10px;">🦠 Principais Espécies</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li><strong>Neisseria meningitidis</strong> (meningococo) - causa meningite</li>
+                    <li><strong>N. gonorrhoeae</strong> (gonococo) - causa gonorreia</li>
+                  </ul>
+                  <p style="font-size: 14px; line-height: 1.5; margin-top: 10px;">
+                    Ambas podem causar infecções com repercussão sistêmica (sepse). Geralmente aparecem como 
+                    <strong>diplococos</strong> (pares) com aspecto de "grão de café".
+                  </p>
+                  <p style="font-size: 14px; line-height: 1.5; margin-top: 10px;">
+                    Além dessas temos a <strong>Moraxella catarrhalis</strong> que pode levar a infecções respiratórias, 
+                    principalmente em pacientes com DPOC. Frequentemente presente como diplococos ou em pequenos grupos.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual das alternativas corresponde corretamente a uma característica dos cocos Gram negativos descritos?",
+                options: [
+                  "Neisseria meningitidis e N. gonorrhoeae aparecem como bacilos curtos e isolados.",
+                  "Moraxella catarrhalis é típica de infecções respiratórias em pacientes com DPOC.",
+                  "As Neisserias nunca causam infecções sistêmicas."
+                ],
+                correct: 1,
+                explanation: "Moraxella catarrhalis está associada a infecções respiratórias, especialmente em pacientes com DPOC. As Neisserias aparecem como diplococos (não bacilos) e podem causar infecções sistêmicas graves."
+              }
+            },
+            {
+              title: "Bacilos Gram Negativos de Tamanho Variável",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">📏 Bacilos Gram Negativos de Tamanho Variável</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Podem ser de curto a longo, pleomórficos, roliços ou finos. É o caso das <strong>Enterobacteriaceae</strong> 
+                    (Escherichia, Klebsiella, Enterobacter, etc.) e dos <strong>Anaeróbios</strong> (Bacteroides, Prevotella, Fusobacterium).
+                  </p>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
+                  <h4 style="color: #dc2626; margin-bottom: 10px;">🚨 Importância Clínica</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    As <strong>Enterobacteriaceae</strong> são de extremada relevância clínica. Têm seu habitat natural 
+                    dentro do abdome e estão envolvidas em praticamente todas as infecções dessa área. São importantes 
+                    causadoras de sepse liberando endotoxinas.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual das afirmações abaixo sobre os bacilos Gram negativos está correta?",
+                options: [
+                  "As Enterobacteriaceae raramente estão associadas a infecções abdominais.",
+                  "Bacteroides e Prevotella são exemplos de bacilos Gram positivos anaeróbios.",
+                  "As Enterobacteriaceae habitam o abdome e podem causar sepse com liberação de endotoxinas."
+                ],
+                correct: 2,
+                explanation: "As Enterobacteriaceae têm habitat natural no abdome e são importantes causadoras de infecções abdominais e sepse com liberação de endotoxinas. Bacteroides e Prevotella são Gram negativos (não positivos) anaeróbios."
+              }
+            },
+            {
+              title: "Bacilos Gram Negativos Pequenos e Curvos",
+              content: `
+                <div style="background: #fdf2f8; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #be185d; margin-bottom: 15px;">🌊 Bacilos Gram Negativos Pequenos e Curvos</h3>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 10px;">🔬 Bacilos Pequenos</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li><strong>Haemophilus</strong> - causa infecções respiratórias, incluindo sinusites, otite e pneumonias</li>
+                    <li><strong>Acinetobacter</strong> - associado a infecções hospitalares. O A. baumannii é frequentemente altamente resistente a antibióticos</li>
+                    <li><strong>Prevotella e Porphyromonas</strong> - anaeróbios orais</li>
+                  </ul>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 10px;">🌀 Bacilos Curvos</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li><strong>Vibrio cholerae</strong> - causador da cólera, bastante móvel, geralmente estão isolados, mas podem formar pares em "S"</li>
+                    <li><strong>Campylobacter jejuni</strong> - delgados, curvos ou em forma de "S" ou "asa de gaivota". Causa comum de gastroenterite bacteriana</li>
+                  </ul>
+                </div>
+              `,
+              question: {
+                text: "Qual das alternativas descreve corretamente um dos bacilos Gram-negativos citados?",
+                options: [
+                  "Acinetobacter baumannii é um agente comunitário, geralmente sensível à maioria dos antibióticos.",
+                  "Vibrio cholerae é móvel e pode causar cólera, apresentando-se em forma de \"S\".",
+                  "Haemophilus é um bacilo Gram-positivo frequentemente associado a infecções urinárias."
+                ],
+                correct: 1,
+                explanation: "Vibrio cholerae é móvel, causa cólera e pode apresentar-se em forma de \"S\". Acinetobacter baumannii é hospitalar e frequentemente resistente (não sensível). Haemophilus é Gram-negativo (não positivo) e causa infecções respiratórias (não urinárias)."
+              }
+            },
+            {
+              title: "Fermentação de Açúcares em Bacilos Gram Negativos",
+              content: `
+                <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #6d28d9; margin-bottom: 15px;">🧪 Fermentação de Açúcares</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Uma importante prova bioquímica a ser realizada nos bacilos Gram negativos é a <strong>fermentação 
+                    de açúcares</strong> (glicose, lactose). Essa prova tem elevada importância clínica, já que os 
+                    <strong>não fermentadores</strong> são importantes produtores de mecanismos de resistência.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 10px;">🔬 Métodos de Teste</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    A diferenciação entre Gram-negativos fermentadores e não fermentadores é baseada principalmente em 
+                    testes de fermentação/oxidação de carboidratos. Existem vários métodos para definir essa prova. 
+                    Testes de fermentação de carboidratos em meios como <strong>MacConkey</strong> ou outros meios 
+                    diferenciais podem ser utilizados.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal finalidade clínica dos testes de fermentação de açúcares em bacilos Gram-negativos?",
+                options: [
+                  "Identificar microrganismos produtores de esporos.",
+                  "Diferenciar bactérias fermentadoras das não fermentadoras, que podem estar associadas à resistência antimicrobiana.",
+                  "Determinar a sensibilidade bacteriana a antibióticos específicos."
+                ],
+                correct: 1,
+                explanation: "A principal finalidade é diferenciar bactérias fermentadoras das não fermentadoras, sendo que os não fermentadores (como Pseudomonas) são frequentemente associados a mecanismos de resistência antimicrobiana, o que tem grande importância clínica."
+              }
             }
           ]
         },
