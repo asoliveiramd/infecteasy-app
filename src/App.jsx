@@ -721,6 +721,54 @@ const App = () => {
               }
             },
             {
+              title: "Bacilos Ramificados: Nocardia e Actinomyces",
+              content: `
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #374151; margin-bottom: 15px;">🌿 Bacilos Ramificados</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    A observação de bacilos gram-positivos com filamentos ramificados é uma pista importante. 
+                    <strong>Nocardia spp.</strong> são aeróbios e parcialmente ácido-resistentes, enquanto 
+                    <strong>Actinomyces spp.</strong> são anaeróbios e não ácido-resistentes. Essa distinção é 
+                    crucial para o diagnóstico de nocardiose e actinomicose.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "A presença de bacilos gram-positivos ramificados em uma amostra clínica sugere principalmente quais gêneros?",
+                options: [
+                  "Listeria ou Corynebacterium.",
+                  "Nocardia (aeróbio) ou Actinomyces (anaeróbio).",
+                  "Clostridium ou Bacillus."
+                ],
+                correct: 1,
+                explanation: "A morfologia de bacilos gram-positivos ramificados é característica de Nocardia e Actinomyces, e a coloração de Ziehl-Neelsen modificada pode ajudar a diferenciá-los (Nocardia é parcialmente ácido-resistente)."
+              }
+            },
+            {
+              title: "Suspeita de Gangrena Gasosa",
+              content: `
+                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">☠️ Gangrena Gasosa</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Um achado de alerta no Gram de amostras de tecidos moles é a presença de bacilos gram-positivos 
+                    grandes (em forma de caixa de trem ou 'boxcar') na <strong>ausência de células inflamatórias (leucócitos)</strong>. 
+                    Isso deve levantar a suspeita de gangrena gasosa, uma infecção necrosante causada por 
+                    <strong>Clostridium perfringens</strong>, que produz toxinas que lisam os leucócitos.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Em uma coloração de Gram de tecido mole, a presença de bacilos gram-positivos sem a presença de leucócitos deve levantar a suspeita de qual condição?",
+                options: [
+                  "Infecção por Listeria.",
+                  "Gangrena gasosa (causada por Clostridium).",
+                  "Tuberculose (causada por Mycobacterium)."
+                ],
+                correct: 1,
+                explanation: "A ausência de leucócitos apesar da presença de bactérias é um sinal de alarme para gangrena gasosa, pois as toxinas produzidas por Clostridium perfringens destroem as células de defesa."
+              }
+            },
+            {
               title: "Cocos Gram Negativos",
               content: `
                 <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -755,6 +803,30 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "Moraxella catarrhalis está associada a infecções respiratórias, especialmente em pacientes com DPOC. As Neisserias aparecem como diplococos (não bacilos) e podem causar infecções sistêmicas graves."
+              }
+            },
+            {
+              title: "Neisseria",
+              content: `
+                <div style="background: #fdf2f8; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #be185d; margin-bottom: 15px;">☕ Diplococos Gram-Negativos</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Cocos gram-negativos são menos comuns, e sua visualização é muito significativa. 
+                    <strong>Neisseria spp.</strong> (como N. meningitidis e N. gonorrhoeae) classicamente se apresentam 
+                    como <strong>diplococos gram-negativos</strong> com lados achatados, lembrando grãos de café. 
+                    A observação de diplococos intracelulares em neutrófilos é altamente sugestiva de infecção por Neisseria.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual a aparência típica das espécies de Neisseria na coloração de Gram?",
+                options: [
+                  "Cocos gram-positivos em cachos.",
+                  "Bacilos gram-negativos finos.",
+                  "Cocos gram-negativos em pares (diplococos)."
+                ],
+                correct: 2,
+                explanation: "As espécies de Neisseria são caracterizadas por sua morfologia de diplococos gram-negativos, frequentemente com formato de 'grão de café' e localização intracelular em leucócitos."
               }
             },
             {
@@ -824,6 +896,30 @@ const App = () => {
               }
             },
             {
+              title: "Bacilos Gram-Negativos Curvos",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🌙 Bacilos Curvos</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    A morfologia curva de bacilos gram-negativos pode sugerir certos patógenos. <strong>Vibrio spp.</strong> 
+                    tem formato de vírgula, <strong>Campylobacter spp.</strong> tem formato de 'asa de gaivota' ou 'S', 
+                    e <strong>Helicobacter spp.</strong> é espiralado. Essas pistas morfológicas são importantes para 
+                    orientar a cultura em meios específicos.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Um bacilo gram-negativo com formato de 'asa de gaivota' é sugestivo de qual gênero?",
+                options: [
+                  "Vibrio",
+                  "Campylobacter",
+                  "Helicobacter"
+                ],
+                correct: 1,
+                explanation: "A morfologia em 'asa de gaivota' ou em 'S' é uma característica clássica do gênero Campylobacter, especialmente C. jejuni, um importante causador de gastroenterite."
+              }
+            },
+            {
               title: "Fermentação de Açúcares em Bacilos Gram Negativos",
               content: `
                 <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -860,12 +956,45 @@ const App = () => {
         },
         {
           id: 5,
-          title: "Meios de Cultura Seletivos",
+          title: "Cultura Bacteriana: Princípios",
           duration: "15 min",
           xp: 80,
           sections: [
             {
-              title: "Ágar MacConkey",
+              title: "Meios de Cultura",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🧫 Meios de Cultura</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Nas lições sobre o método de Gram, falamos bastante sobre os meios estéreis e não estéreis. No caso das culturas, para espécimes de locais estéreis, utilizam-se meios multiuso enriquecidos:
+                  </p>
+                  <ul style="font-size: 15px; line-height: 1.6; margin-left: 20px; margin-bottom: 15px;">
+                    <li><strong>Ágar sangue:</strong> meio universal</li>
+                    <li><strong>Ágar chocolate:</strong> meio enriquecido com hemácias lisadas, ideal para bactérias fastidiosas como Haemophilus</li>
+                  </ul>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Para espécimes de locais colonizados por flora normal, além dos meios enriquecidos, utilizam-se meios seletivos para inibir o crescimento de bactérias comensais e favorecer patógenos específicos:
+                  </p>
+                  <ul style="font-size: 15px; line-height: 1.6; margin-left: 20px;">
+                    <li><strong>Ágar MacConkey:</strong> seletivo para Gram-negativos</li>
+                    <li><strong>Ágar EMB:</strong> diferencia fermentadores de lactose</li>
+                    <li><strong>Ágar Thayer-Martin:</strong> seletivo para Neisseria</li>
+                  </ul>
+                </div>
+              `,
+              question: {
+                text: "Qual das alternativas associa corretamente o meio de cultura à sua principal aplicação?",
+                options: [
+                  "Ágar sangue – seletivo para bactérias Gram-negativas.",
+                  "Ágar chocolate – enriquecido para crescimento de bactérias fastidiosas, como Haemophilus.",
+                  "Ágar MacConkey – utilizado para isolar Neisseria meningitidis."
+                ],
+                correct: 1,
+                explanation: "O ágar chocolate é um meio enriquecido que contém hemácias lisadas, fornecendo fatores essenciais (V e X) para o crescimento de bactérias fastidiosas como Haemophilus influenzae."
+              }
+            },
+            {
+              title: "Um pouco mais sobre o Ágar MacConkey",
               content: `
                 <div style="background: #fdf2f8; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #be185d; margin-bottom: 15px;">🩷 Ágar MacConkey</h3>
@@ -893,7 +1022,7 @@ const App = () => {
               }
             },
             {
-              title: "Ágar Chocolate",
+              title: "Um pouco mais sobre o Ágar Chocolate",
               content: `
                 <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #6d28d9; margin-bottom: 15px;">🍫 Ágar Chocolate</h3>
@@ -929,6 +1058,9 @@ const App = () => {
               content: `
                 <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #059669; margin-bottom: 15px;">💨 Teste da Catalase</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Após 24 a 48 horas de incubação, as colônias bacterianas se desenvolvem nos meios de cultura, permitindo sua análise macroscópica (forma, tamanho, cor, presença de hemólise). Testes bioquímicos rápidos podem facilitar a identificação preliminar ou presuntiva das bactérias isoladas, direcionando a terapia antimicrobiana antes dos resultados definitivos.
+                  </p>
                   <p style="font-size: 16px; line-height: 1.6;">
                     O <strong>teste da catalase</strong> é um teste rápido e crucial para diferenciar cocos gram-positivos. 
                     A enzima catalase converte peróxido de hidrogênio (H₂O₂) em água e oxigênio, produzindo bolhas visíveis. 
@@ -971,123 +1103,34 @@ const App = () => {
                 correct: 1,
                 explanation: "O teste da coagulase é o principal teste fenotípico para identificar S. aureus, que é coagulase-positivo, distinguindo-o dos estafilococos coagulase-negativos (ECN)."
               }
+            },
+            {
+              title: "Outros testes",
+              content: `
+                <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #b45309; margin-bottom: 15px;">🧪 Outros testes</h3>
+                  <ul style="font-size: 15px; line-height: 1.6; margin-left: 20px;">
+                    <li><strong>Oxidase:</strong> positiva em Neisseria e Pseudomonas</li>
+                    <li><strong>Teste de Lancefield:</strong> identifica grupos sorológicos de estreptococos</li>
+                    <li><strong>Solubilidade em bile:</strong> positiva em S. pneumoniae</li>
+                  </ul>
+                </div>
+              `,
+              question: {
+                text: "Qual das alternativas associa corretamente o teste ao microrganismo correspondente?",
+                options: [
+                  "Teste da oxidase – positivo em Neisseria e Pseudomonas.",
+                  "Teste de Lancefield – identifica grupos sorológicos de Staphylococcus.",
+                  "Solubilidade em bile – positiva em Streptococcus pyogenes."
+                ],
+                correct: 0,
+                explanation: "O teste da oxidase é positivo em Neisseria e Pseudomonas. O teste de Lancefield é usado para Streptococcus (não Staphylococcus), e a solubilidade em bile é característica de S. pneumoniae (não S. pyogenes)."
+              }
             }
           ]
         },
         {
           id: 7,
-          title: "Bacilos Gram-Positivos de Importância Clínica",
-          duration: "16 min",
-          xp: 80,
-          sections: [
-            {
-              title: "Bacilos Ramificados: Nocardia e Actinomyces",
-              content: `
-                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #374151; margin-bottom: 15px;">🌿 Bacilos Ramificados</h3>
-                  <p style="font-size: 16px; line-height: 1.6;">
-                    A observação de bacilos gram-positivos com filamentos ramificados é uma pista importante. 
-                    <strong>Nocardia spp.</strong> são aeróbios e parcialmente ácido-resistentes, enquanto 
-                    <strong>Actinomyces spp.</strong> são anaeróbios e não ácido-resistentes. Essa distinção é 
-                    crucial para o diagnóstico de nocardiose e actinomicose.
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "A presença de bacilos gram-positivos ramificados em uma amostra clínica sugere principalmente quais gêneros?",
-                options: [
-                  "Listeria ou Corynebacterium.",
-                  "Nocardia (aeróbio) ou Actinomyces (anaeróbio).",
-                  "Clostridium ou Bacillus."
-                ],
-                correct: 1,
-                explanation: "A morfologia de bacilos gram-positivos ramificados é característica de Nocardia e Actinomyces, e a coloração de Ziehl-Neelsen modificada pode ajudar a diferenciá-los (Nocardia é parcialmente ácido-resistente)."
-              }
-            },
-            {
-              title: "Suspeita de Gangrena Gasosa",
-              content: `
-                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #dc2626; margin-bottom: 15px;">☠️ Gangrena Gasosa</h3>
-                  <p style="font-size: 16px; line-height: 1.6;">
-                    Um achado de alerta no Gram de amostras de tecidos moles é a presença de bacilos gram-positivos 
-                    grandes (em forma de caixa de trem ou 'boxcar') na <strong>ausência de células inflamatórias (leucócitos)</strong>. 
-                    Isso deve levantar a suspeita de gangrena gasosa, uma infecção necrosante causada por 
-                    <strong>Clostridium perfringens</strong>, que produz toxinas que lisam os leucócitos.
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "Em uma coloração de Gram de tecido mole, a presença de bacilos gram-positivos sem a presença de leucócitos deve levantar a suspeita de qual condição?",
-                options: [
-                  "Infecção por Listeria.",
-                  "Gangrena gasosa (causada por Clostridium).",
-                  "Tuberculose (causada por Mycobacterium)."
-                ],
-                correct: 1,
-                explanation: "A ausência de leucócitos apesar da presença de bactérias é um sinal de alarme para gangrena gasosa, pois as toxinas produzidas por Clostridium perfringens destroem as células de defesa."
-              }
-            }
-          ]
-        },
-        {
-          id: 8,
-          title: "Bactérias Gram-Negativas Relevantes",
-          duration: "18 min",
-          xp: 85,
-          sections: [
-            {
-              title: "Cocos Gram-Negativos: Neisseria",
-              content: `
-                <div style="background: #fdf2f8; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #be185d; margin-bottom: 15px;">☕ Diplococos Gram-Negativos</h3>
-                  <p style="font-size: 16px; line-height: 1.6;">
-                    Cocos gram-negativos são menos comuns, e sua visualização é muito significativa. 
-                    <strong>Neisseria spp.</strong> (como N. meningitidis e N. gonorrhoeae) classicamente se apresentam 
-                    como <strong>diplococos gram-negativos</strong> com lados achatados, lembrando grãos de café. 
-                    A observação de diplococos intracelulares em neutrófilos é altamente sugestiva de infecção por Neisseria.
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "Qual a aparência típica das espécies de Neisseria na coloração de Gram?",
-                options: [
-                  "Cocos gram-positivos em cachos.",
-                  "Bacilos gram-negativos finos.",
-                  "Cocos gram-negativos em pares (diplococos)."
-                ],
-                correct: 2,
-                explanation: "As espécies de Neisseria são caracterizadas por sua morfologia de diplococos gram-negativos, frequentemente com formato de 'grão de café' e localização intracelular em leucócitos."
-              }
-            },
-            {
-              title: "Bacilos Gram-Negativos Curvos",
-              content: `
-                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #0369a1; margin-bottom: 15px;">🌙 Bacilos Curvos</h3>
-                  <p style="font-size: 16px; line-height: 1.6;">
-                    A morfologia curva de bacilos gram-negativos pode sugerir certos patógenos. <strong>Vibrio spp.</strong> 
-                    tem formato de vírgula, <strong>Campylobacter spp.</strong> tem formato de 'asa de gaivota' ou 'S', 
-                    e <strong>Helicobacter spp.</strong> é espiralado. Essas pistas morfológicas são importantes para 
-                    orientar a cultura em meios específicos.
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "Um bacilo gram-negativo com formato de 'asa de gaivota' é sugestivo de qual gênero?",
-                options: [
-                  "Vibrio",
-                  "Campylobacter",
-                  "Helicobacter"
-                ],
-                correct: 1,
-                explanation: "A morfologia em 'asa de gaivota' ou em 'S' é uma característica clássica do gênero Campylobacter, especialmente C. jejuni, um importante causador de gastroenterite."
-              }
-            }
-          ]
-        },
-        {
-          id: 9,
           title: "Hemólise e Agrupamento de Lancefield",
           duration: "12 min",
           xp: 65,
@@ -1194,6 +1237,98 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "Apesar de sua rapidez na identificação, o MALDI-TOF não realiza testes de suscetibilidade. Portanto, após a identificação, ainda são necessários métodos fenotípicos ou genotípicos para determinar o perfil de resistência do microrganismo."
+              }
+            }
+          ]
+        },
+        {
+          id: 8,
+          title: "Revisão",
+          duration: "15 min",
+          xp: 75,
+          sections: [
+            {
+              title: "Revisão 1",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">📝 Revisão - Parte 1</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Vamos revisar os conceitos fundamentais aprendidos sobre coloração de Gram, morfologias bacterianas e meios de cultura.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual das seguintes afirmações sobre a coloração de Gram está CORRETA?",
+                options: [
+                  "A coloração de Gram permite identificar a espécie exata da bactéria.",
+                  "Bactérias Gram-positivas retêm o cristal violeta e aparecem roxas, enquanto Gram-negativas absorvem safranina e aparecem rosas.",
+                  "O teste é inútil para orientação terapêutica empírica."
+                ],
+                correct: 1,
+                explanation: "A coloração de Gram diferencia bactérias em Gram-positivas (roxas) e Gram-negativas (rosas) com base na estrutura da parede celular. Embora não identifique a espécie exata, é fundamental para orientação terapêutica empírica."
+              }
+            },
+            {
+              title: "Revisão 2",
+              content: `
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d97706; margin-bottom: 15px;">📝 Revisão - Parte 2</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Vamos revisar os conceitos sobre morfologias bacterianas e arranjos celulares.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Um laboratório reporta: 'Cocos Gram-positivos em cachos'. Qual é a interpretação mais provável?",
+                options: [
+                  "Provavelmente Streptococcus spp., catalase negativo.",
+                  "Provavelmente Staphylococcus spp., catalase positivo.",
+                  "Certamente Enterococcus spp., catalase negativo."
+                ],
+                correct: 1,
+                explanation: "Cocos Gram-positivos em cachos são característicos do gênero Staphylococcus, que são catalase positivos. Streptococcus e Enterococcus formam cadeias (não cachos) e são catalase negativos."
+              }
+            },
+            {
+              title: "Revisão 3",
+              content: `
+                <div style="background: #fdf2f8; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #be185d; margin-bottom: 15px;">📝 Revisão - Parte 3</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Vamos revisar os conceitos sobre meios de cultura e testes bioquímicos.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual das seguintes combinações de meio de cultura e finalidade está CORRETA?",
+                options: [
+                  "Ágar MacConkey – meio enriquecido para bactérias fastidiosas.",
+                  "Ágar chocolate – meio seletivo para Gram-negativos.",
+                  "Ágar sangue – meio universal para crescimento bacteriano."
+                ],
+                correct: 2,
+                explanation: "O ágar sangue é um meio universal enriquecido usado para crescimento de diversas bactérias. Ágar MacConkey é seletivo para Gram-negativos (não enriquecido para fastidiosas), e ágar chocolate é enriquecido (não seletivo)."
+              }
+            },
+            {
+              title: "Revisão 4",
+              content: `
+                <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #059669; margin-bottom: 15px;">📝 Revisão - Parte 4</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Vamos revisar os conceitos sobre bactérias de importância clínica e suas características.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Um Gram de tecido mole mostra bacilos Gram-positivos grandes SEM leucócitos. Qual é a principal suspeita clínica?",
+                options: [
+                  "Infecção por Listeria monocytogenes.",
+                  "Gangrena gasosa por Clostridium perfringens.",
+                  "Actinomicose por Actinomyces spp."
+                ],
+                correct: 1,
+                explanation: "A ausência de leucócitos apesar da presença de bacilos Gram-positivos grandes é um sinal de alarme para gangrena gasosa, pois Clostridium perfringens produz toxinas que destroem as células de defesa."
               }
             }
           ]
