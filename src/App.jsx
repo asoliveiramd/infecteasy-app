@@ -458,7 +458,8 @@ const App = () => {
                 correct: 0,
                 explanation: "Staphylococcus aureus são cocos (bactérias de forma esférica). Haemophilus influenzae são cocobacilos e Vibrio vulníficus são bacilos curvos."
               }
-            },,            {
+            },
+            {
               title: "Arranjos Bacterianos",
               content: `
                 <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
