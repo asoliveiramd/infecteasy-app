@@ -1243,7 +1243,7 @@ const App = () => {
         },
         {
           id: 8,
-          title: "Revisão",
+          title: "Revisão: Pontos e Dicas",
           duration: "15 min",
           xp: 75,
           sections: [
