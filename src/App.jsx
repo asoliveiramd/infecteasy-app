@@ -1345,6 +1345,1134 @@ const App = () => {
             }
           ]
         }
+        ,{
+          id: 12,
+          title: "Revisão: Perguntas - Parte 1",
+          duration: "45 min",
+          xp: 225,
+          sections: [
+            {
+              title: "I. Introdução e Qualidade da Amostra - Q1",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">📝 Seção I: Introdução e Qualidade da Amostra</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Teste seus conhecimentos sobre o método de Gram, sua história, aplicações clínicas e a importância da qualidade das amostras.
+                  </p>
+                  <p style="font-size: 14px; color: #64748b; margin-top: 10px;">
+                    Questão 1 de 14 desta seção
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "O método de Gram é também conhecido como:",
+                options: [
+                  "Bacterioscopia",
+                  "Baciloscopia",
+                  "Micológico direto"
+                ],
+                correct: 0,
+                explanation: "O método de Gram é também conhecido como bacterioscopia, pois permite a visualização microscópica de bactérias."
+              }
+            },
+            {
+              title: "I. Introdução e Qualidade da Amostra - Q2",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 2 de 14 - Seção I: Introdução e Qualidade da Amostra
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "O método de Gram foi desenvolvido por:",
+                options: [
+                  "Hans Christian Gram em 1884.",
+                  "Alexander Fleming em 1928",
+                  "Louis Pasteur em 1882"
+                ],
+                correct: 0,
+                explanation: "O método de Gram foi desenvolvido por Hans Christian Gram em 1884, revolucionando a microbiologia clínica."
+              }
+            },
+            {
+              title: "I. Introdução e Qualidade da Amostra - Q3",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 3 de 14 - Seção I: Introdução e Qualidade da Amostra
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "O método de Gram é utilizado em:",
+                options: [
+                  "Fluidos corporais estéreis e não estéreis, fragmentos de biópsia, em amostra de cultura positiva.",
+                  "Fluidos corporais estéreis e não estéreis, fragmentos de biópsia, mas não serve para amostra de cultura. Esta usa outros métodos para descrever a bacteria.",
+                  "Fluidos corporais estéreis, fragmentos de biópsia, em amostra de cultura positiva. Fluidos corporais não estéreis não servem para serem usados no Gram devido a presença de bacterias colonizantes."
+                ],
+                correct: 0,
+                explanation: "O método de Gram é versátil e pode ser utilizado em fluidos corporais estéreis e não estéreis, fragmentos de biópsia e amostras de cultura positiva."
+              }
+            },
+            {
+              title: "I. Introdução e Qualidade da Amostra - Q4",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 4 de 14 - Seção I: Introdução e Qualidade da Amostra
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "É INcorreto afirmar que o método de Gram:",
+                options: [
+                  "Orienta a escolha do antibiótico inicial enquanto aguardamos os resultados da cultura ou testes moleculares",
+                  "Permite uma intervenção terapêutica mais direcionada.",
+                  "Determina o antibiótico definitivo a ser usado."
+                ],
+                correct: 2,
+                explanation: "O método de Gram orienta a terapia empírica inicial, mas NÃO determina o antibiótico definitivo. O tratamento definitivo deve ser baseado em cultura e antibiograma."
+              }
+            },
+            {
+              title: "I. Introdução e Qualidade da Amostra - Q5",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 5 de 14 - Seção I: Introdução e Qualidade da Amostra
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal função da coloração de Gram no manejo clínico, pendente de dados definitivos de cultura?",
+                options: [
+                  "Determinar o perfil de suscetibilidade intrínseca da bactéria.",
+                  "Guiar o manejo clínico empírico para infecções bacterianas.",
+                  "Correlacionar a presença de leveduras com a ausência de neutrófilos."
+                ],
+                correct: 1,
+                explanation: "A principal função da coloração de Gram é guiar o manejo clínico empírico para infecções bacterianas enquanto aguardamos os resultados definitivos da cultura."
+              }
+            },
+            {
+              title: "I. Introdução e Qualidade da Amostra - Q6",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 6 de 14 - Seção I: Introdução e Qualidade da Amostra
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual fator pode afetar o valor da coloração de Gram realizada em uma amostra clínica?",
+                options: [
+                  "A idade do paciente e a presença de comorbidades.",
+                  "A qualidade do espécime clínico.",
+                  "O tipo de meio de cultura utilizado para o isolamento inicial."
+                ],
+                correct: 1,
+                explanation: "A qualidade do espécime clínico é fundamental para o valor diagnóstico da coloração de Gram. Amostras mal coletadas ou contaminadas comprometem o resultado."
+              }
+            },
+            {
+              title: "I. Introdução e Qualidade da Amostra - Q7",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 7 de 14 - Seção I: Introdução e Qualidade da Amostra
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "A presença de qualquer bactéria detectada na coloração de Gram em um espécime de um sítio estéril deve ser considerada:",
+                options: [
+                  "Contaminante, a menos que a cultura seja positiva.",
+                  "Significativa, embora uma lâmina de Gram negativa não exclua a infecção.",
+                  "Indicativa de infecção viral ou fúngica."
+                ],
+                correct: 1,
+                explanation: "Em sítios estéreis, qualquer bactéria detectada deve ser considerada significativa. No entanto, um Gram negativo não exclui infecção, pois pode haver baixa carga bacteriana."
+              }
+            },
+            {
+              title: "I. Introdução e Qualidade da Amostra - Q8",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 8 de 14 - Seção I: Introdução e Qualidade da Amostra
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "De acordo com a avaliação semi-quantitativa das células humanas, qual é a característica de um espécime de escarro de alta qualidade?",
+                options: [
+                  "Alto número de células epiteliais e baixo número de células brancas.",
+                  "Alto número de células brancas e baixo número de células epiteliais.",
+                  "Alto número de bactérias de diferentes morfologias, compatível com a flora oral."
+                ],
+                correct: 1,
+                explanation: "Um espécime de escarro de alta qualidade apresenta alto número de células brancas (neutrófilos) e baixo número de células epiteliais, indicando que a amostra é do trato respiratório inferior e não contaminada com saliva."
+              }
+            },
+            {
+              title: "I. Introdução e Qualidade da Amostra - Q9",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 9 de 14 - Seção I: Introdução e Qualidade da Amostra
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Quais dos seguintes são exemplos de sítios estéreis, dos quais as amostras devem ser coletadas em condições estéreis?",
+                options: [
+                  "Escarro e trato genital feminino.",
+                  "Líquido cefalorraquidiano, líquido sinovial e líquido pleural.",
+                  "Trato respiratório superior e fezes."
+                ],
+                correct: 1,
+                explanation: "Líquido cefalorraquidiano (LCR), líquido sinovial e líquido pleural são exemplos de sítios estéreis. Escarro, trato genital feminino, trato respiratório superior e fezes são sítios não estéreis."
+              }
+            },
+            {
+              title: "I. Introdução e Qualidade da Amostra - Q10",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 10 de 14 - Seção I: Introdução e Qualidade da Amostra
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Ao analisar amostras de locais estéreis, devemos considerar que:",
+                options: [
+                  "A despeito de ser estéril, o certo é verificar quantidade de leucócitos e células epiteliais.",
+                  "Qualquer bactéria detectada deve ser considerada potencialmente patogênica e clinicamente significativa.",
+                  "Não faz sentido fazer Gram desses tecidos já que são estéreis."
+                ],
+                correct: 1,
+                explanation: "Em locais estéreis, qualquer bactéria detectada deve ser considerada potencialmente patogênica e clinicamente significativa, pois esses sítios normalmente não contêm microbiota."
+              }
+            },
+            {
+              title: "I. Introdução e Qualidade da Amostra - Q11",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 11 de 14 - Seção I: Introdução e Qualidade da Amostra
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Se o espécime é de um órgão parenquimatoso, pode-se dizer:",
+                options: [
+                  "Sempre que tem um agente detectado pelo Gram, esse agente necessariamente é infectante.",
+                  "O Gram é inútil.",
+                  "A ausência de bactérias no Gram não exclui infecção."
+                ],
+                correct: 2,
+                explanation: "A ausência de bactérias no Gram de órgão parenquimatoso não exclui infecção, pois pode haver baixa carga bacteriana ou distribuição irregular dos microrganismos no tecido."
+              }
+            },
+            {
+              title: "I. Introdução e Qualidade da Amostra - Q12",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 12 de 14 - Seção I: Introdução e Qualidade da Amostra
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Se temos um Gram feito no líquor, pode-se dizer:",
+                options: [
+                  "Bactéria no liquor não cora pelo método de Gram.",
+                  "Resultados falso-negativos podem ocorrer em pacientes que receberam antibióticos previamente à coleta.",
+                  "O sistema nervoso central é um local onde os betalactamicos penetram com dificuldade devido à barreira hematoencefálica, por isso no Gram do liquor não há interferência desses antibióticos."
+                ],
+                correct: 1,
+                explanation: "Resultados falso-negativos no Gram de líquor podem ocorrer em pacientes que receberam antibióticos previamente à coleta, pois os antibióticos podem reduzir a carga bacteriana ou alterar a morfologia das bactérias."
+              }
+            },
+            {
+              title: "I. Introdução e Qualidade da Amostra - Q13",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 13 de 14 - Seção I: Introdução e Qualidade da Amostra
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Numa amostra de escarro:",
+                options: [
+                  "Por ter microorganismos colonizadores, não seria possível fazer um Gram.",
+                  "Podemos fazer o Gram considerando alguns critérios de credibilidade da amostra",
+                  "Só é possivel fazer o Gram da cultura do escarro."
+                ],
+                correct: 1,
+                explanation: "Podemos fazer o Gram de escarro considerando critérios de credibilidade da amostra, como a relação entre células epiteliais e leucócitos, para avaliar se a amostra é representativa do trato respiratório inferior."
+              }
+            },
+            {
+              title: "I. Introdução e Qualidade da Amostra - Q14",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 14 de 14 - Seção I: Introdução e Qualidade da Amostra
+                  </p>
+                  <p style="font-size: 14px; color: #0369a1; margin-top: 10px;">
+                    ➡️ Próxima: Seção II - Coloração de Gram: Procedimento
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Podemos considerar sobre as amostras não estéreis:",
+                options: [
+                  "São exemplos: escarro e aspirado traqueal, swab de garganta, feridas superficiais, secreções genitais ou mesmo fezes",
+                  "São meios onde não é possivel fazer o Gram devido à microbiota normal.",
+                  "Toda bactéria de uma ferida superficial deve ser considerada potencialmente infectante."
+                ],
+                correct: 0,
+                explanation: "Amostras não estéreis incluem escarro, aspirado traqueal, swab de garganta, feridas superficiais, secreções genitais e fezes. Nesses casos, é possível fazer o Gram, mas a interpretação deve considerar a microbiota normal."
+              }
+            }
+
+,
+            {
+              title: "II. Coloração de Gram: Procedimento - Q1",
+              content: `
+                <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #c2410c; margin-bottom: 15px;">🔬 Seção II: Coloração de Gram - Procedimento</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Teste seus conhecimentos sobre as etapas do procedimento de coloração de Gram e os reagentes utilizados.
+                  </p>
+                  <p style="font-size: 14px; color: #64748b; margin-top: 10px;">
+                    Questão 1 de 10 desta seção
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é o corante primário usado na coloração de Gram?",
+                options: [
+                  "Safranina.",
+                  "Cristal violeta.",
+                  "Fucsina básica."
+                ],
+                correct: 1,
+                explanation: "O cristal violeta é o corante primário usado na coloração de Gram, sendo aplicado primeiro e corando todas as bactérias inicialmente de roxo."
+              }
+            },
+            {
+              title: "II. Coloração de Gram: Procedimento - Q2",
+              content: `
+                <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 2 de 10 - Seção II: Coloração de Gram - Procedimento
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual reagente é aplicado na coloração de Gram após o corante primário, servindo como mordente?",
+                options: [
+                  "Acetona ou álcool.",
+                  "Lugol (Gram's iodine).",
+                  "Fucsina básica."
+                ],
+                correct: 1,
+                explanation: "O Lugol (iodo de Gram) é aplicado após o cristal violeta e serve como mordente, formando um complexo com o corante que fica retido nas bactérias Gram-positivas."
+              }
+            },
+            {
+              title: "II. Coloração de Gram: Procedimento - Q3",
+              content: `
+                <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 3 de 10 - Seção II: Coloração de Gram - Procedimento
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual etapa da coloração de Gram é crítica e, se realizada por muito tempo, pode remover o cristal violeta das células Gram-positivas, além das Gram-negativas?",
+                options: [
+                  "Aplicação do cristal violeta.",
+                  "Descolorização rápida com acetona ou álcool.",
+                  "Contracoloração com safranina."
+                ],
+                correct: 1,
+                explanation: "A descolorização é a etapa mais crítica. Se feita por muito tempo, pode remover o complexo cristal violeta-iodo até das bactérias Gram-positivas, causando resultados falso-negativos."
+              }
+            },
+            {
+              title: "II. Coloração de Gram: Procedimento - Q4",
+              content: `
+                <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 4 de 10 - Seção II: Coloração de Gram - Procedimento
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual contracorante é preferido para colorir intensamente muitas bactérias Gram-negativas, especialmente aquelas que coram fracamente com safranina (como espécies de Campylobacter)?",
+                options: [
+                  "Vermelho neutro.",
+                  "Fucsina básica (presente na carbol fucsina diluída).",
+                  "Cristal violeta."
+                ],
+                correct: 1,
+                explanation: "A fucsina básica (carbol fucsina diluída) é preferida para corar intensamente bactérias Gram-negativas que coram fracamente com safranina, como Campylobacter."
+              }
+            },
+            {
+              title: "II. Coloração de Gram: Procedimento - Q5",
+              content: `
+                <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 5 de 10 - Seção II: Coloração de Gram - Procedimento
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Além de fornecer informações sobre a presença de inflamação, como as células humanas (como neutrófilos) presentes em espécimes de sítios não estéreis são relatadas?",
+                options: [
+                  "De forma quantitativa precisa, como células/mm³.",
+                  "De forma semi-quantitativa (ex: 1+ a 4+ ou rara-pouca-moderada-abundante).",
+                  "Apenas se o paciente for neutropênico."
+                ],
+                correct: 1,
+                explanation: "As células humanas são relatadas de forma semi-quantitativa usando escalas como 1+ a 4+ ou descritores como rara, pouca, moderada ou abundante."
+              }
+            },
+            {
+              title: "II. Coloração de Gram: Procedimento - Q6",
+              content: `
+                <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 6 de 10 - Seção II: Coloração de Gram - Procedimento
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "A ausência de células brancas (neutrófilos) em uma amostra de infecção pode ocorrer sob qual condição do paciente?",
+                options: [
+                  "Se o paciente estiver imunocompetente.",
+                  "Se o paciente estiver neutropênico.",
+                  "Se o paciente recebeu coloração de Gram previamente."
+                ],
+                correct: 1,
+                explanation: "A ausência de neutrófilos pode ocorrer em pacientes neutropênicos, que têm contagem muito baixa de células brancas devido a condições como quimioterapia ou doenças hematológicas."
+              }
+            },
+            {
+              title: "II. Coloração de Gram: Procedimento - Q7",
+              content: `
+                <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 7 de 10 - Seção II: Coloração de Gram - Procedimento
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a causa de alguns bacilos Gram-negativos se tornarem mais longos e filamentosos, manifestando uma morfologia atípica?",
+                options: [
+                  "Exposição prolongada ao corante primário.",
+                  "Contaminação por flora normal.",
+                  "Uso de antibióticos pelo paciente antes da coleta do espécime."
+                ],
+                correct: 2,
+                explanation: "Antibióticos beta-lactâmicos podem causar morfologia filamentosa em bacilos Gram-negativos ao interferir na síntese da parede celular, impedindo a divisão celular normal."
+              }
+            },
+            {
+              title: "II. Coloração de Gram: Procedimento - Q8",
+              content: `
+                <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 8 de 10 - Seção II: Coloração de Gram - Procedimento
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Sobre a coloração de Gram é correto afirmar:",
+                options: [
+                  "Além de bactérias, o método também permite a visualização de leveduras como Candida spp.",
+                  "No Gram as leveduras se coram como Gram-negativas.",
+                  "O método de Gram é rápido e porém, caro."
+                ],
+                correct: 0,
+                explanation: "O método de Gram permite a visualização de leveduras como Candida spp., que se coram como Gram-positivas (roxas). O método é rápido e barato."
+              }
+            },
+            {
+              title: "II. Coloração de Gram: Procedimento - Q9",
+              content: `
+                <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 9 de 10 - Seção II: Coloração de Gram - Procedimento
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Na segunda etapa da coloração de Gram é incorreto afirmar:",
+                options: [
+                  "Há uma rápida descoloração com todas as bactérias ficando sem coloração.",
+                  "A lâmina é mergulhada em lugol (iodo) que aumenta a afinidade entre a violeta de cristal e o material bacteriano.",
+                  "O lugol é um mordente, isto é, fixa o corante à parede bacteriana."
+                ],
+                correct: 0,
+                explanation: "Na segunda etapa (aplicação do lugol), NÃO há descoloração. O lugol atua como mordente, fixando o cristal violeta. A descoloração ocorre na terceira etapa."
+              }
+            },
+            {
+              title: "II. Coloração de Gram: Procedimento - Q10",
+              content: `
+                <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 10 de 10 - Seção II: Coloração de Gram - Procedimento
+                  </p>
+                  <p style="font-size: 14px; color: #c2410c; margin-top: 10px;">
+                    ➡️ Próxima: Seção III - Coloração de Gram: Interpretação e Conceitos
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Na descoloração é INcorreto afirmar:",
+                options: [
+                  "Deve ser rápida (questão de segundos) com acetona ou álcool.",
+                  "Remove-se o corante das bactérias Gram-negativas, que ficam incolores.",
+                  "Os Gram positivos coram definitivamente de vermelho."
+                ],
+                correct: 2,
+                explanation: "É incorreto afirmar que os Gram-positivos coram de vermelho na descoloração. Eles MANTÊM a cor roxa/azul do cristal violeta. As Gram-negativas é que ficarão vermelhas após a contracoloração."
+              }
+            }
+
+,
+            {
+              title: "III. Coloração de Gram: Interpretação - Q1",
+              content: `
+                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #15803d; margin-bottom: 15px;">🎯 Seção III: Coloração de Gram - Interpretação e Conceitos</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Teste seus conhecimentos sobre a interpretação dos resultados da coloração de Gram e conceitos fundamentais.
+                  </p>
+                  <p style="font-size: 14px; color: #64748b; margin-top: 10px;">
+                    Questão 1 de 7 desta seção
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "As bactérias Gram-positivas retêm o cristal violeta e, portanto, aparecem de que cor na coloração de Gram?",
+                options: [
+                  "Rosa.",
+                  "Roxo ou azul escuro.",
+                  "Verde."
+                ],
+                correct: 1,
+                explanation: "As bactérias Gram-positivas retêm o complexo cristal violeta-iodo e aparecem roxas ou azul escuro na coloração de Gram."
+              }
+            },
+            {
+              title: "III. Coloração de Gram: Interpretação - Q2",
+              content: `
+                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 2 de 7 - Seção III: Interpretação e Conceitos
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "As bactérias Gram-negativas não retêm o cristal violeta, mas absorvem a safranina (contracorante) e, portanto, aparecem de que cor?",
+                options: [
+                  "Rosa ou vermelho claro.",
+                  "Roxo.",
+                  "Azul."
+                ],
+                correct: 0,
+                explanation: "As bactérias Gram-negativas não retêm o cristal violeta após a descoloração, mas absorvem o contracorante (safranina ou fucsina) e aparecem rosa ou vermelho claro."
+              }
+            },
+            {
+              title: "III. Coloração de Gram: Interpretação - Q3",
+              content: `
+                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 3 de 7 - Seção III: Interpretação e Conceitos
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é o termo usado para organismos que podem corar positiva ou negativamente no Gram?",
+                options: [
+                  "Gram-indutíveis.",
+                  "Gram-variáveis.",
+                  "Gram-resistentes."
+                ],
+                correct: 1,
+                explanation: "Organismos Gram-variáveis podem corar positiva ou negativamente dependendo da idade da cultura, condições de crescimento ou técnica utilizada."
+              }
+            },
+            {
+              title: "III. Coloração de Gram: Interpretação - Q4",
+              content: `
+                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 4 de 7 - Seção III: Interpretação e Conceitos
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual espécie bacteriana não pode ser visualizada pela coloração de Gram porque carece de uma parede celular?",
+                options: [
+                  "Mycobacterium spp.",
+                  "Chlamydia spp.",
+                  "Mycoplasma species."
+                ],
+                correct: 2,
+                explanation: "Mycoplasma não possui parede celular, portanto não pode ser visualizado pela coloração de Gram, que se baseia nas propriedades da parede celular bacteriana."
+              }
+            },
+            {
+              title: "III. Coloração de Gram: Interpretação - Q5",
+              content: `
+                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 5 de 7 - Seção III: Interpretação e Conceitos
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual espécie não é visualizada pelo Gram porque a estrutura de sua parede celular não retém os reagentes, embora possa ter uma aparência 'em contas' (beaded) Gram-positiva?",
+                options: [
+                  "Mycoplasma spp.",
+                  "Chlamydia e Mycobacterium spp.",
+                  "Candida spp."
+                ],
+                correct: 1,
+                explanation: "Chlamydia e Mycobacterium não são bem visualizados pelo Gram devido às características especiais de suas paredes celulares. Mycobacterium pode ter aparência 'em contas' quando corado."
+              }
+            },
+            {
+              title: "III. Coloração de Gram: Interpretação - Q6",
+              content: `
+                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 6 de 7 - Seção III: Interpretação e Conceitos
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual espécie não bacteriana cora roxo na coloração de Gram e pode apresentar estruturas alongadas chamadas 'pseudohifas'?",
+                options: [
+                  "Neisseria spp.",
+                  "Candida species.",
+                  "Nocardia spp."
+                ],
+                correct: 1,
+                explanation: "Candida (levedura) cora roxo como Gram-positiva e pode formar pseudohifas, que são estruturas alongadas que se assemelham a hifas verdadeiras."
+              }
+            },
+            {
+              title: "III. Coloração de Gram: Interpretação - Q7",
+              content: `
+                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 7 de 7 - Seção III: Interpretação e Conceitos
+                  </p>
+                  <p style="font-size: 14px; color: #15803d; margin-top: 10px;">
+                    ➡️ Próxima: Seção IV - Morfologias Gram-Positivas
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "A discrepância entre os achados da coloração de Gram e os resultados da cultura pode indicar qual das seguintes situações?",
+                options: [
+                  "O uso de ágar MacConkey em vez de ágar chocolate.",
+                  "Contaminação, terapia antimicrobiana prévia ou um organismo fastidioso.",
+                  "Um resultado falso-positivo no teste de oxidase."
+                ],
+                correct: 1,
+                explanation: "Discrepâncias entre Gram e cultura podem indicar contaminação da amostra, uso de antibióticos antes da coleta ou presença de organismos fastidiosos que crescem mal em cultura."
+              }
+            },
+            {
+              title: "IV. Morfologias Gram-Positivas - Q1",
+              content: `
+                <div style="background: #faf5ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #7c3aed; margin-bottom: 15px;">🦠 Seção IV: Morfologias Gram-Positivas</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Teste seus conhecimentos sobre as morfologias e arranjos das bactérias Gram-positivas de importância clínica.
+                  </p>
+                  <p style="font-size: 14px; color: #64748b; margin-top: 10px;">
+                    Questão 1 de 8 desta seção
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Cocos Gram-positivos arranjados em cachos (clusters) geralmente indicam qual gênero?",
+                options: [
+                  "Streptococcus.",
+                  "Staphylococcus species.",
+                  "Enterococcus."
+                ],
+                correct: 1,
+                explanation: "Cocos Gram-positivos em cachos (arranjo semelhante a cachos de uva) são característicos do gênero Staphylococcus."
+              }
+            },
+            {
+              title: "IV. Morfologias Gram-Positivas - Q2",
+              content: `
+                <div style="background: #faf5ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 2 de 8 - Seção IV: Morfologias Gram-Positivas
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Cocos Gram-positivos arranjados em cadeias (chains) geralmente indicam quais gêneros?",
+                options: [
+                  "Staphylococcus ou Micrococcus.",
+                  "Streptococcus ou Enterococcus species.",
+                  "Bacillus ou Clostridium."
+                ],
+                correct: 1,
+                explanation: "Cocos Gram-positivos em cadeias são característicos dos gêneros Streptococcus e Enterococcus."
+              }
+            },
+            {
+              title: "IV. Morfologias Gram-Positivas - Q3",
+              content: `
+                <div style="background: #faf5ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 3 de 8 - Seção IV: Morfologias Gram-Positivas
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual arranjo é considerado patognomônico para Streptococcus pneumoniae?",
+                options: [
+                  "Cocos Gram-positivos em cadeias longas.",
+                  "Diplococos Gram-positivos (esferas em pares), classicamente ligeiramente alongados e dispostos ponta a ponta.",
+                  "Cocos Gram-positivos em aglomerados (clusters)."
+                ],
+                correct: 1,
+                explanation: "Diplococos Gram-positivos ligeiramente alongados (em forma de chama de vela) dispostos ponta a ponta são patognomônicos de Streptococcus pneumoniae."
+              }
+            },
+            {
+              title: "IV. Morfologias Gram-Positivas - Q4",
+              content: `
+                <div style="background: #faf5ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 4 de 8 - Seção IV: Morfologias Gram-Positivas
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "O achado de bacilos Gram-positivos ou Gram-variáveis em espécimes de tecidos moles sem células brancas visíveis deve levantar suspeita de qual condição clínica?",
+                options: [
+                  "Endocardite por enterococos.",
+                  "Gangrena gasosa.",
+                  "Meningite pneumocócica."
+                ],
+                correct: 1,
+                explanation: "Bacilos Gram-positivos grandes sem leucócitos em tecidos moles sugerem gangrena gasosa por Clostridium perfringens, que produz toxinas que destroem as células de defesa."
+              }
+            },
+            {
+              title: "IV. Morfologias Gram-Positivas - Q5",
+              content: `
+                <div style="background: #faf5ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 5 de 8 - Seção IV: Morfologias Gram-Positivas
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual gênero Gram-positivo ramificado é tipicamente aeróbico?",
+                options: [
+                  "Actinomyces.",
+                  "Nocardia species.",
+                  "Clostridium."
+                ],
+                correct: 1,
+                explanation: "Nocardia é um gênero de bactérias Gram-positivas ramificadas aeróbicas, frequentemente associadas a infecções pulmonares em imunossuprimidos."
+              }
+            },
+            {
+              title: "IV. Morfologias Gram-Positivas - Q6",
+              content: `
+                <div style="background: #faf5ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 6 de 8 - Seção IV: Morfologias Gram-Positivas
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual gênero Gram-positivo ramificado é tipicamente anaeróbico?",
+                options: [
+                  "Streptomyces.",
+                  "Actinomyces species.",
+                  "Bacillus."
+                ],
+                correct: 1,
+                explanation: "Actinomyces é um gênero de bactérias Gram-positivas ramificadas anaeróbicas, frequentemente associadas a actinomicose cervicofacial."
+              }
+            },
+            {
+              title: "IV. Morfologias Gram-Positivas - Q7",
+              content: `
+                <div style="background: #faf5ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 7 de 8 - Seção IV: Morfologias Gram-Positivas
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual teste laboratorial é usado para diferenciar Staphylococcus aureus de outras espécies de estafilococos?",
+                options: [
+                  "Teste de Catalase.",
+                  "Teste de Coagulase.",
+                  "Teste de Oxidase."
+                ],
+                correct: 1,
+                explanation: "O teste de coagulase diferencia S. aureus (coagulase positivo) de outras espécies de Staphylococcus (coagulase negativas)."
+              }
+            },
+            {
+              title: "IV. Morfologias Gram-Positivas - Q8",
+              content: `
+                <div style="background: #faf5ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 8 de 8 - Seção IV: Morfologias Gram-Positivas
+                  </p>
+                  <p style="font-size: 14px; color: #7c3aed; margin-top: 10px;">
+                    ✅ Fim da Lição 12 - Revisão: Perguntas - Parte 1
+                  </p>
+                  <p style="font-size: 14px; color: #0369a1; margin-top: 10px;">
+                    ➡️ Continue com a Lição 13 - Revisão: Perguntas - Parte 2
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "O que a presença de bacilos Gram-positivos ou Gram-variáveis sem células brancas em tecidos moles pode sugerir?",
+                options: [
+                  "Meningite.",
+                  "Gangrena gasosa.",
+                  "Infecção por Streptococcus pyogenes."
+                ],
+                correct: 1,
+                explanation: "A presença de bacilos Gram-positivos grandes sem leucócitos em tecidos moles é altamente sugestiva de gangrena gasosa por Clostridium perfringens."
+              }
+            }
+          ]
+        }
+        ,{
+          id: 13,
+          title: "Revisão: Perguntas - Parte 2",
+          duration: "35 min",
+          xp: 165,
+          sections: [
+            {
+              title: "V. Morfologias Gram-Negativas - Q1",
+              content: `
+                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">🔴 Seção V: Morfologias Gram-Negativas</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Teste seus conhecimentos sobre as morfologias e arranjos das bactérias Gram-negativas de importância clínica.
+                  </p>
+                  <p style="font-size: 14px; color: #64748b; margin-top: 10px;">
+                    Questão 1 de 4 desta seção
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Cocos Gram-negativos arranjados em pares ('diplococos') geralmente indicam quais patógenos?",
+                options: [
+                  "Acinetobacter ou Moraxella catarrhalis.",
+                  "Neisseria meningitidis ou Neisseria gonorrhoeae.",
+                  "Haemophilus ou Prevotella."
+                ],
+                correct: 1,
+                explanation: "Diplococos Gram-negativos são característicos das espécies de Neisseria, especialmente N. meningitidis (meningite) e N. gonorrhoeae (gonorreia)."
+              }
+            },
+            {
+              title: "V. Morfologias Gram-Negativas - Q2",
+              content: `
+                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 2 de 4 - Seção V: Morfologias Gram-Negativas
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual aparência é típica das espécies de Vibrio, Campylobacter e Helicobacter?",
+                options: [
+                  "Bacilos Gram-negativos longos e finos.",
+                  "Bacilos Gram-negativos curvos ou em forma de 'S'.",
+                  "Coccobacilos Gram-negativos pequenos."
+                ],
+                correct: 1,
+                explanation: "Vibrio, Campylobacter e Helicobacter são bacilos Gram-negativos curvos ou em forma de 'S', também chamados de bacilos curvos ou espiralados."
+              }
+            },
+            {
+              title: "V. Morfologias Gram-Negativas - Q3",
+              content: `
+                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 3 de 4 - Seção V: Morfologias Gram-Negativas
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "O que o método de Gram pode visualizar, além de bactérias e células humanas?",
+                options: [
+                  "Cistos parasitários.",
+                  "Leveduras (Yeast).",
+                  "Vírus."
+                ],
+                correct: 1,
+                explanation: "O método de Gram pode visualizar leveduras como Candida spp., que coram como Gram-positivas (roxas). Vírus são muito pequenos para serem visualizados por microscopia óptica."
+              }
+            },
+            {
+              title: "V. Morfologias Gram-Negativas - Q4",
+              content: `
+                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 4 de 4 - Seção V: Morfologias Gram-Negativas
+                  </p>
+                  <p style="font-size: 14px; color: #dc2626; margin-top: 10px;">
+                    ➡️ Próxima: Seção VI - Cultura e Condições de Crescimento
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Quais organismos podem se tornar mais longos e filamentosos após a exposição a antibióticos?",
+                options: [
+                  "Algumas bactérias Gram-negativas.",
+                  "Apenas bactérias Gram-positivas grandes.",
+                  "Apenas S. pneumoniae."
+                ],
+                correct: 0,
+                explanation: "Algumas bactérias Gram-negativas podem se tornar filamentosas após exposição a antibióticos beta-lactâmicos, que interferem na divisão celular."
+              }
+            },
+            {
+              title: "VI. Cultura e Condições de Crescimento - Q1",
+              content: `
+                <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d97706; margin-bottom: 15px;">🧫 Seção VI: Cultura e Condições de Crescimento</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Teste seus conhecimentos sobre meios de cultura, condições de crescimento bacteriano e fatores de crescimento.
+                  </p>
+                  <p style="font-size: 14px; color: #64748b; margin-top: 10px;">
+                    Questão 1 de 6 desta seção
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que espécimes de sítios não estéreis devem ser inoculados em meios seletivos, como o ágar MacConkey, além dos meios não seletivos?",
+                options: [
+                  "Para promover o crescimento de todos os organismos presentes.",
+                  "Para inibir o crescimento de bactérias colonizadoras comensais.",
+                  "Para quantificar a presença de neutrófilos."
+                ],
+                correct: 1,
+                explanation: "Meios seletivos como ágar MacConkey inibem o crescimento de bactérias comensais (como Gram-positivas), permitindo o isolamento de patógenos Gram-negativos."
+              }
+            },
+            {
+              title: "VI. Cultura e Condições de Crescimento - Q2",
+              content: `
+                <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 2 de 6 - Seção VI: Cultura e Condições de Crescimento
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual meio de cultura é seletivo e projetado para detectar bactérias Gram-negativas?",
+                options: [
+                  "Ágar sangue.",
+                  "Ágar chocolate.",
+                  "Ágar MacConkey."
+                ],
+                correct: 2,
+                explanation: "O ágar MacConkey é um meio seletivo que inibe Gram-positivas e permite o crescimento de Gram-negativas, além de diferenciar fermentadores de lactose."
+              }
+            },
+            {
+              title: "VI. Cultura e Condições de Crescimento - Q3",
+              content: `
+                <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 3 de 6 - Seção VI: Cultura e Condições de Crescimento
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual organismo Gram-negativo é um exemplo de não fermentador de lactose no ágar MacConkey?",
+                options: [
+                  "Escherichia coli.",
+                  "Klebsiella.",
+                  "Pseudomonas."
+                ],
+                correct: 2,
+                explanation: "Pseudomonas é um não fermentador de lactose e forma colônias incolores no ágar MacConkey. E. coli e Klebsiella fermentam lactose e formam colônias rosadas."
+              }
+            },
+            {
+              title: "VI. Cultura e Condições de Crescimento - Q4",
+              content: `
+                <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 4 de 6 - Seção VI: Cultura e Condições de Crescimento
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual meio de cultura contém glóbulos vermelhos lisados que liberaram os fatores de crescimento hemin (fator X) e NAD (fator V)?",
+                options: [
+                  "Ágar sangue.",
+                  "Ágar MacConkey.",
+                  "Ágar chocolate."
+                ],
+                correct: 2,
+                explanation: "O ágar chocolate contém hemácias lisadas que liberam hemin (fator X) e NAD (fator V), essenciais para o crescimento de bactérias fastidiosas como Haemophilus."
+              }
+            },
+            {
+              title: "VI. Cultura e Condições de Crescimento - Q5",
+              content: `
+                <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 5 de 6 - Seção VI: Cultura e Condições de Crescimento
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Quais fatores de crescimento são essenciais para o crescimento in vitro de Haemophilus influenzae?",
+                options: [
+                  "Sais biliares e Lactose.",
+                  "Hemina (fator X) e NAD (fator V).",
+                  "Peptona e Extrato de levedura."
+                ],
+                correct: 1,
+                explanation: "Haemophilus influenzae requer hemin (fator X) e NAD (fator V) para crescimento in vitro, disponíveis no ágar chocolate."
+              }
+            },
+            {
+              title: "VI. Cultura e Condições de Crescimento - Q6",
+              content: `
+                <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 6 de 6 - Seção VI: Cultura e Condições de Crescimento
+                  </p>
+                  <p style="font-size: 14px; color: #d97706; margin-top: 10px;">
+                    ➡️ Próxima: Seção VII - Testes Bioquímicos e MALDI-TOF
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Além do ágar MacConkey, qual outro tipo de meio contém antibióticos e é usado para identificar patógenos específicos em espécimes de sítios não estéreis?",
+                options: [
+                  "Meios enriquecidos.",
+                  "Meios seletivos.",
+                  "Meios diferenciais."
+                ],
+                correct: 1,
+                explanation: "Meios seletivos contêm antibióticos ou outros agentes que inibem o crescimento de microrganismos indesejados, permitindo o isolamento de patógenos específicos."
+              }
+            },
+            {
+              title: "VII. Testes Bioquímicos e MALDI-TOF - Q1",
+              content: `
+                <div style="background: #f0fdfa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0f766e; margin-bottom: 15px;">⚗️ Seção VII: Testes Bioquímicos e MALDI-TOF</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Teste seus conhecimentos sobre testes bioquímicos rápidos e tecnologias modernas de identificação bacteriana.
+                  </p>
+                  <p style="font-size: 14px; color: #64748b; margin-top: 10px;">
+                    Questão 1 de 3 desta seção
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual teste de bancada é usado para distinguir estafilococos de estreptococos e enterococos?",
+                options: [
+                  "Teste de Coagulase.",
+                  "Teste de Catalase.",
+                  "Teste de Oxidase."
+                ],
+                correct: 1,
+                explanation: "O teste de catalase distingue estafilococos (catalase positivos) de estreptococos e enterococos (catalase negativos)."
+              }
+            },
+            {
+              title: "VII. Testes Bioquímicos e MALDI-TOF - Q2",
+              content: `
+                <div style="background: #f0fdfa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 2 de 3 - Seção VII: Testes Bioquímicos e MALDI-TOF
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "O que o Agrupamento de Lancefield, tipicamente usado para estreptococos beta-hemolíticos, identifica nas células bacterianas?",
+                options: [
+                  "A produção de peróxido de hidrogênio.",
+                  "Carboidratos específicos na parede celular bacteriana.",
+                  "A capacidade de fermentar lactose."
+                ],
+                correct: 1,
+                explanation: "O Agrupamento de Lancefield identifica carboidratos específicos (antígenos C) na parede celular de estreptococos beta-hemolíticos, classificando-os em grupos A, B, C, D, etc."
+              }
+            },
+            {
+              title: "VII. Testes Bioquímicos e MALDI-TOF - Q3",
+              content: `
+                <div style="background: #f0fdfa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <p style="font-size: 14px; color: #64748b;">
+                    Questão 3 de 3 - Seção VII: Testes Bioquímicos e MALDI-TOF
+                  </p>
+                  <div style="background: #dbeafe; padding: 15px; border-radius: 6px; margin-top: 15px;">
+                    <h4 style="color: #1e40af; margin-bottom: 10px;">🎓 Revisão Completa!</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      Parabéns por completar todas as 52 perguntas de revisão! Com base nas suas respostas, recomendamos revisar as lições correspondentes aos temas onde você teve mais dificuldade:
+                    </p>
+                    <ul style="margin-top: 10px; font-size: 14px; line-height: 1.8;">
+                      <li><strong>Seção I:</strong> Lições 1, 2 e 3 (Introdução, Espécimes, Limitações)</li>
+                      <li><strong>Seção II:</strong> Lição 1 (Introdução à Coloração de Gram)</li>
+                      <li><strong>Seção III:</strong> Lições 1 e 3 (Introdução e Limitações)</li>
+                      <li><strong>Seção IV:</strong> Lições 4 e 5 (Morfologias e Gram Positivos)</li>
+                      <li><strong>Seção V:</strong> Lições 6 (Gram Negativos)</li>
+                      <li><strong>Seção VI:</strong> Lições 8 e 9 (Cultura e Testes Bioquímicos)</li>
+                      <li><strong>Seção VII:</strong> Lições 7, 9 e 10 (Provas, Testes e MALDI-TOF)</li>
+                    </ul>
+                  </div>
+                  <p style="font-size: 14px; color: #0f766e; margin-top: 15px;">
+                    ✅ Fim da Lição 13 - Revisão: Perguntas - Parte 2
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual ferramenta de espectrometria de massa permite a identificação rápida e precisa de gênero e espécie de bactérias, desde que o organismo esteja disponível em cultura pura em meio sólido?",
+                options: [
+                  "Teste de Hidrólise de PYR.",
+                  "MALDI-TOF (Matrix-assisted laser desorption ionization-time of flight).",
+                  "PCR (Reação em Cadeia da Polimerase)."
+                ],
+                correct: 1,
+                explanation: "MALDI-TOF é uma tecnologia de espectrometria de massa que permite identificação rápida e precisa de bactérias a partir de colônias isoladas, revolucionando o diagnóstico microbiológico."
+              }
+            }
+          ]
+        }
+
       ]
     },
     antibiograma: {
