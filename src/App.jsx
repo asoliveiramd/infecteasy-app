@@ -418,8 +418,8 @@ const App = () => {
         {
           id: 4,
           title: "Morfologias e Arranjos Bacterianos",
-          duration: "12 min",
-          xp: 70,
+          duration: "4 min",
+          xp: 20,
           sections: [
             {
               title: "Morfologias Bacterianas",
@@ -458,8 +458,7 @@ const App = () => {
                 correct: 0,
                 explanation: "Staphylococcus aureus são cocos (bactérias de forma esférica). Haemophilus influenzae são cocobacilos e Vibrio vulníficus são bacilos curvos."
               }
-            },
-            {
+            },,            {
               title: "Arranjos Bacterianos",
               content: `
                 <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -497,6 +496,14 @@ const App = () => {
                 explanation: "Cocos Gram positivos em cadeia podem ser Streptococcus ou Enterococcus, entre outros gêneros menos comuns. Não se pode afirmar com certeza apenas pela morfologia."
               }
             },
+          ]
+        },
+        {
+          id: 5,
+          title: "Gram Positivos",
+          duration: "18 min",
+          xp: 90,
+          sections: [
             {
               title: "Cocos Gram Positivos em Cachos",
               content: `
@@ -534,8 +541,7 @@ const App = () => {
                 correct: 1,
                 explanation: "Cocos Gram positivos em cachos em hemocultura sugerem Staphylococcus, que pode incluir S. aureus, um patógeno agressivo. É importante ficar atento e aguardar identificação e antibiograma."
               }
-            },
-            {
+            },,            {
               title: "Cocos Gram Positivos em Cadeia",
               content: `
                 <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -565,8 +571,7 @@ const App = () => {
                 correct: 0,
                 explanation: "Três hemoculturas positivas com cocos Gram positivos em cadeia em paciente instável sugere sepse por Streptococcus ou Enterococcus. Deve-se investigar focos como endocardite infecciosa imediatamente."
               }
-            },
-            {
+            },,            {
               title: "Streptococcus pneumoniae",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -607,77 +612,7 @@ const App = () => {
                 correct: 1,
                 explanation: "O achado de diplococos gram-positivos lanceolados (formato de lança) é uma característica clássica e patognomônica de Streptococcus pneumoniae, auxiliando na sua rápida identificação presuntiva."
               }
-            },
-            {
-              title: "A prova da catalase",
-              content: `
-                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #0369a1; margin-bottom: 15px;">🧪 A Prova da Catalase</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Para distinguir os grupos e até espécies de bactérias, são realizadas provas enzimáticas. 
-                    Algumas dessas provas são tão corriqueiras que se tornaram prática comum da linguagem médica. 
-                    Frequentemente falamos "tem um estafilo coagulase positiva na hemocultura" ou "temos um não 
-                    fermentador na cultura do abscesso abdominal".
-                  </p>
-                </div>
-                
-                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">🎯 Catalase em Cocos Gram Positivos</h4>
-                  <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
-                    No caso dos cocos Gram positivos, duas provas são essenciais. A primeira é a <strong>catalase</strong>. 
-                    Ela distingue entre o grupo dos <strong>estafilococos</strong> (prova da catalase positiva) e dos 
-                    <strong>estreptococos/enterococos</strong> (catalase negativa).
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "O laboratório te liga para avisar de um resultado crítico: Doutor seu paciente tem crescimento em três hemoculturas. Trata-se de um coco Gram positivo em cachos. Sobre essa bactéria, qual afirmação é adequada?",
-                options: [
-                  "Trata-se, provavelmente, de um agente catalase positiva.",
-                  "Espera-se que seja um Enterococcus faecalis.",
-                  "Certamente trata-se de um S aureus."
-                ],
-                correct: 0,
-                explanation: "Cocos Gram positivos em cachos são tipicamente do gênero Staphylococcus, que são catalase positivos. Não podemos afirmar com certeza que é S. aureus sem a prova da coagulase, e Enterococcus não forma cachos."
-              }
-            },
-            {
-              title: "A prova da coagulase",
-              content: `
-                <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #b45309; margin-bottom: 15px;">🔬 A Prova da Coagulase</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Sabe-se que no gênero Staphylococcus, a espécie <strong>S. aureus</strong> é habitualmente produtora 
-                    de quadros mais graves, sendo, portanto, de maior importância clínica. Para distinguir essa espécie 
-                    de outras "não aureus" existe a prova da coagulase. Dessa forma, todo <strong>S. aureus é um coagulase positiva</strong>.
-                  </p>
-                </div>
-                
-                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
-                  <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ Alerta: Não Confunda!</h4>
-                  <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
-                    No meio de siglas e nomenclaturas, é comum a confusão. Existe uma outra classificação muito popular 
-                    para o S. aureus que se refere a sua capacidade de resistir à meticilina. Assim, um S. aureus 
-                    resistente à meticilina é conhecido por <strong>MRSA</strong> (pronuncia-se "marsa").
-                  </p>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    Não é infrequente colegas confundirem essa classificação com a da prova da coagulase e acharem 
-                    que um coagulase positiva é sinônimo de MRSA. <strong>Fique atento!</strong>
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "O resultado parcial da cultura mostrou que o seu paciente tem uma cultura do fragmento ósseo com um Gram positivo catalase positiva e coagulase negativa. Qual a afirmação te parece mais correta?",
-                options: [
-                  "Trata-se provavelmente de um S aureus",
-                  "O arranjo dessa bactéria é provavelmente em cadeia.",
-                  "Possivelmente esse paciente tem uma infecção por um estafilococos \"não aureus\"."
-                ],
-                correct: 2,
-                explanation: "Um coco Gram positivo catalase positivo indica Staphylococcus. Se é coagulase negativo, não é S. aureus, mas sim um estafilococo \"não aureus\" (como S. epidermidis). O arranjo de Staphylococcus é em cachos, não em cadeia."
-              }
-            },
-            {
+            },,            {
               title: "Bacilos Gram Positivos",
               content: `
                 <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -719,8 +654,7 @@ const App = () => {
                 correct: 1,
                 explanation: "Listeria monocytogenes pode causar infecções graves em imunossuprimidos, incluindo meningite e bacteremia. Actinomyces causa abscessos firmes e indolores (não Corynebacterium), e geralmente causa infecções crônicas localizadas (não agudas e disseminadas)."
               }
-            },
-            {
+            },,            {
               title: "Bacilos Ramificados: Nocardia e Actinomyces",
               content: `
                 <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -743,8 +677,7 @@ const App = () => {
                 correct: 1,
                 explanation: "A morfologia de bacilos gram-positivos ramificados é característica de Nocardia e Actinomyces, e a coloração de Ziehl-Neelsen modificada pode ajudar a diferenciá-los (Nocardia é parcialmente ácido-resistente)."
               }
-            },
-            {
+            },,            {
               title: "Suspeita de Gangrena Gasosa",
               content: `
                 <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -768,6 +701,14 @@ const App = () => {
                 explanation: "A ausência de leucócitos apesar da presença de bactérias é um sinal de alarme para gangrena gasosa, pois as toxinas produzidas por Clostridium perfringens destroem as células de defesa."
               }
             },
+          ]
+        },
+        {
+          id: 6,
+          title: "Gram Negativos",
+          duration: "15 min",
+          xp: 75,
+          sections: [
             {
               title: "Cocos Gram Negativos",
               content: `
@@ -804,8 +745,7 @@ const App = () => {
                 correct: 1,
                 explanation: "Moraxella catarrhalis está associada a infecções respiratórias, especialmente em pacientes com DPOC. As Neisserias aparecem como diplococos (não bacilos) e podem causar infecções sistêmicas graves."
               }
-            },
-            {
+            },,            {
               title: "Neisseria",
               content: `
                 <div style="background: #fdf2f8; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -828,8 +768,7 @@ const App = () => {
                 correct: 2,
                 explanation: "As espécies de Neisseria são caracterizadas por sua morfologia de diplococos gram-negativos, frequentemente com formato de 'grão de café' e localização intracelular em leucócitos."
               }
-            },
-            {
+            },,            {
               title: "Bacilos Gram Negativos de Tamanho Variável",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -859,8 +798,7 @@ const App = () => {
                 correct: 2,
                 explanation: "As Enterobacteriaceae têm habitat natural no abdome e são importantes causadoras de infecções abdominais e sepse com liberação de endotoxinas. Bacteroides e Prevotella são Gram negativos (não positivos) anaeróbios."
               }
-            },
-            {
+            },,            {
               title: "Bacilos Gram Negativos Pequenos e Curvos",
               content: `
                 <div style="background: #fdf2f8; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -894,8 +832,7 @@ const App = () => {
                 correct: 1,
                 explanation: "Vibrio cholerae é móvel, causa cólera e pode apresentar-se em forma de \"S\". Acinetobacter baumannii é hospitalar e frequentemente resistente (não sensível). Haemophilus é Gram-negativo (não positivo) e causa infecções respiratórias (não urinárias)."
               }
-            },
-            {
+            },,            {
               title: "Bacilos Gram-Negativos Curvos",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -919,7 +856,82 @@ const App = () => {
                 explanation: "A morfologia em 'asa de gaivota' ou em 'S' é uma característica clássica do gênero Campylobacter, especialmente C. jejuni, um importante causador de gastroenterite."
               }
             },
+          ]
+        },
+        {
+          id: 7,
+          title: "Provas de Bancada",
+          duration: "10 min",
+          xp: 50,
+          sections: [
             {
+              title: "A prova da catalase",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🧪 A Prova da Catalase</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Para distinguir os grupos e até espécies de bactérias, são realizadas provas enzimáticas. 
+                    Algumas dessas provas são tão corriqueiras que se tornaram prática comum da linguagem médica. 
+                    Frequentemente falamos "tem um estafilo coagulase positiva na hemocultura" ou "temos um não 
+                    fermentador na cultura do abscesso abdominal".
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 10px;">🎯 Catalase em Cocos Gram Positivos</h4>
+                  <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                    No caso dos cocos Gram positivos, duas provas são essenciais. A primeira é a <strong>catalase</strong>. 
+                    Ela distingue entre o grupo dos <strong>estafilococos</strong> (prova da catalase positiva) e dos 
+                    <strong>estreptococos/enterococos</strong> (catalase negativa).
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "O laboratório te liga para avisar de um resultado crítico: Doutor seu paciente tem crescimento em três hemoculturas. Trata-se de um coco Gram positivo em cachos. Sobre essa bactéria, qual afirmação é adequada?",
+                options: [
+                  "Trata-se, provavelmente, de um agente catalase positiva.",
+                  "Espera-se que seja um Enterococcus faecalis.",
+                  "Certamente trata-se de um S aureus."
+                ],
+                correct: 0,
+                explanation: "Cocos Gram positivos em cachos são tipicamente do gênero Staphylococcus, que são catalase positivos. Não podemos afirmar com certeza que é S. aureus sem a prova da coagulase, e Enterococcus não forma cachos."
+              }
+            },,            {
+              title: "A prova da coagulase",
+              content: `
+                <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #b45309; margin-bottom: 15px;">🔬 A Prova da Coagulase</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Sabe-se que no gênero Staphylococcus, a espécie <strong>S. aureus</strong> é habitualmente produtora 
+                    de quadros mais graves, sendo, portanto, de maior importância clínica. Para distinguir essa espécie 
+                    de outras "não aureus" existe a prova da coagulase. Dessa forma, todo <strong>S. aureus é um coagulase positiva</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
+                  <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ Alerta: Não Confunda!</h4>
+                  <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                    No meio de siglas e nomenclaturas, é comum a confusão. Existe uma outra classificação muito popular 
+                    para o S. aureus que se refere a sua capacidade de resistir à meticilina. Assim, um S. aureus 
+                    resistente à meticilina é conhecido por <strong>MRSA</strong> (pronuncia-se "marsa").
+                  </p>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Não é infrequente colegas confundirem essa classificação com a da prova da coagulase e acharem 
+                    que um coagulase positiva é sinônimo de MRSA. <strong>Fique atento!</strong>
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "O resultado parcial da cultura mostrou que o seu paciente tem uma cultura do fragmento ósseo com um Gram positivo catalase positiva e coagulase negativa. Qual a afirmação te parece mais correta?",
+                options: [
+                  "Trata-se provavelmente de um S aureus",
+                  "O arranjo dessa bactéria é provavelmente em cadeia.",
+                  "Possivelmente esse paciente tem uma infecção por um estafilococos \"não aureus\"."
+                ],
+                correct: 2,
+                explanation: "Um coco Gram positivo catalase positivo indica Staphylococcus. Se é coagulase negativo, não é S. aureus, mas sim um estafilococo \"não aureus\" (como S. epidermidis). O arranjo de Staphylococcus é em cachos, não em cadeia."
+              }
+            },,            {
               title: "Fermentação de Açúcares em Bacilos Gram Negativos",
               content: `
                 <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -955,7 +967,7 @@ const App = () => {
           ]
         },
         {
-          id: 5,
+          id: 8,
           title: "Cultura Bacteriana: Princípios",
           duration: "15 min",
           xp: 80,
@@ -1048,7 +1060,7 @@ const App = () => {
           ]
         },
         {
-          id: 6,
+          id: 9,
           title: "Testes Bioquímicos Rápidos",
           duration: "10 min",
           xp: 55,
@@ -1130,7 +1142,7 @@ const App = () => {
           ]
         },
         {
-          id: 7,
+          id: 10,
           title: "Hemólise e Agrupamento de Lancefield",
           duration: "12 min",
           xp: 65,
@@ -1242,7 +1254,7 @@ const App = () => {
           ]
         },
         {
-          id: 8,
+          id: 11,
           title: "Revisão: Pontos e Dicas",
           duration: "15 min",
           xp: 75,
