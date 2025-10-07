@@ -2493,6 +2493,97 @@ const App = () => {
       lessons: [
         {
           id: 1,
+          title: "Definição e Métodos",
+          duration: "8 min",
+          xp: 40,
+          sections: [
+            {
+              title: "Definição",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🔬 O que é o Antibiograma?</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    O <strong>antibiograma</strong> é uma ferramenta diagnóstica essencial que orienta a seleção de antibióticos 
+                    através do perfil de sensibilidade dos microrganismos isolados de amostras clínicas.
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Através dos <strong>testes de sensibilidade antimicrobiana (TSA)</strong> in vitro, determina-se quais 
+                    antibióticos serão eficazes contra um determinado germe identificado, permitindo uma terapia direcionada 
+                    e racional.
+                  </p>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444; margin: 15px 0;">
+                  <h4 style="color: #dc2626; margin-bottom: 10px;">⚕️ Importância Clínica</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    O antibiograma é fundamental para evitar o uso empírico inadequado de antibióticos, reduzir a pressão 
+                    seletiva que favorece o desenvolvimento de resistência e melhorar os desfechos clínicos dos pacientes.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é o principal objetivo do antibiograma?",
+                options: [
+                  "Identificar o tipo de microrganismo presente em uma amostra clínica.",
+                  "Orientar a escolha de antibióticos a partir do perfil de sensibilidade do microrganismo.",
+                  "Substituir os exames de cultura microbiológica."
+                ],
+                correct: 1,
+                explanation: "O antibiograma tem como principal objetivo orientar a escolha de antibióticos baseando-se no perfil de sensibilidade do microrganismo isolado. A identificação do microrganismo é feita pela cultura, e o antibiograma complementa esse resultado."
+              }
+            },
+            {
+              title: "Métodos de Testes de Sensibilidade Antimicrobiana",
+              content: `
+                <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #b45309; margin-bottom: 15px;">🧪 Métodos de TSA</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Existem diferentes métodos para realizar testes de sensibilidade antimicrobiana, cada um com suas 
+                    vantagens e aplicações específicas.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 10px;">📋 Métodos Convencionais</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Técnicas manuais tradicionais como <strong>difusão em disco (Kirby-Bauer)</strong>, diluição em ágar 
+                    e diluição em caldo. São ainda utilizados em laboratórios clínicos de diversos portes.
+                  </p>
+                </div>
+                
+                <div style="background: #f0fdfa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #0f766e; margin-bottom: 10px;">🤖 Sistemas Automatizados</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Equipamentos que utilizam <strong>tecnologia óptica</strong> para detecção de crescimento bacteriano. 
+                    Permitem processamento de múltiplas amostras simultaneamente com resultados mais rápidos e padronizados.
+                  </p>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #dc2626; margin-bottom: 10px;">🧬 Técnicas Moleculares</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Métodos mais recentes baseados na <strong>detecção de genes de resistência</strong> através de PCR, 
+                    sequenciamento e outras tecnologias genômicas. Oferecem resultados mais rápidos para patógenos de 
+                    crescimento lento.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual das opções descreve corretamente as técnicas moleculares utilizadas para testes de sensibilidade antimicrobiana?",
+                options: [
+                  "Baseiam-se na difusão em disco e diluição em ágar, sendo métodos manuais tradicionais.",
+                  "Utilizam tecnologia óptica em equipamentos automatizados para detectar crescimento bacteriano.",
+                  "Detectam genes de resistência por meio de PCR, sequenciamento e outras tecnologias genômicas."
+                ],
+                correct: 2,
+                explanation: "As técnicas moleculares detectam genes de resistência através de métodos como PCR e sequenciamento genômico, oferecendo resultados mais rápidos especialmente para patógenos de crescimento lento. As opções a) e b) descrevem métodos convencionais e automatizados, respectivamente."
+              }
+            }
+          ]
+        },
+
+        {
+          id: 2,
           title: "Conceitos Fundamentais de Resistência",
           duration: "12 min",
           xp: 60,
@@ -2558,7 +2649,7 @@ const App = () => {
           ]
         },
         {
-          id: 2,
+          id: 3,
           title: "Mecanismos de Resistência",
           duration: "15 min",
           xp: 70,
@@ -2618,7 +2709,7 @@ const App = () => {
           ]
         },
         {
-          id: 3,
+          id: 4,
           title: "Heterorresistência",
           duration: "10 min",
           xp: 50,
@@ -2657,7 +2748,7 @@ const App = () => {
           ]
         },
         {
-          id: 4,
+          id: 5,
           title: "Quando Realizar o TSA",
           duration: "8 min",
           xp: 40,
@@ -2701,7 +2792,7 @@ const App = () => {
           ]
         },
         {
-          id: 4,
+          id: 6,
           title: "Métodos Qualitativos - Disco-Difusão",
           duration: "18 min",
           xp: 90,
@@ -2778,7 +2869,7 @@ const App = () => {
           ]
         },
         {
-          id: 6,
+          id: 7,
           title: "Métodos Quantitativos - CIM",
           duration: "16 min",
           xp: 80,
@@ -2849,7 +2940,7 @@ const App = () => {
           ]
         },
         {
-          id: 7,
+          id: 8,
           title: "Interpretação Clínica dos Resultados",
           duration: "14 min",
           xp: 70,
@@ -2911,7 +3002,7 @@ const App = () => {
           ]
         },
         {
-          id: 8,
+          id: 9,
           title: "Sistemas Automatizados",
           duration: "12 min",
           xp: 60,
@@ -2952,7 +3043,7 @@ const App = () => {
           ]
         },
         {
-          id: 9,
+          id: 10,
           title: "Testes Fenotípicos Especiais",
           duration: "20 min",
           xp: 100,
@@ -3025,7 +3116,7 @@ const App = () => {
           ]
         },
         {
-          id: 10,
+          id: 11,
           title: "Métodos Moleculares em TSA",
           duration: "16 min",
           xp: 80,
