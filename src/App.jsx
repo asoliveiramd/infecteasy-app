@@ -542,7 +542,8 @@ const App = () => {
                 correct: 1,
                 explanation: "Cocos Gram positivos em cachos em hemocultura sugerem Staphylococcus, que pode incluir S. aureus, um patógeno agressivo. É importante ficar atento e aguardar identificação e antibiograma."
               }
-            },,            {
+            },
+            {
               title: "Cocos Gram Positivos em Cadeia",
               content: `
                 <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -572,7 +573,8 @@ const App = () => {
                 correct: 0,
                 explanation: "Três hemoculturas positivas com cocos Gram positivos em cadeia em paciente instável sugere sepse por Streptococcus ou Enterococcus. Deve-se investigar focos como endocardite infecciosa imediatamente."
               }
-            },,            {
+            },
+            {
               title: "Streptococcus pneumoniae",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -613,7 +615,8 @@ const App = () => {
                 correct: 1,
                 explanation: "O achado de diplococos gram-positivos lanceolados (formato de lança) é uma característica clássica e patognomônica de Streptococcus pneumoniae, auxiliando na sua rápida identificação presuntiva."
               }
-            },,            {
+            },
+            {
               title: "Bacilos Gram Positivos",
               content: `
                 <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -655,7 +658,8 @@ const App = () => {
                 correct: 1,
                 explanation: "Listeria monocytogenes pode causar infecções graves em imunossuprimidos, incluindo meningite e bacteremia. Actinomyces causa abscessos firmes e indolores (não Corynebacterium), e geralmente causa infecções crônicas localizadas (não agudas e disseminadas)."
               }
-            },,            {
+            },
+            {
               title: "Bacilos Ramificados: Nocardia e Actinomyces",
               content: `
                 <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -678,7 +682,8 @@ const App = () => {
                 correct: 1,
                 explanation: "A morfologia de bacilos gram-positivos ramificados é característica de Nocardia e Actinomyces, e a coloração de Ziehl-Neelsen modificada pode ajudar a diferenciá-los (Nocardia é parcialmente ácido-resistente)."
               }
-            },,            {
+            },
+            {
               title: "Suspeita de Gangrena Gasosa",
               content: `
                 <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -746,7 +751,8 @@ const App = () => {
                 correct: 1,
                 explanation: "Moraxella catarrhalis está associada a infecções respiratórias, especialmente em pacientes com DPOC. As Neisserias aparecem como diplococos (não bacilos) e podem causar infecções sistêmicas graves."
               }
-            },,            {
+            },
+            {
               title: "Neisseria",
               content: `
                 <div style="background: #fdf2f8; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -769,7 +775,8 @@ const App = () => {
                 correct: 2,
                 explanation: "As espécies de Neisseria são caracterizadas por sua morfologia de diplococos gram-negativos, frequentemente com formato de 'grão de café' e localização intracelular em leucócitos."
               }
-            },,            {
+            },
+            {
               title: "Bacilos Gram Negativos de Tamanho Variável",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -799,7 +806,8 @@ const App = () => {
                 correct: 2,
                 explanation: "As Enterobacteriaceae têm habitat natural no abdome e são importantes causadoras de infecções abdominais e sepse com liberação de endotoxinas. Bacteroides e Prevotella são Gram negativos (não positivos) anaeróbios."
               }
-            },,            {
+            },
+            {
               title: "Bacilos Gram Negativos Pequenos e Curvos",
               content: `
                 <div style="background: #fdf2f8; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -833,7 +841,8 @@ const App = () => {
                 correct: 1,
                 explanation: "Vibrio cholerae é móvel, causa cólera e pode apresentar-se em forma de \"S\". Acinetobacter baumannii é hospitalar e frequentemente resistente (não sensível). Haemophilus é Gram-negativo (não positivo) e causa infecções respiratórias (não urinárias)."
               }
-            },,            {
+            },
+            {
               title: "Bacilos Gram-Negativos Curvos",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -897,7 +906,8 @@ const App = () => {
                 correct: 0,
                 explanation: "Cocos Gram positivos em cachos são tipicamente do gênero Staphylococcus, que são catalase positivos. Não podemos afirmar com certeza que é S. aureus sem a prova da coagulase, e Enterococcus não forma cachos."
               }
-            },,            {
+            },
+            {
               title: "A prova da coagulase",
               content: `
                 <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -932,7 +942,8 @@ const App = () => {
                 correct: 2,
                 explanation: "Um coco Gram positivo catalase positivo indica Staphylococcus. Se é coagulase negativo, não é S. aureus, mas sim um estafilococo \"não aureus\" (como S. epidermidis). O arranjo de Staphylococcus é em cachos, não em cadeia."
               }
-            },,            {
+            },
+            {
               title: "Fermentação de Açúcares em Bacilos Gram Negativos",
               content: `
                 <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
