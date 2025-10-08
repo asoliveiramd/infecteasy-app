@@ -2790,15 +2790,7 @@ const App = () => {
                 correct: 1,
                 explanation: "O MRSA produz PBP2a, uma proteína ligadora de penicilina alternativa codificada pelo gene mecA, que tem baixa afinidade pelos beta-lactâmicos, permitindo que a síntese da parede celular continue mesmo na presença do antibiótico."
               }
-            }
-          ]
-        },
-        {
-          id: 4,
-          title: "Heterorresistência",
-          duration: "10 min",
-          xp: 50,
-          sections: [
+            },
             {
               title: "Conceito e Detecção",
               content: `
@@ -2833,7 +2825,7 @@ const App = () => {
           ]
         },
         {
-          id: 5,
+          id: 4,
           title: "Quando Realizar o TSA",
           duration: "8 min",
           xp: 40,
@@ -2877,7 +2869,7 @@ const App = () => {
           ]
         },
         {
-          id: 6,
+          id: 5,
           title: "Métodos Qualitativos - Disco-Difusão",
           duration: "18 min",
           xp: 90,
@@ -2954,7 +2946,7 @@ const App = () => {
           ]
         },
         {
-          id: 7,
+          id: 6,
           title: "Métodos Quantitativos - CIM",
           duration: "16 min",
           xp: 80,
@@ -3025,7 +3017,7 @@ const App = () => {
           ]
         },
         {
-          id: 8,
+          id: 7,
           title: "Interpretação Clínica dos Resultados",
           duration: "14 min",
           xp: 70,
@@ -3087,7 +3079,7 @@ const App = () => {
           ]
         },
         {
-          id: 9,
+          id: 8,
           title: "Sistemas Automatizados",
           duration: "12 min",
           xp: 60,
@@ -3128,7 +3120,7 @@ const App = () => {
           ]
         },
         {
-          id: 10,
+          id: 9,
           title: "Testes Fenotípicos Especiais",
           duration: "20 min",
           xp: 100,
@@ -3201,7 +3193,7 @@ const App = () => {
           ]
         },
         {
-          id: 11,
+          id: 10,
           title: "Métodos Moleculares em TSA",
           duration: "16 min",
           xp: 80,
