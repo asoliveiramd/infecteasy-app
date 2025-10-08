@@ -1272,90 +1272,175 @@ const App = () => {
           xp: 75,
           sections: [
             {
-              title: "Revisão 1",
+              title: "Pontos Essenciais Sobre o Gram I",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #0369a1; margin-bottom: 15px;">📝 Revisão - Parte 1</h3>
-                  <p style="font-size: 16px; line-height: 1.6;">
-                    Vamos revisar os conceitos fundamentais aprendidos sobre coloração de Gram, morfologias bacterianas e meios de cultura.
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🔬 Pontos Essenciais Sobre o Gram I</h3>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 10px;">💊 Utilidade Clínica</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Fundamental para orientar a escolha do antibiótico na pendência de cultura e/ou dados moleculares.
+                  </p>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #dc2626; margin-bottom: 10px;">🧱 Base Estrutural</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Bactérias Gram-positivas não têm membrana externa e possuem uma parede celular espessa de peptidoglicano 
+                    que cora fortemente com violeta cristal.
+                  </p>
+                </div>
+                
+                <div style="background: #fffbeb; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #d97706; margin-bottom: 10px;">🎯 Interpretação em Locais Estéreis</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    A visualização de bactérias no Gram e o crescimento em culturas de locais estéreis são altamente significativos.
                   </p>
                 </div>
               `,
               question: {
-                text: "Qual das seguintes afirmações sobre a coloração de Gram está CORRETA?",
+                text: "Qual das alternativas descreve corretamente um aspecto da coloração de Gram?",
                 options: [
-                  "A coloração de Gram permite identificar a espécie exata da bactéria.",
-                  "Bactérias Gram-positivas retêm o cristal violeta e aparecem roxas, enquanto Gram-negativas absorvem safranina e aparecem rosas.",
-                  "O teste é inútil para orientação terapêutica empírica."
-                ],
-                correct: 1,
-                explanation: "A coloração de Gram diferencia bactérias em Gram-positivas (roxas) e Gram-negativas (rosas) com base na estrutura da parede celular. Embora não identifique a espécie exata, é fundamental para orientação terapêutica empírica."
-              }
-            },
-            {
-              title: "Revisão 2",
-              content: `
-                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #d97706; margin-bottom: 15px;">📝 Revisão - Parte 2</h3>
-                  <p style="font-size: 16px; line-height: 1.6;">
-                    Vamos revisar os conceitos sobre morfologias bacterianas e arranjos celulares.
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "Um laboratório reporta: 'Cocos Gram-positivos em cachos'. Qual é a interpretação mais provável?",
-                options: [
-                  "Provavelmente Streptococcus spp., catalase negativo.",
-                  "Provavelmente Staphylococcus spp., catalase positivo.",
-                  "Certamente Enterococcus spp., catalase negativo."
-                ],
-                correct: 1,
-                explanation: "Cocos Gram-positivos em cachos são característicos do gênero Staphylococcus, que são catalase positivos. Streptococcus e Enterococcus formam cadeias (não cachos) e são catalase negativos."
-              }
-            },
-            {
-              title: "Revisão 3",
-              content: `
-                <div style="background: #fdf2f8; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #be185d; margin-bottom: 15px;">📝 Revisão - Parte 3</h3>
-                  <p style="font-size: 16px; line-height: 1.6;">
-                    Vamos revisar os conceitos sobre meios de cultura e testes bioquímicos.
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "Qual das seguintes combinações de meio de cultura e finalidade está CORRETA?",
-                options: [
-                  "Ágar MacConkey – meio enriquecido para bactérias fastidiosas.",
-                  "Ágar chocolate – meio seletivo para Gram-negativos.",
-                  "Ágar sangue – meio universal para crescimento bacteriano."
+                  "As bactérias Gram-positivas possuem membrana externa e não retêm o corante violeta cristal.",
+                  "A coloração de Gram é útil apenas após o resultado da cultura estar disponível.",
+                  "A presença de bactérias em locais estéreis observada pelo Gram tem alto valor diagnóstico."
                 ],
                 correct: 2,
-                explanation: "O ágar sangue é um meio universal enriquecido usado para crescimento de diversas bactérias. Ágar MacConkey é seletivo para Gram-negativos (não enriquecido para fastidiosas), e ágar chocolate é enriquecido (não seletivo)."
+                explanation: "A presença de bactérias visualizadas pelo Gram em locais normalmente estéreis (como sangue, LCR, líquido pleural) tem alto valor diagnóstico e orienta a terapia empírica antes dos resultados de cultura."
               }
             },
             {
-              title: "Revisão 4",
+              title: "Pontos Essenciais Sobre o Gram II",
               content: `
-                <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #059669; margin-bottom: 15px;">📝 Revisão - Parte 4</h3>
-                  <p style="font-size: 16px; line-height: 1.6;">
-                    Vamos revisar os conceitos sobre bactérias de importância clínica e suas características.
+                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">⚠️ Pontos Essenciais Sobre o Gram II</h3>
+                  <h4 style="color: #991b1b; margin-bottom: 10px;">Bactérias Não Visualizáveis pelo Gram</h4>
+                  <p style="font-size: 14px; line-height: 1.5; margin-bottom: 15px;">
+                    Algumas bactérias não podem ser adequadamente visualizadas por dois motivos principais:
+                  </p>
+                </div>
+                
+                <div style="background: #fff7ed; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #c2410c; margin-bottom: 10px;">🚫 Ausência de parede celular:</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li>Mycoplasma pneumoniae</li>
+                    <li>Mycoplasma hominis</li>
+                    <li>Ureaplasma spp.</li>
+                  </ul>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #b45309; margin-bottom: 10px;">🔬 Estrutura de parede celular que não retém reagentes de coloração de Gram:</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li>Chlamydia trachomatis</li>
+                    <li>Mycobacterium tuberculosis</li>
+                    <li>Outras micobactérias</li>
+                  </ul>
+                </div>
+              `,
+              question: {
+                text: "Qual das alternativas explica corretamente por que certas bactérias não são visíveis na coloração de Gram?",
+                options: [
+                  "Porque são exclusivamente intracelulares e não possuem DNA próprio.",
+                  "Porque carecem de parede celular ou possuem estruturas que não retêm o corante do Gram.",
+                  "Porque apresentam cápsula espessa que impede a penetração da fucsina."
+                ],
+                correct: 1,
+                explanation: "Bactérias como Mycoplasma não possuem parede celular, enquanto Chlamydia e Mycobacterium têm estruturas de parede que não retêm adequadamente os corantes do Gram, tornando-as não visualizáveis por este método."
+              }
+            },
+            {
+              title: "Pontos Essenciais Sobre o Gram III",
+              content: `
+                <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d97706; margin-bottom: 15px;">⚠️ Pontos Essenciais Sobre o Gram III</h3>
+                  <h4 style="color: #c2410c; margin-bottom: 10px;">Resultados Falso-Negativos</h4>
+                  <p style="font-size: 14px; line-height: 1.5; margin-bottom: 15px;">
+                    A ausência de bactérias no Gram ou nas culturas não significa necessariamente ausência de infecção devido a:
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <ul style="font-size: 14px; line-height: 1.8; margin-left: 20px;">
+                    <li><strong>Uso prévio de antibióticos</strong> reduzindo a carga bacteriana</li>
+                    <li><strong>Concentração bacteriana</strong> abaixo do limite de detecção (≤10⁴ UFC/mL)</li>
+                    <li>Presença de <strong>microrganismos fastidiosos</strong> ou de crescimento lento</li>
+                    <li><strong>Agentes não-bacterianos</strong> (vírus, fungos ou parasitas)</li>
+                    <li><strong>Técnicas de coleta, transporte ou processamento inadequadas</strong></li>
+                  </ul>
+                </div>
+              `,
+              question: {
+                text: "Qual das situações abaixo pode justificar um resultado falso-negativo na coloração de Gram ou cultura?",
+                options: [
+                  "Elevada concentração de bactérias na amostra.",
+                  "Uso prévio de antibióticos pelo paciente.",
+                  "Crescimento rápido de microrganismos no meio de cultura."
+                ],
+                correct: 1,
+                explanation: "O uso prévio de antibióticos pode reduzir significativamente a carga bacteriana, resultando em Gram e culturas falsamente negativos, mesmo na presença de infecção ativa."
+              }
+            },
+            {
+              title: "Dicas Práticas para Interpretação",
+              content: `
+                <div style="background: #f0fdfa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0f766e; margin-bottom: 15px;">💡 Dicas Práticas para Interpretação</h3>
+                </div>
+                
+                <div style="background: #dbeafe; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">🧠 Regra Mnemônica</h4>
+                  <p style="font-size: 16px; font-weight: bold; line-height: 1.5; margin-bottom: 10px; color: #1e40af;">
+                    "EstáFILO não forma fila (cadeia) e estrepto não forma cachos"
+                  </p>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Esta regra ajuda a diferenciar rapidamente <strong>Staphylococcus</strong> (em cachos) de 
+                    <strong>Streptococcus</strong> (em cadeias).
+                  </p>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #dc2626; margin-bottom: 10px;">🔴 Identificação de S. aureus</h4>
+                  <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                    <strong>Estáfilo coagulase positiva = Staphylococcus aureus</strong>
+                  </p>
+                  <p style="font-size: 14px; line-height: 1.5; font-weight: bold; color: #dc2626;">
+                    ⚠️ Não confundir SCN com MRSA!!!!
+                  </p>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #b45309; margin-bottom: 10px;">🦠 Bacilos Gram-Negativos</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    <strong>Fermentadores de lactose</strong> geralmente são enterobactérias (E. coli, Klebsiella). 
+                    <strong>Não fermentadores</strong> como Acinetobacter, Pseudomonas e Proteus têm maior probabilidade 
+                    de resistência antimicrobiana.
+                  </p>
+                </div>
+                
+                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                  <h4 style="color: #059669; margin-bottom: 10px;">💬 Comunicação</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    <strong>Converse com o laboratório, sempre!</strong> A troca de informações entre clínicos e 
+                    microbiologistas é fundamental para o diagnóstico correto e tratamento adequado.
                   </p>
                 </div>
               `,
               question: {
-                text: "Um Gram de tecido mole mostra bacilos Gram-positivos grandes SEM leucócitos. Qual é a principal suspeita clínica?",
+                text: "Qual das alternativas está correta segundo as orientações do card?",
                 options: [
-                  "Infecção por Listeria monocytogenes.",
-                  "Gangrena gasosa por Clostridium perfringens.",
-                  "Actinomicose por Actinomyces spp."
+                  "Streptococcus formam cachos e Staphylococcus formam cadeias.",
+                  "S. aureus é coagulase positivo e deve ser distinguido de SCN e MRSA.",
+                  "Fermentadores de lactose, como Pseudomonas, raramente são resistentes."
                 ],
                 correct: 1,
-                explanation: "A ausência de leucócitos apesar da presença de bacilos Gram-positivos grandes é um sinal de alarme para gangrena gasosa, pois Clostridium perfringens produz toxinas que destroem as células de defesa."
+                explanation: "S. aureus é identificado como estafilococo coagulase positivo. É importante distinguir SCN (Staphylococcus coagulase-negativo) de MRSA (S. aureus resistente à meticilina), pois são entidades diferentes com tratamentos distintos."
               }
             }
           ]
+
         }
         ,{
           id: 12,
