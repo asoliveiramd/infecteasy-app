@@ -2663,6 +2663,42 @@ const App = () => {
                 correct: 2,
                 explanation: "As técnicas moleculares detectam genes de resistência através de métodos como PCR e sequenciamento genômico, oferecendo resultados mais rápidos especialmente para patógenos de crescimento lento. As opções a) e b) descrevem métodos convencionais e automatizados, respectivamente."
               }
+            },
+            {
+              title: "Indicações Clínicas",
+              content: `
+                <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #059669; margin-bottom: 15px;">📋 Critérios para TSA</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    O teste de suscetibilidade antimicrobiana (TSA) deve ser realizado quando:
+                  </p>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li>Bactéria clinicamente significativa é isolada de sítio normalmente estéril</li>
+                    <li>Padrão de resistência é imprevisível para a espécie</li>
+                    <li>Paciente não responde à terapia empírica</li>
+                    <li>Infecção grave que requer terapia direcionada</li>
+                  </ul>
+                </div>
+                
+                <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                  <h4 style="color: #1d4ed8; margin-bottom: 10px;">💡 Exemplo Prático</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    <strong>Streptococcus pyogenes</strong> não necessita teste para penicilina, pois nunca foi 
+                    relatada resistência. Já <strong>Staphylococcus aureus</strong> sempre requer teste devido 
+                    à possibilidade de MRSA.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Em qual situação o teste de suscetibilidade NÃO é rotineiramente realizado?",
+                options: [
+                  "Quando uma bactéria clinicamente significativa é isolada de um sítio normalmente estéril.",
+                  "Quando o padrão de suscetibilidade do organismo é previsível, como o de Streptococcus pyogenes à penicilina.",
+                  "Quando o paciente está imunossuprimido e o organismo isolado pode ser um patógeno oportunista."
+                ],
+                correct: 1,
+                explanation: "O TSA não é necessário quando o padrão de suscetibilidade é previsível e bem estabelecido, como a sensibilidade universal de S. pyogenes à penicilina, onde resistência nunca foi documentada."
+              }
             }
           ]
         },
@@ -2826,10 +2862,498 @@ const App = () => {
         },
         {
           id: 4,
-          title: "Quando Realizar o TSA",
+          title: "Métodos Qualitativos - Disco-Difusão",
+          duration: "18 min",
+          xp: 90,
+          sections: [
+            {
+              title: "Princípio do Método Kirby-Bauer",
+              content: `
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #2563eb; margin-bottom: 15px;">🎯 Método de Disco-Difusão</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    O método de <strong>disco-difusão (Kirby-Bauer)</strong> é o teste qualitativo mais utilizado 
+                    devido à sua simplicidade e padronização. O antimicrobiano difunde do disco através do ágar, 
+                    criando um gradiente de concentração. O diâmetro do halo de inibição é inversamente proporcional 
+                    à CIM.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 10px;">📏 Interpretação dos Halos</h4>
+                  <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                    <tr style="background: #e5e7eb;">
+                      <th style="padding: 8px; border: 1px solid #d1d5db;">Categoria</th>
+                      <th style="padding: 8px; border: 1px solid #d1d5db;">Interpretação</th>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold; color: #059669;">Sensível (S)</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Halo ≥ ponto de corte superior</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold; color: #d97706;">Intermediário (I)</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Halo entre os pontos de corte</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold; color: #dc2626;">Resistente (R)</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Halo ≤ ponto de corte inferior</td>
+                    </tr>
+                  </table>
+                </div>
+              `,
+              question: {
+                text: "O método de difusão em disco (Kirby-Bauer) fornece que tipo de resultado?",
+                options: [
+                  "Um resultado qualitativo, categorizando o isolado como sensível, sensível dose-dependente, intermediário ou resistente.",
+                  "Um resultado quantitativo na forma de Concentração Inibitória Mínima (CIM).",
+                  "Um resultado genotípico, indicando a presença de genes de resistência."
+                ],
+                correct: 0,
+                explanation: "O método de disco-difusão fornece resultados qualitativos, categorizando os isolados em diferentes classes de suscetibilidade baseadas no diâmetro dos halos de inibição comparados aos pontos de corte estabelecidos."
+              }
+            },
+            {
+              title: "Controle de Qualidade",
+              content: `
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d97706; margin-bottom: 15px;">✅ Controle de Qualidade</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    O controle de qualidade é essencial para garantir a confiabilidade dos resultados. 
+                    Cepas de referência ATCC com perfis de suscetibilidade conhecidos devem ser testadas 
+                    regularmente. Os halos devem estar dentro das faixas esperadas estabelecidas pelo CLSI/EUCAST.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que o controle de qualidade é crucial no teste de disco-difusão?",
+                options: [
+                  "Para acelerar o processo de teste.",
+                  "Para garantir a confiabilidade e precisão dos resultados usando cepas de referência com perfis conhecidos.",
+                  "Para reduzir o custo dos reagentes."
+                ],
+                correct: 1,
+                explanation: "O controle de qualidade com cepas ATCC de referência garante que o sistema de teste está funcionando corretamente, validando a precisão dos resultados antes de reportar os dados clínicos."
+              }
+            }
+          ]
+        },
+        {
+          id: 5,
+          title: "Métodos Quantitativos - CIM",
+          duration: "16 min",
+          xp: 80,
+          sections: [
+            {
+              title: "Concentração Inibitória Mínima",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🔢 CIM - Concentração Inibitória Mínima</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A <strong>CIM</strong> é a menor concentração de um antimicrobiano capaz de inibir o crescimento 
+                    visível de uma bactéria após 16-20 horas de incubação. É expressa em mg/L ou μg/mL e fornece 
+                    informação quantitativa precisa sobre a suscetibilidade.
+                  </p>
+                </div>
+                
+                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                  <h4 style="color: #059669; margin-bottom: 10px;">💡 Vantagens da CIM</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li>Resultado quantitativo preciso</li>
+                    <li>Permite ajuste de dose baseado em PK/PD</li>
+                    <li>Melhor para infecções graves</li>
+                    <li>Padrão-ouro para pesquisa</li>
+                  </ul>
+                </div>
+              `,
+              question: {
+                text: "O que é a Concentração Inibitória Mínima (CIM)?",
+                options: [
+                  "O diâmetro do halo de inibição medido no teste de difusão em disco.",
+                  "A menor concentração de um agente específico necessária para inibir o crescimento visível de um organismo in vitro.",
+                  "A concentração de um antibiótico que é bactericida para o organismo."
+                ],
+                correct: 1,
+                explanation: "A CIM é definida como a menor concentração de um antimicrobiano que inibe completamente o crescimento visível de uma bactéria após incubação padronizada, fornecendo uma medida quantitativa precisa da suscetibilidade."
+              }
+            },
+            {
+              title: "Métodos de Determinação da CIM",
+              content: `
+                <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #6d28d9; margin-bottom: 15px;">🧪 Métodos para CIM</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    <strong>Diluição em caldo:</strong> Método de referência onde o antimicrobiano é diluído 
+                    seriadamente em caldo de cultura. Permite determinação precisa da CIM.
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    <strong>Diluição em ágar:</strong> Antimicrobiano incorporado ao ágar em diferentes concentrações. 
+                    Permite testar múltiplos isolados simultaneamente.
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    <strong>E-test (gradiente):</strong> Fita plástica com gradiente de concentração do antimicrobiano. 
+                    Combina facilidade do disco-difusão com precisão da CIM.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Como o teste de gradiente antimicrobiano (E-test) determina a CIM?",
+                options: [
+                  "Pela cor do meio de cultura após a incubação.",
+                  "Pela intersecção da zona elíptica de inibição do crescimento com a fita que contém um gradiente de concentração do antimicrobiano.",
+                  "Pela ausência de turbidez no tubo com a menor concentração do antibiótico."
+                ],
+                correct: 1,
+                explanation: "No E-test, a CIM é determinada no ponto onde a zona elíptica de inibição intersecta a fita com gradiente de concentração, fornecendo um valor quantitativo direto da concentração inibitória mínima."
+              }
+            }
+          ]
+        },
+        {
+          id: 6,
+          title: "Interpretação Clínica dos Resultados",
+          duration: "14 min",
+          xp: 70,
+          sections: [
+            {
+              title: "Categorias de Interpretação",
+              content: `
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #2563eb; margin-bottom: 15px;">📊 Categorias Clínicas</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    <strong>Sensível (S):</strong> A concentração do antibiótico que inibe o isolado é geralmente 
+                    alcançada com a dose recomendada para o tipo de infecção e organismo infectante.
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    <strong>Sensível Dose-Dependente (SDD):</strong> Para atingir a concentração inibitória, 
+                    é necessário usar um regime de dosagem que resulte em maior exposição ao medicamento.
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    <strong>Resistente (R):</strong> A concentração do antibiótico que inibe o isolado não é 
+                    alcançada com doses seguras, ou a bactéria possui mecanismos de resistência específicos.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "O que indica a categoria 'sensível'?",
+                options: [
+                  "Que a concentração do antibiótico que inibe o isolado é geralmente alcançada com a dose recomendada.",
+                  "Que o antibiótico só funcionará se for usado em doses mais altas que as convencionais.",
+                  "Que a eficácia clínica pode ser alcançada apenas se o antibiótico se concentrar no local da infecção."
+                ],
+                correct: 0,
+                explanation: "A categoria 'sensível' indica que as concentrações do antimicrobiano necessárias para inibir o crescimento bacteriano são facilmente alcançadas no local da infecção com as doses padrão recomendadas."
+              }
+            },
+            {
+              title: "Correlação PK/PD",
+              content: `
+                <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #059669; margin-bottom: 15px;">⚖️ Farmacocinética/Farmacodinâmica</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    A interpretação dos resultados deve considerar a <strong>farmacocinética</strong> (como o 
+                    organismo processa o medicamento) e a <strong>farmacodinâmica</strong> (como o medicamento 
+                    afeta a bactéria). Fatores como penetração tecidual, metabolismo e excreção influenciam 
+                    a eficácia clínica.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "O que significa a categoria 'sensível dose-dependente'?",
+                options: [
+                  "Que a bactéria é resistente a doses padrão, mas pode ser tratada com qualquer outro antibiótico.",
+                  "Que, para atingir a inibição, é necessário um regime de dosagem que resulte em maior exposição ao medicamento.",
+                  "Que a resposta ao tratamento é incerta e deve-se usar um agente alternativo."
+                ],
+                correct: 1,
+                explanation: "Sensível dose-dependente indica que a eficácia pode ser alcançada, mas requer otimização da dosagem (doses mais altas, intervalos menores, ou infusão prolongada) para atingir concentrações adequadas no local da infecção."
+              }
+            }
+          ]
+        },
+        {
+          id: 7,
+          title: "Sistemas Automatizados",
+          duration: "12 min",
+          xp: 60,
+          sections: [
+            {
+              title: "Princípios dos Sistemas Automatizados",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🤖 Automação em Microbiologia</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Os sistemas automatizados (como VITEK, Phoenix, MicroScan) utilizam <strong>detecção óptica</strong> 
+                    do crescimento bacteriano na presença de diferentes concentrações de antimicrobianos. 
+                    Isso permite determinação rápida da CIM e interpretação automática.
+                  </p>
+                </div>
+                
+                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                  <h4 style="color: #059669; margin-bottom: 10px;">✅ Vantagens</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li>Resultados em 4-8 horas (vs 16-24h métodos convencionais)</li>
+                    <li>Padronização e redução de erros técnicos</li>
+                    <li>Identificação simultânea de espécie e TSA</li>
+                    <li>Interpretação automática com alertas de resistência</li>
+                  </ul>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal vantagem dos sistemas automatizados de teste de suscetibilidade?",
+                options: [
+                  "São os métodos mais baratos disponíveis.",
+                  "Podem fornecer resultados mais rapidamente por detectarem o crescimento bacteriano de forma óptica.",
+                  "Eliminam completamente a necessidade de testes fenotípicos confirmatórios."
+                ],
+                correct: 1,
+                explanation: "A principal vantagem dos sistemas automatizados é a rapidez, fornecendo resultados de identificação e suscetibilidade em 4-8 horas através da detecção óptica automatizada do crescimento, comparado às 16-24 horas dos métodos convencionais."
+              }
+            }
+          ]
+        },
+        {
+          id: 8,
+          title: "Testes Fenotípicos Especiais",
+          duration: "20 min",
+          xp: 100,
+          sections: [
+            {
+              title: "Detecção de Beta-lactamases",
+              content: `
+                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">🧪 Teste da Nitrocefina</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    O teste da <strong>nitrocefina (cefalosporina cromogênica)</strong> é um método rápido para 
+                    detectar a produção de beta-lactamases. A enzima hidrolisa a nitrocefina, causando mudança 
+                    de cor de amarelo para vermelho/rosa em poucos minutos.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 10px;">🎯 Aplicações Clínicas</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li><strong>Haemophilus spp.:</strong> Detecção de resistência à ampicilina</li>
+                    <li><strong>Neisseria gonorrhoeae:</strong> Orientação terapêutica rápida</li>
+                    <li><strong>Staphylococcus spp.:</strong> Detecção de penicilinase</li>
+                    <li><strong>Enterococcus spp.:</strong> Diferenciação de mecanismos de resistência</li>
+                  </ul>
+                </div>
+              `,
+              question: {
+                text: "O teste da cefalosporina cromogênica (nitrocefina) é usado para detectar rapidamente o quê?",
+                options: [
+                  "Resistência induzível à clindamicina.",
+                  "A produção de beta-lactamases em bactérias como Staphylococcus spp. e H. influenzae.",
+                  "Resistência de alto nível a aminoglicosídeos em enterococos."
+                ],
+                correct: 1,
+                explanation: "O teste da nitrocefina detecta rapidamente a produção de beta-lactamases através da mudança de cor de amarelo para vermelho/rosa, sendo especialmente útil para H. influenzae, N. gonorrhoeae e Staphylococcus spp."
+              }
+            },
+            {
+              title: "Teste D (Clindamicina)",
+              content: `
+                <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #6d28d9; margin-bottom: 15px;">🧬 Resistência Induzível à Clindamicina</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    O <strong>teste D</strong> detecta resistência induzível à clindamicina em Staphylococcus spp. 
+                    e Streptococcus spp. Um disco de eritromicina é colocado próximo ao disco de clindamicina. 
+                    Se houver achatamento do halo de clindamicina próximo à eritromicina (formato de "D"), 
+                    indica resistência induzível.
+                  </p>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #d97706; margin-bottom: 10px;">⚠️ Importância Clínica</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Isolados com teste D positivo devem ser reportados como resistentes à clindamicina, 
+                    mesmo que o teste isolado de clindamicina seja sensível, pois pode haver falha terapêutica.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "O 'D-zone test' é utilizado para detectar qual mecanismo de resistência?",
+                options: [
+                  "Produção de beta-lactamase de espectro estendido (ESBL).",
+                  "Resistência induzível à clindamicina em Staphylococcus spp. e Streptococcus spp..",
+                  "Resistência à meticilina em S. aureus."
+                ],
+                correct: 1,
+                explanation: "O teste D detecta resistência induzível à clindamicina mediada pelo gene erm, onde a eritromicina induz a produção de metilase que confere resistência cruzada à clindamicina, formando uma zona de inibição em formato de 'D'."
+              }
+            }
+          ]
+        },
+        {
+          id: 9,
+          title: "Métodos Moleculares em TSA",
+          duration: "16 min",
+          xp: 80,
+          sections: [
+            {
+              title: "Detecção Genotípica de Resistência",
+              content: `
+                <div style="background: #eef2ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #4338ca; margin-bottom: 15px;">🧬 Métodos Moleculares</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Os métodos moleculares detectam genes de resistência específicos através de PCR, 
+                    hibridização ou sequenciamento. Podem ser realizados diretamente em amostras clínicas 
+                    ou culturas, fornecendo resultados em 1-3 horas.
+                  </p>
+                </div>
+                
+                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                  <h4 style="color: #059669; margin-bottom: 10px;">✅ Vantagens</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li>Rapidez: resultados em horas vs dias</li>
+                    <li>Detecção direta em amostras clínicas</li>
+                    <li>Identificação de mecanismos específicos</li>
+                    <li>Útil para bactérias de crescimento lento</li>
+                  </ul>
+                </div>
+              `,
+              question: {
+                text: "Qual é uma das principais vantagens dos métodos genotípicos?",
+                options: [
+                  "São menos caros que os métodos fenotípicos.",
+                  "Podem ser realizados diretamente em amostras clínicas, resultando em tempos de resposta substancialmente mais rápidos.",
+                  "Fornecem uma visão completa de todos os possíveis mecanismos de resistência."
+                ],
+                correct: 1,
+                explanation: "A principal vantagem dos métodos moleculares é a rapidez, permitindo detecção de genes de resistência diretamente em amostras clínicas em 1-3 horas, comparado aos métodos fenotípicos que requerem crescimento bacteriano (18-48 horas)."
+              }
+            },
+            {
+              title: "Limitações dos Métodos Moleculares",
+              content: `
+                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">⚠️ Limitações Importantes</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Embora rápidos, os métodos moleculares têm limitações importantes:
+                  </p>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li>Detectam apenas genes conhecidos nos painéis</li>
+                    <li>Não diferenciam genes expressos vs silenciosos</li>
+                    <li>Não fornecem informação sobre outros antimicrobianos</li>
+                    <li>Podem não detectar novos mecanismos de resistência</li>
+                  </ul>
+                </div>
+                
+                <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                  <h4 style="color: #1d4ed8; margin-bottom: 10px;">💡 Complementaridade</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Os métodos moleculares complementam, mas não substituem completamente os testes fenotípicos. 
+                    A combinação de ambos fornece informação mais completa para o manejo clínico.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal limitação clínica dos métodos moleculares?",
+                options: [
+                  "São mais lentos que os métodos fenotípicos.",
+                  "Não eliminam a necessidade de testes fenotípicos para confirmar os resultados e avaliar outras opções terapêuticas.",
+                  "Os resultados não se correlacionam com a resistência clínica."
+                ],
+                correct: 1,
+                explanation: "A principal limitação é que os métodos moleculares detectam apenas genes específicos conhecidos, não fornecendo informação sobre outros antimicrobianos ou novos mecanismos, mantendo a necessidade de testes fenotípicos complementares."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    antibiograma: {
+      title: "Teste de Suscetibilidade Antimicrobiana",
+      description: "Domine os conceitos e técnicas do antibiograma",
+      lessons: [
+        {
+          id: 1,
+          title: "Definição e Métodos",
           duration: "8 min",
           xp: 40,
           sections: [
+            {
+              title: "Definição",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🔬 O que é o Antibiograma?</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    O <strong>antibiograma</strong> é uma ferramenta diagnóstica essencial que orienta a seleção de antibióticos 
+                    através do perfil de sensibilidade dos microrganismos isolados de amostras clínicas.
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Através dos <strong>testes de sensibilidade antimicrobiana (TSA)</strong> in vitro, determina-se quais 
+                    antibióticos serão eficazes contra um determinado germe identificado, permitindo uma terapia direcionada 
+                    e racional.
+                  </p>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444; margin: 15px 0;">
+                  <h4 style="color: #dc2626; margin-bottom: 10px;">⚕️ Importância Clínica</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    O antibiograma é fundamental para evitar o uso empírico inadequado de antibióticos, reduzir a pressão 
+                    seletiva que favorece o desenvolvimento de resistência e melhorar os desfechos clínicos dos pacientes.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é o principal objetivo do antibiograma?",
+                options: [
+                  "Identificar o tipo de microrganismo presente em uma amostra clínica.",
+                  "Orientar a escolha de antibióticos a partir do perfil de sensibilidade do microrganismo.",
+                  "Substituir os exames de cultura microbiológica."
+                ],
+                correct: 1,
+                explanation: "O antibiograma tem como principal objetivo orientar a escolha de antibióticos baseando-se no perfil de sensibilidade do microrganismo isolado. A identificação do microrganismo é feita pela cultura, e o antibiograma complementa esse resultado."
+              }
+            },
+            {
+              title: "Métodos de Testes de Sensibilidade Antimicrobiana",
+              content: `
+                <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #b45309; margin-bottom: 15px;">🧪 Métodos de TSA</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Existem diferentes métodos para realizar testes de sensibilidade antimicrobiana, cada um com suas 
+                    vantagens e aplicações específicas.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 10px;">📋 Métodos Convencionais</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Técnicas manuais tradicionais como <strong>difusão em disco (Kirby-Bauer)</strong>, diluição em ágar 
+                    e diluição em caldo. São ainda utilizados em laboratórios clínicos de diversos portes.
+                  </p>
+                </div>
+                
+                <div style="background: #f0fdfa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #0f766e; margin-bottom: 10px;">🤖 Sistemas Automatizados</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Equipamentos que utilizam <strong>tecnologia óptica</strong> para detecção de crescimento bacteriano. 
+                    Permitem processamento de múltiplas amostras simultaneamente com resultados mais rápidos e padronizados.
+                  </p>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #dc2626; margin-bottom: 10px;">🧬 Técnicas Moleculares</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Métodos mais recentes baseados na <strong>detecção de genes de resistência</strong> através de PCR, 
+                    sequenciamento e outras tecnologias genômicas. Oferecem resultados mais rápidos para patógenos de 
+                    crescimento lento.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual das opções descreve corretamente as técnicas moleculares utilizadas para testes de sensibilidade antimicrobiana?",
+                options: [
+                  "Baseiam-se na difusão em disco e diluição em ágar, sendo métodos manuais tradicionais.",
+                  "Utilizam tecnologia óptica em equipamentos automatizados para detectar crescimento bacteriano.",
+                  "Detectam genes de resistência por meio de PCR, sequenciamento e outras tecnologias genômicas."
+                ],
+                correct: 2,
+                explanation: "As técnicas moleculares detectam genes de resistência através de métodos como PCR e sequenciamento genômico, oferecendo resultados mais rápidos especialmente para patógenos de crescimento lento. As opções a) e b) descrevem métodos convencionais e automatizados, respectivamente."
+              }
+            },
             {
               title: "Indicações Clínicas",
               content: `
@@ -2864,6 +3388,164 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "O TSA não é necessário quando o padrão de suscetibilidade é previsível e bem estabelecido, como a sensibilidade universal de S. pyogenes à penicilina, onde resistência nunca foi documentada."
+              }
+            }
+          ]
+        },
+
+        {
+          id: 2,
+          title: "Conceitos Fundamentais de Resistência",
+          duration: "12 min",
+          xp: 60,
+          sections: [
+            {
+              title: "Resistência Intrínseca vs Adquirida",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🧬 Tipos de Resistência</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A <strong>resistência intrínseca</strong> é uma característica natural e inerente de uma espécie bacteriana. 
+                    Por exemplo, todas as bactérias gram-negativas são intrinsecamente resistentes à vancomicina devido à 
+                    sua estrutura de parede celular.
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Já a <strong>resistência adquirida</strong> é desenvolvida por uma bactéria que anteriormente era sensível 
+                    a um antimicrobiano. Isso pode ocorrer por mutações genéticas ou aquisição de genes de resistência.
+                  </p>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #d97706; margin-bottom: 10px;">⚠️ Importância Clínica</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    O teste de suscetibilidade só é necessário para resistência adquirida, pois a resistência 
+                    intrínseca é previsível e conhecida para cada espécie.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "O que define a resistência intrínseca?",
+                options: [
+                  "Resistência desenvolvida após a exposição a um agente indutor.",
+                  "Uma resistência inerente a um antimicrobiano que quase todos os membros de uma espécie bacteriana exibem.",
+                  "Resistência adquirida através da transferência horizontal de genes."
+                ],
+                correct: 1,
+                explanation: "A resistência intrínseca é uma característica natural e inerente de uma espécie bacteriana, presente em todos ou quase todos os membros da espécie, tornando o teste de suscetibilidade desnecessário para esses antimicrobianos."
+              }
+            },
+            {
+              title: "Mecanismos Moleculares",
+              content: `
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #374151; margin-bottom: 15px;">🔬 Mecanismos de Ação</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Os mecanismos de resistência podem ser <strong>constitutivos</strong> (expressos continuamente) 
+                    ou <strong>induzíveis</strong> (expressos apenas na presença do antimicrobiano). A resistência 
+                    induzível pode ser mais difícil de detectar in vitro, mas clinicamente significativa.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a diferença entre resistência constitutiva e induzível?",
+                options: [
+                  "A resistência constitutiva é transferida por plasmídeos, enquanto a induzível é cromossômica.",
+                  "A resistência constitutiva é expressa continuamente, enquanto a induzível ocorre após a exposição a um agente incitante.",
+                  "A resistência constitutiva afeta apenas os beta-lactâmicos, enquanto a induzível afeta os macrolídeos."
+                ],
+                correct: 1,
+                explanation: "A resistência constitutiva é expressa de forma contínua pela bactéria, enquanto a resistência induzível só é expressa quando a bactéria é exposta ao antimicrobiano ou a um agente indutor específico."
+              }
+            }
+          ]
+        },
+        {
+          id: 3,
+          title: "Mecanismos de Resistência",
+          duration: "15 min",
+          xp: 70,
+          sections: [
+            {
+              title: "Beta-lactamases",
+              content: `
+                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">🧪 Enzimas Beta-lactamases</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    As <strong>beta-lactamases</strong> são enzimas que hidrolisam o anel beta-lactâmico presente 
+                    em penicilinas, cefalosporinas, carbapenêmicos e monobactâmicos. Existem diferentes classes 
+                    com espectros de ação variados.
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    As <strong>ESBLs (Extended-Spectrum Beta-Lactamases)</strong> são particularmente preocupantes 
+                    pois conferem resistência a cefalosporinas de amplo espectro e monobactâmicos, mas são inibidas 
+                    por ácido clavulânico.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "O que caracteriza uma ESBL (Extended-Spectrum Beta-Lactamase)?",
+                options: [
+                  "Enzima que confere resistência apenas às penicilinas.",
+                  "Enzima que confere resistência a cefalosporinas de amplo espectro, mas é inibida por ácido clavulânico.",
+                  "Enzima que confere resistência a todos os beta-lactâmicos, incluindo carbapenêmicos."
+                ],
+                correct: 1,
+                explanation: "As ESBLs conferem resistência a cefalosporinas de terceira geração e monobactâmicos, mas são inibidas por inibidores de beta-lactamases como o ácido clavulânico, característica usada nos testes de detecção."
+              }
+            },
+            {
+              title: "Alteração de Alvo",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🎯 Modificação do Sítio de Ação</h3>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Algumas bactérias desenvolvem resistência alterando o sítio de ação do antimicrobiano. 
+                    O exemplo clássico é a resistência à meticilina em <strong>Staphylococcus aureus</strong> (MRSA), 
+                    onde a bactéria produz uma PBP (Penicillin-Binding Protein) alternativa com baixa afinidade 
+                    pelos beta-lactâmicos.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Como o MRSA desenvolve resistência aos beta-lactâmicos?",
+                options: [
+                  "Produzindo beta-lactamases que destroem o antibiótico.",
+                  "Produzindo uma PBP alternativa com baixa afinidade pelos beta-lactâmicos.",
+                  "Aumentando o efluxo do antibiótico para fora da célula."
+                ],
+                correct: 1,
+                explanation: "O MRSA produz PBP2a, uma proteína ligadora de penicilina alternativa codificada pelo gene mecA, que tem baixa afinidade pelos beta-lactâmicos, permitindo que a síntese da parede celular continue mesmo na presença do antibiótico."
+              }
+            },
+            {
+              title: "Conceito e Detecção",
+              content: `
+                <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #6d28d9; margin-bottom: 15px;">🧬 Heterorresistência</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A <strong>heterorresistência</strong> é um fenômeno onde uma população bacteriana aparentemente 
+                    homogênea contém subpopulações com diferentes níveis de resistência ao mesmo antimicrobiano. 
+                    Isso pode levar a falhas terapêuticas mesmo quando o teste de suscetibilidade indica sensibilidade.
+                  </p>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #d97706; margin-bottom: 10px;">⚠️ Desafio Diagnóstico</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    A heterorresistência é difícil de detectar pelos métodos convencionais de teste de suscetibilidade, 
+                    pois as subpopulações resistentes podem representar menos de 1% da população total.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "O que é heterorresistência?",
+                options: [
+                  "A resistência de uma única bactéria a múltiplas classes de antibióticos.",
+                  "A expressão heterogênea de um mecanismo de resistência, levando a subpopulações com diferentes graus de resistência fenotípica.",
+                  "Uma resistência que só se manifesta in vivo, mas não in vitro."
+                ],
+                correct: 1,
+                explanation: "A heterorresistência refere-se à presença de subpopulações bacterianas com diferentes níveis de resistência dentro de uma cultura aparentemente homogênea, o que pode resultar em falhas terapêuticas inesperadas."
               }
             }
           ]
