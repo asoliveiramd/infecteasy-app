@@ -2862,79 +2862,239 @@ const App = () => {
         },
         {
           id: 4,
-          title: "Métodos Qualitativos - Disco-Difusão",
+          title: "Métodos Convencionais de TSA",
           duration: "18 min",
           xp: 90,
           sections: [
-            {
-              title: "Princípio do Método Kirby-Bauer",
-              content: `
-                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #2563eb; margin-bottom: 15px;">🎯 Método de Disco-Difusão</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    O método de <strong>disco-difusão (Kirby-Bauer)</strong> é o teste qualitativo mais utilizado 
-                    devido à sua simplicidade e padronização. O antimicrobiano difunde do disco através do ágar, 
-                    criando um gradiente de concentração. O diâmetro do halo de inibição é inversamente proporcional 
-                    à CIM.
-                  </p>
-                </div>
-                
-                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">📏 Interpretação dos Halos</h4>
-                  <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
-                    <tr style="background: #e5e7eb;">
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Categoria</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Interpretação</th>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold; color: #059669;">Sensível (S)</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Halo ≥ ponto de corte superior</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold; color: #d97706;">Intermediário (I)</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Halo entre os pontos de corte</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold; color: #dc2626;">Resistente (R)</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Halo ≤ ponto de corte inferior</td>
-                    </tr>
-                  </table>
-                </div>
-              `,
-              question: {
-                text: "O método de difusão em disco (Kirby-Bauer) fornece que tipo de resultado?",
-                options: [
-                  "Um resultado qualitativo, categorizando o isolado como sensível, sensível dose-dependente, intermediário ou resistente.",
-                  "Um resultado quantitativo na forma de Concentração Inibitória Mínima (CIM).",
-                  "Um resultado genotípico, indicando a presença de genes de resistência."
-                ],
-                correct: 0,
-                explanation: "O método de disco-difusão fornece resultados qualitativos, categorizando os isolados em diferentes classes de suscetibilidade baseadas no diâmetro dos halos de inibição comparados aos pontos de corte estabelecidos."
-              }
-            },
-            {
-              title: "Controle de Qualidade",
-              content: `
-                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #d97706; margin-bottom: 15px;">✅ Controle de Qualidade</h3>
-                  <p style="font-size: 16px; line-height: 1.6;">
-                    O controle de qualidade é essencial para garantir a confiabilidade dos resultados. 
-                    Cepas de referência ATCC com perfis de suscetibilidade conhecidos devem ser testadas 
-                    regularmente. Os halos devem estar dentro das faixas esperadas estabelecidas pelo CLSI/EUCAST.
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "Por que o controle de qualidade é crucial no teste de disco-difusão?",
-                options: [
-                  "Para acelerar o processo de teste.",
-                  "Para garantir a confiabilidade e precisão dos resultados usando cepas de referência com perfis conhecidos.",
-                  "Para reduzir o custo dos reagentes."
-                ],
-                correct: 1,
-                explanation: "O controle de qualidade com cepas ATCC de referência garante que o sistema de teste está funcionando corretamente, validando a precisão dos resultados antes de reportar os dados clínicos."
-              }
-            }
+            // Card 1: Características e Limitações
+{
+  title: "Características e Limitações",
+  content: `
+    <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+      <h3 style="color: #0369a1; margin-bottom: 15px;">🔬 Natureza Fenotípica</h3>
+      <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+        Os métodos convencionais são <strong>fenotípicos</strong>, ou seja, baseiam-se na observação do 
+        comportamento bacteriano na presença do antibiótico, não na detecção direta dos genes de resistência.
+      </p>
+    </div>
+    
+    <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #dc2626;">
+      <h3 style="color: #dc2626; margin-bottom: 15px;">⚠️ Principais Limitações</h3>
+      <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+        Dependem do <strong>crescimento bacteriano adequado</strong>, o que pode ser uma etapa limitante 
+        para bactérias mais exigentes.
+      </p>
+      <div style="background: #fee2e2; padding: 15px; border-radius: 8px;">
+        <p style="font-size: 14px; line-height: 1.5; margin: 0;">
+          <strong>Exemplo:</strong> <em>Granulicatella</em> spp. e <em>Abiotrophia</em> sp. requerem 
+          cisteína ou vitamina B6 para crescimento adequado, dificultando testes convencionais.
+        </p>
+      </div>
+    </div>
+  `,
+  question: {
+    text: "Qual das alternativas descreve corretamente uma limitação dos métodos fenotípicos convencionais?",
+    options: [
+      "Não podem detectar genes de resistência porque não utilizam cultura bacteriana.",
+      "Dependem de crescimento bacteriano adequado, o que dificulta o teste em microrganismos mais exigentes.",
+      "Detectam diretamente mutações genéticas responsáveis pela resistência antimicrobiana."
+    ],
+    correct: 1,
+    explanation: "Os métodos fenotípicos convencionais dependem do crescimento bacteriano adequado, o que representa uma limitação importante para bactérias fastidiosas ou exigentes que requerem condições especiais de cultivo."
+  }
+},
+
+// Card 2: Elementos Críticos para Padronização do TSA
+{
+  title: "Elementos Críticos para Padronização do TSA",
+  content: `
+    <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+      <h3 style="color: #7c3aed; margin-bottom: 15px;">🎯 Seleção de Colônias</h3>
+      <p style="font-size: 16px; line-height: 1.6;">
+        Escolha adequada de <strong>colônias puras e representativas</strong> do patógeno a ser testado, 
+        evitando contaminações ou populações mistas.
+      </p>
+    </div>
+    
+    <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0;">
+      <h3 style="color: #059669; margin-bottom: 15px;">⚗️ Inóculo Padronizado</h3>
+      <p style="font-size: 16px; line-height: 1.6;">
+        Preparação de uma suspensão bacteriana com concentração precisa 
+        (<strong>1 a 2×10<sup>8</sup> UFC/mL</strong>), essencial para reprodutibilidade dos resultados.
+      </p>
+    </div>
+    
+    <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+      <h3 style="color: #d97706; margin-bottom: 15px;">📋 Protocolos Validados</h3>
+      <p style="font-size: 16px; line-height: 1.6;">
+        Seguir rigorosamente metodologias padronizadas internacionalmente para garantir precisão e 
+        reprodutibilidade <strong>intra e interlaboratorial</strong>.
+      </p>
+    </div>
+  `,
+  question: {
+    text: "Quais são os três elementos fundamentais para garantir a confiabilidade e a reprodutibilidade dos testes de sensibilidade antimicrobiana?",
+    options: [
+      "Seleção adequada de colônias, inóculo padronizado e uso de protocolos validados.",
+      "Escolha aleatória de colônias, uso de qualquer concentração bacteriana e protocolos livres.",
+      "Teste com múltiplas espécies bacterianas, concentração variável e métodos empíricos."
+    ],
+    correct: 0,
+    explanation: "Os três elementos críticos são: seleção adequada de colônias puras, preparação de inóculo padronizado (1-2×10⁸ UFC/mL) e seguimento rigoroso de protocolos validados internacionalmente, garantindo resultados confiáveis e reprodutíveis."
+  }
+},
+
+// Card 3: O Método Qualitativo de Disco-Difusão (Kirby-Bauer) - MODIFICADO
+{
+  title: "O Método Qualitativo de Disco-Difusão (Kirby-Bauer)",
+  content: `
+    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+      <h3 style="color: #2563eb; margin-bottom: 15px;">🎯 Método de Disco-Difusão</h3>
+      <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+        O método de <strong>disco-difusão (Kirby-Bauer)</strong> é o teste qualitativo mais utilizado 
+        devido à sua simplicidade e padronização. O antimicrobiano difunde do disco através do ágar, 
+        criando um gradiente de concentração. O diâmetro do halo de inibição é inversamente proporcional 
+        à CIM.
+      </p>
+    </div>
+    
+    <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+      <h4 style="color: #059669; margin-bottom: 10px;">✅ Vantagens do Método</h4>
+      <ul style="font-size: 14px; line-height: 1.6; margin-left: 20px;">
+        <li><strong>Ampla padronização internacional</strong> (CLSI, BrCAST)</li>
+        <li><strong>Largamente utilizado</strong> em laboratórios de diversos portes</li>
+        <li><strong>Baixo custo</strong> e simplicidade operacional</li>
+      </ul>
+    </div>
+    
+    <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+      <h4 style="color: #374151; margin-bottom: 10px;">📏 Interpretação dos Halos</h4>
+      <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+        <tr style="background: #e5e7eb;">
+          <th style="padding: 8px; border: 1px solid #d1d5db;">Categoria</th>
+          <th style="padding: 8px; border: 1px solid #d1d5db;">Interpretação</th>
+        </tr>
+        <tr>
+          <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold; color: #059669;">Sensível (S)</td>
+          <td style="padding: 8px; border: 1px solid #d1d5db;">Halo ≥ ponto de corte superior</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold; color: #d97706;">Intermediário (I)</td>
+          <td style="padding: 8px; border: 1px solid #d1d5db;">Halo entre os pontos de corte</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold; color: #dc2626;">Resistente (R)</td>
+          <td style="padding: 8px; border: 1px solid #d1d5db;">Halo ≤ ponto de corte inferior</td>
+        </tr>
+      </table>
+    </div>
+  `,
+  question: {
+    text: "O método de difusão em disco (Kirby-Bauer) fornece que tipo de resultado?",
+    options: [
+      "Um resultado qualitativo, categorizando o isolado como sensível, sensível dose-dependente, intermediário ou resistente.",
+      "Um resultado quantitativo na forma de Concentração Inibitória Mínima (CIM).",
+      "Um resultado genotípico, indicando a presença de genes de resistência."
+    ],
+    correct: 0,
+    explanation: "O método de disco-difusão fornece resultados qualitativos, categorizando os isolados em diferentes classes de suscetibilidade baseadas no diâmetro dos halos de inibição comparados aos pontos de corte estabelecidos."
+  }
+},
+
+// Card 4: Correlação entre Zona de Inibição e CIM
+{
+  title: "Correlação entre Zona de Inibição e CIM",
+  content: `
+    <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+      <h3 style="color: #0369a1; margin-bottom: 15px;">📊 Fatores que Afetam a Zona de Inibição</h3>
+      <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+        O diâmetro da zona de inibição formada ao redor do disco é diretamente afetado por dois fatores principais:
+      </p>
+    </div>
+    
+    <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0;">
+      <h4 style="color: #059669; margin-bottom: 10px;">🦠 Suscetibilidade do Organismo</h4>
+      <p style="font-size: 16px; line-height: 1.6;">
+        Quanto mais sensível for o microrganismo ao antibiótico, <strong>maior será a zona de inibição</strong> 
+        formada ao redor do disco.
+      </p>
+    </div>
+    
+    <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+      <h4 style="color: #d97706; margin-bottom: 10px;">💧 Taxa de Difusão no Ágar</h4>
+      <p style="font-size: 16px; line-height: 1.6;">
+        Características físico-químicas do antibiótico influenciam sua capacidade de difusão no meio de cultura, 
+        afetando o tamanho da zona.
+      </p>
+    </div>
+    
+    <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #7c3aed;">
+      <h4 style="color: #7c3aed; margin-bottom: 10px;">📉 Correlação Inversamente Proporcional</h4>
+      <p style="font-size: 16px; line-height: 1.6;">
+        Existe uma correlação <strong>inversamente proporcional</strong> entre o tamanho da zona de inibição 
+        e a concentração inibitória mínima (CIM): <strong>quanto maior a zona, menor a CIM</strong> e vice-versa.
+      </p>
+    </div>
+  `,
+  question: {
+    text: "Qual fator NÃO influencia diretamente o diâmetro da zona de inibição no teste de disco-difusão?",
+    options: [
+      "Suscetibilidade do microrganismo ao antibiótico.",
+      "Taxa de difusão do antibiótico no ágar.",
+      "Tipo de coloração de Gram do microrganismo."
+    ],
+    correct: 2,
+    explanation: "O tipo de coloração de Gram não influencia diretamente o diâmetro da zona de inibição. Os fatores determinantes são a suscetibilidade do microrganismo e as características físico-químicas do antibiótico que afetam sua difusão no ágar."
+  }
+},
+
+// Card 5: Limitações do Método de Difusão em Disco
+{
+  title: "Limitações do Método de Difusão em Disco",
+  content: `
+    <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #dc2626;">
+      <h3 style="color: #dc2626; margin-bottom: 15px;">⚠️ Baixa Automação</h3>
+      <p style="font-size: 16px; line-height: 1.6;">
+        A falta de automação dificulta a produção em quantidade, tornando o método <strong>laborioso</strong> 
+        para laboratórios de grande porte ou com alto volume de amostras.
+      </p>
+    </div>
+    
+    <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+      <h3 style="color: #d97706; margin-bottom: 15px;">🦠 Bactérias Fastidiosas</h3>
+      <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+        Bactérias exigentes (fastidiosas) ou de crescimento lento não têm padronização adequada.
+      </p>
+      <div style="background: #fde68a; padding: 15px; border-radius: 8px;">
+        <p style="font-size: 14px; line-height: 1.5; margin: 0;">
+          <strong>Exemplo:</strong> Grupo HACEK (<em>Aggregatibacter</em> spp, <em>Cardiobacterium</em> spp, 
+          <em>Eikenella corrodens</em> e <em>Kingella</em> spp).
+        </p>
+      </div>
+    </div>
+    
+    <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+      <h3 style="color: #0369a1; margin-bottom: 15px;">💊 Necessidade de CIM Quantitativa</h3>
+      <p style="font-size: 16px; line-height: 1.6;">
+        Em certas infecções graves, uma <strong>CIM quantitativa precisa</strong> é necessária para determinar 
+        a melhor abordagem terapêutica, especialmente para antibióticos como <strong>vancomicina</strong> e 
+        <strong>polimixinas</strong>.
+      </p>
+    </div>
+  `,
+  question: {
+    text: "Qual das opções abaixo representa uma limitação importante do método de difusão em disco?",
+    options: [
+      "Alta automação, dificultando o uso em laboratórios de pequeno porte.",
+      "Ausência de padronização adequada para bactérias fastidiosas ou de crescimento lento.",
+      "Incapacidade de detectar bactérias Gram-negativas."
+    ],
+    correct: 1,
+    explanation: "Uma limitação importante do método de difusão em disco é a ausência de padronização adequada para bactérias fastidiosas ou de crescimento lento, como o grupo HACEK, que requerem condições especiais de cultivo."
+  }
+}
+
+
           ]
         },
         {
@@ -3546,83 +3706,6 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "A heterorresistência refere-se à presença de subpopulações bacterianas com diferentes níveis de resistência dentro de uma cultura aparentemente homogênea, o que pode resultar em falhas terapêuticas inesperadas."
-              }
-            }
-          ]
-        },
-        {
-          id: 5,
-          title: "Métodos Qualitativos - Disco-Difusão",
-          duration: "18 min",
-          xp: 90,
-          sections: [
-            {
-              title: "Princípio do Método Kirby-Bauer",
-              content: `
-                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #2563eb; margin-bottom: 15px;">🎯 Método de Disco-Difusão</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    O método de <strong>disco-difusão (Kirby-Bauer)</strong> é o teste qualitativo mais utilizado 
-                    devido à sua simplicidade e padronização. O antimicrobiano difunde do disco através do ágar, 
-                    criando um gradiente de concentração. O diâmetro do halo de inibição é inversamente proporcional 
-                    à CIM.
-                  </p>
-                </div>
-                
-                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #374151; margin-bottom: 10px;">📏 Interpretação dos Halos</h4>
-                  <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
-                    <tr style="background: #e5e7eb;">
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Categoria</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Interpretação</th>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold; color: #059669;">Sensível (S)</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Halo ≥ ponto de corte superior</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold; color: #d97706;">Intermediário (I)</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Halo entre os pontos de corte</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold; color: #dc2626;">Resistente (R)</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Halo ≤ ponto de corte inferior</td>
-                    </tr>
-                  </table>
-                </div>
-              `,
-              question: {
-                text: "O método de difusão em disco (Kirby-Bauer) fornece que tipo de resultado?",
-                options: [
-                  "Um resultado qualitativo, categorizando o isolado como sensível, sensível dose-dependente, intermediário ou resistente.",
-                  "Um resultado quantitativo na forma de Concentração Inibitória Mínima (CIM).",
-                  "Um resultado genotípico, indicando a presença de genes de resistência."
-                ],
-                correct: 0,
-                explanation: "O método de disco-difusão fornece resultados qualitativos, categorizando os isolados em diferentes classes de suscetibilidade baseadas no diâmetro dos halos de inibição comparados aos pontos de corte estabelecidos."
-              }
-            },
-            {
-              title: "Controle de Qualidade",
-              content: `
-                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #d97706; margin-bottom: 15px;">✅ Controle de Qualidade</h3>
-                  <p style="font-size: 16px; line-height: 1.6;">
-                    O controle de qualidade é essencial para garantir a confiabilidade dos resultados. 
-                    Cepas de referência ATCC com perfis de suscetibilidade conhecidos devem ser testadas 
-                    regularmente. Os halos devem estar dentro das faixas esperadas estabelecidas pelo CLSI/EUCAST.
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "Por que o controle de qualidade é crucial no teste de disco-difusão?",
-                options: [
-                  "Para acelerar o processo de teste.",
-                  "Para garantir a confiabilidade e precisão dos resultados usando cepas de referência com perfis conhecidos.",
-                  "Para reduzir o custo dos reagentes."
-                ],
-                correct: 1,
-                explanation: "O controle de qualidade com cepas ATCC de referência garante que o sistema de teste está funcionando corretamente, validando a precisão dos resultados antes de reportar os dados clínicos."
               }
             }
           ]
