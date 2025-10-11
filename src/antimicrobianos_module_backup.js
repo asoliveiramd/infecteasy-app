@@ -6,195 +6,30 @@ export const antimicrobianosModule = {
     {
       id: 1,
       title: "Princípios Básicos",
-      duration: "60 min",
-      xp: 300,
+      duration: "15 min",
+      xp: 80,
       sections: [
         {
-          title: "História dos Antibióticos: O Milagre que Transformou a Medicina",
+          title: "Introdução aos Antimicrobianos",
           content: `
             <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-              <h3 style="color: #2563eb; margin-bottom: 15px;">🏛️ A Revolução dos Antibióticos</h3>
+              <h3 style="color: #2563eb; margin-bottom: 15px;">🔬 Conceitos Fundamentais</h3>
               <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                Os <strong>agentes antimicrobianos revolucionaram a prática da medicina</strong>, resultando 
-                em reduções dramáticas nas mortes por uma variedade de doenças. A taxa de mortalidade nos 
-                Estados Unidos declinou de aproximadamente <strong>280 por 100.000 habitantes em 1936</strong> 
-                (era pré-sulfa) para aproximadamente <strong>60 por 100.000 em 1950</strong> (pós-penicilina), 
-                praticamente sem declínio adicional desde então.
-              </p>
-              
-              <h4 style="color: #1e40af; margin: 15px 0 10px 0;">📊 Impacto na Mortalidade</h4>
-              <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
-                <tr style="background: #3b82f6; color: white;">
-                  <th style="padding: 10px; border: 1px solid #ddd;">Doença</th>
-                  <th style="padding: 10px; border: 1px solid #ddd;">Mortalidade Pré-Antibiótico</th>
-                  <th style="padding: 10px; border: 1px solid #ddd;">Mortalidade com Antibiótico</th>
-                  <th style="padding: 10px; border: 1px solid #ddd;">Redução</th>
-                </tr>
-                <tr>
-                  <td style="padding: 8px; border: 1px solid #ddd;">Pneumonia comunitária</td>
-                  <td style="padding: 8px; border: 1px solid #ddd;">~35%</td>
-                  <td style="padding: 8px; border: 1px solid #ddd;">~10%</td>
-                  <td style="padding: 8px; border: 1px solid #ddd; color: #059669; font-weight: bold;">-25%</td>
-                </tr>
-                <tr style="background: #f9fafb;">
-                  <td style="padding: 8px; border: 1px solid #ddd;">Meningite bacteriana</td>
-                  <td style="padding: 8px; border: 1px solid #ddd;">>80%</td>
-                  <td style="padding: 8px; border: 1px solid #ddd;">~20%</td>
-                  <td style="padding: 8px; border: 1px solid #ddd; color: #059669; font-weight: bold;">-60%</td>
-                </tr>
-                <tr>
-                  <td style="padding: 8px; border: 1px solid #ddd;">Celulite</td>
-                  <td style="padding: 8px; border: 1px solid #ddd;">~11%</td>
-                  <td style="padding: 8px; border: 1px solid #ddd;"><0.5%</td>
-                  <td style="padding: 8px; border: 1px solid #ddd; color: #059669; font-weight: bold;">-10%</td>
-                </tr>
-              </table>
-            </div>
-            
-            <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 15px 0;">
-              <h4 style="color: #d97706; margin-bottom: 10px;">⚡ O Poder dos Antibióticos</h4>
-              <p style="font-size: 14px; line-height: 1.5;">
-                O poder da terapia antibacteriana resultou em uma <strong>revolução na prática da medicina</strong>, 
-                transformando-a de um campo primariamente diagnóstico para um campo terapêutico e intervencionista. 
-                Os antibióticos "colocam nas mãos de um médico altamente treinado o poder de afetar o desfecho 
-                de um paciente criticamente doente... mais do que poderia ter sido exercido por qualquer médico 
-                urbano altamente treinado da era pré-antibiótica."
+                Os <strong>antimicrobianos</strong> são substâncias que matam ou inibem o crescimento de microrganismos. 
+                Incluem antibióticos (contra bactérias), antifúngicos (contra fungos), antivirais (contra vírus) 
+                e antiparasitários (contra parasitas).
               </p>
             </div>
           `,
           question: {
-            text: "Qual foi o impacto dos antibióticos na taxa de mortalidade nos Estados Unidos entre 1936 e 1950?",
+            text: "Qual é a definição de antimicrobiano?",
             options: [
-              "Redução de 100 para 50 por 100.000 habitantes",
-              "Redução de 280 para aproximadamente 60 por 100.000 habitantes",
-              "Redução de 500 para 200 por 100.000 habitantes",
-              "Não houve mudança significativa"
+              "Substância que mata apenas bactérias",
+              "Substância que mata ou inibe o crescimento de microrganismos",
+              "Substância que estimula o sistema imunológico"
             ],
             correct: 1,
-            explanation: "A taxa de mortalidade nos Estados Unidos declinou dramaticamente de aproximadamente 280 por 100.000 habitantes em 1936 (era pré-sulfa) para aproximadamente 60 por 100.000 em 1950 (pós-penicilina), demonstrando o impacto revolucionário dos antibióticos na medicina."
-          }
-        },
-        {
-          title: "A Confiança Social nos Antibióticos",
-          content: `
-            <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-              <h3 style="color: #0369a1; margin-bottom: 15px;">🤝 Antibióticos como Patrimônio Social</h3>
-              <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                A <strong>eficácia antibiótica é perdida a cada uso do medicamento</strong> devido à resistência 
-                antimicrobiana. A resistência é transmissível de pessoa para pessoa, de modo que o uso de um 
-                antibiótico por um indivíduo afeta a capacidade de todos na sociedade de permanecerem eficazes 
-                para seu próprio uso. Assim, <strong>os antibióticos são uma confiança social compartilhada</strong>.
-              </p>
-              
-              <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                Ninguém tem o direito de abusar de um medicamento porque o abuso de uma pessoa prejudica 
-                todos os outros na sociedade. As doenças infecciosas, os profissionais têm responsabilidade 
-                adicional de administrar esses medicamentos para manter sua eficácia para a sociedade.
-              </p>
-            </div>
-            
-            <div style="background: #fef2f2; padding: 20px; border-radius: 8px; border-left: 4px solid #ef4444; margin: 15px 0;">
-              <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ A Tragédia dos Comuns</h4>
-              <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
-                A prescrição inadequada de antibióticos é um exemplo da <strong>"tragédia dos comuns"</strong>. 
-                Quando indivíduos empreendem uma ação que serve ao seu próprio interesse, mas causa danos 
-                à sociedade em geral, e quando tal ação é realizada raramente, o dano à sociedade não é perceptível.
-              </p>
-              <p style="font-size: 14px; line-height: 1.5;">
-                Quando isso acontece dezenas de milhões de vezes por ano com prescrições de antibióticos 
-                inadequadas, o <strong>dano coletivo à sociedade é catastrófico</strong>.
-              </p>
-            </div>
-            
-            <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin: 15px 0;">
-              <h4 style="color: #059669; margin-bottom: 10px;">💡 Responsabilidade Profissional</h4>
-              <p style="font-size: 14px; line-height: 1.5;">
-                Qualquer provedor licenciado pode prescrever um antibiótico e assumir um papel de especialista 
-                quando não há especialista disponível para interromper aqueles já prescritos. O ônus recai sobre 
-                aqueles treinados em nossa especialidade para ajudar a ensinar tanto nossos colegas médicos 
-                quanto o público leigo sobre quão preciosos esses medicamentos são e como eles devem ser 
-                adequadamente implantados.
-              </p>
-            </div>
-          `,
-          question: {
-            text: "Por que os antibióticos são considerados uma 'confiança social compartilhada'?",
-            options: [
-              "Porque são medicamentos caros e de difícil acesso",
-              "Porque a resistência antimicrobiana é transmissível e o uso inadequado por um indivíduo afeta toda a sociedade",
-              "Porque precisam de prescrição médica para serem adquiridos",
-              "Porque são produzidos por empresas farmacêuticas públicas"
-            ],
-            correct: 1,
-            explanation: "Os antibióticos são uma confiança social compartilhada porque a resistência antimicrobiana é transmissível de pessoa para pessoa. O uso inadequado de um antibiótico por um indivíduo afeta a capacidade de todos na sociedade de terem antibióticos eficazes disponíveis, configurando uma responsabilidade coletiva."
-          }
-        },
-        {
-          title: "Princípio 1: Diagnóstico Diferencial Preciso",
-          content: `
-            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-              <h3 style="color: #7c3aed; margin-bottom: 15px;">🎯 Princípio 1: Seleção Adequada de Antibióticos Empíricos</h3>
-              <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                A <strong>seleção adequada de antibióticos empíricos começa com um diagnóstico diferencial 
-                preciso</strong> que inclui provável infecção bacteriana. Os antibióticos devem ser administrados 
-                apenas se o diagnóstico diferencial incluir prováveis infecções bacterianas invasivas.
-              </p>
-              
-              <h4 style="color: #6d28d9; margin: 15px 0 10px 0;">⚠️ Problema Comum: Prescrição Inadequada</h4>
-              <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
-                Embora possa parecer óbvio que os antibióticos devem ser administrados apenas a pacientes 
-                que têm infecções bacterianas, <strong>a falha em aderir a este fato é uma das causas mais 
-                comuns de uso inadequado de antibióticos</strong>.
-              </p>
-              
-              <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                <h4 style="color: #d97706; margin-bottom: 10px;">📋 Exemplos de Prescrição Inadequada</h4>
-                <ul style="margin-left: 20px; line-height: 1.8;">
-                  <li><strong>Infecções do trato respiratório superior</strong>: Frequentemente não tratadas 
-                  (ou tratadas inadequadamente) com antibióticos</li>
-                  <li><strong>Culturas positivas sem sinais de infecção</strong>: Presença de cultura positiva 
-                  na ausência de sinais ou sintomas não deve desencadear prescrição</li>
-                  <li><strong>Colonização vs. Infecção</strong>: Crescimento de organismos de culturas de 
-                  locais não estéreis não indica infecção em pacientes assintomáticos</li>
-                </ul>
-              </div>
-            </div>
-            
-            <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; border-left: 4px solid #0369a1; margin: 15px 0;">
-              <h4 style="color: #0369a1; margin-bottom: 10px;">🔬 Colonização vs. Infecção</h4>
-              <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
-                Mesmo que os pacientes tenham sintomas, não se pode necessariamente discernir a etiologia 
-                microbiológica da infecção cultivando organismos de locais não estéreis, que têm microbiomas 
-                polimicrobianos. <strong>Há tendência de aplicar terapia para cada cepa de bactéria cultivada</strong>, 
-                embora a maioria dos organismos encontrados sejam tipicamente não patogênicos.
-              </p>
-              <p style="font-size: 15px; line-height: 1.6;">
-                É impossível distinguir espectadores de patógenos etiológicos. Sinais ou sintomas de doença 
-                clínica ausentes, geralmente os antibióticos não devem ser administrados independentemente 
-                dos resultados de cultura de pele, swabs de feridas, secreções respiratórias ou urina.
-              </p>
-            </div>
-            
-            <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444; margin: 15px 0;">
-              <h4 style="color: #dc2626; margin-bottom: 10px;">💊 Impacto das Prescrições Inadequadas</h4>
-              <p style="font-size: 14px; line-height: 1.5;">
-                Prescrições inadequadas causam dano de prescrições antimicrobianas — <strong>uma em cada 
-                cinco pacientes que recebem prescrições de antibióticos sofre danos</strong> por eles ou 
-                por multiplicação de patógenos resistentes, ou <em>Clostridioides difficile</em> (anteriormente 
-                <em>Clostridium difficile</em>).
-              </p>
-            </div>
-          `,
-          question: {
-            text: "Qual é o primeiro princípio fundamental para a seleção adequada de antibióticos empíricos?",
-            options: [
-              "Escolher sempre o antibiótico de maior espectro disponível",
-              "Iniciar com um diagnóstico diferencial preciso que inclui provável infecção bacteriana",
-              "Aguardar sempre os resultados de cultura antes de iniciar antibióticos",
-              "Prescrever antibióticos para todas as culturas positivas"
-            ],
-            correct: 1,
-            explanation: "O Princípio 1 estabelece que a seleção adequada de antibióticos empíricos começa com um diagnóstico diferencial preciso que inclui provável infecção bacteriana. Os antibióticos devem ser administrados apenas se o diagnóstico diferencial incluir prováveis infecções bacterianas invasivas, não para colonização ou culturas positivas sem sinais clínicos."
+            explanation: "Antimicrobianos são substâncias que matam ou inibem o crescimento de microrganismos, incluindo bactérias, fungos, vírus e parasitas."
           }
         }
       ]
