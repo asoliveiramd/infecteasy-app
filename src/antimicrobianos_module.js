@@ -197,6 +197,851 @@ export const antimicrobianosModule = {
             explanation: "O Princípio 1 estabelece que a seleção adequada de antibióticos empíricos começa com um diagnóstico diferencial preciso que inclui provável infecção bacteriana. Os antibióticos devem ser administrados apenas se o diagnóstico diferencial incluir prováveis infecções bacterianas invasivas, não para colonização ou culturas positivas sem sinais clínicos."
           }
         }
+      
+
+// ===== SEÇÃO 4 =====
+
+,
+{
+      title: "Princípio 2: Tratar Apenas Quando Necessário",
+      content: `
+        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #d97706; margin-bottom: 15px;">⚕️ Princípio 2: Tratar Apenas Quando a Terapia Alterará o Curso Clínico</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            Mesmo em um paciente com infecção bacteriana óbvia, <strong>tratar apenas quando a terapia 
+            alterará o curso clínico do paciente</strong>. A administração de antibióticos não deve ser 
+            um reflexo a uma infecção, mas sim deve ser incorporada em um plano terapêutico geral e racional 
+            para o paciente.
+          </p>
+          
+          <h4 style="color: #b45309; margin: 15px 0 10px 0;">🦴 Exemplo Clássico: Osteomielite Crônica</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Um exemplo clássico deste cenário é a <strong>osteomielite em osso cronicamente exposto</strong>. 
+            Neste caso, o fator determinante da eficácia antibiótica para a osteomielite será se há um 
+            plano viável de fechamento de ferida a longo prazo, ou se a ferida permanecerá exposta ao osso.
+          </p>
+          
+          <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+              <strong>Não é racional tentar curar a osteomielite com antibióticos se não houver um plano 
+              de fechamento de ferida.</strong> Se houver celulite superposta aguda no tecido ao redor da 
+              osteomielite, o curso crucial de antibióticos para tal paciente é a seleção para resistência 
+              antimicrobiana e a exposição ao risco de efeitos colaterais de antibióticos, sem a possibilidade 
+              de cura da infecção óssea.
+            </p>
+            <p style="font-size: 15px; line-height: 1.6;">
+              Uma vez que a ferida está coberta, um curso de antibióticos pode ser considerado, mas o 
+              curso crucial de antibióticos para tal paciente é a seleção para resistência antimicrobiana 
+              e a exposição ao risco de efeitos colaterais de antibióticos, sem a possibilidade de cura 
+              da infecção óssea.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #fef2f2; padding: 20px; border-radius: 8px; border-left: 4px solid #ef4444; margin: 15px 0;">
+          <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ Outros Exemplos de Uso Irracional</h4>
+          <ul style="margin-left: 20px; line-height: 1.8;">
+            <li><strong>Infecção confirmada em paciente terminal</strong>: Administrar antibióticos a 
+            paciente que morrerá em breve devido à doença subjacente</li>
+            <li><strong>Imunodeficiência adquirida sem adesão</strong>: Administrar terapia antirretroviral 
+            a paciente que ainda não está pronto para aderir aos medicamentos</li>
+            <li><strong>Custo vs. Benefício</strong>: É importante incluir consideração do dano à sociedade 
+            causado pela prescrição ao fazer julgamentos de custo-benefício</li>
+          </ul>
+        </div>
+        
+        <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin: 15px 0;">
+          <h4 style="color: #059669; margin-bottom: 10px;">💡 Princípio Hipocrático</h4>
+          <p style="font-size: 14px; line-height: 1.5; font-style: italic;">
+            "Primum non nocere" - Primeiro, não causar dano. Administrar antibióticos (incluindo antivirais) 
+            a tais pacientes não beneficiará o paciente, mas pode causar dano. Assim, dar agentes 
+            antimicrobianos a tais pacientes falha no cerne do juramento hipocrático.
+          </p>
+        </div>
+      `,
+      question: {
+        text: "No caso de osteomielite em osso cronicamente exposto, quando o tratamento antibiótico é apropriado?",
+        options: [
+          "Sempre que houver cultura positiva para bactérias",
+          "Apenas quando houver um plano viável de fechamento de ferida a longo prazo",
+          "Imediatamente após o diagnóstico, independentemente de outros fatores",
+          "Nunca, pois osteomielite crônica não responde a antibióticos"
+        ],
+        correct: 1,
+        explanation: "O Princípio 2 estabelece que não é racional tentar curar osteomielite com antibióticos se não houver um plano de fechamento de ferida. O tratamento prolongado sem possibilidade de cura apenas seleciona para resistência antimicrobiana e expõe o paciente a riscos de efeitos colaterais, sem benefício real. Uma vez que a ferida está coberta, um curso de antibióticos pode ser considerado."
+      }
+    }
+
+// ===== SEÇÃO 5 =====
+
+,
+{
+      title: "Princípio 3: Direcionar aos Microrganismos Causadores",
+      content: `
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #0369a1; margin-bottom: 15px;">🎯 Princípio 3: Direcionar Empiricamente aos Microrganismos Causadores</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            Uma vez que a terapia antiinfecciosa é determinada necessária com base em um diagnóstico 
+            diferencial racional, e a terapia adequada é selecionada quanto à sua provável capacidade 
+            de alterar o curso do desfecho do paciente, <strong>os agentes adequados devem ser selecionados</strong>.
+          </p>
+          
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            Em geral, os regimes antimicrobianos preferidos são aqueles previamente estabelecidos por 
+            investigações clínicas como sendo <strong>seguros e eficazes para a(s) doença(s) alvo</strong>. 
+            No entanto, os clínicos frequentemente encontram pacientes que não teriam atendido aos critérios 
+            de inscrição para estudos comparativos.
+          </p>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #d97706; margin-bottom: 10px;">🔬 Espectro de Atividade</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            O <strong>espectro de atividade dos agentes antiinfecciosos empíricos</strong> prescritos 
+            deve ser apenas tão amplo quanto necessário para cobrir a flora microbiana provável que 
+            causa as doenças no diagnóstico diferencial.
+          </p>
+          
+          <div style="background: #fff7ed; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #c2410c; margin-bottom: 10px;">⚠️ Problema: Terapia Excessivamente Ampla</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              O uso de terapia excessivamente ampla para tratar patógenos não bacterianos é inadequado 
+              e selecionará para resistência, não fornecendo benefício ao paciente.
+            </p>
+            <p style="font-size: 14px; line-height: 1.6;">
+              <strong>Exemplo:</strong> Infecções comunitárias geralmente não são causadas por tais 
+              bactérias, e a cobertura antibiótica empírica para infecções comunitárias não deve incluir 
+              rotineiramente tal cobertura.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #6366f1; margin: 15px 0;">
+          <h4 style="color: #4f46e5; margin-bottom: 10px;">🦠 Considerações Especiais</h4>
+          
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+            <strong>Infecções Nosocomiais:</strong> Frequentemente causadas por patógenos mais resistentes, 
+            exigindo cobertura para <em>Pseudomonas</em> ou outros bacilos gram-negativos não fermentadores.
+          </p>
+          
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+            <strong>Espectro vs. Resistência:</strong> A questão do espectro de atividade levanta outra 
+            distinção crítica entre antibióticos e outros medicamentos. Para a maioria dos medicamentos, 
+            as doenças para as quais foram consideradas tratamentos seguros e eficazes em ensaios clínicos 
+            definem a população de tratamento relevante após a aprovação.
+          </p>
+          
+          <p style="font-size: 15px; line-height: 1.6;">
+            <strong>Importante:</strong> Mesmo que um medicamento com atividade antipseudomonal seja 
+            seguro e eficaz para a doença em questão, se a doença é tipicamente causada por estreptococos 
+            ou outros patógenos menos resistentes, o uso em primeira linha do agente com cobertura 
+            antipseudomonal é inadequado, apesar de sua segurança e eficácia.
+          </p>
+        </div>
+      `,
+      question: {
+        text: "Por que o uso de terapia antibiótica excessivamente ampla é inadequado, mesmo quando segura e eficaz?",
+        options: [
+          "Porque aumenta o custo do tratamento desnecessariamente",
+          "Porque seleciona para resistência sem fornecer benefício adicional ao paciente",
+          "Porque causa mais efeitos colaterais que antibióticos de espectro estreito",
+          "Porque reduz a eficácia do tratamento"
+        ],
+        correct: 1,
+        explanation: "O Princípio 3 estabelece que o uso de terapia excessivamente ampla para tratar patógenos que não requerem tal cobertura é inadequado porque selecionará para resistência antimicrobiana sem fornecer benefício ao paciente. O espectro de atividade deve ser apenas tão amplo quanto necessário para cobrir a flora microbiana provável que causa as doenças no diagnóstico diferencial."
+      }
+    }
+
+// ===== SEÇÃO 6 =====
+
+,
+{
+      title: "Princípio 4: Limiar Mais Baixo em Pacientes Críticos",
+      content: `
+        <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #dc2626; margin-bottom: 15px;">🚨 Princípio 4: Limiar Mais Baixo para Terapia Empírica em Pacientes Críticos</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            A <strong>margem de erro é uma consideração importante</strong> na seleção de terapia 
+            antimicrobiana empírica. Um paciente que é hemodinamicamente estável e se queixa apenas de 
+            febre e mal-estar pode ser esperado sem iniciar qualquer terapia empírica enquanto a investigação 
+            prossegue.
+          </p>
+          
+          <h4 style="color: #b91c1c; margin: 15px 0 10px 0;">⏱️ Tempo é Crítico</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Se a terapia deve ser focada em um paciente devido ao alto risco predito de bactéria 
+            encontrada, <strong>pode ser impossível esperar</strong>. Em contraste, um paciente hipotenso 
+            que está sendo tratado com pressores na UTI não pode esperar.
+          </p>
+          
+          <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #991b1b; margin-bottom: 10px;">📊 Evidências Científicas</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              Múltiplos estudos descobriram que <strong>atrasos de até uma hora no início da terapia 
+              antibiótica eficaz em tais pacientes aumentam marcadamente o risco de progressão para 
+              choque séptico e morte</strong>.
+            </p>
+            <p style="font-size: 14px; line-height: 1.6;">
+              Assim, o limiar para desencadear o início da terapia empírica deve ser menor em pacientes 
+              instáveis.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 10px;">🎯 Amplitude da Terapia em Pacientes Críticos</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            A amplitude da terapia em pacientes criticamente doentes também pode ser mais ampla, mas a 
+            terapia geralmente não deve focar nos patógenos mais prováveis de serem encontrados.
+          </p>
+          
+          <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin: 10px 0;">
+            <h5 style="color: #075985; margin-bottom: 10px;">📋 Exemplos Clínicos</h5>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>Pneumonia adquirida na comunidade:</strong> Infecções intra-abdominais e 
+              infecções urinárias tipicamente causadas por <em>Pseudomonas</em> fora de circunstâncias 
+              muito específicas (paciente com fibrose cística com história de bronquiectasia, dialysis 
+              crônica, paciente com cateteres indwelling ou cirurgia recente)</li>
+              <li><strong>Paciente criticamente doente:</strong> Mesmo em um paciente criticamente 
+              doente com pneumonia adquirida na comunidade, a terapia antipseudomonal geralmente não 
+              deve ser incluída fora de tais circunstâncias</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; border-left: 4px solid #10b981; margin: 15px 0;">
+          <h4 style="color: #059669; margin-bottom: 10px;">💊 Considerações sobre Administração</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+            Pacientes hemodinamicamente comprometidos devem ter antibióticos infundidos o mais rápido 
+            possível. É importante enfatizar que <strong>apenas ordenar o antibiótico não é suficiente; 
+            sua infusão deve ser iniciada imediatamente</strong> em tais pacientes.
+          </p>
+          <p style="font-size: 15px; line-height: 1.6;">
+            Seguir um cronograma, pois um atraso na segunda dose também foi associado a maior mortalidade. 
+            Quando os provedores ordenam múltiplos antibióticos para serem administrados a um paciente 
+            criticamente doente, pode ser útil indicar nos conjuntos de pedidos ou protocolos qual 
+            antibiótico "âncora" deve ser infundido primeiro.
+          </p>
+        </div>
+      `,
+      question: {
+        text: "Por que o limiar para iniciar terapia antibiótica empírica deve ser mais baixo em pacientes criticamente doentes?",
+        options: [
+          "Porque esses pacientes têm maior risco de efeitos colaterais",
+          "Porque atrasos de até uma hora aumentam marcadamente o risco de progressão para choque séptico e morte",
+          "Porque é mais difícil fazer o diagnóstico nesses pacientes",
+          "Porque esses pacientes sempre têm infecções bacterianas"
+        ],
+        correct: 1,
+        explanation: "O Princípio 4 estabelece que em pacientes criticamente doentes, o limiar para iniciar terapia empírica deve ser mais baixo porque múltiplos estudos demonstraram que atrasos de até uma hora no início da terapia antibiótica eficaz aumentam marcadamente o risco de progressão para choque séptico e morte. A margem de erro é menor nesses pacientes, tornando o tempo crítico."
+      }
+    }
+
+// ===== SEÇÃO 7 =====
+
+,
+{
+      title: "Princípio 5: Fatores do Hospedeiro",
+      content: `
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #7c3aed; margin-bottom: 15px;">👤 Princípio 5: Fatores do Hospedeiro Afetam a Amplitude da Terapia Empírica</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            O <strong>impacto primário de um estado imunocomprometido</strong> deve ter na seleção de 
+            terapia antimicrobiana é ampliar o diagnóstico diferencial para patógenos prováveis a serem 
+            encontrados.
+          </p>
+          
+          <h4 style="color: #6d28d9; margin: 15px 0 10px 0;">🦠 Etiologias Bacterianas Incomuns</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Etiologias bacterianas incomuns, como <strong><em>Listeria</em> e <em>Nocardia</em></strong>, 
+            etiologias virais e fúngicas, e até etiologias parasitárias podem ser consideradas, portanto, 
+            tratadas empiricamente em um paciente imunocomprometido.
+          </p>
+          
+          <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #d97706; margin-bottom: 10px;">⚠️ Tipos de Comprometimento Imunológico</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              Diferentes tipos de comprometimento imunológico predispõem a diferentes tipos de patógenos:
+            </p>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>Pacientes neutropênicos:</strong> Alto risco para patógenos bacterianos 
+              piogênicos agudos e subsequentemente patógenos fúngicos invasivos</li>
+              <li><strong>Defeitos em células T:</strong> Maior risco para infecções crônicas causadas 
+              por patógenos bacterianos atípicos, como micobactérias, <em>Cryptococcus</em>, meningite 
+              por tuberculose (TB), e assim por diante</li>
+              <li><strong>Defeitos em imunidade humoral:</strong> Pacientes com defeitos congênitos 
+              de células B, defeitos adquiridos de células B (como lúpus ou tratamento com rituximab), 
+              doenças que desperdiçam anticorpos (como síndrome nefrótica) adquirem infecções causadas 
+              por patógenos bacterianos encapsulados</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 10px;">🔬 Patógenos Resistentes em Imunocomprometidos</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            É um fato que <strong>pacientes imunocomprometidos são intrinsecamente mais propensos a 
+            serem infectados por patógenos bacterianos resistentes a antibióticos</strong>. O sistema 
+            imunológico não funciona adequadamente para o efeito letal de antibióticos.
+          </p>
+          
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Há evidências de que pacientes imunocomprometidos que adquirem suas infecções na comunidade, 
+            e sem terem sido recentemente expostos a ambientes de cuidados de saúde (por exemplo, 
+            hemodiálise ou agentes antimicrobianos), são <strong>mais propensos a serem infectados com 
+            patógenos mais resistentes</strong> do que pacientes imunocompetentes.
+          </p>
+          
+          <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin: 10px 0;">
+            <h5 style="color: #075985; margin-bottom: 10px;">💡 Implicação Clínica</h5>
+            <p style="font-size: 14px; line-height: 1.6;">
+              Assim, a amplitude da cobertura para patógenos bacterianos altamente resistentes deve ser 
+              ditada pela exposição ambiental e antimicrobiana recente, em vez do status imunológico.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444; margin: 15px 0;">
+          <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ Consideração Importante</h4>
+          <p style="font-size: 14px; line-height: 1.5;">
+            Para alguns tipos de infecções piogênicas letais, embotar o sistema imunológico é na verdade 
+            necessário para atenuar a eficácia dos agentes antimicrobianos. Morbidade e mortalidade de 
+            muitas infecções são impulsionadas tanto pela resposta inflamatória do hospedeiro ao organismo 
+            quanto pela densidade bacteriana e administração de antimicrobianos.
+          </p>
+        </div>
+      `,
+      question: {
+        text: "Como o estado imunocomprometido deve afetar principalmente a seleção de terapia antimicrobiana empírica?",
+        options: [
+          "Sempre usar antibióticos de amplo espectro independentemente do diagnóstico",
+          "Ampliar o diagnóstico diferencial para incluir patógenos incomuns (Listeria, Nocardia, fungos, vírus)",
+          "Dobrar as doses dos antibióticos padrão",
+          "Evitar antibióticos e usar apenas antifúngicos"
+        ],
+        correct: 1,
+        explanation: "O Princípio 5 estabelece que o impacto primário de um estado imunocomprometido deve ser ampliar o diagnóstico diferencial para patógenos prováveis, incluindo etiologias bacterianas incomuns (Listeria, Nocardia), virais, fúngicas e até parasitárias. A amplitude da cobertura para patógenos altamente resistentes deve ser ditada pela exposição ambiental e antimicrobiana recente, não apenas pelo status imunológico."
+      }
+    }
+
+// ===== SEÇÃO 8 =====
+
+,
+{
+      title: "Princípio 6: Farmacocinética e Farmacodinâmica",
+      content: `
+        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #d97706; margin-bottom: 15px;">💊 Princípio 6: Princípios Farmacocinéticos-Farmacodinâmicos</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            Tendo considerado os dados de ensaios clínicos que apoiam o uso antimicrobiano específico, 
+            o espectro de atividade requisitado com base no diagnóstico diferencial, seus prováveis 
+            etiologias microbianas e os riscos de estabilidade clínica do paciente e riscos para 
+            patógenos resistentes a antibióticos, <strong>princípios farmacológicos devem ser considerados</strong>.
+          </p>
+          
+          <h4 style="color: #b45309; margin: 15px 0 10px 0;">🎯 Tipos de Antibióticos por Mecanismo</h4>
+          <div style="background: #fff7ed; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+              <strong>Antibióticos Tempo-Dependentes (β-lactâmicos):</strong>
+            </p>
+            <ul style="margin-left: 20px; line-height: 1.8; margin-bottom: 15px;">
+              <li>O tempo que a concentração inibitória mínima (CIM) é excedida é um preditor muito 
+              melhor de eficácia do que quão alta a concentração de antibiótico está acima da CIM</li>
+              <li>Para tais medicamentos, <strong>prolongar a infusão</strong> resulta em maior tempo 
+              gasto acima da CIM, enquanto suavizando o pico e vale</li>
+              <li>Estratégias de dosagem de pico alto podem ser preferidas para isolados com CIMs 
+              particularmente altos na faixa intermediária a resistente</li>
+            </ul>
+            
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+              <strong>Antibióticos Concentração-Dependentes:</strong>
+            </p>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li>Alguns antibióticos têm <strong>farmacodinâmica não linear</strong></li>
+              <li>A dosagem ideal pode resultar em níveis superiores de medicamento</li>
+              <li><strong>Exemplo:</strong> Aumentar a dose de moxifloxacino de 500 para 750 mg uma 
+              vez por dia (aumento de 50%) permite um aumento de 100% na concentração sérica alcançada</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 10px;">🏥 Considerações para Infusão</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            De fato, os dados clínicos validam que <strong>infusões prolongadas de β-lactâmicos</strong> 
+            podem resultar em desfechos clínicos superiores, e tais estratégias estão sendo cada vez 
+            mais clinicamente importantes. É importante enfatizar, no entanto, que <strong>níveis de 
+            pico mais baixos serão alcançados com infusão prolongada</strong>.
+          </p>
+          
+          <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin: 10px 0;">
+            <h5 style="color: #075985; margin-bottom: 10px;">⚠️ Atenção Especial</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              Como tal, se o organismo a ser tratado tem uma <strong>CIM alta</strong>, prolongar a 
+              infusão pode diminuir a eficácia ao impedir a realização de concentração do medicamento 
+              acima da CIM.
+            </p>
+            <p style="font-size: 14px; line-height: 1.6;">
+              Para exemplo, em carbapenêmicos com CIM maior que 16 μg/mL, prolongar a infusão do 
+              carbapenêmico impedirá a realização de concentração do medicamento acima da CIM, o que 
+              resultará em morte bacteriana diminuída. Portanto, a dosagem intermitente para alcançar 
+              níveis de pico acima da CIM pode ser preferida para isolados com CIMs particularmente 
+              altos na faixa intermediária a resistente.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #6366f1; margin: 15px 0;">
+          <h4 style="color: #4f46e5; margin-bottom: 10px;">🔬 Microambientes Teciduais</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+            Finalmente, é importante garantir que o antibiótico <strong>reterá atividade antimicrobiana 
+            no local da infecção</strong>. Embora a maioria dos antibióticos seja ativa na maioria dos 
+            ambientes teciduais, há exceções.
+          </p>
+          <p style="font-size: 15px; line-height: 1.6;">
+            <strong>Exemplo:</strong> Baixa tensão de oxigênio e ambientes de pH baixo, como os 
+            encontrados em abscessos densos, inativam a eficácia do aminoglicosídeo ao bloquear sua 
+            captação. Portanto, aminoglicosídeos não são agentes desejáveis para tratar abscessos.
+          </p>
+        </div>
+      `,
+      question: {
+        text: "Para antibióticos β-lactâmicos (tempo-dependentes), qual estratégia de dosagem geralmente resulta em melhores desfechos clínicos?",
+        options: [
+          "Doses altas em bolus rápido para atingir picos máximos",
+          "Prolongar a infusão para aumentar o tempo acima da CIM",
+          "Administrar apenas uma vez ao dia em dose alta",
+          "Reduzir a dose e aumentar a frequência"
+        ],
+        correct: 1,
+        explanation: "Para antibióticos β-lactâmicos (tempo-dependentes), o tempo que a concentração excede a CIM é melhor preditor de eficácia. Prolongar a infusão resulta em maior tempo acima da CIM e melhores desfechos clínicos. Porém, atenção: para organismos com CIM muito alta (>16 μg/mL), infusão prolongada pode diminuir eficácia, sendo preferível dosagem intermitente para atingir picos altos."
+      }
+    }
+
+// ===== SEÇÃO 9 =====
+
+,
+{
+      title: "Princípio 7: Desescalonamento (De-escalation)",
+      content: `
+        <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #059669; margin-bottom: 15px;">📉 Princípio 7: Desescalonar com Base em Resultados</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            Tendo iniciado terapia antimicrobiana empírica na ausência de conhecimento de um patógeno 
+            etiológico, <strong>a terapia deve ser adaptada/estreitada para corresponder ao perfil de 
+            suscetibilidade</strong> uma vez que os resultados de suscetibilidade estejam disponíveis.
+          </p>
+          
+          <h4 style="color: #047857; margin: 15px 0 10px 0;">🎯 Quando Desescalonar</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Mesmo quando os resultados microbiológicos são negativos, a ausência de culturas positivas 
+            pode ser informativa para <strong>desescalonar antibióticos</strong>. Por exemplo, para 
+            pacientes que cultivam bacilos gram-positivos em hemoculturas, a vancomicina empírica pode 
+            ser interrompida.
+          </p>
+          
+          <div style="background: #d1fae5; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #065f46; margin-bottom: 10px;">✅ Exemplos de Desescalonamento</h5>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>Bacilos gram-positivos em hemocultura:</strong> Vancomicina empírica pode 
+              ser descontinuada</li>
+              <li><strong>Paciente com pneumonia comunitária cultivando <em>Streptococcus pneumoniae</em>:</strong> 
+              Cobertura atípica pode ser interrompida</li>
+              <li><strong>Gram-negativos em hemocultura:</strong> Antibióticos empíricos direcionados 
+              a gram-negativos podem ser interrompidos</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #d97706; margin-bottom: 10px;">⚠️ Quando NÃO Desescalonar Imediatamente</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Mesmo quando os resultados microbiológicos são negativos, a ausência de culturas positivas 
+            pode ser informativa para desescalonar antibióticos. No entanto, <strong>se o paciente não 
+            está respondendo à terapia dentro de 1 ou 2 dias</strong>, pode ser necessário considerar 
+            intervenções terapêuticas ou diagnósticas alternativas na ausência de conhecimento da 
+            etiologia microbiana da infecção.
+          </p>
+          
+          <div style="background: #fff7ed; padding: 15px; border-radius: 8px; margin: 10px 0;">
+            <h5 style="color: #c2410c; margin-bottom: 10px;">🔄 Reavaliação Necessária</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              O fator que deve ser considerado é o <strong>tempo de resposta clínica à terapia</strong>. 
+              Qualquer terapia antibacteriana é iniciada, o clínico tratante deve saber a priori quais 
+              parâmetros seguir para determinar se a terapia está sendo eficaz.
+            </p>
+            <p style="font-size: 14px; line-height: 1.6;">
+              Este é um princípio particularmente importante quando a terapia é empírica e o(s) 
+              patógeno(s) etiológico(s) não é conhecido ou suas suscetibilidades não são conhecidas.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; border-left: 4px solid #0369a1; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 10px;">📊 Biomarcadores de Resposta</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+            <strong>Febre e leucocitose</strong> estão entre os biomarcadores clínicos mais antigos 
+            usados pelos clínicos para determinar resposta à terapia antimicrobiana. Ambos são usados 
+            frequentemente, mas a cessação da adição de terapia antibacteriana é <strong>procalcitonina</strong>.
+          </p>
+          <p style="font-size: 15px; line-height: 1.6;">
+            Dezenas de ensaios clínicos randomizados controlados investigaram o impacto de tornar o 
+            resultado procalcitonina disponível para tratamento de pacientes com sepse para ajudar a 
+            evitar cessação de antibióticos em pacientes mais doentes ou potencialmente evitar antibióticos 
+            inteiramente em pacientes menos doentes.
+          </p>
+        </div>
+        
+        <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444; margin: 15px 0;">
+          <h4 style="color: #dc2626; margin-bottom: 10px;">🚫 Causas Não Infecciosas de Febre</h4>
+          <p style="font-size: 14px; line-height: 1.5;">
+            Outras causas frequentemente encontradas de febre não infecciosa que não respondem a 
+            antibióticos incluem <strong>febre medicamentosa</strong> (que pode de fato ser causada 
+            pelo antibiótico), tautologia iatrogênica, cursos prolongados e fúteis de antibióticos, 
+            malignidade e distúrbios reumatológicos que imitam infecções.
+          </p>
+        </div>
+      `,
+      question: {
+        text: "Qual é o objetivo principal do desescalonamento (de-escalation) da terapia antibiótica?",
+        options: [
+          "Reduzir custos do tratamento hospitalar",
+          "Adaptar/estreitar a terapia para corresponder ao perfil de suscetibilidade com base em resultados microbiológicos e resposta clínica",
+          "Trocar para antibióticos orais o mais rápido possível",
+          "Suspender todos os antibióticos assim que o paciente melhorar"
+        ],
+        correct: 1,
+        explanation: "O Princípio 7 estabelece que, após iniciar terapia empírica, a terapia deve ser adaptada/estreitada para corresponder ao perfil de suscetibilidade uma vez que os resultados estejam disponíveis. Mesmo com culturas negativas, a ausência de crescimento pode ser informativa para desescalonar. O objetivo é usar o espectro mais estreito eficaz, baseado em dados microbiológicos e resposta clínica."
+      }
+    }
+
+// ===== SEÇÃO 10 =====
+
+,
+{
+      title: "Princípio 8: Controle de Fonte",
+      content: `
+        <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #dc2626; margin-bottom: 15px;">🔧 Princípio 8: Considerar Controle de Fonte Antes de Culpar Resistência</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            Se um regime antimicrobiano <strong>não resultou em melhora na curva de febre</strong>, 
+            contagem de glóbulos brancos, secreções purulentas, sinais de inflamação (rubor, tumor, 
+            dor, calor), nível de procalcitonina, e assim por diante, dentro de um dia ou dois, a 
+            decisão de tratamento pode precisar ser reconsiderada.
+          </p>
+          
+          <h4 style="color: #b91c1c; margin: 15px 0 10px 0;">⚠️ Tendência Comum: Culpar a Resistência</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Embora a tendência inicial do clínico tratante seja tipicamente culpar a "resistência 
+            antibiótica" e procurar ampliar a terapia antimicrobiana, <strong>duas causas alternativas 
+            devem ser consideradas antes de ampliar reflexivamente a terapia</strong>.
+          </p>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #d97706; margin-bottom: 10px;">🎯 Causa 1: Controle de Fonte Inadequado</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Uma possibilidade é que <strong>uma fonte adequada de controle de fonte não foi obtida</strong>. 
+            A adequação do controle de fonte, como remover pus drenável e remover materiais de outros 
+            nichos de infecção, é a pedra angular do manejo bem-sucedido de infecções.
+          </p>
+          
+          <div style="background: #fff7ed; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #c2410c; margin-bottom: 10px;">📋 Exemplos Clínicos</h5>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>Abscesso subcutâneo oculto:</strong> Em paciente falhando terapia de celulite, 
+              formação de abscesso durante tratamento de infecção intra-abdominal</li>
+              <li><strong>Empiema:</strong> Em paciente com pneumonia adquirida na comunidade</li>
+              <li><strong>Linha central bacterêmica:</strong> Falha em remover em paciente com bacteremia</li>
+              <li><strong>Secreções de pressão:</strong> Falha em remover úlceras de pressão em paciente 
+              falhando terapia de celulite</li>
+            </ul>
+          </div>
+          
+          <p style="font-size: 15px; line-height: 1.6; margin-top: 15px;">
+            <strong>Ampliar a terapia não resultará em resposta clínica na ausência de controle de 
+            fonte adequado.</strong>
+          </p>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 10px;">🔬 Causa 2: Diagnóstico Diferencial Incorreto</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Uma <strong>segunda explicação para falta de resposta adequada à terapia</strong> é atribuir 
+            incorretamente a condição clínica do paciente a uma infecção bacteriana. Isto é, em pacientes 
+            que não estão respondendo à terapia antimicrobiana, além de avaliar o controle de fonte, o 
+            diagnóstico diferencial deve ser reconsiderado.
+          </p>
+          
+          <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin: 10px 0;">
+            <h5 style="color: #075985; margin-bottom: 10px;">🎭 Imitadores Comuns</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              Infecções comuns, como pneumonia adquirida na comunidade e celulite, têm sinais e sintomas 
+              que podem ser <strong>surpreendentemente semelhantes</strong>. De fato, pacientes são 
+              comumente diagnosticados erroneamente com celulite e, em vez disso, têm uma variedade de 
+              distúrbios inflamatórios da pele.
+            </p>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li>Estase venosa</li>
+              <li>Dermatite de contato/reações alérgicas</li>
+              <li>Reações à picnose lipoidica diabeticorum</li>
+              <li>Edema pulmonar</li>
+              <li>Embolismo pulmonar</li>
+              <li>Vias aéreas reativas aspiradas</li>
+              <li>Pneumonite aspirativa</li>
+              <li>Pneumonia viral</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin: 15px 0;">
+          <h4 style="color: #059669; margin-bottom: 10px;">💡 Recomendação</h4>
+          <p style="font-size: 14px; line-height: 1.5;">
+            Para pacientes que não aparecem para responder à terapia antimicrobiana dentro do primeiro 
+            dia ou dois, uma <strong>reavaliação completa de controle de fonte e o diagnóstico diferencial 
+            deve preceder mudanças para ampliar a terapia</strong> com base em medos de resistência 
+            antibiótica ou preocupações com infecções causadas por organismos de outro reino (por exemplo, 
+            fungos).
+          </p>
+        </div>
+      `,
+      question: {
+        text: "Quando um paciente não responde à terapia antimicrobiana em 1-2 dias, quais duas causas devem ser consideradas ANTES de ampliar a terapia por medo de resistência?",
+        options: [
+          "Dose inadequada e via de administração incorreta",
+          "Controle de fonte inadequado e diagnóstico diferencial incorreto",
+          "Alergia ao antibiótico e interação medicamentosa",
+          "Resistência bacteriana e infecção fúngica sobreposta"
+        ],
+        correct: 1,
+        explanation: "O Princípio 8 estabelece que antes de ampliar reflexivamente a terapia por medo de resistência, duas causas alternativas devem ser consideradas: (1) Controle de fonte inadequado - falha em drenar abscessos, remover cateteres infectados, etc.; (2) Diagnóstico diferencial incorreto - a condição pode não ser infecção bacteriana, mas sim uma condição inflamatória não infecciosa que mimetiza infecção."
+      }
+    }
+
+// ===== SEÇÃO 11 =====
+
+,
+{
+      title: "Princípio 9: Distinguir Nova Infecção de Falha Terapêutica",
+      content: `
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #7c3aed; margin-bottom: 15px;">🔄 Princípio 9: Distinguir Nova Infecção da Falha da Terapia Inicial</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            Pacientes podem sofrer de <strong>múltiplas infecções seriais</strong> enquanto estão em 
+            ambientes de cuidados de saúde. De fato, um paciente que tem evidência de resposta clínica 
+            à terapia inicial, com resolução de sinais e sintomas de infecção, e que então começa a 
+            escalar novamente febre e sintomas, deve ser avaliado diferentemente do que um paciente que 
+            nunca respondeu à terapia inicial.
+          </p>
+          
+          <h4 style="color: #6d28d9; margin: 15px 0 10px 0;">⚠️ Problema: Recrudescência vs. Nova Infecção</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Raramente, <strong>recrudescência de sinais e sintomas</strong> pode refletir emergência de 
+            resistência antibiótica na terapia do patógeno inicial — isso pode ser mais provável com 
+            patógenos bacterianos, como <em>Acinetobacter</em>, do que com outros.
+          </p>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #d97706; margin-bottom: 10px;">🎯 Resposta Inicial Aparente</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Em qualquer evento, uma <strong>resposta inicial aparente à infecção</strong> seguida dias 
+            ou semanas depois por novo início de sinais ou sintomas infecciosos deve levantar a preocupação 
+            de uma nova infecção em vez de persistência da original.
+          </p>
+          
+          <div style="background: #fff7ed; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #c2410c; margin-bottom: 10px;">🔬 Considerações Clínicas</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              Raramente, recrudescência de sinais e sintomas pode refletir <strong>emergência de 
+              resistência antibiótica na terapia</strong> do patógeno inicial — isso pode ser mais 
+              provável com patógenos bacterianos, como <em>Acinetobacter</em>, do que com outros.
+            </p>
+            <p style="font-size: 14px; line-height: 1.6;">
+              Em qualquer evento, uma resposta inicial aparente à infecção seguida dias ou semanas 
+              depois por novo início de sinais ou sintomas infecciosos deve levantar a preocupação de 
+              uma nova infecção em vez de persistência da original.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 10px;">🏥 Mudança de Terapia Antibiótica</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Ao mudar terapias antibacterianas devido a <strong>infecção breakthrough ou falta de 
+            resposta à terapia inicial</strong>, geralmente é aconselhável mudar um antibiótico de 
+            cada vez.
+          </p>
+          
+          <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin: 10px 0;">
+            <h5 style="color: #075985; margin-bottom: 10px;">💡 Benefícios da Mudança Gradual</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              Tal mudança permite a determinação de qual novo medicamento é provável a causa de qualquer 
+              melhora em sinais, sintomas e/ou biomarcadores de infecção.
+            </p>
+            <p style="font-size: 14px; line-height: 1.6;">
+              A terapia pode então ser <strong>adaptada/estreitada com base nesse conhecimento</strong>. 
+              No entanto, em pacientes que são criticamente doentes, mudar múltiplos antibióticos pode 
+              ser necessário, especialmente para pacientes que são hemodinamicamente instáveis.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #fef2f2; padding: 20px; border-radius: 8px; border-left: 4px solid #ef4444; margin: 15px 0;">
+          <h4 style="color: #dc2626; margin-bottom: 10px;">🔍 Investigação Necessária</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+            Em tais pacientes, é geralmente razoável <strong>ampliar a terapia para cobrir patógenos 
+            altamente resistentes</strong>. Tais pacientes foram tratados com cursos anteriores de 
+            antibióticos e têm maior risco de serem infectados por patógenos resistentes a antibióticos.
+          </p>
+          <p style="font-size: 15px; line-height: 1.6;">
+            Quando mudanças de antibióticos são feitas devido a falta de resposta inicial ou infecção 
+            breakthrough, é geralmente aconselhável ampliar a terapia para tentar cobrir patógenos 
+            altamente resistentes. Terapia então pode ser adaptada/estreitada com base nesse conhecimento.
+          </p>
+        </div>
+      `,
+      question: {
+        text: "Como deve ser interpretado um paciente que inicialmente responde à terapia antibiótica, mas dias ou semanas depois apresenta novo início de sinais infecciosos?",
+        options: [
+          "Sempre indica falha terapêutica e resistência bacteriana",
+          "Deve levantar preocupação de nova infecção em vez de persistência da original",
+          "Indica necessidade de dobrar a dose do antibiótico atual",
+          "Significa que o diagnóstico inicial estava errado"
+        ],
+        correct: 1,
+        explanation: "O Princípio 9 estabelece que uma resposta inicial aparente seguida por novo início de sinais infecciosos dias ou semanas depois deve levantar a preocupação de uma NOVA infecção, não persistência da original. Embora raramente possa refletir emergência de resistência (ex: Acinetobacter), o mais provável é que seja uma infecção diferente adquirida no ambiente hospitalar."
+      }
+    }
+
+// ===== SEÇÃO 12 =====
+
+,
+{
+      title: "Princípio 10: Duração Baseada em Evidências e Curta",
+      content: `
+        <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #059669; margin-bottom: 15px;">⏱️ Princípio 10: Duração Baseada em Evidências e Curta Quando Possível</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            Os antibióticos devem ser administrados <strong>apenas pelo tempo necessário para otimizar 
+            as taxas de cura</strong>. Infelizmente, mesmo na era da medicina baseada em evidências, a 
+            duração da maioria dos cursos de terapia antibiótica pode ser rastreada de volta à Constância 
+            21 CE, que a semana de trabalho consistiria de 7 dias.
+          </p>
+          
+          <h4 style="color: #047857; margin: 15px 0 10px 0;">📊 Evidências de Cursos Curtos</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Este decreto de aproximadamente 1700 anos permanece o <strong>principal driver para muitos 
+            cursos de antibióticos</strong>, que são oferecidos em incrementos de 7 dias. Felizmente, 
+            nos últimos anos, numerosos ensaios clínicos foram conduzidos comparando terapia antibiótica 
+            de curso longo versus curto, com os cursos curtos frequentemente não baseados em incrementos 
+            de 7 dias.
+          </p>
+          
+          <div style="background: #d1fae5; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #065f46; margin-bottom: 10px;">✅ Tabela: Cursos Curtos vs. Longos</h5>
+            <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">
+              <tr style="background: #10b981; color: white;">
+                <th style="padding: 10px; border: 1px solid #ddd;">Doença</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Curso Curto</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Curso Longo</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Resultado</th>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;">Pneumonia comunitária</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">3-5 dias</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">7-14 dias</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Equivalente</td>
+              </tr>
+              <tr style="background: #f9fafb;">
+                <td style="padding: 8px; border: 1px solid #ddd;">Pielonefrite</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">5-7 dias</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">10-14 dias</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Equivalente</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;">Infecções de pele</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">5-6 dias</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">10-14 dias</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Equivalente</td>
+              </tr>
+              <tr style="background: #f9fafb;">
+                <td style="padding: 8px; border: 1px solid #ddd;">Sinusite bacteriana aguda</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">5 dias</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">10 dias</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Equivalente</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #d97706; margin-bottom: 10px;">⚠️ Exceções aos Cursos Curtos</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Exceções notáveis à terapia de curso curto incluem <strong>otite média em crianças menores 
+            de 2 anos</strong> e osteomielite — mas não para terapia de curso curto para estreptococos—
+            terapia de faringite estreptocócica.
+          </p>
+          
+          <div style="background: #fff7ed; padding: 15px; border-radius: 8px; margin: 10px 0;">
+            <h5 style="color: #c2410c; margin-bottom: 10px;">🦴 Osteomielite Crônica</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              As razões para a falha da terapia de curso curto para essas doenças/demografia específicas 
+              não são totalmente claras. <strong>O propósito da terapia antibacteriana no tratamento de 
+              faringite estreptocócica é a prevenção de febre reumática</strong>, que requer erradicação 
+              do organismo.
+            </p>
+            <p style="font-size: 14px; line-height: 1.6;">
+              Apesar da taxa diminuída de cura clínica no final da terapia com terapia de curso curto 
+              de penicilina, as taxas de febre reumática não foram maiores nesses estudos. No entanto, 
+              a taxa de recaída de febre reumática é baixa, e os estudos não foram alimentados para este 
+              ponto final.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Benefícios dos Cursos Curtos</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            <strong>Cursos mais curtos de antibióticos reduzem o risco de efeitos colaterais</strong> 
+            dos antibióticos e podem resultar em impacto diminuído no microbioma, evitando superinfecções 
+            e possíveis outras consequências metabólicas que estão sob investigação.
+          </p>
+          
+          <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin: 10px 0;">
+            <h5 style="color: #075985; margin-bottom: 10px;">⚡ Recomendação</h5>
+            <p style="font-size: 14px; line-height: 1.6;">
+              Assim, <strong>não é mais necessário — e de fato não é mais apropriado — escolher durações 
+              de antibióticos para muitas infecções com base em incrementos de 7 dias</strong>. Sempre 
+              que possível, as durações de tratamento devem ser cursos curtos, com base em dados de 
+              ensaios mostrando eficácia equivalente a cursos mais longos.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444; margin: 15px 0;">
+          <h4 style="color: #dc2626; margin-bottom: 10px;">🔬 Antibióticos Estáticos vs. Cidais</h4>
+          <p style="font-size: 14px; line-height: 1.5;">
+            Um dos dogmas mais difundidos no campo da DI tem sido que <strong>agentes antimicrobianos 
+            que são "cidais" são mais eficazes do que aqueles que são "estáticos"</strong>. Embora pareça 
+            intuitivo que antibióticos que matam mais rapidamente bactérias devem ser clinicamente mais 
+            eficazes, os dados clínicos não apoiam uma eficácia clínica intrínseca entre agentes estáticos 
+            e cidais.
+          </p>
+        </div>
+      `,
+      question: {
+        text: "Qual é a recomendação atual sobre a duração da terapia antibiótica para a maioria das infecções?",
+        options: [
+          "Sempre usar múltiplos de 7 dias (7, 14, 21 dias) baseado em tradição",
+          "Usar cursos curtos baseados em evidências, não necessariamente em incrementos de 7 dias",
+          "Continuar antibióticos até 3 dias após resolução completa dos sintomas",
+          "Usar sempre 10-14 dias para garantir erradicação completa"
+        ],
+        correct: 1,
+        explanation: "O Princípio 10 estabelece que não é mais apropriado escolher durações baseadas em incrementos de 7 dias. Numerosos ensaios clínicos demonstraram que cursos curtos (3-5 dias para pneumonia, 5-7 dias para pielonefrite, 5-6 dias para celulite) são equivalentes a cursos longos. Cursos curtos reduzem efeitos colaterais e impacto no microbioma, devendo ser preferidos quando possível, baseados em evidências."
+      }
+    }
       ]
     },
     {
