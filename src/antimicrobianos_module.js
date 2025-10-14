@@ -1047,32 +1047,989 @@ export const antimicrobianosModule = {
     {
       id: 2,
       title: "Farmacocinética e Farmacodinâmica",
-      duration: "20 min",
-      xp: 100,
+      duration: "50 min",
+      xp: 250,
       sections: [
-        {
-          title: "Princípios de Farmacocinética",
-          content: `
-            <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-              <h3 style="color: #0369a1; margin-bottom: 15px;">💊 Farmacocinética</h3>
-              <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                A <strong>farmacocinética</strong> estuda o que o organismo faz com o medicamento: 
-                absorção, distribuição, metabolismo e excreção (ADME).
+    {
+      title: "Card 1: A Bússola e o Alvo (PK e PD)",
+      content: `
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #2563eb; margin-bottom: 15px;">🎯 A Bússola e o Alvo: Entendendo PK e PD</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            Imagine que a farmacologia é um <strong>campo de batalha</strong>. Precisamos saber onde o 
+            medicamento vai e o que ele faz quando chega lá.
+          </p>
+          
+          <h4 style="color: #1e40af; margin: 15px 0 10px 0;">📍 Farmacocinética (PK)</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            <strong>Farmacocinética (PK) é o que o seu corpo faz com a droga.</strong> A PK governa a forma 
+            como a droga entra, se move (Absorção, Distribuição), é transformada (Metabolismo) e sai (Eliminação). 
+            A PK define a <strong>exposição sistêmica total da droga</strong>.
+          </p>
+          
+          <div style="background: #dbeafe; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #1e40af; margin-bottom: 10px;">🔄 Os 4 Processos da PK (ADME)</h5>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>Absorção:</strong> Como a droga entra no organismo</li>
+              <li><strong>Distribuição:</strong> Como a droga se espalha pelos tecidos</li>
+              <li><strong>Metabolismo:</strong> Como a droga é transformada</li>
+              <li><strong>Eliminação:</strong> Como a droga sai do corpo</li>
+            </ul>
+            <p style="font-size: 14px; margin-top: 10px; font-style: italic;">
+              A via de administração (oral vs. intravenosa) afeta drasticamente o perfil de concentração-tempo da droga.
+            </p>
+          </div>
+          
+          <h4 style="color: #1e40af; margin: 15px 0 10px 0;">💥 Farmacodinâmica (PD)</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            <strong>Farmacodinâmica (PD) é o que a droga faz com o patógeno e com o hospedeiro.</strong> 
+            Ela descreve o mecanismo de ação da droga e a resposta bioquímica/fisiológica.
+          </p>
+          
+          <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 15px 0;">
+            <h5 style="color: #d97706; margin-bottom: 10px;">🎯 Objetivo da Análise PK-PD</h5>
+            <p style="font-size: 14px; line-height: 1.6;">
+              O objetivo da análise PK-PD é <strong>integrar esses dois fatores</strong>, definindo a 
+              <strong>relação exposição-resposta</strong>. Ou seja, como a dose administrada maximiza a 
+              eficácia e minimiza a toxicidade (o risco-benefício).
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; border-left: 4px solid #0369a1; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Analogia Prática</h4>
+          <p style="font-size: 15px; line-height: 1.6;">
+            <strong>A PK é a entrega do míssil</strong> (a droga) ao alvo.<br>
+            <strong>A PD é o impacto e a explosão</strong> desse míssil na infecção.
+          </p>
+        </div>
+      `,
+      question: {
+        text: "Qual é a principal diferença entre Farmacocinética (PK) e Farmacodinâmica (PD)?",
+        options: [
+          "PK é o que a droga faz no corpo; PD é o que o corpo faz com a droga",
+          "PK é o que o corpo faz com a droga (ADME); PD é o que a droga faz no patógeno e hospedeiro",
+          "PK estuda apenas a absorção; PD estuda apenas a eliminação"
+        ],
+        correct: 1,
+        explanation: "Farmacocinética (PK) é o que o corpo faz com a droga, governando Absorção, Distribuição, Metabolismo e Eliminação (ADME). Farmacodinâmica (PD) é o que a droga faz com o patógeno e hospedeiro, descrevendo o mecanismo de ação e resposta bioquímica. A análise PK-PD integra ambos para otimizar eficácia e minimizar toxicidade."
+      }
+    },
+    {
+      title: "Card 2: O Limiar da Guerra - Concentração Inibitória Mínima (CIM)",
+      content: `
+        <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #dc2626; margin-bottom: 15px;">⚔️ O Limiar da Guerra: Concentração Inibitória Mínima (CIM)</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            O sucesso de um anti-infeccioso depende de <strong>alcançar concentrações no local da infecção 
+            que sejam eficazes contra o patógeno</strong>.
+          </p>
+          
+          <h4 style="color: #b91c1c; margin: 15px 0 10px 0;">🎯 O que é a CIM (MIC)?</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            A <strong>CIM (ou MIC - Minimum Inhibitory Concentration)</strong> é a Concentração Inibitória 
+            Mínima do antimicrobiano necessária para inibir o crescimento do microrganismo. <strong>Este é 
+            o valor mais fundamental.</strong>
+          </p>
+          
+          <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #991b1b; margin-bottom: 10px;">⚠️ Conceito Crítico</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              Se a concentração do medicamento cair <strong>abaixo da CIM</strong>, o microrganismo pode 
+              começar a se recuperar.
+            </p>
+            <p style="font-size: 14px; line-height: 1.6;">
+              É crucial lembrar que a atividade antimicrobiana só é exercida pela <strong>fração da droga 
+              que está livre</strong> (não ligada a proteínas). Por isso, os testes de potência in vitro 
+              (como o CIM) avaliam a droga livre.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #4b5563; margin-bottom: 10px;">📊 Exemplo Numérico</h4>
+          <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+            <tr style="background: #ef4444; color: white;">
+              <th style="padding: 10px; border: 1px solid #ddd;">CIM do Patógeno</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Concentração Sérica</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Resultado</th>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">2 mg/L</td>
+              <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">4 mg/L</td>
+              <td style="padding: 8px; border: 1px solid #ddd; color: #059669; font-weight: bold;">✅ Eficaz (acima da CIM)</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">2 mg/L</td>
+              <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">1 mg/L</td>
+              <td style="padding: 8px; border: 1px solid #ddd; color: #dc2626; font-weight: bold;">❌ Ineficaz (abaixo da CIM)</td>
+            </tr>
+          </table>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; border-left: 4px solid #0369a1; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Analogia Prática</h4>
+          <p style="font-size: 15px; line-height: 1.6;">
+            Se a CIM for 2 mg/L, <strong>2 mg/L é o Nível Mínimo de Alerta</strong> que você deve manter 
+            no sangue para garantir que o patógeno seja reprimido. Abaixo disso, o inimigo (a bactéria) 
+            tem chance de recrescer ou desenvolver resistência.
+          </p>
+        </div>
+      `,
+      question: {
+        text: "O que acontece quando a concentração sérica de um antimicrobiano cai abaixo da CIM?",
+        options: [
+          "O microrganismo pode começar a se recuperar e potencialmente desenvolver resistência",
+          "A eficácia do medicamento aumenta devido à menor toxicidade",
+          "Nada acontece, pois a CIM é apenas um valor de referência"
+        ],
+        correct: 0,
+        explanation: "Quando a concentração do medicamento cai abaixo da CIM (Concentração Inibitória Mínima), o microrganismo pode começar a se recuperar e potencialmente desenvolver resistência. A CIM é o limiar crítico que deve ser mantido no local da infecção para garantir a supressão do patógeno. Apenas a fração livre (não ligada a proteínas) da droga é ativa."
+      }
+    },
+    {
+      title: "Card 3: O Estrategista do Tempo - Medicamentos T > CIM",
+      content: `
+        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #d97706; margin-bottom: 15px;">⏱️ O Estrategista do Tempo: Medicamentos T > CIM</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            Alguns antimicrobianos dependem do <strong>tempo que conseguem manter suas concentrações acima 
+            do CIM</strong> para maximizar a morte bacteriana. Chamamos isso de <strong>Morte Dependente 
+            do Tempo</strong>.
+          </p>
+          
+          <h4 style="color: #b45309; margin: 15px 0 10px 0;">📊 O Índice PD Chave: T > MIC</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            O índice PD chave é o <strong>T > MIC (Tempo acima da CIM)</strong>. Este valor é expresso 
+            como a <strong>porcentagem do intervalo entre as doses</strong> em que a concentração sérica 
+            excede a CIM.
+          </p>
+          
+          <div style="background: #fff7ed; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #c2410c; margin-bottom: 10px;">💊 Exemplo Clínico: Beta-lactâmicos</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              Os <strong>Beta-lactâmicos</strong> são os principais agentes tempo-dependentes:
+            </p>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>Penicilinas</strong> (Amoxicilina, Ampicilina, Piperacilina)</li>
+              <li><strong>Cefalosporinas</strong> (Ceftriaxona, Cefepima)</li>
+              <li><strong>Carbapenêmicos</strong> (Meropenem, Imipenem)</li>
+            </ul>
+          </div>
+          
+          <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #059669; margin-bottom: 10px;">🎯 Meta do Clínico</h5>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+              Para otimizar o tratamento com beta-lactâmicos, o <strong>T > CIM deve ser mantido por 
+              períodos longos</strong>, idealmente entre <strong>40% e 50% do intervalo de dosagem</strong>.
+            </p>
+            <p style="font-size: 14px; line-height: 1.6; font-style: italic;">
+              Exemplo: Se você dosa a cada 8 horas, a concentração deve estar acima da CIM por pelo menos 
+              3-4 horas (40-50% de 8 horas).
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; border-left: 4px solid #0369a1; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Analogia Prática: O Martelo Pneumático</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+            Pense nos beta-lactâmicos como um <strong>Martelo Pneumático</strong>. Ele não precisa dar um 
+            golpe único e esmagador (Cmax alto), mas precisa <strong>manter a vibração e o trabalho constante</strong> 
+            para desmantelar a parede celular bacteriana.
+          </p>
+          <p style="font-size: 15px; line-height: 1.6;">
+            Se você desligar o martelo (deixar a concentração cair abaixo da CIM), mesmo que brevemente, 
+            o inimigo pode começar a reconstruir suas defesas.
+          </p>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+          <h5 style="color: #4b5563; margin-bottom: 10px;">📈 Gráfico Conceitual</h5>
+          <p style="font-size: 14px; line-height: 1.6;">
+            <strong>Concentração vs. Tempo para Beta-lactâmicos:</strong><br>
+            • O importante NÃO é o pico máximo<br>
+            • O importante É manter a curva acima da linha da CIM pelo maior tempo possível<br>
+            • Estratégia: Infusões prolongadas ou doses mais frequentes
+          </p>
+        </div>
+      `,
+      question: {
+        text: "Para medicamentos tempo-dependentes como os beta-lactâmicos, qual é o índice PD mais importante e qual a meta terapêutica?",
+        options: [
+          "Cmax/CIM, com meta de ≥10",
+          "T > CIM, com meta de 40-50% do intervalo de dosagem",
+          "AUC/CIM, com meta de ≥400"
+        ],
+        correct: 1,
+        explanation: "Para medicamentos tempo-dependentes (como beta-lactâmicos), o índice PD chave é o T > CIM (Tempo acima da CIM). A meta terapêutica é manter a concentração acima da CIM por 40-50% do intervalo de dosagem. Esses medicamentos funcionam como um 'martelo pneumático' - precisam de trabalho constante, não de um golpe único forte."
+      }
+    },
+    {
+      title: "Card 4: O Executor do Pico - Medicamentos Cmax/CIM",
+      content: `
+        <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #dc2626; margin-bottom: 15px;">🎯 O Executor do Pico: Medicamentos Cmax/CIM</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            Outros antimicrobianos dependem de <strong>atingir um pico de concentração muito alto</strong> 
+            para eliminar o patógeno de forma eficaz. Chamamos isso de <strong>Morte Dependente da 
+            Concentração</strong>.
+          </p>
+          
+          <h4 style="color: #b91c1c; margin: 15px 0 10px 0;">📊 Os Índices PD Chave</h4>
+          <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>Cmax/MIC:</strong> Relação entre Pico de concentração e CIM</li>
+              <li><strong>AUC/MIC:</strong> Relação entre Área sob a curva e CIM</li>
+            </ul>
+            <p style="font-size: 14px; margin-top: 10px; font-style: italic;">
+              Quanto maior o pico (Cmax), mais rápida e completa é a morte bacteriana.
+            </p>
+          </div>
+          
+          <h4 style="color: #b91c1c; margin: 15px 0 10px 0;">💊 Exemplos Clínicos</h4>
+          <div style="background: #fff7ed; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #c2410c; margin-bottom: 10px;">1️⃣ Aminoglicosídeos</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              <strong>Exemplos:</strong> Gentamicina, Tobramicina, Amicacina
+            </p>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              <strong>Meta do Clínico:</strong> Para Aminoglicosídeos, busca-se tipicamente uma relação 
+              <strong>Cmax/MIC de 8 a 10</strong> para prever o sucesso clínico.
+            </p>
+            <p style="font-size: 14px; line-height: 1.6;">
+              Uma concentração inicial alta é essencial para <strong>impedir a emergência de resistência</strong>.
+            </p>
+          </div>
+          
+          <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #075985; margin-bottom: 10px;">2️⃣ Fluoroquinolonas</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              <strong>Exemplos:</strong> Levofloxacino, Ciprofloxacino, Moxifloxacino
+            </p>
+            <p style="font-size: 14px; line-height: 1.6;">
+              <strong>Meta do Clínico:</strong> Para Fluoroquinolonas, o índice mais importante é 
+              <strong>AUC/MIC ≥ 125</strong> para Gram-negativos e <strong>≥ 30-40</strong> para 
+              Gram-positivos.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #4b5563; margin-bottom: 10px;">📊 Comparação: Tempo vs. Concentração</h4>
+          <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+            <tr style="background: #6366f1; color: white;">
+              <th style="padding: 10px; border: 1px solid #ddd;">Característica</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Tempo-Dependente</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Concentração-Dependente</th>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Índice PD</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">T > CIM (40-50%)</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Cmax/CIM (8-10)</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Exemplos</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Beta-lactâmicos</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Aminoglicosídeos, Quinolonas</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Estratégia</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Infusão prolongada</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Dose alta única</td>
+            </tr>
+          </table>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; border-left: 4px solid #0369a1; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Analogia Prática: O Atirador de Elite</h4>
+          <p style="font-size: 15px; line-height: 1.6;">
+            Estes medicamentos são como um <strong>Atirador de Elite</strong>. O que importa é a 
+            <strong>força e a precisão do primeiro tiro</strong> (o Cmax). Eles precisam dar um golpe 
+            tão forte que o patógeno é aniquilado rapidamente e não consegue se recuperar.
+          </p>
+        </div>
+      `,
+      question: {
+        text: "Para Aminoglicosídeos (medicamentos concentração-dependentes), qual é a meta terapêutica da relação Cmax/CIM?",
+        options: [
+          "Cmax/CIM de 8 a 10 para prever sucesso clínico",
+          "Cmax/CIM de 2 a 4 é suficiente",
+          "Cmax/CIM não é relevante para Aminoglicosídeos"
+        ],
+        correct: 0,
+        explanation: "Para Aminoglicosídeos, a meta terapêutica é uma relação Cmax/CIM de 8 a 10 para prever o sucesso clínico. Esses medicamentos são concentração-dependentes, funcionando como um 'atirador de elite' - precisam de um pico alto para aniquilar rapidamente o patógeno e impedir a emergência de resistência. A estratégia é dose alta em intervalo estendido."
+      }
+    },
+    {
+      title: "Card 5: O Benefício do PAE - Efeito Pós-Antibiótico",
+      content: `
+        <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #059669; margin-bottom: 15px;">⏳ O Benefício do PAE: Efeito Pós-Antibiótico</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            O <strong>Efeito Pós-Antibiótico (PAE)</strong> é um conceito crucial que justifica regimes 
+            de dosagem menos frequentes para certas classes de drogas.
+          </p>
+          
+          <h4 style="color: #047857; margin: 15px 0 10px 0;">🔬 O que é o PAE?</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            É o <strong>período de tempo em que a droga continua a inibir o crescimento bacteriano</strong> 
+            mesmo depois que sua concentração no local da infecção (sérica) caiu <strong>abaixo da CIM</strong>.
+          </p>
+          
+          <div style="background: #d1fae5; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #065f46; margin-bottom: 10px;">💡 Impacto Prático</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              Agentes com <strong>PAE longo podem ser dosados com menos frequência</strong>. Este atraso 
+              no recrescimento bacteriano é atribuído à dinâmica de desintoxicação da droga dentro das 
+              células bacterianas.
+            </p>
+            <p style="font-size: 14px; line-height: 1.6; font-style: italic;">
+              Mesmo com concentração sérica abaixo da CIM, a bactéria ainda está "atordoada" e não consegue 
+              se recuperar imediatamente.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #4b5563; margin-bottom: 10px;">📊 Exemplos Notáveis de PAE</h4>
+          <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+            <tr style="background: #10b981; color: white;">
+              <th style="padding: 10px; border: 1px solid #ddd;">Classe de Antibiótico</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">PAE contra Gram-negativos</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Implicação Clínica</th>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Aminoglicosídeos</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">2-6 horas</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">✅ Dose única diária</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Fluoroquinolonas</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">2-6 horas</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">✅ Dose única ou 2x/dia</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Beta-lactâmicos</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">Mínimo ou inexistente</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">❌ Doses mais frequentes necessárias</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Vancomicina</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">2-3 horas (Gram-positivos)</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">✅ Intervalos de 8-12h</td>
+            </tr>
+          </table>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #d97706; margin-bottom: 10px;">🎯 Validação Clínica: Aminoglicosídeos</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+            O PAE significativo dos Aminoglicosídeos (2-6 horas) valida a estratégia de <strong>Dosagem 
+            de Intervalo Estendido</strong> (ver Card 7).
+          </p>
+          <p style="font-size: 15px; line-height: 1.6;">
+            <strong>Exemplo:</strong> Gentamicina 5-7 mg/kg uma vez ao dia, em vez de 1 mg/kg três vezes 
+            ao dia. Mesmo com concentrações séricas caindo abaixo da CIM entre as doses, o PAE mantém a 
+            supressão bacteriana.
+          </p>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; border-left: 4px solid #0369a1; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Analogia Prática: O Nocaute</h4>
+          <p style="font-size: 15px; line-height: 1.6;">
+            O PAE é como um <strong>nocaute no boxe</strong>. Mesmo depois que o golpe (a droga) passou, 
+            o adversário (a bactéria) ainda está atordoado e não consegue se levantar imediatamente. 
+            Isso dá tempo para o próximo golpe chegar.
+          </p>
+        </div>
+      `,
+      question: {
+        text: "O que é o Efeito Pós-Antibiótico (PAE) e qual sua importância clínica?",
+        options: [
+          "É o período em que a droga continua inibindo crescimento bacteriano mesmo abaixo da CIM, permitindo dosagens menos frequentes",
+          "É o efeito colateral que ocorre após suspender o antibiótico",
+          "É a resistência que se desenvolve após uso prolongado do antibiótico"
+        ],
+        correct: 0,
+        explanation: "O Efeito Pós-Antibiótico (PAE) é o período em que a droga continua a inibir o crescimento bacteriano mesmo após sua concentração cair abaixo da CIM. Aminoglicosídeos e Fluoroquinolonas têm PAE de 2-6 horas contra Gram-negativos, permitindo dosagens menos frequentes (ex: dose única diária). Beta-lactâmicos têm PAE mínimo, necessitando doses mais frequentes."
+      }
+    },
+    {
+      title: "Card 6: Otimização da Dose I - Infusão Prolongada",
+      content: `
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #0369a1; margin-bottom: 15px;">⏱️ Otimização da Dose I: Infusão Prolongada (Para Tempo)</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            Se o seu medicamento é <strong>dependente do tempo</strong> (T > CIM, como os beta-lactâmicos), 
+            a melhor forma de otimizar a dose é <strong>mantendo a concentração acima da CIM pelo maior 
+            tempo possível</strong>.
+          </p>
+          
+          <h4 style="color: #075985; margin: 15px 0 10px 0;">🎯 A Estratégia</h4>
+          <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+              <strong>Infusões Contínuas ou Prolongadas</strong>
+            </p>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li>Estender a infusão de <strong>30 minutos para 3-4 horas</strong></li>
+              <li>Ou até <strong>infusão contínua de 24 horas</strong></li>
+            </ul>
+          </div>
+          
+          <h4 style="color: #075985; margin: 15px 0 10px 0;">📊 O Resultado PK-PD</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Isso modifica a curva de concentração-tempo, garantindo que a concentração sérica se mantenha 
+            <strong>acima do limiar do CIM por uma duração muito maior</strong>.
+          </p>
+          
+          <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h4 style="color: #059669; margin-bottom: 10px;">💊 Exemplo Prático: Piperacilina-tazobactam</h4>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+              <strong>Regime Tradicional:</strong> 4,5g IV em 30 minutos, a cada 6-8 horas<br>
+              <strong>Regime Otimizado:</strong> 4,5g IV em infusão prolongada de 4 horas, a cada 8 horas
+            </p>
+            
+            <div style="background: #f0fdf4; padding: 15px; border-radius: 8px; margin: 10px 0;">
+              <h5 style="color: #166534; margin-bottom: 10px;">📈 Evidências Clínicas</h5>
+              <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+                Meta-análises de estudos em <strong>pacientes graves</strong> sugerem que a infusão 
+                prolongada de Piperacilina-tazobactam ou carbapenêmicos pode estar associada a um 
+                <strong>risco menor de mortalidade</strong> em comparação com infusões intermitentes curtas.
+              </p>
+              <p style="font-size: 14px; line-height: 1.6;">
+                Em alguns casos, essa técnica permite manter a eficácia com uma <strong>dose diária total 
+                até 30% menor</strong>.
               </p>
             </div>
-          `,
-          question: {
-            text: "O que estuda a farmacocinética?",
-            options: [
-              "O que o medicamento faz no organismo",
-              "O que o organismo faz com o medicamento",
-              "A resistência bacteriana"
-            ],
-            correct: 1,
-            explanation: "Farmacocinética estuda o que o organismo faz com o medicamento: absorção, distribuição, metabolismo e excreção."
-          }
-        }
-      ]
+          </div>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #4b5563; margin-bottom: 10px;">📊 Comparação Visual: Infusão Curta vs. Prolongada</h4>
+          <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+            <tr style="background: #3b82f6; color: white;">
+              <th style="padding: 10px; border: 1px solid #ddd;">Parâmetro</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Infusão Curta (30 min)</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Infusão Prolongada (4h)</th>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Cmax (Pico)</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">Muito alto ⬆️⬆️⬆️</td>
+              <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">Moderado ⬆️</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>T > CIM</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">30-40% ⏱️</td>
+              <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">60-70% ⏱️⏱️</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Eficácia</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">Boa ✓</td>
+              <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">Melhor ✓✓</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Aplicação</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Pacientes estáveis</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Pacientes graves/críticos</td>
+            </tr>
+          </table>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 15px 0;">
+          <h4 style="color: #d97706; margin-bottom: 10px;">⚠️ Considerações Práticas</h4>
+          <ul style="margin-left: 20px; line-height: 1.8;">
+            <li>Requer acesso venoso estável</li>
+            <li>Pode limitar mobilidade do paciente</li>
+            <li>Especialmente útil em UTI e pacientes graves</li>
+            <li>Considerar estabilidade da droga em solução</li>
+          </ul>
+        </div>
+      `,
+      question: {
+        text: "Para medicamentos tempo-dependentes como beta-lactâmicos, qual estratégia de otimização de dose é mais eficaz?",
+        options: [
+          "Aumentar a dose e manter infusão rápida de 30 minutos",
+          "Infusões prolongadas (3-4 horas) ou contínuas para maximizar T > CIM",
+          "Reduzir a frequência para uma vez ao dia em dose alta"
+        ],
+        correct: 1,
+        explanation: "Para medicamentos tempo-dependentes, a estratégia ideal é usar infusões prolongadas (3-4 horas) ou contínuas (24h) para maximizar o T > CIM. Estudos mostram que infusão prolongada de Piperacilina-tazobactam ou carbapenêmicos em pacientes graves está associada a menor mortalidade comparada a infusões curtas, podendo até reduzir a dose total diária em até 30%."
+      }
+    },
+    {
+      title: "Card 7: Otimização da Dose II - Dose Alta e Intervalo Estendido",
+      content: `
+        <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #dc2626; margin-bottom: 15px;">💥 Otimização da Dose II: Dose Alta e Intervalo Estendido</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            Se o seu medicamento é <strong>dependente da concentração</strong> e tem um <strong>longo 
+            PAE</strong> (ver Card 5), a estratégia é dar o <strong>golpe mais forte possível</strong> 
+            e permitir que o corpo o elimine rapidamente.
+          </p>
+          
+          <h4 style="color: #b91c1c; margin: 15px 0 10px 0;">🎯 A Estratégia</h4>
+          <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+              <strong>Dose Alta em Intervalo Estendido</strong> (ex: dose diária única)
+            </p>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li>Administrar uma <strong>dose alta única</strong> por dia</li>
+              <li>Maximizar o <strong>Cmax/CIM</strong></li>
+              <li>Aproveitar o <strong>PAE longo</strong> para manter eficácia</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #4b5563; margin-bottom: 10px;">💊 Exemplo Prático: Aminoglicosídeos</h4>
+          
+          <div style="background: #fff7ed; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #c2410c; margin-bottom: 10px;">📊 Evolução do Regime de Dosagem</h5>
+            <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+              <tr style="background: #ef4444; color: white;">
+                <th style="padding: 10px; border: 1px solid #ddd;">Regime</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Dose</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Frequência</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Status</th>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Tradicional</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">1 mg/kg</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">3x/dia (a cada 8h)</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">❌ Obsoleto</td>
+              </tr>
+              <tr style="background: #f9fafb;">
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Moderno</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">5-7 mg/kg</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">1x/dia (dose única)</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">✅ Preferido</td>
+              </tr>
+            </table>
+          </div>
+          
+          <div style="background: #dcfce7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #166534; margin-bottom: 10px;">📈 O Resultado PK-PD</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              Este regime <strong>maximiza a relação Cmax/MIC</strong>, atingindo um pico alto (Cmax) 
+              para aniquilar rapidamente o patógeno, contando com o longo PAE para manter a eficácia 
+              mesmo durante as horas em que a concentração sérica está abaixo da CIM.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 10px;">✅ Vantagens da Dose Única Diária</h4>
+          <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+            <tr style="background: #0ea5e9; color: white;">
+              <th style="padding: 10px; border: 1px solid #ddd;">Vantagem</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Explicação</th>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Maior Eficácia</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Cmax/CIM mais alto = morte bacteriana mais rápida</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Menor Nefrotoxicidade</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Menos acúmulo nos túbulos renais</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Menor Ototoxicidade</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Menos exposição cumulativa</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Conveniência</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Apenas 1 administração/dia</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Custo-Efetividade</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Menos tempo de enfermagem e materiais</td>
+            </tr>
+          </table>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 15px 0;">
+          <h4 style="color: #d97706; margin-bottom: 10px;">⚠️ Considerações Importantes</h4>
+          <ul style="margin-left: 20px; line-height: 1.8;">
+            <li><strong>Função renal:</strong> Ajustar dose em pacientes com clearance reduzido</li>
+            <li><strong>Monitoramento:</strong> TDM (Monitoramento Terapêutico) recomendado</li>
+            <li><strong>Contraindicações:</strong> Endocardite, gestação, queimados extensos</li>
+            <li><strong>Meta Cmax:</strong> 8-10x a CIM do patógeno</li>
+          </ul>
+        </div>
+      `,
+      question: {
+        text: "Qual é a principal vantagem do regime de dose única diária de Aminoglicosídeos (5-7 mg/kg/dia) comparado ao regime tradicional (1 mg/kg 3x/dia)?",
+        options: [
+          "Maximiza Cmax/CIM para maior eficácia, com menor nefrotoxicidade e ototoxicidade",
+          "Reduz o custo do medicamento pela metade",
+          "Elimina completamente a necessidade de monitoramento terapêutico"
+        ],
+        correct: 0,
+        explanation: "O regime de dose única diária (5-7 mg/kg/dia) maximiza a relação Cmax/CIM, resultando em morte bacteriana mais rápida e eficaz. Além disso, reduz nefrotoxicidade e ototoxicidade devido a menos acúmulo nos túbulos renais e menor exposição cumulativa. Também oferece conveniência (1 administração/dia) e custo-efetividade, aproveitando o PAE longo dos Aminoglicosídeos."
+      }
+    },
+    {
+      title: "Card 8: O Efeito Oculto - Ligação Proteica e Distribuição",
+      content: `
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #7c3aed; margin-bottom: 15px;">🔬 O Efeito Oculto: Ligação Proteica e Distribuição</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            A forma como um medicamento se distribui no corpo é vital. A <strong>Distribuição</strong> é 
+            descrita pelo <strong>Volume de Distribuição (Vd)</strong>, que não é um volume fisiológico 
+            real, mas sim um valor que relaciona a quantidade de droga no corpo com sua concentração no plasma.
+          </p>
+          
+          <h4 style="color: #6d28d9; margin: 15px 0 10px 0;">🎯 O Fator Chave: Fração Livre</h4>
+          <div style="background: #ede9fe; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+              Apenas a <strong>droga não ligada a proteínas séricas</strong> (como albumina ou glicoproteína 
+              ácida alfa-1) está disponível para exercer a atividade antimicrobiana.
+            </p>
+            <p style="font-size: 14px; line-height: 1.6; font-style: italic;">
+              A fração ligada a proteínas está "sequestrada" e inativa.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 10px;">📊 Proteínas Séricas e Ligação</h4>
+          <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+            <tr style="background: #7c3aed; color: white;">
+              <th style="padding: 10px; border: 1px solid #ddd;">Tipo de Droga</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Proteína de Ligação</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Vd</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Exemplos</th>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Drogas Ácidas</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Albumina</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Menor (mais no plasma)</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Beta-lactâmicos</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Drogas Básicas</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Glicoproteína ácida α-1</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Maior (mais nos tecidos)</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Macrolídeos</td>
+            </tr>
+          </table>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #d97706; margin-bottom: 10px;">🏥 Relevância Clínica</h4>
+          
+          <div style="background: #fff7ed; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #c2410c; margin-bottom: 10px;">📉 Hipoalbuminemia em Pacientes Críticos</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              Uma mudança na concentração de proteínas (ex: <strong>hipoalbuminemia em pacientes críticos</strong>) 
+              pode alterar a fração livre da droga, impactando a PK.
+            </p>
+            <p style="font-size: 14px; line-height: 1.6;">
+              <strong>Exemplo:</strong> Em paciente com albumina baixa (2,0 g/dL vs. normal 4,0 g/dL), 
+              uma droga 90% ligada à albumina terá muito mais fração livre circulante, aumentando tanto 
+              eficácia quanto risco de toxicidade.
+            </p>
+          </div>
+          
+          <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin: 10px 0;">
+            <h5 style="color: #075985; margin-bottom: 10px;">⚖️ Impacto Clínico</h5>
+            <p style="font-size: 14px; line-height: 1.6;">
+              Embora as alterações na PK sejam significativas, as alterações na PD geralmente são limitadas 
+              porque o corpo compensa aumentando a eliminação da fração livre. No entanto, em pacientes 
+              críticos com múltiplas disfunções orgânicas, esse equilíbrio pode ser perdido.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #4b5563; margin-bottom: 10px;">📐 Entendendo o Volume de Distribuição (Vd)</h4>
+          
+          <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 10px 0;">
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              <strong>Fórmula:</strong> Vd = Quantidade total de droga no corpo / Concentração plasmática
+            </p>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>Vd baixo (0,1-0,3 L/kg):</strong> Droga fica no plasma (ex: Vancomicina)</li>
+              <li><strong>Vd médio (0,5-1,0 L/kg):</strong> Distribuição pelo líquido extracelular</li>
+              <li><strong>Vd alto (>2 L/kg):</strong> Ampla distribuição tecidual (ex: Azitromicina, Vd ~30 L/kg)</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; border-left: 4px solid #0369a1; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Analogia Prática</h4>
+          <p style="font-size: 15px; line-height: 1.6;">
+            O <strong>Vd é como o espalhamento do medicamento no corpo</strong>. Se a droga se liga muito 
+            ao plasma (alta ligação proteica), ela fica "presa" na circulação, resultando em um Vd menor. 
+            Se a droga penetra bem nos tecidos, o Vd é maior - é como se ela "desaparecesse" do plasma 
+            para se esconder nos tecidos.
+          </p>
+        </div>
+      `,
+      question: {
+        text: "Por que apenas a fração livre (não ligada a proteínas) de um antimicrobiano é farmacologicamente ativa?",
+        options: [
+          "Porque a fração ligada a proteínas está sequestrada e não pode exercer atividade antimicrobiana",
+          "Porque a fração ligada é metabolizada mais rapidamente",
+          "Porque a ligação proteica aumenta a toxicidade do medicamento"
+        ],
+        correct: 0,
+        explanation: "Apenas a droga não ligada a proteínas séricas (fração livre) está disponível para exercer atividade antimicrobiana. A fração ligada está 'sequestrada' e inativa. Drogas ácidas ligam-se à albumina (Vd menor), drogas básicas à glicoproteína ácida α-1 (Vd maior). Em hipoalbuminemia, aumenta a fração livre, alterando PK e potencialmente eficácia/toxicidade."
+      }
+    },
+    {
+      title: "Card 9: Os Boosters e o Metabolismo - Inibição do CYP",
+      content: `
+        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #d97706; margin-bottom: 15px;">🧬 Os "Boosters" e o Metabolismo: Inibição do CYP</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            A eliminação de drogas envolve a <strong>biotransformação (metabolismo)</strong>, frequentemente 
+            mediada pelo sistema de enzimas <strong>Citocromo P-450 (CYP)</strong> no fígado.
+          </p>
+          
+          <h4 style="color: #b45309; margin: 15px 0 10px 0;">🔬 O Sistema Citocromo P-450</h4>
+          <div style="background: #fff7ed; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+              O sistema CYP é uma <strong>família de enzimas hepáticas</strong> responsável pelo metabolismo 
+              de aproximadamente 75% de todos os medicamentos.
+            </p>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>CYP3A4/5:</strong> Metaboliza ~50% dos medicamentos</li>
+              <li><strong>CYP2D6:</strong> Metaboliza ~25% dos medicamentos</li>
+              <li><strong>CYP2C9:</strong> Metaboliza ~15% dos medicamentos</li>
+              <li><strong>CYP2C19:</strong> Metaboliza ~10% dos medicamentos</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ A Variabilidade</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            O metabolismo pode ser <strong>altamente variável</strong> devido a:
+          </p>
+          
+          <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #991b1b; margin-bottom: 10px;">🧬 Polimorfismos Genéticos</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              Pelo menos <strong>1% da população</strong> exibe atividade enzimática diferente:
+            </p>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>Metabolizadores Lentos:</strong> Enzima pouco ativa → acúmulo de droga</li>
+              <li><strong>Metabolizadores Normais:</strong> Atividade enzimática padrão</li>
+              <li><strong>Metabolizadores Rápidos:</strong> Enzima muito ativa → eliminação rápida</li>
+              <li><strong>Metabolizadores Ultrarrápidos:</strong> Múltiplas cópias do gene</li>
+            </ul>
+          </div>
+          
+          <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 10px 0;">
+            <h5 style="color: #991b1b; margin-bottom: 10px;">💊 Interações Medicamentosas</h5>
+            <p style="font-size: 14px; line-height: 1.6;">
+              Medicamentos podem <strong>inibir ou induzir</strong> enzimas CYP, alterando o metabolismo 
+              de outros medicamentos administrados concomitantemente.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #059669; margin-bottom: 10px;">🚀 A Estratégia de Booster</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Um <strong>"booster"</strong> é um medicamento usado para <strong>inibir o metabolismo</strong> 
+            de um segundo medicamento, aumentando sua exposição sistêmica (AUC).
+          </p>
+          
+          <div style="background: #f0fdf4; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #166534; margin-bottom: 10px;">💊 Exemplo Prático: Ritonavir</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              O <strong>Ritonavir</strong> é um inibidor potente do CYP3A. Ele é usado em combinação com 
+              outros agentes para diminuir a velocidade com que o corpo elimina o medicamento principal.
+            </p>
+            
+            <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+              <tr style="background: #10b981; color: white;">
+                <th style="padding: 10px; border: 1px solid #ddd;">Aplicação</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Medicamento Principal</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Benefício</th>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>HIV</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Inibidores de Protease (Lopinavir, Darunavir)</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">↑ AUC, doses menores</td>
+              </tr>
+              <tr style="background: #f9fafb;">
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>COVID-19</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Nirmatrelvir (Paxlovid)</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">↑ Meia-vida, 2x/dia</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #4b5563; margin-bottom: 10px;">🎯 Vantagens da Estratégia de Booster</h4>
+          <ul style="margin-left: 20px; line-height: 1.8;">
+            <li><strong>Doses totais menores:</strong> Menos medicamento principal necessário</li>
+            <li><strong>Dosagens menos frequentes:</strong> Melhora adesão do paciente</li>
+            <li><strong>Eficácia mantida:</strong> Concentrações terapêuticas prolongadas</li>
+            <li><strong>Custo-efetividade:</strong> Redução de custos com medicamento principal</li>
+          </ul>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 15px 0;">
+          <h4 style="color: #d97706; margin-bottom: 10px;">⚠️ Cuidados com Boosters</h4>
+          <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+            Esta é uma forma <strong>intencional</strong> de explorar a inibição enzimática para aumentar 
+            a eficácia. No entanto, o Ritonavir pode interagir com MUITOS outros medicamentos que também 
+            são metabolizados pelo CYP3A.
+          </p>
+          <p style="font-size: 14px; line-height: 1.6;">
+            <strong>Importante:</strong> Sempre verificar interações medicamentosas antes de prescrever 
+            combinações com boosters.
+          </p>
+        </div>
+      `,
+      question: {
+        text: "Qual é o papel do Ritonavir quando usado como 'booster' em combinações medicamentosas?",
+        options: [
+          "Aumenta a absorção intestinal do medicamento principal",
+          "Inibe o CYP3A para diminuir o metabolismo do medicamento principal, aumentando sua exposição sistêmica",
+          "Aumenta a distribuição tecidual do medicamento principal"
+        ],
+        correct: 1,
+        explanation: "Ritonavir é um inibidor potente do CYP3A usado como 'booster' para diminuir a velocidade de eliminação do medicamento principal, aumentando sua exposição sistêmica (AUC). Isso permite doses menores e/ou menos frequentes mantendo eficácia clínica. Exemplos: Lopinavir/Ritonavir (HIV) e Nirmatrelvir/Ritonavir-Paxlovid (COVID-19). É uma exploração intencional da inibição enzimática."
+      }
+    },
+    {
+      title: "Card 10: Medicina Individualizada - Monitoramento Terapêutico (TDM)",
+      content: `
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #0369a1; margin-bottom: 15px;">🎯 Medicina Individualizada: Monitoramento Terapêutico (TDM)</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            Devido à <strong>grande variabilidade interindividual na PK</strong> (metabolismo, distribuição, 
+            eliminação) e à <strong>estreita janela terapêutica</strong> de algumas drogas (onde a dose 
+            eficaz é próxima da dose tóxica), é necessário refinar a dose além da "média populacional".
+          </p>
+          
+          <h4 style="color: #075985; margin: 15px 0 10px 0;">🔬 O que é o TDM?</h4>
+          <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+              <strong>Monitoramento Terapêutico de Drogas (TDM)</strong> é a medição das concentrações 
+              séricas do fármaco para <strong>individualizar o regime de dosagem</strong>.
+            </p>
+            <p style="font-size: 14px; line-height: 1.6; font-style: italic;">
+              Objetivo: Garantir que o paciente atinja concentrações terapêuticas sem toxicidade.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #4b5563; margin-bottom: 10px;">💊 Drogas Chave que Requerem TDM</h4>
+          
+          <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #d97706; margin-bottom: 10px;">1️⃣ Vancomicina</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              <strong>Prática Antiga:</strong> Medição do vale (C<sub>min</sub>) com alvo de 15-20 mg/L
+            </p>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              <strong>Prática Atual:</strong> Estimativa da <strong>AUC (Área Sob a Curva)</strong>, que 
+              se correlaciona melhor com o efeito
+            </p>
+            <p style="font-size: 14px; line-height: 1.6;">
+              <strong>Alvo:</strong> AUC/MIC > 400 h⁻¹ é um preditor de maior probabilidade de efeito 
+              contra <em>S. aureus</em>
+            </p>
+          </div>
+          
+          <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #dc2626; margin-bottom: 10px;">2️⃣ Aminoglicosídeos</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              <strong>Pico (Cmax):</strong> Deve ser 8-10x a CIM do patógeno
+            </p>
+            <p style="font-size: 14px; line-height: 1.6;">
+              <strong>Vale (C<sub>min</sub>):</strong> Deve ser <1 mg/L para minimizar nefrotoxicidade
+            </p>
+          </div>
+          
+          <div style="background: #ede9fe; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #7c3aed; margin-bottom: 10px;">3️⃣ Antifúngicos Triazólicos</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              <strong>Voriconazol, Itraconazol, Posaconazol:</strong> TDM é necessário devido a:
+            </p>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li>Absorção oral imprevisível</li>
+              <li>Polimorfismo genético nos enzimas CYP (especialmente CYP2C19 para Voriconazol)</li>
+              <li>Dose-exposição altamente variável</li>
+            </ul>
+            <p style="font-size: 14px; line-height: 1.6; margin-top: 10px;">
+              <strong>Alvo Voriconazol:</strong> Vale de 1-5 mg/L (eficácia e segurança)
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #059669; margin-bottom: 10px;">📊 Quando Solicitar TDM?</h4>
+          <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+            <tr style="background: #10b981; color: white;">
+              <th style="padding: 10px; border: 1px solid #ddd;">Situação Clínica</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Justificativa</th>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Disfunção renal</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Alteração na eliminação</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Obesidade</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Alteração no Vd</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Paciente crítico</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">PK imprevisível</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Falha terapêutica</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Verificar se dose é adequada</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Toxicidade suspeita</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Confirmar sobredose</td>
+            </tr>
+          </table>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; border-left: 4px solid #0369a1; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Analogia Prática: O Ajuste de Mira</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+            O TDM é o seu <strong>Ajuste de Mira</strong>. Você usa a dose populacional como ponto de 
+            partida, mas monitora o que realmente está acontecendo dentro do paciente para garantir que 
+            o alvo seja atingido de forma segura.
+          </p>
+          <p style="font-size: 15px; line-height: 1.6;">
+            É a diferença entre atirar às cegas e usar um sistema de mira com feedback em tempo real.
+          </p>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 15px 0;">
+          <h4 style="color: #d97706; margin-bottom: 10px;">⚠️ Limitações do TDM</h4>
+          <ul style="margin-left: 20px; line-height: 1.8;">
+            <li>Requer laboratório especializado</li>
+            <li>Resultados podem demorar horas a dias</li>
+            <li>Custo adicional</li>
+            <li>Necessita coleta no momento correto (pico, vale)</li>
+            <li>Interpretação requer expertise clínica</li>
+          </ul>
+        </div>
+      `,
+      question: {
+        text: "Por que o Monitoramento Terapêutico de Drogas (TDM) é especialmente importante para Voriconazol?",
+        options: [
+          "Porque é um medicamento muito caro",
+          "Devido à absorção oral imprevisível e polimorfismo genético no CYP2C19, tornando a dose-exposição altamente variável",
+          "Porque deve ser administrado apenas por via intravenosa"
+        ],
+        correct: 1,
+        explanation: "TDM é essencial para Voriconazol devido à absorção oral imprevisível e polimorfismo genético no CYP2C19, tornando a relação dose-exposição altamente variável. O alvo terapêutico é um vale de 1-5 mg/L. Outros antifúngicos triazólicos (Itraconazol, Posaconazol) também requerem TDM. O TDM é o 'ajuste de mira' - usa dose populacional como partida, mas monitora para garantir alvo terapêutico seguro."
+      }
+    }
+  ]
     },
     {
       id: 3,
