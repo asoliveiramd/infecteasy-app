@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react'
 import './App.css'
-import { antimicrobianosModule } from './antimicrobianos_module.js'
 
 const App = () => {
   // Estados principais
@@ -5236,8 +5235,7 @@ const App = () => {
           ]
         }
       ]
-    },
-    antimicrobianos: antimicrobianosModule
+    }
   }
 
   // Funções de autenticação
@@ -5637,39 +5635,6 @@ const App = () => {
                         <p className="text-sm text-gray-600">{lesson.duration} • {lesson.xp} XP</p>
                       </div>
                       <div className="text-purple-600">▶️</div>
-                    </div>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Módulo de Curso Extensivo de Antimicrobianos */}
-            <div className="bg-white rounded-xl shadow-lg p-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Curso Extensivo de Antimicrobianos</h3>
-              <p className="text-gray-600 mb-4">Curso completo sobre antimicrobianos: antibióticos, antifúngicos, antivirais e antiparasitários</p>
-              <div className="mb-4">
-                <div className="flex justify-between text-sm text-gray-600 mb-1">
-                  <span>Progresso</span>
-                  <span>0/32</span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div className="bg-green-600 h-2 rounded-full" style={{width: '0%'}}></div>
-                </div>
-              </div>
-              
-              <div className="space-y-3">
-                {modulesData.antimicrobianos?.lessons.map((lesson, index) => (
-                  <button
-                    key={lesson.id}
-                    onClick={() => startLesson('antimicrobianos', lesson.id)}
-                    className="w-full text-left p-4 rounded-lg border border-gray-200 hover:border-green-300 hover:bg-green-50 transition-colors"
-                  >
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h4 className="font-medium text-gray-900">{lesson.title}</h4>
-                        <p className="text-sm text-gray-600">{lesson.duration} • {lesson.xp} XP</p>
-                      </div>
-                      <div className="text-green-600">▶️</div>
                     </div>
                   </button>
                 ))}
