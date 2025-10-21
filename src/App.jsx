@@ -3382,6 +3382,7 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "A principal vantagem dos métodos moleculares é a rapidez, permitindo detecção de genes de resistência diretamente em amostras clínicas em 1-3 horas, comparado aos métodos fenotípicos que requerem crescimento bacteriano (18-48 horas)."
+<<<<<<< Updated upstream
               }
             },
             {
@@ -3995,6 +3996,8 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "A principal vantagem dos métodos moleculares é a rapidez, permitindo detecção de genes de resistência diretamente em amostras clínicas em 1-3 horas, comparado aos métodos fenotípicos que requerem crescimento bacteriano (18-48 horas)."
+=======
+>>>>>>> Stashed changes
               }
             },
             {
