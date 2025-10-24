@@ -3100,74 +3100,555 @@ const App = () => {
         },
         {
           id: 5,
-          title: "Métodos Quantitativos - CIM",
-          duration: "16 min",
-          xp: 80,
+          title: "Métodos Quantitativos",
+          duration: "30 min",
+          xp: 150,
           sections: [
-            {
-              title: "Concentração Inibitória Mínima",
-              content: `
-                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #0369a1; margin-bottom: 15px;">🔢 CIM - Concentração Inibitória Mínima</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    A <strong>CIM</strong> é a menor concentração de um antimicrobiano capaz de inibir o crescimento 
-                    visível de uma bactéria após 16-20 horas de incubação. É expressa em mg/L ou μg/mL e fornece 
-                    informação quantitativa precisa sobre a suscetibilidade.
-                  </p>
-                </div>
-                
-                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
-                  <h4 style="color: #059669; margin-bottom: 10px;">💡 Vantagens da CIM</h4>
-                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li>Resultado quantitativo preciso</li>
-                    <li>Permite ajuste de dose baseado em PK/PD</li>
-                    <li>Melhor para infecções graves</li>
-                    <li>Padrão-ouro para pesquisa</li>
-                  </ul>
-                </div>
-              `,
-              question: {
-                text: "O que é a Concentração Inibitória Mínima (CIM)?",
-                options: [
-                  "O diâmetro do halo de inibição medido no teste de difusão em disco.",
-                  "A menor concentração de um agente específico necessária para inibir o crescimento visível de um organismo in vitro.",
-                  "A concentração de um antibiótico que é bactericida para o organismo."
-                ],
-                correct: 1,
-                explanation: "A CIM é definida como a menor concentração de um antimicrobiano que inibe completamente o crescimento visível de uma bactéria após incubação padronizada, fornecendo uma medida quantitativa precisa da suscetibilidade."
-              }
-            },
-            {
-              title: "Métodos de Determinação da CIM",
-              content: `
-                <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #6d28d9; margin-bottom: 15px;">🧪 Métodos para CIM</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    <strong>Diluição em caldo:</strong> Método de referência onde o antimicrobiano é diluído 
-                    seriadamente em caldo de cultura. Permite determinação precisa da CIM.
-                  </p>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    <strong>Diluição em ágar:</strong> Antimicrobiano incorporado ao ágar em diferentes concentrações. 
-                    Permite testar múltiplos isolados simultaneamente.
-                  </p>
-                  <p style="font-size: 16px; line-height: 1.6;">
-                    <strong>E-test (gradiente):</strong> Fita plástica com gradiente de concentração do antimicrobiano. 
-                    Combina facilidade do disco-difusão com precisão da CIM.
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "Como o teste de gradiente antimicrobiano (E-test) determina a CIM?",
-                options: [
-                  "Pela cor do meio de cultura após a incubação.",
-                  "Pela intersecção da zona elíptica de inibição do crescimento com a fita que contém um gradiente de concentração do antimicrobiano.",
-                  "Pela ausência de turbidez no tubo com a menor concentração do antibiótico."
-                ],
-                correct: 1,
-                explanation: "No E-test, a CIM é determinada no ponto onde a zona elíptica de inibição intersecta a fita com gradiente de concentração, fornecendo um valor quantitativo direto da concentração inibitória mínima."
-              }
-            }
-          ]
+    {
+      title: "Card 1: Vantagens dos Métodos Quantitativos",
+      content: `
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #0369a1; margin-bottom: 15px;">✅ Vantagens dos Métodos Quantitativos</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            Os métodos quantitativos representam o <strong>padrão-ouro</strong> para avaliação de 
+            sensibilidade antimicrobiana, oferecendo vantagens significativas sobre métodos qualitativos.
+          </p>
+          
+          <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h4 style="color: #1e40af; margin-bottom: 15px;">🎯 Precisão Diagnóstica</h4>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+              Permitem a determinação precisa da <strong>Concentração Inibitória Mínima (CIM)</strong>, 
+              considerada o <strong>padrão-ouro</strong> para avaliação de sensibilidade.
+            </p>
+            <p style="font-size: 14px; line-height: 1.6; font-style: italic;">
+              A CIM fornece um valor numérico exato, permitindo decisões terapêuticas mais precisas.
+            </p>
+          </div>
+          
+          <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h4 style="color: #059669; margin-bottom: 15px;">🌍 Padronização Internacional</h4>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+              Protocolos bem estabelecidos publicados por organizações como <strong>CLSI</strong>, 
+              <strong>EUCAST</strong> e <strong>FDA</strong> garantem resultados confiáveis e comparáveis.
+            </p>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>CLSI:</strong> Clinical and Laboratory Standards Institute (EUA)</li>
+              <li><strong>EUCAST:</strong> European Committee on Antimicrobial Susceptibility Testing</li>
+              <li><strong>FDA:</strong> Food and Drug Administration (EUA)</li>
+            </ul>
+          </div>
+          
+          <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h4 style="color: #d97706; margin-bottom: 15px;">💊 Aplicação Clínica</h4>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+              Existem <strong>infecções específicas</strong> para as quais um resultado quantitativo é 
+              essencial para otimizar o regime de tratamento antimicrobiano.
+            </p>
+            <div style="background: #fff7ed; padding: 15px; border-radius: 8px; margin: 10px 0;">
+              <h5 style="color: #c2410c; margin-bottom: 10px;">📋 Exemplos de Aplicação Clínica</h5>
+              <ul style="margin-left: 20px; line-height: 1.8;">
+                <li><strong>Endocardite:</strong> Determinar dose ideal de antibióticos</li>
+                <li><strong>Meningite:</strong> Garantir penetração adequada no SNC</li>
+                <li><strong>Osteomielite:</strong> Terapia prolongada requer CIM precisa</li>
+                <li><strong>Bacteremia:</strong> Ajustar dose em pacientes críticos</li>
+                <li><strong>Infecções por patógenos resistentes:</strong> Orientar terapia combinada</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #4b5563; margin-bottom: 10px;">📊 Comparação: Qualitativo vs. Quantitativo</h4>
+          <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+            <tr style="background: #3b82f6; color: white;">
+              <th style="padding: 10px; border: 1px solid #ddd;">Característica</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Método Qualitativo</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Método Quantitativo</th>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Resultado</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">S / I / R</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Valor numérico (CIM)</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Precisão</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Moderada</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Alta (padrão-ouro)</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Custo</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Baixo</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Elevado</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Tempo</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Rápido</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Mais demorado</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Aplicação</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Triagem rotineira</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Casos complexos</td>
+            </tr>
+          </table>
+        </div>
+      `,
+      question: {
+        text: "Qual é a principal vantagem dos métodos que determinam a Concentração Inibitória Mínima (CIM)?",
+        options: [
+          "Permitem apenas identificar se a bactéria é sensível ou resistente, sem quantificar a resposta",
+          "Proporcionam uma avaliação quantitativa precisa da sensibilidade antimicrobiana, servindo como padrão-ouro para orientação terapêutica",
+          "São utilizados apenas para fins de pesquisa, sem aplicação clínica relevante"
+        ],
+        correct: 1,
+        explanation: "A principal vantagem dos métodos quantitativos é proporcionar uma avaliação quantitativa precisa da sensibilidade antimicrobiana através da determinação da CIM, considerada o padrão-ouro. Isso permite decisões terapêuticas mais precisas, especialmente em infecções graves como endocardite, meningite e osteomielite, onde um resultado numérico exato é essencial para otimizar o regime de tratamento."
+      }
+    },
+    {
+      title: "Card 2: Concentração Inibitória Mínima (CIM)",
+      content: `
+        <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #dc2626; margin-bottom: 15px;">🎯 Concentração Inibitória Mínima (CIM)</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            A <strong>Concentração Inibitória Mínima (CIM)</strong> é a menor concentração de um 
+            antimicrobiano capaz de <strong>inibir o crescimento visível</strong> de um microrganismo 
+            após incubação em condições padronizadas.
+          </p>
+          
+          <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h4 style="color: #991b1b; margin-bottom: 10px;">📐 Definição Técnica</h4>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              <strong>CIM (MIC - Minimum Inhibitory Concentration):</strong> Menor concentração de 
+              antimicrobiano (em mg/L ou μg/mL) que previne o crescimento bacteriano visível após 
+              16-20 horas de incubação a 35-37°C.
+            </p>
+            <p style="font-size: 14px; line-height: 1.6; font-style: italic;">
+              Importante: A CIM inibe o crescimento, mas não necessariamente mata a bactéria.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 10px;">🔬 Interpretação da CIM</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            A CIM é comparada com <strong>pontos de corte (breakpoints)</strong> estabelecidos por 
+            organizações internacionais para classificar o microrganismo como:
+          </p>
+          
+          <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+            <tr style="background: #0ea5e9; color: white;">
+              <th style="padding: 10px; border: 1px solid #ddd;">Categoria</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Interpretação</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Significado Clínico</th>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Sensível (S)</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">CIM ≤ ponto de corte S</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Alta probabilidade de sucesso terapêutico</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Intermediário (I)</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Entre S e R</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Eficaz em doses altas ou sítios concentrados</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Resistente (R)</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">CIM > ponto de corte R</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Alta probabilidade de falha terapêutica</td>
+            </tr>
+          </table>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #d97706; margin-bottom: 10px;">💡 Exemplo Prático</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+            <strong>Situação:</strong> <em>E. coli</em> isolada de urina, testada contra Ciprofloxacino
+          </p>
+          <ul style="margin-left: 20px; line-height: 1.8;">
+            <li><strong>CIM determinada:</strong> 0,25 mg/L</li>
+            <li><strong>Ponto de corte CLSI (S):</strong> ≤ 1 mg/L</li>
+            <li><strong>Ponto de corte CLSI (R):</strong> ≥ 4 mg/L</li>
+            <li><strong>Interpretação:</strong> Sensível (S)</li>
+            <li><strong>Decisão clínica:</strong> Ciprofloxacino é apropriado para tratamento</li>
+          </ul>
+        </div>
+      `,
+      question: {
+        text: "O que significa a Concentração Inibitória Mínima (CIM) de um antimicrobiano?",
+        options: [
+          "A concentração que mata completamente todas as bactérias em 24 horas",
+          "A menor concentração capaz de inibir o crescimento visível do microrganismo após incubação padronizada",
+          "A dose máxima que pode ser administrada ao paciente sem toxicidade"
+        ],
+        correct: 1,
+        explanation: "A CIM é a menor concentração de antimicrobiano capaz de inibir o crescimento visível de um microrganismo após incubação em condições padronizadas (16-20h a 35-37°C). É importante notar que a CIM inibe o crescimento, mas não necessariamente mata a bactéria. A CIM é comparada com pontos de corte para classificar o microrganismo como Sensível, Intermediário ou Resistente."
+      }
+    },
+    {
+      title: "Card 3: Métodos de Determinação da CIM",
+      content: `
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #7c3aed; margin-bottom: 15px;">🔬 Métodos de Determinação da CIM</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            Existem diversos métodos padronizados para determinar a CIM, cada um com suas 
+            <strong>vantagens, limitações e aplicações específicas</strong>.
+          </p>
+          
+          <div style="background: #ede9fe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h4 style="color: #6d28d9; margin-bottom: 15px;">📊 Principais Métodos</h4>
+            <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+              <tr style="background: #7c3aed; color: white;">
+                <th style="padding: 10px; border: 1px solid #ddd;">Método</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Princípio</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Aplicação</th>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Diluição em Ágar</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Placas com diferentes [ATB]</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Múltiplos isolados</td>
+              </tr>
+              <tr style="background: #f9fafb;">
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Diluição em Caldo</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Tubos/microplacas com [ATB]</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Padrão-ouro</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Gradiente (Etest)</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Tira com gradiente de [ATB]</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Rotina clínica</td>
+              </tr>
+              <tr style="background: #f9fafb;">
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Automatizado</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Painéis comerciais</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Alto volume</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 10px;">⚖️ Critérios de Seleção do Método</h4>
+          <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin: 10px 0;">
+            <h5 style="color: #075985; margin-bottom: 10px;">🎯 Considerar:</h5>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>Volume de testes:</strong> Automatizado para alto volume</li>
+              <li><strong>Microrganismo:</strong> Alguns exigem métodos específicos</li>
+              <li><strong>Urgência:</strong> Gradiente mais rápido que diluição</li>
+              <li><strong>Custo:</strong> Diluição em ágar mais econômica para múltiplos isolados</li>
+              <li><strong>Expertise técnica:</strong> Automatizado requer menos treinamento</li>
+              <li><strong>Padronização:</strong> Seguir recomendações CLSI/EUCAST</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #d97706; margin-bottom: 10px;">🔍 Fatores que Afetam a CIM</h4>
+          <ul style="margin-left: 20px; line-height: 1.8;">
+            <li><strong>Inóculo bacteriano:</strong> Deve ser padronizado (0,5 McFarland)</li>
+            <li><strong>Meio de cultura:</strong> Mueller-Hinton é o padrão</li>
+            <li><strong>pH do meio:</strong> Afeta atividade de alguns antibióticos</li>
+            <li><strong>Temperatura de incubação:</strong> 35-37°C padronizado</li>
+            <li><strong>Tempo de incubação:</strong> 16-20 horas para maioria das bactérias</li>
+            <li><strong>Atmosfera:</strong> CO₂ para alguns microrganismos</li>
+          </ul>
+        </div>
+      `,
+      question: {
+        text: "Quais fatores devem ser rigorosamente padronizados para garantir a confiabilidade da determinação da CIM?",
+        options: [
+          "Apenas a concentração do antibiótico e o tipo de bactéria",
+          "Inóculo bacteriano, meio de cultura, pH, temperatura, tempo de incubação e atmosfera",
+          "Somente o tempo de incubação e a temperatura"
+        ],
+        correct: 1,
+        explanation: "A determinação confiável da CIM requer padronização rigorosa de múltiplos fatores: inóculo bacteriano (0,5 McFarland), meio de cultura (Mueller-Hinton), pH do meio, temperatura (35-37°C), tempo de incubação (16-20h) e atmosfera (CO₂ quando necessário). Variações em qualquer desses parâmetros podem alterar significativamente o resultado da CIM."
+      }
+    },
+    {
+      title: "Card 4: Principais Métodos Quantitativos",
+      content: `
+        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #d97706; margin-bottom: 15px;">🧪 Principais Métodos Quantitativos</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            Os métodos de <strong>diluição</strong> são os mais utilizados para determinação precisa 
+            da CIM, cada um com características específicas que os tornam adequados para diferentes 
+            situações clínicas e laboratoriais.
+          </p>
+        </div>
+        
+        <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #c2410c; margin-bottom: 15px;">🔬 Método 1: Diluição em Ágar</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Cultura em ágar com diferentes concentrações de antibiótico.
+          </p>
+          
+          <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #b45309; margin-bottom: 10px;">📋 Procedimento</h5>
+            <ol style="margin-left: 20px; line-height: 1.8;">
+              <li>Preparar placas de ágar Mueller-Hinton com diferentes concentrações de antibiótico</li>
+              <li>Inocular múltiplos isolados bacterianos em cada placa</li>
+              <li>Incubar a 35-37°C por 16-20 horas</li>
+              <li>Determinar a menor concentração que inibe crescimento visível</li>
+            </ol>
+          </div>
+          
+          <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #4b5563; margin-bottom: 10px;">✅ Vantagens</h5>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>Boa reprodutibilidade:</strong> Resultados consistentes entre laboratórios</li>
+              <li><strong>Eficiente para múltiplos isolados:</strong> Até 36 cepas por placa</li>
+              <li><strong>Visualização direta:</strong> Facilita detecção de crescimento misto</li>
+              <li><strong>Padrão de referência:</strong> Recomendado por CLSI/EUCAST</li>
+            </ul>
+          </div>
+          
+          <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #991b1b; margin-bottom: 10px;">❌ Desvantagens</h5>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>Metodologia trabalhosa:</strong> Preparo de múltiplas placas</li>
+              <li><strong>Alto custo de reagentes:</strong> Grande quantidade de ágar e antibiótico</li>
+              <li><strong>Tempo de execução:</strong> Preparo demorado</li>
+              <li><strong>Espaço de incubação:</strong> Requer múltiplas incubadoras</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="background: #e0f2fe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #075985; margin-bottom: 15px;">🧪 Método 2: Diluição em Caldo</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Série de diluições de antimicrobiano em meio líquido.
+          </p>
+          
+          <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #0369a1; margin-bottom: 10px;">📋 Procedimento</h5>
+            <ol style="margin-left: 20px; line-height: 1.8;">
+              <li>Preparar diluições seriadas do antibiótico em caldo Mueller-Hinton</li>
+              <li>Inocular suspensão bacteriana padronizada em cada tubo/poço</li>
+              <li>Incubar a 35-37°C por 16-20 horas</li>
+              <li>Determinar a menor concentração sem turvação visível</li>
+            </ol>
+          </div>
+          
+          <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #4b5563; margin-bottom: 10px;">✅ Vantagens</h5>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>Painéis comerciais disponíveis:</strong> Sistemas automatizados (Vitek, Phoenix)</li>
+              <li><strong>Alta reprodutibilidade:</strong> Padrão-ouro para CIM</li>
+              <li><strong>Permite determinar CIM com precisão:</strong> Valores exatos</li>
+              <li><strong>Microdiluição:</strong> Economia de reagentes em microplacas</li>
+              <li><strong>Automação:</strong> Reduz erro humano</li>
+            </ul>
+          </div>
+          
+          <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #991b1b; margin-bottom: 10px;">❌ Desvantagens</h5>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>Custo elevado por teste:</strong> Painéis comerciais são caros</li>
+              <li><strong>Equipamento necessário:</strong> Investimento em automação</li>
+              <li><strong>Manutenção:</strong> Sistemas automatizados requerem calibração</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #4b5563; margin-bottom: 10px;">📊 Comparação: Ágar vs. Caldo</h4>
+          <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+            <tr style="background: #6366f1; color: white;">
+              <th style="padding: 10px; border: 1px solid #ddd;">Característica</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Diluição em Ágar</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Diluição em Caldo</th>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Reprodutibilidade</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Boa</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Alta (padrão-ouro)</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Custo</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Alto (reagentes)</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Elevado (painéis)</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Trabalho</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Trabalhoso</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Automatizável</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Aplicação</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Múltiplos isolados</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Rotina clínica</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Precisão</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Boa</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Excelente</td>
+            </tr>
+          </table>
+        </div>
+      `,
+      question: {
+        text: "Qual é a principal característica comum entre os métodos de diluição em ágar e diluição em caldo para testes de sensibilidade antimicrobiana?",
+        options: [
+          "Ambos são métodos qualitativos e de baixo custo",
+          "Ambos permitem determinar a Concentração Inibitória Mínima (CIM) com boa reprodutibilidade, embora tenham custo elevado",
+          "Ambos utilizam apenas meios sólidos e dispensam o uso de antibióticos em diferentes concentrações"
+        ],
+        correct: 1,
+        explanation: "Tanto a diluição em ágar quanto a diluição em caldo são métodos quantitativos que permitem determinar a CIM com boa a alta reprodutibilidade. Ambos têm custo elevado: a diluição em ágar devido ao alto consumo de reagentes (ágar e antibióticos), e a diluição em caldo devido aos painéis comerciais. Apesar do custo, são métodos padrão-ouro para determinação precisa da CIM."
+      }
+    },
+    {
+      title: "Card 5: Métodos de Gradiente Antimicrobiano",
+      content: `
+        <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #059669; margin-bottom: 15px;">📏 Métodos de Gradiente Antimicrobiano</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            O método de <strong>gradiente antimicrobiano</strong> representa uma alternativa prática 
+            e eficiente entre os métodos de difusão em disco (qualitativos) e os métodos de diluição 
+            (quantitativos trabalhosos).
+          </p>
+          
+          <div style="background: #d1fae5; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h4 style="color: #065f46; margin-bottom: 10px;">🎯 Princípio do Método</h4>
+            <p style="font-size: 14px; line-height: 1.6;">
+              Utiliza <strong>tiras plásticas impregnadas com gradiente contínuo de concentração de 
+              antibiótico</strong>, permitindo leitura direta da CIM no ponto de intersecção entre a 
+              elipse de inibição e a tira graduada.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 15px;">📋 Procedimento</h4>
+          
+          <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #075985; margin-bottom: 10px;">🔬 Passo a Passo</h5>
+            <ol style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>Preparo do inóculo:</strong> Utiliza suspensão bacteriana padronizada 
+              (1 a 2×10⁸ UFC/mL, equivalente a 0,5 McFarland)</li>
+              <li><strong>Inoculação:</strong> Espalhar uniformemente em placa de Mueller-Hinton 
+              (técnica de swab em 3 direções)</li>
+              <li><strong>Aplicação da tira:</strong> Tiras plásticas impregnadas com gradiente de 
+              concentração de antibiótico são aplicadas (Ex: <strong>Etest</strong>, <strong>MIC Test Strip</strong>)</li>
+              <li><strong>Incubação:</strong> 35-37°C por 16-20 horas em atmosfera adequada</li>
+              <li><strong>Leitura:</strong> Observar o ponto de intersecção da elipse de inibição com 
+              a escala graduada na tira</li>
+            </ol>
+          </div>
+          
+          <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #d97706; margin-bottom: 10px;">📊 Exemplo de Leitura</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              <strong>Situação:</strong> Teste de Vancomicina contra <em>Staphylococcus aureus</em>
+            </p>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li>Tira graduada: 0,016 a 256 mg/L</li>
+              <li>Elipse de inibição intersecta a tira em: <strong>1,0 mg/L</strong></li>
+              <li><strong>CIM determinada: 1,0 mg/L</strong></li>
+              <li>Ponto de corte CLSI (S): ≤ 2 mg/L</li>
+              <li><strong>Interpretação: Sensível</strong></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #059669; margin-bottom: 15px;">✅ Vantagens</h4>
+          <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+            <tr style="background: #10b981; color: white;">
+              <th style="padding: 10px; border: 1px solid #ddd;">Vantagem</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Descrição</th>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Facilidade de execução</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Técnica simples, similar ao disco-difusão</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Leitura direta da CIM</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Valor numérico exato, sem necessidade de cálculos</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Aplicável para diversos microrganismos</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Bactérias fastidiosas, fungos, micobactérias</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Alternativa intermediária</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Entre difusão em disco e microdiluição</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Flexibilidade</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Testar antibióticos específicos conforme necessidade</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Boa correlação</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Resultados comparáveis à microdiluição (r > 0,95)</td>
+            </tr>
+          </table>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #d97706; margin-bottom: 10px;">🎯 Aplicações Clínicas Específicas</h4>
+          <ul style="margin-left: 20px; line-height: 1.8;">
+            <li><strong>Bactérias fastidiosas:</strong> <em>Streptococcus pneumoniae</em>, <em>Haemophilus</em></li>
+            <li><strong>Confirmação de resistência:</strong> MRSA, VRE, CRE</li>
+            <li><strong>Fungos:</strong> Determinação de CIM para azóis, anfotericina B</li>
+            <li><strong>Micobactérias:</strong> Teste de sensibilidade para tuberculose</li>
+            <li><strong>Infecções graves:</strong> Quando CIM precisa é necessária</li>
+            <li><strong>Pesquisa:</strong> Estudos de farmacodinâmica</li>
+          </ul>
+        </div>
+        
+        <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ Limitações</h4>
+          <ul style="margin-left: 20px; line-height: 1.8;">
+            <li><strong>Custo:</strong> Tiras comerciais são mais caras que discos</li>
+            <li><strong>Armazenamento:</strong> Requer refrigeração (-20°C)</li>
+            <li><strong>Leitura subjetiva:</strong> Interpretação da elipse pode variar</li>
+            <li><strong>Não automatizável:</strong> Leitura manual necessária</li>
+          </ul>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #4b5563; margin-bottom: 10px;">📊 Comparação com Outros Métodos</h4>
+          <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+            <tr style="background: #3b82f6; color: white;">
+              <th style="padding: 10px; border: 1px solid #ddd;">Método</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Resultado</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Facilidade</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Custo</th>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Disco-difusão</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">S / I / R</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Muito fácil</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Baixo</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Gradiente (Etest)</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">CIM exata</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Fácil</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Moderado</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Microdiluição</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;">CIM exata</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Complexo</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Alto</td>
+            </tr>
+          </table>
+        </div>
+      `,
+      question: {
+        text: "Qual das alternativas descreve corretamente a principal vantagem do método que utiliza tiras impregnadas com gradiente de antibiótico, como o Etest?",
+        options: [
+          "É um método qualitativo que apenas indica se a bactéria é sensível ou resistente, sem determinar a CIM",
+          "Permite leitura direta da Concentração Inibitória Mínima (CIM), com execução simples e aplicável a diversos microrganismos",
+          "É mais complexo e demorado que a microdiluição, sendo usado apenas para confirmar resultados duvidosos"
+        ],
+        correct: 1,
+        explanation: "A principal vantagem do método de gradiente (Etest) é permitir a leitura direta da CIM com execução simples, similar ao disco-difusão. É aplicável a diversos microrganismos (bactérias fastidiosas, fungos, micobactérias) e representa uma alternativa intermediária entre difusão em disco (qualitativo) e microdiluição (quantitativo trabalhoso). A correlação com microdiluição é excelente (r > 0,95)."
+      }
+    }
+  ]
         },
         {
           id: 6,
