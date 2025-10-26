@@ -4236,6 +4236,13 @@ const App = () => {
           mesmo que ambos sejam interpretados como "Sensível" (S).
         </p>
       </div>
+      
+      <div style="background: #ffffff; padding: 20px; border: 2px solid #e5e7eb; border-radius: 8px; margin: 15px 0;">
+        <h4 style="color: #4b5563; margin-bottom: 10px;">🖼️ [PLACEHOLDER PARA FIGURA]</h4>
+        <p style="font-size: 14px; line-height: 1.6; font-style: italic; color: #6b7280;">
+          Aqui será inserida a figura mostrando a relação entre valores de CIM e interpretação clínica (S/I/R).
+        </p>
+      </div>
     `,
     question: {
       text: "O que representa a relação entre o valor da CIM e a interpretação clínica (S, I ou R) em um antibiograma?",
