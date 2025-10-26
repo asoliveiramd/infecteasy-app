@@ -3105,7 +3105,7 @@ const App = () => {
           xp: 150,
           sections: [
     {
-      title: "Vantagens dos Métodos Quantitativos",
+      title: "Card 1: Vantagens dos Métodos Quantitativos",
       content: `
         <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
           <h3 style="color: #0369a1; margin-bottom: 15px;">✅ Vantagens dos Métodos Quantitativos</h3>
@@ -3205,7 +3205,7 @@ const App = () => {
       }
     },
     {
-      title: "Concentração Inibitória Mínima (CIM)",
+      title: "Card 2: Concentração Inibitória Mínima (CIM)",
       content: `
         <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
           <h3 style="color: #dc2626; margin-bottom: 15px;">🎯 Concentração Inibitória Mínima (CIM)</h3>
@@ -3285,7 +3285,7 @@ const App = () => {
       }
     },
     {
-      title: "Métodos de Determinação da CIM",
+      title: "Card 3: Métodos de Determinação da CIM",
       content: `
         <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
           <h3 style="color: #7c3aed; margin-bottom: 15px;">🔬 Métodos de Determinação da CIM</h3>
@@ -3365,7 +3365,7 @@ const App = () => {
       }
     },
     {
-      title: "Principais Métodos Quantitativos",
+      title: "Card 4: Principais Métodos Quantitativos",
       content: `
         <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
           <h3 style="color: #d97706; margin-bottom: 15px;">🧪 Principais Métodos Quantitativos</h3>
@@ -3498,7 +3498,7 @@ const App = () => {
       }
     },
     {
-      title: "Métodos de Gradiente Antimicrobiano",
+      title: "Card 5: Métodos de Gradiente Antimicrobiano",
       content: `
         <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0;">
           <h3 style="color: #059669; margin-bottom: 15px;">📏 Métodos de Gradiente Antimicrobiano</h3>
