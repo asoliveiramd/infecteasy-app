@@ -7948,7 +7948,7 @@ const App = () => {
       }
     }
   ]
-};,
+},
         {
   id: 17,
   title: "Revisão Parte III - Interpretação",
@@ -7973,7 +7973,7 @@ const App = () => {
       }
     }
   ]
-};,
+},
         {
   id: 18,
   title: "Revisão Parte IV - Tópicos Avançados",
@@ -7998,7 +7998,7 @@ const App = () => {
       }
     }
   ]
-};,
+}
                         {
           id: 3,
           title: "Cefalosporinas",
