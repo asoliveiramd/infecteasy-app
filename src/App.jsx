@@ -7933,7 +7933,6 @@ const App = () => {
         }
   ]
 },
-      ]
     },
     antibioticoterapia: {
       title: "Antibioticoterapia Ambulatorial",
