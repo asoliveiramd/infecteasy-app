@@ -7892,113 +7892,186 @@ const App = () => {
         },
         {
   id: 15,
-  title: "Revisão Parte I - Fundamentos",
-  duration: "30 min",
-  xp: 150,
+  title: "Revisão - Parte I",
+  duration: "45 min",
+  xp: 230,
   sections: [
     {
-      title: "Introdução - Fundamentos do TSA",
+      title: "Introdução à Revisão - Parte I",
       content: `
-        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 10px; color: white; margin-bottom: 20px;">
-          <h2 style="color: white; margin-bottom: 10px;">📝 Revisão Parte I - Fundamentos</h2>
-          <p style="font-size: 16px; line-height: 1.6;">
-            <strong>15 perguntas</strong> sobre conceitos fundamentais do TSA
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 12px; color: white;">
+          <h2 style="color: white; margin-bottom: 15px;">📝 Revisão - Parte I</h2>
+          <p style="font-size: 18px; line-height: 1.8;">
+            Esta lição contém <strong>23 perguntas</strong> sobre os fundamentos do TSA.
           </p>
         </div>
         
-        <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
-          <h4 style="color: #92400e; margin-bottom: 8px;">📚 Tópicos</h4>
-          <ul style="line-height: 1.6; color: #78350f; margin: 0;">
+        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #92400e;">📚 Tópicos Cobertos</h4>
+          <ul style="line-height: 1.8; color: #78350f;">
             <li>Papel do laboratório de microbiologia</li>
+            <li>Fundamentos do TSA</li>
             <li>Resistência intrínseca vs. adquirida</li>
-            <li>Heterorresistência e CIM</li>
+            <li>Expressão induzível e heterorresistência</li>
+            <li>Conceito de CIM</li>
+            <li>Indicações do TSA</li>
+            <li>Método de difusão em disco (Kirby-Bauer)</li>
           </ul>
         </div>
+        
+        <p style="font-size: 15px; line-height: 1.6; margin-top: 20px;">
+          <strong>💡 Dica:</strong> Se errar alguma questão, anote a lição sugerida para revisão.
+        </p>
       `,
       question: {
-        text: "Pronto para começar a revisão dos fundamentos?",
-        options: ["Sim, vamos começar!", "Revisar antes", "Fazer depois"],
+        text: "Resumo: Esta lição de revisão contém 23 perguntas. Você está pronto para começar?",
+        options: [
+          "Sim, estou pronto para a revisão!",
+          "Vou revisar as lições antes",
+          "Prefiro fazer depois"
+        ],
         correct: 0,
-        explanation: "Ótimo! Vamos revisar os conceitos fundamentais do TSA."
+        explanation: "Ótimo! Vamos começar a revisão. As perguntas estão organizadas por tópicos para facilitar seu aprendizado."
       }
     }
   ]
 };,
         {
   id: 16,
-  title: "Revisão Parte II - Métodos",
-  duration: "30 min",
-  xp: 150,
+  title: "Revisão - Parte II",  
+  duration: "60 min",
+  xp: 380,
   sections: [
     {
-      title: "Introdução - Métodos de TSA",
+      title: "Introdução à Revisão - Parte II",
       content: `
-        <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 25px; border-radius: 10px; color: white; margin-bottom: 20px;">
-          <h2 style="color: white; margin-bottom: 10px;">📝 Revisão Parte II - Métodos</h2>
-          <p style="font-size: 16px; line-height: 1.6;">
-            <strong>15 perguntas</strong> sobre métodos convencionais e quantitativos
+        <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 30px; border-radius: 12px; color: white;">
+          <h2 style="color: white; margin-bottom: 15px;">📝 Revisão - Parte II</h2>
+          <p style="font-size: 18px; line-height: 1.8;">
+            Esta lição contém <strong>38 perguntas</strong> sobre tópicos avançados do TSA.
           </p>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #92400e;">📚 Tópicos Cobertos</h4>
+          <ul style="line-height: 1.8; color: #78350f;">
+            <li>Métodos quantitativos (diluição, gradiente)</li>
+            <li>Interpretação de resultados (S/I/R, BrCAST)</li>
+            <li>Sistemas automatizados</li>
+            <li>Resistências específicas (ESBL, AmpC, Carbapenemases)</li>
+            <li>Métodos genotípicos</li>
+            <li>Além da categorização S/I/R</li>
+            <li>Recomendações práticas</li>
+            <li>Erros comuns a evitar</li>
+          </ul>
         </div>
       `,
       question: {
-        text: "Pronto para revisar os métodos de TSA?",
-        options: ["Sim!", "Não", "Depois"],
+        text: "Resumo: Esta lição contém 38 perguntas sobre tópicos avançados. Pronto para continuar?",
+        options: [
+          "Sim, vamos continuar!",
+          "Vou revisar antes",
+          "Fazer depois"
+        ],
         correct: 0,
-        explanation: "Vamos revisar os métodos!"
+        explanation: "Excelente! Esta parte cobre tópicos mais avançados e práticos do TSA."
       }
     }
   ]
 };,
+                                                ,
         {
-  id: 17,
-  title: "Revisão Parte III - Interpretação",
-  duration: "35 min",
-  xp: 160,
-  sections: [
-    {
-      title: "Introdução - Interpretação de Resultados",
-      content: `
-        <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 25px; border-radius: 10px; color: white; margin-bottom: 20px;">
-          <h2 style="color: white; margin-bottom: 10px;">📝 Revisão Parte III - Interpretação</h2>
-          <p style="font-size: 16px; line-height: 1.6;">
-            <strong>16 perguntas</strong> sobre interpretação e sistemas automatizados
-          </p>
-        </div>
-      `,
-      question: {
-        text: "Pronto para revisar interpretação de resultados?",
-        options: ["Sim!", "Não", "Depois"],
-        correct: 0,
-        explanation: "Vamos revisar interpretação!"
-      }
-    }
-  ]
-};,
-        {
-  id: 18,
-  title: "Revisão Parte IV - Tópicos Avançados",
-  duration: "35 min",
-  xp: 150,
-  sections: [
-    {
-      title: "Introdução - Tópicos Avançados",
-      content: `
-        <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 25px; border-radius: 10px; color: white; margin-bottom: 20px;">
-          <h2 style="color: white; margin-bottom: 10px;">📝 Revisão Parte IV - Tópicos Avançados</h2>
-          <p style="font-size: 16px; line-height: 1.6;">
-            <strong>15 perguntas</strong> sobre conceitos avançados e erros comuns
-          </p>
-        </div>
-      `,
-      question: {
-        text: "Pronto para os tópicos avançados?",
-        options: ["Sim!", "Não", "Depois"],
-        correct: 0,
-        explanation: "Vamos aos tópicos avançados!"
-      }
-    }
-  ]
-};,
+          id: 2,
+          title: "Mecanismos de Ação dos Antibióticos",
+          duration: "18 min",
+          xp: 90,
+          sections: [
+            {
+              title: "Inibição da Síntese da Parede Celular",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🧱 Parede Celular Bacteriana</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Os antibióticos <strong>beta-lactâmicos</strong>, como penicilinas e cefalosporinas, 
+                    atuam inibindo a síntese da parede celular bacteriana. Eles se ligam às proteínas 
+                    ligadoras de penicilina (PBPs), impedindo a formação do peptidoglicano.
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    Isso leva à <strong>lise da bactéria</strong> e à sua morte, caracterizando um 
+                    mecanismo bactericida. A parede celular é essencial para a sobrevivência bacteriana, 
+                    especialmente em ambientes hipotônicos.
+                  </p>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
+                  <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ Resistência</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    A resistência aos beta-lactâmicos pode ocorrer por produção de beta-lactamases, 
+                    alteração das PBPs ou redução da permeabilidade da membrana externa.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é o principal mecanismo de ação dos antibióticos beta-lactâmicos?",
+                options: [
+                  "Inibição da síntese de proteínas",
+                  "Inibição da síntese da parede celular",
+                  "Inibição da replicação do DNA",
+                  "Alteração da permeabilidade da membrana"
+                ],
+                correct: 1,
+                explanation: "Os beta-lactâmicos atuam especificamente na inibição da síntese da parede celular, uma estrutura essencial para a sobrevivência da bactéria."
+              }
+            },
+            {
+              title: "Inibição da Síntese de Proteínas",
+              content: `
+                <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #6d28d9; margin-bottom: 15px;">🧬 Síntese Proteica</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    <strong>Macrolídeos, tetraciclinas e aminoglicosídeos</strong> atuam inibindo a síntese 
+                    de proteínas bacterianas, ligando-se a diferentes subunidades do ribossomo. 
+                    Isso impede a produção de proteínas essenciais para o crescimento e a replicação bacteriana.
+                  </p>
+                  
+                  <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+                    <tr style="background: #6d28d9; color: white;">
+                      <th style="padding: 8px; border: 1px solid #d1d5db;">Antibiótico</th>
+                      <th style="padding: 8px; border: 1px solid #d1d5db;">Subunidade</th>
+                      <th style="padding: 8px; border: 1px solid #d1d5db;">Efeito</th>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold;">Macrolídeos</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">50S</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Bacteriostático</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold;">Aminoglicosídeos</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">30S</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Bactericida</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold;">Tetraciclinas</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">30S</td>
+                      <td style="padding: 8px; border: 1px solid #d1d5db;">Bacteriostático</td>
+                    </tr>
+                  </table>
+                </div>
+              `,
+              question: {
+                text: "Qual das seguintes classes de antibióticos atua inibindo a síntese de proteínas?",
+                options: [
+                  "Penicilinas",
+                  "Cefalosporinas",
+                  "Macrolídeos",
+                  "Quinolonas"
+                ],
+                correct: 2,
+                explanation: "Macrolídeos, como a azitromicina, são conhecidos por seu mecanismo de ação que envolve a inibição da síntese de proteínas bacterianas."
+              }
+            }
+          ]
+        },
                         {
           id: 3,
           title: "Cefalosporinas",
