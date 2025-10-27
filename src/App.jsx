@@ -7793,41 +7793,166 @@ const App = () => {
         // 4 Lições de Revisão - Módulo Antibiograma
         // 61 perguntas completas em formato otimizado
         {
+        // LIÇÃO 15: Revisão Parte I - Fundamentos (Q1-Q15)
+        {
           id: 15,
           title: "Revisão Parte I - Fundamentos",
           duration: "30 min",
           xp: 150,
           sections: [
             {
-              title: "Fundamentos do TSA (Q1-Q15)",
-              content: `
-                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 10px; color: white;">
-                  <h2 style="color: white;">📝 Revisão Parte I - Fundamentos</h2>
-                  <p style="font-size: 16px; line-height: 1.6; margin-top: 10px;">
-                    <strong>15 perguntas</strong> sobre conceitos fundamentais do Teste de Suscetibilidade Antimicrobiana
-                  </p>
-                </div>
-                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #92400e;">📚 Tópicos desta seção:</h4>
-                  <ul style="line-height: 1.6; color: #78350f;">
-                    <li>Papel do laboratório de microbiologia (Q1-Q4)</li>
-                    <li>Resistência intrínseca vs. adquirida (Q5-Q7)</li>
-                    <li>Expressão induzível e heterorresistência (Q8-Q11)</li>
-                    <li>Conceito de CIM (Q12-Q13)</li>
-                    <li>Indicações do TSA (Q14-Q15)</li>
-                  </ul>
-                </div>
-                <p><strong>💡 Dica:</strong> Se errar, revise a lição sugerida na explicação.</p>
-              `,
+              title: "Introdução - Fundamentos do TSA",
+              content: `<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 10px; color: white;"><h2 style="color: white;">📝 Revisão Parte I</h2><p>15 perguntas sobre fundamentos do TSA</p></div>`,
               question: {
-                text: "Esta seção contém 15 perguntas sobre fundamentos. Pronto para começar?",
-                options: ["Sim, vamos lá!", "Revisar antes", "Depois"],
+                text: "Q1. Qual é o principal papel do laboratório de microbiologia clínica?",
+                options: ["Fornecer informações que guiem a seleção de antibióticos apropriados", "Desenvolver novos sistemas automatizados", "Realizar TSA de vírus e parasitas"],
                 correct: 0,
-                explanation: "Ótimo! Vamos testar seus conhecimentos sobre os fundamentos do TSA."
+                explanation: "O laboratório fornece dados essenciais para escolha racional de antimicrobianos. ➡️ Revisar: Definição e Métodos"
+              }
+            },
+            {
+              title: "Q2-Q4: Fundamentos do TSA",
+              content: `<p><strong>Q2:</strong> O que o TSA in vitro determina?</p>`,
+              question: {
+                text: "Q2. O que o TSA in vitro determina?",
+                options: ["Quais antibióticos inibem o crescimento bacteriano", "A toxicidade máxima do antimicrobiano", "Se a resistência é constitutiva ou induzível"],
+                correct: 0,
+                explanation: "TSA determina quais antibióticos são capazes de inibir o crescimento. ➡️ Revisar: Definição e Métodos"
+              }
+            },
+            {
+              title: "Q3: Importância do TSA",
+              content: `<p><strong>Q3:</strong> Importância crescente do TSA</p>`,
+              question: {
+                text: "Q3. Qual a importância do TSA dado o crescente problema da resistência?",
+                options: ["A importância aumentou, pois decisões empíricas são mais complicadas", "A importância diminuiu com testes moleculares", "TSA só é relevante em infecções comunitárias"],
+                correct: 0,
+                explanation: "Com resistência crescente, TSA é cada vez mais crucial. ➡️ Revisar: Conceitos Fundamentais de Resistência"
+              }
+            },
+            {
+              title: "Q4: Requisitos do TSA",
+              content: `<p><strong>Q4:</strong> Requisitos essenciais dos métodos</p>`,
+              question: {
+                text: "Q4. Quais são os três requisitos essenciais dos métodos de TSA?",
+                options: ["Rápido, preciso e barato", "Dependente de crescimento, caro e 48h", "Apenas para pesquisa e CIM"],
+                correct: 0,
+                explanation: "Métodos ideais devem ser rápidos, precisos e econômicos. ➡️ Revisar: Métodos Convencionais de TSA"
+              }
+            },
+            {
+              title: "Q5-Q7: Resistência Intrínseca vs Adquirida",
+              content: `<p><strong>Q5-Q7:</strong> Tipos de resistência</p>`,
+              question: {
+                text: "Q5. O que define resistência intrínseca?",
+                options: ["Resistência inerente que todos os membros da espécie exibem", "Resistência adquirida por plasmídeos", "Resistência por mutações genéticas"],
+                correct: 0,
+                explanation: "Resistência intrínseca é característica natural da espécie. ➡️ Revisar: Conceitos Fundamentais de Resistência"
+              }
+            },
+            {
+              title: "Q6: Exemplo de Resistência Intrínseca",
+              content: `<p><strong>Q6:</strong> Exemplo clássico</p>`,
+              question: {
+                text: "Q6. Exemplo de resistência intrínseca à ampicilina?",
+                options: ["Klebsiella pneumoniae", "Staphylococcus aureus", "Streptococcus pyogenes"],
+                correct: 0,
+                explanation: "Klebsiella tem resistência intrínseca à ampicilina. ➡️ Revisar: Conceitos Fundamentais de Resistência"
+              }
+            },
+            {
+              title: "Q7: Resistência Adquirida",
+              content: `<p><strong>Q7:</strong> Diferença fundamental</p>`,
+              question: {
+                text: "Q7. Como a resistência adquirida difere da intrínseca?",
+                options: ["Desenvolvimento por mutações ou transferência horizontal", "Mecanismo facilmente previsível", "Característica natural da espécie"],
+                correct: 0,
+                explanation: "Resistência adquirida surge por mutações ou genes transferidos. ➡️ Revisar: Mecanismos de Resistência"
+              }
+            },
+            {
+              title: "Q8-Q11: Expressão Induzível e Heterorresistência",
+              content: `<p><strong>Q8-Q11:</strong> Mecanismos especiais</p>`,
+              question: {
+                text: "Q8. Mecanismo de resistência com expressão após exposição ao agente?",
+                options: ["Expressão induzível", "Expressão constitutiva", "Resistência intrínseca"],
+                correct: 0,
+                explanation: "Expressão induzível ocorre após exposição ao antibiótico. ➡️ Revisar: Mecanismos de Resistência"
+              }
+            },
+            {
+              title: "Q9: AmpC Induzível",
+              content: `<p><strong>Q9:</strong> Exemplo clássico</p>`,
+              question: {
+                text: "Q9. Exemplo de resistência induzível a cefalosporinas 3ª geração?",
+                options: ["Beta-lactamase AmpC em Enterobacterales", "Gene mecA em S. aureus", "Mutações cromossômicas"],
+                correct: 0,
+                explanation: "AmpC é exemplo clássico de resistência induzível. ➡️ Revisar: Testes Fenotípicos Especiais"
+              }
+            },
+            {
+              title: "Q10-Q11: Heterorresistência",
+              content: `<p><strong>Q10-Q11:</strong> Subpopulações resistentes</p>`,
+              question: {
+                text: "Q10. O que a heterorresistência representa?",
+                options: ["Expressão homogênea contínua", "Subpopulações com diferentes graus de resistência", "Resistência após antibióticos grandes"],
+                correct: 1,
+                explanation: "Heterorresistência = subpopulações com resistências variadas. ➡️ Revisar: Conceitos Fundamentais de Resistência"
+              }
+            },
+            {
+              title: "Q11: VISA Heterorresistente",
+              content: `<p><strong>Q11:</strong> Exemplo clínico importante</p>`,
+              question: {
+                text: "Q11. O que VISA heterorresistente representa?",
+                options: ["Organismo com expressão heterogênea, podendo causar falhas", "Resistência intrínseca à vancomicina", "Resistência sempre detectável"],
+                correct: 0,
+                explanation: "VISA heterorresistente pode causar falha terapêutica. ➡️ Revisar: Testes Fenotípicos Especiais"
+              }
+            },
+            {
+              title: "Q12-Q13: Conceito de CIM",
+              content: `<p><strong>Q12-Q13:</strong> Concentração Inibitória Mínima</p>`,
+              question: {
+                text: "Q12. Definição de CIM?",
+                options: ["Maior concentração que permite crescimento", "Menor concentração que inibe 99% do crescimento", "Ponto de corte S/R"],
+                correct: 1,
+                explanation: "CIM = menor concentração que inibe crescimento visível. ➡️ Revisar: Métodos Quantitativos"
+              }
+            },
+            {
+              title: "Q13: Interpretação da CIM",
+              content: `<p><strong>Q13:</strong> Significado clínico</p>`,
+              question: {
+                text: "Q13. O que o valor da CIM indica?",
+                options: ["Maior CIM = maior sensibilidade", "Menor CIM = maior sensibilidade", "CIM deve ser comparada entre antimicrobianos"],
+                correct: 1,
+                explanation: "Menor CIM indica maior sensibilidade ao antibiótico. ➡️ Revisar: Métodos Quantitativos"
+              }
+            },
+            {
+              title: "Q14-Q15: Indicações do TSA",
+              content: `<p><strong>Q14-Q15:</strong> Quando realizar TSA</p>`,
+              question: {
+                text: "Q14. Quando o TSA deve ser realizado?",
+                options: ["Organismo é flora normal", "Informação pode guiar tratamento", "Suscetibilidade sempre previsível"],
+                correct: 1,
+                explanation: "TSA quando pode influenciar decisão terapêutica. ➡️ Revisar: Métodos Convencionais de TSA"
+              }
+            },
+            {
+              title: "Q15: S. pyogenes e Penicilina",
+              content: `<p><strong>Q15:</strong> Exemplo de TSA desnecessário</p>`,
+              question: {
+                text: "Q15. Por que S. pyogenes não é testado para penicilina?",
+                options: ["Isolados não suscetíveis nunca foram relatados", "É intrinsecamente resistente", "Teste não é padronizado"],
+                correct: 0,
+                explanation: "S. pyogenes sempre sensível à penicilina. ➡️ Revisar: Métodos Convencionais de TSA"
               }
             }
           ]
         }
+,
         ,
                 {
           id: 16,
