@@ -4077,7 +4077,7 @@ const App = () => {
             }
           ]
         },
-        {
+{
           id: 16,
           title: "Revisão Parte II - Métodos",
           duration: "25 min",
@@ -4278,10 +4278,8 @@ const App = () => {
               ]
             }
           ]
-        }
-
-,
-        {
+        },
+{
           id: 17,
           title: "Revisão Parte III - Interpretação",
           duration: "30 min",
@@ -4495,10 +4493,8 @@ const App = () => {
               ]
             }
           ]
-        }
-
-,
-        {
+        },
+{
           id: 18,
           title: "Revisão Parte IV - Tópicos Avançados",
           duration: "25 min",
@@ -4701,8 +4697,6 @@ const App = () => {
             }
           ]
         }
-
-
       ]
     },
     antibioticoterapia: {
