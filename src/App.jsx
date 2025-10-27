@@ -7923,7 +7923,7 @@ const App = () => {
       }
     }
   ]
-};,
+},
         {
   id: 16,
   title: "Revisão Parte II - Métodos",
