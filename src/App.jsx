@@ -7953,110 +7953,493 @@ const App = () => {
         }
 ,
         ,
-                {
+        // LIÇÃO 16: Revisão Parte II - Métodos (Q16-Q30)
+        {
           id: 16,
           title: "Revisão Parte II - Métodos",
           duration: "30 min",
           xp: 150,
           sections: [
             {
-              title: "Métodos de TSA (Q16-Q30)",
-              content: `
-                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 25px; border-radius: 10px; color: white;">
-                  <h2 style="color: white;">📝 Revisão Parte II - Métodos</h2>
-                  <p style="font-size: 16px; line-height: 1.6; margin-top: 10px;">
-                    <strong>15 perguntas</strong> sobre métodos convencionais e quantitativos
-                  </p>
-                </div>
-                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #92400e;">📚 Tópicos desta seção:</h4>
-                  <ul style="line-height: 1.6; color: #78350f;">
-                    <li>Flora normal e TSA (Q16-Q18)</li>
-                    <li>Método de difusão em disco (Q19-Q26)</li>
-                    <li>Métodos quantitativos - CIM (Q27-Q30)</li>
-                  </ul>
-                </div>
-              `,
+              title: "Introdução - Métodos de TSA",
+              content: `<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 10px; color: white;"><h2 style="color: white;">📝 Revisão Parte II</h2><p>15 perguntas sobre métodos de TSA</p></div>`,
               question: {
-                text: "Esta seção contém 15 perguntas sobre métodos. Pronto?",
-                options: ["Sim!", "Revisar antes", "Depois"],
+                text: "Q16. Por que não se realiza TSA de flora normal?",
+                options: ["Não causa doença e não requer tratamento", "É sempre resistente", "Não cresce em cultura"],
                 correct: 0,
-                explanation: "Vamos revisar os métodos de TSA!"
+                explanation: "Flora normal não causa doença, logo TSA é desnecessário. ➡️ Revisar: Métodos Convencionais de TSA"
+              }
+            },
+            {
+              title: "Q17: Método Kirby-Bauer",
+              content: `<p><strong>Q17:</strong> Difusão em disco</p>`,
+              question: {
+                text: "Q17. Qual o princípio do método de difusão em disco (Kirby-Bauer)?",
+                options: ["Antibiótico difunde no ágar criando zona de inibição", "Mede CIM diretamente", "Usa gradiente de concentração"],
+                correct: 0,
+                explanation: "Kirby-Bauer: disco com antibiótico difunde criando halo. ➡️ Revisar: Métodos Convencionais de TSA"
+              }
+            },
+            {
+              title: "Q18: Diâmetro do Halo",
+              content: `<p><strong>Q18:</strong> Interpretação</p>`,
+              question: {
+                text: "Q18. O que o diâmetro do halo de inibição indica?",
+                options: ["Maior halo = maior sensibilidade", "Menor halo = maior sensibilidade", "Halo não indica sensibilidade"],
+                correct: 0,
+                explanation: "Halo maior indica maior sensibilidade ao antibiótico. ➡️ Revisar: Métodos Convencionais de TSA"
+              }
+            },
+            {
+              title: "Q19-Q20: Métodos Quantitativos",
+              content: `<p><strong>Q19-Q20:</strong> Determinação da CIM</p>`,
+              question: {
+                text: "Q19. Quais são os principais métodos quantitativos para determinar CIM?",
+                options: ["Diluição em ágar, diluição em caldo, gradiente (Etest)", "Apenas difusão em disco", "Apenas métodos automatizados"],
+                correct: 0,
+                explanation: "Métodos quantitativos: diluição e gradiente. ➡️ Revisar: Métodos Quantitativos"
+              }
+            },
+            {
+              title: "Q20: Vantagem dos Métodos Quantitativos",
+              content: `<p><strong>Q20:</strong> Precisão diagnóstica</p>`,
+              question: {
+                text: "Q20. Qual a principal vantagem dos métodos quantitativos?",
+                options: ["Fornecem valor exato da CIM", "São mais rápidos que disco-difusão", "Não requerem padronização"],
+                correct: 0,
+                explanation: "Métodos quantitativos fornecem CIM exata. ➡️ Revisar: Métodos Quantitativos"
+              }
+            },
+            {
+              title: "Q21-Q22: Diluição em Ágar",
+              content: `<p><strong>Q21-Q22:</strong> Método padrão-ouro</p>`,
+              question: {
+                text: "Q21. Como funciona a diluição em ágar?",
+                options: ["Antibiótico incorporado no ágar em diferentes concentrações", "Disco colocado sobre ágar", "Fita com gradiente"],
+                correct: 0,
+                explanation: "Diluição em ágar: antibiótico incorporado em placas. ➡️ Revisar: Métodos Quantitativos"
+              }
+            },
+            {
+              title: "Q22: Limitação da Diluição em Ágar",
+              content: `<p><strong>Q22:</strong> Desvantagens</p>`,
+              question: {
+                text: "Q22. Qual a principal limitação da diluição em ágar?",
+                options: ["Trabalhoso e caro para rotina", "Não fornece CIM", "Não é padronizado"],
+                correct: 0,
+                explanation: "Diluição em ágar é trabalhosa para uso rotineiro. ➡️ Revisar: Métodos Quantitativos"
+              }
+            },
+            {
+              title: "Q23-Q24: Diluição em Caldo",
+              content: `<p><strong>Q23-Q24:</strong> Método em tubo/microdiluição</p>`,
+              question: {
+                text: "Q23. Como funciona a diluição em caldo?",
+                options: ["Diluições seriadas do antibiótico em tubos ou microplacas", "Antibiótico em ágar", "Gradiente em fita"],
+                correct: 0,
+                explanation: "Diluição em caldo: diluições seriadas em líquido. ➡️ Revisar: Métodos Quantitativos"
+              }
+            },
+            {
+              title: "Q24: Vantagem da Microdiluição",
+              content: `<p><strong>Q24:</strong> Automação</p>`,
+              question: {
+                text: "Q24. Qual vantagem da microdiluição em relação à diluição em tubo?",
+                options: ["Permite automação e testa múltiplos antibióticos", "É mais precisa", "Não requer equipamento"],
+                correct: 0,
+                explanation: "Microdiluição permite automação e múltiplos testes. ➡️ Revisar: Métodos Quantitativos"
+              }
+            },
+            {
+              title: "Q25-Q27: Etest e Gradiente",
+              content: `<p><strong>Q25-Q27:</strong> Métodos de gradiente</p>`,
+              question: {
+                text: "Q25. Como funciona o Etest (MIC Test Strip)?",
+                options: ["Fita com gradiente de concentração colocada sobre ágar", "Disco com concentração fixa", "Diluição em caldo"],
+                correct: 0,
+                explanation: "Etest: fita com gradiente de antibiótico. ➡️ Revisar: Métodos Quantitativos"
+              }
+            },
+            {
+              title: "Q26: Leitura do Etest",
+              content: `<p><strong>Q26:</strong> Interpretação</p>`,
+              question: {
+                text: "Q26. Como se lê a CIM no Etest?",
+                options: ["Onde a elipse de inibição cruza a fita", "Diâmetro do halo", "Turvação do caldo"],
+                correct: 0,
+                explanation: "Etest: CIM onde elipse cruza a escala na fita. ➡️ Revisar: Métodos Quantitativos"
+              }
+            },
+            {
+              title: "Q27: Aplicação do Etest",
+              content: `<p><strong>Q27:</strong> Quando usar</p>`,
+              question: {
+                text: "Q27. Quando o Etest é particularmente útil?",
+                options: ["Organismos fastidiosos ou antibióticos não testados rotineiramente", "Triagem de rotina", "Substituir todos os métodos"],
+                correct: 0,
+                explanation: "Etest útil para casos especiais e organismos fastidiosos. ➡️ Revisar: Métodos Quantitativos"
+              }
+            },
+            {
+              title: "Q28-Q29: CLSI vs EUCAST",
+              content: `<p><strong>Q28-Q29:</strong> Padronizações</p>`,
+              question: {
+                text: "Q28. Quais são as principais organizações que padronizam TSA?",
+                options: ["CLSI (EUA) e EUCAST (Europa)", "FDA e OMS", "Apenas CLSI"],
+                correct: 0,
+                explanation: "CLSI (americano) e EUCAST (europeu) padronizam TSA. ➡️ Revisar: CLSI vs. BrCast"
+              }
+            },
+            {
+              title: "Q29: Diferenças CLSI/EUCAST",
+              content: `<p><strong>Q29:</strong> Breakpoints</p>`,
+              question: {
+                text: "Q29. Qual a principal diferença entre CLSI e EUCAST?",
+                options: ["Pontos de corte (breakpoints) podem diferir", "Usam métodos completamente diferentes", "EUCAST não usa CIM"],
+                correct: 0,
+                explanation: "CLSI e EUCAST podem ter breakpoints diferentes. ➡️ Revisar: CLSI vs. BrCast"
+              }
+            },
+            {
+              title: "Q30: BrCAST",
+              content: `<p><strong>Q30:</strong> Padrão brasileiro</p>`,
+              question: {
+                text: "Q30. O que é o BrCAST?",
+                options: ["Adaptação brasileira do EUCAST desde 2018", "Padrão americano", "Método de TSA"],
+                correct: 0,
+                explanation: "BrCAST: padrão brasileiro baseado no EUCAST. ➡️ Revisar: CLSI vs. BrCast"
               }
             }
           ]
-        }
-        ,
-                {
+        },
+        // LIÇÃO 17: Revisão Parte III - Interpretação (Q31-Q46)
+        {
           id: 17,
           title: "Revisão Parte III - Interpretação",
           duration: "35 min",
           xp: 160,
           sections: [
             {
-              title: "Interpretação e Sistemas (Q31-Q46)",
-              content: `
-                <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 25px; border-radius: 10px; color: white;">
-                  <h2 style="color: white;">📝 Revisão Parte III - Interpretação</h2>
-                  <p style="font-size: 16px; line-height: 1.6; margin-top: 10px;">
-                    <strong>16 perguntas</strong> sobre interpretação de resultados
-                  </p>
-                </div>
-                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #92400e;">📚 Tópicos desta seção:</h4>
-                  <ul style="line-height: 1.6; color: #78350f;">
-                    <li>Métodos de diluição e gradiente (Q31-Q34)</li>
-                    <li>Categorias S/I/R e BrCAST (Q35-Q40)</li>
-                    <li>Sistemas automatizados (Q41-Q44)</li>
-                    <li>Resistências específicas e métodos moleculares (Q45-Q46)</li>
-                  </ul>
-                </div>
-              `,
+              title: "Introdução - Interpretação de Resultados",
+              content: `<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 10px; color: white;"><h2 style="color: white;">📝 Revisão Parte III</h2><p>16 perguntas sobre interpretação de resultados</p></div>`,
               question: {
-                text: "Esta seção contém 16 perguntas sobre interpretação. Pronto?",
-                options: ["Sim!", "Revisar antes", "Depois"],
+                text: "Q31. O que significa 'S' (Sensível) no antibiograma?",
+                options: ["Antibiótico deve atingir concentração eficaz no sítio de infecção com dose padrão", "Antibiótico sempre cura", "CIM é zero"],
                 correct: 0,
-                explanation: "Vamos revisar interpretação de resultados!"
+                explanation: "'S' indica que dose padrão deve ser eficaz. ➡️ Revisar: Interpretação Clínica dos Resultados"
+              }
+            },
+            {
+              title: "Q32: Categoria 'I' no BrCAST",
+              content: `<p><strong>Q32:</strong> Sensível com Aumento de Exposição</p>`,
+              question: {
+                text: "Q32. O que 'I' ou 'SAE' significa no BrCAST?",
+                options: ["Sensível com Aumento de Exposição - requer ajuste de dose/regime", "Intermediário - evitar uso", "Resistente"],
+                correct: 0,
+                explanation: "'I' no BrCAST = Sensível com Aumento de Exposição. ➡️ Revisar: CLSI vs. BrCast"
+              }
+            },
+            {
+              title: "Q33-Q34: Categoria 'R'",
+              content: `<p><strong>Q33-Q34:</strong> Resistente</p>`,
+              question: {
+                text: "Q33. O que significa 'R' (Resistente)?",
+                options: ["Antibiótico não deve atingir concentração eficaz mesmo com dose máxima", "Antibiótico nunca funciona", "Dose padrão é suficiente"],
+                correct: 0,
+                explanation: "'R' indica que mesmo dose máxima é insuficiente. ➡️ Revisar: Interpretação Clínica dos Resultados"
+              }
+            },
+            {
+              title: "Q34: Breakpoints",
+              content: `<p><strong>Q34:</strong> Pontos de corte</p>`,
+              question: {
+                text: "Q34. O que são breakpoints (pontos de corte)?",
+                options: ["Valores de CIM que separam categorias S/I/R", "Diâmetro mínimo do halo", "Concentração do disco"],
+                correct: 0,
+                explanation: "Breakpoints definem limites entre S/I/R. ➡️ Revisar: Métodos Quantitativos"
+              }
+            },
+            {
+              title: "Q35-Q36: Sistemas Automatizados",
+              content: `<p><strong>Q35-Q36:</strong> Automação</p>`,
+              question: {
+                text: "Q35. Quais as vantagens dos sistemas automatizados?",
+                options: ["Rapidez, padronização e redução de erro humano", "Mais baratos", "Não requerem controle de qualidade"],
+                correct: 0,
+                explanation: "Sistemas automatizados: rápidos e padronizados. ➡️ Revisar: Sistemas Automatizados"
+              }
+            },
+            {
+              title: "Q36: Limitações da Automação",
+              content: `<p><strong>Q36:</strong> Desvantagens</p>`,
+              question: {
+                text: "Q36. Qual a principal limitação dos sistemas automatizados?",
+                options: ["Custo elevado de aquisição e manutenção", "Não fornecem resultados confiáveis", "Não são padronizados"],
+                correct: 0,
+                explanation: "Sistemas automatizados têm custo elevado. ➡️ Revisar: Sistemas Automatizados"
+              }
+            },
+            {
+              title: "Q37-Q39: ESBL",
+              content: `<p><strong>Q37-Q39:</strong> Beta-lactamases de Espectro Estendido</p>`,
+              question: {
+                text: "Q37. O que ESBL significa?",
+                options: ["Extended-Spectrum Beta-Lactamase", "Enterobacter Sensitive Beta-Lactamase", "European Standard Bacterial Lab"],
+                correct: 0,
+                explanation: "ESBL = Beta-lactamase de Espectro Estendido. ➡️ Revisar: Testes Fenotípicos Especiais"
+              }
+            },
+            {
+              title: "Q38: Padrão ESBL",
+              content: `<p><strong>Q38:</strong> Reconhecimento</p>`,
+              question: {
+                text: "Q38. Qual o padrão característico de ESBL no antibiograma?",
+                options: ["Resistência a cefalosporinas 3ª geração + aztreonam, sensível a carbapenêmicos", "Resistência a todos os β-lactâmicos", "Sensibilidade a todas as cefalosporinas"],
+                correct: 0,
+                explanation: "ESBL: resistente a cef 3ª geração, sensível a carbapenêmicos. ➡️ Revisar: Recomendações Práticas"
+              }
+            },
+            {
+              title: "Q39: Tratamento ESBL",
+              content: `<p><strong>Q39:</strong> Opções terapêuticas</p>`,
+              question: {
+                text: "Q39. Qual a primeira escolha para infecções graves por ESBL?",
+                options: ["Carbapenêmicos", "Cefalosporinas 3ª geração", "Penicilinas"],
+                correct: 0,
+                explanation: "ESBL grave: carbapenêmicos são primeira escolha. ➡️ Revisar: Recomendações Práticas"
+              }
+            },
+            {
+              title: "Q40-Q42: Carbapenemases",
+              content: `<p><strong>Q40-Q42:</strong> Resistência a carbapenêmicos</p>`,
+              question: {
+                text: "Q40. O que são carbapenemases?",
+                options: ["Enzimas que hidrolisam carbapenêmicos", "Antibióticos da classe dos carbapenêmicos", "Método de TSA"],
+                correct: 0,
+                explanation: "Carbapenemases degradam carbapenêmicos. ➡️ Revisar: Testes Fenotípicos Especiais"
+              }
+            },
+            {
+              title: "Q41: Tipos de Carbapenemases",
+              content: `<p><strong>Q41:</strong> Principais tipos</p>`,
+              question: {
+                text: "Q41. Quais os principais tipos de carbapenemases?",
+                options: ["KPC, NDM, OXA-48, VIM, IMP", "ESBL e AmpC", "Apenas KPC"],
+                correct: 0,
+                explanation: "Principais carbapenemases: KPC, NDM, OXA, VIM, IMP. ➡️ Revisar: Testes Fenotípicos Especiais"
+              }
+            },
+            {
+              title: "Q42: Importância Clínica",
+              content: `<p><strong>Q42:</strong> Impacto</p>`,
+              question: {
+                text: "Q42. Por que carbapenemases são preocupantes?",
+                options: ["Limitam opções terapêuticas a antibióticos de último recurso", "São fáceis de tratar", "Não causam infecções graves"],
+                correct: 0,
+                explanation: "Carbapenemases limitam muito as opções terapêuticas. ➡️ Revisar: Testes Fenotípicos Especiais"
+              }
+            },
+            {
+              title: "Q43-Q44: AmpC",
+              content: `<p><strong>Q43-Q44:</strong> Beta-lactamase AmpC</p>`,
+              question: {
+                text: "Q43. O que caracteriza AmpC β-lactamase?",
+                options: ["Resistência a cefoxitina, sem inibição por clavulanato", "Sensibilidade a cefoxitina", "Inibição por clavulanato"],
+                correct: 0,
+                explanation: "AmpC: resistente a cefoxitina, não inibida por clavulanato. ➡️ Revisar: Recomendações Práticas"
+              }
+            },
+            {
+              title: "Q44: Espécies ESCPM",
+              content: `<p><strong>Q44:</strong> Produtores naturais</p>`,
+              question: {
+                text: "Q44. Quais espécies produzem AmpC naturalmente (ESCPM)?",
+                options: ["Enterobacter, Serratia, Citrobacter, Providencia, Morganella", "E. coli e Klebsiella", "Apenas Enterobacter"],
+                correct: 0,
+                explanation: "ESCPM: Enterobacter, Serratia, Citrobacter, Providencia, Morganella. ➡️ Revisar: Recomendações Práticas"
+              }
+            },
+            {
+              title: "Q45: MRSA",
+              content: `<p><strong>Q45:</strong> Staphylococcus resistente</p>`,
+              question: {
+                text: "Q45. O que MRSA significa?",
+                options: ["Methicillin-Resistant Staphylococcus aureus", "Multi-Resistant Streptococcus aureus", "Método de resistência"],
+                correct: 0,
+                explanation: "MRSA = S. aureus resistente à meticilina. ➡️ Revisar: Testes Fenotípicos Especiais"
+              }
+            },
+            {
+              title: "Q46: Detecção MRSA",
+              content: `<p><strong>Q46:</strong> Teste de triagem</p>`,
+              question: {
+                text: "Q46. Qual antibiótico é usado para detectar MRSA?",
+                options: ["Cefoxitina ou oxacilina", "Vancomicina", "Penicilina"],
+                correct: 0,
+                explanation: "MRSA: detectado por cefoxitina ou oxacilina. ➡️ Revisar: Testes Fenotípicos Especiais"
               }
             }
           ]
-        }
-        ,
-                {
+        },
+        // LIÇÃO 18: Revisão Parte IV - Tópicos Avançados (Q47-Q61)
+        {
           id: 18,
           title: "Revisão Parte IV - Tópicos Avançados",
           duration: "35 min",
           xp: 150,
           sections: [
             {
-              title: "Tópicos Avançados (Q47-Q61)",
-              content: `
-                <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 25px; border-radius: 10px; color: white;">
-                  <h2 style="color: white;">📝 Revisão Parte IV - Tópicos Avançados</h2>
-                  <p style="font-size: 16px; line-height: 1.6; margin-top: 10px;">
-                    <strong>15 perguntas</strong> sobre aplicações práticas
-                  </p>
-                </div>
-                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #92400e;">📚 Tópicos desta seção:</h4>
-                  <ul style="line-height: 1.6; color: #78350f;">
-                    <li>Limitações da categorização S/I/R (Q47-Q51)</li>
-                    <li>Análise de mecanismos de resistência (Q52-Q56)</li>
-                    <li>Erros comuns na interpretação (Q57-Q61)</li>
-                  </ul>
-                </div>
-              `,
+              title: "Introdução - Tópicos Avançados",
+              content: `<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 10px; color: white;"><h2 style="color: white;">📝 Revisão Parte IV</h2><p>15 perguntas sobre tópicos avançados</p></div>`,
               question: {
-                text: "Esta seção contém 15 perguntas sobre tópicos avançados. Pronto?",
-                options: ["Sim!", "Revisar antes", "Depois"],
+                text: "Q47. Por que 'S' não garante sucesso do tratamento?",
+                options: ["Fatores clínicos como gravidade, localização, imunidade e PK também influenciam", "'S' indica resistência parcial", "'S' depende apenas da técnica laboratorial"],
                 correct: 0,
-                explanation: "Vamos finalizar com tópicos avançados!"
+                explanation: "'S' não garante sucesso pois fatores do hospedeiro e PK influenciam. ➡️ Revisar: Além da Categorização S/I/R"
+              }
+            },
+            {
+              title: "Q48: Fatores do Hospedeiro",
+              content: `<p><strong>Q48:</strong> Influências clínicas</p>`,
+              question: {
+                text: "Q48. Quais fatores do hospedeiro influenciam o desfecho mesmo com antibiótico sensível?",
+                options: ["Estado imunológico, gravidade e localização da infecção", "Apenas idade", "Somente peso corporal"],
+                correct: 0,
+                explanation: "Imunidade, gravidade e localização afetam desfecho. ➡️ Revisar: Além da Categorização S/I/R"
+              }
+            },
+            {
+              title: "Q49: Penetração Tecidual",
+              content: `<p><strong>Q49:</strong> Barreira anatômica</p>`,
+              question: {
+                text: "Q49. Por que localização da infecção é importante mesmo com antibiótico sensível?",
+                options: ["Alguns sítios têm penetração limitada (SNC, próstata, osso)", "Localização não afeta eficácia", "Todos os antibióticos penetram igualmente"],
+                correct: 0,
+                explanation: "SNC, próstata e osso têm penetração limitada. ➡️ Revisar: Além da Categorização S/I/R"
+              }
+            },
+            {
+              title: "Q50: Análise de Mecanismos",
+              content: `<p><strong>Q50:</strong> Padrões de resistência</p>`,
+              question: {
+                text: "Q50. O que significa analisar mecanismos de resistência?",
+                options: ["Interpretar padrões que indicam β-lactamases, bombas de efluxo ou alterações", "Apenas confirmar crescimento", "Verificar erro técnico"],
+                correct: 0,
+                explanation: "Analisar padrões para identificar mecanismos específicos. ➡️ Revisar: Além da Categorização S/I/R"
+              }
+            },
+            {
+              title: "Q51: Resistência Significativa",
+              content: `<p><strong>Q51:</strong> Opções terapêuticas</p>`,
+              question: {
+                text: "Q51. Resistência sempre inviabiliza tratamento?",
+                options: ["Não, ajustes de dose, tempo de infusão ou combinações podem ser opções", "Sim, resistência = impossibilidade", "Qualquer antibiótico em dose máxima funciona"],
+                correct: 0,
+                explanation: "Resistência não significa impossibilidade com ajustes. ➡️ Revisar: Além da Categorização S/I/R"
+              }
+            },
+            {
+              title: "Q52: Pensamento por Classes",
+              content: `<p><strong>Q52:</strong> Resistência cruzada</p>`,
+              question: {
+                text: "Q52. Por que pensar em classes de antibióticos?",
+                options: ["Há resistência cruzada dentro de classes (ex: quinolonas)", "Todas as classes têm mesmo mecanismo", "Não há diferença entre antibióticos da mesma classe"],
+                correct: 0,
+                explanation: "Resistência cruzada ocorre dentro de classes. ➡️ Revisar: Recomendações Práticas"
+              }
+            },
+            {
+              title: "Q53: Marcador de AmpC",
+              content: `<p><strong>Q53:</strong> Cefoxitina</p>`,
+              question: {
+                text: "Q53. O que indica resistência a cefoxitina em Enterobacterales?",
+                options: ["Produção de AmpC β-lactamase", "Produção de ESBL", "Produção de carbapenemase"],
+                correct: 0,
+                explanation: "Cefoxitina resistente = marcador de AmpC. ➡️ Revisar: Recomendações Práticas"
+              }
+            },
+            {
+              title: "Q54: Padrão ESBL",
+              content: `<p><strong>Q54:</strong> Reconhecimento no antibiograma</p>`,
+              question: {
+                text: "Q54. Qual o padrão característico de ESBL?",
+                options: ["Resistência a cef 3ª geração + aztreonam, sensível a carbapenêmicos", "Resistência a todos os β-lactâmicos", "Sensibilidade a todas as cefalosporinas"],
+                correct: 0,
+                explanation: "ESBL: padrão característico no antibiograma. ➡️ Revisar: Recomendações Práticas"
+              }
+            },
+            {
+              title: "Q55: Diferenciando AmpC de ESBL",
+              content: `<p><strong>Q55:</strong> Distinção importante</p>`,
+              question: {
+                text: "Q55. Como diferenciar AmpC de ESBL?",
+                options: ["AmpC: resistente a cefoxitina, sem restauração por clavulanato", "AmpC: sensível a cefoxitina, com restauração", "Não é possível diferenciar"],
+                correct: 0,
+                explanation: "AmpC vs ESBL: cefoxitina e resposta a clavulanato. ➡️ Revisar: Recomendações Práticas"
+              }
+            },
+            {
+              title: "Q56: Ácido Nalidíxico",
+              content: `<p><strong>Q56:</strong> Marcador de quinolonas</p>`,
+              question: {
+                text: "Q56. Ácido nalidíxico resistente indica o quê?",
+                options: ["Resistência cruzada a outras quinolonas", "Sensibilidade a ciprofloxacino", "Produção de ESBL"],
+                correct: 0,
+                explanation: "Ácido nalidíxico R = resistência cruzada a quinolonas. ➡️ Revisar: Recomendações Práticas"
+              }
+            },
+            {
+              title: "Q57: Erro - Comparar CIMs",
+              content: `<p><strong>Q57:</strong> Erro comum</p>`,
+              question: {
+                text: "Q57. Por que não comparar CIMs de diferentes antibióticos?",
+                options: ["Cada antibiótico tem PK/PD, mecanismo e penetração próprios", "CIM menor sempre indica antibiótico melhor", "Todos têm mesma farmacocinética"],
+                correct: 0,
+                explanation: "Não comparar CIMs: cada antibiótico é único. ➡️ Revisar: Erros Comuns a Evitar"
+              }
+            },
+            {
+              title: "Q58: Quando Comparar CIMs",
+              content: `<p><strong>Q58:</strong> Exceção válida</p>`,
+              question: {
+                text: "Q58. Quando é válido comparar CIMs?",
+                options: ["Comparar CIMs do MESMO antibiótico ao longo do tempo (MIC creep)", "Comparar antibióticos diferentes", "Nunca é válido"],
+                correct: 0,
+                explanation: "Válido comparar MESMO antibiótico ao longo do tempo. ➡️ Revisar: Erros Comuns a Evitar"
+              }
+            },
+            {
+              title: "Q59: Colonização vs Infecção",
+              content: `<p><strong>Q59:</strong> Distinção fundamental</p>`,
+              question: {
+                text: "Q59. Qual a diferença entre colonização e infecção?",
+                options: ["Colonização: presença sem resposta inflamatória; Infecção: com resposta", "São sinônimos", "Toda cultura positiva = infecção"],
+                correct: 0,
+                explanation: "Colonização ≠ Infecção: presença vs. doença. ➡️ Revisar: Erros Comuns a Evitar"
+              }
+            },
+            {
+              title: "Q60: Bacteriúria Assintomática",
+              content: `<p><strong>Q60:</strong> Quando tratar</p>`,
+              question: {
+                text: "Q60. Quando tratar bacteriúria assintomática?",
+                options: ["Apenas gestantes, pré-procedimento, transplante renal ou neutropenia", "Sempre que houver cultura positiva", "Nunca tratar"],
+                correct: 0,
+                explanation: "Bacteriúria assintomática: tratar apenas em 4 situações. ➡️ Revisar: Erros Comuns a Evitar"
+              }
+            },
+            {
+              title: "Q61: 'I' no BrCAST",
+              content: `<p><strong>Q61:</strong> Interpretação correta</p>`,
+              question: {
+                text: "Q61. O que 'I' ou 'SAE' significa no BrCAST?",
+                options: ["Sensível com Aumento de Exposição - requer ajuste de dose/regime", "Intermediário - qualidade inferior", "Resistente - não usar"],
+                correct: 0,
+                explanation: "'I' no BrCAST = Sensível com ajuste, não inferior. ➡️ Revisar: Erros Comuns a Evitar"
               }
             }
           ]
-        }
-  ]
-},
+        },
     antibioticoterapia: {
       title: "Antibioticoterapia Ambulatorial",
       description: "Aprenda os fundamentos da prescrição de antibióticos no ambulatório",
