@@ -7790,7 +7790,6 @@ const App = () => {
     }
   ]
 },
-        {
         // 4 Lições de Revisão - Módulo Antibiograma
         // 61 perguntas completas em formato otimizado
         {
