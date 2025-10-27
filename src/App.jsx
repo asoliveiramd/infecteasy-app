@@ -7998,7 +7998,7 @@ const App = () => {
       }
     }
   ]
-}
+},
                         {
           id: 3,
           title: "Cefalosporinas",
