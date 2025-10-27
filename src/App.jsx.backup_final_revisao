@@ -7791,147 +7791,112 @@ const App = () => {
   ]
 },
         {
-        // 4 Lições de Revisão - Módulo Antibiograma
-        // 61 perguntas completas em formato otimizado
+  id: 15,
+  title: "Revisão Parte I - Fundamentos",
+  duration: "30 min",
+  xp: 150,
+  sections: [
+    {
+      title: "Introdução - Fundamentos do TSA",
+      content: `
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 10px; color: white; margin-bottom: 20px;">
+          <h2 style="color: white; margin-bottom: 10px;">📝 Revisão Parte I - Fundamentos</h2>
+          <p style="font-size: 16px; line-height: 1.6;">
+            <strong>15 perguntas</strong> sobre conceitos fundamentais do TSA
+          </p>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+          <h4 style="color: #92400e; margin-bottom: 8px;">📚 Tópicos</h4>
+          <ul style="line-height: 1.6; color: #78350f; margin: 0;">
+            <li>Papel do laboratório de microbiologia</li>
+            <li>Resistência intrínseca vs. adquirida</li>
+            <li>Heterorresistência e CIM</li>
+          </ul>
+        </div>
+      `,
+      question: {
+        text: "Pronto para começar a revisão dos fundamentos?",
+        options: ["Sim, vamos começar!", "Revisar antes", "Fazer depois"],
+        correct: 0,
+        explanation: "Ótimo! Vamos revisar os conceitos fundamentais do TSA."
+      }
+    }
+  ]
+},
         {
-          id: 15,
-          title: "Revisão Parte I - Fundamentos",
-          duration: "30 min",
-          xp: 150,
-          sections: [
-            {
-              title: "Fundamentos do TSA (Q1-Q15)",
-              content: `
-                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 10px; color: white;">
-                  <h2 style="color: white;">📝 Revisão Parte I - Fundamentos</h2>
-                  <p style="font-size: 16px; line-height: 1.6; margin-top: 10px;">
-                    <strong>15 perguntas</strong> sobre conceitos fundamentais do Teste de Suscetibilidade Antimicrobiana
-                  </p>
-                </div>
-                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #92400e;">📚 Tópicos desta seção:</h4>
-                  <ul style="line-height: 1.6; color: #78350f;">
-                    <li>Papel do laboratório de microbiologia (Q1-Q4)</li>
-                    <li>Resistência intrínseca vs. adquirida (Q5-Q7)</li>
-                    <li>Expressão induzível e heterorresistência (Q8-Q11)</li>
-                    <li>Conceito de CIM (Q12-Q13)</li>
-                    <li>Indicações do TSA (Q14-Q15)</li>
-                  </ul>
-                </div>
-                <p><strong>💡 Dica:</strong> Se errar, revise a lição sugerida na explicação.</p>
-              `,
-              question: {
-                text: "Esta seção contém 15 perguntas sobre fundamentos. Pronto para começar?",
-                options: ["Sim, vamos lá!", "Revisar antes", "Depois"],
-                correct: 0,
-                explanation: "Ótimo! Vamos testar seus conhecimentos sobre os fundamentos do TSA."
-              }
-            }
-          ]
-        }
-        ,
-                {
-          id: 16,
-          title: "Revisão Parte II - Métodos",
-          duration: "30 min",
-          xp: 150,
-          sections: [
-            {
-              title: "Métodos de TSA (Q16-Q30)",
-              content: `
-                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 25px; border-radius: 10px; color: white;">
-                  <h2 style="color: white;">📝 Revisão Parte II - Métodos</h2>
-                  <p style="font-size: 16px; line-height: 1.6; margin-top: 10px;">
-                    <strong>15 perguntas</strong> sobre métodos convencionais e quantitativos
-                  </p>
-                </div>
-                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #92400e;">📚 Tópicos desta seção:</h4>
-                  <ul style="line-height: 1.6; color: #78350f;">
-                    <li>Flora normal e TSA (Q16-Q18)</li>
-                    <li>Método de difusão em disco (Q19-Q26)</li>
-                    <li>Métodos quantitativos - CIM (Q27-Q30)</li>
-                  </ul>
-                </div>
-              `,
-              question: {
-                text: "Esta seção contém 15 perguntas sobre métodos. Pronto?",
-                options: ["Sim!", "Revisar antes", "Depois"],
-                correct: 0,
-                explanation: "Vamos revisar os métodos de TSA!"
-              }
-            }
-          ]
-        }
-        ,
-                {
-          id: 17,
-          title: "Revisão Parte III - Interpretação",
-          duration: "35 min",
-          xp: 160,
-          sections: [
-            {
-              title: "Interpretação e Sistemas (Q31-Q46)",
-              content: `
-                <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 25px; border-radius: 10px; color: white;">
-                  <h2 style="color: white;">📝 Revisão Parte III - Interpretação</h2>
-                  <p style="font-size: 16px; line-height: 1.6; margin-top: 10px;">
-                    <strong>16 perguntas</strong> sobre interpretação de resultados
-                  </p>
-                </div>
-                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #92400e;">📚 Tópicos desta seção:</h4>
-                  <ul style="line-height: 1.6; color: #78350f;">
-                    <li>Métodos de diluição e gradiente (Q31-Q34)</li>
-                    <li>Categorias S/I/R e BrCAST (Q35-Q40)</li>
-                    <li>Sistemas automatizados (Q41-Q44)</li>
-                    <li>Resistências específicas e métodos moleculares (Q45-Q46)</li>
-                  </ul>
-                </div>
-              `,
-              question: {
-                text: "Esta seção contém 16 perguntas sobre interpretação. Pronto?",
-                options: ["Sim!", "Revisar antes", "Depois"],
-                correct: 0,
-                explanation: "Vamos revisar interpretação de resultados!"
-              }
-            }
-          ]
-        }
-        ,
-                {
-          id: 18,
-          title: "Revisão Parte IV - Tópicos Avançados",
-          duration: "35 min",
-          xp: 150,
-          sections: [
-            {
-              title: "Tópicos Avançados (Q47-Q61)",
-              content: `
-                <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 25px; border-radius: 10px; color: white;">
-                  <h2 style="color: white;">📝 Revisão Parte IV - Tópicos Avançados</h2>
-                  <p style="font-size: 16px; line-height: 1.6; margin-top: 10px;">
-                    <strong>15 perguntas</strong> sobre aplicações práticas
-                  </p>
-                </div>
-                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                  <h4 style="color: #92400e;">📚 Tópicos desta seção:</h4>
-                  <ul style="line-height: 1.6; color: #78350f;">
-                    <li>Limitações da categorização S/I/R (Q47-Q51)</li>
-                    <li>Análise de mecanismos de resistência (Q52-Q56)</li>
-                    <li>Erros comuns na interpretação (Q57-Q61)</li>
-                  </ul>
-                </div>
-              `,
-              question: {
-                text: "Esta seção contém 15 perguntas sobre tópicos avançados. Pronto?",
-                options: ["Sim!", "Revisar antes", "Depois"],
-                correct: 0,
-                explanation: "Vamos finalizar com tópicos avançados!"
-              }
-            }
-          ]
-        }
+  id: 16,
+  title: "Revisão Parte II - Métodos",
+  duration: "30 min",
+  xp: 150,
+  sections: [
+    {
+      title: "Introdução - Métodos de TSA",
+      content: `
+        <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 25px; border-radius: 10px; color: white; margin-bottom: 20px;">
+          <h2 style="color: white; margin-bottom: 10px;">📝 Revisão Parte II - Métodos</h2>
+          <p style="font-size: 16px; line-height: 1.6;">
+            <strong>15 perguntas</strong> sobre métodos convencionais e quantitativos
+          </p>
+        </div>
+      `,
+      question: {
+        text: "Pronto para revisar os métodos de TSA?",
+        options: ["Sim!", "Não", "Depois"],
+        correct: 0,
+        explanation: "Vamos revisar os métodos!"
+      }
+    }
+  ]
+},
+        {
+  id: 17,
+  title: "Revisão Parte III - Interpretação",
+  duration: "35 min",
+  xp: 160,
+  sections: [
+    {
+      title: "Introdução - Interpretação de Resultados",
+      content: `
+        <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 25px; border-radius: 10px; color: white; margin-bottom: 20px;">
+          <h2 style="color: white; margin-bottom: 10px;">📝 Revisão Parte III - Interpretação</h2>
+          <p style="font-size: 16px; line-height: 1.6;">
+            <strong>16 perguntas</strong> sobre interpretação e sistemas automatizados
+          </p>
+        </div>
+      `,
+      question: {
+        text: "Pronto para revisar interpretação de resultados?",
+        options: ["Sim!", "Não", "Depois"],
+        correct: 0,
+        explanation: "Vamos revisar interpretação!"
+      }
+    }
+  ]
+},
+        {
+  id: 18,
+  title: "Revisão Parte IV - Tópicos Avançados",
+  duration: "35 min",
+  xp: 150,
+  sections: [
+    {
+      title: "Introdução - Tópicos Avançados",
+      content: `
+        <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 25px; border-radius: 10px; color: white; margin-bottom: 20px;">
+          <h2 style="color: white; margin-bottom: 10px;">📝 Revisão Parte IV - Tópicos Avançados</h2>
+          <p style="font-size: 16px; line-height: 1.6;">
+            <strong>15 perguntas</strong> sobre conceitos avançados e erros comuns
+          </p>
+        </div>
+      `,
+      question: {
+        text: "Pronto para os tópicos avançados?",
+        options: ["Sim!", "Não", "Depois"],
+        correct: 0,
+        explanation: "Vamos aos tópicos avançados!"
+      }
+    }
   ]
 },
       ]
