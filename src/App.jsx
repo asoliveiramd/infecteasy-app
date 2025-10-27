@@ -7792,7 +7792,6 @@ const App = () => {
 },
         // 4 Lições de Revisão - Módulo Antibiograma
         // 61 perguntas completas em formato otimizado
-        {
         // LIÇÃO 15: Revisão Parte I - Fundamentos (Q1-Q15)
         {
           id: 15,
