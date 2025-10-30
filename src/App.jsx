@@ -4084,7 +4084,7 @@ const App = () => {
           xp: 150,
           sections: [
             {
-              title: "Questões de Revisão - Fundamentos do TSA",
+              title: "Introdução - Revisão de Fundamentos",
               content: `
                 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
                   <h2 style="color: white; margin: 0 0 15px 0; font-size: 26px;">📝 Revisão I - Fundamentos</h2>
@@ -4106,173 +4106,212 @@ const App = () => {
                   </p>
                 </div>
               `,
-              questions: [
-                {
-                  id: "q1",
-                  question: "Qual é o principal papel do laboratório de microbiologia clínica em relação ao tratamento de doenças infecciosas?",
-                  options: [
-                    "Fornecer informações que guiem a seleção de regimes antibióticos apropriados com base no perfil de suscetibilidade mais provável",
-                    "Desenvolver novos sistemas automatizados de detecção de microrganismos",
-                    "Realizar o TSA de rotina de vírus e parasitas em amostras clínicas"
-                  ],
-                  correct: 0,
-                  explanation: "O papel fundamental do laboratório de microbiologia clínica é fornecer informações que orientem a seleção racional de antibióticos. Através do TSA, o laboratório identifica quais antimicrobianos são eficazes contra o patógeno isolado, permitindo que o médico escolha o tratamento mais apropriado com base em dados microbiológicos concretos, não apenas em suposições empíricas."
-                },
-                {
-                  id: "q2",
-                  question: "O que o Teste de Suscetibilidade Antimicrobiana (TSA) in vitro especificamente determina?",
-                  options: [
-                    "Quais antibióticos inibem efetivamente o crescimento de um determinado isolado bacteriano, permitindo a terapia direcionada",
-                    "A toxicidade máxima tolerada do antimicrobiano no paciente",
-                    "Se a resistência do organismo é constitutiva ou induzível"
-                  ],
-                  correct: 0,
-                  explanation: "O TSA in vitro determina especificamente quais antibióticos são capazes de inibir o crescimento do isolado bacteriano em questão. Este teste laboratorial simula as condições de exposição da bactéria ao antimicrobiano, permitindo identificar quais drogas serão eficazes para o tratamento direcionado da infecção. A toxicidade e os mecanismos de resistência são aspectos importantes, mas não são o objetivo primário do TSA."
-                },
-                {
-                  id: "q3",
-                  question: "Dado o crescente problema da resistência antimicrobiana, qual é a importância do TSA de rotina para as decisões terapêuticas?",
-                  options: [
-                    "A importância aumentou, pois as decisões sobre o tratamento empírico estão se tornando mais complicadas",
-                    "A importância diminuiu, pois agora as decisões são baseadas apenas em testes moleculares rápidos",
-                    "O TSA se restringe a infecções comunitárias, não sendo relevante em ambientes de saúde"
-                  ],
-                  correct: 0,
-                  explanation: "Com o aumento global da resistência antimicrobiana, a importância do TSA cresceu significativamente. Padrões de suscetibilidade que antes eram previsíveis tornaram-se variáveis, tornando as decisões empíricas mais complexas e arriscadas. O TSA fornece dados essenciais para guiar a terapia, especialmente em infecções graves ou quando há suspeita de resistência. Os testes moleculares são complementares, não substitutos do TSA."
-                },
-                {
-                  id: "q4",
-                  question: "Quais são os três requisitos essenciais que os métodos de TSA usados em laboratórios clínicos devem atender?",
-                  options: [
-                    "Fornecer informação rápida e precisa ao clínico, ser relativamente barato e ser relativamente fácil de realizar",
-                    "Depender exclusivamente do crescimento bacteriano, ter alto custo e exigir incubação de 48 horas",
-                    "Ser realizado apenas por laboratórios de pesquisa para determinar a Concentração Inibitória Mínima (CIM)"
-                  ],
-                  correct: 0,
-                  explanation: "Os métodos de TSA utilizados na prática clínica devem equilibrar três características fundamentais: rapidez (para permitir ajustes terapêuticos oportunos), precisão (para garantir resultados confiáveis) e viabilidade econômica/operacional (custo acessível e execução relativamente simples). Estes requisitos garantem que o TSA seja uma ferramenta prática e útil no dia a dia dos laboratórios clínicos."
-                },
-                {
-                  id: "q5",
-                  question: "O que define a resistência intrínseca em bactérias?",
-                  options: [
-                    "É a resistência inerente a um antimicrobiano que todos ou quase todos os membros de uma espécie exibem, tornando o TSA desnecessário",
-                    "É a resistência adquirida por meio de transferência horizontal de genes via plasmídeos",
-                    "É a resistência que surge pela pressão seletiva, através de mutações genéticas"
-                  ],
-                  correct: 0,
-                  explanation: "A resistência intrínseca é uma característica natural e previsível de uma espécie bacteriana. Todos ou quase todos os membros da espécie apresentam essa resistência devido a características estruturais ou metabólicas inerentes. Por exemplo, Klebsiella pneumoniae possui resistência intrínseca à ampicilina. Como essa resistência é previsível, o TSA para essas combinações organismo-antimicrobiano é desnecessário."
-                },
-                {
-                  id: "q6",
-                  question: "Qual bactéria é citada como exemplo de resistência intrínseca ao antimicrobiano ampicilina?",
-                  options: [
-                    "Klebsiella pneumoniae",
-                    "Staphylococcus aureus",
-                    "Streptococcus pyogenes"
-                  ],
-                  correct: 0,
-                  explanation: "Klebsiella pneumoniae é um exemplo clássico de resistência intrínseca à ampicilina. Esta bactéria produz naturalmente uma beta-lactamase cromossômica (SHV-1) que confere resistência a aminopenicilinas como a ampicilina. Esta característica é tão previsível que não há necessidade de realizar TSA para ampicilina em isolados de K. pneumoniae."
-                },
-                {
-                  id: "q7",
-                  question: "Como a resistência adquirida difere da resistência intrínseca e qual é o seu mecanismo de desenvolvimento?",
-                  options: [
-                    "É o desenvolvimento de resistência a um antimicrobiano ao qual a população bacteriana wild-type era suscetível, ocorrendo por mutações cromossômicas, transferência horizontal de genes (plasmídeos, integrons, transposons, transformação) ou a combinação destes",
-                    "É a expressão de um mecanismo de resistência que é facilmente previsível",
-                    "É uma característica natural e previsível de uma espécie bacteriana, independente de exposição prévia"
-                  ],
-                  correct: 0,
-                  explanation: "A resistência adquirida representa uma mudança no perfil de suscetibilidade de uma bactéria que originalmente era sensível a determinado antimicrobiano. Ela pode surgir através de mutações cromossômicas espontâneas ou, mais comumente, pela aquisição de material genético de outras bactérias através de mecanismos como plasmídeos, transposons ou integrons. Esta resistência é imprevisível e requer TSA para detecção."
-                },
-                {
-                  id: "q8",
-                  question: "Qual é o mecanismo de resistência cuja expressão ocorre apenas após a exposição a um agente incitante específico?",
-                  options: [
-                    "Expressão induzível",
-                    "Expressão constitutiva",
-                    "Resistência intrínseca"
-                  ],
-                  correct: 0,
-                  explanation: "A expressão induzível é um mecanismo de resistência que permanece 'silencioso' até que a bactéria seja exposta a um antimicrobiano específico que atua como indutor. Apenas após essa exposição, os genes de resistência são ativados e expressos. Este fenômeno pode levar a falhas terapêuticas se não for adequadamente detectado pelo laboratório."
-                },
-                {
-                  id: "q9",
-                  question: "Qual é o exemplo de resistência induzível que resulta em resistência a cefalosporinas de terceira geração?",
-                  options: [
-                    "Produção induzida de beta-lactamase AmpC cromossomicamente codificada em certas Enterobacterales",
-                    "Resistência mediada pelo gene mecA em S. aureus",
-                    "Resistência adquirida por mutações cromossômicas"
-                  ],
-                  correct: 0,
-                  explanation: "A produção induzível de beta-lactamase AmpC é um exemplo clássico de resistência induzível. Certas Enterobacterales (como Enterobacter spp., Citrobacter freundii, Serratia marcescens) possuem o gene AmpC cromossômico que, quando induzido pela exposição a certos beta-lactâmicos, resulta em resistência a cefalosporinas de terceira geração. Este fenômeno é clinicamente relevante e pode levar a falhas terapêuticas."
-                },
-                {
-                  id: "q10",
-                  question: "O que a heterorresistência representa em termos de expressão fenotípica?",
-                  options: [
-                    "Expressão homogênea e contínua do mecanismo de resistência",
-                    "Presença de subpopulações bacterianas com diferentes graus de resistência fenotípica dentro de uma mesma cultura",
-                    "Resistência que surge apenas após o tratamento com antibióticos de moléculas grandes"
-                  ],
-                  correct: 1,
-                  explanation: "A heterorresistência é um fenômeno complexo onde uma população bacteriana aparentemente homogênea contém subpopulações com diferentes níveis de resistência ao mesmo antimicrobiano. A maioria das células pode parecer suscetível nos testes convencionais, mas uma pequena subpopulação resistente pode persistir e causar falha terapêutica. Este fenômeno é particularmente relevante em VISA (Staphylococcus aureus com resistência intermediária à vancomicina)."
-                },
-                {
-                  id: "q11",
-                  question: "O que o Staphylococcus aureus heterorresistente vancomicina-intermediário (hVISA) representa?",
-                  options: [
-                    "Um organismo com capacidade de expressão heterogênea, podendo levar a falhas terapêuticas inesperadas",
-                    "Um isolado que possui resistência intrínseca à vancomicina",
-                    "Um organismo cuja resistência é sempre facilmente detectável por métodos convencionais"
-                  ],
-                  correct: 0,
-                  explanation: "O hVISA (heterogeneous VISA) representa um desafio clínico e laboratorial significativo. Estes isolados contêm subpopulações com resistência intermediária à vancomicina que podem não ser detectadas pelos métodos convencionais de TSA, mas podem expandir durante a terapia com vancomicina, levando a falhas terapêuticas inesperadas. A detecção de hVISA requer métodos especializados."
-                },
-                {
-                  id: "q12",
-                  question: "Qual é a definição precisa da Concentração Inibitória Mínima (CIM)?",
-                  options: [
-                    "A maior concentração de antimicrobiano que permite o crescimento bacteriano visível",
-                    "A menor concentração de antimicrobiano capaz de inibir 99% do crescimento bacteriano visível",
-                    "O ponto de corte (breakpoint) que separa o microrganismo em sensível ou resistente"
-                  ],
-                  correct: 1,
-                  explanation: "A CIM é definida como a menor concentração de um antimicrobiano capaz de inibir o crescimento bacteriano visível (geralmente 99% de inibição) após um período de incubação padronizado. Este valor quantitativo é fundamental para avaliar a atividade in vitro de antimicrobianos e é usado em conjunto com breakpoints clínicos para determinar se um isolado é suscetível, intermediário ou resistente."
-                },
-                {
-                  id: "q13",
-                  question: "O que o valor numérico da CIM indica em relação à sensibilidade de um microrganismo?",
-                  options: [
-                    "Quanto maior o valor da CIM, maior a sensibilidade do microrganismo",
-                    "Quanto menor o valor da CIM, maior a sensibilidade do microrganismo",
-                    "O valor da CIM deve ser comparado entre diferentes antimicrobianos para determinar qual é o melhor"
-                  ],
-                  correct: 1,
-                  explanation: "A relação entre CIM e sensibilidade é inversamente proporcional: quanto menor a CIM, mais sensível é o microrganismo ao antimicrobiano. Uma CIM baixa significa que uma pequena concentração do antibiótico é suficiente para inibir o crescimento bacteriano, indicando alta sensibilidade. Valores de CIM não devem ser comparados entre diferentes antimicrobianos, pois cada droga tem suas próprias características farmacocinéticas e farmacodinâmicas."
-                },
-                {
-                  id: "q14",
-                  question: "Em geral, o TSA deve ser realizado quando isolados clinicamente significativos são obtidos de amostras de pacientes e...",
-                  options: [
-                    "O organismo é considerado parte da flora normal do local da coleta",
-                    "A informação resultante pode ser usada para guiar o tratamento",
-                    "A suscetibilidade do organismo é sempre previsível (ex: S. pyogenes para penicilina)"
-                  ],
-                  correct: 1,
-                  explanation: "O TSA deve ser realizado quando o resultado pode efetivamente guiar decisões terapêuticas. Isso significa que o organismo isolado deve ser clinicamente significativo (não apenas colonizador ou contaminante) e que existe incerteza sobre seu perfil de suscetibilidade. O TSA não é necessário para organismos da flora normal ou quando a suscetibilidade é altamente previsível."
-                },
-                {
-                  id: "q15",
-                  question: "Por que o teste de Streptococcus pyogenes para suscetibilidade à penicilina não é realizado rotineiramente?",
-                  options: [
-                    "Porque os isolados não suscetíveis à penicilina nunca foram relatados",
-                    "Porque o S. pyogenes é intrinsecamente resistente à penicilina",
-                    "Porque o teste da borda da zona de penicilina não é padronizado para esta espécie"
-                  ],
-                  correct: 0,
-                  explanation: "Streptococcus pyogenes (estreptococo do grupo A) mantém sensibilidade universal à penicilina - nenhum isolado resistente foi documentado até o momento. Esta suscetibilidade previsível torna o TSA desnecessário, permitindo que a penicilina seja usada empiricamente com confiança para infecções por S. pyogenes. Este é um exemplo raro de suscetibilidade completamente previsível na era da resistência antimicrobiana."
-                }
-              ]
+              question: {
+                text: "Q1. Qual é o principal papel do laboratório de microbiologia clínica em relação ao tratamento de doenças infecciosas?",
+                options: [
+                  "Fornecer informações que guiem a seleção de regimes antibióticos apropriados com base no perfil de suscetibilidade mais provável",
+                  "Desenvolver novos sistemas automatizados de detecção de microrganismos",
+                  "Realizar o TSA de rotina de vírus e parasitas em amostras clínicas"
+                ],
+                correct: 0,
+                explanation: "O papel fundamental do laboratório de microbiologia clínica é fornecer informações que orientem a seleção racional de antibióticos. Através do TSA, o laboratório identifica quais antimicrobianos são eficazes contra o patógeno isolado, permitindo que o médico escolha o tratamento mais apropriado com base em dados microbiológicos concretos, não apenas em suposições empíricas."
+              }
+            },
+            {
+              title: "Q2 - Definição do TSA",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 2:</strong> Sobre o Teste de Suscetibilidade Antimicrobiana in vitro</p>`,
+              question: {
+                text: "Q2. O que o Teste de Suscetibilidade Antimicrobiana (TSA) in vitro especificamente determina?",
+                options: [
+                  "Quais antibióticos inibem efetivamente o crescimento de um determinado isolado bacteriano, permitindo a terapia direcionada",
+                  "A toxicidade máxima tolerada do antimicrobiano no paciente",
+                  "Se a resistência do organismo é constitutiva ou induzível"
+                ],
+                correct: 0,
+                explanation: "O TSA in vitro determina especificamente quais antibióticos são capazes de inibir o crescimento do isolado bacteriano em questão. Este teste laboratorial simula as condições de exposição da bactéria ao antimicrobiano, permitindo identificar quais drogas serão eficazes para o tratamento direcionado da infecção. A toxicidade e os mecanismos de resistência são aspectos importantes, mas não são o objetivo primário do TSA."
+              }
+            },
+            {
+              title: "Q3 - Importância do TSA",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 3:</strong> Relevância do TSA na era da resistência antimicrobiana</p>`,
+              question: {
+                text: "Q3. Dado o crescente problema da resistência antimicrobiana, qual é a importância do TSA de rotina para as decisões terapêuticas?",
+                options: [
+                  "A importância aumentou, pois as decisões sobre o tratamento empírico estão se tornando mais complicadas",
+                  "A importância diminuiu, pois agora as decisões são baseadas apenas em testes moleculares rápidos",
+                  "O TSA se restringe a infecções comunitárias, não sendo relevante em ambientes de saúde"
+                ],
+                correct: 0,
+                explanation: "Com o aumento global da resistência antimicrobiana, a importância do TSA cresceu significativamente. Padrões de suscetibilidade que antes eram previsíveis tornaram-se variáveis, tornando as decisões empíricas mais complexas e arriscadas. O TSA fornece dados essenciais para guiar a terapia, especialmente em infecções graves ou quando há suspeita de resistência. Os testes moleculares são complementares, não substitutos do TSA."
+              }
+            },
+            {
+              title: "Q4 - Requisitos dos Métodos de TSA",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 4:</strong> Características essenciais dos métodos de TSA</p>`,
+              question: {
+                text: "Q4. Quais são os três requisitos essenciais que os métodos de TSA usados em laboratórios clínicos devem atender?",
+                options: [
+                  "Fornecer informação rápida e precisa ao clínico, ser relativamente barato e ser relativamente fácil de realizar",
+                  "Depender exclusivamente do crescimento bacteriano, ter alto custo e exigir incubação de 48 horas",
+                  "Ser realizado apenas por laboratórios de pesquisa para determinar a Concentração Inibitória Mínima (CIM)"
+                ],
+                correct: 0,
+                explanation: "Os métodos de TSA utilizados na prática clínica devem equilibrar três características fundamentais: rapidez (para permitir ajustes terapêuticos oportunos), precisão (para garantir resultados confiáveis) e viabilidade econômica/operacional (custo acessível e execução relativamente simples). Estes requisitos garantem que o TSA seja uma ferramenta prática e útil no dia a dia dos laboratórios clínicos."
+              }
+            },
+            {
+              title: "Q5 - Resistência Intrínseca",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 5:</strong> Conceito de resistência intrínseca</p>`,
+              question: {
+                text: "Q5. O que define a resistência intrínseca em bactérias?",
+                options: [
+                  "É a resistência inerente a um antimicrobiano que todos ou quase todos os membros de uma espécie exibem, tornando o TSA desnecessário",
+                  "É a resistência adquirida por meio de transferência horizontal de genes via plasmídeos",
+                  "É a resistência que surge pela pressão seletiva, através de mutações genéticas"
+                ],
+                correct: 0,
+                explanation: "A resistência intrínseca é uma característica natural e previsível de uma espécie bacteriana. Todos ou quase todos os membros da espécie apresentam essa resistência devido a características estruturais ou metabólicas inerentes. Por exemplo, Klebsiella pneumoniae possui resistência intrínseca à ampicilina. Como essa resistência é previsível, o TSA para essas combinações organismo-antimicrobiano é desnecessário."
+              }
+            },
+            {
+              title: "Q6 - Exemplo de Resistência Intrínseca",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 6:</strong> Exemplo clássico de resistência intrínseca</p>`,
+              question: {
+                text: "Q6. Qual bactéria é citada como exemplo de resistência intrínseca ao antimicrobiano ampicilina?",
+                options: [
+                  "Klebsiella pneumoniae",
+                  "Staphylococcus aureus",
+                  "Streptococcus pyogenes"
+                ],
+                correct: 0,
+                explanation: "Klebsiella pneumoniae é um exemplo clássico de resistência intrínseca à ampicilina. Esta bactéria produz naturalmente uma beta-lactamase cromossômica (SHV-1) que confere resistência a aminopenicilinas como a ampicilina. Esta característica é tão previsível que não há necessidade de realizar TSA para ampicilina em isolados de K. pneumoniae."
+              }
+            },
+            {
+              title: "Q7 - Resistência Adquirida",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 7:</strong> Mecanismos de resistência adquirida</p>`,
+              question: {
+                text: "Q7. Como a resistência adquirida difere da resistência intrínseca e qual é o seu mecanismo de desenvolvimento?",
+                options: [
+                  "É o desenvolvimento de resistência a um antimicrobiano ao qual a população bacteriana wild-type era suscetível, ocorrendo por mutações cromossômicas, transferência horizontal de genes (plasmídeos, integrons, transposons, transformação) ou a combinação destes",
+                  "É a expressão de um mecanismo de resistência que é facilmente previsível",
+                  "É uma característica natural e previsível de uma espécie bacteriana, independente de exposição prévia"
+                ],
+                correct: 0,
+                explanation: "A resistência adquirida representa uma mudança no perfil de suscetibilidade de uma bactéria que originalmente era sensível a determinado antimicrobiano. Ela pode surgir através de mutações cromossômicas espontâneas ou, mais comumente, pela aquisição de material genético de outras bactérias através de mecanismos como plasmídeos, transposons ou integrons. Esta resistência é imprevisível e requer TSA para detecção."
+              }
+            },
+            {
+              title: "Q8 - Expressão Induzível",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 8:</strong> Mecanismo de expressão induzível</p>`,
+              question: {
+                text: "Q8. Qual é o mecanismo de resistência cuja expressão ocorre apenas após a exposição a um agente incitante específico?",
+                options: [
+                  "Expressão induzível",
+                  "Expressão constitutiva",
+                  "Resistência intrínseca"
+                ],
+                correct: 0,
+                explanation: "A expressão induzível é um mecanismo de resistência que permanece 'silencioso' até que a bactéria seja exposta a um antimicrobiano específico que atua como indutor. Apenas após essa exposição, os genes de resistência são ativados e expressos. Este fenômeno pode levar a falhas terapêuticas se não for adequadamente detectado pelo laboratório."
+              }
+            },
+            {
+              title: "Q9 - Beta-lactamase AmpC",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 9:</strong> Exemplo de resistência induzível</p>`,
+              question: {
+                text: "Q9. Qual é o exemplo de resistência induzível que resulta em resistência a cefalosporinas de terceira geração?",
+                options: [
+                  "Produção induzida de beta-lactamase AmpC cromossomicamente codificada em certas Enterobacterales",
+                  "Resistência mediada pelo gene mecA em S. aureus",
+                  "Resistência adquirida por mutações cromossômicas"
+                ],
+                correct: 0,
+                explanation: "A produção induzível de beta-lactamase AmpC é um exemplo clássico de resistência induzível. Certas Enterobacterales (como Enterobacter spp., Citrobacter freundii, Serratia marcescens) possuem o gene AmpC cromossômico que, quando induzido pela exposição a certos beta-lactâmicos, resulta em resistência a cefalosporinas de terceira geração. Este fenômeno é clinicamente relevante e pode levar a falhas terapêuticas."
+              }
+            },
+            {
+              title: "Q10 - Heterorresistência",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 10:</strong> Conceito de heterorresistência</p>`,
+              question: {
+                text: "Q10. O que a heterorresistência representa em termos de expressão fenotípica?",
+                options: [
+                  "Expressão homogênea e contínua do mecanismo de resistência",
+                  "Presença de subpopulações bacterianas com diferentes graus de resistência fenotípica dentro de uma mesma cultura",
+                  "Resistência que surge apenas após o tratamento com antibióticos de moléculas grandes"
+                ],
+                correct: 1,
+                explanation: "A heterorresistência é um fenômeno complexo onde uma população bacteriana aparentemente homogênea contém subpopulações com diferentes níveis de resistência ao mesmo antimicrobiano. A maioria das células pode parecer suscetível nos testes convencionais, mas uma pequena subpopulação resistente pode persistir e causar falha terapêutica. Este fenômeno é particularmente relevante em VISA (Staphylococcus aureus com resistência intermediária à vancomicina)."
+              }
+            },
+            {
+              title: "Q11 - hVISA",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 11:</strong> Staphylococcus aureus heterorresistente</p>`,
+              question: {
+                text: "Q11. O que o Staphylococcus aureus heterorresistente vancomicina-intermediário (hVISA) representa?",
+                options: [
+                  "Um organismo com capacidade de expressão heterogênea, podendo levar a falhas terapêuticas inesperadas",
+                  "Um isolado que possui resistência intrínseca à vancomicina",
+                  "Um organismo cuja resistência é sempre facilmente detectável por métodos convencionais"
+                ],
+                correct: 0,
+                explanation: "O hVISA (heterogeneous VISA) representa um desafio clínico e laboratorial significativo. Estes isolados contêm subpopulações com resistência intermediária à vancomicina que podem não ser detectadas pelos métodos convencionais de TSA, mas podem expandir durante a terapia com vancomicina, levando a falhas terapêuticas inesperadas. A detecção de hVISA requer métodos especializados."
+              }
+            },
+            {
+              title: "Q12 - Definição de CIM",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 12:</strong> Concentração Inibitória Mínima</p>`,
+              question: {
+                text: "Q12. Qual é a definição precisa da Concentração Inibitória Mínima (CIM)?",
+                options: [
+                  "A maior concentração de antimicrobiano que permite o crescimento bacteriano visível",
+                  "A menor concentração de antimicrobiano capaz de inibir 99% do crescimento bacteriano visível",
+                  "O ponto de corte (breakpoint) que separa o microrganismo em sensível ou resistente"
+                ],
+                correct: 1,
+                explanation: "A CIM é definida como a menor concentração de um antimicrobiano capaz de inibir o crescimento bacteriano visível (geralmente 99% de inibição) após um período de incubação padronizado. Este valor quantitativo é fundamental para avaliar a atividade in vitro de antimicrobianos e é usado em conjunto com breakpoints clínicos para determinar se um isolado é suscetível, intermediário ou resistente."
+              }
+            },
+            {
+              title: "Q13 - Interpretação da CIM",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 13:</strong> Relação entre CIM e sensibilidade</p>`,
+              question: {
+                text: "Q13. O que o valor numérico da CIM indica em relação à sensibilidade de um microrganismo?",
+                options: [
+                  "Quanto maior o valor da CIM, maior a sensibilidade do microrganismo",
+                  "Quanto menor o valor da CIM, maior a sensibilidade do microrganismo",
+                  "O valor da CIM deve ser comparado entre diferentes antimicrobianos para determinar qual é o melhor"
+                ],
+                correct: 1,
+                explanation: "A relação entre CIM e sensibilidade é inversamente proporcional: quanto menor a CIM, mais sensível é o microrganismo ao antimicrobiano. Uma CIM baixa significa que uma pequena concentração do antibiótico é suficiente para inibir o crescimento bacteriano, indicando alta sensibilidade. Valores de CIM não devem ser comparados entre diferentes antimicrobianos, pois cada droga tem suas próprias características farmacocinéticas e farmacodinâmicas."
+              }
+            },
+            {
+              title: "Q14 - Indicações do TSA",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 14:</strong> Quando realizar o TSA</p>`,
+              question: {
+                text: "Q14. Em geral, o TSA deve ser realizado quando isolados clinicamente significativos são obtidos de amostras de pacientes e...",
+                options: [
+                  "O organismo é considerado parte da flora normal do local da coleta",
+                  "A informação resultante pode ser usada para guiar o tratamento",
+                  "A suscetibilidade do organismo é sempre previsível (ex: S. pyogenes para penicilina)"
+                ],
+                correct: 1,
+                explanation: "O TSA deve ser realizado quando o resultado pode efetivamente guiar decisões terapêuticas. Isso significa que o organismo isolado deve ser clinicamente significativo (não apenas colonizador ou contaminante) e que existe incerteza sobre seu perfil de suscetibilidade. O TSA não é necessário para organismos da flora normal ou quando a suscetibilidade é altamente previsível."
+              }
+            },
+            {
+              title: "Q15 - S. pyogenes e Penicilina",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 15:</strong> Suscetibilidade previsível</p>`,
+              question: {
+                text: "Q15. Por que o teste de Streptococcus pyogenes para suscetibilidade à penicilina não é realizado rotineiramente?",
+                options: [
+                  "Porque os isolados não suscetíveis à penicilina nunca foram relatados",
+                  "Porque o S. pyogenes é intrinsecamente resistente à penicilina",
+                  "Porque o teste da borda da zona de penicilina não é padronizado para esta espécie"
+                ],
+                correct: 0,
+                explanation: "Streptococcus pyogenes (estreptococo do grupo A) mantém sensibilidade universal à penicilina - nenhum isolado resistente foi documentado até o momento. Esta suscetibilidade previsível torna o TSA desnecessário, permitindo que a penicilina seja usada empiricamente com confiança para infecções por S. pyogenes. Este é um exemplo raro de suscetibilidade completamente previsível na era da resistência antimicrobiana."
+              }
             }
           ]
         }
