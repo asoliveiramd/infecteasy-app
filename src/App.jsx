@@ -4315,6 +4315,244 @@ const App = () => {
             }
           ]
         },
+{
+          id: 16,
+          title: "Revisão II - Métodos",
+          duration: "30 min",
+          xp: 150,
+          sections: [
+            {
+              title: "Introdução - Revisão de Métodos",
+              content: `
+                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 25px; border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                  <h2 style="color: white; margin: 0 0 15px 0; font-size: 26px;">📝 Revisão II - Métodos</h2>
+                  <p style="color: rgba(255,255,255,0.95); margin: 0 0 15px 0; font-size: 16px; line-height: 1.8;">
+                    Esta lição de revisão contém <strong>15 questões</strong> focadas nos <strong>métodos de Teste de Suscetibilidade Antimicrobiana (TSA)</strong>, desde métodos qualitativos até quantitativos.
+                  </p>
+                  <div style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; margin-top: 15px;">
+                    <h4 style="color: white; margin: 0 0 10px 0; font-size: 16px;">📚 Tópicos Abordados:</h4>
+                    <ul style="color: rgba(255,255,255,0.9); margin: 0; padding-left: 20px; line-height: 1.8;">
+                      <li>Indicações do TSA e padronização (CLSI/EUCAST)</li>
+                      <li>Método de difusão em disco (Kirby-Bauer)</li>
+                      <li>Métodos quantitativos (CIM, diluição em ágar, macrodiluição)</li>
+                      <li>Correlação entre zona de inibição e CIM</li>
+                      <li>Vantagens e limitações de cada método</li>
+                    </ul>
+                  </div>
+                  <p style="color: rgba(255,255,255,0.9); margin: 15px 0 0 0; font-size: 14px; font-style: italic;">
+                    💡 Dica: Preste atenção nas diferenças entre métodos qualitativos e quantitativos!
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Q16. Em relação à flora normal, qual é a situação em que o TSA não é rotineiramente realizado?",
+                options: [
+                  "Quando Klebsiella pneumoniae é isolada de uma hemocultura",
+                  "Quando Lactobacillus spp é isolado em cultura vaginal, por ser considerado parte da flora normal",
+                  "Quando o organismo é isolado de um local estéril, como o líquido cefalorraquidiano"
+                ],
+                correct: 1,
+                explanation: "O TSA não é realizado rotineiramente para organismos que fazem parte da flora normal do local de coleta, como Lactobacillus spp em cultura vaginal. Estes organismos geralmente não são patogênicos e sua presença é esperada. Por outro lado, quando K. pneumoniae é isolada de hemocultura (local estéril), o TSA é essencial, pois indica infecção sistêmica grave que requer tratamento antimicrobiano guiado."
+              }
+            },
+            {
+              title: "Q17 - Pacientes Imunossuprimidos",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 17:</strong> Importância da informação clínica sobre imunossupressão</p>`,
+              question: {
+                text: "Q17. Qual é a importância da notificação pelo médico sobre um paciente estar imunossuprimido, em relação ao TSA?",
+                options: [
+                  "Permite ao laboratório modificar a abordagem de seleção de isolados, pois bactérias consideradas não patogênicas em hospedeiros imunocompetentes podem causar infecções sérias",
+                  "Indica que o teste de suscetibilidade deve ser suprimido, focando apenas na identificação",
+                  "Permite que o laboratório use apenas métodos moleculares, devido à urgência"
+                ],
+                correct: 0,
+                explanation: "A informação sobre imunossupressão é crucial porque modifica a interpretação da relevância clínica dos isolados. Organismos considerados contaminantes ou colonizadores em pacientes imunocompetentes (como Corynebacterium spp, Bacillus spp não-anthracis, ou estafilococos coagulase-negativos) podem causar infecções graves em imunossuprimidos. Esta informação permite ao laboratório realizar TSA em isolados que normalmente seriam descartados, garantindo tratamento adequado."
+              }
+            },
+            {
+              title: "Q18 - Padronização do TSA",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 18:</strong> Papel das organizações profissionais</p>`,
+              question: {
+                text: "Q18. O que as organizações profissionais como o CLSI e o EUCAST fornecem para garantir a precisão e a reprodutibilidade dos métodos de TSA?",
+                options: [
+                  "Padrões de desempenho para o TSA, incluindo a padronização do inóculo e dos procedimentos",
+                  "Apenas um registro de cepas de referência para pesquisa",
+                  "O fornecimento dos kits comerciais para todos os métodos de teste"
+                ],
+                correct: 0,
+                explanation: "O CLSI (Clinical and Laboratory Standards Institute) e o EUCAST (European Committee on Antimicrobial Susceptibility Testing) são organizações que desenvolvem e publicam padrões de desempenho detalhados para o TSA. Estes padrões incluem especificações sobre preparo do inóculo (0,5 McFarland), meios de cultura, condições de incubação, interpretação de resultados e breakpoints. Esta padronização é essencial para garantir que resultados sejam reprodutíveis entre diferentes laboratórios e comparáveis ao longo do tempo."
+              }
+            },
+            {
+              title: "Q19 - Método de Difusão em Disco",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 19:</strong> Método qualitativo mais comum</p>`,
+              question: {
+                text: "Q19. Qual é o método qualitativo convencional mais comumente usado, devido à sua simplicidade, confiabilidade e alto grau de padronização?",
+                options: [
+                  "Macrodiluição em caldo",
+                  "Método de difusão em disco (Kirby-Bauer)",
+                  "Diluição em ágar"
+                ],
+                correct: 1,
+                explanation: "O método de difusão em disco (Kirby-Bauer) é o método qualitativo mais amplamente utilizado em laboratórios clínicos devido à sua simplicidade operacional, baixo custo, alta confiabilidade e excelente padronização. O método envolve a aplicação de discos impregnados com antimicrobianos sobre ágar inoculado com a bactéria teste, seguido de incubação e medição das zonas de inibição. É ideal para laboratórios de pequeno a médio porte."
+              }
+            },
+            {
+              title: "Q20 - Inóculo Padronizado",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 20:</strong> Padronização do inóculo no Kirby-Bauer</p>`,
+              question: {
+                text: "Q20. No procedimento de Kirby-Bauer, qual é o inóculo padronizado recomendado?",
+                options: [
+                  "Aproximadamente 1 a 2×10⁸ UFC/mL, semeado em Ágar Mueller-Hinton (ou outro meio apropriado)",
+                  "Aproximadamente 5×10⁵ UFC/mL, usando meio de enriquecimento",
+                  "Cerca de 10⁴ UFC, inoculado em pontos específicos da placa"
+                ],
+                correct: 0,
+                explanation: "O inóculo padronizado para o método de Kirby-Bauer é de aproximadamente 1 a 2×10⁸ UFC/mL, equivalente ao padrão 0,5 de McFarland. Este inóculo é semeado uniformemente em Ágar Mueller-Hinton (ou meios especiais para organismos fastidiosos). A padronização do inóculo é crítica porque inóculos muito altos ou muito baixos podem levar a zonas de inibição falsamente pequenas ou grandes, respectivamente, resultando em interpretações errôneas."
+              }
+            },
+            {
+              title: "Q21 - Zona de Inibição",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 21:</strong> Interpretação da zona de inibição</p>`,
+              question: {
+                text: "Q21. No método de difusão em disco, o que o diâmetro da zona de inibição indica?",
+                options: [
+                  "O local onde a concentração do antimicrobiano é alta o suficiente para prevenir a proliferação do organismo",
+                  "A Concentração Inibitória Mínima (CIM) precisa do organismo",
+                  "O ponto de corte que deve ser usado para S. aureus para vancomicina"
+                ],
+                correct: 0,
+                explanation: "A zona de inibição representa a área ao redor do disco onde a concentração do antimicrobiano difundido no ágar é suficientemente alta para inibir o crescimento bacteriano visível. O diâmetro desta zona é inversamente proporcional à CIM: quanto maior a zona, menor a CIM e mais sensível é o organismo. Embora exista correlação com a CIM, a difusão em disco não fornece um valor preciso de CIM, apenas uma estimativa qualitativa (S/I/R)."
+              }
+            },
+            {
+              title: "Q22 - Relação Zona-CIM",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 22:</strong> Correlação entre zona de inibição e CIM</p>`,
+              question: {
+                text: "Q22. Qual é a principal relação entre o tamanho da zona de inibição e a Concentração Inibitória Mínima (CIM)?",
+                options: [
+                  "Eles são inversamente proporcionais (halo grande = CIM baixa = mais sensível)",
+                  "Eles são diretamente proporcionais (halo grande = CIM alta = menos sensível)",
+                  "A relação é sempre perfeitamente linear"
+                ],
+                correct: 0,
+                explanation: "A relação entre zona de inibição e CIM é inversamente proporcional: quanto maior o diâmetro da zona de inibição, menor a CIM, indicando maior sensibilidade do organismo. Esta relação existe porque organismos mais sensíveis são inibidos por concentrações menores do antimicrobiano, permitindo que o antibiótico difunda mais longe antes que sua concentração caia abaixo da CIM. Embora geralmente logarítmica (não perfeitamente linear), esta correlação permite que tabelas de interpretação convertam diâmetros de zona em categorias S/I/R."
+              }
+            },
+            {
+              title: "Q23 - Flexibilidade do Método",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 23:</strong> Vantagem da personalização</p>`,
+              question: {
+                text: "Q23. Qual é a vantagem do método de difusão em disco em relação à flexibilidade na escolha dos antimicrobianos?",
+                options: [
+                  "A escolha pode ser personalizada de acordo com os formulários institucionais e padrões de resistência locais",
+                  "O método só é validado para organismos fastidiosos",
+                  "O método só permite testar um antimicrobiano por placa"
+                ],
+                correct: 0,
+                explanation: "Uma grande vantagem do método de difusão em disco é a flexibilidade na seleção de antimicrobianos. Laboratórios podem personalizar os painéis de discos testados de acordo com o formulário hospitalar, padrões de resistência locais, tipo de infecção e perfil do paciente. Por exemplo, pode-se testar carbapenêmicos apenas quando há suspeita de resistência, ou incluir antimicrobianos específicos para infecções urinárias. Esta personalização otimiza recursos e fornece informações mais relevantes clinicamente."
+              }
+            },
+            {
+              title: "Q24 - Limitação: Automação",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 24:</strong> Desafio em laboratórios de alto volume</p>`,
+              question: {
+                text: "Q24. Qual é uma limitação importante da difusão em disco em laboratórios de alto volume?",
+                options: [
+                  "A falta de automação do procedimento, o que dificulta a produção em larga escala",
+                  "O baixo custo por teste",
+                  "A capacidade de fornecer uma CIM precisa"
+                ],
+                correct: 0,
+                explanation: "A principal limitação do método de difusão em disco em laboratórios de alto volume é a dificuldade de automação. O método requer múltiplas etapas manuais: preparo do inóculo, semeadura, aplicação dos discos, incubação, medição das zonas com paquímetro e interpretação. Embora existam sistemas automatizados de leitura de zonas, o processo ainda é mais trabalhoso que sistemas totalmente automatizados como VITEK ou Phoenix, que são preferidos em laboratórios de grande porte."
+              }
+            },
+            {
+              title: "Q25 - Limitação: Natureza Qualitativa",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 25:</strong> Quando a CIM é necessária</p>`,
+              question: {
+                text: "Q25. Qual é um exemplo de infecção para a qual a natureza qualitativa da difusão em disco é uma limitação, exigindo uma CIM quantitativa?",
+                options: [
+                  "Infecções urinárias não complicadas",
+                  "Infecções causadas por Lactobacillus spp",
+                  "Endocardite causada por estreptococos do grupo viridans, onde os regimes são estratificados pela CIM de penicilina"
+                ],
+                correct: 2,
+                explanation: "A endocardite por estreptococos do grupo viridans é um exemplo clássico onde a CIM quantitativa é essencial. O tratamento é estratificado pela CIM de penicilina: isolados altamente sensíveis (CIM ≤0,125 µg/mL) podem ser tratados com penicilina em monoterapia por 4 semanas, enquanto isolados com CIM mais elevada requerem terapia combinada ou prolongada. A difusão em disco fornece apenas categorias S/I/R, não permitindo esta estratificação precisa necessária para otimizar o tratamento."
+              }
+            },
+            {
+              title: "Q26 - Limitação: VISA",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 26:</strong> Combinação organismo-antimicrobiano problemática</p>`,
+              question: {
+                text: "Q26. Para qual combinação organismo-antimicrobiano o método de difusão em disco é especificamente considerado insensível e não deve ser usado?",
+                options: [
+                  "Streptococcus pyogenes para Penicilina",
+                  "Staphylococcus aureus para Vancomicina-intermediário (VISA)",
+                  "Klebsiella pneumoniae para Ampicilina"
+                ],
+                correct: 1,
+                explanation: "O método de difusão em disco é notoriamente insensível para detectar S. aureus com resistência intermediária à vancomicina (VISA). Devido às características de difusão da vancomicina no ágar e ao mecanismo de resistência do VISA (espessamento da parede celular), as zonas de inibição podem parecer normais mesmo em isolados VISA. Por isso, o CLSI recomenda métodos quantitativos (CIM por microdiluição ou E-test) para testar vancomicina em S. aureus, especialmente em infecções graves."
+              }
+            },
+            {
+              title: "Q27 - Métodos Quantitativos",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 27:</strong> Padrão-ouro para avaliação de sensibilidade</p>`,
+              question: {
+                text: "Q27. Qual é a principal informação fornecida pelos métodos quantitativos de TSA, que é considerada o padrão-ouro para avaliação de sensibilidade?",
+                options: [
+                  "O diâmetro da zona de inibição",
+                  "A Concentração Inibitória Mínima (CIM)",
+                  "A presença de um mecanismo de resistência específico (e.g., ESBL)"
+                ],
+                correct: 1,
+                explanation: "A Concentração Inibitória Mínima (CIM) é a informação fundamental fornecida pelos métodos quantitativos e é considerada o padrão-ouro para avaliação de sensibilidade antimicrobiana. A CIM fornece um valor numérico preciso (em µg/mL) que indica a menor concentração de antimicrobiano necessária para inibir o crescimento bacteriano. Este valor quantitativo permite estratificação terapêutica precisa, monitoramento de tendências de resistência e é essencial para infecções graves onde a otimização da terapia é crítica."
+              }
+            },
+            {
+              title: "Q28 - Diluição em Ágar",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 28:</strong> Limitações do método de referência</p>`,
+              question: {
+                text: "Q28. Qual é a principal limitação do método de diluição em ágar para uso rotineiro em laboratórios clínicos?",
+                options: [
+                  "A boa reprodutibilidade",
+                  "O alto custo de reagentes e a natureza trabalhosa do método",
+                  "A incapacidade de testar múltiplos isolados simultaneamente"
+                ],
+                correct: 1,
+                explanation: "Embora a diluição em ágar seja considerada método de referência devido à sua excelente reprodutibilidade, seu uso rotineiro é limitado pelo alto custo de reagentes e pela natureza extremamente trabalhosa. O método requer preparo de múltiplas placas de ágar contendo diferentes concentrações de antimicrobiano, inoculação precisa de cada isolado em todas as placas, e leitura visual após incubação. Este processo consome muito tempo e recursos, tornando-o impraticável para uso rotineiro, sendo reservado para estudos de vigilância ou como padrão de referência."
+              }
+            },
+            {
+              title: "Q29 - Aplicação Específica",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 29:</strong> Uso clínico da diluição em ágar</p>`,
+              question: {
+                text: "Q29. Qual é um uso específico da diluição em ágar em laboratórios clínicos, além de seu uso como padrão de referência?",
+                options: [
+                  "Rastreamento de resistência induzível à clindamicina",
+                  "Rastreamento de resistência de alto nível à gentamicina em enterococos",
+                  "Detecção de ESBL (Beta-lactamase de Espectro Estendido)"
+                ],
+                correct: 1,
+                explanation: "Um uso clínico específico da diluição em ágar é o rastreamento de resistência de alto nível (RAN) aos aminoglicosídeos em enterococos. Este teste utiliza placas de ágar contendo altas concentrações de gentamicina (500 µg/mL) ou estreptomicina (1000-2000 µg/mL). Enterococos com RAN perdem o efeito sinérgico da combinação beta-lactâmico + aminoglicosídeo, essencial no tratamento de endocardite enterocócica. Este teste é simples, padronizado e clinicamente relevante, justificando seu uso rotineiro apesar das limitações gerais do método."
+              }
+            },
+            {
+              title: "Q30 - Macrodiluição em Caldo",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 30:</strong> Limitações da macrodiluição</p>`,
+              question: {
+                text: "Q30. Qual é a principal limitação que impede o uso rotineiro da macrodiluição em caldo nos laboratórios clínicos?",
+                options: [
+                  "Sua alta automatização",
+                  "Sua falta de automação e ser particularmente trabalhoso, sujeito a erros de preparo manual das diluições de antibióticos",
+                  "Seu baixo custo e alta velocidade de resultados"
+                ],
+                correct: 1,
+                explanation: "A macrodiluição em caldo, embora seja um método quantitativo preciso para determinação de CIM, é raramente usada rotineiramente devido à falta de automação e natureza extremamente trabalhosa. O método requer preparo manual de diluições seriadas de cada antimicrobiano em tubos de caldo, inoculação de cada tubo com o organismo teste, incubação e leitura visual de turvação. Este processo é demorado, propenso a erros de pipetagem e impraticável para testar múltiplos isolados. Foi amplamente substituído pela microdiluição, que é uma versão miniaturizada e mais facilmente automatizada."
+              }
+            }
+          ]
+        },
                 {
           id: 5,
           title: "Interpretação Clínica dos Resultados",
