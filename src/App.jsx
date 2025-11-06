@@ -6450,7 +6450,7 @@ const App = () => {
           ]
         },
         {
-          id: 8,
+          id: 3,
           title: "Além da Categorização S/I/R",
           duration: "45 min",
           xp: 225,
@@ -7192,7 +7192,7 @@ const App = () => {
           ]
         },
         {
-          id: 3,
+          id: 4,
           title: "Cefalosporinas",
           duration: "20 min",
           xp: 100,
@@ -7286,7 +7286,7 @@ const App = () => {
           ]
         },
         {
-          id: 4,
+          id: 5,
           title: "Inibidores da Síntese de Ácido Nucleico",
           duration: "16 min",
           xp: 85,
@@ -7413,7 +7413,7 @@ const App = () => {
           ]
         },
         {
-          id: 5,
+          id: 6,
           title: "Infecções da Pele - Celulite e Erisipela",
           duration: "22 min",
           xp: 110,
@@ -7552,7 +7552,7 @@ const App = () => {
           ]
         },
         {
-          id: 6,
+          id: 7,
           title: "Infecções de Vias Aéreas",
           duration: "25 min",
           xp: 120,
@@ -7652,7 +7652,7 @@ const App = () => {
           ]
         },
         {
-          id: 7,
+          id: 8,
           title: "Pneumonia Ambulatorial",
           duration: "30 min",
           xp: 150,
@@ -7741,7 +7741,7 @@ const App = () => {
           ]
         },
         {
-          id: 8,
+          id: 9,
           title: "Infecções do Trato Gastrointestinal",
           duration: "25 min",
           xp: 125,
@@ -7919,7 +7919,7 @@ const App = () => {
           ]
         },
         {
-          id: 9,
+          id: 10,
           title: "Infecções do Trato Urinário",
           duration: "28 min",
           xp: 140,
