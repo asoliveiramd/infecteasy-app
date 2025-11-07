@@ -7011,6 +7011,57 @@ const App = () => {
           xp: 80,
           sections: [
             {
+              title: "Uma Dúvida, Uma Certeza e Um Princípio",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🦠 Uma Dúvida, Uma Certeza e Um Princípio</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A bactéria é um componente natural do corpo humano e o equilíbrio da <strong>microbiota</strong> 
+                    é essencial para nossa saúde.
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    No uso do antibiótico, devemos sempre considerar:
+                  </p>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626; margin: 15px 0;">
+                  <h4 style="color: #dc2626; margin-bottom: 10px;">❌ Uma certeza</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    <strong>Vai fazer mal</strong> - todo antibiótico tem potencial para causar efeitos adversos, 
+                    alterar a microbiota e induzir resistência bacteriana.
+                  </p>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #d97706; margin: 15px 0;">
+                  <h4 style="color: #d97706; margin-bottom: 10px;">❓ Uma dúvida</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    <strong>Vai fazer bem?</strong> - nem toda infecção necessita de antibioticoterapia, 
+                    podendo ser viral ou autolimitada. Eventualmente não é infecção e sim, colonização.
+                  </p>
+                </div>
+                
+                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin: 15px 0;">
+                  <h4 style="color: #059669; margin-bottom: 10px;">⚖️ Um princípio</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    <strong>Só usar quando o benefício for seguramente maior que o malefício</strong> - 
+                    avalie sempre o risco-benefício antes de prescrever.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "De acordo com o texto, qual deve ser o princípio fundamental ao se indicar um antibiótico?",
+                options: [
+                  "Prescrever sempre que houver qualquer sinal de infecção, para evitar complicações",
+                  "Utilizar antibióticos apenas quando o benefício for claramente maior que o risco, considerando os possíveis efeitos adversos e impacto na microbiota",
+                  "Evitar o uso de antibióticos apenas em infecções virais comprovadas, mas prescrever em todos os casos de febre",
+                  "Escolher o antibiótico com base apenas na disponibilidade e custo, sem considerar o risco-benefício"
+                ],
+                correct: 1,
+                explanation: "O princípio fundamental é utilizar antibióticos apenas quando o benefício for claramente maior que o risco. Todo antibiótico causa efeitos adversos, altera a microbiota e induz resistência, portanto deve-se avaliar cuidadosamente o risco-benefício antes de prescrever."
+              }
+            },
+
+            {
               title: "Princípios Gerais",
               content: `
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
