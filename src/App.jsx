@@ -2862,7 +2862,7 @@ const App = () => {
           ]
         },
         {
-          id: 1,
+          id: 4,
           title: "Métodos Convencionais de TSA",
           duration: "18 min",
           xp: 90,
@@ -3099,7 +3099,7 @@ const App = () => {
           ]
         },
                 {
-          id: 2,
+          id: 5,
           title: "Métodos Quantitativos",
           duration: "30 min",
           xp: 150,
@@ -3651,7 +3651,7 @@ const App = () => {
   ]
         },
                 {
-          id: 3,
+          id: 6,
           title: "Sistemas Automatizados",
           duration: "12 min",
           xp: 60,
@@ -3820,7 +3820,7 @@ const App = () => {
             }]
         },
                 {
-          id: 4,
+          id: 7,
           title: "Testes Fenotípicos Especiais",
           duration: "20 min",
           xp: 100,
@@ -4002,7 +4002,7 @@ const App = () => {
           ]
         },
                 {
-          id: 9,
+          id: 8,
           title: "Métodos Moleculares em TSA",
           duration: "16 min",
           xp: 80,
@@ -4078,7 +4078,7 @@ const App = () => {
           ]
         },
                 {
-          id: 5,
+          id: 9,
           title: "Interpretação Clínica dos Resultados",
           duration: "45 min",
           xp: 225,
@@ -4399,7 +4399,7 @@ const App = () => {
           ]
         },
                 {
-          id: 6,
+          id: 10,
           title: "Estrutura Básica do Antibiograma",
           duration: "45 min",
           xp: 225,
@@ -4830,7 +4830,7 @@ const App = () => {
           ]
         },
                 {
-          id: 7,
+          id: 11,
           title: "CLSI vs. BrCast: Diferenças Fundamentais",
           duration: "45 min",
           xp: 225,
@@ -5285,978 +5285,8 @@ const App = () => {
     }
           ]
         },
-{
+        {
           id: 15,
-          title: "Revisão I - Fundamentos",
-          duration: "25 min",
-          xp: 150,
-          sections: [
-            {
-              title: "Introdução - Revisão de Fundamentos",
-              content: `
-                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                  <h2 style="color: white; margin: 0 0 15px 0; font-size: 26px;">📝 Revisão I - Fundamentos</h2>
-                  <p style="color: rgba(255,255,255,0.95); margin: 0 0 15px 0; font-size: 16px; line-height: 1.8;">
-                    Bem-vindo à primeira lição de revisão! Esta seção contém <strong>15 questões</strong> cuidadosamente selecionadas para testar e consolidar seus conhecimentos sobre os <strong>fundamentos do Teste de Suscetibilidade Antimicrobiana (TSA)</strong>.
-                  </p>
-                  <div style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; margin-top: 15px;">
-                    <h4 style="color: white; margin: 0 0 10px 0; font-size: 16px;">📚 Tópicos Abordados:</h4>
-                    <ul style="color: rgba(255,255,255,0.9); margin: 0; padding-left: 20px; line-height: 1.8;">
-                      <li>Papel do laboratório de microbiologia clínica</li>
-                      <li>Conceitos fundamentais de resistência (intrínseca vs. adquirida)</li>
-                      <li>Mecanismos de resistência (constitutiva, induzível, heterorresistência)</li>
-                      <li>Concentração Inibitória Mínima (CIM)</li>
-                      <li>Indicações para realização do TSA</li>
-                    </ul>
-                  </div>
-                  <p style="color: rgba(255,255,255,0.9); margin: 15px 0 0 0; font-size: 14px; font-style: italic;">
-                    💡 Dica: Leia cada questão com atenção e tente responder antes de ver as alternativas. Boa sorte!
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "Q1. Qual é o principal papel do laboratório de microbiologia clínica em relação ao tratamento de doenças infecciosas?",
-                options: [
-                  "Fornecer informações que guiem a seleção de regimes antibióticos apropriados com base no perfil de suscetibilidade mais provável",
-                  "Desenvolver novos sistemas automatizados de detecção de microrganismos",
-                  "Realizar o TSA de rotina de vírus e parasitas em amostras clínicas"
-                ],
-                correct: 0,
-                explanation: "O papel fundamental do laboratório de microbiologia clínica é fornecer informações que orientem a seleção racional de antibióticos. Através do TSA, o laboratório identifica quais antimicrobianos são eficazes contra o patógeno isolado, permitindo que o médico escolha o tratamento mais apropriado com base em dados microbiológicos concretos, não apenas em suposições empíricas."
-              }
-            },
-            {
-              title: "Q2 - Definição do TSA",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 2:</strong> Sobre o Teste de Suscetibilidade Antimicrobiana in vitro</p>`,
-              question: {
-                text: "Q2. O que o Teste de Suscetibilidade Antimicrobiana (TSA) in vitro especificamente determina?",
-                options: [
-                  "Quais antibióticos inibem efetivamente o crescimento de um determinado isolado bacteriano, permitindo a terapia direcionada",
-                  "A toxicidade máxima tolerada do antimicrobiano no paciente",
-                  "Se a resistência do organismo é constitutiva ou induzível"
-                ],
-                correct: 0,
-                explanation: "O TSA in vitro determina especificamente quais antibióticos são capazes de inibir o crescimento do isolado bacteriano em questão. Este teste laboratorial simula as condições de exposição da bactéria ao antimicrobiano, permitindo identificar quais drogas serão eficazes para o tratamento direcionado da infecção. A toxicidade e os mecanismos de resistência são aspectos importantes, mas não são o objetivo primário do TSA."
-              }
-            },
-            {
-              title: "Q3 - Importância do TSA",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 3:</strong> Relevância do TSA na era da resistência antimicrobiana</p>`,
-              question: {
-                text: "Q3. Dado o crescente problema da resistência antimicrobiana, qual é a importância do TSA de rotina para as decisões terapêuticas?",
-                options: [
-                  "A importância aumentou, pois as decisões sobre o tratamento empírico estão se tornando mais complicadas",
-                  "A importância diminuiu, pois agora as decisões são baseadas apenas em testes moleculares rápidos",
-                  "O TSA se restringe a infecções comunitárias, não sendo relevante em ambientes de saúde"
-                ],
-                correct: 0,
-                explanation: "Com o aumento global da resistência antimicrobiana, a importância do TSA cresceu significativamente. Padrões de suscetibilidade que antes eram previsíveis tornaram-se variáveis, tornando as decisões empíricas mais complexas e arriscadas. O TSA fornece dados essenciais para guiar a terapia, especialmente em infecções graves ou quando há suspeita de resistência. Os testes moleculares são complementares, não substitutos do TSA."
-              }
-            },
-            {
-              title: "Q4 - Requisitos dos Métodos de TSA",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 4:</strong> Características essenciais dos métodos de TSA</p>`,
-              question: {
-                text: "Q4. Quais são os três requisitos essenciais que os métodos de TSA usados em laboratórios clínicos devem atender?",
-                options: [
-                  "Fornecer informação rápida e precisa ao clínico, ser relativamente barato e ser relativamente fácil de realizar",
-                  "Depender exclusivamente do crescimento bacteriano, ter alto custo e exigir incubação de 48 horas",
-                  "Ser realizado apenas por laboratórios de pesquisa para determinar a Concentração Inibitória Mínima (CIM)"
-                ],
-                correct: 0,
-                explanation: "Os métodos de TSA utilizados na prática clínica devem equilibrar três características fundamentais: rapidez (para permitir ajustes terapêuticos oportunos), precisão (para garantir resultados confiáveis) e viabilidade econômica/operacional (custo acessível e execução relativamente simples). Estes requisitos garantem que o TSA seja uma ferramenta prática e útil no dia a dia dos laboratórios clínicos."
-              }
-            },
-            {
-              title: "Q5 - Resistência Intrínseca",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 5:</strong> Conceito de resistência intrínseca</p>`,
-              question: {
-                text: "Q5. O que define a resistência intrínseca em bactérias?",
-                options: [
-                  "É a resistência inerente a um antimicrobiano que todos ou quase todos os membros de uma espécie exibem, tornando o TSA desnecessário",
-                  "É a resistência adquirida por meio de transferência horizontal de genes via plasmídeos",
-                  "É a resistência que surge pela pressão seletiva, através de mutações genéticas"
-                ],
-                correct: 0,
-                explanation: "A resistência intrínseca é uma característica natural e previsível de uma espécie bacteriana. Todos ou quase todos os membros da espécie apresentam essa resistência devido a características estruturais ou metabólicas inerentes. Por exemplo, Klebsiella pneumoniae possui resistência intrínseca à ampicilina. Como essa resistência é previsível, o TSA para essas combinações organismo-antimicrobiano é desnecessário."
-              }
-            },
-            {
-              title: "Q6 - Exemplo de Resistência Intrínseca",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 6:</strong> Exemplo clássico de resistência intrínseca</p>`,
-              question: {
-                text: "Q6. Qual bactéria é citada como exemplo de resistência intrínseca ao antimicrobiano ampicilina?",
-                options: [
-                  "Klebsiella pneumoniae",
-                  "Staphylococcus aureus",
-                  "Streptococcus pyogenes"
-                ],
-                correct: 0,
-                explanation: "Klebsiella pneumoniae é um exemplo clássico de resistência intrínseca à ampicilina. Esta bactéria produz naturalmente uma beta-lactamase cromossômica (SHV-1) que confere resistência a aminopenicilinas como a ampicilina. Esta característica é tão previsível que não há necessidade de realizar TSA para ampicilina em isolados de K. pneumoniae."
-              }
-            },
-            {
-              title: "Q7 - Resistência Adquirida",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 7:</strong> Mecanismos de resistência adquirida</p>`,
-              question: {
-                text: "Q7. Como a resistência adquirida difere da resistência intrínseca e qual é o seu mecanismo de desenvolvimento?",
-                options: [
-                  "É o desenvolvimento de resistência a um antimicrobiano ao qual a população bacteriana wild-type era suscetível, ocorrendo por mutações cromossômicas, transferência horizontal de genes (plasmídeos, integrons, transposons, transformação) ou a combinação destes",
-                  "É a expressão de um mecanismo de resistência que é facilmente previsível",
-                  "É uma característica natural e previsível de uma espécie bacteriana, independente de exposição prévia"
-                ],
-                correct: 0,
-                explanation: "A resistência adquirida representa uma mudança no perfil de suscetibilidade de uma bactéria que originalmente era sensível a determinado antimicrobiano. Ela pode surgir através de mutações cromossômicas espontâneas ou, mais comumente, pela aquisição de material genético de outras bactérias através de mecanismos como plasmídeos, transposons ou integrons. Esta resistência é imprevisível e requer TSA para detecção."
-              }
-            },
-            {
-              title: "Q8 - Expressão Induzível",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 8:</strong> Mecanismo de expressão induzível</p>`,
-              question: {
-                text: "Q8. Qual é o mecanismo de resistência cuja expressão ocorre apenas após a exposição a um agente incitante específico?",
-                options: [
-                  "Expressão induzível",
-                  "Expressão constitutiva",
-                  "Resistência intrínseca"
-                ],
-                correct: 0,
-                explanation: "A expressão induzível é um mecanismo de resistência que permanece 'silencioso' até que a bactéria seja exposta a um antimicrobiano específico que atua como indutor. Apenas após essa exposição, os genes de resistência são ativados e expressos. Este fenômeno pode levar a falhas terapêuticas se não for adequadamente detectado pelo laboratório."
-              }
-            },
-            {
-              title: "Q9 - Beta-lactamase AmpC",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 9:</strong> Exemplo de resistência induzível</p>`,
-              question: {
-                text: "Q9. Qual é o exemplo de resistência induzível que resulta em resistência a cefalosporinas de terceira geração?",
-                options: [
-                  "Produção induzida de beta-lactamase AmpC cromossomicamente codificada em certas Enterobacterales",
-                  "Resistência mediada pelo gene mecA em S. aureus",
-                  "Resistência adquirida por mutações cromossômicas"
-                ],
-                correct: 0,
-                explanation: "A produção induzível de beta-lactamase AmpC é um exemplo clássico de resistência induzível. Certas Enterobacterales (como Enterobacter spp., Citrobacter freundii, Serratia marcescens) possuem o gene AmpC cromossômico que, quando induzido pela exposição a certos beta-lactâmicos, resulta em resistência a cefalosporinas de terceira geração. Este fenômeno é clinicamente relevante e pode levar a falhas terapêuticas."
-              }
-            },
-            {
-              title: "Q10 - Heterorresistência",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 10:</strong> Conceito de heterorresistência</p>`,
-              question: {
-                text: "Q10. O que a heterorresistência representa em termos de expressão fenotípica?",
-                options: [
-                  "Expressão homogênea e contínua do mecanismo de resistência",
-                  "Presença de subpopulações bacterianas com diferentes graus de resistência fenotípica dentro de uma mesma cultura",
-                  "Resistência que surge apenas após o tratamento com antibióticos de moléculas grandes"
-                ],
-                correct: 1,
-                explanation: "A heterorresistência é um fenômeno complexo onde uma população bacteriana aparentemente homogênea contém subpopulações com diferentes níveis de resistência ao mesmo antimicrobiano. A maioria das células pode parecer suscetível nos testes convencionais, mas uma pequena subpopulação resistente pode persistir e causar falha terapêutica. Este fenômeno é particularmente relevante em VISA (Staphylococcus aureus com resistência intermediária à vancomicina)."
-              }
-            },
-            {
-              title: "Q11 - hVISA",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 11:</strong> Staphylococcus aureus heterorresistente</p>`,
-              question: {
-                text: "Q11. O que o Staphylococcus aureus heterorresistente vancomicina-intermediário (hVISA) representa?",
-                options: [
-                  "Um organismo com capacidade de expressão heterogênea, podendo levar a falhas terapêuticas inesperadas",
-                  "Um isolado que possui resistência intrínseca à vancomicina",
-                  "Um organismo cuja resistência é sempre facilmente detectável por métodos convencionais"
-                ],
-                correct: 0,
-                explanation: "O hVISA (heterogeneous VISA) representa um desafio clínico e laboratorial significativo. Estes isolados contêm subpopulações com resistência intermediária à vancomicina que podem não ser detectadas pelos métodos convencionais de TSA, mas podem expandir durante a terapia com vancomicina, levando a falhas terapêuticas inesperadas. A detecção de hVISA requer métodos especializados."
-              }
-            },
-            {
-              title: "Q12 - Definição de CIM",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 12:</strong> Concentração Inibitória Mínima</p>`,
-              question: {
-                text: "Q12. Qual é a definição precisa da Concentração Inibitória Mínima (CIM)?",
-                options: [
-                  "A maior concentração de antimicrobiano que permite o crescimento bacteriano visível",
-                  "A menor concentração de antimicrobiano capaz de inibir 99% do crescimento bacteriano visível",
-                  "O ponto de corte (breakpoint) que separa o microrganismo em sensível ou resistente"
-                ],
-                correct: 1,
-                explanation: "A CIM é definida como a menor concentração de um antimicrobiano capaz de inibir o crescimento bacteriano visível (geralmente 99% de inibição) após um período de incubação padronizado. Este valor quantitativo é fundamental para avaliar a atividade in vitro de antimicrobianos e é usado em conjunto com breakpoints clínicos para determinar se um isolado é suscetível, intermediário ou resistente."
-              }
-            },
-            {
-              title: "Q13 - Interpretação da CIM",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 13:</strong> Relação entre CIM e sensibilidade</p>`,
-              question: {
-                text: "Q13. O que o valor numérico da CIM indica em relação à sensibilidade de um microrganismo?",
-                options: [
-                  "Quanto maior o valor da CIM, maior a sensibilidade do microrganismo",
-                  "Quanto menor o valor da CIM, maior a sensibilidade do microrganismo",
-                  "O valor da CIM deve ser comparado entre diferentes antimicrobianos para determinar qual é o melhor"
-                ],
-                correct: 1,
-                explanation: "A relação entre CIM e sensibilidade é inversamente proporcional: quanto menor a CIM, mais sensível é o microrganismo ao antimicrobiano. Uma CIM baixa significa que uma pequena concentração do antibiótico é suficiente para inibir o crescimento bacteriano, indicando alta sensibilidade. Valores de CIM não devem ser comparados entre diferentes antimicrobianos, pois cada droga tem suas próprias características farmacocinéticas e farmacodinâmicas."
-              }
-            },
-            {
-              title: "Q14 - Indicações do TSA",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 14:</strong> Quando realizar o TSA</p>`,
-              question: {
-                text: "Q14. Em geral, o TSA deve ser realizado quando isolados clinicamente significativos são obtidos de amostras de pacientes e...",
-                options: [
-                  "O organismo é considerado parte da flora normal do local da coleta",
-                  "A informação resultante pode ser usada para guiar o tratamento",
-                  "A suscetibilidade do organismo é sempre previsível (ex: S. pyogenes para penicilina)"
-                ],
-                correct: 1,
-                explanation: "O TSA deve ser realizado quando o resultado pode efetivamente guiar decisões terapêuticas. Isso significa que o organismo isolado deve ser clinicamente significativo (não apenas colonizador ou contaminante) e que existe incerteza sobre seu perfil de suscetibilidade. O TSA não é necessário para organismos da flora normal ou quando a suscetibilidade é altamente previsível."
-              }
-            },
-            {
-              title: "Q15 - S. pyogenes e Penicilina",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 15:</strong> Suscetibilidade previsível</p>`,
-              question: {
-                text: "Q15. Por que o teste de Streptococcus pyogenes para suscetibilidade à penicilina não é realizado rotineiramente?",
-                options: [
-                  "Porque os isolados não suscetíveis à penicilina nunca foram relatados",
-                  "Porque o S. pyogenes é intrinsecamente resistente à penicilina",
-                  "Porque o teste da borda da zona de penicilina não é padronizado para esta espécie"
-                ],
-                correct: 0,
-                explanation: "Streptococcus pyogenes (estreptococo do grupo A) mantém sensibilidade universal à penicilina - nenhum isolado resistente foi documentado até o momento. Esta suscetibilidade previsível torna o TSA desnecessário, permitindo que a penicilina seja usada empiricamente com confiança para infecções por S. pyogenes. Este é um exemplo raro de suscetibilidade completamente previsível na era da resistência antimicrobiana."
-              }
-            }
-          ]
-        },
-{
-          id: 16,
-          title: "Revisão II - Métodos",
-          duration: "30 min",
-          xp: 150,
-          sections: [
-            {
-              title: "Introdução - Revisão de Métodos",
-              content: `
-                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 25px; border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                  <h2 style="color: white; margin: 0 0 15px 0; font-size: 26px;">📝 Revisão II - Métodos</h2>
-                  <p style="color: rgba(255,255,255,0.95); margin: 0 0 15px 0; font-size: 16px; line-height: 1.8;">
-                    Esta lição de revisão contém <strong>15 questões</strong> focadas nos <strong>métodos de Teste de Suscetibilidade Antimicrobiana (TSA)</strong>, desde métodos qualitativos até quantitativos.
-                  </p>
-                  <div style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; margin-top: 15px;">
-                    <h4 style="color: white; margin: 0 0 10px 0; font-size: 16px;">📚 Tópicos Abordados:</h4>
-                    <ul style="color: rgba(255,255,255,0.9); margin: 0; padding-left: 20px; line-height: 1.8;">
-                      <li>Indicações do TSA e padronização (CLSI/EUCAST)</li>
-                      <li>Método de difusão em disco (Kirby-Bauer)</li>
-                      <li>Métodos quantitativos (CIM, diluição em ágar, macrodiluição)</li>
-                      <li>Correlação entre zona de inibição e CIM</li>
-                      <li>Vantagens e limitações de cada método</li>
-                    </ul>
-                  </div>
-                  <p style="color: rgba(255,255,255,0.9); margin: 15px 0 0 0; font-size: 14px; font-style: italic;">
-                    💡 Dica: Preste atenção nas diferenças entre métodos qualitativos e quantitativos!
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "Q16. Em relação à flora normal, qual é a situação em que o TSA não é rotineiramente realizado?",
-                options: [
-                  "Quando Klebsiella pneumoniae é isolada de uma hemocultura",
-                  "Quando Lactobacillus spp é isolado em cultura vaginal, por ser considerado parte da flora normal",
-                  "Quando o organismo é isolado de um local estéril, como o líquido cefalorraquidiano"
-                ],
-                correct: 1,
-                explanation: "O TSA não é realizado rotineiramente para organismos que fazem parte da flora normal do local de coleta, como Lactobacillus spp em cultura vaginal. Estes organismos geralmente não são patogênicos e sua presença é esperada. Por outro lado, quando K. pneumoniae é isolada de hemocultura (local estéril), o TSA é essencial, pois indica infecção sistêmica grave que requer tratamento antimicrobiano guiado."
-              }
-            },
-            {
-              title: "Q17 - Pacientes Imunossuprimidos",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 17:</strong> Importância da informação clínica sobre imunossupressão</p>`,
-              question: {
-                text: "Q17. Qual é a importância da notificação pelo médico sobre um paciente estar imunossuprimido, em relação ao TSA?",
-                options: [
-                  "Permite ao laboratório modificar a abordagem de seleção de isolados, pois bactérias consideradas não patogênicas em hospedeiros imunocompetentes podem causar infecções sérias",
-                  "Indica que o teste de suscetibilidade deve ser suprimido, focando apenas na identificação",
-                  "Permite que o laboratório use apenas métodos moleculares, devido à urgência"
-                ],
-                correct: 0,
-                explanation: "A informação sobre imunossupressão é crucial porque modifica a interpretação da relevância clínica dos isolados. Organismos considerados contaminantes ou colonizadores em pacientes imunocompetentes (como Corynebacterium spp, Bacillus spp não-anthracis, ou estafilococos coagulase-negativos) podem causar infecções graves em imunossuprimidos. Esta informação permite ao laboratório realizar TSA em isolados que normalmente seriam descartados, garantindo tratamento adequado."
-              }
-            },
-            {
-              title: "Q18 - Padronização do TSA",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 18:</strong> Papel das organizações profissionais</p>`,
-              question: {
-                text: "Q18. O que as organizações profissionais como o CLSI e o EUCAST fornecem para garantir a precisão e a reprodutibilidade dos métodos de TSA?",
-                options: [
-                  "Padrões de desempenho para o TSA, incluindo a padronização do inóculo e dos procedimentos",
-                  "Apenas um registro de cepas de referência para pesquisa",
-                  "O fornecimento dos kits comerciais para todos os métodos de teste"
-                ],
-                correct: 0,
-                explanation: "O CLSI (Clinical and Laboratory Standards Institute) e o EUCAST (European Committee on Antimicrobial Susceptibility Testing) são organizações que desenvolvem e publicam padrões de desempenho detalhados para o TSA. Estes padrões incluem especificações sobre preparo do inóculo (0,5 McFarland), meios de cultura, condições de incubação, interpretação de resultados e breakpoints. Esta padronização é essencial para garantir que resultados sejam reprodutíveis entre diferentes laboratórios e comparáveis ao longo do tempo."
-              }
-            },
-            {
-              title: "Q19 - Método de Difusão em Disco",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 19:</strong> Método qualitativo mais comum</p>`,
-              question: {
-                text: "Q19. Qual é o método qualitativo convencional mais comumente usado, devido à sua simplicidade, confiabilidade e alto grau de padronização?",
-                options: [
-                  "Macrodiluição em caldo",
-                  "Método de difusão em disco (Kirby-Bauer)",
-                  "Diluição em ágar"
-                ],
-                correct: 1,
-                explanation: "O método de difusão em disco (Kirby-Bauer) é o método qualitativo mais amplamente utilizado em laboratórios clínicos devido à sua simplicidade operacional, baixo custo, alta confiabilidade e excelente padronização. O método envolve a aplicação de discos impregnados com antimicrobianos sobre ágar inoculado com a bactéria teste, seguido de incubação e medição das zonas de inibição. É ideal para laboratórios de pequeno a médio porte."
-              }
-            },
-            {
-              title: "Q20 - Inóculo Padronizado",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 20:</strong> Padronização do inóculo no Kirby-Bauer</p>`,
-              question: {
-                text: "Q20. No procedimento de Kirby-Bauer, qual é o inóculo padronizado recomendado?",
-                options: [
-                  "Aproximadamente 1 a 2×10⁸ UFC/mL, semeado em Ágar Mueller-Hinton (ou outro meio apropriado)",
-                  "Aproximadamente 5×10⁵ UFC/mL, usando meio de enriquecimento",
-                  "Cerca de 10⁴ UFC, inoculado em pontos específicos da placa"
-                ],
-                correct: 0,
-                explanation: "O inóculo padronizado para o método de Kirby-Bauer é de aproximadamente 1 a 2×10⁸ UFC/mL, equivalente ao padrão 0,5 de McFarland. Este inóculo é semeado uniformemente em Ágar Mueller-Hinton (ou meios especiais para organismos fastidiosos). A padronização do inóculo é crítica porque inóculos muito altos ou muito baixos podem levar a zonas de inibição falsamente pequenas ou grandes, respectivamente, resultando em interpretações errôneas."
-              }
-            },
-            {
-              title: "Q21 - Zona de Inibição",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 21:</strong> Interpretação da zona de inibição</p>`,
-              question: {
-                text: "Q21. No método de difusão em disco, o que o diâmetro da zona de inibição indica?",
-                options: [
-                  "O local onde a concentração do antimicrobiano é alta o suficiente para prevenir a proliferação do organismo",
-                  "A Concentração Inibitória Mínima (CIM) precisa do organismo",
-                  "O ponto de corte que deve ser usado para S. aureus para vancomicina"
-                ],
-                correct: 0,
-                explanation: "A zona de inibição representa a área ao redor do disco onde a concentração do antimicrobiano difundido no ágar é suficientemente alta para inibir o crescimento bacteriano visível. O diâmetro desta zona é inversamente proporcional à CIM: quanto maior a zona, menor a CIM e mais sensível é o organismo. Embora exista correlação com a CIM, a difusão em disco não fornece um valor preciso de CIM, apenas uma estimativa qualitativa (S/I/R)."
-              }
-            },
-            {
-              title: "Q22 - Relação Zona-CIM",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 22:</strong> Correlação entre zona de inibição e CIM</p>`,
-              question: {
-                text: "Q22. Qual é a principal relação entre o tamanho da zona de inibição e a Concentração Inibitória Mínima (CIM)?",
-                options: [
-                  "Eles são inversamente proporcionais (halo grande = CIM baixa = mais sensível)",
-                  "Eles são diretamente proporcionais (halo grande = CIM alta = menos sensível)",
-                  "A relação é sempre perfeitamente linear"
-                ],
-                correct: 0,
-                explanation: "A relação entre zona de inibição e CIM é inversamente proporcional: quanto maior o diâmetro da zona de inibição, menor a CIM, indicando maior sensibilidade do organismo. Esta relação existe porque organismos mais sensíveis são inibidos por concentrações menores do antimicrobiano, permitindo que o antibiótico difunda mais longe antes que sua concentração caia abaixo da CIM. Embora geralmente logarítmica (não perfeitamente linear), esta correlação permite que tabelas de interpretação convertam diâmetros de zona em categorias S/I/R."
-              }
-            },
-            {
-              title: "Q23 - Flexibilidade do Método",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 23:</strong> Vantagem da personalização</p>`,
-              question: {
-                text: "Q23. Qual é a vantagem do método de difusão em disco em relação à flexibilidade na escolha dos antimicrobianos?",
-                options: [
-                  "A escolha pode ser personalizada de acordo com os formulários institucionais e padrões de resistência locais",
-                  "O método só é validado para organismos fastidiosos",
-                  "O método só permite testar um antimicrobiano por placa"
-                ],
-                correct: 0,
-                explanation: "Uma grande vantagem do método de difusão em disco é a flexibilidade na seleção de antimicrobianos. Laboratórios podem personalizar os painéis de discos testados de acordo com o formulário hospitalar, padrões de resistência locais, tipo de infecção e perfil do paciente. Por exemplo, pode-se testar carbapenêmicos apenas quando há suspeita de resistência, ou incluir antimicrobianos específicos para infecções urinárias. Esta personalização otimiza recursos e fornece informações mais relevantes clinicamente."
-              }
-            },
-            {
-              title: "Q24 - Limitação: Automação",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 24:</strong> Desafio em laboratórios de alto volume</p>`,
-              question: {
-                text: "Q24. Qual é uma limitação importante da difusão em disco em laboratórios de alto volume?",
-                options: [
-                  "A falta de automação do procedimento, o que dificulta a produção em larga escala",
-                  "O baixo custo por teste",
-                  "A capacidade de fornecer uma CIM precisa"
-                ],
-                correct: 0,
-                explanation: "A principal limitação do método de difusão em disco em laboratórios de alto volume é a dificuldade de automação. O método requer múltiplas etapas manuais: preparo do inóculo, semeadura, aplicação dos discos, incubação, medição das zonas com paquímetro e interpretação. Embora existam sistemas automatizados de leitura de zonas, o processo ainda é mais trabalhoso que sistemas totalmente automatizados como VITEK ou Phoenix, que são preferidos em laboratórios de grande porte."
-              }
-            },
-            {
-              title: "Q25 - Limitação: Natureza Qualitativa",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 25:</strong> Quando a CIM é necessária</p>`,
-              question: {
-                text: "Q25. Qual é um exemplo de infecção para a qual a natureza qualitativa da difusão em disco é uma limitação, exigindo uma CIM quantitativa?",
-                options: [
-                  "Infecções urinárias não complicadas",
-                  "Infecções causadas por Lactobacillus spp",
-                  "Endocardite causada por estreptococos do grupo viridans, onde os regimes são estratificados pela CIM de penicilina"
-                ],
-                correct: 2,
-                explanation: "A endocardite por estreptococos do grupo viridans é um exemplo clássico onde a CIM quantitativa é essencial. O tratamento é estratificado pela CIM de penicilina: isolados altamente sensíveis (CIM ≤0,125 µg/mL) podem ser tratados com penicilina em monoterapia por 4 semanas, enquanto isolados com CIM mais elevada requerem terapia combinada ou prolongada. A difusão em disco fornece apenas categorias S/I/R, não permitindo esta estratificação precisa necessária para otimizar o tratamento."
-              }
-            },
-            {
-              title: "Q26 - Limitação: VISA",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 26:</strong> Combinação organismo-antimicrobiano problemática</p>`,
-              question: {
-                text: "Q26. Para qual combinação organismo-antimicrobiano o método de difusão em disco é especificamente considerado insensível e não deve ser usado?",
-                options: [
-                  "Streptococcus pyogenes para Penicilina",
-                  "Staphylococcus aureus para Vancomicina-intermediário (VISA)",
-                  "Klebsiella pneumoniae para Ampicilina"
-                ],
-                correct: 1,
-                explanation: "O método de difusão em disco é notoriamente insensível para detectar S. aureus com resistência intermediária à vancomicina (VISA). Devido às características de difusão da vancomicina no ágar e ao mecanismo de resistência do VISA (espessamento da parede celular), as zonas de inibição podem parecer normais mesmo em isolados VISA. Por isso, o CLSI recomenda métodos quantitativos (CIM por microdiluição ou E-test) para testar vancomicina em S. aureus, especialmente em infecções graves."
-              }
-            },
-            {
-              title: "Q27 - Métodos Quantitativos",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 27:</strong> Padrão-ouro para avaliação de sensibilidade</p>`,
-              question: {
-                text: "Q27. Qual é a principal informação fornecida pelos métodos quantitativos de TSA, que é considerada o padrão-ouro para avaliação de sensibilidade?",
-                options: [
-                  "O diâmetro da zona de inibição",
-                  "A Concentração Inibitória Mínima (CIM)",
-                  "A presença de um mecanismo de resistência específico (e.g., ESBL)"
-                ],
-                correct: 1,
-                explanation: "A Concentração Inibitória Mínima (CIM) é a informação fundamental fornecida pelos métodos quantitativos e é considerada o padrão-ouro para avaliação de sensibilidade antimicrobiana. A CIM fornece um valor numérico preciso (em µg/mL) que indica a menor concentração de antimicrobiano necessária para inibir o crescimento bacteriano. Este valor quantitativo permite estratificação terapêutica precisa, monitoramento de tendências de resistência e é essencial para infecções graves onde a otimização da terapia é crítica."
-              }
-            },
-            {
-              title: "Q28 - Diluição em Ágar",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 28:</strong> Limitações do método de referência</p>`,
-              question: {
-                text: "Q28. Qual é a principal limitação do método de diluição em ágar para uso rotineiro em laboratórios clínicos?",
-                options: [
-                  "A boa reprodutibilidade",
-                  "O alto custo de reagentes e a natureza trabalhosa do método",
-                  "A incapacidade de testar múltiplos isolados simultaneamente"
-                ],
-                correct: 1,
-                explanation: "Embora a diluição em ágar seja considerada método de referência devido à sua excelente reprodutibilidade, seu uso rotineiro é limitado pelo alto custo de reagentes e pela natureza extremamente trabalhosa. O método requer preparo de múltiplas placas de ágar contendo diferentes concentrações de antimicrobiano, inoculação precisa de cada isolado em todas as placas, e leitura visual após incubação. Este processo consome muito tempo e recursos, tornando-o impraticável para uso rotineiro, sendo reservado para estudos de vigilância ou como padrão de referência."
-              }
-            },
-            {
-              title: "Q29 - Aplicação Específica",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 29:</strong> Uso clínico da diluição em ágar</p>`,
-              question: {
-                text: "Q29. Qual é um uso específico da diluição em ágar em laboratórios clínicos, além de seu uso como padrão de referência?",
-                options: [
-                  "Rastreamento de resistência induzível à clindamicina",
-                  "Rastreamento de resistência de alto nível à gentamicina em enterococos",
-                  "Detecção de ESBL (Beta-lactamase de Espectro Estendido)"
-                ],
-                correct: 1,
-                explanation: "Um uso clínico específico da diluição em ágar é o rastreamento de resistência de alto nível (RAN) aos aminoglicosídeos em enterococos. Este teste utiliza placas de ágar contendo altas concentrações de gentamicina (500 µg/mL) ou estreptomicina (1000-2000 µg/mL). Enterococos com RAN perdem o efeito sinérgico da combinação beta-lactâmico + aminoglicosídeo, essencial no tratamento de endocardite enterocócica. Este teste é simples, padronizado e clinicamente relevante, justificando seu uso rotineiro apesar das limitações gerais do método."
-              }
-            },
-            {
-              title: "Q30 - Macrodiluição em Caldo",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 30:</strong> Limitações da macrodiluição</p>`,
-              question: {
-                text: "Q30. Qual é a principal limitação que impede o uso rotineiro da macrodiluição em caldo nos laboratórios clínicos?",
-                options: [
-                  "Sua alta automatização",
-                  "Sua falta de automação e ser particularmente trabalhoso, sujeito a erros de preparo manual das diluições de antibióticos",
-                  "Seu baixo custo e alta velocidade de resultados"
-                ],
-                correct: 1,
-                explanation: "A macrodiluição em caldo, embora seja um método quantitativo preciso para determinação de CIM, é raramente usada rotineiramente devido à falta de automação e natureza extremamente trabalhosa. O método requer preparo manual de diluições seriadas de cada antimicrobiano em tubos de caldo, inoculação de cada tubo com o organismo teste, incubação e leitura visual de turvação. Este processo é demorado, propenso a erros de pipetagem e impraticável para testar múltiplos isolados. Foi amplamente substituído pela microdiluição, que é uma versão miniaturizada e mais facilmente automatizada."
-              }
-            }
-          ]
-        },
-
-        {
-          id: 17,
-          title: "Revisão III - Interpretação",
-          duration: "35 min",
-          xp: 160,
-          sections: [
-            {
-              title: "Introdução - Revisão de Interpretação",
-              content: `
-                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                  <h2 style="color: white; margin: 0 0 15px 0; font-size: 26px;">📝 Revisão III - Interpretação</h2>
-                  <p style="color: rgba(255,255,255,0.95); margin: 0 0 15px 0; font-size: 16px; line-height: 1.8;">
-                    Esta lição de revisão contém <strong>16 questões</strong> focadas na <strong>interpretação clínica dos resultados de TSA</strong>, incluindo métodos quantitativos, pontos de corte e categorias S/I/R.
-                  </p>
-                  <div style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; margin-top: 15px;">
-                    <h4 style="color: white; margin: 0 0 10px 0; font-size: 16px;">📚 Tópicos Abordados:</h4>
-                    <ul style="color: rgba(255,255,255,0.9); margin: 0; padding-left: 20px; line-height: 1.8;">
-                      <li>Microdiluição em caldo e método de gradiente (E-test)</li>
-                      <li>Categorias S/I/R e pontos de corte (CLSI e BrCast)</li>
-                      <li>Sistemas automatizados e suas vantagens</li>
-                      <li>Detecção de beta-lactamases e resistências específicas</li>
-                      <li>Métodos genotípicos e moleculares</li>
-                    </ul>
-                  </div>
-                  <p style="color: rgba(255,255,255,0.9); margin: 15px 0 0 0; font-size: 14px; font-style: italic;">
-                    💡 Dica: Foque na diferença entre as categorias S/I/R e suas implicações clínicas!
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "Q31. Por que a microdiluição em caldo é um método popular nos laboratórios clínicos, comparado à macrodiluição?",
-                options: [
-                  "É uma versão miniaturizada e mais automatizada da macrodiluição, e os painéis de antibióticos estão comercialmente disponíveis",
-                  "Exige o preparo manual das diluições de antibióticos pelo laboratório",
-                  "Permite que um logaritmo a mais de bactérias seja analisado, superando a heterorresistência"
-                ],
-                correct: 0,
-                explanation: "A microdiluição em caldo é amplamente utilizada porque miniaturiza o processo de macrodiluição em placas de 96 poços, permitindo automação e redução de custos. Os painéis comerciais pré-fabricados (como MicroScan, Sensititre) eliminam o trabalho de preparo manual de diluições, tornando o método prático para uso rotineiro. Sistemas automatizados como VITEK 2 e Phoenix utilizam microdiluição, fornecendo resultados de CIM em 8-16 horas com mínima manipulação técnica."
-              }
-            },
-            {
-              title: "Q32 - Heterorresistência",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 32:</strong> Limitação da microdiluição</p>`,
-              question: {
-                text: "Q32. O que é considerado uma desvantagem da microdiluição em caldo, especialmente em relação à heterorresistência?",
-                options: [
-                  "Sua incapacidade de ser usado para bactérias fastidiosas",
-                  "Devido à miniaturização, menos bactérias são analisadas, podendo mascarar mecanismos de resistência presentes em pequenas subpopulações",
-                  "O custo relativamente baixo"
-                ],
-                correct: 1,
-                explanation: "A principal desvantagem da microdiluição é que, devido ao pequeno volume de inóculo (tipicamente 5×10⁴ UFC por poço), subpopulações resistentes presentes em frequências baixas (<1:10⁶) podem não ser detectadas. Isso é especialmente problemático para heterorresistência à vancomicina em S. aureus (hVISA), onde subpopulações resistentes podem ser mascaradas. Métodos baseados em ágar, que testam inóculos maiores (10⁸ UFC), têm maior sensibilidade para detectar heterorresistência."
-              }
-            },
-            {
-              title: "Q33 - Método de Gradiente",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 33:</strong> Definição do E-test</p>`,
-              question: {
-                text: "Q33. O que define o método de gradiente antimicrobiano?",
-                options: [
-                  "É uma técnica baseada em caldo que usa medições fotométricas",
-                  "É uma técnica baseada em ágar que utiliza uma tira plástica com uma concentração graduada de um antimicrobiano",
-                  "É um método que fornece resultados apenas qualitativos (S/I/R)"
-                ],
-                correct: 1,
-                explanation: "O método de gradiente antimicrobiano (E-test®, MIC Test Strip) utiliza uma tira plástica impregnada com um gradiente exponencial de concentrações de antimicrobiano. A tira é aplicada sobre ágar inoculado com o organismo teste. Após incubação, forma-se uma zona elíptica de inibição, e a CIM é lida diretamente na escala impressa na tira, no ponto onde a elipse intersecta a tira. Este método combina a simplicidade da difusão em disco com a precisão quantitativa da diluição."
-              }
-            },
-            {
-              title: "Q34 - Leitura do E-test",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 34:</strong> Determinação da CIM no método de gradiente</p>`,
-              question: {
-                text: "Q34. Como a CIM de um antimicrobiano é determinada no método de gradiente antimicrobiano?",
-                options: [
-                  "Pela medição do diâmetro da zona circular de inibição",
-                  "Pela identificação da intersecção da zona elíptica de inibição de crescimento com o gradiente antimicrobiano na tira",
-                  "Pela inspeção visual de turvação nos poços"
-                ],
-                correct: 1,
-                explanation: "No método de gradiente, o antimicrobiano difunde do centro da tira (concentração mais alta) para as bordas (concentração mais baixa), criando um gradiente contínuo no ágar. O crescimento bacteriano é inibido onde a concentração excede a CIM, formando uma zona elíptica. A CIM é lida diretamente na escala numérica impressa na tira, no ponto onde a borda da elipse intersecta a tira. Esta leitura visual direta é uma vantagem significativa do método."
-              }
-            },
-            {
-              title: "Q35 - Categoria Sensível",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 35:</strong> Definição de Suscetível (S)</p>`,
-              question: {
-                text: "Q35. De acordo com o CLSI, o que a categoria 'Suscetível' indica em relação à concentração de antibiótico e à eficácia clínica?",
-                options: [
-                  "Que a concentração inibitória é geralmente alcançada com a dose recomendada, e a eficácia clínica é esperada",
-                  "Que a CIM não é alcançada, mesmo com doses máximas",
-                  "Que é necessário usar um regime posológico que resulte em maior exposição"
-                ],
-                correct: 0,
-                explanation: "A categoria 'Suscetível' (S) indica que a CIM do isolado está abaixo do breakpoint de sensibilidade, significando que as concentrações séricas e teciduais alcançadas com a dose padrão recomendada são suficientes para inibir o organismo. A eficácia clínica é esperada quando o antimicrobiano é usado na dose, via e intervalo recomendados para o tipo de infecção. Esta categoria representa a situação ideal para tratamento empírico ou direcionado."
-              }
-            },
-            {
-              title: "Q36 - Categoria I/SDD",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 36:</strong> Sensível com Aumento de Exposição</p>`,
-              question: {
-                text: "Q36. O que a categoria 'Sensível com Aumento de Exposição' (BrCast) ou 'Suscetível-Dose Dependente' (CLSI) exige para que se espere eficácia clínica?",
-                options: [
-                  "O uso de um regime posológico que resulte em exposição mais alta (doses maiores, mais frequentes, ou ambas)",
-                  "O uso da dosagem padrão, independentemente do local da infecção",
-                  "Que a CIM não seja alcançada, mesmo com doses máximas"
-                ],
-                correct: 0,
-                explanation: "A categoria 'I' (Intermediário/Sensível com Aumento de Exposição) indica que a eficácia clínica pode ser alcançada com regimes posológicos otimizados que aumentem a exposição ao antimicrobiano. Isso pode incluir: doses mais altas, intervalos mais curtos, infusão prolongada ou contínua, ou concentração fisiológica no local da infecção (ex: beta-lactâmicos na urina). Esta categoria reconhece que a farmacocinética e farmacodinâmica podem ser manipuladas para superar CIMs moderadamente elevadas."
-              }
-            },
-            {
-              title: "Q37 - Categoria Intermediário",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 37:</strong> Situações especiais para categoria I</p>`,
-              question: {
-                text: "Q37. Em que situação a eficácia clínica pode ser alcançada para um isolado classificado como 'Intermediário'?",
-                options: [
-                  "Quando o antimicrobiano é fisiologicamente concentrado no local da infecção (por exemplo, beta-lactâmicos na urina)",
-                  "Quando o resultado é discrepante e requer teste genotípico",
-                  "A eficácia clínica nunca é esperada para isolados intermediários"
-                ],
-                correct: 0,
-                explanation: "Isolados intermediários podem responder ao tratamento quando o antimicrobiano atinge concentrações excepcionalmente altas no local da infecção. O exemplo clássico são os beta-lactâmicos na urina: mesmo que um organismo seja 'I' para ampicilina no sangue, a concentração urinária pode ser 100-1000 vezes maior que a sérica, superando a CIM e permitindo tratamento eficaz de ITU não complicada. Outro exemplo: fluoroquinolonas concentradas na próstata para prostatite."
-              }
-            },
-            {
-              title: "Q38 - Categoria Resistente",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 38:</strong> Definição de Resistente (R)</p>`,
-              question: {
-                text: "Q38. Qual é a principal característica da categoria 'Resistente'?",
-                options: [
-                  "A CIM é alcançada com a dose recomendada",
-                  "A CIM não é alcançada mesmo com doses máximas, e há alta probabilidade de falha terapêutica",
-                  "A CIM é alcançada apenas com o prolongamento do tempo de infusão"
-                ],
-                correct: 1,
-                explanation: "A categoria 'Resistente' (R) indica que a CIM do isolado excede as concentrações alcançáveis mesmo com doses máximas toleradas do antimicrobiano. Há alta probabilidade de falha terapêutica se este antimicrobiano for usado, independentemente da dose, via ou local da infecção. Esta categoria serve como alerta clínico para evitar o uso do antimicrobiano e considerar alternativas terapêuticas. A resistência pode ser mediada por mecanismos enzimáticos, alteração de alvo ou efluxo."
-              }
-            },
-            {
-              title: "Q39 - BrCast vs CLSI",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 39:</strong> Implicação prática do BrCast</p>`,
-              question: {
-                text: "Q39. Qual é uma implicação prática do BrCast (padrão nacional brasileiro) em relação à categoria 'I'?",
-                options: [
-                  "A substituição de 'Intermediário' por 'Sensível com aumento de exposição'",
-                  "O aumento dos pontos de corte da CIM para garantir maior segurança",
-                  "A indicação de que o uso do antibiótico deve ser evitado para este patógeno específico"
-                ],
-                correct: 0,
-                explanation: "O BrCast (Brazilian Committee on Antimicrobial Susceptibility Testing), alinhado com o EUCAST, substituiu a terminologia 'Intermediário' por 'Sensível com Aumento de Exposição' (I). Esta mudança enfatiza que isolados nesta categoria NÃO são resistentes, mas requerem otimização posológica. A nova nomenclatura é mais clara clinicamente, evitando a interpretação errônea de 'intermediário' como 'parcialmente resistente' e incentivando estratégias de dose otimizada em vez de troca prematura de antimicrobiano."
-              }
-            },
-            {
-              title: "Q40 - Limitações S/I/R",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 40:</strong> Limitações da categorização</p>`,
-              question: {
-                text: "Q40. Qual é a limitação da categorização S/I/R?",
-                options: [
-                  "O 'S' (suscetível) garante sucesso em todas as situações",
-                  "O 'S' não garante sucesso em todas as situações, sendo influenciado pela gravidade e localização da infecção",
-                  "A categorização é baseada apenas em dados epidemiológicos"
-                ],
-                correct: 1,
-                explanation: "A categorização S/I/R é uma simplificação que não garante sucesso clínico absoluto. Fatores do hospedeiro (imunossupressão, comorbidades), da infecção (local, gravidade, biofilme, corpo estranho) e do antimicrobiano (penetração tecidual, ligação proteica, metabolismo) influenciam o desfecho. Um isolado 'S' pode falhar em endocardite, meningite ou osteomielite devido à dificuldade de penetração. Inversamente, um isolado 'I' pode responder em ITU devido à alta concentração urinária. A categorização é um guia, não uma garantia."
-              }
-            },
-            {
-              title: "Q41 - Sistemas Automatizados",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 41:</strong> Detecção de crescimento</p>`,
-              question: {
-                text: "Q41. De que dependem a maioria dos sistemas automatizados para detectar o crescimento bacteriano?",
-                options: [
-                  "Apenas da inspeção visual de turvação nos tubos",
-                  "Da detecção óptica automatizada de crescimento bacteriano (fotométrica, fluorométrica ou turbidimétrica)",
-                  "Da medição manual dos diâmetros da zona de inibição"
-                ],
-                correct: 1,
-                explanation: "Sistemas automatizados como VITEK 2, Phoenix e MicroScan utilizam detecção óptica automatizada do crescimento bacteriano. Métodos incluem: turbidimetria (medição de turvação), fluorometria (detecção de fluorescência de substratos metabolizados) ou fotometria (mudança de cor de indicadores de pH). Estas tecnologias permitem monitoramento contínuo e detecção precoce de crescimento, reduzindo o tempo para resultado de 18-24h (métodos convencionais) para 8-16h, com interpretação automática e padronizada."
-              }
-            },
-            {
-              title: "Q42 - Vantagem de Velocidade",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 42:</strong> Rapidez dos sistemas automatizados</p>`,
-              question: {
-                text: "Q42. Qual é a principal vantagem de velocidade dos sistemas automatizados em comparação com os métodos convencionais?",
-                options: [
-                  "Eles exigem incubação prolongada (24-48 horas)",
-                  "Eles podem detectar alterações mais sutis no crescimento, determinando padrões de suscetibilidade mais rapidamente (8-16h)",
-                  "Eles só fornecem resultados qualitativos (S/I/R)"
-                ],
-                correct: 1,
-                explanation: "A principal vantagem dos sistemas automatizados é a velocidade: resultados em 8-16 horas versus 18-24 horas dos métodos convencionais. Isso é possível porque a detecção óptica automatizada identifica alterações sutis no crescimento muito antes que sejam visíveis a olho nu. Algoritmos computacionais analisam curvas de crescimento cinético para determinar CIM e interpretar S/I/R. Esta rapidez permite ajuste terapêutico mais precoce, reduzindo uso empírico de antimicrobianos de amplo espectro e melhorando desfechos clínicos."
-              }
-            },
-            {
-              title: "Q43 - Custo dos Automatizados",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 43:</strong> Limitação econômica</p>`,
-              question: {
-                text: "Q43. Qual é a principal limitação dos sistemas automatizados que pode ser proibitiva para alguns laboratórios de microbiologia clínica?",
-                options: [
-                  "O baixo custo do equipamento e dos insumos",
-                  "O alto custo do equipamento e dos insumos",
-                  "A impossibilidade de processar múltiplas amostras simultaneamente"
-                ],
-                correct: 1,
-                explanation: "O alto custo de aquisição do equipamento (US$ 100.000-300.000) e dos cartões/painéis descartáveis (US$ 15-40 por teste) é a principal limitação dos sistemas automatizados. Embora ofereçam rapidez, padronização e redução de trabalho técnico, o investimento inicial e os custos operacionais são proibitivos para laboratórios de pequeno volume. A viabilidade econômica geralmente requer volume mínimo de 20-30 testes/dia. Laboratórios menores frequentemente optam por métodos manuais mais baratos, como difusão em disco."
-              }
-            },
-            {
-              title: "Q44 - Teste de Beta-lactamase",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 44:</strong> Rapidez da detecção enzimática</p>`,
-              question: {
-                text: "Q44. Qual é a vantagem de tempo do teste de beta-lactamase usando hidrólise enzimática em comparação com o TSA dependente de crescimento?",
-                options: [
-                  "Requer incubação noturna de 16 a 20 horas",
-                  "A hidrólise pode ser verificada em minutos",
-                  "Requer 48 horas para observação da segunda leitura"
-                ],
-                correct: 1,
-                explanation: "O teste cromogênico de beta-lactamase detecta a hidrólise enzimática de um substrato beta-lactâmico cromogênico (como nitrocefina) em minutos. Uma colônia do organismo é suspensa no reagente; se beta-lactamase estiver presente, o anel beta-lactâmico é hidrolisado, causando mudança de cor (amarelo → vermelho). Este teste rápido é especialmente útil para Haemophilus influenzae, Moraxella catarrhalis e Neisseria gonorrhoeae, permitindo decisão terapêutica imediata (usar amoxicilina ou amoxicilina-clavulanato) sem aguardar TSA completo."
-              }
-            },
-            {
-              title: "Q45 - Teste D-zone",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 45:</strong> Resistência induzível à clindamicina</p>`,
-              question: {
-                text: "Q45. Qual é o resultado visual de um teste D-zone positivo, indicando resistência induzível à clindamicina?",
-                options: [
-                  "Uma zona de inibição perfeitamente redonda ao redor do disco de clindamicina",
-                  "O achatamento da zona de inibição de clindamicina adjacente ao disco de eritromicina",
-                  "Crescimento visível em todos os poços do painel de microdiluição"
-                ],
-                correct: 1,
-                explanation: "O teste D-zone detecta resistência induzível MLSB (Macrolídeo-Lincosamida-Estreptogramina B) em estafilococos e estreptococos. Discos de eritromicina e clindamicina são colocados a 15-20mm de distância. Se o isolado tem resistência induzível (gene erm), a eritromicina induz a metilase que confere resistência cruzada à clindamicina, causando achatamento (formato de 'D') da zona de clindamicina adjacente ao disco de eritromicina. Teste positivo indica que clindamicina NÃO deve ser usada, apesar de parecer sensível in vitro."
-              }
-            },
-            {
-              title: "Q46 - Métodos Moleculares",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 46:</strong> Vantagem de velocidade dos métodos genotípicos</p>`,
-              question: {
-                text: "Q46. Qual é uma vantagem de velocidade dos ensaios moleculares em comparação com os métodos convencionais de TSA?",
-                options: [
-                  "Eles exigem incubação de 18-24 horas para crescimento bacteriano",
-                  "Eles podem fornecer resultados em 1-2 horas, detectando genes de resistência diretamente",
-                  "Eles só podem ser realizados após o isolamento e identificação do organismo"
-                ],
-                correct: 1,
-                explanation: "Métodos moleculares (PCR, sequenciamento, hibridização) detectam genes de resistência diretamente de amostras clínicas ou culturas, fornecendo resultados em 1-2 horas versus 24-48 horas do TSA convencional. Exemplos: detecção de mecA para MRSA, genes bla para carbapenemases (KPC, NDM, OXA-48), vanA/vanB para VRE. Painéis multiplex podem detectar múltiplos genes simultaneamente. A rapidez permite terapia direcionada precoce, isolamento apropriado e controle de infecção. Limitação: detectam apenas genes conhecidos, não fornecem CIM, e não substituem completamente o TSA fenotípico."
-              }
-            }
-          ]
-        }
-,
-        {
-          id: 18,
-          title: "Revisão IV - Tópicos Avançados",
-          duration: "30 min",
-          xp: 150,
-          sections: [
-            {
-              title: "Introdução - Revisão de Tópicos Avançados",
-              content: `
-                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 25px; border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                  <h2 style="color: white; margin: 0 0 15px 0; font-size: 26px;">📝 Revisão IV - Tópicos Avançados</h2>
-                  <p style="color: rgba(255,255,255,0.95); margin: 0 0 15px 0; font-size: 16px; line-height: 1.8;">
-                    Esta lição de revisão contém <strong>15 questões</strong> focadas em <strong>tópicos avançados de interpretação clínica</strong>, incluindo estrutura do antibiograma, comparação entre diretrizes e aplicações práticas.
-                  </p>
-                  <div style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; margin-top: 15px;">
-                    <h4 style="color: white; margin: 0 0 10px 0; font-size: 16px;">📚 Tópicos Abordados:</h4>
-                    <ul style="color: rgba(255,255,255,0.9); margin: 0; padding-left: 20px; line-height: 1.8;">
-                      <li>Interpretação clínica de resultados (S/I/R)</li>
-                      <li>Estrutura e elementos do antibiograma</li>
-                      <li>Diferenças entre CLSI e BrCast/EUCAST</li>
-                      <li>Reportagem seletiva e cascata</li>
-                      <li>Aplicações clínicas práticas</li>
-                    </ul>
-                  </div>
-                  <p style="color: rgba(255,255,255,0.9); margin: 15px 0 0 0; font-size: 14px; font-style: italic;">
-                    💡 Dica: Estas questões integram conhecimentos das lições 9-11!
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "Q47. Qual é o principal objetivo da interpretação clínica dos resultados de TSA?",
-                options: [
-                  "Traduzir dados laboratoriais (CIM, diâmetro de zona) em categorias clinicamente relevantes (S/I/R) que orientem a terapia antimicrobiana",
-                  "Determinar a estrutura química dos antimicrobianos testados",
-                  "Calcular o custo-benefício de cada antimicrobiano disponível"
-                ],
-                correct: 0,
-                explanation: "A interpretação clínica é o processo de traduzir dados quantitativos (CIM em µg/mL ou diâmetro de zona em mm) em categorias qualitativas (Sensível, Intermediário/Sensível com Aumento de Exposição, Resistente) usando breakpoints estabelecidos por organizações como CLSI, EUCAST ou BrCast. Esta tradução permite que clínicos tomem decisões terapêuticas informadas sem necessitar conhecimento técnico detalhado de microbiologia. A interpretação considera farmacocinética, farmacodinâmica, local da infecção e dados de desfecho clínico."
-              }
-            },
-            {
-              title: "Q48 - Categoria Sensível",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 48:</strong> Implicações da categoria S</p>`,
-              question: {
-                text: "Q48. O que significa quando um isolado é categorizado como 'Sensível' (S) a um antimicrobiano?",
-                options: [
-                  "A eficácia clínica é esperada quando o antimicrobiano é usado na dose padrão recomendada para o tipo de infecção",
-                  "O antimicrobiano deve ser evitado devido ao alto risco de toxicidade",
-                  "É necessário dobrar a dose padrão para alcançar eficácia"
-                ],
-                correct: 0,
-                explanation: "A categoria 'Sensível' (S) indica que a CIM do isolado está abaixo do breakpoint de sensibilidade, significando que as concentrações séricas e teciduais alcançadas com o regime posológico padrão são suficientes para inibir o crescimento bacteriano. A eficácia clínica é esperada quando o antimicrobiano é usado conforme recomendado para o tipo e local da infecção. No entanto, 'S' não garante sucesso absoluto, pois fatores do hospedeiro (imunossupressão, comorbidades) e da infecção (local, gravidade, biofilme) também influenciam o desfecho clínico."
-              }
-            },
-            {
-              title: "Q49 - Reportagem Seletiva",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 49:</strong> Conceito de reportagem seletiva</p>`,
-              question: {
-                text: "Q49. Qual é o principal objetivo da reportagem seletiva (ou em cascata) no antibiograma?",
-                options: [
-                  "Promover o uso racional de antimicrobianos, reportando inicialmente agentes de espectro mais estreito e reservando agentes de amplo espectro para situações específicas",
-                  "Reduzir o custo do teste reportando apenas o antimicrobiano mais barato",
-                  "Esconder informações sobre resistência para evitar preocupação do médico"
-                ],
-                correct: 0,
-                explanation: "A reportagem seletiva (selective reporting ou cascade reporting) é uma estratégia de stewardship antimicrobiano onde o laboratório reporta inicialmente apenas antimicrobianos de primeira linha (espectro mais estreito, menor pressão seletiva). Agentes de amplo espectro, reserva ou com maior potencial de induzir resistência são suprimidos do relatório inicial, sendo liberados apenas mediante solicitação ou em situações clínicas específicas (falha terapêutica, alergia, resistência aos agentes de primeira linha). Esta prática reduz o uso desnecessário de antimicrobianos de amplo espectro, preservando sua eficácia futura."
-              }
-            },
-            {
-              title: "Q50 - Estrutura do Antibiograma",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 50:</strong> Elementos essenciais do antibiograma</p>`,
-              question: {
-                text: "Q50. Quais são os elementos essenciais que devem constar em um antibiograma bem estruturado?",
-                options: [
-                  "Identificação do microrganismo, antimicrobianos testados, resultados (S/I/R ou CIM), método utilizado e observações/comentários interpretativos",
-                  "Apenas o nome do paciente e o resultado 'sensível' ou 'resistente'",
-                  "Somente a lista de antimicrobianos disponíveis na farmácia do hospital"
-                ],
-                correct: 0,
-                explanation: "Um antibiograma completo deve incluir: (1) Identificação precisa do microrganismo (gênero, espécie, às vezes sorotipo); (2) Lista de antimicrobianos testados, organizados por classe; (3) Resultados para cada antimicrobiano (S/I/R e/ou CIM em µg/mL); (4) Método utilizado (disco-difusão, microdiluição, E-test, sistema automatizado); (5) Padrão de interpretação (CLSI, EUCAST, BrCast); (6) Observações e comentários interpretativos (ex: 'MRSA detectado', 'Resistência induzível à clindamicina', 'ESBL positivo'). Estes elementos permitem interpretação clínica adequada e rastreamento epidemiológico."
-              }
-            },
-            {
-              title: "Q51 - Comentários Interpretativos",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 51:</strong> Importância dos comentários</p>`,
-              question: {
-                text: "Q51. Por que os comentários interpretativos são importantes no antibiograma?",
-                options: [
-                  "Fornecem contexto clínico adicional, alertam sobre mecanismos de resistência específicos e orientam a seleção terapêutica apropriada",
-                  "São obrigatórios apenas para fins de faturamento",
-                  "Servem exclusivamente para preencher espaço no relatório"
-                ],
-                correct: 0,
-                explanation: "Comentários interpretativos agregam valor clínico ao antibiograma ao: (1) Alertar sobre mecanismos de resistência importantes (ex: 'ESBL detectado - evitar cefalosporinas', 'Resistência induzível à clindamicina - não usar apesar de S in vitro'); (2) Explicar discrepâncias aparentes (ex: 'Sensível in vitro mas eficácia clínica questionável em meningite'); (3) Sugerir alternativas terapêuticas (ex: 'Considerar combinação para Pseudomonas'); (4) Indicar necessidade de testes adicionais (ex: 'Confirmar vancomicina MIC por E-test para endocardite'). Estes comentários facilitam a comunicação laboratório-clínica e melhoram desfechos."
-              }
-            },
-            {
-              title: "Q52 - CLSI vs BrCast",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 52:</strong> Principais diferenças entre diretrizes</p>`,
-              question: {
-                text: "Q52. Qual é uma das principais diferenças entre CLSI e BrCast/EUCAST na interpretação de resultados?",
-                options: [
-                  "BrCast/EUCAST utiliza breakpoints farmacocinéticos/farmacodinâmicos (PK/PD) mais conservadores, enquanto CLSI incorpora mais dados de desfecho clínico",
-                  "CLSI não utiliza a categoria 'Intermediário', apenas S e R",
-                  "BrCast não permite o uso de microdiluição, apenas disco-difusão"
-                ],
-                correct: 0,
-                explanation: "Uma diferença fundamental é a filosofia de estabelecimento de breakpoints: EUCAST (e por extensão BrCast) prioriza dados PK/PD (concentrações alcançáveis vs. distribuição de CIM), resultando em breakpoints geralmente mais conservadores (mais isolados classificados como R). CLSI incorpora mais dados de desfecho clínico e considera variações de dose. Outra diferença: EUCAST substituiu 'Intermediário' por 'Sensível com Aumento de Exposição' (I), enfatizando que estes isolados NÃO são resistentes. BrCast, como adaptação brasileira do EUCAST, mantém esta filosofia mas considera epidemiologia local e antimicrobianos disponíveis no Brasil."
-              }
-            },
-            {
-              title: "Q53 - Breakpoints",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 53:</strong> Definição de breakpoints</p>`,
-              question: {
-                text: "Q53. O que são breakpoints no contexto do TSA?",
-                options: [
-                  "Valores de CIM ou diâmetro de zona que separam as categorias S/I/R, baseados em dados PK/PD, distribuição de CIM e desfecho clínico",
-                  "Pontos de quebra na tira do E-test onde a leitura é impossível",
-                  "Momentos durante a incubação quando o crescimento bacteriano para"
-                ],
-                correct: 0,
-                explanation: "Breakpoints (pontos de corte) são valores críticos de CIM (em µg/mL) ou diâmetro de zona de inibição (em mm) que definem os limites entre as categorias interpretativas S/I/R. São estabelecidos por comitês de especialistas (CLSI, EUCAST, BrCast) considerando: (1) Dados PK/PD (concentrações alcançáveis no soro e tecidos com doses padrão); (2) Distribuição de CIM na população bacteriana (wild-type vs. mecanismos de resistência); (3) Dados de desfecho clínico de estudos e ensaios; (4) Considerações de segurança e toxicidade. Breakpoints são específicos para cada combinação organismo-antimicrobiano-local de infecção."
-              }
-            },
-            {
-              title: "Q54 - Limitações do Antibiograma",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 54:</strong> Limitações da interpretação in vitro</p>`,
-              question: {
-                text: "Q54. Qual é uma limitação importante do antibiograma que os clínicos devem reconhecer?",
-                options: [
-                  "Resultados in vitro não garantem sucesso clínico, pois fatores do hospedeiro, local da infecção e farmacocinética também influenciam o desfecho",
-                  "Antibiogramas são sempre 100% precisos e garantem cura se seguidos",
-                  "Resultados 'Resistente' nunca devem ser considerados, pois são sempre erros laboratoriais"
-                ],
-                correct: 0,
-                explanation: "O antibiograma tem limitações importantes: (1) Testa condições in vitro padronizadas que não replicam o ambiente in vivo (pH, anaerobiose, biofilme, corpo estranho); (2) Não considera fatores do hospedeiro (imunossupressão, comorbidades, função renal/hepática); (3) Não avalia penetração tecidual (ex: SNC, próstata, osso); (4) Pode não detectar heterorresistência ou resistência induzível; (5) Não prevê interações medicamentosas ou toxicidade. Um isolado 'S' pode falhar clinicamente (ex: endocardite por S. aureus com vancomicina MIC alta mas ainda 'S'), e um 'I' pode responder (ex: ITU com beta-lactâmico devido à alta concentração urinária)."
-              }
-            },
-            {
-              title: "Q55 - Antibiograma Cumulativo",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 55:</strong> Utilidade epidemiológica</p>`,
-              question: {
-                text: "Q55. Qual é a utilidade do antibiograma cumulativo (cumulative antibiogram) para uma instituição?",
-                options: [
-                  "Fornece dados epidemiológicos locais sobre padrões de resistência, orientando terapia empírica e políticas de stewardship antimicrobiano",
-                  "Substitui completamente a necessidade de antibiogramas individuais",
-                  "É usado apenas para publicações científicas, sem aplicação clínica"
-                ],
-                correct: 0,
-                explanation: "O antibiograma cumulativo é um relatório anual que compila dados de suscetibilidade de todos os isolados de uma instituição, apresentando a porcentagem de isolados sensíveis a cada antimicrobiano por espécie bacteriana. Utilidades: (1) Orienta seleção de terapia empírica (ex: se 85% dos E. coli são sensíveis a ciprofloxacino, é opção razoável para ITU empírica); (2) Monitora tendências de resistência ao longo do tempo; (3) Compara padrões entre unidades (UTI vs. enfermaria); (4) Orienta políticas de stewardship e formulário hospitalar; (5) Identifica surtos de resistência. Deve incluir ≥30 isolados por espécie e excluir duplicatas do mesmo paciente."
-              }
-            },
-            {
-              title: "Q56 - Discrepâncias Maior/Menor",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 56:</strong> Discrepâncias entre métodos</p>`,
-              question: {
-                text: "Q56. O que caracteriza uma 'discrepância maior' entre dois métodos de TSA?",
-                options: [
-                  "Um método classifica o isolado como Sensível (S) e o outro como Resistente (R), representando potencial erro clínico significativo",
-                  "Uma pequena diferença de 1-2 mm no diâmetro da zona de inibição",
-                  "Diferença no tempo de incubação entre os dois métodos"
-                ],
-                correct: 0,
-                explanation: "Discrepâncias entre métodos de TSA são classificadas como: (1) **Discrepância Maior**: Um método indica S e outro R - erro potencialmente grave, pois pode levar a uso de antimicrobiano ineficaz ou evitar um eficaz; (2) **Discrepância Menor**: Um método indica S ou R e outro I - menos crítico, pois I é categoria intermediária; (3) **Discrepância Muito Maior**: Métodos divergem em 2+ categorias (raro). Causas: diferenças metodológicas (inóculo, meio, incubação), mecanismos de resistência específicos (heterorresistência, resistência induzível), ou erro técnico. Discrepâncias maiores requerem investigação e reteste."
-              }
-            },
-            {
-              title: "Q57 - Terapia Combinada",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 57:</strong> Indicações para terapia combinada</p>`,
-              question: {
-                text: "Q57. Em quais situações clínicas a terapia antimicrobiana combinada é frequentemente recomendada, mesmo quando o antibiograma mostra sensibilidade a monoterapia?",
-                options: [
-                  "Infecções graves por Pseudomonas aeruginosa, endocardite enterocócica e tuberculose, para prevenir emergência de resistência e alcançar sinergismo",
-                  "Todas as infecções urinárias não complicadas",
-                  "Infecções de pele e partes moles sem complicações"
-                ],
-                correct: 0,
-                explanation: "Terapia combinada é indicada em situações específicas: (1) **Pseudomonas aeruginosa** (especialmente bacteremia, pneumonia): Combinar beta-lactâmico anti-pseudomonas + aminoglicosídeo ou fluoroquinolona para prevenir resistência emergente e potencial sinergismo; (2) **Endocardite enterocócica**: Ampicilina + gentamicina para sinergismo bactericida (enterococos são apenas bacteriostáticos a beta-lactâmicos sozinhos); (3) **Tuberculose**: Sempre múltiplos agentes (rifampicina + isoniazida + pirazinamida + etambutol) para prevenir resistência; (4) **Infecções fúngicas graves**: Anfotericina B + flucitosina para criptococose meníngea. O antibiograma não prevê sinergismo ou antagonismo."
-              }
-            },
-            {
-              title: "Q58 - Heterorresistência",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 58:</strong> Desafio da heterorresistência</p>`,
-              question: {
-                text: "Q58. Por que a heterorresistência representa um desafio para o TSA convencional?",
-                options: [
-                  "Subpopulações resistentes presentes em baixa frequência (<1:10⁶) podem não ser detectadas pelos métodos padronizados, levando a falha terapêutica inesperada",
-                  "Heterorresistência sempre resulta em crescimento visível em todos os antimicrobianos testados",
-                  "Não representa desafio algum, pois todos os métodos detectam facilmente"
-                ],
-                correct: 0,
-                explanation: "Heterorresistência ocorre quando uma população bacteriana aparentemente homogênea contém subpopulações com diferentes níveis de resistência. O exemplo clássico é hVISA (hetero-VISA: S. aureus com heterorresistência à vancomicina), onde a maioria das células tem CIM normal (≤2 µg/mL), mas subpopulações raras (1:10⁵ a 1:10⁶) têm CIM elevada (4-8 µg/mL). Métodos convencionais (disco-difusão, microdiluição) testam inóculos pequenos e podem não detectar estas subpopulações, reportando 'S'. Sob pressão seletiva da terapia, subpopulações resistentes expandem, causando falha clínica. Detecção requer métodos especiais (PAP, E-test em ágar BHI, análise de população)."
-              }
-            },
-            {
-              title: "Q59 - Efeito Inóculo",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 59:</strong> Impacto do tamanho do inóculo</p>`,
-              question: {
-                text: "Q59. O que é o 'efeito inóculo' e qual sua relevância clínica?",
-                options: [
-                  "Aumento da CIM quando o inóculo bacteriano é maior que o padronizado, relevante em infecções com alta carga bacteriana (abscessos, endocardite)",
-                  "Diminuição da CIM quando mais bactérias são testadas",
-                  "Fenômeno que ocorre apenas com antimicrobianos antifúngicos"
-                ],
-                correct: 0,
-                explanation: "O efeito inóculo ocorre quando a CIM aumenta significativamente com inóculos maiores que o padrão (5×10⁵ UFC/mL). Mecanismos: (1) **Beta-lactamases**: Maior inóculo = mais enzima produzida, superando a capacidade do antimicrobiano; (2) **Enzimas modificadoras de aminoglicosídeos**: Similar; (3) **Saturação de alvos**: Em alta densidade, antimicrobianos que ligam alvos podem ser insuficientes. Relevância clínica: Infecções com alta carga bacteriana (abscessos, endocardite, osteomielite, pneumonia necrosante) podem não responder apesar de 'S' in vitro. TSA padrão usa inóculo baixo, não prevendo efeito inóculo. Solução: Drenagem cirúrgica + antimicrobiano, ou considerar agentes menos afetados (ex: vancomicina para MRSA em vez de beta-lactâmicos)."
-              }
-            },
-            {
-              title: "Q60 - ESKAPE",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 60:</strong> Patógenos prioritários</p>`,
-              question: {
-                text: "Q60. O que representa o acrônimo ESKAPE no contexto de resistência antimicrobiana?",
-                options: [
-                  "Grupo de patógenos (Enterococcus, Staphylococcus, Klebsiella, Acinetobacter, Pseudomonas, Enterobacter) com alta capacidade de 'escapar' da ação de antimicrobianos",
-                  "Método de teste de suscetibilidade desenvolvido na Europa",
-                  "Protocolo de isolamento para pacientes com infecções resistentes"
-                ],
-                correct: 0,
-                explanation: "ESKAPE é um acrônimo que identifica seis patógenos prioritários responsáveis pela maioria das infecções hospitalares multirresistentes: **E**nterococcus faecium (VRE), **S**taphylococcus aureus (MRSA), **K**lebsiella pneumoniae (ESBL, KPC), **A**cinetobacter baumannii (MDR), **P**seudomonas aeruginosa (MDR), **E**nterobacter spp. (ESBL, AmpC). Estes organismos 'escapam' da ação de antimicrobianos através de múltiplos mecanismos: beta-lactamases, alteração de porinas, bombas de efluxo, modificação de alvos. Representam desafio global de saúde pública, exigindo vigilância rigorosa, stewardship antimicrobiano, controle de infecção e desenvolvimento de novos agentes. O antibiograma é ferramenta essencial para detectar e monitorar resistência nestes patógenos."
-              }
-            },
-            {
-              title: "Q61 - Stewardship",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 61:</strong> Papel do laboratório no stewardship</p>`,
-              question: {
-                text: "Q61. Como o laboratório de microbiologia contribui para programas de stewardship antimicrobiano?",
-                options: [
-                  "Fornecendo resultados precisos e oportunos de TSA, antibiogramas cumulativos, alertas sobre resistência emergente e educação sobre interpretação de resultados",
-                  "Apenas realizando testes sem comunicação com a equipe clínica",
-                  "Escondendo resultados de resistência para evitar preocupação"
-                ],
-                correct: 0,
-                explanation: "O laboratório é pilar fundamental do stewardship antimicrobiano através de: (1) **Resultados rápidos e precisos**: TSA oportuno permite de-escalação precoce de terapia empírica; (2) **Antibiogramas cumulativos**: Orientam terapia empírica institucional; (3) **Reportagem seletiva**: Promove uso de agentes de espectro estreito; (4) **Comentários interpretativos**: Alertam sobre mecanismos de resistência e orientam seleção; (5) **Vigilância e alertas**: Notificação de resistência emergente (ex: primeira KPC, VRE) para controle de infecção; (6) **Educação**: Treinamento de clínicos sobre interpretação de resultados; (7) **Testes rápidos**: Implementação de métodos moleculares para diagnóstico precoce. Esta colaboração laboratório-clínica otimiza uso de antimicrobianos, melhora desfechos e reduz resistência."
-              }
-            }
-          ]
-        },
-
-
-        {
-          id: 3,
           title: "Além da Categorização S/I/R",
           duration: "45 min",
           xp: 225,
@@ -6997,6 +6027,976 @@ const App = () => {
     }
           ]
         },
+        {
+          id: 16,
+          title: "Revisão I - Fundamentos",
+          duration: "25 min",
+          xp: 150,
+          sections: [
+            {
+              title: "Introdução - Revisão de Fundamentos",
+              content: `
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                  <h2 style="color: white; margin: 0 0 15px 0; font-size: 26px;">📝 Revisão I - Fundamentos</h2>
+                  <p style="color: rgba(255,255,255,0.95); margin: 0 0 15px 0; font-size: 16px; line-height: 1.8;">
+                    Bem-vindo à primeira lição de revisão! Esta seção contém <strong>15 questões</strong> cuidadosamente selecionadas para testar e consolidar seus conhecimentos sobre os <strong>fundamentos do Teste de Suscetibilidade Antimicrobiana (TSA)</strong>.
+                  </p>
+                  <div style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; margin-top: 15px;">
+                    <h4 style="color: white; margin: 0 0 10px 0; font-size: 16px;">📚 Tópicos Abordados:</h4>
+                    <ul style="color: rgba(255,255,255,0.9); margin: 0; padding-left: 20px; line-height: 1.8;">
+                      <li>Papel do laboratório de microbiologia clínica</li>
+                      <li>Conceitos fundamentais de resistência (intrínseca vs. adquirida)</li>
+                      <li>Mecanismos de resistência (constitutiva, induzível, heterorresistência)</li>
+                      <li>Concentração Inibitória Mínima (CIM)</li>
+                      <li>Indicações para realização do TSA</li>
+                    </ul>
+                  </div>
+                  <p style="color: rgba(255,255,255,0.9); margin: 15px 0 0 0; font-size: 14px; font-style: italic;">
+                    💡 Dica: Leia cada questão com atenção e tente responder antes de ver as alternativas. Boa sorte!
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Q1. Qual é o principal papel do laboratório de microbiologia clínica em relação ao tratamento de doenças infecciosas?",
+                options: [
+                  "Fornecer informações que guiem a seleção de regimes antibióticos apropriados com base no perfil de suscetibilidade mais provável",
+                  "Desenvolver novos sistemas automatizados de detecção de microrganismos",
+                  "Realizar o TSA de rotina de vírus e parasitas em amostras clínicas"
+                ],
+                correct: 0,
+                explanation: "O papel fundamental do laboratório de microbiologia clínica é fornecer informações que orientem a seleção racional de antibióticos. Através do TSA, o laboratório identifica quais antimicrobianos são eficazes contra o patógeno isolado, permitindo que o médico escolha o tratamento mais apropriado com base em dados microbiológicos concretos, não apenas em suposições empíricas."
+              }
+            },
+            {
+              title: "Q2 - Definição do TSA",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 2:</strong> Sobre o Teste de Suscetibilidade Antimicrobiana in vitro</p>`,
+              question: {
+                text: "Q2. O que o Teste de Suscetibilidade Antimicrobiana (TSA) in vitro especificamente determina?",
+                options: [
+                  "Quais antibióticos inibem efetivamente o crescimento de um determinado isolado bacteriano, permitindo a terapia direcionada",
+                  "A toxicidade máxima tolerada do antimicrobiano no paciente",
+                  "Se a resistência do organismo é constitutiva ou induzível"
+                ],
+                correct: 0,
+                explanation: "O TSA in vitro determina especificamente quais antibióticos são capazes de inibir o crescimento do isolado bacteriano em questão. Este teste laboratorial simula as condições de exposição da bactéria ao antimicrobiano, permitindo identificar quais drogas serão eficazes para o tratamento direcionado da infecção. A toxicidade e os mecanismos de resistência são aspectos importantes, mas não são o objetivo primário do TSA."
+              }
+            },
+            {
+              title: "Q3 - Importância do TSA",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 3:</strong> Relevância do TSA na era da resistência antimicrobiana</p>`,
+              question: {
+                text: "Q3. Dado o crescente problema da resistência antimicrobiana, qual é a importância do TSA de rotina para as decisões terapêuticas?",
+                options: [
+                  "A importância aumentou, pois as decisões sobre o tratamento empírico estão se tornando mais complicadas",
+                  "A importância diminuiu, pois agora as decisões são baseadas apenas em testes moleculares rápidos",
+                  "O TSA se restringe a infecções comunitárias, não sendo relevante em ambientes de saúde"
+                ],
+                correct: 0,
+                explanation: "Com o aumento global da resistência antimicrobiana, a importância do TSA cresceu significativamente. Padrões de suscetibilidade que antes eram previsíveis tornaram-se variáveis, tornando as decisões empíricas mais complexas e arriscadas. O TSA fornece dados essenciais para guiar a terapia, especialmente em infecções graves ou quando há suspeita de resistência. Os testes moleculares são complementares, não substitutos do TSA."
+              }
+            },
+            {
+              title: "Q4 - Requisitos dos Métodos de TSA",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 4:</strong> Características essenciais dos métodos de TSA</p>`,
+              question: {
+                text: "Q4. Quais são os três requisitos essenciais que os métodos de TSA usados em laboratórios clínicos devem atender?",
+                options: [
+                  "Fornecer informação rápida e precisa ao clínico, ser relativamente barato e ser relativamente fácil de realizar",
+                  "Depender exclusivamente do crescimento bacteriano, ter alto custo e exigir incubação de 48 horas",
+                  "Ser realizado apenas por laboratórios de pesquisa para determinar a Concentração Inibitória Mínima (CIM)"
+                ],
+                correct: 0,
+                explanation: "Os métodos de TSA utilizados na prática clínica devem equilibrar três características fundamentais: rapidez (para permitir ajustes terapêuticos oportunos), precisão (para garantir resultados confiáveis) e viabilidade econômica/operacional (custo acessível e execução relativamente simples). Estes requisitos garantem que o TSA seja uma ferramenta prática e útil no dia a dia dos laboratórios clínicos."
+              }
+            },
+            {
+              title: "Q5 - Resistência Intrínseca",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 5:</strong> Conceito de resistência intrínseca</p>`,
+              question: {
+                text: "Q5. O que define a resistência intrínseca em bactérias?",
+                options: [
+                  "É a resistência inerente a um antimicrobiano que todos ou quase todos os membros de uma espécie exibem, tornando o TSA desnecessário",
+                  "É a resistência adquirida por meio de transferência horizontal de genes via plasmídeos",
+                  "É a resistência que surge pela pressão seletiva, através de mutações genéticas"
+                ],
+                correct: 0,
+                explanation: "A resistência intrínseca é uma característica natural e previsível de uma espécie bacteriana. Todos ou quase todos os membros da espécie apresentam essa resistência devido a características estruturais ou metabólicas inerentes. Por exemplo, Klebsiella pneumoniae possui resistência intrínseca à ampicilina. Como essa resistência é previsível, o TSA para essas combinações organismo-antimicrobiano é desnecessário."
+              }
+            },
+            {
+              title: "Q6 - Exemplo de Resistência Intrínseca",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 6:</strong> Exemplo clássico de resistência intrínseca</p>`,
+              question: {
+                text: "Q6. Qual bactéria é citada como exemplo de resistência intrínseca ao antimicrobiano ampicilina?",
+                options: [
+                  "Klebsiella pneumoniae",
+                  "Staphylococcus aureus",
+                  "Streptococcus pyogenes"
+                ],
+                correct: 0,
+                explanation: "Klebsiella pneumoniae é um exemplo clássico de resistência intrínseca à ampicilina. Esta bactéria produz naturalmente uma beta-lactamase cromossômica (SHV-1) que confere resistência a aminopenicilinas como a ampicilina. Esta característica é tão previsível que não há necessidade de realizar TSA para ampicilina em isolados de K. pneumoniae."
+              }
+            },
+            {
+              title: "Q7 - Resistência Adquirida",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 7:</strong> Mecanismos de resistência adquirida</p>`,
+              question: {
+                text: "Q7. Como a resistência adquirida difere da resistência intrínseca e qual é o seu mecanismo de desenvolvimento?",
+                options: [
+                  "É o desenvolvimento de resistência a um antimicrobiano ao qual a população bacteriana wild-type era suscetível, ocorrendo por mutações cromossômicas, transferência horizontal de genes (plasmídeos, integrons, transposons, transformação) ou a combinação destes",
+                  "É a expressão de um mecanismo de resistência que é facilmente previsível",
+                  "É uma característica natural e previsível de uma espécie bacteriana, independente de exposição prévia"
+                ],
+                correct: 0,
+                explanation: "A resistência adquirida representa uma mudança no perfil de suscetibilidade de uma bactéria que originalmente era sensível a determinado antimicrobiano. Ela pode surgir através de mutações cromossômicas espontâneas ou, mais comumente, pela aquisição de material genético de outras bactérias através de mecanismos como plasmídeos, transposons ou integrons. Esta resistência é imprevisível e requer TSA para detecção."
+              }
+            },
+            {
+              title: "Q8 - Expressão Induzível",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 8:</strong> Mecanismo de expressão induzível</p>`,
+              question: {
+                text: "Q8. Qual é o mecanismo de resistência cuja expressão ocorre apenas após a exposição a um agente incitante específico?",
+                options: [
+                  "Expressão induzível",
+                  "Expressão constitutiva",
+                  "Resistência intrínseca"
+                ],
+                correct: 0,
+                explanation: "A expressão induzível é um mecanismo de resistência que permanece 'silencioso' até que a bactéria seja exposta a um antimicrobiano específico que atua como indutor. Apenas após essa exposição, os genes de resistência são ativados e expressos. Este fenômeno pode levar a falhas terapêuticas se não for adequadamente detectado pelo laboratório."
+              }
+            },
+            {
+              title: "Q9 - Beta-lactamase AmpC",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 9:</strong> Exemplo de resistência induzível</p>`,
+              question: {
+                text: "Q9. Qual é o exemplo de resistência induzível que resulta em resistência a cefalosporinas de terceira geração?",
+                options: [
+                  "Produção induzida de beta-lactamase AmpC cromossomicamente codificada em certas Enterobacterales",
+                  "Resistência mediada pelo gene mecA em S. aureus",
+                  "Resistência adquirida por mutações cromossômicas"
+                ],
+                correct: 0,
+                explanation: "A produção induzível de beta-lactamase AmpC é um exemplo clássico de resistência induzível. Certas Enterobacterales (como Enterobacter spp., Citrobacter freundii, Serratia marcescens) possuem o gene AmpC cromossômico que, quando induzido pela exposição a certos beta-lactâmicos, resulta em resistência a cefalosporinas de terceira geração. Este fenômeno é clinicamente relevante e pode levar a falhas terapêuticas."
+              }
+            },
+            {
+              title: "Q10 - Heterorresistência",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 10:</strong> Conceito de heterorresistência</p>`,
+              question: {
+                text: "Q10. O que a heterorresistência representa em termos de expressão fenotípica?",
+                options: [
+                  "Expressão homogênea e contínua do mecanismo de resistência",
+                  "Presença de subpopulações bacterianas com diferentes graus de resistência fenotípica dentro de uma mesma cultura",
+                  "Resistência que surge apenas após o tratamento com antibióticos de moléculas grandes"
+                ],
+                correct: 1,
+                explanation: "A heterorresistência é um fenômeno complexo onde uma população bacteriana aparentemente homogênea contém subpopulações com diferentes níveis de resistência ao mesmo antimicrobiano. A maioria das células pode parecer suscetível nos testes convencionais, mas uma pequena subpopulação resistente pode persistir e causar falha terapêutica. Este fenômeno é particularmente relevante em VISA (Staphylococcus aureus com resistência intermediária à vancomicina)."
+              }
+            },
+            {
+              title: "Q11 - hVISA",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 11:</strong> Staphylococcus aureus heterorresistente</p>`,
+              question: {
+                text: "Q11. O que o Staphylococcus aureus heterorresistente vancomicina-intermediário (hVISA) representa?",
+                options: [
+                  "Um organismo com capacidade de expressão heterogênea, podendo levar a falhas terapêuticas inesperadas",
+                  "Um isolado que possui resistência intrínseca à vancomicina",
+                  "Um organismo cuja resistência é sempre facilmente detectável por métodos convencionais"
+                ],
+                correct: 0,
+                explanation: "O hVISA (heterogeneous VISA) representa um desafio clínico e laboratorial significativo. Estes isolados contêm subpopulações com resistência intermediária à vancomicina que podem não ser detectadas pelos métodos convencionais de TSA, mas podem expandir durante a terapia com vancomicina, levando a falhas terapêuticas inesperadas. A detecção de hVISA requer métodos especializados."
+              }
+            },
+            {
+              title: "Q12 - Definição de CIM",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 12:</strong> Concentração Inibitória Mínima</p>`,
+              question: {
+                text: "Q12. Qual é a definição precisa da Concentração Inibitória Mínima (CIM)?",
+                options: [
+                  "A maior concentração de antimicrobiano que permite o crescimento bacteriano visível",
+                  "A menor concentração de antimicrobiano capaz de inibir 99% do crescimento bacteriano visível",
+                  "O ponto de corte (breakpoint) que separa o microrganismo em sensível ou resistente"
+                ],
+                correct: 1,
+                explanation: "A CIM é definida como a menor concentração de um antimicrobiano capaz de inibir o crescimento bacteriano visível (geralmente 99% de inibição) após um período de incubação padronizado. Este valor quantitativo é fundamental para avaliar a atividade in vitro de antimicrobianos e é usado em conjunto com breakpoints clínicos para determinar se um isolado é suscetível, intermediário ou resistente."
+              }
+            },
+            {
+              title: "Q13 - Interpretação da CIM",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 13:</strong> Relação entre CIM e sensibilidade</p>`,
+              question: {
+                text: "Q13. O que o valor numérico da CIM indica em relação à sensibilidade de um microrganismo?",
+                options: [
+                  "Quanto maior o valor da CIM, maior a sensibilidade do microrganismo",
+                  "Quanto menor o valor da CIM, maior a sensibilidade do microrganismo",
+                  "O valor da CIM deve ser comparado entre diferentes antimicrobianos para determinar qual é o melhor"
+                ],
+                correct: 1,
+                explanation: "A relação entre CIM e sensibilidade é inversamente proporcional: quanto menor a CIM, mais sensível é o microrganismo ao antimicrobiano. Uma CIM baixa significa que uma pequena concentração do antibiótico é suficiente para inibir o crescimento bacteriano, indicando alta sensibilidade. Valores de CIM não devem ser comparados entre diferentes antimicrobianos, pois cada droga tem suas próprias características farmacocinéticas e farmacodinâmicas."
+              }
+            },
+            {
+              title: "Q14 - Indicações do TSA",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 14:</strong> Quando realizar o TSA</p>`,
+              question: {
+                text: "Q14. Em geral, o TSA deve ser realizado quando isolados clinicamente significativos são obtidos de amostras de pacientes e...",
+                options: [
+                  "O organismo é considerado parte da flora normal do local da coleta",
+                  "A informação resultante pode ser usada para guiar o tratamento",
+                  "A suscetibilidade do organismo é sempre previsível (ex: S. pyogenes para penicilina)"
+                ],
+                correct: 1,
+                explanation: "O TSA deve ser realizado quando o resultado pode efetivamente guiar decisões terapêuticas. Isso significa que o organismo isolado deve ser clinicamente significativo (não apenas colonizador ou contaminante) e que existe incerteza sobre seu perfil de suscetibilidade. O TSA não é necessário para organismos da flora normal ou quando a suscetibilidade é altamente previsível."
+              }
+            },
+            {
+              title: "Q15 - S. pyogenes e Penicilina",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 15:</strong> Suscetibilidade previsível</p>`,
+              question: {
+                text: "Q15. Por que o teste de Streptococcus pyogenes para suscetibilidade à penicilina não é realizado rotineiramente?",
+                options: [
+                  "Porque os isolados não suscetíveis à penicilina nunca foram relatados",
+                  "Porque o S. pyogenes é intrinsecamente resistente à penicilina",
+                  "Porque o teste da borda da zona de penicilina não é padronizado para esta espécie"
+                ],
+                correct: 0,
+                explanation: "Streptococcus pyogenes (estreptococo do grupo A) mantém sensibilidade universal à penicilina - nenhum isolado resistente foi documentado até o momento. Esta suscetibilidade previsível torna o TSA desnecessário, permitindo que a penicilina seja usada empiricamente com confiança para infecções por S. pyogenes. Este é um exemplo raro de suscetibilidade completamente previsível na era da resistência antimicrobiana."
+              }
+            }
+          ]
+        },
+        {
+          id: 17,
+          title: "Revisão II - Métodos",
+          duration: "30 min",
+          xp: 150,
+          sections: [
+            {
+              title: "Introdução - Revisão de Métodos",
+              content: `
+                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 25px; border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                  <h2 style="color: white; margin: 0 0 15px 0; font-size: 26px;">📝 Revisão II - Métodos</h2>
+                  <p style="color: rgba(255,255,255,0.95); margin: 0 0 15px 0; font-size: 16px; line-height: 1.8;">
+                    Esta lição de revisão contém <strong>15 questões</strong> focadas nos <strong>métodos de Teste de Suscetibilidade Antimicrobiana (TSA)</strong>, desde métodos qualitativos até quantitativos.
+                  </p>
+                  <div style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; margin-top: 15px;">
+                    <h4 style="color: white; margin: 0 0 10px 0; font-size: 16px;">📚 Tópicos Abordados:</h4>
+                    <ul style="color: rgba(255,255,255,0.9); margin: 0; padding-left: 20px; line-height: 1.8;">
+                      <li>Indicações do TSA e padronização (CLSI/EUCAST)</li>
+                      <li>Método de difusão em disco (Kirby-Bauer)</li>
+                      <li>Métodos quantitativos (CIM, diluição em ágar, macrodiluição)</li>
+                      <li>Correlação entre zona de inibição e CIM</li>
+                      <li>Vantagens e limitações de cada método</li>
+                    </ul>
+                  </div>
+                  <p style="color: rgba(255,255,255,0.9); margin: 15px 0 0 0; font-size: 14px; font-style: italic;">
+                    💡 Dica: Preste atenção nas diferenças entre métodos qualitativos e quantitativos!
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Q16. Em relação à flora normal, qual é a situação em que o TSA não é rotineiramente realizado?",
+                options: [
+                  "Quando Klebsiella pneumoniae é isolada de uma hemocultura",
+                  "Quando Lactobacillus spp é isolado em cultura vaginal, por ser considerado parte da flora normal",
+                  "Quando o organismo é isolado de um local estéril, como o líquido cefalorraquidiano"
+                ],
+                correct: 1,
+                explanation: "O TSA não é realizado rotineiramente para organismos que fazem parte da flora normal do local de coleta, como Lactobacillus spp em cultura vaginal. Estes organismos geralmente não são patogênicos e sua presença é esperada. Por outro lado, quando K. pneumoniae é isolada de hemocultura (local estéril), o TSA é essencial, pois indica infecção sistêmica grave que requer tratamento antimicrobiano guiado."
+              }
+            },
+            {
+              title: "Q17 - Pacientes Imunossuprimidos",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 17:</strong> Importância da informação clínica sobre imunossupressão</p>`,
+              question: {
+                text: "Q17. Qual é a importância da notificação pelo médico sobre um paciente estar imunossuprimido, em relação ao TSA?",
+                options: [
+                  "Permite ao laboratório modificar a abordagem de seleção de isolados, pois bactérias consideradas não patogênicas em hospedeiros imunocompetentes podem causar infecções sérias",
+                  "Indica que o teste de suscetibilidade deve ser suprimido, focando apenas na identificação",
+                  "Permite que o laboratório use apenas métodos moleculares, devido à urgência"
+                ],
+                correct: 0,
+                explanation: "A informação sobre imunossupressão é crucial porque modifica a interpretação da relevância clínica dos isolados. Organismos considerados contaminantes ou colonizadores em pacientes imunocompetentes (como Corynebacterium spp, Bacillus spp não-anthracis, ou estafilococos coagulase-negativos) podem causar infecções graves em imunossuprimidos. Esta informação permite ao laboratório realizar TSA em isolados que normalmente seriam descartados, garantindo tratamento adequado."
+              }
+            },
+            {
+              title: "Q18 - Padronização do TSA",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 18:</strong> Papel das organizações profissionais</p>`,
+              question: {
+                text: "Q18. O que as organizações profissionais como o CLSI e o EUCAST fornecem para garantir a precisão e a reprodutibilidade dos métodos de TSA?",
+                options: [
+                  "Padrões de desempenho para o TSA, incluindo a padronização do inóculo e dos procedimentos",
+                  "Apenas um registro de cepas de referência para pesquisa",
+                  "O fornecimento dos kits comerciais para todos os métodos de teste"
+                ],
+                correct: 0,
+                explanation: "O CLSI (Clinical and Laboratory Standards Institute) e o EUCAST (European Committee on Antimicrobial Susceptibility Testing) são organizações que desenvolvem e publicam padrões de desempenho detalhados para o TSA. Estes padrões incluem especificações sobre preparo do inóculo (0,5 McFarland), meios de cultura, condições de incubação, interpretação de resultados e breakpoints. Esta padronização é essencial para garantir que resultados sejam reprodutíveis entre diferentes laboratórios e comparáveis ao longo do tempo."
+              }
+            },
+            {
+              title: "Q19 - Método de Difusão em Disco",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 19:</strong> Método qualitativo mais comum</p>`,
+              question: {
+                text: "Q19. Qual é o método qualitativo convencional mais comumente usado, devido à sua simplicidade, confiabilidade e alto grau de padronização?",
+                options: [
+                  "Macrodiluição em caldo",
+                  "Método de difusão em disco (Kirby-Bauer)",
+                  "Diluição em ágar"
+                ],
+                correct: 1,
+                explanation: "O método de difusão em disco (Kirby-Bauer) é o método qualitativo mais amplamente utilizado em laboratórios clínicos devido à sua simplicidade operacional, baixo custo, alta confiabilidade e excelente padronização. O método envolve a aplicação de discos impregnados com antimicrobianos sobre ágar inoculado com a bactéria teste, seguido de incubação e medição das zonas de inibição. É ideal para laboratórios de pequeno a médio porte."
+              }
+            },
+            {
+              title: "Q20 - Inóculo Padronizado",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 20:</strong> Padronização do inóculo no Kirby-Bauer</p>`,
+              question: {
+                text: "Q20. No procedimento de Kirby-Bauer, qual é o inóculo padronizado recomendado?",
+                options: [
+                  "Aproximadamente 1 a 2×10⁸ UFC/mL, semeado em Ágar Mueller-Hinton (ou outro meio apropriado)",
+                  "Aproximadamente 5×10⁵ UFC/mL, usando meio de enriquecimento",
+                  "Cerca de 10⁴ UFC, inoculado em pontos específicos da placa"
+                ],
+                correct: 0,
+                explanation: "O inóculo padronizado para o método de Kirby-Bauer é de aproximadamente 1 a 2×10⁸ UFC/mL, equivalente ao padrão 0,5 de McFarland. Este inóculo é semeado uniformemente em Ágar Mueller-Hinton (ou meios especiais para organismos fastidiosos). A padronização do inóculo é crítica porque inóculos muito altos ou muito baixos podem levar a zonas de inibição falsamente pequenas ou grandes, respectivamente, resultando em interpretações errôneas."
+              }
+            },
+            {
+              title: "Q21 - Zona de Inibição",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 21:</strong> Interpretação da zona de inibição</p>`,
+              question: {
+                text: "Q21. No método de difusão em disco, o que o diâmetro da zona de inibição indica?",
+                options: [
+                  "O local onde a concentração do antimicrobiano é alta o suficiente para prevenir a proliferação do organismo",
+                  "A Concentração Inibitória Mínima (CIM) precisa do organismo",
+                  "O ponto de corte que deve ser usado para S. aureus para vancomicina"
+                ],
+                correct: 0,
+                explanation: "A zona de inibição representa a área ao redor do disco onde a concentração do antimicrobiano difundido no ágar é suficientemente alta para inibir o crescimento bacteriano visível. O diâmetro desta zona é inversamente proporcional à CIM: quanto maior a zona, menor a CIM e mais sensível é o organismo. Embora exista correlação com a CIM, a difusão em disco não fornece um valor preciso de CIM, apenas uma estimativa qualitativa (S/I/R)."
+              }
+            },
+            {
+              title: "Q22 - Relação Zona-CIM",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 22:</strong> Correlação entre zona de inibição e CIM</p>`,
+              question: {
+                text: "Q22. Qual é a principal relação entre o tamanho da zona de inibição e a Concentração Inibitória Mínima (CIM)?",
+                options: [
+                  "Eles são inversamente proporcionais (halo grande = CIM baixa = mais sensível)",
+                  "Eles são diretamente proporcionais (halo grande = CIM alta = menos sensível)",
+                  "A relação é sempre perfeitamente linear"
+                ],
+                correct: 0,
+                explanation: "A relação entre zona de inibição e CIM é inversamente proporcional: quanto maior o diâmetro da zona de inibição, menor a CIM, indicando maior sensibilidade do organismo. Esta relação existe porque organismos mais sensíveis são inibidos por concentrações menores do antimicrobiano, permitindo que o antibiótico difunda mais longe antes que sua concentração caia abaixo da CIM. Embora geralmente logarítmica (não perfeitamente linear), esta correlação permite que tabelas de interpretação convertam diâmetros de zona em categorias S/I/R."
+              }
+            },
+            {
+              title: "Q23 - Flexibilidade do Método",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 23:</strong> Vantagem da personalização</p>`,
+              question: {
+                text: "Q23. Qual é a vantagem do método de difusão em disco em relação à flexibilidade na escolha dos antimicrobianos?",
+                options: [
+                  "A escolha pode ser personalizada de acordo com os formulários institucionais e padrões de resistência locais",
+                  "O método só é validado para organismos fastidiosos",
+                  "O método só permite testar um antimicrobiano por placa"
+                ],
+                correct: 0,
+                explanation: "Uma grande vantagem do método de difusão em disco é a flexibilidade na seleção de antimicrobianos. Laboratórios podem personalizar os painéis de discos testados de acordo com o formulário hospitalar, padrões de resistência locais, tipo de infecção e perfil do paciente. Por exemplo, pode-se testar carbapenêmicos apenas quando há suspeita de resistência, ou incluir antimicrobianos específicos para infecções urinárias. Esta personalização otimiza recursos e fornece informações mais relevantes clinicamente."
+              }
+            },
+            {
+              title: "Q24 - Limitação: Automação",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 24:</strong> Desafio em laboratórios de alto volume</p>`,
+              question: {
+                text: "Q24. Qual é uma limitação importante da difusão em disco em laboratórios de alto volume?",
+                options: [
+                  "A falta de automação do procedimento, o que dificulta a produção em larga escala",
+                  "O baixo custo por teste",
+                  "A capacidade de fornecer uma CIM precisa"
+                ],
+                correct: 0,
+                explanation: "A principal limitação do método de difusão em disco em laboratórios de alto volume é a dificuldade de automação. O método requer múltiplas etapas manuais: preparo do inóculo, semeadura, aplicação dos discos, incubação, medição das zonas com paquímetro e interpretação. Embora existam sistemas automatizados de leitura de zonas, o processo ainda é mais trabalhoso que sistemas totalmente automatizados como VITEK ou Phoenix, que são preferidos em laboratórios de grande porte."
+              }
+            },
+            {
+              title: "Q25 - Limitação: Natureza Qualitativa",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 25:</strong> Quando a CIM é necessária</p>`,
+              question: {
+                text: "Q25. Qual é um exemplo de infecção para a qual a natureza qualitativa da difusão em disco é uma limitação, exigindo uma CIM quantitativa?",
+                options: [
+                  "Infecções urinárias não complicadas",
+                  "Infecções causadas por Lactobacillus spp",
+                  "Endocardite causada por estreptococos do grupo viridans, onde os regimes são estratificados pela CIM de penicilina"
+                ],
+                correct: 2,
+                explanation: "A endocardite por estreptococos do grupo viridans é um exemplo clássico onde a CIM quantitativa é essencial. O tratamento é estratificado pela CIM de penicilina: isolados altamente sensíveis (CIM ≤0,125 µg/mL) podem ser tratados com penicilina em monoterapia por 4 semanas, enquanto isolados com CIM mais elevada requerem terapia combinada ou prolongada. A difusão em disco fornece apenas categorias S/I/R, não permitindo esta estratificação precisa necessária para otimizar o tratamento."
+              }
+            },
+            {
+              title: "Q26 - Limitação: VISA",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 26:</strong> Combinação organismo-antimicrobiano problemática</p>`,
+              question: {
+                text: "Q26. Para qual combinação organismo-antimicrobiano o método de difusão em disco é especificamente considerado insensível e não deve ser usado?",
+                options: [
+                  "Streptococcus pyogenes para Penicilina",
+                  "Staphylococcus aureus para Vancomicina-intermediário (VISA)",
+                  "Klebsiella pneumoniae para Ampicilina"
+                ],
+                correct: 1,
+                explanation: "O método de difusão em disco é notoriamente insensível para detectar S. aureus com resistência intermediária à vancomicina (VISA). Devido às características de difusão da vancomicina no ágar e ao mecanismo de resistência do VISA (espessamento da parede celular), as zonas de inibição podem parecer normais mesmo em isolados VISA. Por isso, o CLSI recomenda métodos quantitativos (CIM por microdiluição ou E-test) para testar vancomicina em S. aureus, especialmente em infecções graves."
+              }
+            },
+            {
+              title: "Q27 - Métodos Quantitativos",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 27:</strong> Padrão-ouro para avaliação de sensibilidade</p>`,
+              question: {
+                text: "Q27. Qual é a principal informação fornecida pelos métodos quantitativos de TSA, que é considerada o padrão-ouro para avaliação de sensibilidade?",
+                options: [
+                  "O diâmetro da zona de inibição",
+                  "A Concentração Inibitória Mínima (CIM)",
+                  "A presença de um mecanismo de resistência específico (e.g., ESBL)"
+                ],
+                correct: 1,
+                explanation: "A Concentração Inibitória Mínima (CIM) é a informação fundamental fornecida pelos métodos quantitativos e é considerada o padrão-ouro para avaliação de sensibilidade antimicrobiana. A CIM fornece um valor numérico preciso (em µg/mL) que indica a menor concentração de antimicrobiano necessária para inibir o crescimento bacteriano. Este valor quantitativo permite estratificação terapêutica precisa, monitoramento de tendências de resistência e é essencial para infecções graves onde a otimização da terapia é crítica."
+              }
+            },
+            {
+              title: "Q28 - Diluição em Ágar",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 28:</strong> Limitações do método de referência</p>`,
+              question: {
+                text: "Q28. Qual é a principal limitação do método de diluição em ágar para uso rotineiro em laboratórios clínicos?",
+                options: [
+                  "A boa reprodutibilidade",
+                  "O alto custo de reagentes e a natureza trabalhosa do método",
+                  "A incapacidade de testar múltiplos isolados simultaneamente"
+                ],
+                correct: 1,
+                explanation: "Embora a diluição em ágar seja considerada método de referência devido à sua excelente reprodutibilidade, seu uso rotineiro é limitado pelo alto custo de reagentes e pela natureza extremamente trabalhosa. O método requer preparo de múltiplas placas de ágar contendo diferentes concentrações de antimicrobiano, inoculação precisa de cada isolado em todas as placas, e leitura visual após incubação. Este processo consome muito tempo e recursos, tornando-o impraticável para uso rotineiro, sendo reservado para estudos de vigilância ou como padrão de referência."
+              }
+            },
+            {
+              title: "Q29 - Aplicação Específica",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 29:</strong> Uso clínico da diluição em ágar</p>`,
+              question: {
+                text: "Q29. Qual é um uso específico da diluição em ágar em laboratórios clínicos, além de seu uso como padrão de referência?",
+                options: [
+                  "Rastreamento de resistência induzível à clindamicina",
+                  "Rastreamento de resistência de alto nível à gentamicina em enterococos",
+                  "Detecção de ESBL (Beta-lactamase de Espectro Estendido)"
+                ],
+                correct: 1,
+                explanation: "Um uso clínico específico da diluição em ágar é o rastreamento de resistência de alto nível (RAN) aos aminoglicosídeos em enterococos. Este teste utiliza placas de ágar contendo altas concentrações de gentamicina (500 µg/mL) ou estreptomicina (1000-2000 µg/mL). Enterococos com RAN perdem o efeito sinérgico da combinação beta-lactâmico + aminoglicosídeo, essencial no tratamento de endocardite enterocócica. Este teste é simples, padronizado e clinicamente relevante, justificando seu uso rotineiro apesar das limitações gerais do método."
+              }
+            },
+            {
+              title: "Q30 - Macrodiluição em Caldo",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 30:</strong> Limitações da macrodiluição</p>`,
+              question: {
+                text: "Q30. Qual é a principal limitação que impede o uso rotineiro da macrodiluição em caldo nos laboratórios clínicos?",
+                options: [
+                  "Sua alta automatização",
+                  "Sua falta de automação e ser particularmente trabalhoso, sujeito a erros de preparo manual das diluições de antibióticos",
+                  "Seu baixo custo e alta velocidade de resultados"
+                ],
+                correct: 1,
+                explanation: "A macrodiluição em caldo, embora seja um método quantitativo preciso para determinação de CIM, é raramente usada rotineiramente devido à falta de automação e natureza extremamente trabalhosa. O método requer preparo manual de diluições seriadas de cada antimicrobiano em tubos de caldo, inoculação de cada tubo com o organismo teste, incubação e leitura visual de turvação. Este processo é demorado, propenso a erros de pipetagem e impraticável para testar múltiplos isolados. Foi amplamente substituído pela microdiluição, que é uma versão miniaturizada e mais facilmente automatizada."
+              }
+            }
+          ]
+        },
+
+        {
+          id: 18,
+          title: "Revisão III - Interpretação",
+          duration: "35 min",
+          xp: 160,
+          sections: [
+            {
+              title: "Introdução - Revisão de Interpretação",
+              content: `
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                  <h2 style="color: white; margin: 0 0 15px 0; font-size: 26px;">📝 Revisão III - Interpretação</h2>
+                  <p style="color: rgba(255,255,255,0.95); margin: 0 0 15px 0; font-size: 16px; line-height: 1.8;">
+                    Esta lição de revisão contém <strong>16 questões</strong> focadas na <strong>interpretação clínica dos resultados de TSA</strong>, incluindo métodos quantitativos, pontos de corte e categorias S/I/R.
+                  </p>
+                  <div style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; margin-top: 15px;">
+                    <h4 style="color: white; margin: 0 0 10px 0; font-size: 16px;">📚 Tópicos Abordados:</h4>
+                    <ul style="color: rgba(255,255,255,0.9); margin: 0; padding-left: 20px; line-height: 1.8;">
+                      <li>Microdiluição em caldo e método de gradiente (E-test)</li>
+                      <li>Categorias S/I/R e pontos de corte (CLSI e BrCast)</li>
+                      <li>Sistemas automatizados e suas vantagens</li>
+                      <li>Detecção de beta-lactamases e resistências específicas</li>
+                      <li>Métodos genotípicos e moleculares</li>
+                    </ul>
+                  </div>
+                  <p style="color: rgba(255,255,255,0.9); margin: 15px 0 0 0; font-size: 14px; font-style: italic;">
+                    💡 Dica: Foque na diferença entre as categorias S/I/R e suas implicações clínicas!
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Q31. Por que a microdiluição em caldo é um método popular nos laboratórios clínicos, comparado à macrodiluição?",
+                options: [
+                  "É uma versão miniaturizada e mais automatizada da macrodiluição, e os painéis de antibióticos estão comercialmente disponíveis",
+                  "Exige o preparo manual das diluições de antibióticos pelo laboratório",
+                  "Permite que um logaritmo a mais de bactérias seja analisado, superando a heterorresistência"
+                ],
+                correct: 0,
+                explanation: "A microdiluição em caldo é amplamente utilizada porque miniaturiza o processo de macrodiluição em placas de 96 poços, permitindo automação e redução de custos. Os painéis comerciais pré-fabricados (como MicroScan, Sensititre) eliminam o trabalho de preparo manual de diluições, tornando o método prático para uso rotineiro. Sistemas automatizados como VITEK 2 e Phoenix utilizam microdiluição, fornecendo resultados de CIM em 8-16 horas com mínima manipulação técnica."
+              }
+            },
+            {
+              title: "Q32 - Heterorresistência",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 32:</strong> Limitação da microdiluição</p>`,
+              question: {
+                text: "Q32. O que é considerado uma desvantagem da microdiluição em caldo, especialmente em relação à heterorresistência?",
+                options: [
+                  "Sua incapacidade de ser usado para bactérias fastidiosas",
+                  "Devido à miniaturização, menos bactérias são analisadas, podendo mascarar mecanismos de resistência presentes em pequenas subpopulações",
+                  "O custo relativamente baixo"
+                ],
+                correct: 1,
+                explanation: "A principal desvantagem da microdiluição é que, devido ao pequeno volume de inóculo (tipicamente 5×10⁴ UFC por poço), subpopulações resistentes presentes em frequências baixas (<1:10⁶) podem não ser detectadas. Isso é especialmente problemático para heterorresistência à vancomicina em S. aureus (hVISA), onde subpopulações resistentes podem ser mascaradas. Métodos baseados em ágar, que testam inóculos maiores (10⁸ UFC), têm maior sensibilidade para detectar heterorresistência."
+              }
+            },
+            {
+              title: "Q33 - Método de Gradiente",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 33:</strong> Definição do E-test</p>`,
+              question: {
+                text: "Q33. O que define o método de gradiente antimicrobiano?",
+                options: [
+                  "É uma técnica baseada em caldo que usa medições fotométricas",
+                  "É uma técnica baseada em ágar que utiliza uma tira plástica com uma concentração graduada de um antimicrobiano",
+                  "É um método que fornece resultados apenas qualitativos (S/I/R)"
+                ],
+                correct: 1,
+                explanation: "O método de gradiente antimicrobiano (E-test®, MIC Test Strip) utiliza uma tira plástica impregnada com um gradiente exponencial de concentrações de antimicrobiano. A tira é aplicada sobre ágar inoculado com o organismo teste. Após incubação, forma-se uma zona elíptica de inibição, e a CIM é lida diretamente na escala impressa na tira, no ponto onde a elipse intersecta a tira. Este método combina a simplicidade da difusão em disco com a precisão quantitativa da diluição."
+              }
+            },
+            {
+              title: "Q34 - Leitura do E-test",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 34:</strong> Determinação da CIM no método de gradiente</p>`,
+              question: {
+                text: "Q34. Como a CIM de um antimicrobiano é determinada no método de gradiente antimicrobiano?",
+                options: [
+                  "Pela medição do diâmetro da zona circular de inibição",
+                  "Pela identificação da intersecção da zona elíptica de inibição de crescimento com o gradiente antimicrobiano na tira",
+                  "Pela inspeção visual de turvação nos poços"
+                ],
+                correct: 1,
+                explanation: "No método de gradiente, o antimicrobiano difunde do centro da tira (concentração mais alta) para as bordas (concentração mais baixa), criando um gradiente contínuo no ágar. O crescimento bacteriano é inibido onde a concentração excede a CIM, formando uma zona elíptica. A CIM é lida diretamente na escala numérica impressa na tira, no ponto onde a borda da elipse intersecta a tira. Esta leitura visual direta é uma vantagem significativa do método."
+              }
+            },
+            {
+              title: "Q35 - Categoria Sensível",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 35:</strong> Definição de Suscetível (S)</p>`,
+              question: {
+                text: "Q35. De acordo com o CLSI, o que a categoria 'Suscetível' indica em relação à concentração de antibiótico e à eficácia clínica?",
+                options: [
+                  "Que a concentração inibitória é geralmente alcançada com a dose recomendada, e a eficácia clínica é esperada",
+                  "Que a CIM não é alcançada, mesmo com doses máximas",
+                  "Que é necessário usar um regime posológico que resulte em maior exposição"
+                ],
+                correct: 0,
+                explanation: "A categoria 'Suscetível' (S) indica que a CIM do isolado está abaixo do breakpoint de sensibilidade, significando que as concentrações séricas e teciduais alcançadas com a dose padrão recomendada são suficientes para inibir o organismo. A eficácia clínica é esperada quando o antimicrobiano é usado na dose, via e intervalo recomendados para o tipo de infecção. Esta categoria representa a situação ideal para tratamento empírico ou direcionado."
+              }
+            },
+            {
+              title: "Q36 - Categoria I/SDD",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 36:</strong> Sensível com Aumento de Exposição</p>`,
+              question: {
+                text: "Q36. O que a categoria 'Sensível com Aumento de Exposição' (BrCast) ou 'Suscetível-Dose Dependente' (CLSI) exige para que se espere eficácia clínica?",
+                options: [
+                  "O uso de um regime posológico que resulte em exposição mais alta (doses maiores, mais frequentes, ou ambas)",
+                  "O uso da dosagem padrão, independentemente do local da infecção",
+                  "Que a CIM não seja alcançada, mesmo com doses máximas"
+                ],
+                correct: 0,
+                explanation: "A categoria 'I' (Intermediário/Sensível com Aumento de Exposição) indica que a eficácia clínica pode ser alcançada com regimes posológicos otimizados que aumentem a exposição ao antimicrobiano. Isso pode incluir: doses mais altas, intervalos mais curtos, infusão prolongada ou contínua, ou concentração fisiológica no local da infecção (ex: beta-lactâmicos na urina). Esta categoria reconhece que a farmacocinética e farmacodinâmica podem ser manipuladas para superar CIMs moderadamente elevadas."
+              }
+            },
+            {
+              title: "Q37 - Categoria Intermediário",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 37:</strong> Situações especiais para categoria I</p>`,
+              question: {
+                text: "Q37. Em que situação a eficácia clínica pode ser alcançada para um isolado classificado como 'Intermediário'?",
+                options: [
+                  "Quando o antimicrobiano é fisiologicamente concentrado no local da infecção (por exemplo, beta-lactâmicos na urina)",
+                  "Quando o resultado é discrepante e requer teste genotípico",
+                  "A eficácia clínica nunca é esperada para isolados intermediários"
+                ],
+                correct: 0,
+                explanation: "Isolados intermediários podem responder ao tratamento quando o antimicrobiano atinge concentrações excepcionalmente altas no local da infecção. O exemplo clássico são os beta-lactâmicos na urina: mesmo que um organismo seja 'I' para ampicilina no sangue, a concentração urinária pode ser 100-1000 vezes maior que a sérica, superando a CIM e permitindo tratamento eficaz de ITU não complicada. Outro exemplo: fluoroquinolonas concentradas na próstata para prostatite."
+              }
+            },
+            {
+              title: "Q38 - Categoria Resistente",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 38:</strong> Definição de Resistente (R)</p>`,
+              question: {
+                text: "Q38. Qual é a principal característica da categoria 'Resistente'?",
+                options: [
+                  "A CIM é alcançada com a dose recomendada",
+                  "A CIM não é alcançada mesmo com doses máximas, e há alta probabilidade de falha terapêutica",
+                  "A CIM é alcançada apenas com o prolongamento do tempo de infusão"
+                ],
+                correct: 1,
+                explanation: "A categoria 'Resistente' (R) indica que a CIM do isolado excede as concentrações alcançáveis mesmo com doses máximas toleradas do antimicrobiano. Há alta probabilidade de falha terapêutica se este antimicrobiano for usado, independentemente da dose, via ou local da infecção. Esta categoria serve como alerta clínico para evitar o uso do antimicrobiano e considerar alternativas terapêuticas. A resistência pode ser mediada por mecanismos enzimáticos, alteração de alvo ou efluxo."
+              }
+            },
+            {
+              title: "Q39 - BrCast vs CLSI",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 39:</strong> Implicação prática do BrCast</p>`,
+              question: {
+                text: "Q39. Qual é uma implicação prática do BrCast (padrão nacional brasileiro) em relação à categoria 'I'?",
+                options: [
+                  "A substituição de 'Intermediário' por 'Sensível com aumento de exposição'",
+                  "O aumento dos pontos de corte da CIM para garantir maior segurança",
+                  "A indicação de que o uso do antibiótico deve ser evitado para este patógeno específico"
+                ],
+                correct: 0,
+                explanation: "O BrCast (Brazilian Committee on Antimicrobial Susceptibility Testing), alinhado com o EUCAST, substituiu a terminologia 'Intermediário' por 'Sensível com Aumento de Exposição' (I). Esta mudança enfatiza que isolados nesta categoria NÃO são resistentes, mas requerem otimização posológica. A nova nomenclatura é mais clara clinicamente, evitando a interpretação errônea de 'intermediário' como 'parcialmente resistente' e incentivando estratégias de dose otimizada em vez de troca prematura de antimicrobiano."
+              }
+            },
+            {
+              title: "Q40 - Limitações S/I/R",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 40:</strong> Limitações da categorização</p>`,
+              question: {
+                text: "Q40. Qual é a limitação da categorização S/I/R?",
+                options: [
+                  "O 'S' (suscetível) garante sucesso em todas as situações",
+                  "O 'S' não garante sucesso em todas as situações, sendo influenciado pela gravidade e localização da infecção",
+                  "A categorização é baseada apenas em dados epidemiológicos"
+                ],
+                correct: 1,
+                explanation: "A categorização S/I/R é uma simplificação que não garante sucesso clínico absoluto. Fatores do hospedeiro (imunossupressão, comorbidades), da infecção (local, gravidade, biofilme, corpo estranho) e do antimicrobiano (penetração tecidual, ligação proteica, metabolismo) influenciam o desfecho. Um isolado 'S' pode falhar em endocardite, meningite ou osteomielite devido à dificuldade de penetração. Inversamente, um isolado 'I' pode responder em ITU devido à alta concentração urinária. A categorização é um guia, não uma garantia."
+              }
+            },
+            {
+              title: "Q41 - Sistemas Automatizados",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 41:</strong> Detecção de crescimento</p>`,
+              question: {
+                text: "Q41. De que dependem a maioria dos sistemas automatizados para detectar o crescimento bacteriano?",
+                options: [
+                  "Apenas da inspeção visual de turvação nos tubos",
+                  "Da detecção óptica automatizada de crescimento bacteriano (fotométrica, fluorométrica ou turbidimétrica)",
+                  "Da medição manual dos diâmetros da zona de inibição"
+                ],
+                correct: 1,
+                explanation: "Sistemas automatizados como VITEK 2, Phoenix e MicroScan utilizam detecção óptica automatizada do crescimento bacteriano. Métodos incluem: turbidimetria (medição de turvação), fluorometria (detecção de fluorescência de substratos metabolizados) ou fotometria (mudança de cor de indicadores de pH). Estas tecnologias permitem monitoramento contínuo e detecção precoce de crescimento, reduzindo o tempo para resultado de 18-24h (métodos convencionais) para 8-16h, com interpretação automática e padronizada."
+              }
+            },
+            {
+              title: "Q42 - Vantagem de Velocidade",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 42:</strong> Rapidez dos sistemas automatizados</p>`,
+              question: {
+                text: "Q42. Qual é a principal vantagem de velocidade dos sistemas automatizados em comparação com os métodos convencionais?",
+                options: [
+                  "Eles exigem incubação prolongada (24-48 horas)",
+                  "Eles podem detectar alterações mais sutis no crescimento, determinando padrões de suscetibilidade mais rapidamente (8-16h)",
+                  "Eles só fornecem resultados qualitativos (S/I/R)"
+                ],
+                correct: 1,
+                explanation: "A principal vantagem dos sistemas automatizados é a velocidade: resultados em 8-16 horas versus 18-24 horas dos métodos convencionais. Isso é possível porque a detecção óptica automatizada identifica alterações sutis no crescimento muito antes que sejam visíveis a olho nu. Algoritmos computacionais analisam curvas de crescimento cinético para determinar CIM e interpretar S/I/R. Esta rapidez permite ajuste terapêutico mais precoce, reduzindo uso empírico de antimicrobianos de amplo espectro e melhorando desfechos clínicos."
+              }
+            },
+            {
+              title: "Q43 - Custo dos Automatizados",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 43:</strong> Limitação econômica</p>`,
+              question: {
+                text: "Q43. Qual é a principal limitação dos sistemas automatizados que pode ser proibitiva para alguns laboratórios de microbiologia clínica?",
+                options: [
+                  "O baixo custo do equipamento e dos insumos",
+                  "O alto custo do equipamento e dos insumos",
+                  "A impossibilidade de processar múltiplas amostras simultaneamente"
+                ],
+                correct: 1,
+                explanation: "O alto custo de aquisição do equipamento (US$ 100.000-300.000) e dos cartões/painéis descartáveis (US$ 15-40 por teste) é a principal limitação dos sistemas automatizados. Embora ofereçam rapidez, padronização e redução de trabalho técnico, o investimento inicial e os custos operacionais são proibitivos para laboratórios de pequeno volume. A viabilidade econômica geralmente requer volume mínimo de 20-30 testes/dia. Laboratórios menores frequentemente optam por métodos manuais mais baratos, como difusão em disco."
+              }
+            },
+            {
+              title: "Q44 - Teste de Beta-lactamase",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 44:</strong> Rapidez da detecção enzimática</p>`,
+              question: {
+                text: "Q44. Qual é a vantagem de tempo do teste de beta-lactamase usando hidrólise enzimática em comparação com o TSA dependente de crescimento?",
+                options: [
+                  "Requer incubação noturna de 16 a 20 horas",
+                  "A hidrólise pode ser verificada em minutos",
+                  "Requer 48 horas para observação da segunda leitura"
+                ],
+                correct: 1,
+                explanation: "O teste cromogênico de beta-lactamase detecta a hidrólise enzimática de um substrato beta-lactâmico cromogênico (como nitrocefina) em minutos. Uma colônia do organismo é suspensa no reagente; se beta-lactamase estiver presente, o anel beta-lactâmico é hidrolisado, causando mudança de cor (amarelo → vermelho). Este teste rápido é especialmente útil para Haemophilus influenzae, Moraxella catarrhalis e Neisseria gonorrhoeae, permitindo decisão terapêutica imediata (usar amoxicilina ou amoxicilina-clavulanato) sem aguardar TSA completo."
+              }
+            },
+            {
+              title: "Q45 - Teste D-zone",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 45:</strong> Resistência induzível à clindamicina</p>`,
+              question: {
+                text: "Q45. Qual é o resultado visual de um teste D-zone positivo, indicando resistência induzível à clindamicina?",
+                options: [
+                  "Uma zona de inibição perfeitamente redonda ao redor do disco de clindamicina",
+                  "O achatamento da zona de inibição de clindamicina adjacente ao disco de eritromicina",
+                  "Crescimento visível em todos os poços do painel de microdiluição"
+                ],
+                correct: 1,
+                explanation: "O teste D-zone detecta resistência induzível MLSB (Macrolídeo-Lincosamida-Estreptogramina B) em estafilococos e estreptococos. Discos de eritromicina e clindamicina são colocados a 15-20mm de distância. Se o isolado tem resistência induzível (gene erm), a eritromicina induz a metilase que confere resistência cruzada à clindamicina, causando achatamento (formato de 'D') da zona de clindamicina adjacente ao disco de eritromicina. Teste positivo indica que clindamicina NÃO deve ser usada, apesar de parecer sensível in vitro."
+              }
+            },
+            {
+              title: "Q46 - Métodos Moleculares",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 46:</strong> Vantagem de velocidade dos métodos genotípicos</p>`,
+              question: {
+                text: "Q46. Qual é uma vantagem de velocidade dos ensaios moleculares em comparação com os métodos convencionais de TSA?",
+                options: [
+                  "Eles exigem incubação de 18-24 horas para crescimento bacteriano",
+                  "Eles podem fornecer resultados em 1-2 horas, detectando genes de resistência diretamente",
+                  "Eles só podem ser realizados após o isolamento e identificação do organismo"
+                ],
+                correct: 1,
+                explanation: "Métodos moleculares (PCR, sequenciamento, hibridização) detectam genes de resistência diretamente de amostras clínicas ou culturas, fornecendo resultados em 1-2 horas versus 24-48 horas do TSA convencional. Exemplos: detecção de mecA para MRSA, genes bla para carbapenemases (KPC, NDM, OXA-48), vanA/vanB para VRE. Painéis multiplex podem detectar múltiplos genes simultaneamente. A rapidez permite terapia direcionada precoce, isolamento apropriado e controle de infecção. Limitação: detectam apenas genes conhecidos, não fornecem CIM, e não substituem completamente o TSA fenotípico."
+              }
+            }
+          ]
+        }
+,
+        {
+          id: 19,
+          title: "Revisão IV - Tópicos Avançados",
+          duration: "30 min",
+          xp: 150,
+          sections: [
+            {
+              title: "Introdução - Revisão de Tópicos Avançados",
+              content: `
+                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 25px; border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                  <h2 style="color: white; margin: 0 0 15px 0; font-size: 26px;">📝 Revisão IV - Tópicos Avançados</h2>
+                  <p style="color: rgba(255,255,255,0.95); margin: 0 0 15px 0; font-size: 16px; line-height: 1.8;">
+                    Esta lição de revisão contém <strong>15 questões</strong> focadas em <strong>tópicos avançados de interpretação clínica</strong>, incluindo estrutura do antibiograma, comparação entre diretrizes e aplicações práticas.
+                  </p>
+                  <div style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; margin-top: 15px;">
+                    <h4 style="color: white; margin: 0 0 10px 0; font-size: 16px;">📚 Tópicos Abordados:</h4>
+                    <ul style="color: rgba(255,255,255,0.9); margin: 0; padding-left: 20px; line-height: 1.8;">
+                      <li>Interpretação clínica de resultados (S/I/R)</li>
+                      <li>Estrutura e elementos do antibiograma</li>
+                      <li>Diferenças entre CLSI e BrCast/EUCAST</li>
+                      <li>Reportagem seletiva e cascata</li>
+                      <li>Aplicações clínicas práticas</li>
+                    </ul>
+                  </div>
+                  <p style="color: rgba(255,255,255,0.9); margin: 15px 0 0 0; font-size: 14px; font-style: italic;">
+                    💡 Dica: Estas questões integram conhecimentos das lições 9-11!
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Q47. Qual é o principal objetivo da interpretação clínica dos resultados de TSA?",
+                options: [
+                  "Traduzir dados laboratoriais (CIM, diâmetro de zona) em categorias clinicamente relevantes (S/I/R) que orientem a terapia antimicrobiana",
+                  "Determinar a estrutura química dos antimicrobianos testados",
+                  "Calcular o custo-benefício de cada antimicrobiano disponível"
+                ],
+                correct: 0,
+                explanation: "A interpretação clínica é o processo de traduzir dados quantitativos (CIM em µg/mL ou diâmetro de zona em mm) em categorias qualitativas (Sensível, Intermediário/Sensível com Aumento de Exposição, Resistente) usando breakpoints estabelecidos por organizações como CLSI, EUCAST ou BrCast. Esta tradução permite que clínicos tomem decisões terapêuticas informadas sem necessitar conhecimento técnico detalhado de microbiologia. A interpretação considera farmacocinética, farmacodinâmica, local da infecção e dados de desfecho clínico."
+              }
+            },
+            {
+              title: "Q48 - Categoria Sensível",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 48:</strong> Implicações da categoria S</p>`,
+              question: {
+                text: "Q48. O que significa quando um isolado é categorizado como 'Sensível' (S) a um antimicrobiano?",
+                options: [
+                  "A eficácia clínica é esperada quando o antimicrobiano é usado na dose padrão recomendada para o tipo de infecção",
+                  "O antimicrobiano deve ser evitado devido ao alto risco de toxicidade",
+                  "É necessário dobrar a dose padrão para alcançar eficácia"
+                ],
+                correct: 0,
+                explanation: "A categoria 'Sensível' (S) indica que a CIM do isolado está abaixo do breakpoint de sensibilidade, significando que as concentrações séricas e teciduais alcançadas com o regime posológico padrão são suficientes para inibir o crescimento bacteriano. A eficácia clínica é esperada quando o antimicrobiano é usado conforme recomendado para o tipo e local da infecção. No entanto, 'S' não garante sucesso absoluto, pois fatores do hospedeiro (imunossupressão, comorbidades) e da infecção (local, gravidade, biofilme) também influenciam o desfecho clínico."
+              }
+            },
+            {
+              title: "Q49 - Reportagem Seletiva",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 49:</strong> Conceito de reportagem seletiva</p>`,
+              question: {
+                text: "Q49. Qual é o principal objetivo da reportagem seletiva (ou em cascata) no antibiograma?",
+                options: [
+                  "Promover o uso racional de antimicrobianos, reportando inicialmente agentes de espectro mais estreito e reservando agentes de amplo espectro para situações específicas",
+                  "Reduzir o custo do teste reportando apenas o antimicrobiano mais barato",
+                  "Esconder informações sobre resistência para evitar preocupação do médico"
+                ],
+                correct: 0,
+                explanation: "A reportagem seletiva (selective reporting ou cascade reporting) é uma estratégia de stewardship antimicrobiano onde o laboratório reporta inicialmente apenas antimicrobianos de primeira linha (espectro mais estreito, menor pressão seletiva). Agentes de amplo espectro, reserva ou com maior potencial de induzir resistência são suprimidos do relatório inicial, sendo liberados apenas mediante solicitação ou em situações clínicas específicas (falha terapêutica, alergia, resistência aos agentes de primeira linha). Esta prática reduz o uso desnecessário de antimicrobianos de amplo espectro, preservando sua eficácia futura."
+              }
+            },
+            {
+              title: "Q50 - Estrutura do Antibiograma",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 50:</strong> Elementos essenciais do antibiograma</p>`,
+              question: {
+                text: "Q50. Quais são os elementos essenciais que devem constar em um antibiograma bem estruturado?",
+                options: [
+                  "Identificação do microrganismo, antimicrobianos testados, resultados (S/I/R ou CIM), método utilizado e observações/comentários interpretativos",
+                  "Apenas o nome do paciente e o resultado 'sensível' ou 'resistente'",
+                  "Somente a lista de antimicrobianos disponíveis na farmácia do hospital"
+                ],
+                correct: 0,
+                explanation: "Um antibiograma completo deve incluir: (1) Identificação precisa do microrganismo (gênero, espécie, às vezes sorotipo); (2) Lista de antimicrobianos testados, organizados por classe; (3) Resultados para cada antimicrobiano (S/I/R e/ou CIM em µg/mL); (4) Método utilizado (disco-difusão, microdiluição, E-test, sistema automatizado); (5) Padrão de interpretação (CLSI, EUCAST, BrCast); (6) Observações e comentários interpretativos (ex: 'MRSA detectado', 'Resistência induzível à clindamicina', 'ESBL positivo'). Estes elementos permitem interpretação clínica adequada e rastreamento epidemiológico."
+              }
+            },
+            {
+              title: "Q51 - Comentários Interpretativos",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 51:</strong> Importância dos comentários</p>`,
+              question: {
+                text: "Q51. Por que os comentários interpretativos são importantes no antibiograma?",
+                options: [
+                  "Fornecem contexto clínico adicional, alertam sobre mecanismos de resistência específicos e orientam a seleção terapêutica apropriada",
+                  "São obrigatórios apenas para fins de faturamento",
+                  "Servem exclusivamente para preencher espaço no relatório"
+                ],
+                correct: 0,
+                explanation: "Comentários interpretativos agregam valor clínico ao antibiograma ao: (1) Alertar sobre mecanismos de resistência importantes (ex: 'ESBL detectado - evitar cefalosporinas', 'Resistência induzível à clindamicina - não usar apesar de S in vitro'); (2) Explicar discrepâncias aparentes (ex: 'Sensível in vitro mas eficácia clínica questionável em meningite'); (3) Sugerir alternativas terapêuticas (ex: 'Considerar combinação para Pseudomonas'); (4) Indicar necessidade de testes adicionais (ex: 'Confirmar vancomicina MIC por E-test para endocardite'). Estes comentários facilitam a comunicação laboratório-clínica e melhoram desfechos."
+              }
+            },
+            {
+              title: "Q52 - CLSI vs BrCast",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 52:</strong> Principais diferenças entre diretrizes</p>`,
+              question: {
+                text: "Q52. Qual é uma das principais diferenças entre CLSI e BrCast/EUCAST na interpretação de resultados?",
+                options: [
+                  "BrCast/EUCAST utiliza breakpoints farmacocinéticos/farmacodinâmicos (PK/PD) mais conservadores, enquanto CLSI incorpora mais dados de desfecho clínico",
+                  "CLSI não utiliza a categoria 'Intermediário', apenas S e R",
+                  "BrCast não permite o uso de microdiluição, apenas disco-difusão"
+                ],
+                correct: 0,
+                explanation: "Uma diferença fundamental é a filosofia de estabelecimento de breakpoints: EUCAST (e por extensão BrCast) prioriza dados PK/PD (concentrações alcançáveis vs. distribuição de CIM), resultando em breakpoints geralmente mais conservadores (mais isolados classificados como R). CLSI incorpora mais dados de desfecho clínico e considera variações de dose. Outra diferença: EUCAST substituiu 'Intermediário' por 'Sensível com Aumento de Exposição' (I), enfatizando que estes isolados NÃO são resistentes. BrCast, como adaptação brasileira do EUCAST, mantém esta filosofia mas considera epidemiologia local e antimicrobianos disponíveis no Brasil."
+              }
+            },
+            {
+              title: "Q53 - Breakpoints",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 53:</strong> Definição de breakpoints</p>`,
+              question: {
+                text: "Q53. O que são breakpoints no contexto do TSA?",
+                options: [
+                  "Valores de CIM ou diâmetro de zona que separam as categorias S/I/R, baseados em dados PK/PD, distribuição de CIM e desfecho clínico",
+                  "Pontos de quebra na tira do E-test onde a leitura é impossível",
+                  "Momentos durante a incubação quando o crescimento bacteriano para"
+                ],
+                correct: 0,
+                explanation: "Breakpoints (pontos de corte) são valores críticos de CIM (em µg/mL) ou diâmetro de zona de inibição (em mm) que definem os limites entre as categorias interpretativas S/I/R. São estabelecidos por comitês de especialistas (CLSI, EUCAST, BrCast) considerando: (1) Dados PK/PD (concentrações alcançáveis no soro e tecidos com doses padrão); (2) Distribuição de CIM na população bacteriana (wild-type vs. mecanismos de resistência); (3) Dados de desfecho clínico de estudos e ensaios; (4) Considerações de segurança e toxicidade. Breakpoints são específicos para cada combinação organismo-antimicrobiano-local de infecção."
+              }
+            },
+            {
+              title: "Q54 - Limitações do Antibiograma",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 54:</strong> Limitações da interpretação in vitro</p>`,
+              question: {
+                text: "Q54. Qual é uma limitação importante do antibiograma que os clínicos devem reconhecer?",
+                options: [
+                  "Resultados in vitro não garantem sucesso clínico, pois fatores do hospedeiro, local da infecção e farmacocinética também influenciam o desfecho",
+                  "Antibiogramas são sempre 100% precisos e garantem cura se seguidos",
+                  "Resultados 'Resistente' nunca devem ser considerados, pois são sempre erros laboratoriais"
+                ],
+                correct: 0,
+                explanation: "O antibiograma tem limitações importantes: (1) Testa condições in vitro padronizadas que não replicam o ambiente in vivo (pH, anaerobiose, biofilme, corpo estranho); (2) Não considera fatores do hospedeiro (imunossupressão, comorbidades, função renal/hepática); (3) Não avalia penetração tecidual (ex: SNC, próstata, osso); (4) Pode não detectar heterorresistência ou resistência induzível; (5) Não prevê interações medicamentosas ou toxicidade. Um isolado 'S' pode falhar clinicamente (ex: endocardite por S. aureus com vancomicina MIC alta mas ainda 'S'), e um 'I' pode responder (ex: ITU com beta-lactâmico devido à alta concentração urinária)."
+              }
+            },
+            {
+              title: "Q55 - Antibiograma Cumulativo",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 55:</strong> Utilidade epidemiológica</p>`,
+              question: {
+                text: "Q55. Qual é a utilidade do antibiograma cumulativo (cumulative antibiogram) para uma instituição?",
+                options: [
+                  "Fornece dados epidemiológicos locais sobre padrões de resistência, orientando terapia empírica e políticas de stewardship antimicrobiano",
+                  "Substitui completamente a necessidade de antibiogramas individuais",
+                  "É usado apenas para publicações científicas, sem aplicação clínica"
+                ],
+                correct: 0,
+                explanation: "O antibiograma cumulativo é um relatório anual que compila dados de suscetibilidade de todos os isolados de uma instituição, apresentando a porcentagem de isolados sensíveis a cada antimicrobiano por espécie bacteriana. Utilidades: (1) Orienta seleção de terapia empírica (ex: se 85% dos E. coli são sensíveis a ciprofloxacino, é opção razoável para ITU empírica); (2) Monitora tendências de resistência ao longo do tempo; (3) Compara padrões entre unidades (UTI vs. enfermaria); (4) Orienta políticas de stewardship e formulário hospitalar; (5) Identifica surtos de resistência. Deve incluir ≥30 isolados por espécie e excluir duplicatas do mesmo paciente."
+              }
+            },
+            {
+              title: "Q56 - Discrepâncias Maior/Menor",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 56:</strong> Discrepâncias entre métodos</p>`,
+              question: {
+                text: "Q56. O que caracteriza uma 'discrepância maior' entre dois métodos de TSA?",
+                options: [
+                  "Um método classifica o isolado como Sensível (S) e o outro como Resistente (R), representando potencial erro clínico significativo",
+                  "Uma pequena diferença de 1-2 mm no diâmetro da zona de inibição",
+                  "Diferença no tempo de incubação entre os dois métodos"
+                ],
+                correct: 0,
+                explanation: "Discrepâncias entre métodos de TSA são classificadas como: (1) **Discrepância Maior**: Um método indica S e outro R - erro potencialmente grave, pois pode levar a uso de antimicrobiano ineficaz ou evitar um eficaz; (2) **Discrepância Menor**: Um método indica S ou R e outro I - menos crítico, pois I é categoria intermediária; (3) **Discrepância Muito Maior**: Métodos divergem em 2+ categorias (raro). Causas: diferenças metodológicas (inóculo, meio, incubação), mecanismos de resistência específicos (heterorresistência, resistência induzível), ou erro técnico. Discrepâncias maiores requerem investigação e reteste."
+              }
+            },
+            {
+              title: "Q57 - Terapia Combinada",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 57:</strong> Indicações para terapia combinada</p>`,
+              question: {
+                text: "Q57. Em quais situações clínicas a terapia antimicrobiana combinada é frequentemente recomendada, mesmo quando o antibiograma mostra sensibilidade a monoterapia?",
+                options: [
+                  "Infecções graves por Pseudomonas aeruginosa, endocardite enterocócica e tuberculose, para prevenir emergência de resistência e alcançar sinergismo",
+                  "Todas as infecções urinárias não complicadas",
+                  "Infecções de pele e partes moles sem complicações"
+                ],
+                correct: 0,
+                explanation: "Terapia combinada é indicada em situações específicas: (1) **Pseudomonas aeruginosa** (especialmente bacteremia, pneumonia): Combinar beta-lactâmico anti-pseudomonas + aminoglicosídeo ou fluoroquinolona para prevenir resistência emergente e potencial sinergismo; (2) **Endocardite enterocócica**: Ampicilina + gentamicina para sinergismo bactericida (enterococos são apenas bacteriostáticos a beta-lactâmicos sozinhos); (3) **Tuberculose**: Sempre múltiplos agentes (rifampicina + isoniazida + pirazinamida + etambutol) para prevenir resistência; (4) **Infecções fúngicas graves**: Anfotericina B + flucitosina para criptococose meníngea. O antibiograma não prevê sinergismo ou antagonismo."
+              }
+            },
+            {
+              title: "Q58 - Heterorresistência",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 58:</strong> Desafio da heterorresistência</p>`,
+              question: {
+                text: "Q58. Por que a heterorresistência representa um desafio para o TSA convencional?",
+                options: [
+                  "Subpopulações resistentes presentes em baixa frequência (<1:10⁶) podem não ser detectadas pelos métodos padronizados, levando a falha terapêutica inesperada",
+                  "Heterorresistência sempre resulta em crescimento visível em todos os antimicrobianos testados",
+                  "Não representa desafio algum, pois todos os métodos detectam facilmente"
+                ],
+                correct: 0,
+                explanation: "Heterorresistência ocorre quando uma população bacteriana aparentemente homogênea contém subpopulações com diferentes níveis de resistência. O exemplo clássico é hVISA (hetero-VISA: S. aureus com heterorresistência à vancomicina), onde a maioria das células tem CIM normal (≤2 µg/mL), mas subpopulações raras (1:10⁵ a 1:10⁶) têm CIM elevada (4-8 µg/mL). Métodos convencionais (disco-difusão, microdiluição) testam inóculos pequenos e podem não detectar estas subpopulações, reportando 'S'. Sob pressão seletiva da terapia, subpopulações resistentes expandem, causando falha clínica. Detecção requer métodos especiais (PAP, E-test em ágar BHI, análise de população)."
+              }
+            },
+            {
+              title: "Q59 - Efeito Inóculo",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 59:</strong> Impacto do tamanho do inóculo</p>`,
+              question: {
+                text: "Q59. O que é o 'efeito inóculo' e qual sua relevância clínica?",
+                options: [
+                  "Aumento da CIM quando o inóculo bacteriano é maior que o padronizado, relevante em infecções com alta carga bacteriana (abscessos, endocardite)",
+                  "Diminuição da CIM quando mais bactérias são testadas",
+                  "Fenômeno que ocorre apenas com antimicrobianos antifúngicos"
+                ],
+                correct: 0,
+                explanation: "O efeito inóculo ocorre quando a CIM aumenta significativamente com inóculos maiores que o padrão (5×10⁵ UFC/mL). Mecanismos: (1) **Beta-lactamases**: Maior inóculo = mais enzima produzida, superando a capacidade do antimicrobiano; (2) **Enzimas modificadoras de aminoglicosídeos**: Similar; (3) **Saturação de alvos**: Em alta densidade, antimicrobianos que ligam alvos podem ser insuficientes. Relevância clínica: Infecções com alta carga bacteriana (abscessos, endocardite, osteomielite, pneumonia necrosante) podem não responder apesar de 'S' in vitro. TSA padrão usa inóculo baixo, não prevendo efeito inóculo. Solução: Drenagem cirúrgica + antimicrobiano, ou considerar agentes menos afetados (ex: vancomicina para MRSA em vez de beta-lactâmicos)."
+              }
+            },
+            {
+              title: "Q60 - ESKAPE",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 60:</strong> Patógenos prioritários</p>`,
+              question: {
+                text: "Q60. O que representa o acrônimo ESKAPE no contexto de resistência antimicrobiana?",
+                options: [
+                  "Grupo de patógenos (Enterococcus, Staphylococcus, Klebsiella, Acinetobacter, Pseudomonas, Enterobacter) com alta capacidade de 'escapar' da ação de antimicrobianos",
+                  "Método de teste de suscetibilidade desenvolvido na Europa",
+                  "Protocolo de isolamento para pacientes com infecções resistentes"
+                ],
+                correct: 0,
+                explanation: "ESKAPE é um acrônimo que identifica seis patógenos prioritários responsáveis pela maioria das infecções hospitalares multirresistentes: **E**nterococcus faecium (VRE), **S**taphylococcus aureus (MRSA), **K**lebsiella pneumoniae (ESBL, KPC), **A**cinetobacter baumannii (MDR), **P**seudomonas aeruginosa (MDR), **E**nterobacter spp. (ESBL, AmpC). Estes organismos 'escapam' da ação de antimicrobianos através de múltiplos mecanismos: beta-lactamases, alteração de porinas, bombas de efluxo, modificação de alvos. Representam desafio global de saúde pública, exigindo vigilância rigorosa, stewardship antimicrobiano, controle de infecção e desenvolvimento de novos agentes. O antibiograma é ferramenta essencial para detectar e monitorar resistência nestes patógenos."
+              }
+            },
+            {
+              title: "Q61 - Stewardship",
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 61:</strong> Papel do laboratório no stewardship</p>`,
+              question: {
+                text: "Q61. Como o laboratório de microbiologia contribui para programas de stewardship antimicrobiano?",
+                options: [
+                  "Fornecendo resultados precisos e oportunos de TSA, antibiogramas cumulativos, alertas sobre resistência emergente e educação sobre interpretação de resultados",
+                  "Apenas realizando testes sem comunicação com a equipe clínica",
+                  "Escondendo resultados de resistência para evitar preocupação"
+                ],
+                correct: 0,
+                explanation: "O laboratório é pilar fundamental do stewardship antimicrobiano através de: (1) **Resultados rápidos e precisos**: TSA oportuno permite de-escalação precoce de terapia empírica; (2) **Antibiogramas cumulativos**: Orientam terapia empírica institucional; (3) **Reportagem seletiva**: Promove uso de agentes de espectro estreito; (4) **Comentários interpretativos**: Alertam sobre mecanismos de resistência e orientam seleção; (5) **Vigilância e alertas**: Notificação de resistência emergente (ex: primeira KPC, VRE) para controle de infecção; (6) **Educação**: Treinamento de clínicos sobre interpretação de resultados; (7) **Testes rápidos**: Implementação de métodos moleculares para diagnóstico precoce. Esta colaboração laboratório-clínica otimiza uso de antimicrobianos, melhora desfechos e reduz resistência."
+              }
+            }
+          ]
+        },
+
+
 
       ]
     },
