@@ -7061,6 +7061,82 @@ const App = () => {
                 explanation: "O princípio fundamental é utilizar antibióticos apenas quando o benefício for claramente maior que o risco. Todo antibiótico causa efeitos adversos, altera a microbiota e induz resistência, portanto deve-se avaliar cuidadosamente o risco-benefício antes de prescrever."
               }
             },
+            {
+              title: "Principais Sítios Acometidos",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🏥 Principais Sítios Acometidos</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A maior parte das infecções que surgem no consultório são de alguns <strong>sítios específicos</strong>.
+                  </p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #d97706;">
+                    <h4 style="color: #d97706; margin-bottom: 10px; font-size: 16px;">🩹 Cutâneo</h4>
+                    <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                      <li>Celulite</li>
+                      <li>Erisipela</li>
+                      <li>Furúnculo/Abscesso</li>
+                      <li>Impetigo</li>
+                    </ul>
+                  </div>
+                  
+                  <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                    <h4 style="color: #dc2626; margin-bottom: 10px; font-size: 16px;">🫁 Respiratório Alto</h4>
+                    <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                      <li>Amigdalite</li>
+                      <li>Sinusite</li>
+                      <li>Faringite</li>
+                      <li>Otite média</li>
+                    </ul>
+                  </div>
+                  
+                  <div style="background: #f0fdf4; padding: 15px; border-radius: 8px; border-left: 4px solid #059669;">
+                    <h4 style="color: #059669; margin-bottom: 10px; font-size: 16px;">🦠 Trato Gastrointestinal</h4>
+                    <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                      <li>Diverticulite</li>
+                      <li>Diarreia bacteriana</li>
+                      <li>Gastroenterite</li>
+                    </ul>
+                  </div>
+                  
+                  <div style="background: #ede9fe; padding: 15px; border-radius: 8px; border-left: 4px solid #7c3aed;">
+                    <h4 style="color: #7c3aed; margin-bottom: 10px; font-size: 16px;">💧 Trato Urinário</h4>
+                    <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                      <li>Cistite</li>
+                      <li>Ureterite</li>
+                      <li>Pielonefrite</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div style="background: #dbeafe; padding: 15px; border-radius: 8px; border-left: 4px solid #2563eb; margin: 15px 0;">
+                  <h4 style="color: #2563eb; margin-bottom: 10px; font-size: 16px;">🫁 Respiratório Baixo</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li>Pneumonias comunitárias</li>
+                  </ul>
+                </div>
+                
+                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin: 15px 0;">
+                  <p style="font-size: 14px; line-height: 1.5; color: #059669; font-weight: 600;">
+                    💡 Se conseguirmos tratar essas infecções, daremos conta da grande maioria da demanda do consultório.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Com base no texto, qual é a implicação prática para o médico generalista ao reconhecer os principais sítios de infecção mais comuns no consultório?",
+                options: [
+                  "Focar a formação e a conduta clínica no diagnóstico e manejo de infecções cutâneas, respiratórias, gastrointestinais e urinárias, que correspondem à maioria dos atendimentos",
+                  "Priorizar o reconhecimento e tratamento de infecções raras e complexas, como meningites e endocardites, pois são as mais prevalentes no consultório",
+                  "Evitar diagnosticar infecções comuns, encaminhando todos os casos suspeitos a especialistas",
+                  "Basear o tratamento principalmente em antibióticos de amplo espectro, independentemente do sítio de infecção"
+                ],
+                correct: 0,
+                explanation: "A implicação prática é que o médico generalista deve focar sua formação e conduta clínica no diagnóstico e manejo das infecções mais prevalentes no consultório (cutâneas, respiratórias, gastrointestinais e urinárias), pois essas correspondem à grande maioria dos atendimentos ambulatoriais."
+              }
+            },
+
 
             {
               title: "Princípios Gerais",
