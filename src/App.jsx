@@ -18,6 +18,7 @@ const App = () => {
     streak: 5,
     completedLessons: []
   })
+  const [scrollPosition, setScrollPosition] = useState(0)
 
   // Refs para inputs não controlados
   const loginUsernameRef = useRef(null)
@@ -8295,6 +8296,9 @@ const App = () => {
     const module = modulesData[moduleId]
     const lesson = module.lessons.find(l => l.id === lessonId)
     
+    // Salvar posição de scroll antes de abrir a lição
+    setScrollPosition(window.scrollY || window.pageYOffset)
+    
     setCurrentModule(moduleId)
     setCurrentLesson(lesson)
     setCurrentSection(0)
@@ -8704,7 +8708,13 @@ const App = () => {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               <button
-                onClick={() => setCurrentView('dashboard')}
+                onClick={() => {
+                  setCurrentView('dashboard')
+                  // Restaurar posição de scroll após renderização
+                  setTimeout(() => {
+                    window.scrollTo(0, scrollPosition)
+                  }, 0)
+                }}
                 className="flex items-center text-gray-600 hover:text-gray-900"
               >
                 ← Voltar ao Dashboard
