@@ -7011,6 +7011,46 @@ const App = () => {
           duration: "15 min",
           xp: 80,
           sections: [
+
+            {
+              title: "Princípios Gerais",
+              content: `
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #7c3aed; margin-bottom: 15px;">💊 Princípios da Antibioticoterapia</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A <strong>antibioticoterapia ambulatorial</strong> envolve a seleção de antibióticos para tratar 
+                    infecções em pacientes fora do ambiente hospitalar. A escolha do antibiótico deve considerar 
+                    o espectro de ação, a farmacocinética, a farmacodinâmica, o perfil de segurança e o custo.
+                  </p>
+                  <p style="font-size: 16px; line-height: 1.6;">
+                    O sucesso do tratamento depende da identificação correta do patógeno provável, 
+                    da escolha do antibiótico adequado e da adesão do paciente ao tratamento.
+                  </p>
+                </div>
+                
+                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                  <h4 style="color: #059669; margin-bottom: 10px;">💡 Fatores Importantes</h4>
+                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                    <li>Espectro de ação adequado</li>
+                    <li>Penetração no sítio de infecção</li>
+                    <li>Perfil de segurança</li>
+                    <li>Facilidade de administração</li>
+                    <li>Custo-efetividade</li>
+                  </ul>
+                </div>
+              `,
+              question: {
+                text: "Qual dos seguintes fatores NÃO é um princípio fundamental na escolha de um antibiótico?",
+                options: [
+                  "Espectro de ação",
+                  "Custo do tratamento",
+                  "Preferência do paciente",
+                  "Perfil de segurança"
+                ],
+                correct: 2,
+                explanation: "A preferência do paciente não é um princípio fundamental na escolha de um antibiótico, embora a adesão ao tratamento seja importante. A escolha deve ser baseada em critérios clínicos e farmacológicos."
+              }
+            },
             {
               title: "Uma Dúvida, Uma Certeza e Um Princípio",
               content: `
@@ -7137,93 +7177,6 @@ const App = () => {
               }
             },
 
-
-            {
-              title: "Princípios Gerais",
-              content: `
-                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #7c3aed; margin-bottom: 15px;">💊 Princípios da Antibioticoterapia</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    A <strong>antibioticoterapia ambulatorial</strong> envolve a seleção de antibióticos para tratar 
-                    infecções em pacientes fora do ambiente hospitalar. A escolha do antibiótico deve considerar 
-                    o espectro de ação, a farmacocinética, a farmacodinâmica, o perfil de segurança e o custo.
-                  </p>
-                  <p style="font-size: 16px; line-height: 1.6;">
-                    O sucesso do tratamento depende da identificação correta do patógeno provável, 
-                    da escolha do antibiótico adequado e da adesão do paciente ao tratamento.
-                  </p>
-                </div>
-                
-                <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
-                  <h4 style="color: #059669; margin-bottom: 10px;">💡 Fatores Importantes</h4>
-                  <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li>Espectro de ação adequado</li>
-                    <li>Penetração no sítio de infecção</li>
-                    <li>Perfil de segurança</li>
-                    <li>Facilidade de administração</li>
-                    <li>Custo-efetividade</li>
-                  </ul>
-                </div>
-              `,
-              question: {
-                text: "Qual dos seguintes fatores NÃO é um princípio fundamental na escolha de um antibiótico?",
-                options: [
-                  "Espectro de ação",
-                  "Custo do tratamento",
-                  "Preferência do paciente",
-                  "Perfil de segurança"
-                ],
-                correct: 2,
-                explanation: "A preferência do paciente não é um princípio fundamental na escolha de um antibiótico, embora a adesão ao tratamento seja importante. A escolha deve ser baseada em critérios clínicos e farmacológicos."
-              }
-            },
-            {
-              title: "Classificação dos Antibióticos",
-              content: `
-                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #d97706; margin-bottom: 15px;">🔬 Classes de Antibióticos</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Os antibióticos podem ser classificados com base em seu <strong>mecanismo de ação</strong>, 
-                    espectro de atividade (amplo ou estreito) e estrutura química. As principais classes incluem 
-                    beta-lactâmicos, macrolídeos, quinolonas, aminoglicosídeos e tetraciclinas.
-                  </p>
-                  
-                  <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
-                    <tr style="background: #f59e0b; color: white;">
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Classe</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Exemplos</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Mecanismo</th>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold;">Beta-lactâmicos</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Penicilinas, Cefalosporinas</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Inibição da parede celular</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold;">Macrolídeos</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Azitromicina, Claritromicina</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Inibição da síntese proteica</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold;">Quinolonas</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Ciprofloxacino, Levofloxacino</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Inibição da DNA girase</td>
-                    </tr>
-                  </table>
-                </div>
-              `,
-              question: {
-                text: "Qual das seguintes classes de antibióticos NÃO é mencionada como uma das principais?",
-                options: [
-                  "Beta-lactâmicos",
-                  "Macrolídeos",
-                  "Antifúngicos",
-                  "Quinolonas"
-                ],
-                correct: 2,
-                explanation: "Antifúngicos são uma classe de medicamentos diferente, usados para tratar infecções fúngicas, não bacterianas."
-              }
-            }
           ]
         },
 ,
