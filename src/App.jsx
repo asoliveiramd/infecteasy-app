@@ -7179,7 +7179,6 @@ const App = () => {
 
           ]
         },
-,
         {
           id: 2,
           title: "Mecanismos de Ação dos Antibióticos",
