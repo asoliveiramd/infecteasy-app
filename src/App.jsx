@@ -7209,6 +7209,91 @@ const App = () => {
                 explanation: "A implicação prática é que o médico generalista deve focar sua formação e conduta clínica no diagnóstico e manejo das infecções mais prevalentes no consultório (cutâneas, respiratórias, gastrointestinais e urinárias), pois essas correspondem à grande maioria dos atendimentos ambulatoriais."
               }
             },
+            {
+              title: "Principais Sítios X Grupos Bacterianos",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🦠 Principais Sítios X Grupos Bacterianos</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Esta tabela oferece um <strong>panorama da distribuição dos principais grupos bacterianos</strong> 
+                    por sítio anatômico, auxiliando na escolha empírica do antibiótico mais adequado para cada situação clínica.
+                  </p>
+                </div>
+                
+                <div style="overflow-x: auto; margin: 15px 0;">
+                  <table style="width: 100%; border-collapse: collapse; font-size: 14px; background: white;">
+                    <thead>
+                      <tr style="background: #0369a1; color: white;">
+                        <th style="padding: 12px; border: 1px solid #cbd5e1; text-align: left; font-weight: 600;">Sítio Anatômico</th>
+                        <th style="padding: 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">Gram-positivos</th>
+                        <th style="padding: 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">Gram-negativos</th>
+                        <th style="padding: 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">Atípicos</th>
+                        <th style="padding: 12px; border: 1px solid #cbd5e1; text-align: center; font-weight: 600;">Anaeróbios</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr style="background: #f8fafc;">
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: 600;">🫁 Respiratório Alto</td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #059669; font-weight: bold;">+++</td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #d97706; font-weight: bold;">++<br/><span style="font-size: 12px; font-weight: normal;">(Moraxella e Haemophilus)</span></td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #6b7280;">+</td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #9ca3af;">-</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: 600;">🫁 Respiratório Baixo</td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #059669; font-weight: bold;">+++</td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #6b7280;">+<br/><span style="font-size: 12px; font-weight: normal;">(Haemophilus)</span></td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #059669; font-weight: bold;">+++</td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #6b7280;">+<br/><span style="font-size: 12px; font-weight: normal;">(Abscesso pulmonar)</span></td>
+                      </tr>
+                      <tr style="background: #f8fafc;">
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: 600;">🦠 TGI</td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #6b7280;">+</td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #059669; font-weight: bold;">+++</td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #9ca3af;">-</td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #d97706; font-weight: bold;">++</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: 600;">💧 ITU</td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #6b7280;">+</td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #059669; font-weight: bold;">+++</td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #9ca3af;">-</td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #9ca3af;">-</td>
+                      </tr>
+                      <tr style="background: #f8fafc;">
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: 600;">🩹 Pele</td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #059669; font-weight: bold;">+++</td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #6b7280;">+</td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #9ca3af;">-</td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #6b7280;">+<br/><span style="font-size: 12px; font-weight: normal;">(Abscessos)</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 10px; font-size: 14px;">📊 Legenda:</h4>
+                  <ul style="font-size: 13px; line-height: 1.8; list-style: none; padding: 0;">
+                    <li><span style="color: #059669; font-weight: bold;">+++</span> predominante</li>
+                    <li><span style="color: #d97706; font-weight: bold;">++</span> frequente</li>
+                    <li><span style="color: #6b7280; font-weight: bold;">+</span> ocasional</li>
+                    <li><span style="color: #9ca3af; font-weight: bold;">-</span> raro ou ausente</li>
+                  </ul>
+                </div>
+              `,
+              question: {
+                text: "De acordo com a tabela 'Principais Sítios X Grupos Bacterianos', qual das afirmações está mais correta sobre a predominância dos microrganismos por local de infecção?",
+                options: [
+                  "As infecções de pele e do trato respiratório alto são predominantemente causadas por bactérias Gram-positivas, enquanto as infecções do trato gastrointestinal e urinário tendem a envolver Gram-negativos",
+                  "As infecções respiratórias baixas raramente envolvem bactérias Gram-positivas, sendo quase sempre causadas por anaeróbios",
+                  "As infecções urinárias são principalmente associadas a bactérias atípicas e anaeróbias",
+                  "As infecções do trato gastrointestinal são majoritariamente provocadas por microrganismos atípicos"
+                ],
+                correct: 0,
+                explanation: "A afirmação correta é que infecções de pele e respiratório alto são predominantemente Gram-positivas (+++), enquanto TGI e ITU são predominantemente Gram-negativos (+++). Esta distribuição é fundamental para a escolha empírica adequada do antibiótico."
+              }
+            },
+
 
           ]
         },
