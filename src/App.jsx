@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import './App.css'
 import { antimicrobianosModule } from './antimicrobianos_module.js'
 
@@ -19,6 +19,39 @@ const App = () => {
     completedLessons: []
   })
   const [scrollPosition, setScrollPosition] = useState(0)
+
+  // Gerenciar histórico do navegador
+  useEffect(() => {
+    const handlePopState = (event) => {
+      if (event.state) {
+        setCurrentView(event.state.view)
+        if (event.state.view === 'dashboard') {
+          setCurrentLesson(null)
+          // Restaurar posição de scroll
+          setTimeout(() => {
+            window.scrollTo(0, scrollPosition)
+          }, 0)
+        }
+      }
+    }
+
+    window.addEventListener('popstate', handlePopState)
+    
+    return () => {
+      window.removeEventListener('popstate', handlePopState)
+    }
+  }, [scrollPosition])
+
+  // Atualizar histórico quando mudar de view
+  useEffect(() => {
+    if (currentView === 'dashboard') {
+      window.history.pushState({ view: 'dashboard' }, '', '#dashboard')
+    } else if (currentView === 'lesson') {
+      window.history.pushState({ view: 'lesson' }, '', '#lesson')
+    } else if (currentView === 'login') {
+      window.history.pushState({ view: 'login' }, '', '#login')
+    }
+  }, [currentView])
 
   // Refs para inputs não controlados
   const loginUsernameRef = useRef(null)
