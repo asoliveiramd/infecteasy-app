@@ -4870,121 +4870,176 @@ const App = () => {
           xp: 225,
           sections: [
             {
-      title: "Implicações Práticas do BrCast",
-      content: `
-        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h3 style="color: #d97706; margin-bottom: 15px;">🌎 Mudança de Paradigma no Brasil</h3>
-          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-            Em <strong>final de 2018</strong> o Brasil abandonou a padronização americana do antibiograma 
-            (CLSI). Passamos a usar o <strong>padrão europeu (EUCAST)</strong> e chamamos de 
-            <strong>BrCAST</strong> (Comitê Brasileiro de Testes de Sensibilidade aos Antimicrobianos).
-          </p>
-          
-          <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h4 style="color: #c2410c; margin-bottom: 15px;">📊 Contexto da Mudança</h4>
-            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
-              A decisão de adotar o padrão europeu foi motivada por diversos fatores:
-            </p>
-            <ul style="margin-left: 20px; line-height: 1.8;">
-              <li><strong>Atualização mais frequente:</strong> EUCAST revisa pontos de corte anualmente</li>
-              <li><strong>Maior rigor científico:</strong> Critérios baseados em PK/PD mais robustos</li>
-              <li><strong>Alinhamento internacional:</strong> Harmonização com Europa e outros países</li>
-              <li><strong>Segurança do paciente:</strong> Pontos de corte mais conservadores</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h4 style="color: #0369a1; margin-bottom: 15px;">🎯 Pontos de Corte</h4>
-          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
-            O <strong>BrCAST reduziu pontos de corte da CIM</strong> para garantir maior segurança na 
-            interpretação da sensibilidade.
-          </p>
-          
-          <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h5 style="color: #1e40af; margin-bottom: 10px;">💡 O que isso significa na prática?</h5>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-              <strong>Pontos de corte mais baixos</strong> significam que um microrganismo precisa ter 
-              CIM <strong>menor</strong> para ser considerado "Sensível".
-            </p>
-            <p style="font-size: 14px; line-height: 1.6; font-style: italic;">
-              <strong>Resultado:</strong> Alguns microrganismos que eram "Sensíveis" pelo CLSI passaram 
-              a ser classificados como "Intermediários" ou até "Resistentes" pelo BrCAST.
-            </p>
-          </div>
-        </div>
-        
-        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h4 style="color: #4b5563; margin-bottom: 10px;">📋 Exemplo Comparativo</h4>
-          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
-            <strong>Situação:</strong> <em>Escherichia coli</em> testada contra Ciprofloxacino
-          </p>
-          
-          <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
-            <tr style="background: #6366f1; color: white;">
-              <th style="padding: 10px; border: 1px solid #ddd;">Padrão</th>
-              <th style="padding: 10px; border: 1px solid #ddd;">Ponto de Corte (S)</th>
-              <th style="padding: 10px; border: 1px solid #ddd;">CIM = 1 mg/L</th>
-            </tr>
-            <tr>
-              <td style="padding: 8px; border: 1px solid #ddd;"><strong>CLSI</strong></td>
-              <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">≤ 1 mg/L</td>
-              <td style="padding: 8px; border: 1px solid #ddd; text-align: center; color: #059669; font-weight: bold;">Sensível (S)</td>
-            </tr>
-            <tr style="background: #f9fafb;">
-              <td style="padding: 8px; border: 1px solid #ddd;"><strong>BrCAST</strong></td>
-              <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">≤ 0,5 mg/L</td>
-              <td style="padding: 8px; border: 1px solid #ddd; text-align: center; color: #d97706; font-weight: bold;">Intermediário (I)</td>
-            </tr>
-          </table>
-          
-          <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; font-style: italic;">
-            <strong>Implicação:</strong> O mesmo resultado laboratorial (CIM = 1 mg/L) recebe 
-            interpretações diferentes dependendo do padrão utilizado.
-          </p>
-        </div>
-        
-        <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h4 style="color: #059669; margin-bottom: 10px;">✅ Vantagens do BrCAST</h4>
-          <ul style="margin-left: 20px; line-height: 1.8;">
-            <li><strong>Maior segurança:</strong> Reduz risco de falha terapêutica</li>
-            <li><strong>Baseado em PK/PD:</strong> Considera farmacocinética/farmacodinâmica real</li>
-            <li><strong>Atualização constante:</strong> Incorpora novas evidências rapidamente</li>
-            <li><strong>Harmonização:</strong> Facilita comparação internacional de dados</li>
-            <li><strong>Transparência:</strong> Metodologia publicamente disponível</li>
-          </ul>
-        </div>
-        
-        <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ Desafios da Transição</h4>
-          <ul style="margin-left: 20px; line-height: 1.8;">
-            <li><strong>Curva de aprendizado:</strong> Profissionais precisaram se adaptar</li>
-            <li><strong>Mudança de interpretação:</strong> Alguns antibióticos "perderam" sensibilidade</li>
-            <li><strong>Atualização de sistemas:</strong> Laboratórios precisaram ajustar equipamentos</li>
-            <li><strong>Comunicação:</strong> Necessidade de educar prescritores sobre as mudanças</li>
-          </ul>
-        </div>
-        
-        <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 15px 0;">
-          <h4 style="color: #d97706; margin-bottom: 10px;">💡 Mensagem Importante</h4>
-          <p style="font-size: 14px; line-height: 1.6;">
-            A mudança para o BrCAST representa um <strong>avanço na segurança do paciente</strong>. 
-            Embora alguns antibióticos pareçam "menos eficazes" no papel, na verdade estamos sendo 
-            <strong>mais realistas</strong> sobre suas capacidades terapêuticas reais.
-          </p>
-        </div>
-      `,
-      question: {
-        text: "Qual foi a principal mudança na padronização do antibiograma adotada pelo Brasil a partir de 2018?",
-        options: [
-          "O país passou a seguir o padrão europeu (EUCAST), denominado BrCAST, que reduziu os pontos de corte da CIM para aumentar a segurança na interpretação da sensibilidade",
-          "O Brasil manteve o padrão americano (CLSI), apenas traduzindo suas diretrizes para o português",
-          "O BrCAST ampliou os pontos de corte da CIM para permitir o uso de mais antibióticos em diferentes infecções"
-        ],
-        correct: 0,
-        explanation: "Em final de 2018, o Brasil abandonou o padrão americano (CLSI) e adotou o padrão europeu (EUCAST), denominado BrCAST. A principal mudança foi a redução dos pontos de corte da CIM, tornando os critérios mais rigorosos e conservadores. Isso significa que alguns microrganismos que eram classificados como 'Sensíveis' pelo CLSI passaram a ser 'Intermediários' ou 'Resistentes' pelo BrCAST, aumentando a segurança na interpretação e reduzindo o risco de falha terapêutica."
-      }
-    },
+              title: "Mudança de Paradigma no Brasil",
+              content: `
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d97706; margin-bottom: 15px;">🌎 Mudança de Paradigma no Brasil</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Em <strong>final de 2018</strong> o Brasil abandonou a padronização americana do antibiograma 
+                    (CLSI). Passamos a usar o <strong>padrão europeu (EUCAST)</strong> e chamamos de 
+                    <strong>BrCAST</strong> (Comitê Brasileiro de Testes de Sensibilidade aos Antimicrobianos).
+                  </p>
+                  
+                  <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #c2410c; margin-bottom: 15px;">📊 Contexto da Mudança</h4>
+                    <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+                      A decisão de adotar o padrão europeu foi motivada por diversos fatores:
+                    </p>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                      <li><strong>Atualização mais frequente:</strong> EUCAST revisa pontos de corte anualmente</li>
+                      <li><strong>Maior rigor científico:</strong> Critérios baseados em PK/PD mais robustos</li>
+                      <li><strong>Alinhamento internacional:</strong> Harmonização com Europa e outros países</li>
+                      <li><strong>Segurança do paciente:</strong> Pontos de corte mais conservadores</li>
+                    </ul>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Quando o Brasil adotou o padrão BrCAST e qual foi a principal motivação?",
+                options: [
+                  "Em 2018, para alinhar-se ao padrão europeu (EUCAST) com critérios mais rigorosos baseados em PK/PD",
+                  "Em 2015, para simplificar a interpretação dos antibiogramas nos laboratórios brasileiros",
+                  "Em 2020, devido à pandemia de COVID-19 e necessidade de padronização internacional"
+                ],
+                correct: 0,
+                explanation: "Em final de 2018, o Brasil abandonou o padrão americano (CLSI) e adotou o padrão europeu (EUCAST), denominado BrCAST. A mudança foi motivada principalmente pelo maior rigor científico, atualização mais frequente dos critérios e alinhamento internacional, visando maior segurança do paciente."
+              }
+            },
+            {
+              title: "Pontos de Corte: O Que Mudou?",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🎯 Pontos de Corte</h3>
+                  <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+                    O <strong>BrCAST reduziu pontos de corte da CIM</strong> para garantir maior segurança na 
+                    interpretação da sensibilidade.
+                  </p>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #1e40af; margin-bottom: 10px;">💡 O que isso significa na prática?</h4>
+                    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+                      <strong>Pontos de corte mais baixos</strong> significam que um microrganismo precisa ter 
+                      CIM <strong>menor</strong> para ser considerado "Sensível".
+                    </p>
+                    <p style="font-size: 14px; line-height: 1.6; font-style: italic;">
+                      <strong>Resultado:</strong> Alguns microrganismos que eram "Sensíveis" pelo CLSI passaram 
+                      a ser classificados como "Intermediários" ou até "Resistentes" pelo BrCAST.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 15px 0;">
+                    <h4 style="color: #d97706; margin-bottom: 10px;">💡 Por que reduzir?</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      Pontos de corte mais conservadores refletem melhor a <strong>realidade farmacocinética</strong> 
+                      dos antibióticos no corpo humano, reduzindo o risco de falha terapêutica.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "O que significa a redução dos pontos de corte da CIM implementada pelo BrCAST?",
+                options: [
+                  "Um microrganismo precisa ter CIM menor para ser considerado 'Sensível', tornando os critérios mais rigorosos",
+                  "Um microrganismo pode ter CIM maior e ainda ser considerado 'Sensível', facilitando o tratamento",
+                  "Os pontos de corte foram eliminados, sendo substituídos apenas por categorias S/R"
+                ],
+                correct: 0,
+                explanation: "A redução dos pontos de corte significa que um microrganismo precisa ter CIM menor para ser classificado como 'Sensível'. Isso torna os critérios mais rigorosos e conservadores, refletindo melhor a farmacocinética real dos antibióticos e reduzindo o risco de falha terapêutica."
+              }
+            },
+            {
+              title: "Exemplo Prático: E. coli e Ciprofloxacino",
+              content: `
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #4b5563; margin-bottom: 15px;">📋 Exemplo Comparativo</h3>
+                  <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+                    <strong>Situação:</strong> <em>Escherichia coli</em> testada contra Ciprofloxacino
+                  </p>
+                  
+                  <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+                    <tr style="background: #6366f1; color: white;">
+                      <th style="padding: 10px; border: 1px solid #ddd;">Padrão</th>
+                      <th style="padding: 10px; border: 1px solid #ddd;">Ponto de Corte (S)</th>
+                      <th style="padding: 10px; border: 1px solid #ddd;">CIM = 1 mg/L</th>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #ddd;"><strong>CLSI</strong></td>
+                      <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">≤ 1 mg/L</td>
+                      <td style="padding: 8px; border: 1px solid #ddd; text-align: center; color: #059669; font-weight: bold;">Sensível (S)</td>
+                    </tr>
+                    <tr style="background: #f9fafb;">
+                      <td style="padding: 8px; border: 1px solid #ddd;"><strong>BrCAST</strong></td>
+                      <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">≤ 0,5 mg/L</td>
+                      <td style="padding: 8px; border: 1px solid #ddd; text-align: center; color: #d97706; font-weight: bold;">Intermediário (I)</td>
+                    </tr>
+                  </table>
+                  
+                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ Implicação Clínica</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      O mesmo resultado laboratorial (CIM = 1 mg/L) recebe <strong>interpretações diferentes</strong> 
+                      dependendo do padrão utilizado. Pelo BrCAST, esse resultado sugere que o ciprofloxacino pode 
+                      não ser a melhor escolha, enquanto pelo CLSI seria considerado adequado.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "No exemplo de E. coli com CIM de 1 mg/L para ciprofloxacino, qual é a diferença entre CLSI e BrCAST?",
+                options: [
+                  "CLSI classifica como Sensível (S), enquanto BrCAST classifica como Intermediário (I)",
+                  "Ambos classificam como Sensível (S), sem diferença prática",
+                  "CLSI classifica como Intermediário (I), enquanto BrCAST classifica como Resistente (R)"
+                ],
+                correct: 0,
+                explanation: "Com CIM = 1 mg/L, o CLSI (ponto de corte ≤ 1 mg/L) classifica como Sensível, enquanto o BrCAST (ponto de corte ≤ 0,5 mg/L) classifica como Intermediário. Este exemplo ilustra como o mesmo resultado laboratorial pode ter interpretações diferentes dependendo do padrão utilizado, impactando diretamente a escolha terapêutica."
+              }
+            },
+            {
+              title: "Vantagens e Desafios do BrCAST",
+              content: `
+                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #059669; margin-bottom: 15px;">✅ Vantagens do BrCAST</h3>
+                  <ul style="margin-left: 20px; line-height: 1.8; font-size: 15px;">
+                    <li><strong>Maior segurança:</strong> Reduz risco de falha terapêutica</li>
+                    <li><strong>Baseado em PK/PD:</strong> Considera farmacocinética/farmacodinâmica real</li>
+                    <li><strong>Atualização constante:</strong> Incorpora novas evidências rapidamente</li>
+                    <li><strong>Harmonização:</strong> Facilita comparação internacional de dados</li>
+                    <li><strong>Transparência:</strong> Metodologia publicamente disponível</li>
+                  </ul>
+                </div>
+                
+                <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">⚠️ Desafios da Transição</h3>
+                  <ul style="margin-left: 20px; line-height: 1.8; font-size: 15px;">
+                    <li><strong>Curva de aprendizado:</strong> Profissionais precisaram se adaptar</li>
+                    <li><strong>Mudança de interpretação:</strong> Alguns antibióticos "perderam" sensibilidade</li>
+                    <li><strong>Atualização de sistemas:</strong> Laboratórios precisaram ajustar equipamentos</li>
+                    <li><strong>Comunicação:</strong> Necessidade de educar prescritores sobre as mudanças</li>
+                  </ul>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 15px 0;">
+                  <h4 style="color: #d97706; margin-bottom: 10px;">💡 Mensagem Importante</h4>
+                  <p style="font-size: 14px; line-height: 1.6;">
+                    A mudança para o BrCAST representa um <strong>avanço na segurança do paciente</strong>. 
+                    Embora alguns antibióticos pareçam "menos eficazes" no papel, na verdade estamos sendo 
+                    <strong>mais realistas</strong> sobre suas capacidades terapêuticas reais.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal vantagem do BrCAST em relação ao padrão anterior?",
+                options: [
+                  "Maior segurança do paciente através de critérios baseados em PK/PD e pontos de corte mais conservadores",
+                  "Facilidade de implementação sem necessidade de atualização de equipamentos laboratoriais",
+                  "Ampliação das opções terapêuticas com mais antibióticos classificados como sensíveis"
+                ],
+                correct: 0,
+                explanation: "A principal vantagem do BrCAST é a maior segurança do paciente, alcançada através de critérios mais rigorosos baseados em farmacocinética/farmacodinâmica real e pontos de corte mais conservadores. Isso reduz significativamente o risco de falha terapêutica, mesmo que implique em desafios de implementação e adaptação dos profissionais."
+              }
+            },
+
     {
       title: "Nova Categoria \"I\"",
       content: `
