@@ -6058,6 +6058,80 @@ const App = () => {
         },
         {
           id: 17,
+          title: "Erros Comuns a Evitar",
+          duration: "25 min",
+          xp: 150,
+          sections: [
+            {
+              title: "Comparação Inadequada",
+              content: `
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d97706; margin-bottom: 15px;">⚠️ Comparação Inadequada de <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>s</h3>
+                  
+                  <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                    <h4 style="color: #92400e; margin-bottom: 15px;">🏃 Qual o melhor atleta?</h4>
+                    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 10px;">
+                      O que chega em <strong>02 min</strong> ou o que chega em <strong>01:45h</strong>?
+                    </p>
+                    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 10px;">
+                      <strong>Depende.</strong> Se o segundo estiver correndo uma <strong>maratona</strong> e o primeiro 
+                      uma corrida de <strong>100 metros</strong>, então, o melhor é o primeiro.
+                    </p>
+                    <p style="font-size: 15px; line-height: 1.6; color: #78350f; font-weight: bold;">
+                      Essa é a lógica da <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>!
+                    </p>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 10px;">🚫 Erro Comum</h4>
+                    <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+                      <strong>Não se compara <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>s de diferentes antibióticos</strong> em relação a uma mesma bactéria, 
+                      pois cada classe tem características <strong>farmacocinéticas</strong> e <strong>farmacodinâmicas</strong> próprias.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #1e40af; margin-bottom: 10px;">📊 Exemplo Prático</h4>
+                    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+                      <strong>E. coli com:</strong>
+                    </p>
+                    <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
+                      <li><strong>Ciprofloxacino:</strong> <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> = 0,25 mg/L (Sensível)</li>
+                      <li><strong>Meropenem:</strong> <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> = 0,5 mg/L (Sensível)</li>
+                    </ul>
+                    <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; padding: 10px; background: #eff6ff; border-radius: 5px;">
+                      ❌ <strong>Erro:</strong> "Ciprofloxacino tem <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> menor, então é melhor"<br>
+                      ✅ <strong>Correto:</strong> Ambos são sensíveis. A escolha depende de <abbr title="Farmacocinética/Farmacodinâmica - Estudo de como o corpo processa o medicamento e como ele age" style="text-decoration: underline dotted; cursor: help; border: none;">PK/PD</abbr>, 
+                      local da infecção, toxicidade e outros fatores clínicos.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #14532d; margin-bottom: 10px;">✅ Uso Correto da <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr></h4>
+                    <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
+                      <li>Comparar <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> com <strong>pontos de corte</strong> (S/I/R)</li>
+                      <li>Avaliar se o antibiótico atinge concentração adequada no <strong>sítio de infecção</strong></li>
+                      <li>Considerar <abbr title="Farmacocinética/Farmacodinâmica - Estudo de como o corpo processa o medicamento e como ele age" style="text-decoration: underline dotted; cursor: help; border: none;">PK/PD</abbr> específica de cada classe</li>
+                      <li>Usar <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> para <strong>otimização de dose</strong> quando necessário</li>
+                    </ul>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Por que não devemos comparar CIMs de diferentes antibióticos para escolher o 'melhor' antibiótico contra uma mesma bactéria?",
+                options: [
+                  "A) Porque a CIM mais baixa sempre indica o melhor antibiótico, independentemente da classe",
+                  "B) Porque cada classe de antibiótico tem características farmacocinéticas e farmacodinâmicas próprias, tornando a comparação direta de CIMs inadequada, como comparar atletas em provas diferentes",
+                  "C) Porque a CIM não tem nenhuma utilidade clínica e deve ser ignorada"
+                ],
+                correct: 1,
+                explanation: "Comparar CIMs de diferentes antibióticos é como comparar tempos de atletas em provas diferentes (100m vs maratona). Cada classe de antibiótico tem características farmacocinéticas (como o corpo processa) e farmacodinâmicas (como age contra a bactéria) únicas. Por exemplo, ciprofloxacino com CIM 0,25 mg/L não é necessariamente 'melhor' que meropenem com CIM 0,5 mg/L - ambos podem ser igualmente eficazes se ambos forem sensíveis. A CIM deve ser usada para comparar com pontos de corte (S/I/R) e para otimização de dose, não para comparação direta entre classes diferentes."
+              }
+            },
+          ]
+        },
+        {
+          id: 18,
           title: "Revisão I - Fundamentos",
           duration: "25 min",
           xp: 150,
@@ -6295,7 +6369,7 @@ const App = () => {
           ]
         },
         {
-          id: 18,
+          id: 19,
           title: "Revisão II - Métodos",
           duration: "30 min",
           xp: 150,
@@ -6534,7 +6608,7 @@ const App = () => {
         },
 
         {
-          id: 19,
+          id: 20,
           title: "Revisão III - Interpretação",
           duration: "35 min",
           xp: 160,
@@ -6787,7 +6861,7 @@ const App = () => {
         }
 ,
         {
-          id: 20,
+          id: 21,
           title: "Revisão IV - Tópicos Avançados",
           duration: "30 min",
           xp: 150,
