@@ -959,11 +959,11 @@ const App = () => {
                   <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
                     No meio de siglas e nomenclaturas, é comum a confusão. Existe uma outra classificação muito popular 
                     para o S. aureus que se refere a sua capacidade de resistir à meticilina. Assim, um S. aureus 
-                    resistente à meticilina é conhecido por <strong>MRSA</strong> (pronuncia-se "marsa").
+                    resistente à meticilina é conhecido por <strong><abbr title="Methicillin-Resistant Staphylococcus aureus - Estafilococo resistente à meticilina" style="text-decoration: underline dotted; cursor: help; border: none;">MRSA</abbr></strong> (pronuncia-se "marsa").
                   </p>
                   <p style="font-size: 14px; line-height: 1.5;">
                     Não é infrequente colegas confundirem essa classificação com a da prova da coagulase e acharem 
-                    que um coagulase positiva é sinônimo de MRSA. <strong>Fique atento!</strong>
+                    que um coagulase positiva é sinônimo de <abbr title="Methicillin-Resistant Staphylococcus aureus - Estafilococo resistente à meticilina" style="text-decoration: underline dotted; cursor: help; border: none;">MRSA</abbr>. <strong>Fique atento!</strong>
                   </p>
                 </div>
               `,
@@ -1442,7 +1442,7 @@ const App = () => {
                     <strong>Estáfilo coagulase positiva = Staphylococcus aureus</strong>
                   </p>
                   <p style="font-size: 14px; line-height: 1.5; font-weight: bold; color: #dc2626;">
-                    ⚠️ Não confundir SCN com MRSA!!!!
+                    ⚠️ Não confundir SCN com <abbr title="Methicillin-Resistant Staphylococcus aureus - Estafilococo resistente à meticilina" style="text-decoration: underline dotted; cursor: help; border: none;">MRSA</abbr>!!!!
                   </p>
                 </div>
                 
@@ -2720,7 +2720,7 @@ const App = () => {
                   <p style="font-size: 14px; line-height: 1.5;">
                     <strong>Streptococcus pyogenes</strong> não necessita teste para penicilina, pois nunca foi 
                     relatada resistência. Já <strong>Staphylococcus aureus</strong> sempre requer teste devido 
-                    à possibilidade de MRSA.
+                    à possibilidade de <abbr title="Methicillin-Resistant Staphylococcus aureus - Estafilococo resistente à meticilina" style="text-decoration: underline dotted; cursor: help; border: none;">MRSA</abbr>.
                   </p>
                 </div>
               `,
@@ -2845,7 +2845,7 @@ const App = () => {
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🎯 Modificação do Sítio de Ação</h3>
                   <p style="font-size: 16px; line-height: 1.6;">
                     Algumas bactérias desenvolvem resistência alterando o sítio de ação do antimicrobiano. 
-                    O exemplo clássico é a resistência à meticilina em <strong>Staphylococcus aureus</strong> (MRSA), 
+                    O exemplo clássico é a resistência à meticilina em <strong>Staphylococcus aureus</strong> (<abbr title="Methicillin-Resistant Staphylococcus aureus - Estafilococo resistente à meticilina" style="text-decoration: underline dotted; cursor: help; border: none;">MRSA</abbr>), 
                     onde a bactéria produz uma PBP (Penicillin-Binding Protein) alternativa com baixa afinidade 
                     pelos beta-lactâmicos.
                   </p>
@@ -2989,14 +2989,14 @@ const App = () => {
         O método de <strong>disco-difusão (Kirby-Bauer)</strong> é o teste qualitativo mais utilizado 
         devido à sua simplicidade e padronização. O antimicrobiano difunde do disco através do ágar, 
         criando um gradiente de concentração. O diâmetro do halo de inibição é inversamente proporcional 
-        à CIM.
+        à <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>.
       </p>
     </div>
     
     <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
       <h4 style="color: #059669; margin-bottom: 10px;">✅ Vantagens do Método</h4>
       <ul style="font-size: 14px; line-height: 1.6; margin-left: 20px;">
-        <li><strong>Ampla padronização internacional</strong> (CLSI, BrCAST)</li>
+        <li><strong>Ampla padronização internacional</strong> (<abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr>, <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê brasileiro de testes de sensibilidade" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr>)</li>
         <li><strong>Largamente utilizado</strong> em laboratórios de diversos portes</li>
         <li><strong>Baixo custo</strong> e simplicidade operacional</li>
       </ul>
@@ -3067,7 +3067,7 @@ const App = () => {
       <h4 style="color: #7c3aed; margin-bottom: 10px;">📉 Correlação Inversamente Proporcional</h4>
       <p style="font-size: 16px; line-height: 1.6;">
         Existe uma correlação <strong>inversamente proporcional</strong> entre o tamanho da zona de inibição 
-        e a concentração inibitória mínima (CIM): <strong>quanto maior a zona, menor a CIM</strong> e vice-versa.
+        e a concentração inibitória mínima (<abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>): <strong>quanto maior a zona, menor a <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr></strong> e vice-versa.
       </p>
     </div>
   `,
@@ -3109,9 +3109,9 @@ const App = () => {
     </div>
     
     <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-      <h3 style="color: #0369a1; margin-bottom: 15px;">💊 Necessidade de CIM Quantitativa</h3>
+      <h3 style="color: #0369a1; margin-bottom: 15px;">💊 Necessidade de <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> Quantitativa</h3>
       <p style="font-size: 16px; line-height: 1.6;">
-        Em certas infecções graves, uma <strong>CIM quantitativa precisa</strong> é necessária para determinar 
+        Em certas infecções graves, uma <strong><abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> quantitativa precisa</strong> é necessária para determinar 
         a melhor abordagem terapêutica, especialmente para antibióticos como <strong>vancomicina</strong> e 
         <strong>polimixinas</strong>.
       </p>
@@ -3151,22 +3151,22 @@ const App = () => {
           <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
             <h4 style="color: #1e40af; margin-bottom: 15px;">🎯 Precisão Diagnóstica</h4>
             <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
-              Permitem a determinação precisa da <strong>Concentração Inibitória Mínima (CIM)</strong>, 
+              Permitem a determinação precisa da <strong>Concentração Inibitória Mínima (<abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>)</strong>, 
               considerada o <strong>padrão-ouro</strong> para avaliação de sensibilidade.
             </p>
             <p style="font-size: 14px; line-height: 1.6; font-style: italic;">
-              A CIM fornece um valor numérico exato, permitindo decisões terapêuticas mais precisas.
+              A <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> fornece um valor numérico exato, permitindo decisões terapêuticas mais precisas.
             </p>
           </div>
           
           <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
             <h4 style="color: #059669; margin-bottom: 15px;">🌍 Padronização Internacional</h4>
             <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
-              Protocolos bem estabelecidos publicados por organizações como <strong>CLSI</strong>, 
+              Protocolos bem estabelecidos publicados por organizações como <strong><abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr></strong>, 
               <strong>EUCAST</strong> e <strong>FDA</strong> garantem resultados confiáveis e comparáveis.
             </p>
             <ul style="margin-left: 20px; line-height: 1.8;">
-              <li><strong>CLSI:</strong> Clinical and Laboratory Standards Institute (EUA)</li>
+              <li><strong><abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr>:</strong> Clinical and Laboratory Standards Institute (EUA)</li>
               <li><strong>EUCAST:</strong> European Committee on Antimicrobial Susceptibility Testing</li>
               <li><strong>FDA:</strong> Food and Drug Administration (EUA)</li>
             </ul>
@@ -3182,8 +3182,8 @@ const App = () => {
               <h5 style="color: #c2410c; margin-bottom: 10px;">📋 Exemplos de Aplicação Clínica</h5>
               <ul style="margin-left: 20px; line-height: 1.8;">
                 <li><strong>Endocardite:</strong> Determinar dose ideal de antibióticos</li>
-                <li><strong>Meningite:</strong> Garantir penetração adequada no SNC</li>
-                <li><strong>Osteomielite:</strong> Terapia prolongada requer CIM precisa</li>
+                <li><strong>Meningite:</strong> Garantir penetração adequada no <abbr title="Sistema Nervoso Central - Cérebro e medula espinhal" style="text-decoration: underline dotted; cursor: help; border: none;">SNC</abbr></li>
+                <li><strong>Osteomielite:</strong> Terapia prolongada requer <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> precisa</li>
                 <li><strong>Bacteremia:</strong> Ajustar dose em pacientes críticos</li>
                 <li><strong>Infecções por patógenos resistentes:</strong> Orientar terapia combinada</li>
               </ul>
@@ -3202,7 +3202,7 @@ const App = () => {
             <tr>
               <td style="padding: 8px; border: 1px solid #ddd;"><strong>Resultado</strong></td>
               <td style="padding: 8px; border: 1px solid #ddd;">S / I / R</td>
-              <td style="padding: 8px; border: 1px solid #ddd;">Valor numérico (CIM)</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">Valor numérico (<abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>)</td>
             </tr>
             <tr style="background: #f9fafb;">
               <td style="padding: 8px; border: 1px solid #ddd;"><strong>Precisão</strong></td>
@@ -3242,9 +3242,9 @@ const App = () => {
       title: "Concentração Inibitória Mínima (CIM)",
       content: `
         <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h3 style="color: #dc2626; margin-bottom: 15px;">🎯 Concentração Inibitória Mínima (CIM)</h3>
+          <h3 style="color: #dc2626; margin-bottom: 15px;">🎯 Concentração Inibitória Mínima (<abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>)</h3>
           <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-            A <strong>Concentração Inibitória Mínima (CIM)</strong> é a menor concentração de um 
+            A <strong>Concentração Inibitória Mínima (<abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>)</strong> é a menor concentração de um 
             antimicrobiano capaz de <strong>inibir o crescimento visível</strong> de um microrganismo 
             após incubação em condições padronizadas.
           </p>
@@ -3252,20 +3252,20 @@ const App = () => {
           <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 15px 0;">
             <h4 style="color: #991b1b; margin-bottom: 10px;">📐 Definição Técnica</h4>
             <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-              <strong>CIM (MIC - Minimum Inhibitory Concentration):</strong> Menor concentração de 
+              <strong><abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> (MIC - Minimum Inhibitory Concentration):</strong> Menor concentração de 
               antimicrobiano (em mg/L ou μg/mL) que previne o crescimento bacteriano visível após 
               16-20 horas de incubação a 35-37°C.
             </p>
             <p style="font-size: 14px; line-height: 1.6; font-style: italic;">
-              Importante: A CIM inibe o crescimento, mas não necessariamente mata a bactéria.
+              Importante: A <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> inibe o crescimento, mas não necessariamente mata a bactéria.
             </p>
           </div>
         </div>
         
         <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h4 style="color: #0369a1; margin-bottom: 10px;">🔬 Interpretação da CIM</h4>
+          <h4 style="color: #0369a1; margin-bottom: 10px;">🔬 Interpretação da <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr></h4>
           <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
-            A CIM é comparada com <strong>pontos de corte (breakpoints)</strong> estabelecidos por 
+            A <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> é comparada com <strong>pontos de corte (breakpoints)</strong> estabelecidos por 
             organizações internacionais para classificar o microrganismo como:
           </p>
           
@@ -3277,7 +3277,7 @@ const App = () => {
             </tr>
             <tr>
               <td style="padding: 8px; border: 1px solid #ddd;"><strong>Sensível (S)</strong></td>
-              <td style="padding: 8px; border: 1px solid #ddd;">CIM ≤ ponto de corte S</td>
+              <td style="padding: 8px; border: 1px solid #ddd;"><abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> ≤ ponto de corte S</td>
               <td style="padding: 8px; border: 1px solid #ddd;">Alta probabilidade de sucesso terapêutico</td>
             </tr>
             <tr style="background: #f9fafb;">
@@ -3299,9 +3299,9 @@ const App = () => {
             <strong>Situação:</strong> <em>E. coli</em> isolada de urina, testada contra Ciprofloxacino
           </p>
           <ul style="margin-left: 20px; line-height: 1.8;">
-            <li><strong>CIM determinada:</strong> 0,25 mg/L</li>
-            <li><strong>Ponto de corte CLSI (S):</strong> ≤ 1 mg/L</li>
-            <li><strong>Ponto de corte CLSI (R):</strong> ≥ 4 mg/L</li>
+            <li><strong><abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> determinada:</strong> 0,25 mg/L</li>
+            <li><strong>Ponto de corte <abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr> (S):</strong> ≤ 1 mg/L</li>
+            <li><strong>Ponto de corte <abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr> (R):</strong> ≥ 4 mg/L</li>
             <li><strong>Interpretação:</strong> Sensível (S)</li>
             <li><strong>Decisão clínica:</strong> Ciprofloxacino é apropriado para tratamento</li>
           </ul>
@@ -3322,9 +3322,9 @@ const App = () => {
       title: "Métodos de Determinação da CIM",
       content: `
         <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h3 style="color: #7c3aed; margin-bottom: 15px;">🔬 Métodos de Determinação da CIM</h3>
+          <h3 style="color: #7c3aed; margin-bottom: 15px;">🔬 Métodos de Determinação da <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr></h3>
           <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-            Existem diversos métodos padronizados para determinar a CIM, cada um com suas 
+            Existem diversos métodos padronizados para determinar a <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>, cada um com suas 
             <strong>vantagens, limitações e aplicações específicas</strong>.
           </p>
           
@@ -3370,13 +3370,13 @@ const App = () => {
               <li><strong>Urgência:</strong> Gradiente mais rápido que diluição</li>
               <li><strong>Custo:</strong> Diluição em ágar mais econômica para múltiplos isolados</li>
               <li><strong>Expertise técnica:</strong> Automatizado requer menos treinamento</li>
-              <li><strong>Padronização:</strong> Seguir recomendações CLSI/EUCAST</li>
+              <li><strong>Padronização:</strong> Seguir recomendações <abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr>/EUCAST</li>
             </ul>
           </div>
         </div>
         
         <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h4 style="color: #d97706; margin-bottom: 10px;">🔍 Fatores que Afetam a CIM</h4>
+          <h4 style="color: #d97706; margin-bottom: 10px;">🔍 Fatores que Afetam a <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr></h4>
           <ul style="margin-left: 20px; line-height: 1.8;">
             <li><strong>Inóculo bacteriano:</strong> Deve ser padronizado (0,5 McFarland)</li>
             <li><strong>Meio de cultura:</strong> Mueller-Hinton é o padrão</li>
@@ -3405,7 +3405,7 @@ const App = () => {
           <h3 style="color: #d97706; margin-bottom: 15px;">🧪 Principais Métodos Quantitativos</h3>
           <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
             Os métodos de <strong>diluição</strong> são os mais utilizados para determinação precisa 
-            da CIM, cada um com características específicas que os tornam adequados para diferentes 
+            da <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>, cada um com características específicas que os tornam adequados para diferentes 
             situações clínicas e laboratoriais.
           </p>
         </div>
@@ -3432,7 +3432,7 @@ const App = () => {
               <li><strong>Boa reprodutibilidade:</strong> Resultados consistentes entre laboratórios</li>
               <li><strong>Eficiente para múltiplos isolados:</strong> Até 36 cepas por placa</li>
               <li><strong>Visualização direta:</strong> Facilita detecção de crescimento misto</li>
-              <li><strong>Padrão de referência:</strong> Recomendado por CLSI/EUCAST</li>
+              <li><strong>Padrão de referência:</strong> Recomendado por <abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr>/EUCAST</li>
             </ul>
           </div>
           
@@ -3467,8 +3467,8 @@ const App = () => {
             <h5 style="color: #4b5563; margin-bottom: 10px;">✅ Vantagens</h5>
             <ul style="margin-left: 20px; line-height: 1.8;">
               <li><strong>Painéis comerciais disponíveis:</strong> Sistemas automatizados (Vitek, Phoenix)</li>
-              <li><strong>Alta reprodutibilidade:</strong> Padrão-ouro para CIM</li>
-              <li><strong>Permite determinar CIM com precisão:</strong> Valores exatos</li>
+              <li><strong>Alta reprodutibilidade:</strong> Padrão-ouro para <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr></li>
+              <li><strong>Permite determinar <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> com precisão:</strong> Valores exatos</li>
               <li><strong>Microdiluição:</strong> Economia de reagentes em microplacas</li>
               <li><strong>Automação:</strong> Reduz erro humano</li>
             </ul>
@@ -3546,7 +3546,7 @@ const App = () => {
             <h4 style="color: #065f46; margin-bottom: 10px;">🎯 Princípio do Método</h4>
             <p style="font-size: 14px; line-height: 1.6;">
               Utiliza <strong>tiras plásticas impregnadas com gradiente contínuo de concentração de 
-              antibiótico</strong>, permitindo leitura direta da CIM no ponto de intersecção entre a 
+              antibiótico</strong>, permitindo leitura direta da <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> no ponto de intersecção entre a 
               elipse de inibição e a tira graduada.
             </p>
           </div>
@@ -3578,8 +3578,8 @@ const App = () => {
             <ul style="margin-left: 20px; line-height: 1.8;">
               <li>Tira graduada: 0,016 a 256 mg/L</li>
               <li>Elipse de inibição intersecta a tira em: <strong>1,0 mg/L</strong></li>
-              <li><strong>CIM determinada: 1,0 mg/L</strong></li>
-              <li>Ponto de corte CLSI (S): ≤ 2 mg/L</li>
+              <li><strong><abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> determinada: 1,0 mg/L</strong></li>
+              <li>Ponto de corte <abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr> (S): ≤ 2 mg/L</li>
               <li><strong>Interpretação: Sensível</strong></li>
             </ul>
           </div>
@@ -3597,7 +3597,7 @@ const App = () => {
               <td style="padding: 8px; border: 1px solid #ddd;">Técnica simples, similar ao disco-difusão</td>
             </tr>
             <tr style="background: #f9fafb;">
-              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Leitura direta da CIM</strong></td>
+              <td style="padding: 8px; border: 1px solid #ddd;"><strong>Leitura direta da <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr></strong></td>
               <td style="padding: 8px; border: 1px solid #ddd;">Valor numérico exato, sem necessidade de cálculos</td>
             </tr>
             <tr>
@@ -3623,10 +3623,10 @@ const App = () => {
           <h4 style="color: #d97706; margin-bottom: 10px;">🎯 Aplicações Clínicas Específicas</h4>
           <ul style="margin-left: 20px; line-height: 1.8;">
             <li><strong>Bactérias fastidiosas:</strong> <em>Streptococcus pneumoniae</em>, <em>Haemophilus</em></li>
-            <li><strong>Confirmação de resistência:</strong> MRSA, VRE, CRE</li>
-            <li><strong>Fungos:</strong> Determinação de CIM para azóis, anfotericina B</li>
+            <li><strong>Confirmação de resistência:</strong> <abbr title="Methicillin-Resistant Staphylococcus aureus - Estafilococo resistente à meticilina" style="text-decoration: underline dotted; cursor: help; border: none;">MRSA</abbr>, <abbr title="Vancomycin-Resistant Enterococcus - Enterococo resistente à vancomicina" style="text-decoration: underline dotted; cursor: help; border: none;">VRE</abbr>, CRE</li>
+            <li><strong>Fungos:</strong> Determinação de <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> para azóis, anfotericina B</li>
             <li><strong>Micobactérias:</strong> Teste de sensibilidade para tuberculose</li>
-            <li><strong>Infecções graves:</strong> Quando CIM precisa é necessária</li>
+            <li><strong>Infecções graves:</strong> Quando <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> precisa é necessária</li>
             <li><strong>Pesquisa:</strong> Estudos de farmacodinâmica</li>
           </ul>
         </div>
@@ -3658,13 +3658,13 @@ const App = () => {
             </tr>
             <tr style="background: #f9fafb;">
               <td style="padding: 8px; border: 1px solid #ddd;"><strong>Gradiente (Etest)</strong></td>
-              <td style="padding: 8px; border: 1px solid #ddd;">CIM exata</td>
+              <td style="padding: 8px; border: 1px solid #ddd;"><abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> exata</td>
               <td style="padding: 8px; border: 1px solid #ddd;">Fácil</td>
               <td style="padding: 8px; border: 1px solid #ddd;">Moderado</td>
             </tr>
             <tr>
               <td style="padding: 8px; border: 1px solid #ddd;"><strong>Microdiluição</strong></td>
-              <td style="padding: 8px; border: 1px solid #ddd;">CIM exata</td>
+              <td style="padding: 8px; border: 1px solid #ddd;"><abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> exata</td>
               <td style="padding: 8px; border: 1px solid #ddd;">Complexo</td>
               <td style="padding: 8px; border: 1px solid #ddd;">Alto</td>
             </tr>
@@ -3698,7 +3698,7 @@ const App = () => {
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
                     Os sistemas automatizados (como VITEK, Phoenix, MicroScan) utilizam <strong>detecção óptica</strong> 
                     do crescimento bacteriano na presença de diferentes concentrações de antimicrobianos. 
-                    Isso permite determinação rápida da CIM e interpretação automática.
+                    Isso permite determinação rápida da <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> e interpretação automática.
                   </p>
                 </div>
                 
@@ -3770,7 +3770,7 @@ const App = () => {
         </p>
         <ul style="margin-left: 20px; line-height: 1.8;">
           <li><strong>Processamento paralelo:</strong> 20-30 antibióticos por isolado</li>
-          <li><strong>Software inteligente:</strong> Interpretação automática baseada em CLSI/EUCAST</li>
+          <li><strong>Software inteligente:</strong> Interpretação automática baseada em <abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr>/EUCAST</li>
           <li><strong>Identificação simultânea:</strong> Muitos sistemas identificam o microrganismo</li>
           <li><strong>Relatórios padronizados:</strong> Geração automática de laudos</li>
         </ul>
@@ -3949,11 +3949,11 @@ const App = () => {
     <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
       <h4 style="color: #4b5563; margin-bottom: 10px;">🧪 Outros Testes Fenotípicos Especiais</h4>
       <ul style="margin-left: 20px; line-height: 1.8;">
-        <li><strong>ESBL (β-lactamase de espectro estendido):</strong> Teste de sinergia duplo-disco</li>
+        <li><strong><abbr title="Extended-Spectrum β-Lactamase - Enzima que confere resistência a cefalosporinas de amplo espectro" style="text-decoration: underline dotted; cursor: help; border: none;">ESBL</abbr> (β-lactamase de espectro estendido):</strong> Teste de sinergia duplo-disco</li>
         <li><strong>Carbapenemases:</strong> Teste de Hodge modificado, Blue-Carba</li>
-        <li><strong>AmpC:</strong> Teste de disco com inibidor de AmpC</li>
-        <li><strong>MRSA:</strong> Disco de cefoxitina ou oxacilina</li>
-        <li><strong>VRE:</strong> Triagem em ágar com vancomicina</li>
+        <li><strong><abbr title="Cefalosporinase - Enzima que confere resistência a cefalosporinas de 1ª a 3ª geração" style="text-decoration: underline dotted; cursor: help; border: none;">AmpC</abbr>:</strong> Teste de disco com inibidor de <abbr title="Cefalosporinase - Enzima que confere resistência a cefalosporinas de 1ª a 3ª geração" style="text-decoration: underline dotted; cursor: help; border: none;">AmpC</abbr></li>
+        <li><strong><abbr title="Methicillin-Resistant Staphylococcus aureus - Estafilococo resistente à meticilina" style="text-decoration: underline dotted; cursor: help; border: none;">MRSA</abbr>:</strong> Disco de cefoxitina ou oxacilina</li>
+        <li><strong><abbr title="Vancomycin-Resistant Enterococcus - Enterococo resistente à vancomicina" style="text-decoration: underline dotted; cursor: help; border: none;">VRE</abbr>:</strong> Triagem em ágar com vancomicina</li>
       </ul>
     </div>
   `,
@@ -4130,12 +4130,12 @@ const App = () => {
         <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
           <h4 style="color: #166534; margin-bottom: 15px;">📐 Definição</h4>
           <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
-            A <strong>Concentração Inibitória Mínima (CIM) é atingida com a dose recomendada</strong> 
+            A <strong>Concentração Inibitória Mínima (<abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>) é atingida com a dose recomendada</strong> 
             do antibiótico para o tipo de infecção e organismo infectante.
           </p>
           <p style="font-size: 14px; line-height: 1.6; font-style: italic;">
             Isso significa que as concentrações séricas ou teciduais do antimicrobiano, quando 
-            administrado nas doses convencionais, <strong>excedem a CIM</strong> do microrganismo 
+            administrado nas doses convencionais, <strong>excedem a <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr></strong> do microrganismo 
             por tempo suficiente para exercer efeito bactericida ou bacteriostático.
           </p>
         </div>
@@ -4166,11 +4166,11 @@ const App = () => {
           <strong>Situação:</strong> <em>E. coli</em> sensível à Ciprofloxacino em infecção urinária
         </p>
         <ul style="margin-left: 20px; line-height: 1.8;">
-          <li><strong>CIM:</strong> 0,25 mg/L</li>
+          <li><strong><abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>:</strong> 0,25 mg/L</li>
           <li><strong>Ponto de corte (S):</strong> ≤ 1 mg/L</li>
           <li><strong>Interpretação:</strong> Sensível (S)</li>
           <li><strong>Dose padrão:</strong> Ciprofloxacino 500 mg 12/12h VO</li>
-          <li><strong>Concentração urinária:</strong> > 100 mg/L (muito acima da CIM)</li>
+          <li><strong>Concentração urinária:</strong> > 100 mg/L (muito acima da <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>)</li>
           <li><strong>Resultado esperado:</strong> Cura clínica e microbiológica</li>
         </ul>
       </div>
@@ -4188,7 +4188,7 @@ const App = () => {
           </tr>
           <tr style="background: #f9fafb;">
             <td style="padding: 8px; border: 1px solid #ddd;"><strong>Gravidade</strong></td>
-            <td style="padding: 8px; border: 1px solid #ddd;">Infecções graves podem requerer CIM mais baixa</td>
+            <td style="padding: 8px; border: 1px solid #ddd;">Infecções graves podem requerer <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> mais baixa</td>
           </tr>
           <tr>
             <td style="padding: 8px; border: 1px solid #ddd;"><strong>Função renal/hepática</strong></td>
@@ -4226,11 +4226,11 @@ const App = () => {
         <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
           <h4 style="color: #c2410c; margin-bottom: 15px;">📐 Definição</h4>
           <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
-            Para atingir a CIM é necessário usar um <strong>regime de dosagem que resulte em maior 
+            Para atingir a <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> é necessário usar um <strong>regime de dosagem que resulte em maior 
             exposição</strong> do microrganismo ao medicamento.
           </p>
           <p style="font-size: 14px; line-height: 1.6; font-style: italic;">
-            A CIM está próxima ao limite superior do ponto de corte de sensibilidade, ou o 
+            A <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> está próxima ao limite superior do ponto de corte de sensibilidade, ou o 
             microrganismo apresenta sensibilidade reduzida. Com doses padrão, as concentrações 
             podem ser <strong>marginalmente eficazes</strong>.
           </p>
@@ -4256,7 +4256,7 @@ const App = () => {
         <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
           <h5 style="color: #059669; margin-bottom: 10px;">2️⃣ Administrações mais frequentes</h5>
           <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-            Reduzir o intervalo entre doses para manter concentrações acima da CIM por mais tempo.
+            Reduzir o intervalo entre doses para manter concentrações acima da <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> por mais tempo.
           </p>
           <p style="font-size: 14px; line-height: 1.6;">
             <strong>Exemplo:</strong> Cefepima 2g IV 8/8h em vez de 2g IV 12/12h
@@ -4280,7 +4280,7 @@ const App = () => {
         <ul style="margin-left: 20px; line-height: 1.8;">
           <li><strong>Infecções graves:</strong> Bacteremia, meningite, endocardite</li>
           <li><strong>Paciente crítico:</strong> Choque séptico, disfunção orgânica</li>
-          <li><strong>Sítio de difícil penetração:</strong> SNC, osso, próstata</li>
+          <li><strong>Sítio de difícil penetração:</strong> <abbr title="Sistema Nervoso Central - Cérebro e medula espinhal" style="text-decoration: underline dotted; cursor: help; border: none;">SNC</abbr>, osso, próstata</li>
           <li><strong>Imunossupressão:</strong> Neutropenia, HIV avançado</li>
         </ul>
         <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; font-style: italic;">
@@ -4291,10 +4291,10 @@ const App = () => {
       <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
         <h4 style="color: #4b5563; margin-bottom: 10px;">📊 Exemplo Prático</h4>
         <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
-          <strong>Situação:</strong> <em>Pseudomonas aeruginosa</em> com CIM de Cefepima = 8 mg/L
+          <strong>Situação:</strong> <em>Pseudomonas aeruginosa</em> com <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> de Cefepima = 8 mg/L
         </p>
         <ul style="margin-left: 20px; line-height: 1.8;">
-          <li><strong>Ponto de corte CLSI:</strong> S ≤ 8 mg/L; I = 16 mg/L; R ≥ 32 mg/L</li>
+          <li><strong>Ponto de corte <abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr>:</strong> S ≤ 8 mg/L; I = 16 mg/L; R ≥ 32 mg/L</li>
           <li><strong>Interpretação:</strong> Sensível (S), mas no limite superior</li>
           <li><strong>Estratégia:</strong> Cefepima 2g IV 8/8h (dose alta, intervalo curto)</li>
           <li><strong>Alternativa:</strong> Infusão prolongada de 3-4 horas</li>
@@ -4327,7 +4327,7 @@ const App = () => {
         <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
           <h4 style="color: #991b1b; margin-bottom: 15px;">📐 Definição</h4>
           <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
-            A <strong>Concentração Inibitória Mínima (CIM) não é alcançada mesmo com doses máximas</strong> 
+            A <strong>Concentração Inibitória Mínima (<abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>) não é alcançada mesmo com doses máximas</strong> 
             do antibiótico.
           </p>
           <p style="font-size: 14px; line-height: 1.6; font-style: italic;">
@@ -4362,11 +4362,11 @@ const App = () => {
       <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
         <h4 style="color: #d97706; margin-bottom: 10px;">📊 Exemplo Prático</h4>
         <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
-          <strong>Situação:</strong> <em>Klebsiella pneumoniae</em> produtora de KPC (carbapenemase)
+          <strong>Situação:</strong> <em>Klebsiella pneumoniae</em> produtora de <abbr title="Klebsiella pneumoniae Carbapenemase - Enzima que confere resistência a carbapenêmicos" style="text-decoration: underline dotted; cursor: help; border: none;">KPC</abbr> (carbapenemase)
         </p>
         <ul style="margin-left: 20px; line-height: 1.8;">
-          <li><strong>CIM Meropenem:</strong> > 32 mg/L</li>
-          <li><strong>Ponto de corte CLSI (R):</strong> ≥ 4 mg/L</li>
+          <li><strong><abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> Meropenem:</strong> > 32 mg/L</li>
+          <li><strong>Ponto de corte <abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr> (R):</strong> ≥ 4 mg/L</li>
           <li><strong>Interpretação:</strong> Resistente (R)</li>
           <li><strong>Dose máxima Meropenem:</strong> 2g IV 8/8h em infusão prolongada</li>
           <li><strong>Concentração sérica máxima:</strong> ~40 mg/L (ainda insuficiente)</li>
@@ -4387,11 +4387,11 @@ const App = () => {
           </tr>
           <tr>
             <td style="padding: 8px; border: 1px solid #ddd;"><strong>Enzimas inativadoras</strong></td>
-            <td style="padding: 8px; border: 1px solid #ddd;">β-lactamases (ESBL, KPC, NDM)</td>
+            <td style="padding: 8px; border: 1px solid #ddd;">β-lactamases (<abbr title="Extended-Spectrum β-Lactamase - Enzima que confere resistência a cefalosporinas de amplo espectro" style="text-decoration: underline dotted; cursor: help; border: none;">ESBL</abbr>, <abbr title="Klebsiella pneumoniae Carbapenemase - Enzima que confere resistência a carbapenêmicos" style="text-decoration: underline dotted; cursor: help; border: none;">KPC</abbr>, NDM)</td>
           </tr>
           <tr style="background: #f9fafb;">
             <td style="padding: 8px; border: 1px solid #ddd;"><strong>Alteração do alvo</strong></td>
-            <td style="padding: 8px; border: 1px solid #ddd;">MRSA (PBP2a), VRE (alteração D-Ala-D-Ala)</td>
+            <td style="padding: 8px; border: 1px solid #ddd;"><abbr title="Methicillin-Resistant Staphylococcus aureus - Estafilococo resistente à meticilina" style="text-decoration: underline dotted; cursor: help; border: none;">MRSA</abbr> (<abbr title="Penicillin-Binding Protein 2a - Proteína alterada que confere resistência em MRSA" style="text-decoration: underline dotted; cursor: help; border: none;">PBP2a</abbr>), <abbr title="Vancomycin-Resistant Enterococcus - Enterococo resistente à vancomicina" style="text-decoration: underline dotted; cursor: help; border: none;">VRE</abbr> (alteração D-Ala-D-Ala)</td>
           </tr>
           <tr>
             <td style="padding: 8px; border: 1px solid #ddd;"><strong>Bombas de efluxo</strong></td>
@@ -4504,9 +4504,9 @@ const App = () => {
         <div style="background: #fff7ed; padding: 15px; border-radius: 8px; margin: 15px 0;">
           <h5 style="color: #c2410c; margin-bottom: 10px;">🦠 Principais Mecanismos Reportados</h5>
           <ul style="margin-left: 20px; line-height: 1.8;">
-            <li><strong>Produção de ESBL</strong> (β-lactamase de espectro estendido)</li>
-            <li><strong>Resistência à meticilina</strong> (MRSA - <em>Staphylococcus aureus</em> resistente à meticilina)</li>
-            <li><strong>Produção de carbapenemases</strong> (KPC, NDM, OXA-48, VIM, IMP)</li>
+            <li><strong>Produção de <abbr title="Extended-Spectrum β-Lactamase - Enzima que confere resistência a cefalosporinas de amplo espectro" style="text-decoration: underline dotted; cursor: help; border: none;">ESBL</abbr></strong> (β-lactamase de espectro estendido)</li>
+            <li><strong>Resistência à meticilina</strong> (<abbr title="Methicillin-Resistant Staphylococcus aureus - Estafilococo resistente à meticilina" style="text-decoration: underline dotted; cursor: help; border: none;">MRSA</abbr> - <em>Staphylococcus aureus</em> resistente à meticilina)</li>
+            <li><strong>Produção de carbapenemases</strong> (<abbr title="Klebsiella pneumoniae Carbapenemase - Enzima que confere resistência a carbapenêmicos" style="text-decoration: underline dotted; cursor: help; border: none;">KPC</abbr>, NDM, OXA-48, VIM, IMP)</li>
           </ul>
         </div>
       </div>
@@ -4518,7 +4518,7 @@ const App = () => {
             <strong>OBSERVAÇÕES:</strong>
           </p>
           <p style="font-size: 14px; line-height: 1.6; color: #dc2626; font-weight: bold;">
-            ⚠️ ESBL DETECTADA - Resistência a cefalosporinas de 3ª geração confirmada. 
+            ⚠️ <abbr title="Extended-Spectrum β-Lactamase - Enzima que confere resistência a cefalosporinas de amplo espectro" style="text-decoration: underline dotted; cursor: help; border: none;">ESBL</abbr> DETECTADA - Resistência a cefalosporinas de 3ª geração confirmada. 
             Evitar uso de ceftriaxona, cefotaxima e ceftazidima mesmo se resultado "Sensível" 
             in vitro. Carbapenêmicos são preferíveis para infecções graves.
           </p>
@@ -4533,11 +4533,11 @@ const App = () => {
             <th style="padding: 10px; border: 1px solid #ddd;">Impacto Terapêutico</th>
           </tr>
           <tr>
-            <td style="padding: 8px; border: 1px solid #ddd;"><strong>ESBL</strong></td>
+            <td style="padding: 8px; border: 1px solid #ddd;"><strong><abbr title="Extended-Spectrum β-Lactamase - Enzima que confere resistência a cefalosporinas de amplo espectro" style="text-decoration: underline dotted; cursor: help; border: none;">ESBL</abbr></strong></td>
             <td style="padding: 8px; border: 1px solid #ddd;">Evitar cefalosporinas 3ª geração; preferir carbapenêmicos</td>
           </tr>
           <tr style="background: #f9fafb;">
-            <td style="padding: 8px; border: 1px solid #ddd;"><strong>MRSA</strong></td>
+            <td style="padding: 8px; border: 1px solid #ddd;"><strong><abbr title="Methicillin-Resistant Staphylococcus aureus - Estafilococo resistente à meticilina" style="text-decoration: underline dotted; cursor: help; border: none;">MRSA</abbr></strong></td>
             <td style="padding: 8px; border: 1px solid #ddd;">Evitar todos os beta-lactâmicos; usar vancomicina, daptomicina</td>
           </tr>
           <tr>
@@ -4562,7 +4562,7 @@ const App = () => {
     title: "Valores de CIM e Interpretação",
     content: `
       <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-        <h3 style="color: #0369a1; margin-bottom: 15px;">📊 Valores de CIM e Interpretação</h3>
+        <h3 style="color: #0369a1; margin-bottom: 15px;">📊 Valores de <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> e Interpretação</h3>
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
           A seção central do antibiograma apresenta os <strong>resultados dos testes de sensibilidade</strong> 
           para cada antibiótico testado.
@@ -4574,12 +4574,12 @@ const App = () => {
             Para cada antibiótico testado, são apresentados:
           </p>
           <ul style="margin-left: 20px; line-height: 1.8;">
-            <li><strong>Valor numérico da CIM</strong> (μg/mL) - quanto menor, mais sensível é o microrganismo</li>
+            <li><strong>Valor numérico da <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr></strong> (μg/mL) - quanto menor, mais sensível é o microrganismo</li>
             <li><strong>Interpretação clínica</strong> (S, I ou R) baseada em pontos de corte padronizados</li>
           </ul>
           <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; font-style: italic;">
-            A correlação entre CIM e categoria clínica segue <strong>diretrizes específicas</strong> 
-            (CLSI, BrCast, EUCAST).
+            A correlação entre <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> e categoria clínica segue <strong>diretrizes específicas</strong> 
+            (<abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr>, BrCast, EUCAST).
           </p>
         </div>
       </div>
@@ -4593,7 +4593,7 @@ const App = () => {
           <table style="width: 100%; border-collapse: collapse;">
             <tr style="background: #3b82f6; color: white;">
               <th style="padding: 10px; border: 1px solid #ddd;">Antibiótico</th>
-              <th style="padding: 10px; border: 1px solid #ddd;">CIM (μg/mL)</th>
+              <th style="padding: 10px; border: 1px solid #ddd;"><abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> (μg/mL)</th>
               <th style="padding: 10px; border: 1px solid #ddd;">Interpretação</th>
             </tr>
             <tr>
@@ -4641,24 +4641,24 @@ const App = () => {
       </div>
       
       <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-        <h4 style="color: #d97706; margin-bottom: 10px;">📐 Relação CIM e Interpretação</h4>
+        <h4 style="color: #d97706; margin-bottom: 10px;">📐 Relação <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> e Interpretação</h4>
         <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
-          A interpretação (S, I ou R) é determinada comparando a <strong>CIM obtida</strong> com 
+          A interpretação (S, I ou R) é determinada comparando a <strong><abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> obtida</strong> com 
           <strong>pontos de corte (breakpoints)</strong> estabelecidos por diretrizes internacionais.
         </p>
         
         <div style="background: #fff7ed; padding: 15px; border-radius: 8px; margin: 10px 0;">
           <h5 style="color: #c2410c; margin-bottom: 10px;">📊 Exemplo: Ciprofloxacino</h5>
           <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-            <strong>Pontos de corte CLSI para <em>E. coli</em>:</strong>
+            <strong>Pontos de corte <abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr> para <em>E. coli</em>:</strong>
           </p>
           <ul style="margin-left: 20px; line-height: 1.8;">
-            <li><strong>Sensível (S):</strong> CIM ≤ 1 μg/mL</li>
-            <li><strong>Intermediário (I):</strong> CIM = 2 μg/mL</li>
-            <li><strong>Resistente (R):</strong> CIM ≥ 4 μg/mL</li>
+            <li><strong>Sensível (S):</strong> <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> ≤ 1 μg/mL</li>
+            <li><strong>Intermediário (I):</strong> <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> = 2 μg/mL</li>
+            <li><strong>Resistente (R):</strong> <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> ≥ 4 μg/mL</li>
           </ul>
           <p style="font-size: 14px; line-height: 1.6; margin-top: 10px;">
-            <strong>No exemplo acima:</strong> CIM = 0,25 μg/mL → <strong>Sensível (S)</strong>
+            <strong>No exemplo acima:</strong> <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> = 0,25 μg/mL → <strong>Sensível (S)</strong>
           </p>
         </div>
       </div>
@@ -4672,7 +4672,7 @@ const App = () => {
             <th style="padding: 10px; border: 1px solid #ddd;">Uso Principal</th>
           </tr>
           <tr>
-            <td style="padding: 8px; border: 1px solid #ddd;"><strong>CLSI</strong></td>
+            <td style="padding: 8px; border: 1px solid #ddd;"><strong><abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr></strong></td>
             <td style="padding: 8px; border: 1px solid #ddd;">Clinical and Laboratory Standards Institute</td>
             <td style="padding: 8px; border: 1px solid #ddd;">Estados Unidos, Brasil</td>
           </tr>
@@ -4682,7 +4682,7 @@ const App = () => {
             <td style="padding: 8px; border: 1px solid #ddd;">Europa</td>
           </tr>
           <tr>
-            <td style="padding: 8px; border: 1px solid #ddd;"><strong>BrCAST</strong></td>
+            <td style="padding: 8px; border: 1px solid #ddd;"><strong><abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê brasileiro de testes de sensibilidade" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr></strong></td>
             <td style="padding: 8px; border: 1px solid #ddd;">Brazilian Committee on Antimicrobial Susceptibility Testing</td>
             <td style="padding: 8px; border: 1px solid #ddd;">Brasil (adaptação local)</td>
           </tr>
@@ -4692,8 +4692,8 @@ const App = () => {
       <div style="background: #dcfce7; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin: 15px 0;">
         <h4 style="color: #059669; margin-bottom: 10px;">💡 Dica Clínica</h4>
         <p style="font-size: 14px; line-height: 1.6;">
-          <strong>Quanto menor a CIM, melhor!</strong> Um antibiótico com CIM de 0,25 μg/mL é 
-          <strong>muito mais potente</strong> contra aquele microrganismo do que um com CIM de 8 μg/mL, 
+          <strong>Quanto menor a <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>, melhor!</strong> Um antibiótico com <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> de 0,25 μg/mL é 
+          <strong>muito mais potente</strong> contra aquele microrganismo do que um com <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> de 8 μg/mL, 
           mesmo que ambos sejam interpretados como "Sensível" (S).
         </p>
       </div>
@@ -4735,12 +4735,12 @@ const App = () => {
       <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
         <h4 style="color: #0369a1; margin-bottom: 15px;">🔬 Relevância do Método</h4>
         <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
-          Os <strong>métodos de diluição em caldo</strong> (micro e macro) fornecem <strong>CIM precisa</strong>, 
+          Os <strong>métodos de diluição em caldo</strong> (micro e macro) fornecem <strong><abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> precisa</strong>, 
           essencial para infecções graves.
         </p>
         
         <div style="background: #dbeafe; padding: 15px; border-radius: 8px; margin: 15px 0;">
-          <h5 style="color: #1e40af; margin-bottom: 10px;">✅ Vantagens da CIM Precisa</h5>
+          <h5 style="color: #1e40af; margin-bottom: 10px;">✅ Vantagens da <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> Precisa</h5>
           <ul style="margin-left: 20px; line-height: 1.8;">
             <li><strong>Ajuste de dose:</strong> Permite otimização farmacocinética/farmacodinâmica</li>
             <li><strong>Monitoramento:</strong> Acompanhamento de tendências de resistência</li>
@@ -4754,7 +4754,7 @@ const App = () => {
         <h4 style="color: #dc2626; margin-bottom: 15px;">⚠️ Limitações Metodológicas</h4>
         <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
           <strong>Métodos de disco difusão</strong> e alguns <strong>sistemas automatizados</strong> 
-          fornecem apenas <strong>CIM aproximada</strong>, o que pode ser insuficiente em casos críticos.
+          fornecem apenas <strong><abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> aproximada</strong>, o que pode ser insuficiente em casos críticos.
         </p>
         
         <div style="background: #fef2f2; padding: 15px; border-radius: 8px; margin: 15px 0;">
@@ -4762,7 +4762,7 @@ const App = () => {
           <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">
             <tr style="background: #dc2626; color: white;">
               <th style="padding: 10px; border: 1px solid #ddd;">Método</th>
-              <th style="padding: 10px; border: 1px solid #ddd;">Precisão CIM</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Precisão <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr></th>
               <th style="padding: 10px; border: 1px solid #ddd;">Aplicação</th>
             </tr>
             <tr>
@@ -4803,7 +4803,7 @@ const App = () => {
         <div style="background: #ffffff; padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; margin: 10px 0;">
           <h5 style="color: #374151; margin-bottom: 10px;">2️⃣ Características do Microrganismo</h5>
           <ul style="margin-left: 20px; line-height: 1.8;">
-            <li><strong>Mecanismos de resistência:</strong> ESBL, carbapenemase, MRSA</li>
+            <li><strong>Mecanismos de resistência:</strong> <abbr title="Extended-Spectrum β-Lactamase - Enzima que confere resistência a cefalosporinas de amplo espectro" style="text-decoration: underline dotted; cursor: help; border: none;">ESBL</abbr>, carbapenemase, <abbr title="Methicillin-Resistant Staphylococcus aureus - Estafilococo resistente à meticilina" style="text-decoration: underline dotted; cursor: help; border: none;">MRSA</abbr></li>
             <li><strong>Virulência:</strong> Capacidade de causar doença grave</li>
             <li><strong>Epidemiologia local:</strong> Padrões de resistência regionais</li>
           </ul>
@@ -4821,7 +4821,7 @@ const App = () => {
         <div style="background: #ffffff; padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; margin: 10px 0;">
           <h5 style="color: #374151; margin-bottom: 10px;">4️⃣ Limitações do Teste</h5>
           <ul style="margin-left: 20px; line-height: 1.8;">
-            <li><strong>Método utilizado:</strong> Precisão da CIM</li>
+            <li><strong>Método utilizado:</strong> Precisão da <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr></li>
             <li><strong>Condições in vitro:</strong> Podem não refletir in vivo</li>
             <li><strong>Tempo de resultado:</strong> Terapia empírica necessária</li>
           </ul>
@@ -4831,11 +4831,11 @@ const App = () => {
       <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
         <h4 style="color: #059669; margin-bottom: 10px;">✅ Princípios da Interpretação Crítica</h4>
         <ol style="margin-left: 20px; line-height: 1.8;">
-          <li><strong>Não se limitar ao S/I/R:</strong> Considerar valor da CIM</li>
+          <li><strong>Não se limitar ao S/I/R:</strong> Considerar valor da <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr></li>
           <li><strong>Conhecer o método:</strong> Diluição vs. disco-difusão</li>
           <li><strong>Contextualizar:</strong> Gravidade, sítio, paciente</li>
-          <li><strong>Considerar mecanismos:</strong> ESBL, carbapenemase, etc.</li>
-          <li><strong>Otimizar dose:</strong> PK/PD quando CIM disponível</li>
+          <li><strong>Considerar mecanismos:</strong> <abbr title="Extended-Spectrum β-Lactamase - Enzima que confere resistência a cefalosporinas de amplo espectro" style="text-decoration: underline dotted; cursor: help; border: none;">ESBL</abbr>, carbapenemase, etc.</li>
+          <li><strong>Otimizar dose:</strong> <abbr title="Farmacocinética/Farmacodinâmica - Estudo de como o corpo processa o medicamento e como ele age" style="text-decoration: underline dotted; cursor: help; border: none;">PK/PD</abbr> quando <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> disponível</li>
           <li><strong>Reavaliar:</strong> Resposta clínica é o desfecho final</li>
         </ol>
       </div>
@@ -4876,8 +4876,8 @@ const App = () => {
                   <h3 style="color: #d97706; margin-bottom: 15px;">🌎 Mudança de Paradigma no Brasil</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
                     Em <strong>final de 2018</strong> o Brasil abandonou a padronização americana do antibiograma 
-                    (CLSI). Passamos a usar o <strong>padrão europeu (EUCAST)</strong> e chamamos de 
-                    <strong>BrCAST</strong> (Comitê Brasileiro de Testes de Sensibilidade aos Antimicrobianos).
+                    (<abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr>). Passamos a usar o <strong>padrão europeu (EUCAST)</strong> e chamamos de 
+                    <strong><abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê brasileiro de testes de sensibilidade" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr></strong> (Comitê Brasileiro de Testes de Sensibilidade aos Antimicrobianos).
                   </p>
                   
                   <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -4887,7 +4887,7 @@ const App = () => {
                     </p>
                     <ul style="margin-left: 20px; line-height: 1.8;">
                       <li><strong>Atualização mais frequente:</strong> EUCAST revisa pontos de corte anualmente</li>
-                      <li><strong>Maior rigor científico:</strong> Critérios baseados em PK/PD mais robustos</li>
+                      <li><strong>Maior rigor científico:</strong> Critérios baseados em <abbr title="Farmacocinética/Farmacodinâmica - Estudo de como o corpo processa o medicamento e como ele age" style="text-decoration: underline dotted; cursor: help; border: none;">PK/PD</abbr> mais robustos</li>
                       <li><strong>Alinhamento internacional:</strong> Harmonização com Europa e outros países</li>
                       <li><strong>Segurança do paciente:</strong> Pontos de corte mais conservadores</li>
                     </ul>
@@ -4911,7 +4911,7 @@ const App = () => {
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🎯 Pontos de Corte</h3>
                   <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
-                    O <strong>BrCAST reduziu pontos de corte da CIM</strong> para garantir maior segurança na 
+                    O <strong><abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê brasileiro de testes de sensibilidade" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr> reduziu pontos de corte da <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr></strong> para garantir maior segurança na 
                     interpretação da sensibilidade.
                   </p>
                   
@@ -4919,11 +4919,11 @@ const App = () => {
                     <h4 style="color: #1e40af; margin-bottom: 10px;">💡 O que isso significa na prática?</h4>
                     <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
                       <strong>Pontos de corte mais baixos</strong> significam que um microrganismo precisa ter 
-                      CIM <strong>menor</strong> para ser considerado "Sensível".
+                      <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> <strong>menor</strong> para ser considerado "Sensível".
                     </p>
                     <p style="font-size: 14px; line-height: 1.6; font-style: italic;">
-                      <strong>Resultado:</strong> Alguns microrganismos que eram "Sensíveis" pelo CLSI passaram 
-                      a ser classificados como "Intermediários" ou até "Resistentes" pelo BrCAST.
+                      <strong>Resultado:</strong> Alguns microrganismos que eram "Sensíveis" pelo <abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr> passaram 
+                      a ser classificados como "Intermediários" ou até "Resistentes" pelo <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê brasileiro de testes de sensibilidade" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr>.
                     </p>
                   </div>
                   
@@ -4960,15 +4960,15 @@ const App = () => {
                     <tr style="background: #6366f1; color: white;">
                       <th style="padding: 10px; border: 1px solid #ddd;">Padrão</th>
                       <th style="padding: 10px; border: 1px solid #ddd;">Ponto de Corte (S)</th>
-                      <th style="padding: 10px; border: 1px solid #ddd;">CIM = 1 mg/L</th>
+                      <th style="padding: 10px; border: 1px solid #ddd;"><abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> = 1 mg/L</th>
                     </tr>
                     <tr>
-                      <td style="padding: 8px; border: 1px solid #ddd;"><strong>CLSI</strong></td>
+                      <td style="padding: 8px; border: 1px solid #ddd;"><strong><abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr></strong></td>
                       <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">≤ 1 mg/L</td>
                       <td style="padding: 8px; border: 1px solid #ddd; text-align: center; color: #059669; font-weight: bold;">Sensível (S)</td>
                     </tr>
                     <tr style="background: #f9fafb;">
-                      <td style="padding: 8px; border: 1px solid #ddd;"><strong>BrCAST</strong></td>
+                      <td style="padding: 8px; border: 1px solid #ddd;"><strong><abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê brasileiro de testes de sensibilidade" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr></strong></td>
                       <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">≤ 0,5 mg/L</td>
                       <td style="padding: 8px; border: 1px solid #ddd; text-align: center; color: #d97706; font-weight: bold;">Intermediário (I)</td>
                     </tr>
@@ -4977,9 +4977,9 @@ const App = () => {
                   <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 15px 0;">
                     <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ Implicação Clínica</h4>
                     <p style="font-size: 14px; line-height: 1.6;">
-                      O mesmo resultado laboratorial (CIM = 1 mg/L) recebe <strong>interpretações diferentes</strong> 
-                      dependendo do padrão utilizado. Pelo BrCAST, esse resultado sugere que o ciprofloxacino pode 
-                      não ser a melhor escolha, enquanto pelo CLSI seria considerado adequado.
+                      O mesmo resultado laboratorial (<abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> = 1 mg/L) recebe <strong>interpretações diferentes</strong> 
+                      dependendo do padrão utilizado. Pelo <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê brasileiro de testes de sensibilidade" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr>, esse resultado sugere que o ciprofloxacino pode 
+                      não ser a melhor escolha, enquanto pelo <abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr> seria considerado adequado.
                     </p>
                   </div>
                 </div>
@@ -4999,10 +4999,10 @@ const App = () => {
               title: "Vantagens e Desafios do BrCAST",
               content: `
                 <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #059669; margin-bottom: 15px;">✅ Vantagens do BrCAST</h3>
+                  <h3 style="color: #059669; margin-bottom: 15px;">✅ Vantagens do <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê brasileiro de testes de sensibilidade" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr></h3>
                   <ul style="margin-left: 20px; line-height: 1.8; font-size: 15px;">
                     <li><strong>Maior segurança:</strong> Reduz risco de falha terapêutica</li>
-                    <li><strong>Baseado em PK/PD:</strong> Considera farmacocinética/farmacodinâmica real</li>
+                    <li><strong>Baseado em <abbr title="Farmacocinética/Farmacodinâmica - Estudo de como o corpo processa o medicamento e como ele age" style="text-decoration: underline dotted; cursor: help; border: none;">PK/PD</abbr>:</strong> Considera farmacocinética/farmacodinâmica real</li>
                     <li><strong>Atualização constante:</strong> Incorpora novas evidências rapidamente</li>
                     <li><strong>Harmonização:</strong> Facilita comparação internacional de dados</li>
                     <li><strong>Transparência:</strong> Metodologia publicamente disponível</li>
@@ -5022,7 +5022,7 @@ const App = () => {
                 <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 15px 0;">
                   <h4 style="color: #d97706; margin-bottom: 10px;">💡 Mensagem Importante</h4>
                   <p style="font-size: 14px; line-height: 1.6;">
-                    A mudança para o BrCAST representa um <strong>avanço na segurança do paciente</strong>. 
+                    A mudança para o <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê brasileiro de testes de sensibilidade" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr> representa um <strong>avanço na segurança do paciente</strong>. 
                     Embora alguns antibióticos pareçam "menos eficazes" no papel, na verdade estamos sendo 
                     <strong>mais realistas</strong> sobre suas capacidades terapêuticas reais.
                   </p>
@@ -5045,7 +5045,7 @@ const App = () => {
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🔄 Mudança Conceitual Importante</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Uma das mudanças mais significativas do BrCAST foi a <strong>reinterpretação da categoria "I"</strong>, 
+                    Uma das mudanças mais significativas do <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê brasileiro de testes de sensibilidade" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr> foi a <strong>reinterpretação da categoria "I"</strong>, 
                     que alterou fundamentalmente a abordagem terapêutica.
                   </p>
                   
@@ -5059,8 +5059,8 @@ const App = () => {
                     
                     <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
                       <tr style="background: #3b82f6; color: white;">
-                        <th style="padding: 10px; border: 1px solid #ddd;">Antes (CLSI)</th>
-                        <th style="padding: 10px; border: 1px solid #ddd;">Depois (BrCAST)</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Antes (<abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr>)</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Depois (<abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê brasileiro de testes de sensibilidade" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr>)</th>
                       </tr>
                       <tr>
                         <td style="padding: 8px; border: 1px solid #ddd;"><strong>Intermediário (I)</strong></td>
@@ -5138,7 +5138,7 @@ const App = () => {
                     <h4 style="color: #d97706; margin-bottom: 10px;">3️⃣ Redução do Intervalo entre Doses</h4>
                     <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
                       <strong>Administrar mais frequentemente</strong> para manter concentrações acima da 
-                      CIM por mais tempo.
+                      <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> por mais tempo.
                     </p>
                     <p style="font-size: 14px; line-height: 1.6;">
                       <strong>Exemplo:</strong> Cefepima 2g IV 8/8h em vez de 2g IV 12/12h
@@ -5152,8 +5152,8 @@ const App = () => {
                       naturalmente, alcançando níveis muito superiores aos séricos.
                     </p>
                     <p style="font-size: 14px; line-height: 1.6;">
-                      <strong>Exemplo:</strong> Amicacina em ITU - concentração urinária pode ser 100x maior 
-                      que a sérica, permitindo uso mesmo com CIM "Intermediária"
+                      <strong>Exemplo:</strong> Amicacina em <abbr title="Infecção do Trato Urinário" style="text-decoration: underline dotted; cursor: help; border: none;">ITU</abbr> - concentração urinária pode ser 100x maior 
+                      que a sérica, permitindo uso mesmo com <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> "Intermediária"
                     </p>
                   </div>
                   
@@ -5164,8 +5164,8 @@ const App = () => {
                     </p>
                     <ul style="margin-left: 20px; line-height: 1.8;">
                       <li><strong>Antibiótico:</strong> Cefepima</li>
-                      <li><strong>CIM:</strong> 8 mg/L</li>
-                      <li><strong>Interpretação BrCAST:</strong> Sensível com Aumento de Exposição (I)</li>
+                      <li><strong><abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>:</strong> 8 mg/L</li>
+                      <li><strong>Interpretação <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê brasileiro de testes de sensibilidade" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr>:</strong> Sensível com Aumento de Exposição (I)</li>
                       <li><strong>Estratégia escolhida:</strong> Cefepima 2g IV 8/8h em infusão prolongada de 3h</li>
                       <li><strong>Resultado esperado:</strong> Concentração mantida acima da CIM por > 70% do intervalo</li>
                       <li><strong>Desfecho:</strong> Alta probabilidade de sucesso terapêutico</li>
@@ -5196,7 +5196,7 @@ const App = () => {
                   <ul style="margin-left: 20px; line-height: 1.8; font-size: 15px;">
                     <li><strong>Infecções muito graves:</strong> Bacteremia, meningite, endocardite</li>
                     <li><strong>Paciente crítico:</strong> Choque séptico, disfunção orgânica múltipla</li>
-                    <li><strong>Sítio de difícil penetração:</strong> SNC, osso, próstata</li>
+                    <li><strong>Sítio de difícil penetração:</strong> <abbr title="Sistema Nervoso Central - Cérebro e medula espinhal" style="text-decoration: underline dotted; cursor: help; border: none;">SNC</abbr>, osso, próstata</li>
                     <li><strong>Imunossupressão severa:</strong> Neutropenia profunda, HIV avançado</li>
                     <li><strong>Limitações práticas:</strong> Impossibilidade de infusão prolongada</li>
                   </ul>
@@ -5261,7 +5261,7 @@ const App = () => {
                 <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d97706; margin-bottom: 15px;">❓ Evidências Insuficientes</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Quando o BrCAST indica <strong>"evidências insuficientes"</strong>, significa que 
+                    Quando o <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê brasileiro de testes de sensibilidade" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr> indica <strong>"evidências insuficientes"</strong>, significa que 
                     <strong>não há dados científicos robustos</strong> para estabelecer pontos de corte 
                     para aquela combinação microrganismo-antibiótico.
                   </p>
@@ -5269,7 +5269,7 @@ const App = () => {
                   <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
                     <h4 style="color: #c2410c; margin-bottom: 15px;">📋 O que isso significa?</h4>
                     <ul style="margin-left: 20px; line-height: 1.8; font-size: 15px;">
-                      <li><strong>Falta de estudos:</strong> Poucos dados de PK/PD disponíveis</li>
+                      <li><strong>Falta de estudos:</strong> Poucos dados de <abbr title="Farmacocinética/Farmacodinâmica - Estudo de como o corpo processa o medicamento e como ele age" style="text-decoration: underline dotted; cursor: help; border: none;">PK/PD</abbr> disponíveis</li>
                       <li><strong>Falta de ensaios clínicos:</strong> Desfechos clínicos não estabelecidos</li>
                       <li><strong>Variabilidade:</strong> Comportamento imprevisível in vivo</li>
                       <li><strong>Raridade:</strong> Combinação pouco testada na prática</li>
@@ -5280,7 +5280,7 @@ const App = () => {
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🔬 Exemplo: Burkholderia cepacia</h3>
                   <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
-                    <em>Burkholderia cepacia</em> não possui ponto de corte no BrCAST para cotrimoxazol.
+                    <em>Burkholderia cepacia</em> não possui ponto de corte no <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê brasileiro de testes de sensibilidade" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr> para cotrimoxazol.
                   </p>
                   
                   <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
@@ -5299,11 +5299,11 @@ const App = () => {
                         <td style="padding: 8px; border: 1px solid #ddd;">Cotrimoxazol (Sulfametoxazol-trimetoprima)</td>
                       </tr>
                       <tr>
-                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Status BrCAST</strong></td>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Status <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê brasileiro de testes de sensibilidade" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr></strong></td>
                         <td style="padding: 8px; border: 1px solid #ddd; color: #d97706; font-weight: bold;">Evidências Insuficientes</td>
                       </tr>
                       <tr style="background: #f9fafb;">
-                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>CIM obtida</strong></td>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><strong><abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> obtida</strong></td>
                         <td style="padding: 8px; border: 1px solid #ddd;">2 mg/L (exemplo)</td>
                       </tr>
                       <tr>
@@ -5350,8 +5350,8 @@ const App = () => {
                     <h4 style="color: #166534; margin-bottom: 15px;">💡 Mudança de Mentalidade</h4>
                     <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">
                       <tr style="background: #10b981; color: white;">
-                        <th style="padding: 10px; border: 1px solid #ddd;">Pensamento Antigo (CLSI)</th>
-                        <th style="padding: 10px; border: 1px solid #ddd;">Pensamento Novo (BrCAST)</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Pensamento Antigo (<abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr>)</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Pensamento Novo (<abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê brasileiro de testes de sensibilidade" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr>)</th>
                       </tr>
                       <tr>
                         <td style="padding: 8px; border: 1px solid #ddd;">S = Bom, I = Duvidoso, R = Ruim</td>
@@ -5380,7 +5380,7 @@ const App = () => {
                     <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
                       <li><strong>Amplia opções terapêuticas:</strong> Mais antibióticos podem ser usados com segurança</li>
                       <li><strong>Reduz pressão seletiva:</strong> Evita uso desnecessário de antibióticos de última linha</li>
-                      <li><strong>Melhora stewardship:</strong> Uso mais racional baseado em PK/PD</li>
+                      <li><strong>Melhora stewardship:</strong> Uso mais racional baseado em <abbr title="Farmacocinética/Farmacodinâmica - Estudo de como o corpo processa o medicamento e como ele age" style="text-decoration: underline dotted; cursor: help; border: none;">PK/PD</abbr></li>
                       <li><strong>Requer conhecimento:</strong> Profissionais precisam entender estratégias de otimização</li>
                     </ul>
                   </div>
@@ -5389,7 +5389,7 @@ const App = () => {
                     <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Mensagem Chave</h4>
                     <p style="font-size: 14px; line-height: 1.6;">
                       A categoria "I" representa uma <strong>oportunidade terapêutica</strong>, não uma limitação. 
-                      Com o conhecimento adequado de PK/PD e estratégias de otimização, antibióticos classificados 
+                      Com o conhecimento adequado de <abbr title="Farmacocinética/Farmacodinâmica - Estudo de como o corpo processa o medicamento e como ele age" style="text-decoration: underline dotted; cursor: help; border: none;">PK/PD</abbr> e estratégias de otimização, antibióticos classificados 
                       como "I" podem ser tão eficazes quanto os "S".
                     </p>
                   </div>
@@ -5410,7 +5410,7 @@ const App = () => {
               title: "Desafios Práticos e Princípios",
               content: `
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #4b5563; margin-bottom: 15px;">📚 Desafios Práticos do BrCAST</h3>
+                  <h3 style="color: #4b5563; margin-bottom: 15px;">📚 Desafios Práticos do <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê brasileiro de testes de sensibilidade" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr></h3>
                   
                   <div style="background: #ffffff; padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; margin: 10px 0;">
                     <h4 style="color: #374151; margin-bottom: 10px;">1️⃣ Transição de Sistemas</h4>
@@ -5424,7 +5424,7 @@ const App = () => {
                   <div style="background: #ffffff; padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; margin: 10px 0;">
                     <h4 style="color: #374151; margin-bottom: 10px;">2️⃣ Comunicação com Prescritores</h4>
                     <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
-                      <li>Médicos acostumados com CLSI podem estranhar mudanças</li>
+                      <li>Médicos acostumados com <abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr> podem estranhar mudanças</li>
                       <li>Necessidade de explicar por que "S" virou "I" ou "R"</li>
                       <li>Educação sobre estratégias de otimização</li>
                     </ul>
@@ -5454,7 +5454,7 @@ const App = () => {
                   <ol style="margin-left: 20px; line-height: 1.8; font-size: 15px;">
                     <li><strong>Educação contínua:</strong> Mantenha-se atualizado sobre mudanças</li>
                     <li><strong>Comunicação clara:</strong> Explique mudanças para prescritores</li>
-                    <li><strong>Pensamento PK/PD:</strong> Considere farmacocinética e farmacodinâmica</li>
+                    <li><strong>Pensamento <abbr title="Farmacocinética/Farmacodinâmica - Estudo de como o corpo processa o medicamento e como ele age" style="text-decoration: underline dotted; cursor: help; border: none;">PK/PD</abbr>:</strong> Considere farmacocinética e farmacodinâmica</li>
                     <li><strong>Individualização:</strong> Adapte estratégias ao paciente e contexto</li>
                     <li><strong>Colaboração:</strong> Trabalhe em equipe multidisciplinar</li>
                     <li><strong>Monitoramento:</strong> Acompanhe resposta clínica rigorosamente</li>
@@ -5464,7 +5464,7 @@ const App = () => {
                 <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #0ea5e9; margin: 15px 0;">
                   <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Mensagem Final</h4>
                   <p style="font-size: 14px; line-height: 1.6;">
-                    Os desafios do BrCAST são <strong>oportunidades de aprendizado</strong>. A categoria "I" 
+                    Os desafios do <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê brasileiro de testes de sensibilidade" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr> são <strong>oportunidades de aprendizado</strong>. A categoria "I" 
                     não é inferior ao "S", apenas requer <strong>pensamento farmacológico mais sofisticado</strong>. 
                     Quando encontrar "evidências insuficientes", busque <strong>literatura especializada</strong> 
                     e <strong>discussão multidisciplinar</strong> para tomar a melhor decisão para o paciente.
@@ -5492,474 +5492,739 @@ const App = () => {
           xp: 225,
           sections: [
             {
-              title: "O Que \"S\" Realmente Significa",
-              content: `
-                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #d97706; margin-bottom: 15px;">⚠️ O "S" Não É Garantia Absoluta</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Um resultado <strong>"Sensível" (S)</strong> no antibiograma indica que o microrganismo 
-                    é suscetível ao antibiótico <strong>in vitro</strong>, mas isso <strong>não garante sucesso 
-                    terapêutico</strong> em todas as situações clínicas.
-                  </p>
-                  
-                  <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                    <h4 style="color: #c2410c; margin-bottom: 15px;">🎯 O Que "S" Realmente Significa</h4>
-                    <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
-                      A categoria "Sensível" indica que:
-                    </p>
-                    <ul style="margin-left: 20px; line-height: 1.8;">
-                      <li><strong>In vitro:</strong> O antibiótico inibe o crescimento bacteriano em concentrações alcançáveis</li>
-                      <li><strong>Dose padrão:</strong> Com regime de dosagem recomendado</li>
-                      <li><strong>Alta probabilidade:</strong> De sucesso terapêutico em condições ideais</li>
-                      <li><strong>Não é certeza:</strong> Outros fatores podem interferir no resultado clínico</li>
-                    </ul>
-                  </div>
-                  
-                  <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #0ea5e9; margin: 15px 0;">
-                    <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Conceito Fundamental</h4>
-                    <p style="font-size: 14px; line-height: 1.6;">
-                      O antibiograma testa a sensibilidade <strong>in vitro</strong> em condições controladas. 
-                      O corpo humano apresenta variáveis complexas que podem afetar o resultado terapêutico, 
-                      mesmo quando o teste mostra "Sensível".
-                    </p>
-                  </div>
-                </div>
-              `,
-              question: {
-                text: "O que significa quando um antibiograma indica resultado \"S\" (Sensível)?",
-                options: [
-                  "A) Que o antibiótico garante 100% de cura da infecção em qualquer situação clínica",
-                  "B) Que o microrganismo é suscetível ao antibiótico in vitro com alta probabilidade de sucesso em condições ideais, mas outros fatores clínicos podem influenciar o resultado",
-                  "C) Que o antibiótico é ineficaz e não deve ser utilizado no tratamento"
-                ],
-                correct: 1,
-                explanation: "O resultado 'Sensível' (S) indica que o antibiótico inibe o crescimento bacteriano in vitro em concentrações alcançáveis com dose padrão, apresentando alta probabilidade de sucesso terapêutico em condições ideais. Porém, não é garantia absoluta, pois fatores como gravidade da infecção, localização, imunidade do paciente e farmacocinética do antibiótico também influenciam o desfecho clínico."
-              }
-            },
-            {
-              title: "Gravidade e Localização da Infecção",
-              content: `
-                <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #dc2626; margin-bottom: 15px;">🔍 Fatores que Influenciam o Desfecho</h3>
-                  
-                  <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                    <h4 style="color: #991b1b; margin-bottom: 10px;">1️⃣ Gravidade da Infecção</h4>
-                    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-                      <strong>Infecções graves</strong> requerem bactericidas potentes e rápidos:
-                    </p>
-                    <ul style="margin-left: 20px; line-height: 1.8;">
-                      <li><strong>Sepse/Choque séptico:</strong> Necessita ação bactericida rápida</li>
-                      <li><strong>Meningite:</strong> Exige alta penetração no SNC</li>
-                      <li><strong>Endocardite:</strong> Requer atividade bactericida sustentada</li>
-                      <li><strong>Neutropenia febril:</strong> Paciente sem defesas próprias</li>
-                    </ul>
-                    <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; font-style: italic;">
-                      <strong>Exemplo:</strong> Um antibiótico bacteriostático pode ser "S" in vitro, mas 
-                      insuficiente em sepse grave onde é necessária eliminação bacteriana rápida.
-                    </p>
-                  </div>
-                  
-                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                    <h4 style="color: #1e40af; margin-bottom: 10px;">2️⃣ Localização da Infecção</h4>
-                    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-                      A <strong>penetração do antibiótico</strong> no sítio de infecção é crucial:
-                    </p>
-                    
-                    <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
-                      <tr style="background: #3b82f6; color: white;">
-                        <th style="padding: 10px; border: 1px solid #ddd;">Sítio</th>
-                        <th style="padding: 10px; border: 1px solid #ddd;">Desafio</th>
-                      </tr>
-                      <tr>
-                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>SNC</strong></td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Barreira hematoencefálica</td>
-                      </tr>
-                      <tr style="background: #f9fafb;">
-                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Próstata</strong></td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Barreira prostática</td>
-                      </tr>
-                      <tr>
-                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Osso</strong></td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Vascularização limitada</td>
-                      </tr>
-                      <tr style="background: #f9fafb;">
-                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Abscesso</strong></td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">pH baixo, pus, necrose</td>
-                      </tr>
-                      <tr>
-                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Biofilme</strong></td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Matriz protetora</td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              `,
-              question: {
-                text: "Por que a localização da infecção é um fator crítico mesmo quando o antibiograma mostra \"S\"?",
-                options: [
-                  "A) Porque a localização não afeta a eficácia do antibiótico",
-                  "B) Porque alguns sítios apresentam barreiras à penetração do antibiótico (SNC, próstata, osso, abscessos, biofilmes), limitando sua eficácia apesar da sensibilidade in vitro",
-                  "C) Porque todos os antibióticos penetram igualmente em todos os tecidos"
-                ],
-                correct: 1,
-                explanation: "A localização da infecção é crítica porque alguns sítios apresentam barreiras significativas à penetração do antibiótico: barreira hematoencefálica no SNC, barreira prostática, vascularização limitada no osso, pH baixo e necrose em abscessos, e matriz extracelular protetora em biofilmes. Mesmo com resultado 'S', o antibiótico pode não alcançar concentrações adequadas nesses locais, necessitando escolha específica ou drenagem cirúrgica."
-              }
-            },
-            {
-              title: "Imunidade e Farmacocinética",
-              content: `
-                <div style="background: #f3e8ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #7c3aed; margin-bottom: 15px;">👤 Estado Imunológico e Propriedades PK/PD</h3>
-                  
-                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                    <h4 style="color: #d97706; margin-bottom: 10px;">3️⃣ Estado Imunológico do Paciente</h4>
-                    
-                    <div style="background: #fffbeb; padding: 15px; border-radius: 8px; margin: 10px 0;">
-                      <h5 style="color: #92400e; margin-bottom: 10px;">✅ Pacientes Imunocompetentes</h5>
-                      <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
-                        <li>Antibióticos bacteriostáticos podem ser suficientes</li>
-                        <li>Sistema imune completa a eliminação bacteriana</li>
-                        <li>Menor risco de falha terapêutica</li>
-                      </ul>
-                    </div>
-                    
-                    <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 10px 0;">
-                      <h5 style="color: #991b1b; margin-bottom: 10px;">⚠️ Pacientes Imunossuprimidos</h5>
-                      <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
-                        <li><strong>Neutropenia:</strong> Necessário antibiótico bactericida</li>
-                        <li><strong>HIV avançado:</strong> Tratamento prolongado, doses altas</li>
-                        <li><strong>Transplantados:</strong> Risco de infecções oportunistas</li>
-                        <li><strong>Quimioterapia:</strong> Profilaxia pode ser necessária</li>
-                      </ul>
-                    </div>
-                  </div>
-                  
-                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                    <h4 style="color: #1e40af; margin-bottom: 10px;">4️⃣ Farmacocinética do Antibiótico</h4>
-                    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-                      As <strong>propriedades PK/PD</strong> determinam se o antibiótico alcança concentrações adequadas:
-                    </p>
-                    
-                    <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
-                      <tr style="background: #7c3aed; color: white;">
-                        <th style="padding: 10px; border: 1px solid #ddd;">Parâmetro PK</th>
-                        <th style="padding: 10px; border: 1px solid #ddd;">Impacto Clínico</th>
-                      </tr>
-                      <tr>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Biodisponibilidade oral</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Viabilidade da via oral</td>
-                      </tr>
-                      <tr style="background: #f9fafb;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">Volume de distribuição</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Penetração tecidual</td>
-                      </tr>
-                      <tr>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Ligação proteica</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Fração livre ativa</td>
-                      </tr>
-                      <tr style="background: #f9fafb;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">Meia-vida</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">Frequência de doses</td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              `,
-              question: {
-                text: "Qual é a principal diferença na escolha de antibióticos entre pacientes imunocompetentes e imunossuprimidos?",
-                options: [
-                  "A) Não há diferença, ambos podem usar qualquer antibiótico \"S\"",
-                  "B) Pacientes imunocompetentes podem usar bacteriostáticos, enquanto imunossuprimidos (neutropenia, HIV avançado, transplantados) necessitam bactericidas devido à incapacidade do sistema imune de completar a eliminação bacteriana",
-                  "C) Pacientes imunossuprimidos sempre precisam de doses menores de antibióticos"
-                ],
-                correct: 1,
-                explanation: "Em pacientes imunocompetentes, o sistema imune pode completar a eliminação bacteriana, permitindo uso de antibióticos bacteriostáticos. Já em pacientes imunossuprimidos (neutropenia, HIV avançado, transplantados, quimioterapia), o sistema imune está comprometido, sendo necessário antibiótico bactericida para eliminação efetiva das bactérias, além de tratamento prolongado e doses potencialmente mais altas."
-              }
-            },
-            {
-              title: "Exemplo Prático: Meningite Pneumocócica",
-              content: `
-                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #4b5563; margin-bottom: 15px;">📊 Exemplo Prático Integrado</h3>
-                  <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
-                    <strong>Caso Clínico:</strong> Meningite por <em>Streptococcus pneumoniae</em>
-                  </p>
-                  
-                  <div style="background: #ffffff; padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; margin: 10px 0;">
-                    <ul style="margin-left: 20px; line-height: 1.8;">
-                      <li><strong>Antibiograma:</strong> Sensível (S) a Penicilina G (CIM = 0,06 mg/L)</li>
-                      <li><strong>Gravidade:</strong> Meningite é infecção grave, risco de morte/sequelas</li>
-                      <li><strong>Localização:</strong> SNC - barreira hematoencefálica limita penetração</li>
-                      <li><strong>Imunidade:</strong> Paciente previamente hígido (imunocompetente)</li>
-                      <li><strong>Farmacocinética:</strong> Penicilina G tem penetração limitada no SNC</li>
-                    </ul>
-                  </div>
-                  
-                  <div style="background: #dcfce7; padding: 15px; border-radius: 8px; margin: 10px 0;">
-                    <h4 style="color: #059669; margin-bottom: 10px;">✅ Decisão Terapêutica Adequada</h4>
-                    <p style="font-size: 14px; line-height: 1.6;">
-                      Apesar de "S", é necessário <strong>dose alta</strong> de Penicilina G (300.000-400.000 UI/kg/dia) 
-                      para alcançar concentrações adequadas no líquor. Dose padrão seria insuficiente mesmo com 
-                      resultado "Sensível".
-                    </p>
-                  </div>
-                  
-                  <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #0ea5e9; margin: 15px 0;">
-                    <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Mensagem Chave</h4>
-                    <p style="font-size: 14px; line-height: 1.6;">
-                      O antibiograma é uma <strong>ferramenta essencial</strong>, mas não substitui o 
-                      <strong>raciocínio clínico integrado</strong>. "Sensível" significa alta probabilidade 
-                      de sucesso <strong>em condições ideais</strong>, mas o médico deve considerar todos os 
-                      fatores do paciente, da infecção e do antibiótico para tomar a melhor decisão terapêutica.
-                    </p>
-                  </div>
-                </div>
-              `,
-              question: {
-                text: "No caso de meningite pneumocócica com antibiograma \"S\" para Penicilina G, qual é a conduta adequada?",
-                options: [
-                  "A) Usar dose padrão de Penicilina G, pois o antibiograma mostra \"S\"",
-                  "B) Usar dose alta de Penicilina G (300.000-400.000 UI/kg/dia) devido à penetração limitada no SNC, mesmo com resultado \"S\"",
-                  "C) Trocar por outro antibiótico, pois Penicilina G nunca funciona em meningite"
-                ],
-                correct: 1,
-                explanation: "Mesmo com resultado 'Sensível', a meningite pneumocócica requer dose alta de Penicilina G (300.000-400.000 UI/kg/dia) porque: (1) é infecção grave com risco de morte/sequelas, (2) a barreira hematoencefálica limita a penetração do antibiótico no SNC, (3) dose padrão resultaria em concentrações subterapêuticas no líquor. Este caso ilustra perfeitamente como 'S' não garante sucesso com dose padrão em todas as situações."
-              }
-            },
-            {
-              title: "Por Que Interpretar Mecanismos de Resistência",
-              content: `
-                <div style="background: #eef2ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #4338ca; margin-bottom: 15px;">🔬 Além do S/I/R</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Interpretar <strong>mecanismos de resistência</strong> permite decisões terapêuticas mais precisas.
-                  </p>
-                  
-                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                    <h4 style="color: #1e40af; margin-bottom: 15px;">🧩 Importância Clínica</h4>
-                    <ul style="margin-left: 20px; line-height: 1.8;">
-                      <li><strong>Predizer resistências cruzadas:</strong> Um mecanismo afeta múltiplos antibióticos</li>
-                      <li><strong>Escolher terapia adequada:</strong> Alguns mecanismos permitem ajustes de dose</li>
-                      <li><strong>Evitar falhas:</strong> Antibióticos "S" podem falhar com mecanismos complexos</li>
-                      <li><strong>Vigilância epidemiológica:</strong> Identificar disseminação de resistência</li>
-                      <li><strong>Controle de infecção:</strong> Implementar precauções adequadas</li>
-                    </ul>
-                  </div>
-                </div>
-              `,
-              question: {
-                text: "Por que é importante interpretar os mecanismos de resistência além da categorização S/I/R?",
-                options: [
-                  "A) Apenas para fins acadêmicos, sem impacto clínico prático",
-                  "B) Para predizer resistências cruzadas, escolher terapia adequada, evitar falhas terapêuticas e implementar controle de infecção apropriado",
-                  "C) Porque a categorização S/I/R é sempre incorreta"
-                ],
-                correct: 1,
-                explanation: "Interpretar mecanismos de resistência é essencial porque permite: (1) predizer resistências cruzadas a múltiplos antibióticos, (2) escolher terapia adequada considerando ajustes de dose, (3) evitar falhas terapêuticas mesmo com resultado 'S', (4) realizar vigilância epidemiológica, e (5) implementar precauções de controle de infecção apropriadas. Vai além da simples categorização S/I/R."
-              }
-            },
-            {
-              title: "β-Lactamases: ESBL e Carbapenemases",
-              content: `
-                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #059669; margin-bottom: 15px;">🎯 β-Lactamases</h3>
-                  <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
-                    Enzimas que <strong>hidrolisam o anel β-lactâmico</strong>, inativando penicilinas e cefalosporinas.
-                  </p>
-                  
-                  <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
-                    <tr style="background: #10b981; color: white;">
-                      <th style="padding: 10px; border: 1px solid #ddd;">Tipo</th>
-                      <th style="padding: 10px; border: 1px solid #ddd;">Padrão</th>
-                      <th style="padding: 10px; border: 1px solid #ddd;">Como Identificar</th>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #ddd;"><strong>ESBL</strong></td>
-                      <td style="padding: 8px; border: 1px solid #ddd;">R a cefalosporinas 3ª geração</td>
-                      <td style="padding: 8px; border: 1px solid #ddd;">S a carbapenêmicos</td>
-                    </tr>
-                    <tr style="background: #f9fafb;">
-                      <td style="padding: 8px; border: 1px solid #ddd;"><strong>KPC</strong></td>
-                      <td style="padding: 8px; border: 1px solid #ddd;">R a carbapenêmicos</td>
-                      <td style="padding: 8px; border: 1px solid #ddd;">CIM elevada para meropenem</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #ddd;"><strong>MBL</strong></td>
-                      <td style="padding: 8px; border: 1px solid #ddd;">R a todos β-lactâmicos</td>
-                      <td style="padding: 8px; border: 1px solid #ddd;">S a aztreonam</td>
-                    </tr>
-                  </table>
-                </div>
-              `,
-              question: {
-                text: "Como diferenciar ESBL de carbapenemases no antibiograma?",
-                options: [
-                  "A) ESBL é sensível a carbapenêmicos e resistente a cefalosporinas de 3ª geração; carbapenemases são resistentes a carbapenêmicos",
-                  "B) Não é possível diferenciar pelo antibiograma",
-                  "C) ESBL sempre é sensível a todos os antibióticos"
-                ],
-                correct: 0,
-                explanation: "ESBL (Extended-Spectrum β-Lactamase) apresenta resistência a penicilinas e cefalosporinas de 3ª geração (ceftriaxona, cefotaxima), mas mantém sensibilidade a carbapenêmicos. Já as carbapenemases (KPC, MBL) conferem resistência aos carbapenêmicos. MBL se diferencia por manter sensibilidade a aztreonam. Esta diferenciação é crucial para escolha terapêutica."
-              }
-            },
-            {
-              title: "Outros Mecanismos de Resistência",
-              content: `
-                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #d97706; margin-bottom: 15px;">⚙️ Mecanismos Adicionais</h3>
-                  
-                  <div style="background: #fffbeb; padding: 15px; border-radius: 8px; margin: 10px 0;">
-                    <h4 style="color: #92400e; margin-bottom: 10px;">🔄 Bombas de Efluxo</h4>
-                    <p style="font-size: 14px; line-height: 1.6;">
-                      Expulsam antibióticos para fora da célula. Comum em <em>Pseudomonas</em> e <em>Acinetobacter</em>.
-                      Causam resistência a múltiplas classes simultaneamente.
-                    </p>
-                  </div>
-                  
-                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 10px 0;">
-                    <h4 style="color: #991b1b; margin-bottom: 10px;">🚪 Alterações de Permeabilidade</h4>
-                    <p style="font-size: 14px; line-height: 1.6;">
-                      Perda de porinas reduz entrada de antibióticos. ESBL + perda de porinas pode causar 
-                      resistência a carbapenêmicos sem carbapenemase.
-                    </p>
-                  </div>
-                  
-                  <div style="background: #f3e8ff; padding: 15px; border-radius: 8px; margin: 10px 0;">
-                    <h4 style="color: #7c3aed; margin-bottom: 10px;">🎯 Modificações do Alvo</h4>
-                    <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
-                      <li><strong>PBP2a:</strong> MRSA (resistente a todos β-lactâmicos)</li>
-                      <li><strong>DNA girase:</strong> Resistência a fluoroquinolonas</li>
-                      <li><strong>D-Ala-D-Lac:</strong> VRE (resistente a vancomicina)</li>
-                    </ul>
-                  </div>
-                </div>
-              `,
-              question: {
-                text: "Qual mecanismo explica MRSA (Staphylococcus aureus resistente à meticilina)?",
-                options: [
-                  "A) Bombas de efluxo que expulsam β-lactâmicos",
-                  "B) Modificação do alvo (PBP2a) que impede ligação de todos os β-lactâmicos",
-                  "C) Produção de β-lactamases"
-                ],
-                correct: 1,
-                explanation: "MRSA apresenta resistência por modificação do alvo molecular através da produção de PBP2a (Penicillin-Binding Protein alterada), que tem baixa afinidade por todos os β-lactâmicos, incluindo meticilina e oxacilina. Este mecanismo é diferente de β-lactamases e confere resistência cruzada a toda a classe dos β-lactâmicos."
-              }
-            },
-            {
-              title: "Exemplo Prático: Interpretando Antibiograma",
-              content: `
-                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #4b5563; margin-bottom: 15px;">📊 Caso Clínico</h3>
-                  <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
-                    <em>Klebsiella pneumoniae</em> em hemocultura:
-                  </p>
-                  
-                  <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
-                    <tr style="background: #6366f1; color: white;">
-                      <th style="padding: 10px;">Antibiótico</th>
-                      <th style="padding: 10px;">Resultado</th>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #ddd;">Ampicilina</td>
-                      <td style="padding: 8px; border: 1px solid #ddd; color: #dc2626; font-weight: bold;">R</td>
-                    </tr>
-                    <tr style="background: #f9fafb;">
-                      <td style="padding: 8px; border: 1px solid #ddd;">Ceftriaxona</td>
-                      <td style="padding: 8px; border: 1px solid #ddd; color: #dc2626; font-weight: bold;">R</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #ddd;">Meropenem</td>
-                      <td style="padding: 8px; border: 1px solid #ddd; color: #059669; font-weight: bold;">S</td>
-                    </tr>
-                  </table>
-                  
-                  <div style="background: #dcfce7; padding: 15px; border-radius: 8px; margin: 10px 0;">
-                    <h4 style="color: #059669; margin-bottom: 10px;">✅ Interpretação</h4>
-                    <p style="font-size: 14px; line-height: 1.6;">
-                      Padrão compatível com <strong>ESBL</strong>: resistente a penicilinas e cefalosporinas 
-                      de 3ª geração, mas sensível a carbapenêmicos. Tratamento: meropenem ou ertapenem.
-                    </p>
-                  </div>
-                </div>
-              `,
-              question: {
-                text: "No caso apresentado, qual é o mecanismo de resistência mais provável?",
-                options: [
-                  "A) Carbapenemase (KPC)",
-                  "B) ESBL (resistente a cefalosporinas 3ª geração, sensível a carbapenêmicos)",
-                  "C) Ausência de mecanismo de resistência"
-                ],
-                correct: 1,
-                explanation: "O padrão de resistência a ampicilina e ceftriaxona (cefalosporina de 3ª geração), mas sensibilidade a meropenem (carbapenêmico), é característico de ESBL (Extended-Spectrum β-Lactamase). Se fosse carbapenemase, haveria resistência ao meropenem. O tratamento de escolha são os carbapenêmicos."
-              }
-            },
-            {
-              title: "Princípios da Abordagem de Microrganismos Resistentes",
-              content: `
-                <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #dc2626; margin-bottom: 15px;">⚠️ Microrganismos Multirresistentes</h3>
-                  
-                  <div style="background: #fef2f2; padding: 15px; border-radius: 8px; margin: 10px 0;">
-                    <h4 style="color: #991b1b; margin-bottom: 10px;">🎯 Princípios Fundamentais</h4>
-                    <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
-                      <li><strong>Identificação precoce:</strong> Reconhecer padrões de resistência rapidamente</li>
-                      <li><strong>Terapia direcionada:</strong> Usar antibióticos específicos para o mecanismo</li>
-                      <li><strong>Controle de infecção:</strong> Precauções de contato rigorosas</li>
-                      <li><strong>Stewardship:</strong> Uso racional para prevenir disseminação</li>
-                      <li><strong>Combinações:</strong> Considerar terapia combinada em casos graves</li>
-                    </ul>
-                  </div>
-                </div>
-              `,
-              question: {
-                text: "Qual é o princípio fundamental na abordagem de microrganismos multirresistentes?",
-                options: [
-                  "A) Sempre usar antibióticos de amplo espectro em doses máximas",
-                  "B) Identificação precoce, terapia direcionada ao mecanismo, controle de infecção rigoroso e uso racional de antibióticos",
-                  "C) Evitar tratamento e aguardar resolução espontânea"
-                ],
-                correct: 1,
-                explanation: "A abordagem de microrganismos multirresistentes requer: (1) identificação precoce dos padrões de resistência, (2) terapia direcionada específica para o mecanismo identificado, (3) precauções rigorosas de controle de infecção, (4) stewardship antimicrobiano para uso racional, e (5) consideração de terapia combinada em casos graves. Não é simplesmente usar antibióticos de amplo espectro indiscriminadamente."
-              }
-            },
-            {
-              title: "MRSA e VRE",
-              content: `
-                <div style="background: #f3e8ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #7c3aed; margin-bottom: 15px;">🦠 Gram-Positivos Resistentes</h3>
-                  
-                  <div style="background: #faf5ff; padding: 15px; border-radius: 8px; margin: 10px 0;">
-                    <h4 style="color: #6b21a8; margin-bottom: 10px;">MRSA</h4>
-                    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-                      <strong>Mecanismo:</strong> PBP2a (resistente a todos β-lactâmicos)
-                    </p>
-                    <p style="font-size: 14px; line-height: 1.6;">
-                      <strong>Tratamento:</strong> Vancomicina, daptomicina, linezolida, ceftarolina
-                    </p>
-                  </div>
-                  
-                  <div style="background: #fef2f2; padding: 15px; border-radius: 8px; margin: 10px 0;">
-                    <h4 style="color: #991b1b; margin-bottom: 10px;">VRE</h4>
-                    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-                      <strong>Mecanismo:</strong> D-Ala-D-Lac (resistente a vancomicina)
-                    </p>
-                    <p style="font-size: 14px; line-height: 1.6;">
-                      <strong>Tratamento:</strong> Linezolida, daptomicina, tigeciclina
-                    </p>
-                  </div>
-                </div>
-              `,
-              question: {
-                text: "Qual antibiótico NÃO deve ser usado para tratar MRSA?",
-                options: [
-                  "A) Vancomicina",
-                  "B) Oxacilina (β-lactâmico)",
-                  "C) Linezolida"
-                ],
-                correct: 1,
-                explanation: "MRSA (Staphylococcus aureus resistente à meticilina) possui PBP2a, que confere resistência a TODOS os β-lactâmicos, incluindo oxacilina, meticilina e cefalosporinas. Os tratamentos adequados incluem vancomicina, daptomicina, linezolida e ceftarolina. Usar β-lactâmicos em MRSA resultará em falha terapêutica."
-              }
-            },
+      title: "Limitações da Categorização",
+      content: `
+        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #d97706; margin-bottom: 15px;">⚠️ O "S" Não É Garantia Absoluta</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            Um resultado <strong>"Sensível" (S)</strong> no antibiograma indica que o microrganismo 
+            é suscetível ao antibiótico <strong>in vitro</strong>, mas isso <strong>não garante sucesso 
+            terapêutico</strong> em todas as situações clínicas.
+          </p>
+          
+          <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h4 style="color: #c2410c; margin-bottom: 15px;">🎯 O Que "S" Realmente Significa</h4>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+              A categoria "Sensível" indica que:
+            </p>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>In vitro:</strong> O antibiótico inibe o crescimento bacteriano em concentrações alcançáveis</li>
+              <li><strong>Dose padrão:</strong> Com regime de dosagem recomendado</li>
+              <li><strong>Alta probabilidade:</strong> De sucesso terapêutico em condições ideais</li>
+              <li><strong>Não é certeza:</strong> Outros fatores podem interferir no resultado clínico</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #dc2626; margin-bottom: 15px;">🔍 Fatores que Influenciam o Desfecho</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Mesmo com resultado "S", o sucesso terapêutico depende de múltiplos fatores clínicos e farmacológicos:
+          </p>
+          
+          <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #991b1b; margin-bottom: 10px;">1️⃣ Gravidade da Infecção</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              <strong>Infecções graves</strong> requerem bactericidas potentes e rápidos:
+            </p>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>Sepse/Choque séptico:</strong> Necessita ação bactericida rápida</li>
+              <li><strong>Meningite:</strong> Exige alta penetração no <abbr title="Sistema Nervoso Central - Cérebro e medula espinhal" style="text-decoration: underline dotted; cursor: help; border: none;">SNC</abbr></li>
+              <li><strong>Endocardite:</strong> Requer atividade bactericida sustentada</li>
+              <li><strong>Neutropenia febril:</strong> Paciente sem defesas próprias</li>
+            </ul>
+            <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; font-style: italic;">
+              <strong>Exemplo:</strong> Um antibiótico bacteriostático pode ser "S" in vitro, mas 
+              insuficiente em sepse grave onde é necessária eliminação bacteriana rápida.
+            </p>
+          </div>
+          
+          <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #1e40af; margin-bottom: 10px;">2️⃣ Localização da Infecção</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              A <strong>penetração do antibiótico</strong> no sítio de infecção é crucial:
+            </p>
+            
+            <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+              <tr style="background: #3b82f6; color: white;">
+                <th style="padding: 10px; border: 1px solid #ddd;">Sítio de Infecção</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Desafio de Penetração</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Implicação</th>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Sistema Nervoso Central</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Barreira hematoencefálica</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Apenas antibióticos com boa penetração no <abbr title="Sistema Nervoso Central - Cérebro e medula espinhal" style="text-decoration: underline dotted; cursor: help; border: none;">SNC</abbr></td>
+              </tr>
+              <tr style="background: #f9fafb;">
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Próstata</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Barreira prostática</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Fluoroquinolonas, macrolídeos, trimetoprima</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Osso</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Vascularização limitada</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Tratamento prolongado, alta biodisponibilidade</td>
+              </tr>
+              <tr style="background: #f9fafb;">
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Abscesso</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">pH baixo, pus, necrose</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Drenagem cirúrgica essencial</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Biofilme</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Matriz extracelular protetora</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Remoção de dispositivo pode ser necessária</td>
+              </tr>
+            </table>
+            
+            <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; font-style: italic;">
+              <strong>Exemplo:</strong> Ciprofloxacino pode ser "S" para <em>E. coli</em>, mas se a 
+              infecção for meningite, a penetração no <abbr title="Sistema Nervoso Central - Cérebro e medula espinhal" style="text-decoration: underline dotted; cursor: help; border: none;">SNC</abbr> é insuficiente apesar da sensibilidade.
+            </p>
+          </div>
+          
+          <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #d97706; margin-bottom: 10px;">3️⃣ Estado Imunológico do Paciente</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              O <strong>sistema imune</strong> é fundamental para erradicar a infecção:
+            </p>
+            
+            <div style="background: #fffbeb; padding: 15px; border-radius: 8px; margin: 10px 0;">
+              <h6 style="color: #92400e; margin-bottom: 10px;">Pacientes Imunocompetentes</h6>
+              <ul style="margin-left: 20px; line-height: 1.8;">
+                <li>Antibióticos <strong>bacteriostáticos</strong> podem ser suficientes</li>
+                <li>Sistema imune completa a eliminação bacteriana</li>
+                <li>Menor risco de falha terapêutica</li>
+              </ul>
+            </div>
+            
+            <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 10px 0;">
+              <h6 style="color: #991b1b; margin-bottom: 10px;">Pacientes Imunossuprimidos</h6>
+              <ul style="margin-left: 20px; line-height: 1.8;">
+                <li><strong>Neutropenia:</strong> Necessário antibiótico bactericida</li>
+                <li><strong>HIV avançado:</strong> Tratamento prolongado, doses altas</li>
+                <li><strong>Transplantados:</strong> Risco de infecções oportunistas</li>
+                <li><strong>Quimioterapia:</strong> Profilaxia pode ser necessária</li>
+              </ul>
+            </div>
+            
+            <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; font-style: italic;">
+              <strong>Exemplo:</strong> Azitromicina pode curar pneumonia em paciente saudável, mas 
+              ser insuficiente em paciente com neutropenia profunda.
+            </p>
+          </div>
+          
+          <div style="background: #f3e8ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #7c3aed; margin-bottom: 10px;">4️⃣ Farmacocinética do Antibiótico</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              As <strong>propriedades <abbr title="Farmacocinética/Farmacodinâmica - Estudo de como o corpo processa o medicamento e como ele age" style="text-decoration: underline dotted; cursor: help; border: none;">PK/PD</abbr></strong> determinam se o antibiótico alcança concentrações 
+              adequadas no sítio de infecção:
+            </p>
+            
+            <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+              <tr style="background: #7c3aed; color: white;">
+                <th style="padding: 10px; border: 1px solid #ddd;">Parâmetro PK</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Impacto Clínico</th>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Biodisponibilidade oral</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Determina se via oral é viável</td>
+              </tr>
+              <tr style="background: #f9fafb;">
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Volume de distribuição</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Penetração em tecidos profundos</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Ligação proteica</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Apenas fração livre é ativa</td>
+              </tr>
+              <tr style="background: #f9fafb;">
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Meia-vida</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Frequência de administração</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Metabolismo</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Interações medicamentosas</td>
+              </tr>
+              <tr style="background: #f9fafb;">
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Excreção</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Ajuste em disfunção renal/hepática</td>
+              </tr>
+            </table>
+            
+            <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; font-style: italic;">
+              <strong>Exemplo:</strong> Vancomicina pode ser "S" para <abbr title="Methicillin-Resistant Staphylococcus aureus - Estafilococo resistente à meticilina" style="text-decoration: underline dotted; cursor: help; border: none;">MRSA</abbr>, mas em paciente obeso 
+              ou com clearance renal aumentado, a dose padrão pode resultar em níveis subterapêuticos.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #4b5563; margin-bottom: 10px;">📊 Exemplo Prático Integrado</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+            <strong>Caso Clínico:</strong> Meningite por <em>Streptococcus pneumoniae</em>
+          </p>
+          
+          <div style="background: #ffffff; padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; margin: 10px 0;">
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>Antibiograma:</strong> Sensível (S) a Penicilina G (<abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> = 0,06 mg/L)</li>
+              <li><strong>Gravidade:</strong> Meningite é infecção grave, risco de morte/sequelas</li>
+              <li><strong>Localização:</strong> <abbr title="Sistema Nervoso Central - Cérebro e medula espinhal" style="text-decoration: underline dotted; cursor: help; border: none;">SNC</abbr> - barreira hematoencefálica limita penetração</li>
+              <li><strong>Imunidade:</strong> Paciente previamente hígido (imunocompetente)</li>
+              <li><strong>Farmacocinética:</strong> Penicilina G tem penetração limitada no <abbr title="Sistema Nervoso Central - Cérebro e medula espinhal" style="text-decoration: underline dotted; cursor: help; border: none;">SNC</abbr></li>
+            </ul>
+          </div>
+          
+          <div style="background: #dcfce7; padding: 15px; border-radius: 8px; margin: 10px 0;">
+            <h5 style="color: #059669; margin-bottom: 10px;">✅ Decisão Terapêutica Adequada</h5>
+            <p style="font-size: 14px; line-height: 1.6;">
+              Apesar de "S", é necessário <strong>dose alta</strong> de Penicilina G (300.000-400.000 UI/kg/dia) 
+              para alcançar concentrações adequadas no líquor. Dose padrão seria insuficiente mesmo com 
+              resultado "Sensível".
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #0ea5e9; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Mensagem Chave</h4>
+          <p style="font-size: 14px; line-height: 1.6;">
+            O antibiograma é uma <strong>ferramenta essencial</strong>, mas não substitui o 
+            <strong>raciocínio clínico integrado</strong>. "Sensível" significa alta probabilidade 
+            de sucesso <strong>em condições ideais</strong>, mas o médico deve considerar todos os 
+            fatores do paciente, da infecção e do antibiótico para tomar a melhor decisão terapêutica.
+          </p>
+        </div>
+      `,
+      question: {
+        text: "Por que um resultado \"S\" (sensível) no antibiograma não garante necessariamente o sucesso do tratamento?",
+        options: [
+          "Porque o resultado \"S\" indica apenas resistência parcial do microrganismo",
+          "Porque fatores clínicos e farmacológicos, como gravidade e localização da infecção, imunidade do paciente e farmacocinética do antibiótico, também influenciam o desfecho terapêutico",
+          "Porque o resultado \"S\" depende exclusivamente da técnica laboratorial e não tem relevância clínica"
+        ],
+        correct: 1,
+        explanation: "Um resultado 'Sensível' (S) indica que o microrganismo é suscetível ao antibiótico in vitro, mas o sucesso terapêutico depende de múltiplos fatores: (1) Gravidade da infecção - infecções graves podem necessitar bactericidas potentes; (2) Localização - penetração do antibiótico no sítio (SNC, próstata, osso, abscessos); (3) Estado imunológico - pacientes imunossuprimidos necessitam antibióticos bactericidas; (4) Farmacocinética - biodisponibilidade, distribuição, metabolismo e excreção. O antibiograma é essencial, mas não substitui o raciocínio clínico integrado."
+      }
+    },
+    {
+      title: "Análise de Mecanismos",
+      content: `
+        <div style="background: #eef2ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #4338ca; margin-bottom: 15px;">🔬 Interpretação de Mecanismos de Resistência</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            Além de identificar quais antibióticos são "S", "I" ou "R", devemos <strong>interpretar 
+            os padrões de resistência</strong> para deduzir os <strong>mecanismos moleculares</strong> 
+            envolvidos. Isso orienta decisões terapêuticas mais precisas.
+          </p>
+          
+          <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h4 style="color: #1e40af; margin-bottom: 15px;">🧩 Por Que Interpretar Mecanismos?</h4>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>Predizer resistências cruzadas:</strong> Um mecanismo pode conferir resistência a múltiplos antibióticos</li>
+              <li><strong>Escolher terapia adequada:</strong> Alguns mecanismos podem ser superados com ajustes de dose</li>
+              <li><strong>Evitar falhas terapêuticas:</strong> Antibióticos "S" podem não funcionar se o mecanismo for complexo</li>
+              <li><strong>Vigilância epidemiológica:</strong> Identificar disseminação de resistência</li>
+              <li><strong>Controle de infecção:</strong> Implementar precauções adequadas</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #059669; margin-bottom: 15px;">🎯 Principais Mecanismos de Resistência</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Padrões específicos no antibiograma podem indicar a presença de:
+          </p>
+          
+          <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #166534; margin-bottom: 10px;">1️⃣ β-Lactamases</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              Enzimas que <strong>hidrolisam o anel β-lactâmico</strong>, inativando penicilinas, 
+              cefalosporinas e outros β-lactâmicos.
+            </p>
+            
+            <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+              <tr style="background: #10b981; color: white;">
+                <th style="padding: 10px; border: 1px solid #ddd;">Tipo de β-Lactamase</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Padrão de Resistência</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Antibióticos Afetados</th>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong><abbr title="Extended-Spectrum β-Lactamase - Enzima que confere resistência a cefalosporinas de amplo espectro" style="text-decoration: underline dotted; cursor: help; border: none;">ESBL</abbr></strong> (Extended-Spectrum β-Lactamase)</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">R a penicilinas e cefalosporinas de 3ª geração</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Ampicilina, Ceftriaxona, Cefotaxima</td>
+              </tr>
+              <tr style="background: #f9fafb;">
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong><abbr title="Klebsiella pneumoniae Carbapenemase - Enzima que confere resistência a carbapenêmicos" style="text-decoration: underline dotted; cursor: help; border: none;">KPC</abbr></strong> (Klebsiella pneumoniae Carbapenemase)</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">R a carbapenêmicos</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Meropenem, Imipenem, Ertapenem</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong><abbr title="Cefalosporinase - Enzima que confere resistência a cefalosporinas de 1ª a 3ª geração" style="text-decoration: underline dotted; cursor: help; border: none;">AmpC</abbr></strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">R a cefalosporinas de 1ª-3ª geração</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Cefazolina, Ceftriaxona</td>
+              </tr>
+              <tr style="background: #f9fafb;">
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong><abbr title="Metalo-β-Lactamase - Enzima que confere resistência a todos β-lactâmicos exceto aztreonam" style="text-decoration: underline dotted; cursor: help; border: none;">MBL</abbr></strong> (Metalo-β-Lactamase)</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">R a todos β-lactâmicos exceto aztreonam</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Penicilinas, cefalosporinas, carbapenêmicos</td>
+              </tr>
+            </table>
+            
+            <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin: 10px 0;">
+              <h6 style="color: #065f46; margin-bottom: 10px;">🔍 Como Identificar no Antibiograma</h6>
+              <ul style="margin-left: 20px; line-height: 1.8;">
+                <li><strong><abbr title="Extended-Spectrum β-Lactamase - Enzima que confere resistência a cefalosporinas de amplo espectro" style="text-decoration: underline dotted; cursor: help; border: none;">ESBL</abbr>:</strong> Sensível a carbapenêmicos, resistente a cefalosporinas de 3ª geração</li>
+                <li><strong><abbr title="Klebsiella pneumoniae Carbapenemase - Enzima que confere resistência a carbapenêmicos" style="text-decoration: underline dotted; cursor: help; border: none;">KPC</abbr>:</strong> Resistente a carbapenêmicos, pode ter <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> elevada mas < ponto de corte</li>
+                <li><strong><abbr title="Cefalosporinase - Enzima que confere resistência a cefalosporinas de 1ª a 3ª geração" style="text-decoration: underline dotted; cursor: help; border: none;">AmpC</abbr>:</strong> Resistente a cefoxitina, sensível a cefepima e carbapenêmicos</li>
+                <li><strong><abbr title="Metalo-β-Lactamase - Enzima que confere resistência a todos β-lactâmicos exceto aztreonam" style="text-decoration: underline dotted; cursor: help; border: none;">MBL</abbr>:</strong> Resistente a carbapenêmicos, sensível a aztreonam</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #d97706; margin-bottom: 10px;">2️⃣ Bombas de Efluxo</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              Proteínas de membrana que <strong>expulsam ativamente</strong> antibióticos para fora 
+              da célula bacteriana, reduzindo a concentração intracelular.
+            </p>
+            
+            <div style="background: #fffbeb; padding: 15px; border-radius: 8px; margin: 10px 0;">
+              <h6 style="color: #92400e; margin-bottom: 10px;">📋 Características</h6>
+              <ul style="margin-left: 20px; line-height: 1.8;">
+                <li><strong>Múltiplas classes:</strong> Podem expulsar diferentes antibióticos simultaneamente</li>
+                <li><strong>Resistência cruzada:</strong> Fluoroquinolonas, tetraciclinas, macrolídeos</li>
+                <li><strong>Comum em:</strong> <em>Pseudomonas aeruginosa</em>, <em>Acinetobacter baumannii</em></li>
+                <li><strong>Padrão:</strong> Resistência a múltiplas classes não relacionadas</li>
+              </ul>
+            </div>
+            
+            <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; font-style: italic;">
+              <strong>Exemplo:</strong> <em>Pseudomonas aeruginosa</em> resistente a ciprofloxacino, 
+              levofloxacino, gentamicina e ceftazidima simultaneamente pode indicar hiperexpressão 
+              de bombas de efluxo.
+            </p>
+          </div>
+          
+          <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #dc2626; margin-bottom: 10px;">3️⃣ Alterações de Permeabilidade</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              Mutações em <strong>porinas</strong> (canais de membrana externa) reduzem a entrada 
+              de antibióticos na célula bacteriana.
+            </p>
+            
+            <div style="background: #fef2f2; padding: 15px; border-radius: 8px; margin: 10px 0;">
+              <h6 style="color: #991b1b; margin-bottom: 10px;">🔬 Mecanismo</h6>
+              <ul style="margin-left: 20px; line-height: 1.8;">
+                <li><strong>Perda de porinas:</strong> OprD em <em>Pseudomonas</em> (resistência a imipenem)</li>
+                <li><strong>Redução de OmpF/OmpC:</strong> Em enterobactérias (resistência a β-lactâmicos)</li>
+                <li><strong>Efeito sinérgico:</strong> Combinado com β-lactamases aumenta muito a resistência</li>
+              </ul>
+            </div>
+            
+            <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; font-style: italic;">
+              <strong>Exemplo:</strong> <em>Klebsiella pneumoniae</em> com <abbr title="Extended-Spectrum β-Lactamase - Enzima que confere resistência a cefalosporinas de amplo espectro" style="text-decoration: underline dotted; cursor: help; border: none;">ESBL</abbr> + perda de porinas 
+              pode apresentar resistência a carbapenêmicos mesmo sem carbapenemase.
+            </p>
+          </div>
+          
+          <div style="background: #f3e8ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #7c3aed; margin-bottom: 10px;">4️⃣ Modificações do Alvo</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              Mutações que <strong>alteram a estrutura do alvo molecular</strong> do antibiótico, 
+              impedindo sua ligação e ação.
+            </p>
+            
+            <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+              <tr style="background: #7c3aed; color: white;">
+                <th style="padding: 10px; border: 1px solid #ddd;">Alvo Modificado</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Antibiótico Afetado</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Exemplo</th>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong><abbr title="Penicillin-Binding Protein 2a - Proteína alterada que confere resistência em MRSA" style="text-decoration: underline dotted; cursor: help; border: none;">PBP2a</abbr></strong> (Penicillin-Binding Protein)</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Todos β-lactâmicos</td>
+                <td style="padding: 8px; border: 1px solid #ddd;"><abbr title="Methicillin-Resistant Staphylococcus aureus - Estafilococo resistente à meticilina" style="text-decoration: underline dotted; cursor: help; border: none;">MRSA</abbr> (Staphylococcus aureus resistente à meticilina)</td>
+              </tr>
+              <tr style="background: #f9fafb;">
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>DNA girase</strong> (mutações em gyrA/gyrB)</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Fluoroquinolonas</td>
+                <td style="padding: 8px; border: 1px solid #ddd;"><em>E. coli</em> resistente a ciprofloxacino</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Ribossomo 23S</strong> (mutação em erm)</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Macrolídeos, lincosamidas</td>
+                <td style="padding: 8px; border: 1px solid #ddd;"><em>Streptococcus pneumoniae</em> R a azitromicina</td>
+              </tr>
+              <tr style="background: #f9fafb;">
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong><abbr title="Modificação do peptideoglicano que confere resistência à vancomicina em VRE" style="text-decoration: underline dotted; cursor: help; border: none;">D-Ala-D-Lac</abbr></strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Vancomicina</td>
+                <td style="padding: 8px; border: 1px solid #ddd;"><abbr title="Vancomycin-Resistant Enterococcus - Enterococo resistente à vancomicina" style="text-decoration: underline dotted; cursor: help; border: none;">VRE</abbr> (Enterococcus resistente à vancomicina)</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #4b5563; margin-bottom: 10px;">📊 Exemplo Prático: Interpretando um Antibiograma</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+            <strong>Caso:</strong> <em>Klebsiella pneumoniae</em> isolada de hemocultura
+          </p>
+          
+          <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+            <tr style="background: #6366f1; color: white;">
+              <th style="padding: 10px; border: 1px solid #ddd;">Antibiótico</th>
+              <th style="padding: 10px; border: 1px solid #ddd;"><abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> (mg/L)</th>
+              <th style="padding: 10px; border: 1px solid #ddd;">Interpretação</th>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;">Ampicilina</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">> 32</td>
+              <td style="padding: 8px; border: 1px solid #ddd; color: #dc2626; font-weight: bold;">R</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd;">Ceftriaxona</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">> 64</td>
+              <td style="padding: 8px; border: 1px solid #ddd; color: #dc2626; font-weight: bold;">R</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;">Cefepima</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">16</td>
+              <td style="padding: 8px; border: 1px solid #ddd; color: #d97706; font-weight: bold;">I</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+              <td style="padding: 8px; border: 1px solid #ddd;">Meropenem</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">0,25</td>
+              <td style="padding: 8px; border: 1px solid #ddd; color: #059669; font-weight: bold;">S</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; border: 1px solid #ddd;">Gentamicina</td>
+              <td style="padding: 8px; border: 1px solid #ddd;">1</td>
+              <td style="padding: 8px; border: 1px solid #ddd; color: #059669; font-weight: bold;">S</td>
+            </tr>
+          </table>
+          
+          <div style="background: #eef2ff; padding: 15px; border-radius: 8px; margin: 10px 0;">
+            <h5 style="color: #4338ca; margin-bottom: 10px;">🔍 Interpretação do Padrão</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              <strong>Padrão observado:</strong>
+            </p>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li>✅ Sensível a carbapenêmicos (meropenem)</li>
+              <li>❌ Resistente a cefalosporinas de 3ª geração (ceftriaxona)</li>
+              <li>⚠️ Intermediário a cefepima</li>
+              <li>✅ Sensível a aminoglicosídeos (gentamicina)</li>
+            </ul>
+            
+            <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; font-weight: bold; color: #4338ca;">
+              <strong>Conclusão:</strong> Provável produção de <strong><abbr title="Extended-Spectrum β-Lactamase - Enzima que confere resistência a cefalosporinas de amplo espectro" style="text-decoration: underline dotted; cursor: help; border: none;">ESBL</abbr></strong> (Extended-Spectrum β-Lactamase)
+            </p>
+            
+            <p style="font-size: 14px; line-height: 1.6; margin-top: 10px;">
+              <strong>Implicações terapêuticas:</strong>
+            </p>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li>Evitar cefalosporinas mesmo se "S" in vitro (falha terapêutica esperada)</li>
+              <li>Carbapenêmicos são primeira escolha</li>
+              <li>Aminoglicosídeos podem ser usados em combinação</li>
+              <li>Implementar precauções de contato (disseminação)</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #0ea5e9; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Mensagem Chave</h4>
+          <p style="font-size: 14px; line-height: 1.6;">
+            A <strong>interpretação de mecanismos de resistência</strong> vai além da simples 
+            categorização S/I/R. Padrões específicos revelam mecanismos moleculares que orientam 
+            escolhas terapêuticas mais precisas, previnem falhas e contribuem para o controle de 
+            infecção e vigilância epidemiológica.
+          </p>
+        </div>
+      `,
+      question: {
+        text: "Por que é importante interpretar os mecanismos de resistência ao analisar um antibiograma?",
+        options: [
+          "Porque os padrões de resistência podem indicar mecanismos específicos, como produção de β-lactamases, bombas de efluxo ou alterações de permeabilidade e do alvo bacteriano",
+          "Porque o antibiograma serve apenas para confirmar o crescimento bacteriano, sem relação com mecanismos de resistência",
+          "Porque a presença de resistência sempre indica erro técnico na execução do exame"
+        ],
+        correct: 0,
+        explanation: "A interpretação de mecanismos de resistência é fundamental porque padrões específicos no antibiograma revelam mecanismos moleculares: (1) β-lactamases (ESBL, KPC, AmpC, MBL) - hidrolisam antibióticos; (2) Bombas de efluxo - expulsam antibióticos da célula; (3) Alterações de permeabilidade - reduzem entrada de antibióticos; (4) Modificações do alvo - impedem ligação do antibiótico. Identificar o mecanismo permite predizer resistências cruzadas, escolher terapia adequada, evitar falhas terapêuticas e implementar controle de infecção apropriado."
+      }
+    },
+    {
+      title: "Abordagem de Microrganismos Resistentes",
+      content: `
+        <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h3 style="color: #dc2626; margin-bottom: 15px;">🛡️ Enfrentando a Resistência Antimicrobiana</h3>
+          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+            Mesmo quando o antibiograma mostra <strong>resistência significativa</strong>, nem sempre 
+            significa que o tratamento é impossível. Existem <strong>estratégias avançadas</strong> 
+            que podem ser empregadas em situações complexas.
+          </p>
+          
+          <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h4 style="color: #991b1b; margin-bottom: 15px;">⚠️ Importante: Não Desistir Prematuramente</h4>
+            <p style="font-size: 15px; line-height: 1.6;">
+              A resistência antimicrobiana é um desafio, mas <strong>não é uma sentença de morte</strong>. 
+              Com abordagem multidisciplinar e estratégias farmacológicas avançadas, muitos casos podem 
+              ser tratados com sucesso.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #059669; margin-bottom: 15px;">💊 Possibilidades Terapêuticas</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Mesmo em casos de resistência, ainda pode ser possível tratar determinadas infecções 
+            dependendo de:
+          </p>
+          
+          <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #166534; margin-bottom: 10px;">1️⃣ Ajustes Significativos de Dose</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              Aumentar a dose pode superar resistência parcial, especialmente quando a <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> está 
+              <strong>próxima ao ponto de corte</strong>.
+            </p>
+            
+            <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin: 10px 0;">
+              <h6 style="color: #065f46; margin-bottom: 10px;">📋 Estratégias de Dose Alta</h6>
+              <ul style="margin-left: 20px; line-height: 1.8;">
+                <li><strong>Meropenem:</strong> 2g IV 8/8h (dose padrão: 1g 8/8h)</li>
+                <li><strong>Vancomicina:</strong> Alvo de vale 15-20 mg/L (padrão: 10-15 mg/L)</li>
+                <li><strong>Daptomicina:</strong> 10-12 mg/kg/dia (dose padrão: 6 mg/kg/dia)</li>
+                <li><strong>Cefepima:</strong> 2g IV 8/8h (dose padrão: 1-2g 12/12h)</li>
+              </ul>
+            </div>
+            
+            <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; font-style: italic;">
+              <strong>Exemplo:</strong> <em>Pseudomonas aeruginosa</em> com <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> de meropenem = 4 mg/L 
+              (I ou R dependendo do critério). Meropenem 2g IV 8/8h em infusão prolongada pode alcançar 
+              concentrações suficientes para eficácia.
+            </p>
+            
+            <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 10px 0;">
+              <h6 style="color: #d97706; margin-bottom: 10px;">⚠️ Atenção aos Riscos</h6>
+              <ul style="margin-left: 20px; line-height: 1.8;">
+                <li><strong>Toxicidade:</strong> Doses altas aumentam risco de efeitos adversos</li>
+                <li><strong>Monitoramento:</strong> TDM (Therapeutic Drug Monitoring) quando disponível</li>
+                <li><strong>Função renal/hepática:</strong> Ajustes necessários</li>
+                <li><strong>Custo:</strong> Doses altas podem ser muito caras</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #1e40af; margin-bottom: 10px;">2️⃣ Modificações no Tempo de Infusão</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              Para antibióticos <strong>tempo-dependentes</strong>, prolongar a infusão mantém 
+              concentrações acima da <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> por mais tempo.
+            </p>
+            
+            <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+              <tr style="background: #3b82f6; color: white;">
+                <th style="padding: 10px; border: 1px solid #ddd;">Antibiótico</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Infusão Padrão</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Infusão Prolongada</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Benefício</th>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Meropenem</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">30 min</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">3-4 horas</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">T > <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> aumenta de 40% para 90%</td>
+              </tr>
+              <tr style="background: #f9fafb;">
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Piperacilina-tazobactam</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">30 min</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">4 horas</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Melhora eficácia em <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> elevada</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Cefepima</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">30 min</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">3 horas</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Eficaz contra <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> até 8 mg/L</td>
+              </tr>
+              <tr style="background: #f9fafb;">
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Ceftazidima-avibactam</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">2 horas</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Infusão contínua</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Máxima exposição em <abbr title="Klebsiella pneumoniae Carbapenemase - Enzima que confere resistência a carbapenêmicos" style="text-decoration: underline dotted; cursor: help; border: none;">KPC</abbr></td>
+              </tr>
+            </table>
+            
+            <div style="background: #eff6ff; padding: 15px; border-radius: 8px; margin: 10px 0;">
+              <h6 style="color: #1e40af; margin-bottom: 10px;">✅ Vantagens da Infusão Prolongada</h6>
+              <ul style="margin-left: 20px; line-height: 1.8;">
+                <li>Mantém concentração acima da CIM por > 70% do intervalo</li>
+                <li>Não aumenta dose total (mesma toxicidade)</li>
+                <li>Especialmente útil em <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> elevada</li>
+                <li>Evidências de melhor desfecho clínico</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div style="background: #f3e8ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #7c3aed; margin-bottom: 10px;">3️⃣ Combinações de Antimicrobianos com Efeito Sinérgico</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              Combinar antibióticos pode resultar em <strong>efeito sinérgico</strong>, onde o 
+              resultado é maior que a soma dos efeitos individuais.
+            </p>
+            
+            <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+              <tr style="background: #7c3aed; color: white;">
+                <th style="padding: 10px; border: 1px solid #ddd;">Combinação</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Mecanismo de Sinergia</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Indicação</th>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>β-lactâmico + aminoglicosídeo</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">β-lactâmico facilita entrada do aminoglicosídeo</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Endocardite enterocócica, <em>Pseudomonas</em> grave</td>
+              </tr>
+              <tr style="background: #f9fafb;">
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Ceftazidima-avibactam + aztreonam</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Avibactam protege aztreonam de <abbr title="Metalo-β-Lactamase - Enzima que confere resistência a todos β-lactâmicos exceto aztreonam" style="text-decoration: underline dotted; cursor: help; border: none;">MBL</abbr></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Enterobactérias produtoras de <abbr title="Metalo-β-Lactamase - Enzima que confere resistência a todos β-lactâmicos exceto aztreonam" style="text-decoration: underline dotted; cursor: help; border: none;">MBL</abbr></td>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Meropenem + colistina</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Colistina aumenta permeabilidade</td>
+                <td style="padding: 8px; border: 1px solid #ddd;"><em>Acinetobacter</em> <abbr title="Multidrug-Resistant - Multirresistente a antibióticos" style="text-decoration: underline dotted; cursor: help; border: none;">MDR</abbr>, <em>Klebsiella</em> <abbr title="Klebsiella pneumoniae Carbapenemase - Enzima que confere resistência a carbapenêmicos" style="text-decoration: underline dotted; cursor: help; border: none;">KPC</abbr></td>
+              </tr>
+              <tr style="background: #f9fafb;">
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Fosfomicina + β-lactâmico</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Mecanismos de ação complementares</td>
+                <td style="padding: 8px; border: 1px solid #ddd;"><abbr title="Infecção do Trato Urinário" style="text-decoration: underline dotted; cursor: help; border: none;">ITU</abbr> complicada por <abbr title="Multidrug-Resistant - Multirresistente a antibióticos" style="text-decoration: underline dotted; cursor: help; border: none;">MDR</abbr></td>
+              </tr>
+              <tr>
+                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Vancomicina + rifampicina</strong></td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Rifampicina penetra biofilme</td>
+                <td style="padding: 8px; border: 1px solid #ddd;">Infecção de prótese por <abbr title="Methicillin-Resistant Staphylococcus aureus - Estafilococo resistente à meticilina" style="text-decoration: underline dotted; cursor: help; border: none;">MRSA</abbr></td>
+              </tr>
+            </table>
+            
+            <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 10px 0;">
+              <h6 style="color: #dc2626; margin-bottom: 10px;">⚠️ Cuidados com Combinações</h6>
+              <ul style="margin-left: 20px; line-height: 1.8;">
+                <li><strong>Antagonismo:</strong> Algumas combinações podem reduzir eficácia</li>
+                <li><strong>Toxicidade aditiva:</strong> Risco de nefrotoxicidade, hepatotoxicidade</li>
+                <li><strong>Custo elevado:</strong> Múltiplos antibióticos caros</li>
+                <li><strong>Evidência limitada:</strong> Muitas combinações sem estudos clínicos robustos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #d97706; margin-bottom: 15px;">👨‍⚕️ Consultoria Especializada</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+            Casos de <strong>resistência antimicrobiana significativa</strong> são situações complexas 
+            que <strong>requerem avaliação por especialista</strong>.
+          </p>
+          
+          <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #92400e; margin-bottom: 10px;">🩺 Quando Solicitar Consultoria</h5>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>Microrganismos <abbr title="Multidrug-Resistant - Multirresistente a antibióticos" style="text-decoration: underline dotted; cursor: help; border: none;">MDR</abbr>:</strong> Multirresistentes (resistentes a ≥ 3 classes)</li>
+              <li><strong>Microrganismos XDR:</strong> Extensivamente resistentes (sensíveis a ≤ 2 classes)</li>
+              <li><strong>Microrganismos PDR:</strong> Pan-resistentes (resistentes a todas as classes)</li>
+              <li><strong>Infecções graves:</strong> Sepse, meningite, endocardite com resistência</li>
+              <li><strong>Falha terapêutica:</strong> Não resposta a tratamento inicial adequado</li>
+              <li><strong>Necessidade de combinações:</strong> Terapia sinérgica complexa</li>
+            </ul>
+          </div>
+          
+          <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+            <h5 style="color: #059669; margin-bottom: 10px;">🤝 Equipe Multidisciplinar</h5>
+            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+              O manejo ideal de resistência antimicrobiana envolve:
+            </p>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>Infectologista:</strong> Expertise em antimicrobianos e resistência</li>
+              <li><strong>Microbiologista:</strong> Interpretação de mecanismos, testes especiais</li>
+              <li><strong>Farmacêutico clínico:</strong> Otimização <abbr title="Farmacocinética/Farmacodinâmica - Estudo de como o corpo processa o medicamento e como ele age" style="text-decoration: underline dotted; cursor: help; border: none;">PK/PD</abbr>, TDM, interações</li>
+              <li><strong>Cirurgião:</strong> Controle de fonte, drenagem, desbridamento</li>
+              <li><strong>Intensivista:</strong> Suporte em pacientes críticos</li>
+              <li><strong>Controle de infecção:</strong> Precauções, vigilância epidemiológica</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+          <h4 style="color: #4b5563; margin-bottom: 10px;">📊 Caso Clínico Complexo</h4>
+          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+            <strong>Situação:</strong> Paciente em UTI com pneumonia por <em>Klebsiella pneumoniae</em> <abbr title="Klebsiella pneumoniae Carbapenemase - Enzima que confere resistência a carbapenêmicos" style="text-decoration: underline dotted; cursor: help; border: none;">KPC</abbr>
+          </p>
+          
+          <div style="background: #ffffff; padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; margin: 10px 0;">
+            <h5 style="color: #374151; margin-bottom: 10px;">🔬 Antibiograma</h5>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+              <li>Meropenem: <strong>R</strong> (CIM > 16 mg/L)</li>
+              <li>Ceftazidima-avibactam: <strong>S</strong> (<abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> = 2 mg/L)</li>
+              <li>Polimixina B: <strong>S</strong> (<abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> = 1 mg/L)</li>
+              <li>Gentamicina: <strong>S</strong> (<abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> = 2 mg/L)</li>
+              <li>Tigeciclina: <strong>S</strong> (<abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> = 0,5 mg/L)</li>
+            </ul>
+          </div>
+          
+          <div style="background: #dcfce7; padding: 15px; border-radius: 8px; margin: 10px 0;">
+            <h5 style="color: #059669; margin-bottom: 10px;">💊 Estratégia Terapêutica Adotada</h5>
+            <ol style="margin-left: 20px; line-height: 1.8;">
+              <li><strong>Ceftazidima-avibactam 2,5g IV 8/8h</strong> em infusão de 2h (antibiótico principal)</li>
+              <li><strong>Polimixina B</strong> dose de ataque 2,5 mg/kg, manutenção 1,5 mg/kg 12/12h (sinergia)</li>
+              <li><strong>Monitoramento TDM</strong> de polimixina (alvo: 2-3 mg/L)</li>
+              <li><strong>Avaliação diária</strong> de função renal (nefrotoxicidade)</li>
+              <li><strong>Reavaliação em 72h</strong> com possível desescalonamento</li>
+            </ol>
+          </div>
+          
+          <div style="background: #dbeafe; padding: 15px; border-radius: 8px; margin: 10px 0;">
+            <h5 style="color: #1e40af; margin-bottom: 10px;">📈 Desfecho</h5>
+            <p style="font-size: 14px; line-height: 1.6;">
+              Paciente apresentou melhora clínica em 72h. Após 7 dias, desescalonado para 
+              ceftazidima-avibactam monoterapia. Completou 14 dias de tratamento com sucesso. 
+              Função renal preservada.
+            </p>
+          </div>
+        </div>
+        
+        <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444; margin: 15px 0;">
+          <h4 style="color: #dc2626; margin-bottom: 10px;">🚫 O Que NÃO Fazer</h4>
+          <ul style="margin-left: 20px; line-height: 1.8;">
+            <li><strong>Não desistir prematuramente:</strong> Resistência não significa impossibilidade</li>
+            <li><strong>Não usar antibióticos "S" sem considerar contexto:</strong> Penetração, gravidade importam</li>
+            <li><strong>Não combinar antibióticos sem evidência:</strong> Risco de antagonismo e toxicidade</li>
+            <li><strong>Não ajustar doses sem conhecimento <abbr title="Farmacocinética/Farmacodinâmica - Estudo de como o corpo processa o medicamento e como ele age" style="text-decoration: underline dotted; cursor: help; border: none;">PK/PD</abbr>:</strong> Pode ser ineficaz ou tóxico</li>
+            <li><strong>Não manejar casos complexos sozinho:</strong> Buscar consultoria especializada</li>
+          </ul>
+        </div>
+        
+        <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #0ea5e9; margin: 15px 0;">
+          <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Mensagem Final</h4>
+          <p style="font-size: 14px; line-height: 1.6;">
+            A resistência antimicrobiana é um dos maiores desafios da medicina moderna, mas 
+            <strong>não é intransponível</strong>. Com conhecimento farmacológico avançado, 
+            estratégias de otimização <abbr title="Farmacocinética/Farmacodinâmica - Estudo de como o corpo processa o medicamento e como ele age" style="text-decoration: underline dotted; cursor: help; border: none;">PK/PD</abbr>, combinações sinérgicas e abordagem multidisciplinar, 
+            muitos casos podem ser tratados com sucesso. O antibiograma é o ponto de partida, 
+            mas a <strong>expertise clínica e a consultoria especializada</strong> fazem a diferença 
+            entre sucesso e falha terapêutica.
+          </p>
+        </div>
+      `,
+      question: {
+        text: "O que deve ser considerado em casos de resistência antimicrobiana significativa identificada no antibiograma?",
+        options: [
+          "Que o tratamento está automaticamente inviabilizado e deve ser interrompido",
+          "Que ainda podem existir opções terapêuticas com ajustes de dose, tempo de infusão ou uso de combinações sinérgicas, sempre com apoio de consultoria especializada",
+          "Que qualquer antibiótico pode ser utilizado desde que em dose máxima"
+        ],
+        correct: 1,
+        explanation: "Resistência antimicrobiana significativa NÃO significa impossibilidade de tratamento. Existem estratégias avançadas: (1) Ajustes de dose - doses altas podem superar resistência parcial; (2) Modificações no tempo de infusão - infusão prolongada mantém concentrações terapêuticas; (3) Combinações sinérgicas - efeito maior que a soma individual. Casos complexos (MDR, XDR, PDR) requerem avaliação por equipe multidisciplinar (infectologista, microbiologista, farmacêutico clínico). O antibiograma é o ponto de partida, mas expertise clínica e consultoria especializada fazem a diferença."
+      }
+    }
           ]
         },
         {
@@ -5982,7 +6247,7 @@ const App = () => {
                       <li>Papel do laboratório de microbiologia clínica</li>
                       <li>Conceitos fundamentais de resistência (intrínseca vs. adquirida)</li>
                       <li>Mecanismos de resistência (constitutiva, induzível, heterorresistência)</li>
-                      <li>Concentração Inibitória Mínima (CIM)</li>
+                      <li>Concentração Inibitória Mínima (<abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>)</li>
                       <li>Indicações para realização do TSA</li>
                     </ul>
                   </div>
@@ -6158,7 +6423,7 @@ const App = () => {
             },
             {
               title: "Q13 - Interpretação da CIM",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 13:</strong> Relação entre CIM e sensibilidade</p>`,
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 13:</strong> Relação entre <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> e sensibilidade</p>`,
               question: {
                 text: "Q13. O que o valor numérico da CIM indica em relação à sensibilidade de um microrganismo?",
                 options: [
@@ -6217,10 +6482,10 @@ const App = () => {
                   <div style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; margin-top: 15px;">
                     <h4 style="color: white; margin: 0 0 10px 0; font-size: 16px;">📚 Tópicos Abordados:</h4>
                     <ul style="color: rgba(255,255,255,0.9); margin: 0; padding-left: 20px; line-height: 1.8;">
-                      <li>Indicações do TSA e padronização (CLSI/EUCAST)</li>
+                      <li>Indicações do TSA e padronização (<abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr>/EUCAST)</li>
                       <li>Método de difusão em disco (Kirby-Bauer)</li>
-                      <li>Métodos quantitativos (CIM, diluição em ágar, macrodiluição)</li>
-                      <li>Correlação entre zona de inibição e CIM</li>
+                      <li>Métodos quantitativos (<abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>, diluição em ágar, macrodiluição)</li>
+                      <li>Correlação entre zona de inibição e <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr></li>
                       <li>Vantagens e limitações de cada método</li>
                     </ul>
                   </div>
@@ -6312,7 +6577,7 @@ const App = () => {
             },
             {
               title: "Q22 - Relação Zona-CIM",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 22:</strong> Correlação entre zona de inibição e CIM</p>`,
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 22:</strong> Correlação entre zona de inibição e <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr></p>`,
               question: {
                 text: "Q22. Qual é a principal relação entre o tamanho da zona de inibição e a Concentração Inibitória Mínima (CIM)?",
                 options: [
@@ -6354,7 +6619,7 @@ const App = () => {
             },
             {
               title: "Q25 - Limitação: Natureza Qualitativa",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 25:</strong> Quando a CIM é necessária</p>`,
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 25:</strong> Quando a <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> é necessária</p>`,
               question: {
                 text: "Q25. Qual é um exemplo de infecção para a qual a natureza qualitativa da difusão em disco é uma limitação, exigindo uma CIM quantitativa?",
                 options: [
@@ -6457,7 +6722,7 @@ const App = () => {
                     <h4 style="color: white; margin: 0 0 10px 0; font-size: 16px;">📚 Tópicos Abordados:</h4>
                     <ul style="color: rgba(255,255,255,0.9); margin: 0; padding-left: 20px; line-height: 1.8;">
                       <li>Microdiluição em caldo e método de gradiente (E-test)</li>
-                      <li>Categorias S/I/R e pontos de corte (CLSI e BrCast)</li>
+                      <li>Categorias S/I/R e pontos de corte (<abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr> e BrCast)</li>
                       <li>Sistemas automatizados e suas vantagens</li>
                       <li>Detecção de beta-lactamases e resistências específicas</li>
                       <li>Métodos genotípicos e moleculares</li>
@@ -6509,7 +6774,7 @@ const App = () => {
             },
             {
               title: "Q34 - Leitura do E-test",
-              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 34:</strong> Determinação da CIM no método de gradiente</p>`,
+              content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 34:</strong> Determinação da <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> no método de gradiente</p>`,
               question: {
                 text: "Q34. Como a CIM de um antimicrobiano é determinada no método de gradiente antimicrobiano?",
                 options: [
@@ -6711,7 +6976,7 @@ const App = () => {
                     <ul style="color: rgba(255,255,255,0.9); margin: 0; padding-left: 20px; line-height: 1.8;">
                       <li>Interpretação clínica de resultados (S/I/R)</li>
                       <li>Estrutura e elementos do antibiograma</li>
-                      <li>Diferenças entre CLSI e BrCast/EUCAST</li>
+                      <li>Diferenças entre <abbr title="Clinical and Laboratory Standards Institute - Instituto americano de padronização laboratorial" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr> e BrCast/EUCAST</li>
                       <li>Reportagem seletiva e cascata</li>
                       <li>Aplicações clínicas práticas</li>
                     </ul>
@@ -7148,14 +7413,14 @@ const App = () => {
                         <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #6b7280;">+<br/><span style="font-size: 12px; font-weight: normal;">(Abscesso pulmonar)</span></td>
                       </tr>
                       <tr style="background: #f8fafc;">
-                        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: 600;">🦠 TGI</td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: 600;">🦠 <abbr title="Trato Gastrointestinal - Sistema digestivo" style="text-decoration: underline dotted; cursor: help; border: none;">TGI</abbr></td>
                         <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #6b7280;">+</td>
                         <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #059669; font-weight: bold;">+++</td>
                         <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #9ca3af;">-</td>
                         <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #d97706; font-weight: bold;">++</td>
                       </tr>
                       <tr>
-                        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: 600;">💧 ITU</td>
+                        <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight: 600;">💧 <abbr title="Infecção do Trato Urinário" style="text-decoration: underline dotted; cursor: help; border: none;">ITU</abbr></td>
                         <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #6b7280;">+</td>
                         <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #059669; font-weight: bold;">+++</td>
                         <td style="padding: 10px; border: 1px solid #cbd5e1; text-align: center; color: #9ca3af;">-</td>
@@ -7629,7 +7894,7 @@ const App = () => {
                     <h4 style="color: #b45309; margin-bottom: 10px;">⚠️ Considerações Especiais</h4>
                     <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
                       <li><strong>Duração:</strong> 7-10 dias para casos não complicados</li>
-                      <li><strong>Celulite purulenta:</strong> Considerar cobertura para MRSA (clindamicina)</li>
+                      <li><strong>Celulite purulenta:</strong> Considerar cobertura para <abbr title="Methicillin-Resistant Staphylococcus aureus - Estafilococo resistente à meticilina" style="text-decoration: underline dotted; cursor: help; border: none;">MRSA</abbr> (clindamicina)</li>
                       <li><strong>Sinais de alarme:</strong> Febre alta, linfangite, necrose tecidual</li>
                       <li><strong>Medidas adjuvantes:</strong> Elevação do membro, analgesia, hidratação</li>
                     </ul>
@@ -8029,7 +8294,7 @@ const App = () => {
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🔬 Tipos de Infecção Urinária</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    As <strong>infecções do trato urinário (ITU)</strong> são classificadas em 
+                    As <strong>infecções do trato urinário (<abbr title="Infecção do Trato Urinário" style="text-decoration: underline dotted; cursor: help; border: none;">ITU</abbr>)</strong> são classificadas em 
                     <strong>não complicadas</strong> e <strong>complicadas</strong>, o que determina 
                     a abordagem terapêutica. Também podem ser classificadas anatomicamente em 
                     <strong>cistite</strong> (bexiga) e <strong>pielonefrite</strong> (rins).
@@ -8046,11 +8311,11 @@ const App = () => {
                       </thead>
                       <tbody>
                         <tr>
-                          <td style="padding: 8px; border: 1px solid #bae6fd;"><strong>ITU não complicada</strong></td>
+                          <td style="padding: 8px; border: 1px solid #bae6fd;"><strong><abbr title="Infecção do Trato Urinário" style="text-decoration: underline dotted; cursor: help; border: none;">ITU</abbr> não complicada</strong></td>
                           <td style="padding: 8px; border: 1px solid #bae6fd;">Mulheres saudáveis, não gestantes, sem anormalidades urológicas</td>
                         </tr>
                         <tr>
-                          <td style="padding: 8px; border: 1px solid #bae6fd;"><strong>ITU complicada</strong></td>
+                          <td style="padding: 8px; border: 1px solid #bae6fd;"><strong><abbr title="Infecção do Trato Urinário" style="text-decoration: underline dotted; cursor: help; border: none;">ITU</abbr> complicada</strong></td>
                           <td style="padding: 8px; border: 1px solid #bae6fd;">Homens, gestantes, anormalidades urológicas, cateter, imunocomprometidos</td>
                         </tr>
                         <tr>
@@ -8069,7 +8334,7 @@ const App = () => {
                 <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
                   <h4 style="color: #d97706; margin-bottom: 10px;">💡 Importância da Classificação</h4>
                   <p style="font-size: 14px; line-height: 1.5;">
-                    A distinção entre ITU complicada e não complicada é crucial, pois determina a duração 
+                    A distinção entre <abbr title="Infecção do Trato Urinário" style="text-decoration: underline dotted; cursor: help; border: none;">ITU</abbr> complicada e não complicada é crucial, pois determina a duração 
                     do tratamento, a escolha do antibiótico e a necessidade de investigação adicional.
                   </p>
                 </div>
@@ -8240,15 +8505,15 @@ const App = () => {
                 <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #374151; margin-bottom: 15px;">🔍 Populações Especiais</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Algumas populações requerem abordagens específicas no tratamento de ITU, 
+                    Algumas populações requerem abordagens específicas no tratamento de <abbr title="Infecção do Trato Urinário" style="text-decoration: underline dotted; cursor: help; border: none;">ITU</abbr>, 
                     incluindo <strong>gestantes</strong>, <strong>homens</strong>, <strong>idosos</strong> 
                     e <strong>pacientes com cateter vesical</strong>.
                   </p>
                   
                   <div style="background: #e5e7eb; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                    <h4 style="color: #1f2937; margin-bottom: 10px;">👶 ITU na Gestação</h4>
+                    <h4 style="color: #1f2937; margin-bottom: 10px;">👶 <abbr title="Infecção do Trato Urinário" style="text-decoration: underline dotted; cursor: help; border: none;">ITU</abbr> na Gestação</h4>
                     <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
-                      Gestantes com ITU devem sempre ser tratadas, mesmo se assintomáticas 
+                      Gestantes com <abbr title="Infecção do Trato Urinário" style="text-decoration: underline dotted; cursor: help; border: none;">ITU</abbr> devem sempre ser tratadas, mesmo se assintomáticas 
                       (bacteriúria assintomática), devido ao risco de pielonefrite e parto prematuro.
                     </p>
                     <p style="font-size: 14px; line-height: 1.5;">
@@ -8258,25 +8523,25 @@ const App = () => {
                   </div>
                   
                   <div style="background: #dbeafe; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                    <h4 style="color: #1e40af; margin-bottom: 10px;">👨 ITU em Homens</h4>
+                    <h4 style="color: #1e40af; margin-bottom: 10px;">👨 <abbr title="Infecção do Trato Urinário" style="text-decoration: underline dotted; cursor: help; border: none;">ITU</abbr> em Homens</h4>
                     <p style="font-size: 14px; line-height: 1.5;">
-                      ITU em homens é sempre considerada complicada. Tratamento deve ser por 
+                      <abbr title="Infecção do Trato Urinário" style="text-decoration: underline dotted; cursor: help; border: none;">ITU</abbr> em homens é sempre considerada complicada. Tratamento deve ser por 
                       <strong>7-14 dias</strong>. Investigar causas subjacentes (hiperplasia prostática, 
                       estenose uretral). Considerar prostatite se sintomas persistentes.
                     </p>
                   </div>
                   
                   <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                    <h4 style="color: #92400e; margin-bottom: 10px;">👴 ITU em Idosos</h4>
+                    <h4 style="color: #92400e; margin-bottom: 10px;">👴 <abbr title="Infecção do Trato Urinário" style="text-decoration: underline dotted; cursor: help; border: none;">ITU</abbr> em Idosos</h4>
                     <p style="font-size: 14px; line-height: 1.5;">
                       Bacteriúria assintomática é comum em idosos e <strong>não deve ser tratada</strong> 
-                      na ausência de sintomas. Tratar apenas ITU sintomática. Atenção para sintomas 
+                      na ausência de sintomas. Tratar apenas <abbr title="Infecção do Trato Urinário" style="text-decoration: underline dotted; cursor: help; border: none;">ITU</abbr> sintomática. Atenção para sintomas 
                       atípicos (confusão mental, quedas).
                     </p>
                   </div>
                   
                   <div style="background: #fce7f3; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                    <h4 style="color: #831843; margin-bottom: 10px;">🩺 ITU Associada a Cateter</h4>
+                    <h4 style="color: #831843; margin-bottom: 10px;">🩺 <abbr title="Infecção do Trato Urinário" style="text-decoration: underline dotted; cursor: help; border: none;">ITU</abbr> Associada a Cateter</h4>
                     <p style="font-size: 14px; line-height: 1.5;">
                       Tratar apenas se sintomática. <strong>Trocar o cateter</strong> antes de iniciar 
                       antibiótico. Duração: 7 dias se sintomas resolvem rapidamente, 10-14 dias se 
