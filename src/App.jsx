@@ -5492,739 +5492,553 @@ const App = () => {
           xp: 225,
           sections: [
             {
-      title: "Limitações da Categorização",
-      content: `
-        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h3 style="color: #d97706; margin-bottom: 15px;">⚠️ O "S" Não É Garantia Absoluta</h3>
-          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-            Um resultado <strong>"Sensível" (S)</strong> no antibiograma indica que o microrganismo 
-            é suscetível ao antibiótico <strong>in vitro</strong>, mas isso <strong>não garante sucesso 
-            terapêutico</strong> em todas as situações clínicas.
-          </p>
-          
-          <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h4 style="color: #c2410c; margin-bottom: 15px;">🎯 O Que "S" Realmente Significa</h4>
-            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
-              A categoria "Sensível" indica que:
-            </p>
-            <ul style="margin-left: 20px; line-height: 1.8;">
-              <li><strong>In vitro:</strong> O antibiótico inibe o crescimento bacteriano em concentrações alcançáveis</li>
-              <li><strong>Dose padrão:</strong> Com regime de dosagem recomendado</li>
-              <li><strong>Alta probabilidade:</strong> De sucesso terapêutico em condições ideais</li>
-              <li><strong>Não é certeza:</strong> Outros fatores podem interferir no resultado clínico</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h4 style="color: #dc2626; margin-bottom: 15px;">🔍 Fatores que Influenciam o Desfecho</h4>
-          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
-            Mesmo com resultado "S", o sucesso terapêutico depende de múltiplos fatores clínicos e farmacológicos:
-          </p>
-          
-          <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h5 style="color: #991b1b; margin-bottom: 10px;">1️⃣ Gravidade da Infecção</h5>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-              <strong>Infecções graves</strong> requerem bactericidas potentes e rápidos:
-            </p>
-            <ul style="margin-left: 20px; line-height: 1.8;">
-              <li><strong>Sepse/Choque séptico:</strong> Necessita ação bactericida rápida</li>
-              <li><strong>Meningite:</strong> Exige alta penetração no SNC</li>
-              <li><strong>Endocardite:</strong> Requer atividade bactericida sustentada</li>
-              <li><strong>Neutropenia febril:</strong> Paciente sem defesas próprias</li>
-            </ul>
-            <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; font-style: italic;">
-              <strong>Exemplo:</strong> Um antibiótico bacteriostático pode ser "S" in vitro, mas 
-              insuficiente em sepse grave onde é necessária eliminação bacteriana rápida.
-            </p>
-          </div>
-          
-          <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h5 style="color: #1e40af; margin-bottom: 10px;">2️⃣ Localização da Infecção</h5>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-              A <strong>penetração do antibiótico</strong> no sítio de infecção é crucial:
-            </p>
-            
-            <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
-              <tr style="background: #3b82f6; color: white;">
-                <th style="padding: 10px; border: 1px solid #ddd;">Sítio de Infecção</th>
-                <th style="padding: 10px; border: 1px solid #ddd;">Desafio de Penetração</th>
-                <th style="padding: 10px; border: 1px solid #ddd;">Implicação</th>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Sistema Nervoso Central</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Barreira hematoencefálica</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Apenas antibióticos com boa penetração no SNC</td>
-              </tr>
-              <tr style="background: #f9fafb;">
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Próstata</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Barreira prostática</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Fluoroquinolonas, macrolídeos, trimetoprima</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Osso</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Vascularização limitada</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Tratamento prolongado, alta biodisponibilidade</td>
-              </tr>
-              <tr style="background: #f9fafb;">
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Abscesso</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">pH baixo, pus, necrose</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Drenagem cirúrgica essencial</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Biofilme</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Matriz extracelular protetora</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Remoção de dispositivo pode ser necessária</td>
-              </tr>
-            </table>
-            
-            <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; font-style: italic;">
-              <strong>Exemplo:</strong> Ciprofloxacino pode ser "S" para <em>E. coli</em>, mas se a 
-              infecção for meningite, a penetração no SNC é insuficiente apesar da sensibilidade.
-            </p>
-          </div>
-          
-          <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h5 style="color: #d97706; margin-bottom: 10px;">3️⃣ Estado Imunológico do Paciente</h5>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-              O <strong>sistema imune</strong> é fundamental para erradicar a infecção:
-            </p>
-            
-            <div style="background: #fffbeb; padding: 15px; border-radius: 8px; margin: 10px 0;">
-              <h6 style="color: #92400e; margin-bottom: 10px;">Pacientes Imunocompetentes</h6>
-              <ul style="margin-left: 20px; line-height: 1.8;">
-                <li>Antibióticos <strong>bacteriostáticos</strong> podem ser suficientes</li>
-                <li>Sistema imune completa a eliminação bacteriana</li>
-                <li>Menor risco de falha terapêutica</li>
-              </ul>
-            </div>
-            
-            <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 10px 0;">
-              <h6 style="color: #991b1b; margin-bottom: 10px;">Pacientes Imunossuprimidos</h6>
-              <ul style="margin-left: 20px; line-height: 1.8;">
-                <li><strong>Neutropenia:</strong> Necessário antibiótico bactericida</li>
-                <li><strong>HIV avançado:</strong> Tratamento prolongado, doses altas</li>
-                <li><strong>Transplantados:</strong> Risco de infecções oportunistas</li>
-                <li><strong>Quimioterapia:</strong> Profilaxia pode ser necessária</li>
-              </ul>
-            </div>
-            
-            <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; font-style: italic;">
-              <strong>Exemplo:</strong> Azitromicina pode curar pneumonia em paciente saudável, mas 
-              ser insuficiente em paciente com neutropenia profunda.
-            </p>
-          </div>
-          
-          <div style="background: #f3e8ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h5 style="color: #7c3aed; margin-bottom: 10px;">4️⃣ Farmacocinética do Antibiótico</h5>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-              As <strong>propriedades PK/PD</strong> determinam se o antibiótico alcança concentrações 
-              adequadas no sítio de infecção:
-            </p>
-            
-            <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
-              <tr style="background: #7c3aed; color: white;">
-                <th style="padding: 10px; border: 1px solid #ddd;">Parâmetro PK</th>
-                <th style="padding: 10px; border: 1px solid #ddd;">Impacto Clínico</th>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Biodisponibilidade oral</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Determina se via oral é viável</td>
-              </tr>
-              <tr style="background: #f9fafb;">
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Volume de distribuição</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Penetração em tecidos profundos</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Ligação proteica</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Apenas fração livre é ativa</td>
-              </tr>
-              <tr style="background: #f9fafb;">
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Meia-vida</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Frequência de administração</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Metabolismo</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Interações medicamentosas</td>
-              </tr>
-              <tr style="background: #f9fafb;">
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Excreção</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Ajuste em disfunção renal/hepática</td>
-              </tr>
-            </table>
-            
-            <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; font-style: italic;">
-              <strong>Exemplo:</strong> Vancomicina pode ser "S" para MRSA, mas em paciente obeso 
-              ou com clearance renal aumentado, a dose padrão pode resultar em níveis subterapêuticos.
-            </p>
-          </div>
-        </div>
-        
-        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h4 style="color: #4b5563; margin-bottom: 10px;">📊 Exemplo Prático Integrado</h4>
-          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
-            <strong>Caso Clínico:</strong> Meningite por <em>Streptococcus pneumoniae</em>
-          </p>
-          
-          <div style="background: #ffffff; padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; margin: 10px 0;">
-            <ul style="margin-left: 20px; line-height: 1.8;">
-              <li><strong>Antibiograma:</strong> Sensível (S) a Penicilina G (CIM = 0,06 mg/L)</li>
-              <li><strong>Gravidade:</strong> Meningite é infecção grave, risco de morte/sequelas</li>
-              <li><strong>Localização:</strong> SNC - barreira hematoencefálica limita penetração</li>
-              <li><strong>Imunidade:</strong> Paciente previamente hígido (imunocompetente)</li>
-              <li><strong>Farmacocinética:</strong> Penicilina G tem penetração limitada no SNC</li>
-            </ul>
-          </div>
-          
-          <div style="background: #dcfce7; padding: 15px; border-radius: 8px; margin: 10px 0;">
-            <h5 style="color: #059669; margin-bottom: 10px;">✅ Decisão Terapêutica Adequada</h5>
-            <p style="font-size: 14px; line-height: 1.6;">
-              Apesar de "S", é necessário <strong>dose alta</strong> de Penicilina G (300.000-400.000 UI/kg/dia) 
-              para alcançar concentrações adequadas no líquor. Dose padrão seria insuficiente mesmo com 
-              resultado "Sensível".
-            </p>
-          </div>
-        </div>
-        
-        <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #0ea5e9; margin: 15px 0;">
-          <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Mensagem Chave</h4>
-          <p style="font-size: 14px; line-height: 1.6;">
-            O antibiograma é uma <strong>ferramenta essencial</strong>, mas não substitui o 
-            <strong>raciocínio clínico integrado</strong>. "Sensível" significa alta probabilidade 
-            de sucesso <strong>em condições ideais</strong>, mas o médico deve considerar todos os 
-            fatores do paciente, da infecção e do antibiótico para tomar a melhor decisão terapêutica.
-          </p>
-        </div>
-      `,
-      question: {
-        text: "Por que um resultado \"S\" (sensível) no antibiograma não garante necessariamente o sucesso do tratamento?",
-        options: [
-          "Porque o resultado \"S\" indica apenas resistência parcial do microrganismo",
-          "Porque fatores clínicos e farmacológicos, como gravidade e localização da infecção, imunidade do paciente e farmacocinética do antibiótico, também influenciam o desfecho terapêutico",
-          "Porque o resultado \"S\" depende exclusivamente da técnica laboratorial e não tem relevância clínica"
-        ],
-        correct: 1,
-        explanation: "Um resultado 'Sensível' (S) indica que o microrganismo é suscetível ao antibiótico in vitro, mas o sucesso terapêutico depende de múltiplos fatores: (1) Gravidade da infecção - infecções graves podem necessitar bactericidas potentes; (2) Localização - penetração do antibiótico no sítio (SNC, próstata, osso, abscessos); (3) Estado imunológico - pacientes imunossuprimidos necessitam antibióticos bactericidas; (4) Farmacocinética - biodisponibilidade, distribuição, metabolismo e excreção. O antibiograma é essencial, mas não substitui o raciocínio clínico integrado."
-      }
-    },
-    {
-      title: "Análise de Mecanismos",
-      content: `
-        <div style="background: #eef2ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h3 style="color: #4338ca; margin-bottom: 15px;">🔬 Interpretação de Mecanismos de Resistência</h3>
-          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-            Além de identificar quais antibióticos são "S", "I" ou "R", devemos <strong>interpretar 
-            os padrões de resistência</strong> para deduzir os <strong>mecanismos moleculares</strong> 
-            envolvidos. Isso orienta decisões terapêuticas mais precisas.
-          </p>
-          
-          <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h4 style="color: #1e40af; margin-bottom: 15px;">🧩 Por Que Interpretar Mecanismos?</h4>
-            <ul style="margin-left: 20px; line-height: 1.8;">
-              <li><strong>Predizer resistências cruzadas:</strong> Um mecanismo pode conferir resistência a múltiplos antibióticos</li>
-              <li><strong>Escolher terapia adequada:</strong> Alguns mecanismos podem ser superados com ajustes de dose</li>
-              <li><strong>Evitar falhas terapêuticas:</strong> Antibióticos "S" podem não funcionar se o mecanismo for complexo</li>
-              <li><strong>Vigilância epidemiológica:</strong> Identificar disseminação de resistência</li>
-              <li><strong>Controle de infecção:</strong> Implementar precauções adequadas</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h4 style="color: #059669; margin-bottom: 15px;">🎯 Principais Mecanismos de Resistência</h4>
-          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
-            Padrões específicos no antibiograma podem indicar a presença de:
-          </p>
-          
-          <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h5 style="color: #166534; margin-bottom: 10px;">1️⃣ β-Lactamases</h5>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-              Enzimas que <strong>hidrolisam o anel β-lactâmico</strong>, inativando penicilinas, 
-              cefalosporinas e outros β-lactâmicos.
-            </p>
-            
-            <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
-              <tr style="background: #10b981; color: white;">
-                <th style="padding: 10px; border: 1px solid #ddd;">Tipo de β-Lactamase</th>
-                <th style="padding: 10px; border: 1px solid #ddd;">Padrão de Resistência</th>
-                <th style="padding: 10px; border: 1px solid #ddd;">Antibióticos Afetados</th>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>ESBL</strong> (Extended-Spectrum β-Lactamase)</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">R a penicilinas e cefalosporinas de 3ª geração</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Ampicilina, Ceftriaxona, Cefotaxima</td>
-              </tr>
-              <tr style="background: #f9fafb;">
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>KPC</strong> (Klebsiella pneumoniae Carbapenemase)</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">R a carbapenêmicos</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Meropenem, Imipenem, Ertapenem</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>AmpC</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">R a cefalosporinas de 1ª-3ª geração</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Cefazolina, Ceftriaxona</td>
-              </tr>
-              <tr style="background: #f9fafb;">
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>MBL</strong> (Metalo-β-Lactamase)</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">R a todos β-lactâmicos exceto aztreonam</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Penicilinas, cefalosporinas, carbapenêmicos</td>
-              </tr>
-            </table>
-            
-            <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin: 10px 0;">
-              <h6 style="color: #065f46; margin-bottom: 10px;">🔍 Como Identificar no Antibiograma</h6>
-              <ul style="margin-left: 20px; line-height: 1.8;">
-                <li><strong>ESBL:</strong> Sensível a carbapenêmicos, resistente a cefalosporinas de 3ª geração</li>
-                <li><strong>KPC:</strong> Resistente a carbapenêmicos, pode ter CIM elevada mas < ponto de corte</li>
-                <li><strong>AmpC:</strong> Resistente a cefoxitina, sensível a cefepima e carbapenêmicos</li>
-                <li><strong>MBL:</strong> Resistente a carbapenêmicos, sensível a aztreonam</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h5 style="color: #d97706; margin-bottom: 10px;">2️⃣ Bombas de Efluxo</h5>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-              Proteínas de membrana que <strong>expulsam ativamente</strong> antibióticos para fora 
-              da célula bacteriana, reduzindo a concentração intracelular.
-            </p>
-            
-            <div style="background: #fffbeb; padding: 15px; border-radius: 8px; margin: 10px 0;">
-              <h6 style="color: #92400e; margin-bottom: 10px;">📋 Características</h6>
-              <ul style="margin-left: 20px; line-height: 1.8;">
-                <li><strong>Múltiplas classes:</strong> Podem expulsar diferentes antibióticos simultaneamente</li>
-                <li><strong>Resistência cruzada:</strong> Fluoroquinolonas, tetraciclinas, macrolídeos</li>
-                <li><strong>Comum em:</strong> <em>Pseudomonas aeruginosa</em>, <em>Acinetobacter baumannii</em></li>
-                <li><strong>Padrão:</strong> Resistência a múltiplas classes não relacionadas</li>
-              </ul>
-            </div>
-            
-            <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; font-style: italic;">
-              <strong>Exemplo:</strong> <em>Pseudomonas aeruginosa</em> resistente a ciprofloxacino, 
-              levofloxacino, gentamicina e ceftazidima simultaneamente pode indicar hiperexpressão 
-              de bombas de efluxo.
-            </p>
-          </div>
-          
-          <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h5 style="color: #dc2626; margin-bottom: 10px;">3️⃣ Alterações de Permeabilidade</h5>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-              Mutações em <strong>porinas</strong> (canais de membrana externa) reduzem a entrada 
-              de antibióticos na célula bacteriana.
-            </p>
-            
-            <div style="background: #fef2f2; padding: 15px; border-radius: 8px; margin: 10px 0;">
-              <h6 style="color: #991b1b; margin-bottom: 10px;">🔬 Mecanismo</h6>
-              <ul style="margin-left: 20px; line-height: 1.8;">
-                <li><strong>Perda de porinas:</strong> OprD em <em>Pseudomonas</em> (resistência a imipenem)</li>
-                <li><strong>Redução de OmpF/OmpC:</strong> Em enterobactérias (resistência a β-lactâmicos)</li>
-                <li><strong>Efeito sinérgico:</strong> Combinado com β-lactamases aumenta muito a resistência</li>
-              </ul>
-            </div>
-            
-            <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; font-style: italic;">
-              <strong>Exemplo:</strong> <em>Klebsiella pneumoniae</em> com ESBL + perda de porinas 
-              pode apresentar resistência a carbapenêmicos mesmo sem carbapenemase.
-            </p>
-          </div>
-          
-          <div style="background: #f3e8ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h5 style="color: #7c3aed; margin-bottom: 10px;">4️⃣ Modificações do Alvo</h5>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-              Mutações que <strong>alteram a estrutura do alvo molecular</strong> do antibiótico, 
-              impedindo sua ligação e ação.
-            </p>
-            
-            <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
-              <tr style="background: #7c3aed; color: white;">
-                <th style="padding: 10px; border: 1px solid #ddd;">Alvo Modificado</th>
-                <th style="padding: 10px; border: 1px solid #ddd;">Antibiótico Afetado</th>
-                <th style="padding: 10px; border: 1px solid #ddd;">Exemplo</th>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>PBP2a</strong> (Penicillin-Binding Protein)</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Todos β-lactâmicos</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">MRSA (Staphylococcus aureus resistente à meticilina)</td>
-              </tr>
-              <tr style="background: #f9fafb;">
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>DNA girase</strong> (mutações em gyrA/gyrB)</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Fluoroquinolonas</td>
-                <td style="padding: 8px; border: 1px solid #ddd;"><em>E. coli</em> resistente a ciprofloxacino</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Ribossomo 23S</strong> (mutação em erm)</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Macrolídeos, lincosamidas</td>
-                <td style="padding: 8px; border: 1px solid #ddd;"><em>Streptococcus pneumoniae</em> R a azitromicina</td>
-              </tr>
-              <tr style="background: #f9fafb;">
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>D-Ala-D-Lac</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Vancomicina</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">VRE (Enterococcus resistente à vancomicina)</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        
-        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h4 style="color: #4b5563; margin-bottom: 10px;">📊 Exemplo Prático: Interpretando um Antibiograma</h4>
-          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
-            <strong>Caso:</strong> <em>Klebsiella pneumoniae</em> isolada de hemocultura
-          </p>
-          
-          <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
-            <tr style="background: #6366f1; color: white;">
-              <th style="padding: 10px; border: 1px solid #ddd;">Antibiótico</th>
-              <th style="padding: 10px; border: 1px solid #ddd;">CIM (mg/L)</th>
-              <th style="padding: 10px; border: 1px solid #ddd;">Interpretação</th>
-            </tr>
-            <tr>
-              <td style="padding: 8px; border: 1px solid #ddd;">Ampicilina</td>
-              <td style="padding: 8px; border: 1px solid #ddd;">> 32</td>
-              <td style="padding: 8px; border: 1px solid #ddd; color: #dc2626; font-weight: bold;">R</td>
-            </tr>
-            <tr style="background: #f9fafb;">
-              <td style="padding: 8px; border: 1px solid #ddd;">Ceftriaxona</td>
-              <td style="padding: 8px; border: 1px solid #ddd;">> 64</td>
-              <td style="padding: 8px; border: 1px solid #ddd; color: #dc2626; font-weight: bold;">R</td>
-            </tr>
-            <tr>
-              <td style="padding: 8px; border: 1px solid #ddd;">Cefepima</td>
-              <td style="padding: 8px; border: 1px solid #ddd;">16</td>
-              <td style="padding: 8px; border: 1px solid #ddd; color: #d97706; font-weight: bold;">I</td>
-            </tr>
-            <tr style="background: #f9fafb;">
-              <td style="padding: 8px; border: 1px solid #ddd;">Meropenem</td>
-              <td style="padding: 8px; border: 1px solid #ddd;">0,25</td>
-              <td style="padding: 8px; border: 1px solid #ddd; color: #059669; font-weight: bold;">S</td>
-            </tr>
-            <tr>
-              <td style="padding: 8px; border: 1px solid #ddd;">Gentamicina</td>
-              <td style="padding: 8px; border: 1px solid #ddd;">1</td>
-              <td style="padding: 8px; border: 1px solid #ddd; color: #059669; font-weight: bold;">S</td>
-            </tr>
-          </table>
-          
-          <div style="background: #eef2ff; padding: 15px; border-radius: 8px; margin: 10px 0;">
-            <h5 style="color: #4338ca; margin-bottom: 10px;">🔍 Interpretação do Padrão</h5>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-              <strong>Padrão observado:</strong>
-            </p>
-            <ul style="margin-left: 20px; line-height: 1.8;">
-              <li>✅ Sensível a carbapenêmicos (meropenem)</li>
-              <li>❌ Resistente a cefalosporinas de 3ª geração (ceftriaxona)</li>
-              <li>⚠️ Intermediário a cefepima</li>
-              <li>✅ Sensível a aminoglicosídeos (gentamicina)</li>
-            </ul>
-            
-            <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; font-weight: bold; color: #4338ca;">
-              <strong>Conclusão:</strong> Provável produção de <strong>ESBL</strong> (Extended-Spectrum β-Lactamase)
-            </p>
-            
-            <p style="font-size: 14px; line-height: 1.6; margin-top: 10px;">
-              <strong>Implicações terapêuticas:</strong>
-            </p>
-            <ul style="margin-left: 20px; line-height: 1.8;">
-              <li>Evitar cefalosporinas mesmo se "S" in vitro (falha terapêutica esperada)</li>
-              <li>Carbapenêmicos são primeira escolha</li>
-              <li>Aminoglicosídeos podem ser usados em combinação</li>
-              <li>Implementar precauções de contato (disseminação)</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #0ea5e9; margin: 15px 0;">
-          <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Mensagem Chave</h4>
-          <p style="font-size: 14px; line-height: 1.6;">
-            A <strong>interpretação de mecanismos de resistência</strong> vai além da simples 
-            categorização S/I/R. Padrões específicos revelam mecanismos moleculares que orientam 
-            escolhas terapêuticas mais precisas, previnem falhas e contribuem para o controle de 
-            infecção e vigilância epidemiológica.
-          </p>
-        </div>
-      `,
-      question: {
-        text: "Por que é importante interpretar os mecanismos de resistência ao analisar um antibiograma?",
-        options: [
-          "Porque os padrões de resistência podem indicar mecanismos específicos, como produção de β-lactamases, bombas de efluxo ou alterações de permeabilidade e do alvo bacteriano",
-          "Porque o antibiograma serve apenas para confirmar o crescimento bacteriano, sem relação com mecanismos de resistência",
-          "Porque a presença de resistência sempre indica erro técnico na execução do exame"
-        ],
-        correct: 0,
-        explanation: "A interpretação de mecanismos de resistência é fundamental porque padrões específicos no antibiograma revelam mecanismos moleculares: (1) β-lactamases (ESBL, KPC, AmpC, MBL) - hidrolisam antibióticos; (2) Bombas de efluxo - expulsam antibióticos da célula; (3) Alterações de permeabilidade - reduzem entrada de antibióticos; (4) Modificações do alvo - impedem ligação do antibiótico. Identificar o mecanismo permite predizer resistências cruzadas, escolher terapia adequada, evitar falhas terapêuticas e implementar controle de infecção apropriado."
-      }
-    },
-    {
-      title: "Abordagem de Microrganismos Resistentes",
-      content: `
-        <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h3 style="color: #dc2626; margin-bottom: 15px;">🛡️ Enfrentando a Resistência Antimicrobiana</h3>
-          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-            Mesmo quando o antibiograma mostra <strong>resistência significativa</strong>, nem sempre 
-            significa que o tratamento é impossível. Existem <strong>estratégias avançadas</strong> 
-            que podem ser empregadas em situações complexas.
-          </p>
-          
-          <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h4 style="color: #991b1b; margin-bottom: 15px;">⚠️ Importante: Não Desistir Prematuramente</h4>
-            <p style="font-size: 15px; line-height: 1.6;">
-              A resistência antimicrobiana é um desafio, mas <strong>não é uma sentença de morte</strong>. 
-              Com abordagem multidisciplinar e estratégias farmacológicas avançadas, muitos casos podem 
-              ser tratados com sucesso.
-            </p>
-          </div>
-        </div>
-        
-        <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h4 style="color: #059669; margin-bottom: 15px;">💊 Possibilidades Terapêuticas</h4>
-          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
-            Mesmo em casos de resistência, ainda pode ser possível tratar determinadas infecções 
-            dependendo de:
-          </p>
-          
-          <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h5 style="color: #166534; margin-bottom: 10px;">1️⃣ Ajustes Significativos de Dose</h5>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-              Aumentar a dose pode superar resistência parcial, especialmente quando a CIM está 
-              <strong>próxima ao ponto de corte</strong>.
-            </p>
-            
-            <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin: 10px 0;">
-              <h6 style="color: #065f46; margin-bottom: 10px;">📋 Estratégias de Dose Alta</h6>
-              <ul style="margin-left: 20px; line-height: 1.8;">
-                <li><strong>Meropenem:</strong> 2g IV 8/8h (dose padrão: 1g 8/8h)</li>
-                <li><strong>Vancomicina:</strong> Alvo de vale 15-20 mg/L (padrão: 10-15 mg/L)</li>
-                <li><strong>Daptomicina:</strong> 10-12 mg/kg/dia (dose padrão: 6 mg/kg/dia)</li>
-                <li><strong>Cefepima:</strong> 2g IV 8/8h (dose padrão: 1-2g 12/12h)</li>
-              </ul>
-            </div>
-            
-            <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; font-style: italic;">
-              <strong>Exemplo:</strong> <em>Pseudomonas aeruginosa</em> com CIM de meropenem = 4 mg/L 
-              (I ou R dependendo do critério). Meropenem 2g IV 8/8h em infusão prolongada pode alcançar 
-              concentrações suficientes para eficácia.
-            </p>
-            
-            <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 10px 0;">
-              <h6 style="color: #d97706; margin-bottom: 10px;">⚠️ Atenção aos Riscos</h6>
-              <ul style="margin-left: 20px; line-height: 1.8;">
-                <li><strong>Toxicidade:</strong> Doses altas aumentam risco de efeitos adversos</li>
-                <li><strong>Monitoramento:</strong> TDM (Therapeutic Drug Monitoring) quando disponível</li>
-                <li><strong>Função renal/hepática:</strong> Ajustes necessários</li>
-                <li><strong>Custo:</strong> Doses altas podem ser muito caras</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h5 style="color: #1e40af; margin-bottom: 10px;">2️⃣ Modificações no Tempo de Infusão</h5>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-              Para antibióticos <strong>tempo-dependentes</strong>, prolongar a infusão mantém 
-              concentrações acima da CIM por mais tempo.
-            </p>
-            
-            <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
-              <tr style="background: #3b82f6; color: white;">
-                <th style="padding: 10px; border: 1px solid #ddd;">Antibiótico</th>
-                <th style="padding: 10px; border: 1px solid #ddd;">Infusão Padrão</th>
-                <th style="padding: 10px; border: 1px solid #ddd;">Infusão Prolongada</th>
-                <th style="padding: 10px; border: 1px solid #ddd;">Benefício</th>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Meropenem</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">30 min</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">3-4 horas</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">T > CIM aumenta de 40% para 90%</td>
-              </tr>
-              <tr style="background: #f9fafb;">
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Piperacilina-tazobactam</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">30 min</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">4 horas</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Melhora eficácia em CIM elevada</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Cefepima</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">30 min</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">3 horas</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Eficaz contra CIM até 8 mg/L</td>
-              </tr>
-              <tr style="background: #f9fafb;">
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Ceftazidima-avibactam</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">2 horas</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Infusão contínua</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Máxima exposição em KPC</td>
-              </tr>
-            </table>
-            
-            <div style="background: #eff6ff; padding: 15px; border-radius: 8px; margin: 10px 0;">
-              <h6 style="color: #1e40af; margin-bottom: 10px;">✅ Vantagens da Infusão Prolongada</h6>
-              <ul style="margin-left: 20px; line-height: 1.8;">
-                <li>Mantém concentração acima da CIM por > 70% do intervalo</li>
-                <li>Não aumenta dose total (mesma toxicidade)</li>
-                <li>Especialmente útil em CIM elevada</li>
-                <li>Evidências de melhor desfecho clínico</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div style="background: #f3e8ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h5 style="color: #7c3aed; margin-bottom: 10px;">3️⃣ Combinações de Antimicrobianos com Efeito Sinérgico</h5>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-              Combinar antibióticos pode resultar em <strong>efeito sinérgico</strong>, onde o 
-              resultado é maior que a soma dos efeitos individuais.
-            </p>
-            
-            <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
-              <tr style="background: #7c3aed; color: white;">
-                <th style="padding: 10px; border: 1px solid #ddd;">Combinação</th>
-                <th style="padding: 10px; border: 1px solid #ddd;">Mecanismo de Sinergia</th>
-                <th style="padding: 10px; border: 1px solid #ddd;">Indicação</th>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>β-lactâmico + aminoglicosídeo</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">β-lactâmico facilita entrada do aminoglicosídeo</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Endocardite enterocócica, <em>Pseudomonas</em> grave</td>
-              </tr>
-              <tr style="background: #f9fafb;">
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Ceftazidima-avibactam + aztreonam</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Avibactam protege aztreonam de MBL</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Enterobactérias produtoras de MBL</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Meropenem + colistina</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Colistina aumenta permeabilidade</td>
-                <td style="padding: 8px; border: 1px solid #ddd;"><em>Acinetobacter</em> MDR, <em>Klebsiella</em> KPC</td>
-              </tr>
-              <tr style="background: #f9fafb;">
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Fosfomicina + β-lactâmico</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Mecanismos de ação complementares</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">ITU complicada por MDR</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Vancomicina + rifampicina</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Rifampicina penetra biofilme</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Infecção de prótese por MRSA</td>
-              </tr>
-            </table>
-            
-            <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 10px 0;">
-              <h6 style="color: #dc2626; margin-bottom: 10px;">⚠️ Cuidados com Combinações</h6>
-              <ul style="margin-left: 20px; line-height: 1.8;">
-                <li><strong>Antagonismo:</strong> Algumas combinações podem reduzir eficácia</li>
-                <li><strong>Toxicidade aditiva:</strong> Risco de nefrotoxicidade, hepatotoxicidade</li>
-                <li><strong>Custo elevado:</strong> Múltiplos antibióticos caros</li>
-                <li><strong>Evidência limitada:</strong> Muitas combinações sem estudos clínicos robustos</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h4 style="color: #d97706; margin-bottom: 15px;">👨‍⚕️ Consultoria Especializada</h4>
-          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
-            Casos de <strong>resistência antimicrobiana significativa</strong> são situações complexas 
-            que <strong>requerem avaliação por especialista</strong>.
-          </p>
-          
-          <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h5 style="color: #92400e; margin-bottom: 10px;">🩺 Quando Solicitar Consultoria</h5>
-            <ul style="margin-left: 20px; line-height: 1.8;">
-              <li><strong>Microrganismos MDR:</strong> Multirresistentes (resistentes a ≥ 3 classes)</li>
-              <li><strong>Microrganismos XDR:</strong> Extensivamente resistentes (sensíveis a ≤ 2 classes)</li>
-              <li><strong>Microrganismos PDR:</strong> Pan-resistentes (resistentes a todas as classes)</li>
-              <li><strong>Infecções graves:</strong> Sepse, meningite, endocardite com resistência</li>
-              <li><strong>Falha terapêutica:</strong> Não resposta a tratamento inicial adequado</li>
-              <li><strong>Necessidade de combinações:</strong> Terapia sinérgica complexa</li>
-            </ul>
-          </div>
-          
-          <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h5 style="color: #059669; margin-bottom: 10px;">🤝 Equipe Multidisciplinar</h5>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-              O manejo ideal de resistência antimicrobiana envolve:
-            </p>
-            <ul style="margin-left: 20px; line-height: 1.8;">
-              <li><strong>Infectologista:</strong> Expertise em antimicrobianos e resistência</li>
-              <li><strong>Microbiologista:</strong> Interpretação de mecanismos, testes especiais</li>
-              <li><strong>Farmacêutico clínico:</strong> Otimização PK/PD, TDM, interações</li>
-              <li><strong>Cirurgião:</strong> Controle de fonte, drenagem, desbridamento</li>
-              <li><strong>Intensivista:</strong> Suporte em pacientes críticos</li>
-              <li><strong>Controle de infecção:</strong> Precauções, vigilância epidemiológica</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h4 style="color: #4b5563; margin-bottom: 10px;">📊 Caso Clínico Complexo</h4>
-          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
-            <strong>Situação:</strong> Paciente em UTI com pneumonia por <em>Klebsiella pneumoniae</em> KPC
-          </p>
-          
-          <div style="background: #ffffff; padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; margin: 10px 0;">
-            <h5 style="color: #374151; margin-bottom: 10px;">🔬 Antibiograma</h5>
-            <ul style="margin-left: 20px; line-height: 1.8;">
-              <li>Meropenem: <strong>R</strong> (CIM > 16 mg/L)</li>
-              <li>Ceftazidima-avibactam: <strong>S</strong> (CIM = 2 mg/L)</li>
-              <li>Polimixina B: <strong>S</strong> (CIM = 1 mg/L)</li>
-              <li>Gentamicina: <strong>S</strong> (CIM = 2 mg/L)</li>
-              <li>Tigeciclina: <strong>S</strong> (CIM = 0,5 mg/L)</li>
-            </ul>
-          </div>
-          
-          <div style="background: #dcfce7; padding: 15px; border-radius: 8px; margin: 10px 0;">
-            <h5 style="color: #059669; margin-bottom: 10px;">💊 Estratégia Terapêutica Adotada</h5>
-            <ol style="margin-left: 20px; line-height: 1.8;">
-              <li><strong>Ceftazidima-avibactam 2,5g IV 8/8h</strong> em infusão de 2h (antibiótico principal)</li>
-              <li><strong>Polimixina B</strong> dose de ataque 2,5 mg/kg, manutenção 1,5 mg/kg 12/12h (sinergia)</li>
-              <li><strong>Monitoramento TDM</strong> de polimixina (alvo: 2-3 mg/L)</li>
-              <li><strong>Avaliação diária</strong> de função renal (nefrotoxicidade)</li>
-              <li><strong>Reavaliação em 72h</strong> com possível desescalonamento</li>
-            </ol>
-          </div>
-          
-          <div style="background: #dbeafe; padding: 15px; border-radius: 8px; margin: 10px 0;">
-            <h5 style="color: #1e40af; margin-bottom: 10px;">📈 Desfecho</h5>
-            <p style="font-size: 14px; line-height: 1.6;">
-              Paciente apresentou melhora clínica em 72h. Após 7 dias, desescalonado para 
-              ceftazidima-avibactam monoterapia. Completou 14 dias de tratamento com sucesso. 
-              Função renal preservada.
-            </p>
-          </div>
-        </div>
-        
-        <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444; margin: 15px 0;">
-          <h4 style="color: #dc2626; margin-bottom: 10px;">🚫 O Que NÃO Fazer</h4>
-          <ul style="margin-left: 20px; line-height: 1.8;">
-            <li><strong>Não desistir prematuramente:</strong> Resistência não significa impossibilidade</li>
-            <li><strong>Não usar antibióticos "S" sem considerar contexto:</strong> Penetração, gravidade importam</li>
-            <li><strong>Não combinar antibióticos sem evidência:</strong> Risco de antagonismo e toxicidade</li>
-            <li><strong>Não ajustar doses sem conhecimento PK/PD:</strong> Pode ser ineficaz ou tóxico</li>
-            <li><strong>Não manejar casos complexos sozinho:</strong> Buscar consultoria especializada</li>
-          </ul>
-        </div>
-        
-        <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #0ea5e9; margin: 15px 0;">
-          <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Mensagem Final</h4>
-          <p style="font-size: 14px; line-height: 1.6;">
-            A resistência antimicrobiana é um dos maiores desafios da medicina moderna, mas 
-            <strong>não é intransponível</strong>. Com conhecimento farmacológico avançado, 
-            estratégias de otimização PK/PD, combinações sinérgicas e abordagem multidisciplinar, 
-            muitos casos podem ser tratados com sucesso. O antibiograma é o ponto de partida, 
-            mas a <strong>expertise clínica e a consultoria especializada</strong> fazem a diferença 
-            entre sucesso e falha terapêutica.
-          </p>
-        </div>
-      `,
-      question: {
-        text: "O que deve ser considerado em casos de resistência antimicrobiana significativa identificada no antibiograma?",
-        options: [
-          "Que o tratamento está automaticamente inviabilizado e deve ser interrompido",
-          "Que ainda podem existir opções terapêuticas com ajustes de dose, tempo de infusão ou uso de combinações sinérgicas, sempre com apoio de consultoria especializada",
-          "Que qualquer antibiótico pode ser utilizado desde que em dose máxima"
-        ],
-        correct: 1,
-        explanation: "Resistência antimicrobiana significativa NÃO significa impossibilidade de tratamento. Existem estratégias avançadas: (1) Ajustes de dose - doses altas podem superar resistência parcial; (2) Modificações no tempo de infusão - infusão prolongada mantém concentrações terapêuticas; (3) Combinações sinérgicas - efeito maior que a soma individual. Casos complexos (MDR, XDR, PDR) requerem avaliação por equipe multidisciplinar (infectologista, microbiologista, farmacêutico clínico). O antibiograma é o ponto de partida, mas expertise clínica e consultoria especializada fazem a diferença."
-      }
-    }
+              title: "O Que \"S\" Realmente Significa",
+              content: `
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d97706; margin-bottom: 15px;">⚠️ O "S" Não É Garantia Absoluta</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Um resultado <strong>"Sensível" (S)</strong> no antibiograma indica que o microrganismo 
+                    é suscetível ao antibiótico <strong>in vitro</strong>, mas isso <strong>não garante sucesso 
+                    terapêutico</strong> em todas as situações clínicas.
+                  </p>
+                  
+                  <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #c2410c; margin-bottom: 15px;">🎯 O Que "S" Realmente Significa</h4>
+                    <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+                      A categoria "Sensível" indica que:
+                    </p>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                      <li><strong>In vitro:</strong> O antibiótico inibe o crescimento bacteriano em concentrações alcançáveis</li>
+                      <li><strong>Dose padrão:</strong> Com regime de dosagem recomendado</li>
+                      <li><strong>Alta probabilidade:</strong> De sucesso terapêutico em condições ideais</li>
+                      <li><strong>Não é certeza:</strong> Outros fatores podem interferir no resultado clínico</li>
+                    </ul>
+                  </div>
+                  
+                  <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #0ea5e9; margin: 15px 0;">
+                    <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Conceito Fundamental</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      O antibiograma testa a sensibilidade <strong>in vitro</strong> em condições controladas. 
+                      O corpo humano apresenta variáveis complexas que podem afetar o resultado terapêutico, 
+                      mesmo quando o teste mostra "Sensível".
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "O que significa quando um antibiograma indica resultado \"S\" (Sensível)?",
+                options: [
+                  "A) Que o antibiótico garante 100% de cura da infecção em qualquer situação clínica",
+                  "B) Que o microrganismo é suscetível ao antibiótico in vitro com alta probabilidade de sucesso em condições ideais, mas outros fatores clínicos podem influenciar o resultado",
+                  "C) Que o antibiótico é ineficaz e não deve ser utilizado no tratamento"
+                ],
+                correct: 1,
+                explanation: "O resultado 'Sensível' (S) indica que o antibiótico inibe o crescimento bacteriano in vitro em concentrações alcançáveis com dose padrão, apresentando alta probabilidade de sucesso terapêutico em condições ideais. Porém, não é garantia absoluta, pois fatores como gravidade da infecção, localização, imunidade do paciente e farmacocinética do antibiótico também influenciam o desfecho clínico."
+              }
+            },
+            {
+              title: "Gravidade e Localização da Infecção",
+              content: `
+                <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">🔍 Fatores que Influenciam o Desfecho</h3>
+                  
+                  <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 10px;">1️⃣ Gravidade da Infecção</h4>
+                    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+                      <strong>Infecções graves</strong> requerem bactericidas potentes e rápidos:
+                    </p>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                      <li><strong>Sepse/Choque séptico:</strong> Necessita ação bactericida rápida</li>
+                      <li><strong>Meningite:</strong> Exige alta penetração no SNC</li>
+                      <li><strong>Endocardite:</strong> Requer atividade bactericida sustentada</li>
+                      <li><strong>Neutropenia febril:</strong> Paciente sem defesas próprias</li>
+                    </ul>
+                    <p style="font-size: 14px; line-height: 1.6; margin-top: 10px; font-style: italic;">
+                      <strong>Exemplo:</strong> Um antibiótico bacteriostático pode ser "S" in vitro, mas 
+                      insuficiente em sepse grave onde é necessária eliminação bacteriana rápida.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #1e40af; margin-bottom: 10px;">2️⃣ Localização da Infecção</h4>
+                    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+                      A <strong>penetração do antibiótico</strong> no sítio de infecção é crucial:
+                    </p>
+                    
+                    <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+                      <tr style="background: #3b82f6; color: white;">
+                        <th style="padding: 10px; border: 1px solid #ddd;">Sítio</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Desafio</th>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>SNC</strong></td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">Barreira hematoencefálica</td>
+                      </tr>
+                      <tr style="background: #f9fafb;">
+                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Próstata</strong></td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">Barreira prostática</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Osso</strong></td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">Vascularização limitada</td>
+                      </tr>
+                      <tr style="background: #f9fafb;">
+                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Abscesso</strong></td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">pH baixo, pus, necrose</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Biofilme</strong></td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">Matriz protetora</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Por que a localização da infecção é um fator crítico mesmo quando o antibiograma mostra \"S\"?",
+                options: [
+                  "A) Porque a localização não afeta a eficácia do antibiótico",
+                  "B) Porque alguns sítios apresentam barreiras à penetração do antibiótico (SNC, próstata, osso, abscessos, biofilmes), limitando sua eficácia apesar da sensibilidade in vitro",
+                  "C) Porque todos os antibióticos penetram igualmente em todos os tecidos"
+                ],
+                correct: 1,
+                explanation: "A localização da infecção é crítica porque alguns sítios apresentam barreiras significativas à penetração do antibiótico: barreira hematoencefálica no SNC, barreira prostática, vascularização limitada no osso, pH baixo e necrose em abscessos, e matriz extracelular protetora em biofilmes. Mesmo com resultado 'S', o antibiótico pode não alcançar concentrações adequadas nesses locais, necessitando escolha específica ou drenagem cirúrgica."
+              }
+            },
+            {
+              title: "Imunidade e Farmacocinética",
+              content: `
+                <div style="background: #f3e8ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #7c3aed; margin-bottom: 15px;">👤 Estado Imunológico e Propriedades PK/PD</h3>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #d97706; margin-bottom: 10px;">3️⃣ Estado Imunológico do Paciente</h4>
+                    
+                    <div style="background: #fffbeb; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                      <h5 style="color: #92400e; margin-bottom: 10px;">✅ Pacientes Imunocompetentes</h5>
+                      <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
+                        <li>Antibióticos bacteriostáticos podem ser suficientes</li>
+                        <li>Sistema imune completa a eliminação bacteriana</li>
+                        <li>Menor risco de falha terapêutica</li>
+                      </ul>
+                    </div>
+                    
+                    <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                      <h5 style="color: #991b1b; margin-bottom: 10px;">⚠️ Pacientes Imunossuprimidos</h5>
+                      <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
+                        <li><strong>Neutropenia:</strong> Necessário antibiótico bactericida</li>
+                        <li><strong>HIV avançado:</strong> Tratamento prolongado, doses altas</li>
+                        <li><strong>Transplantados:</strong> Risco de infecções oportunistas</li>
+                        <li><strong>Quimioterapia:</strong> Profilaxia pode ser necessária</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #1e40af; margin-bottom: 10px;">4️⃣ Farmacocinética do Antibiótico</h4>
+                    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+                      As <strong>propriedades PK/PD</strong> determinam se o antibiótico alcança concentrações adequadas:
+                    </p>
+                    
+                    <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+                      <tr style="background: #7c3aed; color: white;">
+                        <th style="padding: 10px; border: 1px solid #ddd;">Parâmetro PK</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Impacto Clínico</th>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px; border: 1px solid #ddd;">Biodisponibilidade oral</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">Viabilidade da via oral</td>
+                      </tr>
+                      <tr style="background: #f9fafb;">
+                        <td style="padding: 8px; border: 1px solid #ddd;">Volume de distribuição</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">Penetração tecidual</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px; border: 1px solid #ddd;">Ligação proteica</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">Fração livre ativa</td>
+                      </tr>
+                      <tr style="background: #f9fafb;">
+                        <td style="padding: 8px; border: 1px solid #ddd;">Meia-vida</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">Frequência de doses</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal diferença na escolha de antibióticos entre pacientes imunocompetentes e imunossuprimidos?",
+                options: [
+                  "A) Não há diferença, ambos podem usar qualquer antibiótico \"S\"",
+                  "B) Pacientes imunocompetentes podem usar bacteriostáticos, enquanto imunossuprimidos (neutropenia, HIV avançado, transplantados) necessitam bactericidas devido à incapacidade do sistema imune de completar a eliminação bacteriana",
+                  "C) Pacientes imunossuprimidos sempre precisam de doses menores de antibióticos"
+                ],
+                correct: 1,
+                explanation: "Em pacientes imunocompetentes, o sistema imune pode completar a eliminação bacteriana, permitindo uso de antibióticos bacteriostáticos. Já em pacientes imunossuprimidos (neutropenia, HIV avançado, transplantados, quimioterapia), o sistema imune está comprometido, sendo necessário antibiótico bactericida para eliminação efetiva das bactérias, além de tratamento prolongado e doses potencialmente mais altas."
+              }
+            },
+            {
+              title: "Exemplo Prático: Meningite Pneumocócica",
+              content: `
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #4b5563; margin-bottom: 15px;">📊 Exemplo Prático Integrado</h3>
+                  <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+                    <strong>Caso Clínico:</strong> Meningite por <em>Streptococcus pneumoniae</em>
+                  </p>
+                  
+                  <div style="background: #ffffff; padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; margin: 10px 0;">
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                      <li><strong>Antibiograma:</strong> Sensível (S) a Penicilina G (CIM = 0,06 mg/L)</li>
+                      <li><strong>Gravidade:</strong> Meningite é infecção grave, risco de morte/sequelas</li>
+                      <li><strong>Localização:</strong> SNC - barreira hematoencefálica limita penetração</li>
+                      <li><strong>Imunidade:</strong> Paciente previamente hígido (imunocompetente)</li>
+                      <li><strong>Farmacocinética:</strong> Penicilina G tem penetração limitada no SNC</li>
+                    </ul>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">✅ Decisão Terapêutica Adequada</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      Apesar de "S", é necessário <strong>dose alta</strong> de Penicilina G (300.000-400.000 UI/kg/dia) 
+                      para alcançar concentrações adequadas no líquor. Dose padrão seria insuficiente mesmo com 
+                      resultado "Sensível".
+                    </p>
+                  </div>
+                  
+                  <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #0ea5e9; margin: 15px 0;">
+                    <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Mensagem Chave</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      O antibiograma é uma <strong>ferramenta essencial</strong>, mas não substitui o 
+                      <strong>raciocínio clínico integrado</strong>. "Sensível" significa alta probabilidade 
+                      de sucesso <strong>em condições ideais</strong>, mas o médico deve considerar todos os 
+                      fatores do paciente, da infecção e do antibiótico para tomar a melhor decisão terapêutica.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "No caso de meningite pneumocócica com antibiograma \"S\" para Penicilina G, qual é a conduta adequada?",
+                options: [
+                  "A) Usar dose padrão de Penicilina G, pois o antibiograma mostra \"S\"",
+                  "B) Usar dose alta de Penicilina G (300.000-400.000 UI/kg/dia) devido à penetração limitada no SNC, mesmo com resultado \"S\"",
+                  "C) Trocar por outro antibiótico, pois Penicilina G nunca funciona em meningite"
+                ],
+                correct: 1,
+                explanation: "Mesmo com resultado 'Sensível', a meningite pneumocócica requer dose alta de Penicilina G (300.000-400.000 UI/kg/dia) porque: (1) é infecção grave com risco de morte/sequelas, (2) a barreira hematoencefálica limita a penetração do antibiótico no SNC, (3) dose padrão resultaria em concentrações subterapêuticas no líquor. Este caso ilustra perfeitamente como 'S' não garante sucesso com dose padrão em todas as situações."
+              }
+            },
+            {
+              title: "Por Que Interpretar Mecanismos de Resistência",
+              content: `
+                <div style="background: #eef2ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #4338ca; margin-bottom: 15px;">🔬 Além do S/I/R</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Interpretar <strong>mecanismos de resistência</strong> permite decisões terapêuticas mais precisas.
+                  </p>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #1e40af; margin-bottom: 15px;">🧩 Importância Clínica</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                      <li><strong>Predizer resistências cruzadas:</strong> Um mecanismo afeta múltiplos antibióticos</li>
+                      <li><strong>Escolher terapia adequada:</strong> Alguns mecanismos permitem ajustes de dose</li>
+                      <li><strong>Evitar falhas:</strong> Antibióticos "S" podem falhar com mecanismos complexos</li>
+                      <li><strong>Vigilância epidemiológica:</strong> Identificar disseminação de resistência</li>
+                      <li><strong>Controle de infecção:</strong> Implementar precauções adequadas</li>
+                    </ul>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Por que é importante interpretar os mecanismos de resistência além da categorização S/I/R?",
+                options: [
+                  "A) Apenas para fins acadêmicos, sem impacto clínico prático",
+                  "B) Para predizer resistências cruzadas, escolher terapia adequada, evitar falhas terapêuticas e implementar controle de infecção apropriado",
+                  "C) Porque a categorização S/I/R é sempre incorreta"
+                ],
+                correct: 1,
+                explanation: "Interpretar mecanismos de resistência é essencial porque permite: (1) predizer resistências cruzadas a múltiplos antibióticos, (2) escolher terapia adequada considerando ajustes de dose, (3) evitar falhas terapêuticas mesmo com resultado 'S', (4) realizar vigilância epidemiológica, e (5) implementar precauções de controle de infecção apropriadas. Vai além da simples categorização S/I/R."
+              }
+            },
+            {
+              title: "β-Lactamases: ESBL e Carbapenemases",
+              content: `
+                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #059669; margin-bottom: 15px;">🎯 β-Lactamases</h3>
+                  <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+                    Enzimas que <strong>hidrolisam o anel β-lactâmico</strong>, inativando penicilinas e cefalosporinas.
+                  </p>
+                  
+                  <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+                    <tr style="background: #10b981; color: white;">
+                      <th style="padding: 10px; border: 1px solid #ddd;">Tipo</th>
+                      <th style="padding: 10px; border: 1px solid #ddd;">Padrão</th>
+                      <th style="padding: 10px; border: 1px solid #ddd;">Como Identificar</th>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #ddd;"><strong>ESBL</strong></td>
+                      <td style="padding: 8px; border: 1px solid #ddd;">R a cefalosporinas 3ª geração</td>
+                      <td style="padding: 8px; border: 1px solid #ddd;">S a carbapenêmicos</td>
+                    </tr>
+                    <tr style="background: #f9fafb;">
+                      <td style="padding: 8px; border: 1px solid #ddd;"><strong>KPC</strong></td>
+                      <td style="padding: 8px; border: 1px solid #ddd;">R a carbapenêmicos</td>
+                      <td style="padding: 8px; border: 1px solid #ddd;">CIM elevada para meropenem</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #ddd;"><strong>MBL</strong></td>
+                      <td style="padding: 8px; border: 1px solid #ddd;">R a todos β-lactâmicos</td>
+                      <td style="padding: 8px; border: 1px solid #ddd;">S a aztreonam</td>
+                    </tr>
+                  </table>
+                </div>
+              `,
+              question: {
+                text: "Como diferenciar ESBL de carbapenemases no antibiograma?",
+                options: [
+                  "A) ESBL é sensível a carbapenêmicos e resistente a cefalosporinas de 3ª geração; carbapenemases são resistentes a carbapenêmicos",
+                  "B) Não é possível diferenciar pelo antibiograma",
+                  "C) ESBL sempre é sensível a todos os antibióticos"
+                ],
+                correct: 0,
+                explanation: "ESBL (Extended-Spectrum β-Lactamase) apresenta resistência a penicilinas e cefalosporinas de 3ª geração (ceftriaxona, cefotaxima), mas mantém sensibilidade a carbapenêmicos. Já as carbapenemases (KPC, MBL) conferem resistência aos carbapenêmicos. MBL se diferencia por manter sensibilidade a aztreonam. Esta diferenciação é crucial para escolha terapêutica."
+              }
+            },
+            {
+              title: "Outros Mecanismos de Resistência",
+              content: `
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d97706; margin-bottom: 15px;">⚙️ Mecanismos Adicionais</h3>
+                  
+                  <div style="background: #fffbeb; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #92400e; margin-bottom: 10px;">🔄 Bombas de Efluxo</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      Expulsam antibióticos para fora da célula. Comum em <em>Pseudomonas</em> e <em>Acinetobacter</em>.
+                      Causam resistência a múltiplas classes simultaneamente.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 10px;">🚪 Alterações de Permeabilidade</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      Perda de porinas reduz entrada de antibióticos. ESBL + perda de porinas pode causar 
+                      resistência a carbapenêmicos sem carbapenemase.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #f3e8ff; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #7c3aed; margin-bottom: 10px;">🎯 Modificações do Alvo</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
+                      <li><strong>PBP2a:</strong> MRSA (resistente a todos β-lactâmicos)</li>
+                      <li><strong>DNA girase:</strong> Resistência a fluoroquinolonas</li>
+                      <li><strong>D-Ala-D-Lac:</strong> VRE (resistente a vancomicina)</li>
+                    </ul>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual mecanismo explica MRSA (Staphylococcus aureus resistente à meticilina)?",
+                options: [
+                  "A) Bombas de efluxo que expulsam β-lactâmicos",
+                  "B) Modificação do alvo (PBP2a) que impede ligação de todos os β-lactâmicos",
+                  "C) Produção de β-lactamases"
+                ],
+                correct: 1,
+                explanation: "MRSA apresenta resistência por modificação do alvo molecular através da produção de PBP2a (Penicillin-Binding Protein alterada), que tem baixa afinidade por todos os β-lactâmicos, incluindo meticilina e oxacilina. Este mecanismo é diferente de β-lactamases e confere resistência cruzada a toda a classe dos β-lactâmicos."
+              }
+            },
+            {
+              title: "Exemplo Prático: Interpretando Antibiograma",
+              content: `
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #4b5563; margin-bottom: 15px;">📊 Caso Clínico</h3>
+                  <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+                    <em>Klebsiella pneumoniae</em> em hemocultura:
+                  </p>
+                  
+                  <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+                    <tr style="background: #6366f1; color: white;">
+                      <th style="padding: 10px;">Antibiótico</th>
+                      <th style="padding: 10px;">Resultado</th>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #ddd;">Ampicilina</td>
+                      <td style="padding: 8px; border: 1px solid #ddd; color: #dc2626; font-weight: bold;">R</td>
+                    </tr>
+                    <tr style="background: #f9fafb;">
+                      <td style="padding: 8px; border: 1px solid #ddd;">Ceftriaxona</td>
+                      <td style="padding: 8px; border: 1px solid #ddd; color: #dc2626; font-weight: bold;">R</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #ddd;">Meropenem</td>
+                      <td style="padding: 8px; border: 1px solid #ddd; color: #059669; font-weight: bold;">S</td>
+                    </tr>
+                  </table>
+                  
+                  <div style="background: #dcfce7; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">✅ Interpretação</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      Padrão compatível com <strong>ESBL</strong>: resistente a penicilinas e cefalosporinas 
+                      de 3ª geração, mas sensível a carbapenêmicos. Tratamento: meropenem ou ertapenem.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "No caso apresentado, qual é o mecanismo de resistência mais provável?",
+                options: [
+                  "A) Carbapenemase (KPC)",
+                  "B) ESBL (resistente a cefalosporinas 3ª geração, sensível a carbapenêmicos)",
+                  "C) Ausência de mecanismo de resistência"
+                ],
+                correct: 1,
+                explanation: "O padrão de resistência a ampicilina e ceftriaxona (cefalosporina de 3ª geração), mas sensibilidade a meropenem (carbapenêmico), é característico de ESBL (Extended-Spectrum β-Lactamase). Se fosse carbapenemase, haveria resistência ao meropenem. O tratamento de escolha são os carbapenêmicos."
+              }
+            },
+            {
+              title: "Princípios da Abordagem de Microrganismos Resistentes",
+              content: `
+                <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">⚠️ Microrganismos Multirresistentes</h3>
+                  
+                  <div style="background: #fef2f2; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 10px;">🎯 Princípios Fundamentais</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
+                      <li><strong>Identificação precoce:</strong> Reconhecer padrões de resistência rapidamente</li>
+                      <li><strong>Terapia direcionada:</strong> Usar antibióticos específicos para o mecanismo</li>
+                      <li><strong>Controle de infecção:</strong> Precauções de contato rigorosas</li>
+                      <li><strong>Stewardship:</strong> Uso racional para prevenir disseminação</li>
+                      <li><strong>Combinações:</strong> Considerar terapia combinada em casos graves</li>
+                    </ul>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é o princípio fundamental na abordagem de microrganismos multirresistentes?",
+                options: [
+                  "A) Sempre usar antibióticos de amplo espectro em doses máximas",
+                  "B) Identificação precoce, terapia direcionada ao mecanismo, controle de infecção rigoroso e uso racional de antibióticos",
+                  "C) Evitar tratamento e aguardar resolução espontânea"
+                ],
+                correct: 1,
+                explanation: "A abordagem de microrganismos multirresistentes requer: (1) identificação precoce dos padrões de resistência, (2) terapia direcionada específica para o mecanismo identificado, (3) precauções rigorosas de controle de infecção, (4) stewardship antimicrobiano para uso racional, e (5) consideração de terapia combinada em casos graves. Não é simplesmente usar antibióticos de amplo espectro indiscriminadamente."
+              }
+            },
+            {
+              title: "MRSA e VRE",
+              content: `
+                <div style="background: #f3e8ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #7c3aed; margin-bottom: 15px;">🦠 Gram-Positivos Resistentes</h3>
+                  
+                  <div style="background: #faf5ff; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #6b21a8; margin-bottom: 10px;">MRSA</h4>
+                    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+                      <strong>Mecanismo:</strong> PBP2a (resistente a todos β-lactâmicos)
+                    </p>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      <strong>Tratamento:</strong> Vancomicina, daptomicina, linezolida, ceftarolina
+                    </p>
+                  </div>
+                  
+                  <div style="background: #fef2f2; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 10px;">VRE</h4>
+                    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+                      <strong>Mecanismo:</strong> D-Ala-D-Lac (resistente a vancomicina)
+                    </p>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      <strong>Tratamento:</strong> Linezolida, daptomicina, tigeciclina
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual antibiótico NÃO deve ser usado para tratar MRSA?",
+                options: [
+                  "A) Vancomicina",
+                  "B) Oxacilina (β-lactâmico)",
+                  "C) Linezolida"
+                ],
+                correct: 1,
+                explanation: "MRSA (Staphylococcus aureus resistente à meticilina) possui PBP2a, que confere resistência a TODOS os β-lactâmicos, incluindo oxacilina, meticilina e cefalosporinas. Os tratamentos adequados incluem vancomicina, daptomicina, linezolida e ceftarolina. Usar β-lactâmicos em MRSA resultará em falha terapêutica."
+              }
+            },
+            {
+              title: "Gram-Negativos Multirresistentes",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #1e40af; margin-bottom: 15px;">🔬 Enterobactérias e Não-Fermentadores</h3>
+                  
+                  <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+                    <tr style="background: #3b82f6; color: white;">
+                      <th style="padding: 10px;">Microrganismo</th>
+                      <th style="padding: 10px;">Mecanismo Comum</th>
+                      <th style="padding: 10px;">Opções Terapêuticas</th>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #ddd;"><em>E. coli</em> / <em>Klebsiella</em> ESBL</td>
+                      <td style="padding: 8px; border: 1px solid #ddd;">ESBL</td>
+                      <td style="padding: 8px; border: 1px solid #ddd;">Carbapenêmicos</td>
+                    </tr>
+                    <tr style="background: #f9fafb;">
+                      <td style="padding: 8px; border: 1px solid #ddd;"><em>Klebsiella</em> KPC</td>
+                      <td style="padding: 8px; border: 1px solid #ddd;">Carbapenemase</td>
+                      <td style="padding: 8px; border: 1px solid #ddd;">Polimixina, tigeciclina, ceftazidima-avibactam</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #ddd;"><em>Pseudomonas</em> MDR</td>
+                      <td style="padding: 8px; border: 1px solid #ddd;">Múltiplos</td>
+                      <td style="padding: 8px; border: 1px solid #ddd;">Ceftolozano-tazobactam, ceftazidima-avibactam</td>
+                    </tr>
+                  </table>
+                </div>
+              `,
+              question: {
+                text: "Qual é o tratamento de escolha para Klebsiella produtora de KPC?",
+                options: [
+                  "A) Cefalosporinas de 3ª geração",
+                  "B) Polimixina, tigeciclina ou ceftazidima-avibactam (inibidor de carbapenemase)",
+                  "C) Carbapenêmicos em monoterapia"
+                ],
+                correct: 1,
+                explanation: "Klebsiella produtora de KPC (carbapenemase) é resistente a carbapenêmicos e cefalosporinas. As opções terapêuticas incluem polimixina B/E (colistina), tigeciclina, ou preferencialmente ceftazidima-avibactam (inibidor de carbapenemase). Carbapenêmicos em monoterapia não são eficazes contra KPC. Casos graves podem necessitar terapia combinada."
+              }
+            },
+            {
+              title: "Estratégias Terapêuticas Avançadas",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">💡 Abordagens Modernas</h3>
+                  
+                  <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #075985; margin-bottom: 10px;">🎯 Estratégias Disponíveis</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
+                      <li><strong>Novos β-lactâmicos/inibidores:</strong> Ceftazidima-avibactam, ceftolozano-tazobactam</li>
+                      <li><strong>Terapia combinada:</strong> Sinergismo em infecções graves</li>
+                      <li><strong>Dose otimizada:</strong> Infusão estendida de β-lactâmicos</li>
+                      <li><strong>Controle de fonte:</strong> Drenagem de abscessos, remoção de dispositivos</li>
+                      <li><strong>Stewardship:</strong> Programas de uso racional de antibióticos</li>
+                    </ul>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">✅ Mensagem Final</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      A interpretação adequada do antibiograma, conhecimento dos mecanismos de resistência 
+                      e uso de estratégias terapêuticas modernas são essenciais para o manejo eficaz de 
+                      infecções por microrganismos multirresistentes.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é a importância dos novos β-lactâmicos com inibidores de β-lactamases (ex: ceftazidima-avibactam)?",
+                options: [
+                  "A) São antibióticos mais baratos que os tradicionais",
+                  "B) Permitem tratamento de bactérias produtoras de carbapenemases (KPC) e ESBL, superando mecanismos de resistência",
+                  "C) Substituem completamente a necessidade de controle de infecção"
+                ],
+                correct: 1,
+                explanation: "Novos β-lactâmicos combinados com inibidores de β-lactamases (ceftazidima-avibactam, ceftolozano-tazobactam) representam avanço importante no tratamento de bactérias multirresistentes. O avibactam inibe carbapenemases (KPC) e ESBL, permitindo que o β-lactâmico seja eficaz. São opções valiosas para infecções por Gram-negativos resistentes a carbapenêmicos, mas não substituem medidas de controle de infecção."
+              }
+            },
           ]
         },
         {
