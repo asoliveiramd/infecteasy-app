@@ -6223,6 +6223,96 @@ const App = () => {
                 explanation: "Nem toda cultura positiva significa infecção. A colonização é a presença de microrganismos sem resposta inflamatória ou sintomas, não requerendo tratamento. Já a infecção envolve resposta inflamatória e manifestações clínicas. Por exemplo, bacteriúria assintomática (urocultura positiva sem sintomas) é colonização e geralmente não deve ser tratada, exceto em gestantes e antes de procedimentos urológicos. A correlação clínico-laboratorial (sintomas + marcadores inflamatórios + imagem + contexto) é essencial para evitar uso desnecessário de antibióticos, que leva a resistência, efeitos adversos e custos."
               }
             },
+            {
+              title: "Padronização Nacional",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #1e40af; margin-bottom: 15px;">🇧🇷 Padronização Nacional</h3>
+                  
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px; font-weight: bold; color: #1e3a8a;">
+                    O Brasil adota o <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê Brasileiro de Teste de Sensibilidade aos Antimicrobianos" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr> como padrão oficial, não mais o <abbr title="Clinical and Laboratory Standards Institute - Instituto de Padrões Clínicos e Laboratoriais (EUA)" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr> (padrão americano), 
+                    o que implica em <strong>diferenças importantes na interpretação dos resultados</strong>.
+                  </p>
+                  
+                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 10px;">🚫 Erro Comum</h4>
+                    <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+                      <strong>"Vou usar os pontos de corte do <abbr title="Clinical and Laboratory Standards Institute - Instituto de Padrões Clínicos e Laboratoriais (EUA)" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr> porque é mais conhecido"</strong>
+                    </p>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      Usar padrões diferentes do <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê Brasileiro de Teste de Sensibilidade aos Antimicrobianos" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr> no Brasil pode levar a interpretações incorretas, 
+                      escolhas terapêuticas inadequadas e falha no tratamento.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #14532d; margin-bottom: 10px;">📅 Mudança no Brasil (2018)</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
+                      <li><strong>Antes de 2018:</strong> Brasil usava <abbr title="Clinical and Laboratory Standards Institute - Instituto de Padrões Clínicos e Laboratoriais (EUA)" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr> (padrão americano)</li>
+                      <li><strong>A partir de 2018:</strong> Brasil adotou <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê Brasileiro de Teste de Sensibilidade aos Antimicrobianos" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr> (baseado no EUCAST europeu)</li>
+                      <li><strong>Motivo:</strong> Atualização mais frequente, maior rigor científico, alinhamento internacional</li>
+                      <li><strong>Impacto:</strong> Mudança nos pontos de corte de vários antibióticos</li>
+                    </ul>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #92400e; margin-bottom: 10px;">⚖️ Principais Diferenças</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
+                      <li><strong>Pontos de corte:</strong> <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê Brasileiro de Teste de Sensibilidade aos Antimicrobianos" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr> geralmente mais rigoroso (valores de <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> menores para "Sensível")</li>
+                      <li><strong>Categoria "I":</strong> <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê Brasileiro de Teste de Sensibilidade aos Antimicrobianos" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr> usa "Sensível com aumento de exposição"</li>
+                      <li><strong>Atualização:</strong> <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê Brasileiro de Teste de Sensibilidade aos Antimicrobianos" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr> atualiza anualmente vs <abbr title="Clinical and Laboratory Standards Institute - Instituto de Padrões Clínicos e Laboratoriais (EUA)" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr> bianualmente</li>
+                      <li><strong>Metodologia:</strong> Diferenças em alguns testes específicos</li>
+                    </ul>
+                  </div>
+                  
+                  <div style="background: #e0e7ff; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #3730a3; margin-bottom: 10px;">📋 Exemplo Prático</h4>
+                    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+                      <strong>E. coli + Ciprofloxacino (<abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> = 1 mg/L):</strong>
+                    </p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0;">
+                      <div style="background: #fef3c7; padding: 10px; border-radius: 5px;">
+                        <p style="font-size: 13px; font-weight: bold; color: #92400e;">
+                          <abbr title="Clinical and Laboratory Standards Institute - Instituto de Padrões Clínicos e Laboratoriais (EUA)" style="text-decoration: underline dotted; cursor: help; border: none;">CLSI</abbr>: Sensível ✅
+                        </p>
+                        <p style="font-size: 12px; color: #78350f;">Ponto de corte ≤1</p>
+                      </div>
+                      <div style="background: #fee2e2; padding: 10px; border-radius: 5px;">
+                        <p style="font-size: 13px; font-weight: bold; color: #991b1b;">
+                          <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê Brasileiro de Teste de Sensibilidade aos Antimicrobianos" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr>: Intermediário ⚠️
+                        </p>
+                        <p style="font-size: 12px; color: #7f1d1d;">Ponto de corte ≤0,5</p>
+                      </div>
+                    </div>
+                    <p style="font-size: 13px; line-height: 1.6; margin-top: 10px; padding: 10px; background: #eff6ff; border-radius: 5px;">
+                      💡 Mesma <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>, interpretações diferentes! Usar <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê Brasileiro de Teste de Sensibilidade aos Antimicrobianos" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr> é obrigatório no Brasil.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #14532d; margin-bottom: 10px;">✅ Recomendação</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
+                      <li>Sempre usar <strong><abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê Brasileiro de Teste de Sensibilidade aos Antimicrobianos" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr></strong> no Brasil</li>
+                      <li>Verificar qual padrão o laboratório está usando</li>
+                      <li>Manter-se atualizado com as versões anuais do <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê Brasileiro de Teste de Sensibilidade aos Antimicrobianos" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr></li>
+                      <li>Consultar tabelas de pontos de corte atualizadas</li>
+                    </ul>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é o padrão oficial de interpretação de antibiograma adotado no Brasil e por que é importante seguí-lo?",
+                options: [
+                  "A) CLSI (padrão americano), porque é o mais usado mundialmente",
+                  "B) BrCAST (baseado no EUCAST europeu), adotado desde 2018, com pontos de corte diferentes do CLSI que podem levar a interpretações distintas para a mesma CIM",
+                  "C) Qualquer padrão pode ser usado, pois todos têm os mesmos pontos de corte"
+                ],
+                correct: 1,
+                explanation: "O Brasil adotou o BrCAST como padrão oficial em 2018, substituindo o CLSI americano. O BrCAST é baseado no EUCAST europeu e apresenta diferenças importantes: pontos de corte geralmente mais rigorosos, atualização anual (vs bianual do CLSI), e nova interpretação da categoria 'I' (Sensível com aumento de exposição). Por exemplo, E. coli com ciprofloxacino CIM=1 mg/L é 'Sensível' pelo CLSI mas 'Intermediário' pelo BrCAST. Usar o padrão correto é essencial para escolhas terapêuticas adequadas e segurança do paciente."
+              }
+            },
+
+
 
 
           ]
