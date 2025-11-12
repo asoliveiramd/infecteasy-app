@@ -7043,10 +7043,39 @@ const App = () => {
                 correct: 1,
                 explanation: "Métodos moleculares (PCR, sequenciamento, hibridização) detectam genes de resistência diretamente de amostras clínicas ou culturas, fornecendo resultados em 1-2 horas versus 24-48 horas do TSA convencional. Exemplos: detecção de mecA para MRSA, genes bla para carbapenemases (KPC, NDM, OXA-48), vanA/vanB para VRE. Painéis multiplex podem detectar múltiplos genes simultaneamente. A rapidez permite terapia direcionada precoce, isolamento apropriado e controle de infecção. Limitação: detectam apenas genes conhecidos, não fornecem CIM, e não substituem completamente o TSA fenotípico."
               }
-            }
+            },
+            {
+              text: "Q47. Por que a categorização S/I/R sozinha pode ser insuficiente para escolha terapêutica em algumas situações?",
+              options: [
+                "A) Porque o antibiograma sempre está errado",
+                "B) Porque não considera fatores como gravidade da infecção, localização (ex: SNC), estado imunológico e características PK/PD do antibiótico",
+                "C) Porque todos os antibióticos são iguais",
+                "D) Porque a categoria S significa que qualquer dose funciona"
+              ],
+              correct: 1
+            },
+            {
+              text: "Q48. Qual é a diferença fundamental entre colonização e infecção que impacta a decisão de tratar?",
+              options: [
+                "A) Colonização sempre requer tratamento antibiótico",
+                "B) Colonização é presença de microrganismos SEM resposta inflamatória/sintomas (não tratar), enquanto infecção tem resposta inflamatória/sintomas (tratar)",
+                "C) Não há diferença, toda cultura positiva deve ser tratada",
+                "D) Infecção nunca requer antibiótico"
+              ],
+              correct: 1
+            },
+            {
+              text: "Q49. Por que antibióticos de moléculas grandes como vancomicina e colistina requerem técnica dilucional específica?",
+              options: [
+                "A) Porque são muito caros",
+                "B) Porque suas moléculas grandes não difundem adequadamente em métodos convencionais como disco-difusão",
+                "C) Porque são sempre resistentes",
+                "D) Porque não existem pontos de corte para eles"
+              ],
+              correct: 1
+              }
           ]
-        }
-,
+        },
         {
           id: 21,
           title: "Revisão IV - Tópicos Avançados",
@@ -7313,6 +7342,48 @@ const App = () => {
                   </p>
                   <p style="font-size: 16px; line-height: 1.6;">
                     O sucesso do tratamento depende da identificação correta do patógeno provável, 
+            {
+              text: "Q62. Qual é o padrão oficial de interpretação de antibiograma adotado no Brasil desde 2018?",
+              options: [
+                "A) CLSI (padrão americano)",
+                "B) BrCAST (baseado no EUCAST europeu), com pontos de corte diferentes do CLSI",
+                "C) Cada laboratório escolhe seu próprio padrão",
+                "D) OMS (Organização Mundial da Saúde)"
+              ],
+              correct: 1
+            },
+            {
+              text: "Q63. Por que não devemos comparar CIMs de diferentes antibióticos para escolher o 'melhor' contra uma mesma bactéria?",
+              options: [
+                "A) Porque todos os antibióticos são iguais",
+                "B) Porque cada classe tem características PK/PD próprias, como comparar atletas em provas diferentes (100m vs maratona)",
+                "C) Porque a CIM não tem importância clínica",
+                "D) Porque sempre devemos usar o antibiótico mais caro"
+              ],
+              correct: 1
+            },
+            {
+              text: "Q64. Qual é a importância clínica da verificação de sinergia com aminoglicosídeos em infecções por enterococos?",
+              options: [
+                "A) Todos os Gram-positivos apresentam sinergia",
+                "B) Enterococos são os únicos patógenos com evidência robusta de sinergia betalactâmico-aminoglicosídeo, especialmente importante em endocardites",
+                "C) A sinergia é irrelevante clinicamente",
+                "D) Aminoglicosídeos devem ser usados em monoterapia"
+              ],
+              correct: 1
+            },
+            {
+              text: "Q65. Por que não é recomendada monoterapia com aminoglicosídeos para enterococos, mesmo com resultado sensível?",
+              options: [
+                "A) Porque aminoglicosídeos são muito caros",
+                "B) Porque apresentam baixa eficácia clínica contra enterococos quando usados isoladamente (efeito bacteriostático), sendo necessária combinação com betalactâmicos",
+                "C) Porque enterococos são sempre resistentes",
+                "D) Porque não existem aminoglicosídeos disponíveis"
+              ],
+              correct: 1
+            },
+
+
                     da escolha do antibiótico adequado e da adesão do paciente ao tratamento.
                   </p>
                 </div>
