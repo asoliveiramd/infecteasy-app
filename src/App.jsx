@@ -5897,6 +5897,57 @@ const App = () => {
         },
         {
           id: 16,
+          title: "Situações Clínicas Especiais",
+          duration: "30 min",
+          xp: 180,
+          sections: [
+            {
+              title: "Antibióticos de Moléculas Grandes",
+              content: `
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d97706; margin-bottom: 15px;">💊 Antibióticos de Moléculas Grandes</h3>
+                  
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Para <strong>glicopeptídeos</strong> (vancomicina) e <strong>polimixinas</strong> (colistina) 
+                    em infecções graves, é fundamental realizar <strong>técnica dilucional específica</strong>, 
+                    pois métodos convencionais podem não ser adequados devido ao tamanho das moléculas.
+                  </p>
+                  
+                  <div style="background: #fffbeb; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #92400e; margin-bottom: 10px;">🔬 Por Que Técnica Especial?</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8; font-size: 15px;">
+                      <li><strong>Moléculas grandes:</strong> Vancomicina e colistina têm peso molecular elevado</li>
+                      <li><strong>Difusão limitada:</strong> Não difundem bem em discos ou tiras de gradiente</li>
+                      <li><strong>Resultados imprecisos:</strong> Métodos convencionais podem subestimar sensibilidade</li>
+                      <li><strong>Técnica dilucional:</strong> Microdiluição em caldo é o padrão-ouro</li>
+                    </ul>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 10px;">⚠️ Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      Em infecções graves por microrganismos multirresistentes, onde vancomicina ou 
+                      colistina são opções terapêuticas críticas, a determinação precisa da <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> 
+                      por método dilucional é essencial para guiar a terapia.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Por que antibióticos de moléculas grandes como vancomicina e colistina requerem técnica dilucional específica para teste de sensibilidade?",
+                options: [
+                  "A) Porque são antibióticos muito caros e precisam de métodos especiais de armazenamento",
+                  "B) Porque suas moléculas grandes não difundem adequadamente em métodos convencionais (disco-difusão), podendo gerar resultados imprecisos, sendo necessária microdiluição em caldo",
+                  "C) Porque são sempre resistentes a todos os métodos convencionais de teste"
+                ],
+                correct: 1,
+                explanation: "Glicopeptídeos (vancomicina) e polimixinas (colistina) possuem moléculas grandes que apresentam difusão limitada em métodos convencionais como disco-difusão ou tiras de gradiente. Isso pode levar a resultados imprecisos que subestimam a sensibilidade real. Por isso, a técnica dilucional (microdiluição em caldo) é o padrão-ouro para determinar a CIM desses antibióticos, especialmente em infecções graves onde a precisão é crítica."
+              }
+            },
+          ]
+        },
+        {
+          id: 17,
           title: "Revisão I - Fundamentos",
           duration: "25 min",
           xp: 150,
@@ -6134,7 +6185,7 @@ const App = () => {
           ]
         },
         {
-          id: 17,
+          id: 18,
           title: "Revisão II - Métodos",
           duration: "30 min",
           xp: 150,
@@ -6373,7 +6424,7 @@ const App = () => {
         },
 
         {
-          id: 18,
+          id: 19,
           title: "Revisão III - Interpretação",
           duration: "35 min",
           xp: 160,
@@ -6626,7 +6677,7 @@ const App = () => {
         }
 ,
         {
-          id: 19,
+          id: 20,
           title: "Revisão IV - Tópicos Avançados",
           duration: "30 min",
           xp: 150,
