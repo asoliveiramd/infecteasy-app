@@ -5997,6 +5997,61 @@ const App = () => {
                 explanation: "Enterococos são os únicos patógenos para os quais existe evidência clínica robusta de sinergia entre betalactâmicos (ampicilina/penicilina) e aminoglicosídeos (gentamicina). Essa combinação é especialmente importante no tratamento de endocardite enterocócica. O betalactâmico facilita a entrada do aminoglicosídeo na célula bacteriana, potencializando o efeito bactericida. No entanto, se houver resistência de alto nível a aminoglicosídeos (≥500 μg/mL), a sinergia é perdida e a terapia combinada não é eficaz."
               }
             },
+            {
+              title: "Uso de Aminoglicosídeos",
+              content: `
+                <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #991b1b; margin-bottom: 15px;">⚠️ Uso de Aminoglicosídeos</h3>
+                  
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    <strong>Não é recomendada monoterapia com aminoglicosídeos para enterococos</strong>, 
+                    mesmo com resultado sensível, devido à <strong>baixa eficácia clínica</strong>.
+                  </p>
+                  
+                  <div style="background: #fef2f2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #7f1d1d; margin-bottom: 10px;">🚫 Por Que Evitar Monoterapia?</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8; font-size: 15px;">
+                      <li><strong>Efeito bacteriostático:</strong> Aminoglicosídeos sozinhos não são bactericidas contra enterococos</li>
+                      <li><strong>Falha terapêutica:</strong> Alta taxa de falha clínica mesmo com sensibilidade in vitro</li>
+                      <li><strong>Penetração limitada:</strong> Dificuldade em atingir concentrações adequadas intracelularmente</li>
+                      <li><strong>Evidência clínica:</strong> Estudos demonstram superioridade da terapia combinada</li>
+                    </ul>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #14532d; margin-bottom: 10px;">✅ Uso Correto</h4>
+                    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+                      Aminoglicosídeos devem ser usados <strong>sempre em combinação</strong> com betalactâmicos 
+                      (ampicilina ou penicilina) para infecções enterocócicas graves, especialmente endocardite.
+                    </p>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      <strong>Esquema recomendado:</strong> Ampicilina + Gentamicina (se não houver resistência de alto nível)
+                    </p>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #92400e; margin-bottom: 10px;">💡 Importante Lembrar</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      O resultado "sensível" no antibiograma para aminoglicosídeos em enterococos 
+                      <strong>não significa que a monoterapia será eficaz</strong>. Este é um dos poucos casos 
+                      onde a sensibilidade in vitro não se traduz em eficácia clínica quando usado isoladamente.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Por que não é recomendada monoterapia com aminoglicosídeos para enterococos, mesmo quando o antibiograma mostra sensibilidade?",
+                options: [
+                  "A) Porque aminoglicosídeos são sempre tóxicos e devem ser evitados em qualquer situação",
+                  "B) Porque aminoglicosídeos apresentam baixa eficácia clínica contra enterococos quando usados isoladamente, sendo necessária combinação com betalactâmicos para efeito bactericida",
+                  "C) Porque enterococos sempre desenvolvem resistência aos aminoglicosídeos durante o tratamento"
+                ],
+                correct: 1,
+                explanation: "Aminoglicosídeos, quando usados em monoterapia contra enterococos, apresentam apenas efeito bacteriostático e não bactericida, mesmo quando o antibiograma mostra sensibilidade. Isso resulta em alta taxa de falha terapêutica. A eficácia clínica só é alcançada quando aminoglicosídeos são combinados com betalactâmicos (ampicilina ou penicilina), que facilitam a penetração do aminoglicosídeo na célula bacteriana, criando sinergia bactericida. Este é um exemplo importante onde a sensibilidade in vitro não se traduz em eficácia clínica na monoterapia."
+              }
+            },
+
+
 
 
           ]
