@@ -6128,6 +6128,103 @@ const App = () => {
                 explanation: "Comparar CIMs de diferentes antibióticos é como comparar tempos de atletas em provas diferentes (100m vs maratona). Cada classe de antibiótico tem características farmacocinéticas (como o corpo processa) e farmacodinâmicas (como age contra a bactéria) únicas. Por exemplo, ciprofloxacino com CIM 0,25 mg/L não é necessariamente 'melhor' que meropenem com CIM 0,5 mg/L - ambos podem ser igualmente eficazes se ambos forem sensíveis. A CIM deve ser usada para comparar com pontos de corte (S/I/R) e para otimização de dose, não para comparação direta entre classes diferentes."
               }
             },
+            {
+              title: "Colonização vs. Infecção",
+              content: `
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d97706; margin-bottom: 15px;">⚠️ Colonização vs. Infecção</h3>
+                  
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px; font-weight: bold; color: #92400e;">
+                    Nem toda cultura positiva significa presença de infecção. A <strong>correlação clínico-laboratorial</strong> 
+                    é essencial para diferenciação entre colonização e infecção.
+                  </p>
+                  
+                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 10px;">🚫 Erro Comum</h4>
+                    <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+                      <strong>"A cultura deu positivo, então precisa tratar!"</strong>
+                    </p>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      Essa abordagem leva a uso desnecessário de antibióticos, seleção de resistência, 
+                      efeitos adversos e aumento de custos.
+                    </p>
+                  </div>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
+                    <div style="background: #dcfce7; padding: 15px; border-radius: 8px;">
+                      <h4 style="color: #14532d; margin-bottom: 10px;">🦠 Colonização</h4>
+                      <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
+                        <li>Presença de microrganismos</li>
+                        <li><strong>Sem</strong> resposta inflamatória</li>
+                        <li><strong>Sem</strong> sinais/sintomas</li>
+                        <li><strong>Não</strong> requer tratamento</li>
+                      </ul>
+                    </div>
+                    
+                    <div style="background: #fee2e2; padding: 15px; border-radius: 8px;">
+                      <h4 style="color: #991b1b; margin-bottom: 10px;">🔥 Infecção</h4>
+                      <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
+                        <li>Presença de microrganismos</li>
+                        <li><strong>Com</strong> resposta inflamatória</li>
+                        <li><strong>Com</strong> sinais/sintomas</li>
+                        <li><strong>Requer</strong> tratamento</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #1e40af; margin-bottom: 10px;">📋 Exemplos Práticos</h4>
+                    
+                    <div style="margin-bottom: 15px;">
+                      <p style="font-size: 14px; font-weight: bold; color: #1e3a8a; margin-bottom: 5px;">
+                        ✅ Colonização (NÃO tratar):
+                      </p>
+                      <ul style="margin-left: 20px; line-height: 1.6; font-size: 13px;">
+                        <li>Urocultura positiva em paciente assintomático (bacteriúria assintomática)</li>
+                        <li>Swab nasal positivo para <abbr title="Staphylococcus aureus Resistente à Meticilina" style="text-decoration: underline dotted; cursor: help; border: none;">MRSA</abbr> sem infecção ativa</li>
+                        <li>Escarro com Pseudomonas em paciente com DPOC estável</li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <p style="font-size: 14px; font-weight: bold; color: #1e3a8a; margin-bottom: 5px;">
+                        ⚕️ Infecção (TRATAR):
+                      </p>
+                      <ul style="margin-left: 20px; line-height: 1.6; font-size: 13px;">
+                        <li>Urocultura positiva + disúria, febre, dor lombar (ITU)</li>
+                        <li>Hemocultura positiva + febre, hipotensão (sepse)</li>
+                        <li>Escarro com Pseudomonas + febre, tosse produtiva, infiltrado novo (pneumonia)</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e0e7ff; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #3730a3; margin-bottom: 10px;">💡 Correlação Clínico-Laboratorial</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      Sempre avaliar:
+                    </p>
+                    <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
+                      <li><strong>Sinais e sintomas clínicos</strong> (febre, dor, secreção purulenta)</li>
+                      <li><strong>Marcadores inflamatórios</strong> (leucócitos, PCR, procalcitonina)</li>
+                      <li><strong>Imagem</strong> (infiltrado, abscesso, coleção)</li>
+                      <li><strong>Contexto clínico</strong> (imunossupressão, dispositivos invasivos)</li>
+                    </ul>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Por que nem toda cultura positiva deve ser tratada com antibióticos?",
+                options: [
+                  "A) Porque todas as culturas positivas representam colonização, nunca infecção",
+                  "B) Porque é necessário correlação clínico-laboratorial para diferenciar colonização (presença de microrganismos sem resposta inflamatória) de infecção (com resposta inflamatória e sintomas)",
+                  "C) Porque antibióticos nunca devem ser usados, independentemente dos sintomas"
+                ],
+                correct: 1,
+                explanation: "Nem toda cultura positiva significa infecção. A colonização é a presença de microrganismos sem resposta inflamatória ou sintomas, não requerendo tratamento. Já a infecção envolve resposta inflamatória e manifestações clínicas. Por exemplo, bacteriúria assintomática (urocultura positiva sem sintomas) é colonização e geralmente não deve ser tratada, exceto em gestantes e antes de procedimentos urológicos. A correlação clínico-laboratorial (sintomas + marcadores inflamatórios + imagem + contexto) é essencial para evitar uso desnecessário de antibióticos, que leva a resistência, efeitos adversos e custos."
+              }
+            },
+
+
           ]
         },
         {
