@@ -5039,339 +5039,450 @@ const App = () => {
                 explanation: "A principal vantagem do BrCAST é a maior segurança do paciente, alcançada através de critérios mais rigorosos baseados em farmacocinética/farmacodinâmica real e pontos de corte mais conservadores. Isso reduz significativamente o risco de falha terapêutica, mesmo que implique em desafios de implementação e adaptação dos profissionais."
               }
             },
+            {
+              title: "Nova Categoria \"I\": Conceito",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🔄 Mudança Conceitual Importante</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Uma das mudanças mais significativas do BrCAST foi a <strong>reinterpretação da categoria "I"</strong>, 
+                    que alterou fundamentalmente a abordagem terapêutica.
+                  </p>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #1e40af; margin-bottom: 15px;">📐 Nova Categoria "I"</h4>
+                    <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+                      Houve a <strong>substituição de "Intermediário"</strong> por 
+                      <strong>"Sensível com aumento de exposição"</strong>, alterando fundamentalmente a 
+                      abordagem terapêutica.
+                    </p>
+                    
+                    <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+                      <tr style="background: #3b82f6; color: white;">
+                        <th style="padding: 10px; border: 1px solid #ddd;">Antes (CLSI)</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Depois (BrCAST)</th>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Intermediário (I)</strong></td>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Sensível com Aumento de Exposição (I)</strong></td>
+                      </tr>
+                      <tr style="background: #f9fafb;">
+                        <td style="padding: 8px; border: 1px solid #ddd;">Interpretação vaga e incerta</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">Orientação terapêutica clara</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px; border: 1px solid #ddd;">"Talvez funcione"</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">"Funciona se otimizar a dose"</td>
+                      </tr>
+                      <tr style="background: #f9fafb;">
+                        <td style="padding: 8px; border: 1px solid #ddd;">Sem orientação de conduta</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">Estratégias específicas de otimização</td>
+                      </tr>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #0ea5e9; margin: 15px 0;">
+                    <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Mensagem Chave</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      A nova categoria "I" <strong>não significa "talvez funcione"</strong>, mas sim 
+                      <strong>"funciona se você otimizar"</strong>. É uma orientação clara e prática para 
+                      o clínico sobre como ajustar a terapia antimicrobiana.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é o significado da nova categoria \"I\" no BrCAST?",
+                options: [
+                  "Intermediário, com eficácia duvidosa e resultado incerto",
+                  "Sensível com Aumento de Exposição, indicando que funciona se otimizar o regime terapêutico",
+                  "Ineficaz, devendo ser evitado sempre que possível"
+                ],
+                correct: 1,
+                explanation: "A categoria 'I' no BrCAST significa 'Sensível com Aumento de Exposição', não mais 'Intermediário'. Isso representa uma mudança conceitual importante: não é um resultado vago ou duvidoso, mas sim uma orientação clara de que o antibiótico será eficaz se aplicarmos estratégias para aumentar a exposição do microrganismo ao fármaco."
+              }
+            },
+            {
+              title: "Estratégias de Aumento de Exposição",
+              content: `
+                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #059669; margin-bottom: 15px;">⚙️ Estratégias de Exposição</h3>
+                  <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+                    A categoria "I" indica que o antibiótico <strong>pode ser eficaz</strong> 
+                    se aplicarmos estratégias para aumentar a exposição do microrganismo ao fármaco:
+                  </p>
+                  
+                  <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #166534; margin-bottom: 10px;">1️⃣ Aumento de Dose</h4>
+                    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+                      Administrar <strong>doses mais altas</strong> do antibiótico para elevar a concentração 
+                      sérica máxima (Cmax).
+                    </p>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      <strong>Exemplo:</strong> Meropenem 2g IV 8/8h em vez de 1g IV 8/8h
+                    </p>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #1e40af; margin-bottom: 10px;">2️⃣ Aumento do Tempo de Infusão</h4>
+                    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+                      <strong>Prolongar o tempo de infusão</strong> para manter concentrações terapêuticas 
+                      por período mais longo (especialmente para beta-lactâmicos tempo-dependentes).
+                    </p>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      <strong>Exemplo:</strong> Piperacilina-tazobactam 4,5g em infusão de 4 horas em vez de 30 minutos
+                    </p>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #d97706; margin-bottom: 10px;">3️⃣ Redução do Intervalo entre Doses</h4>
+                    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+                      <strong>Administrar mais frequentemente</strong> para manter concentrações acima da 
+                      CIM por mais tempo.
+                    </p>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      <strong>Exemplo:</strong> Cefepima 2g IV 8/8h em vez de 2g IV 12/12h
+                    </p>
+                  </div>
+                  
+                  <div style="background: #f3e8ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #7c3aed; margin-bottom: 10px;">4️⃣ Aproveitamento de Condições Favoráveis do Sítio</h4>
+                    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+                      Considerar que alguns sítios de infecção <strong>concentram o antibiótico</strong> 
+                      naturalmente, alcançando níveis muito superiores aos séricos.
+                    </p>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      <strong>Exemplo:</strong> Amicacina em ITU - concentração urinária pode ser 100x maior 
+                      que a sérica, permitindo uso mesmo com CIM "Intermediária"
+                    </p>
+                  </div>
+                  
+                  <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #4b5563; margin-bottom: 10px;">📊 Exemplo Prático Completo</h4>
+                    <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+                      <strong>Situação Clínica:</strong> Paciente com pneumonia por <em>Pseudomonas aeruginosa</em>
+                    </p>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                      <li><strong>Antibiótico:</strong> Cefepima</li>
+                      <li><strong>CIM:</strong> 8 mg/L</li>
+                      <li><strong>Interpretação BrCAST:</strong> Sensível com Aumento de Exposição (I)</li>
+                      <li><strong>Estratégia escolhida:</strong> Cefepima 2g IV 8/8h em infusão prolongada de 3h</li>
+                      <li><strong>Resultado esperado:</strong> Concentração mantida acima da CIM por > 70% do intervalo</li>
+                      <li><strong>Desfecho:</strong> Alta probabilidade de sucesso terapêutico</li>
+                    </ul>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Quais são as principais estratégias para aumentar a exposição quando o antibiograma indica categoria \"I\"?",
+                options: [
+                  "Apenas aumentar a dose do antibiótico, sem outras modificações",
+                  "Aumento de dose, prolongamento da infusão, redução do intervalo entre doses e aproveitamento de condições favoráveis do sítio",
+                  "Trocar imediatamente por outro antibiótico, pois \"I\" indica ineficácia"
+                ],
+                correct: 1,
+                explanation: "As quatro principais estratégias são: 1) Aumento de dose (ex: meropenem 2g em vez de 1g), 2) Prolongamento do tempo de infusão (ex: piperacilina-tazobactam em 4h), 3) Redução do intervalo entre doses (ex: cefepima 8/8h em vez de 12/12h), e 4) Aproveitamento de condições favoráveis do sítio (ex: alta concentração urinária de amicacina em ITU). Essas estratégias podem ser combinadas conforme necessário."
+              }
+            },
+            {
+              title: "Quando Considerar Alternativas",
+              content: `
+                <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">⚠️ Quando Considerar Alternativas</h3>
+                  <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
+                    Mesmo com a possibilidade de otimização, em algumas situações pode ser mais prudente 
+                    escolher um antibiótico com categoria "S":
+                  </p>
+                  <ul style="margin-left: 20px; line-height: 1.8; font-size: 15px;">
+                    <li><strong>Infecções muito graves:</strong> Bacteremia, meningite, endocardite</li>
+                    <li><strong>Paciente crítico:</strong> Choque séptico, disfunção orgânica múltipla</li>
+                    <li><strong>Sítio de difícil penetração:</strong> SNC, osso, próstata</li>
+                    <li><strong>Imunossupressão severa:</strong> Neutropenia profunda, HIV avançado</li>
+                    <li><strong>Limitações práticas:</strong> Impossibilidade de infusão prolongada</li>
+                  </ul>
+                  
+                  <div style="background: #fef2f2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 10px;">🎯 Critérios de Decisão</h4>
+                    <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">
+                      <tr style="background: #dc2626; color: white;">
+                        <th style="padding: 10px; border: 1px solid #ddd;">Situação</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Usar "I" com otimização</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Preferir "S"</th>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Gravidade</strong></td>
+                        <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">Leve a moderada</td>
+                        <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">Grave ou crítica</td>
+                      </tr>
+                      <tr style="background: #f9fafb;">
+                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Sítio</strong></td>
+                        <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">Boa penetração</td>
+                        <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">Difícil penetração</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Imunidade</strong></td>
+                        <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">Imunocompetente</td>
+                        <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">Imunossuprimido</td>
+                      </tr>
+                      <tr style="background: #f9fafb;">
+                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Recursos</strong></td>
+                        <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">Otimização viável</td>
+                        <td style="padding: 8px; border: 1px solid #ddd; text-align: center;">Limitações práticas</td>
+                      </tr>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #fff7ed; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #c2410c; margin-bottom: 10px;">💡 Princípio Geral</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      A categoria "I" é uma <strong>opção válida e eficaz</strong> quando bem utilizada, 
+                      mas em situações de <strong>alta gravidade ou complexidade</strong>, a segurança 
+                      adicional de um antibiótico "S" pode ser preferível. A decisão deve ser 
+                      <strong>individualizada</strong> considerando o paciente, a infecção e os recursos disponíveis.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Em quais situações é mais prudente escolher um antibiótico \"S\" em vez de usar \"I\" com otimização?",
+                options: [
+                  "Sempre que houver categoria \"I\", pois indica ineficácia do antibiótico",
+                  "Em infecções graves, pacientes críticos, sítios de difícil penetração, imunossupressão severa ou limitações práticas",
+                  "Apenas quando o paciente tem alergia ao antibiótico classificado como \"I\""
+                ],
+                correct: 1,
+                explanation: "Embora a categoria 'I' seja uma opção válida com otimização adequada, em situações de maior risco é mais prudente preferir antibióticos 'S': infecções muito graves (bacteremia, meningite, endocardite), pacientes críticos (choque séptico), sítios de difícil penetração (SNC, osso), imunossupressão severa (neutropenia profunda) ou limitações práticas (impossibilidade de infusão prolongada). A decisão deve ser individualizada."
+              }
+            },
 
-    {
-      title: "Nova Categoria \"I\"",
-      content: `
-        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h3 style="color: #0369a1; margin-bottom: 15px;">🔄 Mudança Conceitual Importante</h3>
-          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-            Uma das mudanças mais significativas do BrCAST foi a <strong>reinterpretação da categoria "I"</strong>, 
-            que alterou fundamentalmente a abordagem terapêutica.
-          </p>
-          
-          <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h4 style="color: #1e40af; margin-bottom: 15px;">📐 Nova Categoria "I"</h4>
-            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
-              Houve a <strong>substituição de "Intermediário"</strong> por 
-              <strong>"Sensível com aumento de exposição"</strong>, alterando fundamentalmente a 
-              abordagem terapêutica.
-            </p>
-            
-            <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
-              <tr style="background: #3b82f6; color: white;">
-                <th style="padding: 10px; border: 1px solid #ddd;">Antes (CLSI)</th>
-                <th style="padding: 10px; border: 1px solid #ddd;">Depois (BrCAST)</th>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Intermediário (I)</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Sensível com Aumento de Exposição (I)</strong></td>
-              </tr>
-              <tr style="background: #f9fafb;">
-                <td style="padding: 8px; border: 1px solid #ddd;">Interpretação vaga e incerta</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Orientação terapêutica clara</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;">"Talvez funcione"</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">"Funciona se otimizar a dose"</td>
-              </tr>
-              <tr style="background: #f9fafb;">
-                <td style="padding: 8px; border: 1px solid #ddd;">Sem orientação de conduta</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Estratégias específicas de otimização</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        
-        <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h4 style="color: #059669; margin-bottom: 15px;">⚙️ Estratégias de Exposição</h4>
-          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
-            A nova categoria "I" indica claramente que o antibiótico <strong>pode ser eficaz</strong> 
-            se aplicarmos estratégias para aumentar a exposição do microrganismo ao fármaco:
-          </p>
-          
-          <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h5 style="color: #166534; margin-bottom: 10px;">1️⃣ Aumento de Dose</h5>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-              Administrar <strong>doses mais altas</strong> do antibiótico para elevar a concentração 
-              sérica máxima (Cmax).
-            </p>
-            <p style="font-size: 14px; line-height: 1.6;">
-              <strong>Exemplo:</strong> Meropenem 2g IV 8/8h em vez de 1g IV 8/8h
-            </p>
-          </div>
-          
-          <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h5 style="color: #1e40af; margin-bottom: 10px;">2️⃣ Aumento do Tempo de Infusão</h5>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-              <strong>Prolongar o tempo de infusão</strong> para manter concentrações terapêuticas 
-              por período mais longo (especialmente para beta-lactâmicos tempo-dependentes).
-            </p>
-            <p style="font-size: 14px; line-height: 1.6;">
-              <strong>Exemplo:</strong> Piperacilina-tazobactam 4,5g em infusão de 4 horas em vez de 30 minutos
-            </p>
-          </div>
-          
-          <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h5 style="color: #d97706; margin-bottom: 10px;">3️⃣ Redução do Intervalo entre Doses</h5>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-              <strong>Administrar mais frequentemente</strong> para manter concentrações acima da 
-              CIM por mais tempo.
-            </p>
-            <p style="font-size: 14px; line-height: 1.6;">
-              <strong>Exemplo:</strong> Cefepima 2g IV 8/8h em vez de 2g IV 12/12h
-            </p>
-          </div>
-          
-          <div style="background: #f3e8ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h5 style="color: #7c3aed; margin-bottom: 10px;">4️⃣ Aproveitamento de Condições Favoráveis do Sítio</h5>
-            <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
-              Considerar que alguns sítios de infecção <strong>concentram o antibiótico</strong> 
-              naturalmente, alcançando níveis muito superiores aos séricos.
-            </p>
-            <p style="font-size: 14px; line-height: 1.6;">
-              <strong>Exemplo:</strong> Amicacina em ITU - concentração urinária pode ser 100x maior 
-              que a sérica, permitindo uso mesmo com CIM "Intermediária"
-            </p>
-          </div>
-        </div>
-        
-        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h4 style="color: #4b5563; margin-bottom: 10px;">📊 Exemplo Prático Completo</h4>
-          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
-            <strong>Situação Clínica:</strong> Paciente com pneumonia por <em>Pseudomonas aeruginosa</em>
-          </p>
-          <ul style="margin-left: 20px; line-height: 1.8;">
-            <li><strong>Antibiótico:</strong> Cefepima</li>
-            <li><strong>CIM:</strong> 8 mg/L</li>
-            <li><strong>Interpretação BrCAST:</strong> Sensível com Aumento de Exposição (I)</li>
-            <li><strong>Estratégia escolhida:</strong> Cefepima 2g IV 8/8h em infusão prolongada de 3h</li>
-            <li><strong>Resultado esperado:</strong> Concentração mantida acima da CIM por > 70% do intervalo</li>
-            <li><strong>Desfecho:</strong> Alta probabilidade de sucesso terapêutico</li>
-          </ul>
-        </div>
-        
-        <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #0ea5e9; margin: 15px 0;">
-          <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Mensagem Chave</h4>
-          <p style="font-size: 14px; line-height: 1.6;">
-            A nova categoria "I" <strong>não significa "talvez funcione"</strong>, mas sim 
-            <strong>"funciona se você otimizar"</strong>. É uma orientação clara e prática para 
-            o clínico sobre como ajustar a terapia antimicrobiana para alcançar sucesso terapêutico.
-          </p>
-        </div>
-        
-        <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ Quando Considerar Alternativas</h4>
-          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
-            Mesmo com a possibilidade de otimização, em algumas situações pode ser mais prudente 
-            escolher um antibiótico com categoria "S":
-          </p>
-          <ul style="margin-left: 20px; line-height: 1.8;">
-            <li><strong>Infecções muito graves:</strong> Bacteremia, meningite, endocardite</li>
-            <li><strong>Paciente crítico:</strong> Choque séptico, disfunção orgânica múltipla</li>
-            <li><strong>Sítio de difícil penetração:</strong> SNC, osso, próstata</li>
-            <li><strong>Imunossupressão severa:</strong> Neutropenia profunda, HIV avançado</li>
-            <li><strong>Limitações práticas:</strong> Impossibilidade de infusão prolongada</li>
-          </ul>
-        </div>
-      `,
-      question: {
-        text: "O que representa a nova categoria \"I\" na interpretação do antibiograma segundo o BrCAST?",
-        options: [
-          "Um microrganismo totalmente resistente ao antibiótico testado, sem opções terapêuticas viáveis",
-          "A substituição do termo \"Intermediário\" por \"Sensível com aumento de exposição\", indicando a necessidade de ajustar a dose ou o regime de administração para eficácia terapêutica",
-          "Um resultado incerto que deve ser desconsiderado na escolha do tratamento antimicrobiano"
-        ],
-        correct: 1,
-        explanation: "A nova categoria 'I' no BrCAST representa 'Sensível com Aumento de Exposição', substituindo o termo vago 'Intermediário'. Isso indica que o antibiótico pode ser eficaz se aplicarmos estratégias para aumentar a exposição: aumento de dose, prolongamento do tempo de infusão, redução do intervalo entre doses, ou aproveitamento de condições favoráveis do sítio de infecção (como alta concentração urinária). É uma orientação clara e prática, não um resultado incerto."
-      }
-    },
-    {
-      title: "Desafios na Interpretação do BrCast",
-      content: `
-        <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h3 style="color: #d97706; margin-bottom: 15px;">⚠️ Desafios na Interpretação do BrCAST</h3>
-          <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-            Apesar dos avanços, o BrCAST apresenta alguns <strong>desafios práticos</strong> que 
-            os profissionais de saúde precisam conhecer e saber como lidar.
-          </p>
-          
-          <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h4 style="color: #c2410c; margin-bottom: 15px;">❓ Evidências Insuficientes</h4>
-            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
-              Quando o BrCAST indica <strong>"evidências insuficientes"</strong>, significa que 
-              <strong>não há dados científicos robustos</strong> para estabelecer pontos de corte 
-              para aquela combinação microrganismo-antibiótico.
-            </p>
-            
-            <div style="background: #fef2f2; padding: 15px; border-radius: 8px; margin: 15px 0;">
-              <h5 style="color: #991b1b; margin-bottom: 10px;">📋 O que isso significa?</h5>
-              <ul style="margin-left: 20px; line-height: 1.8;">
-                <li><strong>Falta de estudos:</strong> Poucos dados de PK/PD disponíveis</li>
-                <li><strong>Falta de ensaios clínicos:</strong> Desfechos clínicos não estabelecidos</li>
-                <li><strong>Variabilidade:</strong> Comportamento imprevisível in vivo</li>
-                <li><strong>Raridade:</strong> Combinação pouco testada na prática</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h4 style="color: #0369a1; margin-bottom: 15px;">🔬 Exemplo: Burkholderia cepacia</h4>
-          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
-            <strong>Exemplo:</strong> <em>Burkholderia cepacia</em> não possui ponto de corte no 
-            BrCAST para cotrimoxazol.
-          </p>
-          
-          <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h5 style="color: #1e40af; margin-bottom: 10px;">📊 Situação Prática</h5>
-            <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">
-              <tr style="background: #3b82f6; color: white;">
-                <th style="padding: 10px; border: 1px solid #ddd;">Aspecto</th>
-                <th style="padding: 10px; border: 1px solid #ddd;">Informação</th>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Microrganismo</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;"><em>Burkholderia cepacia</em></td>
-              </tr>
-              <tr style="background: #f9fafb;">
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Antibiótico</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Cotrimoxazol (Sulfametoxazol-trimetoprima)</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Status BrCAST</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd; color: #d97706; font-weight: bold;">Evidências Insuficientes</td>
-              </tr>
-              <tr style="background: #f9fafb;">
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>CIM obtida</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">2 mg/L (exemplo)</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Interpretação</strong></td>
-                <td style="padding: 8px; border: 1px solid #ddd;">❌ Não é possível classificar como S/I/R</td>
-              </tr>
-            </table>
-          </div>
-          
-          <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
-            <h5 style="color: #d97706; margin-bottom: 10px;">🤔 O que fazer nesta situação?</h5>
-            <ol style="margin-left: 20px; line-height: 1.8;">
-              <li><strong>Consultar literatura:</strong> Buscar estudos específicos sobre a combinação</li>
-              <li><strong>Considerar experiência clínica:</strong> Casos anteriores de sucesso/falha</li>
-              <li><strong>Avaliar alternativas:</strong> Antibióticos com pontos de corte estabelecidos</li>
-              <li><strong>Discussão multidisciplinar:</strong> Infectologia + Microbiologia</li>
-              <li><strong>Monitoramento rigoroso:</strong> Acompanhar resposta clínica de perto</li>
-            </ol>
-          </div>
-        </div>
-        
-        <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h4 style="color: #059669; margin-bottom: 15px;">🔄 Reavaliação do "I"</h4>
-          <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
-            <strong>"I" não representa qualidade inferior ao "S"</strong>, apenas requer ajuste de 
-            regime terapêutico.
-          </p>
-          
-          <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
-            <h5 style="color: #166534; margin-bottom: 10px;">💡 Mudança de Mentalidade</h5>
-            <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">
-              <tr style="background: #10b981; color: white;">
-                <th style="padding: 10px; border: 1px solid #ddd;">Pensamento Antigo (CLSI)</th>
-                <th style="padding: 10px; border: 1px solid #ddd;">Pensamento Novo (BrCAST)</th>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;">S = Bom, I = Duvidoso, R = Ruim</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">S = Dose padrão, I = Dose otimizada, R = Evitar</td>
-              </tr>
-              <tr style="background: #f9fafb;">
-                <td style="padding: 8px; border: 1px solid #ddd;">"I" é segunda escolha</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">"I" pode ser primeira escolha se otimizado</td>
-              </tr>
-              <tr>
-                <td style="padding: 8px; border: 1px solid #ddd;">Evitar "I" sempre que possível</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Usar "I" com estratégia adequada</td>
-              </tr>
-              <tr style="background: #f9fafb;">
-                <td style="padding: 8px; border: 1px solid #ddd;">Interpretação vaga</td>
-                <td style="padding: 8px; border: 1px solid #ddd;">Orientação terapêutica clara</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        
-        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h4 style="color: #4b5563; margin-bottom: 10px;">📚 Outros Desafios Práticos</h4>
-          
-          <div style="background: #ffffff; padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; margin: 10px 0;">
-            <h5 style="color: #374151; margin-bottom: 10px;">1️⃣ Transição de Sistemas</h5>
-            <ul style="margin-left: 20px; line-height: 1.8;">
-              <li>Laboratórios precisaram atualizar equipamentos e software</li>
-              <li>Período de adaptação com possíveis inconsistências</li>
-              <li>Necessidade de treinamento de equipes</li>
-            </ul>
-          </div>
-          
-          <div style="background: #ffffff; padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; margin: 10px 0;">
-            <h5 style="color: #374151; margin-bottom: 10px;">2️⃣ Comunicação com Prescritores</h5>
-            <ul style="margin-left: 20px; line-height: 1.8;">
-              <li>Médicos acostumados com CLSI podem estranhar mudanças</li>
-              <li>Necessidade de explicar por que "S" virou "I" ou "R"</li>
-              <li>Educação sobre estratégias de otimização</li>
-            </ul>
-          </div>
-          
-          <div style="background: #ffffff; padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; margin: 10px 0;">
-            <h5 style="color: #374151; margin-bottom: 10px;">3️⃣ Limitações de Recursos</h5>
-            <ul style="margin-left: 20px; line-height: 1.8;">
-              <li>Infusão prolongada pode não ser viável em todos os serviços</li>
-              <li>Doses altas podem ter custo proibitivo</li>
-              <li>Monitoramento terapêutico nem sempre disponível</li>
-            </ul>
-          </div>
-          
-          <div style="background: #ffffff; padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; margin: 10px 0;">
-            <h5 style="color: #374151; margin-bottom: 10px;">4️⃣ Lacunas de Evidência</h5>
-            <ul style="margin-left: 20px; line-height: 1.8;">
-              <li>Nem todas as combinações microrganismo-antibiótico têm pontos de corte</li>
-              <li>Microrganismos raros frequentemente sem orientação</li>
-              <li>Necessidade de julgamento clínico individualizado</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #0ea5e9; margin: 15px 0;">
-          <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Mensagem Final</h4>
-          <p style="font-size: 14px; line-height: 1.6;">
-            Os desafios do BrCAST são <strong>oportunidades de aprendizado</strong>. A categoria "I" 
-            não é inferior ao "S", apenas requer <strong>pensamento farmacológico mais sofisticado</strong>. 
-            Quando encontrar "evidências insuficientes", busque <strong>literatura especializada</strong> 
-            e <strong>discussão multidisciplinar</strong> para tomar a melhor decisão para o paciente.
-          </p>
-        </div>
-        
-        <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
-          <h4 style="color: #059669; margin-bottom: 10px;">✅ Princípios para Lidar com Desafios</h4>
-          <ol style="margin-left: 20px; line-height: 1.8;">
-            <li><strong>Educação contínua:</strong> Mantenha-se atualizado sobre mudanças</li>
-            <li><strong>Comunicação clara:</strong> Explique mudanças para prescritores</li>
-            <li><strong>Pensamento PK/PD:</strong> Considere farmacocinética e farmacodinâmica</li>
-            <li><strong>Individualização:</strong> Adapte estratégias ao paciente e contexto</li>
-            <li><strong>Colaboração:</strong> Trabalhe em equipe multidisciplinar</li>
-            <li><strong>Monitoramento:</strong> Acompanhe resposta clínica rigorosamente</li>
-          </ol>
-        </div>
-      `,
-      question: {
-        text: "O que significa quando o BrCAST classifica uma combinação microrganismo-antibiótico como tendo \"evidências insuficientes\"?",
-        options: [
-          "Que o microrganismo é resistente ao antibiótico testado e o uso deve ser evitado",
-          "Que não há dados científicos suficientes para definir pontos de corte confiáveis para aquela combinação específica",
-          "Que o teste apresentou erro técnico e deve ser repetido obrigatoriamente"
-        ],
-        correct: 1,
-        explanation: "Quando o BrCAST indica 'evidências insuficientes', significa que não há dados científicos robustos (estudos de PK/PD, ensaios clínicos, desfechos estabelecidos) para definir pontos de corte confiáveis para aquela combinação específica de microrganismo e antibiótico. Exemplo: Burkholderia cepacia não possui ponto de corte para cotrimoxazol. Nesta situação, é necessário consultar literatura especializada, considerar experiência clínica e discutir em equipe multidisciplinar."
-      }
-    }
+            {
+              title: "Evidências Insuficientes: O Que Significa?",
+              content: `
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d97706; margin-bottom: 15px;">❓ Evidências Insuficientes</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Quando o BrCAST indica <strong>"evidências insuficientes"</strong>, significa que 
+                    <strong>não há dados científicos robustos</strong> para estabelecer pontos de corte 
+                    para aquela combinação microrganismo-antibiótico.
+                  </p>
+                  
+                  <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #c2410c; margin-bottom: 15px;">📋 O que isso significa?</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8; font-size: 15px;">
+                      <li><strong>Falta de estudos:</strong> Poucos dados de PK/PD disponíveis</li>
+                      <li><strong>Falta de ensaios clínicos:</strong> Desfechos clínicos não estabelecidos</li>
+                      <li><strong>Variabilidade:</strong> Comportamento imprevisível in vivo</li>
+                      <li><strong>Raridade:</strong> Combinação pouco testada na prática</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🔬 Exemplo: Burkholderia cepacia</h3>
+                  <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+                    <em>Burkholderia cepacia</em> não possui ponto de corte no BrCAST para cotrimoxazol.
+                  </p>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #1e40af; margin-bottom: 10px;">📊 Situação Prática</h4>
+                    <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">
+                      <tr style="background: #3b82f6; color: white;">
+                        <th style="padding: 10px; border: 1px solid #ddd;">Aspecto</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Informação</th>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Microrganismo</strong></td>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><em>Burkholderia cepacia</em></td>
+                      </tr>
+                      <tr style="background: #f9fafb;">
+                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Antibiótico</strong></td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">Cotrimoxazol (Sulfametoxazol-trimetoprima)</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Status BrCAST</strong></td>
+                        <td style="padding: 8px; border: 1px solid #ddd; color: #d97706; font-weight: bold;">Evidências Insuficientes</td>
+                      </tr>
+                      <tr style="background: #f9fafb;">
+                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>CIM obtida</strong></td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">2 mg/L (exemplo)</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px; border: 1px solid #ddd;"><strong>Interpretação</strong></td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">❌ Não é possível classificar como S/I/R</td>
+                      </tr>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #d97706; margin-bottom: 10px;">🤔 O que fazer nesta situação?</h4>
+                    <ol style="margin-left: 20px; line-height: 1.8; font-size: 15px;">
+                      <li><strong>Consultar literatura:</strong> Buscar estudos específicos sobre a combinação</li>
+                      <li><strong>Considerar experiência clínica:</strong> Casos anteriores de sucesso/falha</li>
+                      <li><strong>Avaliar alternativas:</strong> Antibióticos com pontos de corte estabelecidos</li>
+                      <li><strong>Discussão multidisciplinar:</strong> Infectologia + Microbiologia</li>
+                      <li><strong>Monitoramento rigoroso:</strong> Acompanhar resposta clínica de perto</li>
+                    </ol>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "O que significa quando o BrCAST indica \"evidências insuficientes\" para uma combinação microrganismo-antibiótico?",
+                options: [
+                  "Que o microrganismo é resistente e o antibiótico não deve ser usado",
+                  "Que não há dados científicos robustos para estabelecer pontos de corte confiáveis",
+                  "Que houve erro no teste e ele deve ser repetido"
+                ],
+                correct: 1,
+                explanation: "Evidências insuficientes significa que não há dados científicos robustos (estudos de PK/PD, ensaios clínicos, desfechos estabelecidos) para definir pontos de corte confiáveis. Exemplo: Burkholderia cepacia não tem ponto de corte para cotrimoxazol. Nesta situação, deve-se consultar literatura, considerar experiência clínica, avaliar alternativas e discutir em equipe multidisciplinar."
+              }
+            },
+            {
+              title: "Reavaliação da Categoria \"I\"",
+              content: `
+                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #059669; margin-bottom: 15px;">🔄 Reavaliação do "I"</h3>
+                  <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+                    <strong>"I" não representa qualidade inferior ao "S"</strong>, apenas requer ajuste de 
+                    regime terapêutico.
+                  </p>
+                  
+                  <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #166534; margin-bottom: 15px;">💡 Mudança de Mentalidade</h4>
+                    <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">
+                      <tr style="background: #10b981; color: white;">
+                        <th style="padding: 10px; border: 1px solid #ddd;">Pensamento Antigo (CLSI)</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Pensamento Novo (BrCAST)</th>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px; border: 1px solid #ddd;">S = Bom, I = Duvidoso, R = Ruim</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">S = Dose padrão, I = Dose otimizada, R = Evitar</td>
+                      </tr>
+                      <tr style="background: #f9fafb;">
+                        <td style="padding: 8px; border: 1px solid #ddd;">"I" é segunda escolha</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">"I" pode ser primeira escolha se otimizado</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px; border: 1px solid #ddd;">Evitar "I" sempre que possível</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">Usar "I" com estratégia adequada</td>
+                      </tr>
+                      <tr style="background: #f9fafb;">
+                        <td style="padding: 8px; border: 1px solid #ddd;">Interpretação vaga</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">Orientação terapêutica clara</td>
+                      </tr>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #1e40af; margin-bottom: 10px;">🎯 Implicações Práticas</h4>
+                    <p style="font-size: 14px; line-height: 1.6; margin-bottom: 10px;">
+                      A mudança de mentalidade sobre a categoria "I" tem impactos diretos na prática clínica:
+                    </p>
+                    <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
+                      <li><strong>Amplia opções terapêuticas:</strong> Mais antibióticos podem ser usados com segurança</li>
+                      <li><strong>Reduz pressão seletiva:</strong> Evita uso desnecessário de antibióticos de última linha</li>
+                      <li><strong>Melhora stewardship:</strong> Uso mais racional baseado em PK/PD</li>
+                      <li><strong>Requer conhecimento:</strong> Profissionais precisam entender estratégias de otimização</li>
+                    </ul>
+                  </div>
+                  
+                  <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #0ea5e9; margin: 15px 0;">
+                    <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Mensagem Chave</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      A categoria "I" representa uma <strong>oportunidade terapêutica</strong>, não uma limitação. 
+                      Com o conhecimento adequado de PK/PD e estratégias de otimização, antibióticos classificados 
+                      como "I" podem ser tão eficazes quanto os "S".
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal diferença entre a interpretação da categoria \"I\" no CLSI e no BrCAST?",
+                options: [
+                  "No CLSI era \"Intermediário\" (duvidoso), no BrCAST é \"Sensível com Aumento de Exposição\" (orientação clara)",
+                  "No CLSI era \"Ineficaz\", no BrCAST é \"Intermediário\"",
+                  "Não há diferença, ambos usam o mesmo conceito de \"Intermediário\""
+                ],
+                correct: 0,
+                explanation: "No CLSI, 'I' significava 'Intermediário' com interpretação vaga ('talvez funcione'), sem orientação clara de conduta. No BrCAST, 'I' significa 'Sensível com Aumento de Exposição', fornecendo orientação terapêutica específica: o antibiótico funciona se otimizar dose, tempo de infusão ou intervalo. Isso muda a mentalidade de 'evitar I' para 'usar I com estratégia adequada'."
+              }
+            },
+            {
+              title: "Desafios Práticos e Princípios",
+              content: `
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #4b5563; margin-bottom: 15px;">📚 Desafios Práticos do BrCAST</h3>
+                  
+                  <div style="background: #ffffff; padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #374151; margin-bottom: 10px;">1️⃣ Transição de Sistemas</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
+                      <li>Laboratórios precisaram atualizar equipamentos e software</li>
+                      <li>Período de adaptação com possíveis inconsistências</li>
+                      <li>Necessidade de treinamento de equipes</li>
+                    </ul>
+                  </div>
+                  
+                  <div style="background: #ffffff; padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #374151; margin-bottom: 10px;">2️⃣ Comunicação com Prescritores</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
+                      <li>Médicos acostumados com CLSI podem estranhar mudanças</li>
+                      <li>Necessidade de explicar por que "S" virou "I" ou "R"</li>
+                      <li>Educação sobre estratégias de otimização</li>
+                    </ul>
+                  </div>
+                  
+                  <div style="background: #ffffff; padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #374151; margin-bottom: 10px;">3️⃣ Limitações de Recursos</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
+                      <li>Infusão prolongada pode não ser viável em todos os serviços</li>
+                      <li>Doses altas podem ter custo proibitivo</li>
+                      <li>Monitoramento terapêutico nem sempre disponível</li>
+                    </ul>
+                  </div>
+                  
+                  <div style="background: #ffffff; padding: 15px; border: 2px solid #e5e7eb; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #374151; margin-bottom: 10px;">4️⃣ Lacunas de Evidência</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8; font-size: 14px;">
+                      <li>Nem todas as combinações microrganismo-antibiótico têm pontos de corte</li>
+                      <li>Microrganismos raros frequentemente sem orientação</li>
+                      <li>Necessidade de julgamento clínico individualizado</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #059669; margin-bottom: 15px;">✅ Princípios para Lidar com Desafios</h3>
+                  <ol style="margin-left: 20px; line-height: 1.8; font-size: 15px;">
+                    <li><strong>Educação contínua:</strong> Mantenha-se atualizado sobre mudanças</li>
+                    <li><strong>Comunicação clara:</strong> Explique mudanças para prescritores</li>
+                    <li><strong>Pensamento PK/PD:</strong> Considere farmacocinética e farmacodinâmica</li>
+                    <li><strong>Individualização:</strong> Adapte estratégias ao paciente e contexto</li>
+                    <li><strong>Colaboração:</strong> Trabalhe em equipe multidisciplinar</li>
+                    <li><strong>Monitoramento:</strong> Acompanhe resposta clínica rigorosamente</li>
+                  </ol>
+                </div>
+                
+                <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #0ea5e9; margin: 15px 0;">
+                  <h4 style="color: #0369a1; margin-bottom: 10px;">💡 Mensagem Final</h4>
+                  <p style="font-size: 14px; line-height: 1.6;">
+                    Os desafios do BrCAST são <strong>oportunidades de aprendizado</strong>. A categoria "I" 
+                    não é inferior ao "S", apenas requer <strong>pensamento farmacológico mais sofisticado</strong>. 
+                    Quando encontrar "evidências insuficientes", busque <strong>literatura especializada</strong> 
+                    e <strong>discussão multidisciplinar</strong> para tomar a melhor decisão para o paciente.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Quais são os principais desafios práticos na implementação do BrCAST?",
+                options: [
+                  "Apenas a necessidade de atualização de equipamentos laboratoriais",
+                  "Transição de sistemas, comunicação com prescritores, limitações de recursos e lacunas de evidência",
+                  "Somente a resistência dos médicos em aceitar as mudanças"
+                ],
+                correct: 1,
+                explanation: "Os principais desafios do BrCAST são: 1) Transição de sistemas (atualização de equipamentos, treinamento), 2) Comunicação com prescritores (explicar mudanças, educar sobre otimização), 3) Limitações de recursos (viabilidade de infusão prolongada, custos), e 4) Lacunas de evidência (combinações sem pontos de corte, microrganismos raros). Esses desafios requerem educação contínua, comunicação clara, pensamento PK/PD e trabalho multidisciplinar."
+              }
+            }
+
           ]
         },
         {
