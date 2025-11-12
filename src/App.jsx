@@ -5944,6 +5944,61 @@ const App = () => {
                 explanation: "Glicopeptídeos (vancomicina) e polimixinas (colistina) possuem moléculas grandes que apresentam difusão limitada em métodos convencionais como disco-difusão ou tiras de gradiente. Isso pode levar a resultados imprecisos que subestimam a sensibilidade real. Por isso, a técnica dilucional (microdiluição em caldo) é o padrão-ouro para determinar a CIM desses antibióticos, especialmente em infecções graves onde a precisão é crítica."
               }
             },
+            {
+              title: "Infecções por Enterococos",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #1e40af; margin-bottom: 15px;">🦠 Infecções por Enterococos</h3>
+                  
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Verificar evidência de <strong>sinergia com aminoglicosídeos</strong>, especialmente em 
+                    <strong>endocardites</strong>. São os únicos patógenos para os quais existe evidência 
+                    clínica robusta de sinergia entre aminoglicosídeos e betalactâmicos.
+                  </p>
+                  
+                  <div style="background: #eff6ff; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #1e3a8a; margin-bottom: 10px;">💡 Sinergia Terapêutica</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8; font-size: 15px;">
+                      <li><strong>Combinação sinérgica:</strong> Betalactâmico (ampicilina ou penicilina) + Aminoglicosídeo (gentamicina)</li>
+                      <li><strong>Mecanismo:</strong> Betalactâmico facilita entrada do aminoglicosídeo na célula bacteriana</li>
+                      <li><strong>Indicação principal:</strong> Endocardite enterocócica</li>
+                      <li><strong>Teste específico:</strong> Verificar resistência de alto nível a aminoglicosídeos</li>
+                    </ul>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #92400e; margin-bottom: 10px;">⚠️ Resistência de Alto Nível</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      Se o enterococo apresentar <strong>resistência de alto nível a aminoglicosídeos</strong> 
+                      (gentamicina ≥500 μg/mL), a sinergia é perdida e a terapia combinada não é eficaz. 
+                      Nesse caso, considerar monoterapia prolongada com betalactâmico ou alternativas como 
+                      linezolida ou daptomicina.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #e0e7ff; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <h4 style="color: #3730a3; margin-bottom: 10px;">🎯 Importância Clínica</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                      Enterococos são os <strong>únicos patógenos</strong> com evidência clínica robusta de 
+                      sinergia entre betalactâmicos e aminoglicosídeos. Para outros microrganismos, essa 
+                      combinação não demonstrou benefício clínico consistente.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é a importância clínica da verificação de sinergia com aminoglicosídeos em infecções por enterococos?",
+                options: [
+                  "A) Todos os microrganismos Gram-positivos apresentam sinergia com aminoglicosídeos, sendo necessário testar sempre",
+                  "B) Enterococos são os únicos patógenos com evidência clínica robusta de sinergia entre betalactâmicos e aminoglicosídeos, especialmente importante em endocardites",
+                  "C) A sinergia é irrelevante porque enterococos são sempre sensíveis a monoterapia com betalactâmicos"
+                ],
+                correct: 1,
+                explanation: "Enterococos são os únicos patógenos para os quais existe evidência clínica robusta de sinergia entre betalactâmicos (ampicilina/penicilina) e aminoglicosídeos (gentamicina). Essa combinação é especialmente importante no tratamento de endocardite enterocócica. O betalactâmico facilita a entrada do aminoglicosídeo na célula bacteriana, potencializando o efeito bactericida. No entanto, se houver resistência de alto nível a aminoglicosídeos (≥500 μg/mL), a sinergia é perdida e a terapia combinada não é eficaz."
+              }
+            },
+
+
           ]
         },
         {
