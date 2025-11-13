@@ -8837,8 +8837,8 @@ const App = () => {
       <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
         <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-800 mb-2">🧬 Infecteasy</h1>
-            <p className="text-gray-600">Plataforma de Aprendizado em Microbiologia</p>
+            <h1 className="text-3xl font-bold text-gray-800 mb-2">🦠 Infecteasy</h1>
+            <p className="text-gray-600">Plataforma de Aprendizado em Doenças Infecciosas</p>
           </div>
           
           <div className="space-y-4">
