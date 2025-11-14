@@ -7627,6 +7627,54 @@ const App = () => {
           ]
         },
         {
+          id: 2,
+          title: "Inibidores da Síntese da Parede Celular",
+          duration: "15 min",
+          xp: 80,
+          sections: [
+            {
+              title: "Mecanismo de ação e Principais grupos",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🧱 Inibidores da Síntese da Parede Celular</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Atuam na <strong>inibição da formação da parede celular bacteriana</strong>, estrutura essencial 
+                    para a sobrevivência da maioria das bactérias.
+                  </p>
+                </div>
+                
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #0284c7;">
+                  <h4 style="color: #0369a1; margin-bottom: 15px; font-size: 18px;">💊 β-lactâmicos</h4>
+                  <p style="font-size: 15px; line-height: 1.6;">
+                    Atuam nas <strong><abbr title="Proteínas Ligadoras de Penicilina - enzimas essenciais para a síntese do peptidoglicano" style="text-decoration: none; border-bottom: 1px dotted #0369a1; cursor: help;">PBPs</abbr></strong> 
+                    (Penicillin-Binding Proteins), enzimas essenciais para a síntese do peptidoglicano da parede celular.
+                  </p>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #d97706;">
+                  <h4 style="color: #92400e; margin-bottom: 15px; font-size: 18px;">🔗 Glicopeptídeos</h4>
+                  <p style="font-size: 15px; line-height: 1.6;">
+                    Inibem a síntese do peptidoglicano por um <strong>mecanismo diferente</strong>, ligando-se aos 
+                    precursores da parede celular.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal diferença entre o mecanismo de ação dos β-lactâmicos e dos glicopeptídeos?",
+                options: [
+                  "A) β-lactâmicos atuam nas PBPs enquanto glicopeptídeos ligam-se aos precursores da parede celular",
+                  "B) β-lactâmicos inibem a síntese proteica enquanto glicopeptídeos inibem a parede celular",
+                  "C) Ambos atuam exatamente da mesma forma nas PBPs",
+                  "D) Glicopeptídeos atuam nas PBPs enquanto β-lactâmicos ligam-se aos precursores"
+                ],
+                correct: 0,
+                explanation: "Embora ambos inibam a síntese da parede celular, os β-lactâmicos atuam ligando-se às PBPs (enzimas que sintetizam o peptidoglicano), enquanto os glicopeptídeos ligam-se diretamente aos precursores da parede celular, bloqueando sua incorporação."
+              }
+            },
+
+          ]
+        },
+        {
           id: 3,
           title: "Cefalosporinas",
           duration: "20 min",
