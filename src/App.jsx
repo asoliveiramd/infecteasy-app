@@ -7713,7 +7713,53 @@ const App = () => {
                 correct: 2,
                 explanation: "Macrolídeos, como a azitromicina, são conhecidos por seu mecanismo de ação que envolve a inibição da síntese de proteínas bacterianas."
               }
+            },
+          {
+            title: "Classes de Antibióticos de Uso Ambulatorial",
+            content: `
+              <p><strong>Aqui temos todas as classes de antibióticos de interesse ambulatorial para as principais infecções.</strong></p>
+              
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0;">
+                <div style="background: #dbeafe; padding: 15px; border-radius: 8px;">
+                  <h4 style="color: #1e40af; margin: 0 0 10px 0;">🧱 Parede Celular</h4>
+                  <p style="margin: 0; font-size: 0.9em;">β-lactâmicos (penicilinas, cefalosporinas), glicopeptídeos</p>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 15px; border-radius: 8px;">
+                  <h4 style="color: #92400e; margin: 0 0 10px 0;">🧬 Síntese Proteica</h4>
+                  <p style="margin: 0; font-size: 0.9em;">Macrolídeos, tetraciclinas, aminoglicosídeos, lincosamidas</p>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 15px; border-radius: 8px;">
+                  <h4 style="color: #166534; margin: 0 0 10px 0;">🧪 Ácido Nucleico</h4>
+                  <p style="margin: 0; font-size: 0.9em;">Quinolonas, rifamicinas, nitrofuranos</p>
+                </div>
+                
+                <div style="background: #fce7f3; padding: 15px; border-radius: 8px;">
+                  <h4 style="color: #9f1239; margin: 0 0 10px 0;">⚗️ Metabolismo</h4>
+                  <p style="margin: 0; font-size: 0.9em;">Sulfonamidas, trimetoprima</p>
+                </div>
+              </div>
+              
+              <p style="background: #f0f9ff; padding: 15px; border-left: 4px solid #0284c7; margin: 15px 0;">
+                💡 <strong>Foco prático:</strong> Vamos nos concentrar em apenas <strong>12 moléculas</strong>. Sem complicação.
+              </p>
+              
+              <p>Classificamos os antibióticos de acordo com seu <strong>mecanismo de ação</strong>, o que ajuda a compreender seu espectro de atividade e potenciais efeitos adversos.</p>
+            `,
+            question: {
+              text: "Qual é a principal vantagem de classificar os antibióticos por mecanismo de ação?",
+              options: [
+                "A) Facilita a memorização dos nomes comerciais",
+                "B) Ajuda a compreender o espectro de atividade e potenciais efeitos adversos",
+                "C) Permite prescrever qualquer antibiótico para qualquer infecção",
+                "D) Torna desnecessário conhecer o sítio de infecção"
+              ],
+              correct: 1
             }
+          },
+
+
           ]
         },
         {
