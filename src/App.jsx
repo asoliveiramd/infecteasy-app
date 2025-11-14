@@ -7671,6 +7671,55 @@ const App = () => {
                 explanation: "Embora ambos inibam a síntese da parede celular, os β-lactâmicos atuam ligando-se às PBPs (enzimas que sintetizam o peptidoglicano), enquanto os glicopeptídeos ligam-se diretamente aos precursores da parede celular, bloqueando sua incorporação."
               }
             },
+            {
+              title: "Características gerais",
+              content: `
+                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #059669; margin-bottom: 15px;">✅ Características dos Inibidores da Parede Celular</h3>
+                </div>
+                
+                <div style="display: grid; gap: 15px; margin: 15px 0;">
+                  <div style="background: #dcfce7; padding: 18px; border-radius: 8px; border-left: 4px solid #10b981;">
+                    <h4 style="color: #047857; margin-bottom: 10px; font-size: 16px;">💥 Efeito bactericida</h4>
+                    <p style="font-size: 14px; line-height: 1.6; color: #065f46;">
+                      Promovem a morte bacteriana (não apenas inibição do crescimento).
+                    </p>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 18px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                    <h4 style="color: #1e40af; margin-bottom: 10px; font-size: 16px;">🔄 Maior eficácia em bactérias em multiplicação</h4>
+                    <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a;">
+                      Atuam durante a síntese ativa da parede celular.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 18px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                    <h4 style="color: #92400e; margin-bottom: 10px; font-size: 16px;">🛡️ Menor toxicidade para células humanas (seletividade)</h4>
+                    <p style="font-size: 14px; line-height: 1.6; color: #78350f;">
+                      Células humanas não possuem parede celular, aumentando a segurança.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #fef2f2; padding: 18px; border-radius: 8px; border-left: 4px solid #ef4444;">
+                    <h4 style="color: #dc2626; margin-bottom: 10px; font-size: 16px;">⚠️ Resistência frequentemente por <abbr title="Beta-lactamases - enzimas que degradam antibióticos β-lactâmicos" style="text-decoration: none; border-bottom: 1px dotted #dc2626; cursor: help;">β-lactamases</abbr></h4>
+                    <p style="font-size: 14px; line-height: 1.6; color: #991b1b;">
+                      Enzimas bacterianas que degradam os antibióticos β-lactâmicos.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Por que os inibidores da síntese da parede celular apresentam menor toxicidade para as células humanas?",
+                options: [
+                  "A) Porque células humanas não possuem parede celular, tornando o mecanismo seletivo para bactérias",
+                  "B) Porque atuam apenas em bactérias em repouso, sem afetar células humanas",
+                  "C) Porque são rapidamente eliminados pelo fígado antes de causar toxicidade",
+                  "D) Porque as bactérias não desenvolvem resistência a esses antibióticos"
+                ],
+                correct: 0,
+                explanation: "A seletividade dos inibidores da parede celular se deve ao fato de que células humanas não possuem parede celular. Assim, o mecanismo de ação afeta exclusivamente as bactérias, resultando em menor toxicidade para o hospedeiro."
+              }
+            },
 
           ]
         },
