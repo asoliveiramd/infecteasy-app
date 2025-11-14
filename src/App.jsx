@@ -7578,144 +7578,50 @@ const App = () => {
                 explanation: "A afirmação correta é que infecções de pele e respiratório alto são predominantemente Gram-positivas (+++), enquanto TGI e ITU são predominantemente Gram-negativos (+++). Esta distribuição é fundamental para a escolha empírica adequada do antibiótico."
               }
             },
-
-
-          ]
-        },
-        {
-          id: 2,
-          title: "Mecanismos de Ação dos Antibióticos",
-          duration: "18 min",
-          xp: 90,
-          sections: [
             {
-              title: "Inibição da Síntese da Parede Celular",
+              title: "Classes de Antibióticos de Uso Ambulatorial",
               content: `
-                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #0369a1; margin-bottom: 15px;">🧱 Parede Celular Bacteriana</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Os antibióticos <strong>beta-lactâmicos</strong>, como penicilinas e cefalosporinas, 
-                    atuam inibindo a síntese da parede celular bacteriana. Eles se ligam às proteínas 
-                    ligadoras de penicilina (PBPs), impedindo a formação do peptidoglicano.
-                  </p>
-                  <p style="font-size: 16px; line-height: 1.6;">
-                    Isso leva à <strong>lise da bactéria</strong> e à sua morte, caracterizando um 
-                    mecanismo bactericida. A parede celular é essencial para a sobrevivência bacteriana, 
-                    especialmente em ambientes hipotônicos.
-                  </p>
-                </div>
+                <p><strong>Aqui temos todas as classes de antibióticos de interesse ambulatorial para as principais infecções.</strong></p>
                 
-                <div style="background: #fef2f2; padding: 15px; border-radius: 8px; border-left: 4px solid #ef4444;">
-                  <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ Resistência</h4>
-                  <p style="font-size: 14px; line-height: 1.5;">
-                    A resistência aos beta-lactâmicos pode ocorrer por produção de beta-lactamases, 
-                    alteração das PBPs ou redução da permeabilidade da membrana externa.
-                  </p>
-                </div>
-              `,
-              question: {
-                text: "Qual é o principal mecanismo de ação dos antibióticos beta-lactâmicos?",
-                options: [
-                  "Inibição da síntese de proteínas",
-                  "Inibição da síntese da parede celular",
-                  "Inibição da replicação do DNA",
-                  "Alteração da permeabilidade da membrana"
-                ],
-                correct: 1,
-                explanation: "Os beta-lactâmicos atuam especificamente na inibição da síntese da parede celular, uma estrutura essencial para a sobrevivência da bactéria."
-              }
-            },
-            {
-              title: "Inibição da Síntese de Proteínas",
-              content: `
-                <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #6d28d9; margin-bottom: 15px;">🧬 Síntese Proteica</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    <strong>Macrolídeos, tetraciclinas e aminoglicosídeos</strong> atuam inibindo a síntese 
-                    de proteínas bacterianas, ligando-se a diferentes subunidades do ribossomo. 
-                    Isso impede a produção de proteínas essenciais para o crescimento e a replicação bacteriana.
-                  </p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0;">
+                  <div style="background: #dbeafe; padding: 15px; border-radius: 8px;">
+                    <h4 style="color: #1e40af; margin: 0 0 10px 0;">🧱 Parede Celular</h4>
+                    <p style="margin: 0; font-size: 0.9em;">β-lactâmicos (penicilinas, cefalosporinas), glicopeptídeos</p>
+                  </div>
                   
-                  <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
-                    <tr style="background: #6d28d9; color: white;">
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Antibiótico</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Subunidade</th>
-                      <th style="padding: 8px; border: 1px solid #d1d5db;">Efeito</th>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold;">Macrolídeos</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">50S</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Bacteriostático</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold;">Aminoglicosídeos</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">30S</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Bactericida</td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 8px; border: 1px solid #d1d5db; font-weight: bold;">Tetraciclinas</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">30S</td>
-                      <td style="padding: 8px; border: 1px solid #d1d5db;">Bacteriostático</td>
-                    </tr>
-                  </table>
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px;">
+                    <h4 style="color: #92400e; margin: 0 0 10px 0;">🧬 Síntese Proteica</h4>
+                    <p style="margin: 0; font-size: 0.9em;">Macrolídeos, tetraciclinas, aminoglicosídeos, lincosamidas</p>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 15px; border-radius: 8px;">
+                    <h4 style="color: #166534; margin: 0 0 10px 0;">🧪 Ácido Nucleico</h4>
+                    <p style="margin: 0; font-size: 0.9em;">Quinolonas, rifamicinas, nitrofuranos</p>
+                  </div>
+                  
+                  <div style="background: #fce7f3; padding: 15px; border-radius: 8px;">
+                    <h4 style="color: #9f1239; margin: 0 0 10px 0;">⚗️ Metabolismo</h4>
+                    <p style="margin: 0; font-size: 0.9em;">Sulfonamidas, trimetoprima</p>
+                  </div>
                 </div>
+                
+                <p style="background: #f0f9ff; padding: 15px; border-left: 4px solid #0284c7; margin: 15px 0;">
+                  💡 <strong>Foco prático:</strong> Vamos nos concentrar em apenas <strong>12 moléculas</strong>. Sem complicação.
+                </p>
+                
+                <p>Classificamos os antibióticos de acordo com seu <strong>mecanismo de ação</strong>, o que ajuda a compreender seu espectro de atividade e potenciais efeitos adversos.</p>
               `,
               question: {
-                text: "Qual das seguintes classes de antibióticos atua inibindo a síntese de proteínas?",
+                text: "Qual é a principal vantagem de classificar os antibióticos por mecanismo de ação?",
                 options: [
-                  "Penicilinas",
-                  "Cefalosporinas",
-                  "Macrolídeos",
-                  "Quinolonas"
+                  "A) Facilita a memorização dos nomes comerciais",
+                  "B) Ajuda a compreender o espectro de atividade e potenciais efeitos adversos",
+                  "C) Permite prescrever qualquer antibiótico para qualquer infecção",
+                  "D) Torna desnecessário conhecer o sítio de infecção"
                 ],
-                correct: 2,
-                explanation: "Macrolídeos, como a azitromicina, são conhecidos por seu mecanismo de ação que envolve a inibição da síntese de proteínas bacterianas."
+                correct: 1
               }
             },
-          {
-            title: "Classes de Antibióticos de Uso Ambulatorial",
-            content: `
-              <p><strong>Aqui temos todas as classes de antibióticos de interesse ambulatorial para as principais infecções.</strong></p>
-              
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0;">
-                <div style="background: #dbeafe; padding: 15px; border-radius: 8px;">
-                  <h4 style="color: #1e40af; margin: 0 0 10px 0;">🧱 Parede Celular</h4>
-                  <p style="margin: 0; font-size: 0.9em;">β-lactâmicos (penicilinas, cefalosporinas), glicopeptídeos</p>
-                </div>
-                
-                <div style="background: #fef3c7; padding: 15px; border-radius: 8px;">
-                  <h4 style="color: #92400e; margin: 0 0 10px 0;">🧬 Síntese Proteica</h4>
-                  <p style="margin: 0; font-size: 0.9em;">Macrolídeos, tetraciclinas, aminoglicosídeos, lincosamidas</p>
-                </div>
-                
-                <div style="background: #dcfce7; padding: 15px; border-radius: 8px;">
-                  <h4 style="color: #166534; margin: 0 0 10px 0;">🧪 Ácido Nucleico</h4>
-                  <p style="margin: 0; font-size: 0.9em;">Quinolonas, rifamicinas, nitrofuranos</p>
-                </div>
-                
-                <div style="background: #fce7f3; padding: 15px; border-radius: 8px;">
-                  <h4 style="color: #9f1239; margin: 0 0 10px 0;">⚗️ Metabolismo</h4>
-                  <p style="margin: 0; font-size: 0.9em;">Sulfonamidas, trimetoprima</p>
-                </div>
-              </div>
-              
-              <p style="background: #f0f9ff; padding: 15px; border-left: 4px solid #0284c7; margin: 15px 0;">
-                💡 <strong>Foco prático:</strong> Vamos nos concentrar em apenas <strong>12 moléculas</strong>. Sem complicação.
-              </p>
-              
-              <p>Classificamos os antibióticos de acordo com seu <strong>mecanismo de ação</strong>, o que ajuda a compreender seu espectro de atividade e potenciais efeitos adversos.</p>
-            `,
-            question: {
-              text: "Qual é a principal vantagem de classificar os antibióticos por mecanismo de ação?",
-              options: [
-                "A) Facilita a memorização dos nomes comerciais",
-                "B) Ajuda a compreender o espectro de atividade e potenciais efeitos adversos",
-                "C) Permite prescrever qualquer antibiótico para qualquer infecção",
-                "D) Torna desnecessário conhecer o sítio de infecção"
-              ],
-              correct: 1
-            }
-          },
 
 
           ]
