@@ -7720,6 +7720,54 @@ const App = () => {
                 explanation: "A seletividade dos inibidores da parede celular se deve ao fato de que células humanas não possuem parede celular. Assim, o mecanismo de ação afeta exclusivamente as bactérias, resultando em menor toxicidade para o hospedeiro."
               }
             },
+            {
+              title: "β-lactâmicos",
+              content: `
+                <div style="background: #eff6ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #1e40af; margin-bottom: 15px;">💊 β-lactâmicos</h3>
+                  <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
+                    Caracterizados pelo <strong>anel β-lactâmico</strong> em sua estrutura molecular.
+                  </p>
+                </div>
+                
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #0284c7;">
+                  <h4 style="color: #0369a1; margin-bottom: 15px; font-size: 17px;">📊 Principais grupos de β-lactâmicos:</h4>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 15px;">
+                    <div style="background: #dbeafe; padding: 15px; border-radius: 6px; text-align: center;">
+                      <p style="font-size: 15px; font-weight: bold; color: #1e40af; margin: 0;">Penicilinas</p>
+                    </div>
+                    <div style="background: #dbeafe; padding: 15px; border-radius: 6px; text-align: center;">
+                      <p style="font-size: 15px; font-weight: bold; color: #1e40af; margin: 0;">Cefalosporinas</p>
+                    </div>
+                    <div style="background: #dbeafe; padding: 15px; border-radius: 6px; text-align: center;">
+                      <p style="font-size: 15px; font-weight: bold; color: #1e40af; margin: 0;">Carbapenêmicos</p>
+                    </div>
+                    <div style="background: #dbeafe; padding: 15px; border-radius: 6px; text-align: center;">
+                      <p style="font-size: 15px; font-weight: bold; color: #1e40af; margin: 0;">Monobactâmicos</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #059669; margin-bottom: 10px;">🎯 Importância Clínica</h4>
+                  <p style="font-size: 15px; line-height: 1.6; color: #065f46;">
+                    Os β-lactâmicos são os <strong>antibióticos mais amplamente utilizados na prática clínica ambulatorial</strong> 
+                    devido ao seu amplo espectro, baixa toxicidade e eficácia comprovada em diversas infecções.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual característica estrutural é comum a todos os antibióticos β-lactâmicos?",
+                options: [
+                  "A) Presença do anel β-lactâmico em sua estrutura molecular",
+                  "B) Ausência de toxicidade para bactérias Gram-negativas",
+                  "C) Capacidade de atravessar a barreira hematoencefálica",
+                  "D) Resistência natural às β-lactamases"
+                ],
+                correct: 0,
+                explanation: "Todos os antibióticos β-lactâmicos (penicilinas, cefalosporinas, carbapenêmicos e monobactâmicos) compartilham a presença do anel β-lactâmico em sua estrutura molecular, que é essencial para seu mecanismo de ação contra as PBPs bacterianas."
+              }
+            },
 
           ]
         },
