@@ -7774,6 +7774,66 @@ const App = () => {
         },
         {
           id: 3,
+          title: "Penicilinas",
+          duration: "18 min",
+          xp: 90,
+          sections: [
+            {
+              title: "Penicilinas Naturais",
+              content: `
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #92400e; margin-bottom: 15px;">🍄 Penicilinas Naturais</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    São derivadas diretamente do fungo <em>Penicillium notatum</em>, hoje renomeado como 
+                    <strong><em>Penicillium chrysogenum</em></strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">🎯 Espectro de Ação</h4>
+                  <p style="font-size: 15px; line-height: 1.6; color: #065f46;">
+                    Ativas contra <strong>Gram-positivos não produtores de β-lactamase</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <h4 style="color: #1e40af; margin-bottom: 15px; font-size: 17px;">💡 Exemplos</h4>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <div style="background: #eff6ff; padding: 15px; border-radius: 8px; text-align: center;">
+                      <p style="font-size: 16px; font-weight: bold; color: #1e40af; margin: 0;">Penicilina G</p>
+                      <p style="font-size: 13px; color: #3b82f6; margin-top: 5px;">(Benzilpenicilina)</p>
+                    </div>
+                    <div style="background: #eff6ff; padding: 15px; border-radius: 8px; text-align: center;">
+                      <p style="font-size: 16px; font-weight: bold; color: #1e40af; margin: 0;">Penicilina V</p>
+                      <p style="font-size: 13px; color: #3b82f6; margin-top: 5px;">(Fenoximetilpenicilina)</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #ef4444;">
+                  <h4 style="color: #dc2626; margin-bottom: 10px;">⚠️ Limitação Importante</h4>
+                  <p style="font-size: 15px; line-height: 1.6; color: #991b1b;">
+                    O <strong>grau de resistência é alto</strong> pela presença de <abbr title="Beta-lactamases - enzimas que degradam antibióticos β-lactâmicos" style="text-decoration: none; border-bottom: 1px dotted #dc2626; cursor: help;">β-lactamase</abbr> ser muito frequente.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que as penicilinas naturais apresentam alto grau de resistência atualmente?",
+                options: [
+                  "A) Porque são inativas contra bactérias Gram-positivas",
+                  "B) Porque a presença de β-lactamase é muito frequente nas bactérias",
+                  "C) Porque não são mais produzidas pelo fungo Penicillium",
+                  "D) Porque são rapidamente eliminadas pelo organismo"
+                ],
+                correct: 1,
+                explanation: "As penicilinas naturais apresentam alto grau de resistência porque muitas bactérias desenvolveram a capacidade de produzir β-lactamases, enzimas que degradam o anel β-lactâmico, tornando o antibiótico inativo. Esta é uma das principais limitações do uso clínico das penicilinas naturais."
+              }
+            },
+
+          ]
+        },
+        {
+          id: 4,
           title: "Cefalosporinas",
           duration: "20 min",
           xp: 100,
