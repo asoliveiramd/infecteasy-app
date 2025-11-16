@@ -6,6 +6,7 @@ const App = () => {
   // Estados principais
   const [currentView, setCurrentView] = useState('login')
   const [user, setUser] = useState(null)
+  const [showWelcome, setShowWelcome] = useState(false)
   const [currentModule, setCurrentModule] = useState(null)
   const [currentLesson, setCurrentLesson] = useState(null)
   const [currentSection, setCurrentSection] = useState(0)
@@ -8792,7 +8793,15 @@ const App = () => {
     
     if (username && password) {
       setUser({ username, name: username })
-      setCurrentView('dashboard')
+      
+      // Verificar se é a primeira vez do usuário
+      const hasSeenWelcome = localStorage.getItem('hasSeenWelcome')
+      if (!hasSeenWelcome) {
+        setShowWelcome(true)
+        setCurrentView('dashboard')
+      } else {
+        setCurrentView('dashboard')
+      }
     }
   }
 
@@ -8804,7 +8813,15 @@ const App = () => {
     
     if (nome && login && senha && senha === confirmarSenha) {
       setUser({ username: login, name: nome })
-      setCurrentView('dashboard')
+      
+      // Verificar se é a primeira vez do usuário
+      const hasSeenWelcome = localStorage.getItem('hasSeenWelcome')
+      if (!hasSeenWelcome) {
+        setShowWelcome(true)
+        setCurrentView('dashboard')
+      } else {
+        setCurrentView('dashboard')
+      }
     }
   }
 
@@ -9062,6 +9079,73 @@ const App = () => {
   if (currentView === 'dashboard') {
     return (
       <div className="min-h-screen bg-gray-50">
+        {/* Modal de Boas-vindas */}
+        {showWelcome && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+            <div className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto animate-fade-in">
+              <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-8 rounded-t-2xl text-white">
+                <div className="text-center">
+                  <div className="text-6xl mb-4">🦠</div>
+                  <h2 className="text-3xl font-bold mb-2">Seja bem-vindo ao Infecteasy!</h2>
+                  <p className="text-indigo-100 text-lg">Seu novo espaço de aprendizagem em Infectologia</p>
+                </div>
+              </div>
+              
+              <div className="p-8 space-y-6">
+                <div className="prose prose-lg max-w-none">
+                  <p className="text-gray-700 leading-relaxed">
+                    As <strong>doenças infecciosas</strong> estão entre as condições mais frequentes na prática clínica, 
+                    desafiando médicos todos os dias — do atendimento primário às unidades de emergência. Dominar o 
+                    diagnóstico, a interpretação de exames e a antibioticoterapia adequada não só melhora o cuidado ao 
+                    paciente, como também ajuda a combater um dos maiores problemas de saúde global: a 
+                    <strong>resistência antimicrobiana</strong>.
+                  </p>
+                  
+                  <div className="bg-indigo-50 border-l-4 border-indigo-600 p-4 rounded">
+                    <p className="text-gray-700 leading-relaxed">
+                      Neste aplicativo, você aprenderá de forma <strong>leve, rápida e gamificada</strong>, usando princípios 
+                      de <em>microlearning</em> para transformar conteúdos complexos em passos simples e objetivos. Começamos 
+                      pelo básico da microbiologia, passamos pela interpretação de antibiogramas e avançamos para o uso 
+                      seguro e eficaz dos antimicrobianos.
+                    </p>
+                  </div>
+                  
+                  <p className="text-gray-700 leading-relaxed">
+                    Aqui, cada lição é um pequeno avanço rumo a uma prática médica mais <strong>segura, precisa e confiante</strong>.
+                  </p>
+                  
+                  <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-6 rounded-lg text-center">
+                    <p className="text-xl font-semibold text-indigo-900 mb-2">
+                      🎯 Prepare-se para evoluir, missão após missão, até dominar a arte de pensar e tratar infecções como um verdadeiro especialista.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                  <button
+                    onClick={() => {
+                      localStorage.setItem('hasSeenWelcome', 'true')
+                      setShowWelcome(false)
+                    }}
+                    className="flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg"
+                  >
+                    🚀 Vamos começar!
+                  </button>
+                  <button
+                    onClick={() => {
+                      setShowWelcome(false)
+                    }}
+                    className="sm:w-auto px-6 py-4 text-gray-600 hover:text-gray-800 font-medium"
+                  >
+                    Lembrar depois
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+        
+        {/* Dashboard normal */}
         <header className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
