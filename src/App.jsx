@@ -7829,6 +7829,61 @@ const App = () => {
                 explanation: "As penicilinas naturais apresentam alto grau de resistência porque muitas bactérias desenvolveram a capacidade de produzir β-lactamases, enzimas que degradam o anel β-lactâmico, tornando o antibiótico inativo. Esta é uma das principais limitações do uso clínico das penicilinas naturais."
               }
             },
+            {
+              title: "Penicilinas Naturais - Espectro e indicações",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🎯 Espectro e Indicações</h3>
+                  <p style="font-size: 15px; line-height: 1.6; color: #0c4a6e;">
+                    O espectro é <strong>bastante restrito hoje</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">🦠 Espectro de Ação</h4>
+                  <p style="font-size: 15px; line-height: 1.6; color: #065f46; margin-bottom: 12px;">
+                    <strong>Gram-positivos não produtores de β-lactamase:</strong>
+                  </p>
+                  <ul style="font-size: 14px; line-height: 1.8; color: #065f46; margin-left: 20px;">
+                    <li><strong><em>Streptococcus pyogenes</em></strong> (SBHGA - Estreptococo beta-hemolítico do grupo A)</li>
+                    <li><strong><em>Treponema pallidum</em></strong></li>
+                  </ul>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #ef4444;">
+                  <h4 style="color: #dc2626; margin-bottom: 10px; font-size: 16px;">❌ Limitação</h4>
+                  <p style="font-size: 14px; line-height: 1.6; color: #991b1b;">
+                    Tem <strong>pouca ou nenhuma atividade</strong> contra Gram-negativos.
+                  </p>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <h4 style="color: #1e40af; margin-bottom: 15px; font-size: 17px;">💊 Indicações Mais Comuns</h4>
+                  <div style="display: grid; gap: 12px;">
+                    <div style="background: #dbeafe; padding: 15px; border-radius: 8px;">
+                      <p style="font-size: 15px; font-weight: bold; color: #1e40af; margin: 0;">🦠 Faringite estreptocócica</p>
+                    </div>
+                    <div style="background: #dbeafe; padding: 15px; border-radius: 8px;">
+                      <p style="font-size: 15px; font-weight: bold; color: #1e40af; margin: 0;">🩺 Sífilis</p>
+                    </div>
+                    <div style="background: #dbeafe; padding: 15px; border-radius: 8px;">
+                      <p style="font-size: 15px; font-weight: bold; color: #1e40af; margin: 0;">🛡️ Profilaxia para febre reumática</p>
+                    </div>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual das seguintes afirmações sobre o espectro das penicilinas naturais está correta?",
+                options: [
+                  "A) Apresentam amplo espectro contra Gram-negativos",
+                  "B) São eficazes contra todos os Gram-positivos, independentemente da produção de β-lactamase",
+                  "C) Tem espectro bastante restrito, sendo ativas principalmente contra Gram-positivos não produtores de β-lactamase como S. pyogenes e T. pallidum",
+                  "D) São a primeira escolha para infecções por bactérias Gram-negativas"
+                ],
+                correct: 2,
+                explanation: "As penicilinas naturais têm espectro bastante restrito atualmente. São ativas principalmente contra Gram-positivos não produtores de β-lactamase, como Streptococcus pyogenes (faringite estreptocócica) e Treponema pallidum (sífilis). Apresentam pouca ou nenhuma atividade contra Gram-negativos."
+              }
+            },
 
           ]
         },
