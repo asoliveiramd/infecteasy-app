@@ -7884,6 +7884,70 @@ const App = () => {
                 explanation: "As penicilinas naturais têm espectro bastante restrito atualmente. São ativas principalmente contra Gram-positivos não produtores de β-lactamase, como Streptococcus pyogenes (faringite estreptocócica) e Treponema pallidum (sífilis). Apresentam pouca ou nenhuma atividade contra Gram-negativos."
               }
             },
+            {
+              title: "Penicilinas naturais - Exemplos e limitações",
+              content: `
+                <div style="background: #eff6ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #1e40af; margin-bottom: 15px;">💡 Exemplos e Limitações</h3>
+                </div>
+                
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <h4 style="color: #1e40af; margin-bottom: 15px; font-size: 17px;">💉 Exemplos de Penicilinas Naturais</h4>
+                  
+                  <div style="display: grid; gap: 12px; margin-bottom: 15px;">
+                    <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 3px solid #60a5fa;">
+                      <p style="font-size: 15px; font-weight: bold; color: #1e40af; margin: 0 0 5px 0;">Penicilina G Procaína</p>
+                      <p style="font-size: 13px; color: #3b82f6; margin: 0;">IM, ação intermediária (12–24h)</p>
+                    </div>
+                    
+                    <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 3px solid #2563eb;">
+                      <p style="font-size: 15px; font-weight: bold; color: #1e40af; margin: 0 0 5px 0;">Penicilina G Benzatina</p>
+                      <p style="font-size: 13px; color: #3b82f6; margin: 0;">IM, ação prolongada (até 4 semanas)</p>
+                    </div>
+                    
+                    <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 3px solid #60a5fa;">
+                      <p style="font-size: 15px; font-weight: bold; color: #1e40af; margin: 0 0 5px 0;">Penicilina V (Fenoximetilpenicilina)</p>
+                      <p style="font-size: 13px; color: #3b82f6; margin: 0;">Via oral</p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                    <p style="font-size: 14px; line-height: 1.6; color: #047857; margin: 0;">
+                      🎯 <strong>Mais usado:</strong> Penicilina G Benzatina. A Procaína e a Penicilina V não têm espaço no uso habitual devido às inúmeras opções melhores.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #ef4444;">
+                  <h4 style="color: #dc2626; margin-bottom: 15px; font-size: 17px;">⚠️ Limitações</h4>
+                  <div style="display: grid; gap: 10px;">
+                    <div style="background: #fee2e2; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #991b1b; margin: 0;">🎯 <strong>Espectro estreito</strong></p>
+                    </div>
+                    <div style="background: #fee2e2; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #991b1b; margin: 0;">🦠 <strong>Suscetibilidade às β-lactamases</strong></p>
+                    </div>
+                    <div style="background: #fee2e2; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #991b1b; margin: 0;">💉 <strong>Administração dolorosa</strong> (formas injetáveis)</p>
+                    </div>
+                    <div style="background: #fee2e2; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #991b1b; margin: 0;">⚠️ <strong>Potencial alergênico</strong></p>
+                    </div>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é a penicilina natural mais utilizada atualmente e por quê?",
+                options: [
+                  "A) Penicilina V, porque é de uso oral e mais prática",
+                  "B) Penicilina G Procaína, porque tem ação intermediária ideal",
+                  "C) Penicilina G Benzatina, porque tem ação prolongada (até 4 semanas), sendo a mais usada entre as penicilinas naturais",
+                  "D) Todas são igualmente utilizadas na prática clínica"
+                ],
+                correct: 2,
+                explanation: "A Penicilina G Benzatina é a mais utilizada entre as penicilinas naturais devido à sua ação prolongada (até 4 semanas), sendo especialmente útil na profilaxia da febre reumática e no tratamento da sífilis. A Penicilina G Procaína e a Penicilina V têm uso limitado devido à disponibilidade de opções melhores."
+              }
+            },
 
           ]
         },
