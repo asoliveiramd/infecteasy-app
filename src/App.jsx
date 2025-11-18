@@ -8009,6 +8009,70 @@ const App = () => {
                 explanation: "As aminopenicilinas representam uma modificação estrutural que amplia o espectro de ação (mantendo a atividade contra Gram-positivos e adicionando cobertura para alguns Gram-negativos) e aumenta a biodisponibilidade oral, especialmente da amoxicilina. Porém, ainda são suscetíveis às β-lactamases."
               }
             },
+            {
+              title: "Aminopenicilinas - Similaridades",
+              content: `
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🤝 Similaridades entre Aminopenicilinas</h3>
+                  <p style="font-size: 15px; line-height: 1.6; color: #0c4a6e;">
+                    Ambos são aminopenicilinas, atuam sobre microrganismos sensíveis à penicilina e apresentam <strong>espectro semelhante</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">✅ Espectro de Ação</h4>
+                  <div style="display: grid; gap: 12px;">
+                    <div style="background: #f0fdf4; padding: 15px; border-radius: 8px;">
+                      <p style="font-size: 15px; color: #065f46; margin: 0;">
+                        🟢 <strong>Gram-positivos</strong><br/>
+                        <span style="font-size: 13px; color: #047857;">Estreptococos, Enterococos</span>
+                      </p>
+                    </div>
+                    <div style="background: #f0fdf4; padding: 15px; border-radius: 8px;">
+                      <p style="font-size: 15px; color: #065f46; margin: 0;">
+                        🟠 <strong>Alguns Gram-negativos</strong><br/>
+                        <span style="font-size: 13px; color: #047857;">Cobertura limitada</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #ef4444;">
+                  <h4 style="color: #dc2626; margin-bottom: 15px; font-size: 17px;">❌ Não Ativos Contra</h4>
+                  <div style="display: grid; gap: 10px;">
+                    <div style="background: #fee2e2; padding: 12px; border-radius: 6px; display: flex; align-items: center;">
+                      <span style="font-size: 20px; margin-right: 10px;">🦠</span>
+                      <p style="font-size: 14px; color: #991b1b; margin: 0;"><strong><em>Pseudomonas</em></strong></p>
+                    </div>
+                    <div style="background: #fee2e2; padding: 12px; border-radius: 6px; display: flex; align-items: center;">
+                      <span style="font-size: 20px; margin-right: 10px;">🦠</span>
+                      <p style="font-size: 14px; color: #991b1b; margin: 0;"><strong><em>Klebsiella</em></strong></p>
+                    </div>
+                    <div style="background: #fee2e2; padding: 12px; border-radius: 6px; display: flex; align-items: center;">
+                      <span style="font-size: 20px; margin-right: 10px;">⚠️</span>
+                      <p style="font-size: 14px; color: #991b1b; margin: 0;"><strong>Outros produtores de β-lactamase</strong></p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #92400e; margin: 0;">
+                    💡 <strong>Importante:</strong> A presença de β-lactamases em bactérias como <em>Klebsiella</em> torna as aminopenicilinas ineficazes contra esses microrganismos.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual das seguintes afirmações sobre o espectro das aminopenicilinas está correta?",
+                options: [
+                  "A) São eficazes contra Pseudomonas e Klebsiella",
+                  "B) Cobrem Gram-positivos (estreptococos, enterococos) e alguns Gram-negativos, mas não são ativas contra Pseudomonas, Klebsiella e outros produtores de β-lactamase",
+                  "C) Têm espectro restrito apenas a Gram-positivos",
+                  "D) São resistentes a todas as β-lactamases"
+                ],
+                correct: 1,
+                explanation: "As aminopenicilinas apresentam espectro ampliado que cobre Gram-positivos (como estreptococos e enterococos) e alguns Gram-negativos. Porém, não são ativas contra Pseudomonas, Klebsiella e outros microrganismos produtores de β-lactamase, que degradam o antibiótico."
+              }
+            },
 
           ]
         },
