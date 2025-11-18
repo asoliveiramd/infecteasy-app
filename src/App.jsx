@@ -7948,6 +7948,67 @@ const App = () => {
                 explanation: "A Penicilina G Benzatina é a mais utilizada entre as penicilinas naturais devido à sua ação prolongada (até 4 semanas), sendo especialmente útil na profilaxia da febre reumática e no tratamento da sífilis. A Penicilina G Procaína e a Penicilina V têm uso limitado devido à disponibilidade de opções melhores."
               }
             },
+            {
+              title: "Aminopenicilinas",
+              content: `
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🔬 Aminopenicilinas</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #f3f4f6;">
+                    Trata-se de uma <strong style="color: white;">modificação estrutural da molécula da penicilina</strong> que amplia o espectro de ação.
+                  </p>
+                </div>
+                
+                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">✨ Principais Vantagens</h4>
+                  <div style="display: grid; gap: 12px;">
+                    <div style="background: #dcfce7; padding: 15px; border-radius: 8px; border-left: 3px solid #22c55e;">
+                      <p style="font-size: 15px; color: #065f46; margin: 0;">
+                        🎯 <strong>Ampliação do espectro</strong><br/>
+                        <span style="font-size: 13px; color: #047857;">Mantém atividade das penicilinas naturais + cobertura adicional</span>
+                      </p>
+                    </div>
+                    <div style="background: #dbeafe; padding: 15px; border-radius: 8px; border-left: 3px solid #3b82f6;">
+                      <p style="font-size: 15px; color: #1e3a8a; margin: 0;">
+                        💡 <strong>Aumento da biodisponibilidade</strong><br/>
+                        <span style="font-size: 13px; color: #1e40af;">Particularmente da amoxicilina</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 15px; font-size: 17px;">📊 Comparação com Penicilinas Naturais</h4>
+                  <table style="width: 100%; border-collapse: collapse;">
+                    <tr style="background: #3b82f6; color: white;">
+                      <th style="padding: 10px; text-align: left; border: 1px solid #60a5fa;">Característica</th>
+                      <th style="padding: 10px; text-align: center; border: 1px solid #60a5fa;">Penicilinas Naturais</th>
+                      <th style="padding: 10px; text-align: center; border: 1px solid #60a5fa;">Aminopenicilinas</th>
+                    </tr>
+                    <tr>
+                      <td style="padding: 10px; border: 1px solid #dbeafe; font-weight: bold;">Espectro</td>
+                      <td style="padding: 10px; border: 1px solid #dbeafe; text-align: center;">Restrito</td>
+                      <td style="padding: 10px; border: 1px solid #dbeafe; text-align: center; background: #dcfce7; font-weight: bold;">Ampliado</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 10px; border: 1px solid #dbeafe; font-weight: bold;">Biodisponibilidade oral</td>
+                      <td style="padding: 10px; border: 1px solid #dbeafe; text-align: center;">Variável</td>
+                      <td style="padding: 10px; border: 1px solid #dbeafe; text-align: center; background: #dcfce7; font-weight: bold;">Melhorada</td>
+                    </tr>
+                  </table>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal vantagem das aminopenicilinas em relação às penicilinas naturais?",
+                options: [
+                  "A) São resistentes a todas as β-lactamases",
+                  "B) Apresentam espectro ampliado mantendo a atividade das penicilinas naturais e maior biodisponibilidade oral",
+                  "C) Têm ação prolongada de até 4 semanas",
+                  "D) Não causam reações alérgicas"
+                ],
+                correct: 1,
+                explanation: "As aminopenicilinas representam uma modificação estrutural que amplia o espectro de ação (mantendo a atividade contra Gram-positivos e adicionando cobertura para alguns Gram-negativos) e aumenta a biodisponibilidade oral, especialmente da amoxicilina. Porém, ainda são suscetíveis às β-lactamases."
+              }
+            },
 
           ]
         },
