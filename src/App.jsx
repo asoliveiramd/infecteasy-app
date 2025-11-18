@@ -8073,6 +8073,62 @@ const App = () => {
                 explanation: "As aminopenicilinas apresentam espectro ampliado que cobre Gram-positivos (como estreptococos e enterococos) e alguns Gram-negativos. Porém, não são ativas contra Pseudomonas, Klebsiella e outros microrganismos produtores de β-lactamase, que degradam o antibiótico."
               }
             },
+            {
+              title: "Aminopenicilinas - Ampicilina",
+              content: `
+                <div style="background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">💉 Ampicilina</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #fce7f3;">
+                    Aminopenicilina com <strong style="color: white;">uso predominantemente hospitalar</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #ef4444;">
+                  <h4 style="color: #dc2626; margin-bottom: 15px; font-size: 17px;">⚠️ Limitação da Via Oral</h4>
+                  <p style="font-size: 15px; line-height: 1.6; color: #991b1b;">
+                    A <strong>absorção oral é inferior à da amoxicilina</strong>, sendo frequentemente utilizada por via <strong>intravenosa</strong> para infecções graves hospitalares.
+                  </p>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <h4 style="color: #1e40af; margin-bottom: 15px; font-size: 17px;">🎯 Principais Indicações (Hospitalares)</h4>
+                  <div style="display: grid; gap: 10px;">
+                    <div style="background: #dbeafe; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">🧠 <strong>Meningite bacteriana</strong></p>
+                    </div>
+                    <div style="background: #dbeafe; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">❤️ <strong>Endocardite</strong></p>
+                    </div>
+                    <div style="background: #dbeafe; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">🦠 <strong>Gastroenterite por Shigella</strong></p>
+                    </div>
+                    <div style="background: #dbeafe; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">🦠 <strong>Infecções por Listeria</strong></p>
+                    </div>
+                    <div style="background: #dbeafe; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">👶 <strong>Infecções neonatais</strong></p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #f0fdf4; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #065f46; margin: 0;">
+                    ✅ <strong>Contexto ideal:</strong> Situações hospitalares que exigem <strong>alta concentração sérica</strong> e administração intravenosa.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que a ampicilina é mais utilizada em contextos hospitalares do que ambulatoriais?",
+                options: [
+                  "A) Porque é mais barata que a amoxicilina",
+                  "B) Porque tem absorção oral inferior à amoxicilina, sendo preferencialmente usada por via intravenosa em infecções graves que exigem alta concentração sérica",
+                  "C) Porque tem espectro mais amplo que a amoxicilina",
+                  "D) Porque é resistente a todas as β-lactamases"
+                ],
+                correct: 1,
+                explanation: "A ampicilina tem absorção oral inferior à amoxicilina, por isso é preferencialmente utilizada por via intravenosa em contextos hospitalares para infecções graves como meningite bacteriana, endocardite, infecções por Listeria e Shigella, e infecções neonatais, onde se necessita de alta concentração sérica."
+              }
+            },
 
           ]
         },
