@@ -8191,6 +8191,69 @@ const App = () => {
                 explanation: "A amoxicilina tem biodisponibilidade oral muito superior à ampicilina, atingindo níveis séricos mais altos quando administrada por via oral. Isso a torna a aminopenicilina de escolha para tratamento ambulatorial de infecções leves a moderadas (amigdalite, sinusite, otite, pneumonia de comunidade, ITU), além de causar menos efeitos colaterais gastrointestinais."
               }
             },
+            {
+              title: "Aminopenicilinas - Comparativo Resumido",
+              content: `
+                <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">📊 Comparativo Resumido</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #e0e7ff;">
+                    Ampicilina vs Amoxicilina: <strong style="color: white;">principais diferenças</strong>
+                  </p>
+                </div>
+                
+                <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin: 15px 0; overflow-x: auto;">
+                  <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden;">
+                    <thead>
+                      <tr style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); color: white;">
+                        <th style="padding: 15px; text-align: left; font-size: 15px; border: 1px solid #a5b4fc;">Característica</th>
+                        <th style="padding: 15px; text-align: center; font-size: 15px; border: 1px solid #a5b4fc;">💉 Ampicilina</th>
+                        <th style="padding: 15px; text-align: center; font-size: 15px; border: 1px solid #a5b4fc;">💊 Amoxicilina</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr style="background: #f1f5f9;">
+                        <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: bold; color: #475569;">Absorção oral</td>
+                        <td style="padding: 12px; border: 1px solid #e2e8f0; text-align: center; color: #dc2626; font-weight: bold;">❌ Menor</td>
+                        <td style="padding: 12px; border: 1px solid #e2e8f0; text-align: center; color: #059669; font-weight: bold; background: #ecfdf5;">✅ Maior</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: bold; color: #475569;">Uso principal</td>
+                        <td style="padding: 12px; border: 1px solid #e2e8f0; text-align: center; color: #1e3a8a;">🏥 Hospitalar, inf. graves</td>
+                        <td style="padding: 12px; border: 1px solid #e2e8f0; text-align: center; color: #1e3a8a; background: #ecfdf5;">🏠 Ambulatorial</td>
+                      </tr>
+                      <tr style="background: #f1f5f9;">
+                        <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: bold; color: #475569;">Espectro de ação</td>
+                        <td style="padding: 12px; border: 1px solid #e2e8f0; text-align: center; color: #475569;">Semelhante à amoxicilina</td>
+                        <td style="padding: 12px; border: 1px solid #e2e8f0; text-align: center; color: #475569;">Semelhante à ampicilina</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 12px; border: 1px solid #e2e8f0; font-weight: bold; color: #475569;">Influência de alimentos</td>
+                        <td style="padding: 12px; border: 1px solid #e2e8f0; text-align: center; color: #dc2626; font-weight: bold;">⚠️ Intensa</td>
+                        <td style="padding: 12px; border: 1px solid #e2e8f0; text-align: center; color: #059669; font-weight: bold; background: #ecfdf5;">✅ Mínima</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <h4 style="color: #1e40af; margin-bottom: 12px; font-size: 17px;">💡 Resumo Prático</h4>
+                  <p style="font-size: 15px; line-height: 1.7; color: #1e3a8a;">
+                    A <strong>amoxicilina</strong> costuma ser <strong>mais usada no dia a dia</strong> devido à melhor absorção oral e menor chance de efeitos adversos, enquanto a <strong>ampicilina</strong> é reservada para <strong>situações clínicas mais específicas em hospitais</strong> por via venosa.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal diferença prática entre ampicilina e amoxicilina que determina seu uso?",
+                options: [
+                  "A) A ampicilina tem espectro mais amplo que a amoxicilina",
+                  "B) A amoxicilina tem melhor absorção oral e menor influência de alimentos, sendo preferida para uso ambulatorial, enquanto a ampicilina é reservada para uso hospitalar venoso",
+                  "C) A ampicilina é resistente às β-lactamases e a amoxicilina não",
+                  "D) Ambas têm exatamente as mesmas indicações e podem ser usadas de forma intercambiável"
+                ],
+                correct: 1,
+                explanation: "A principal diferença prática é que a amoxicilina tem absorção oral muito superior e sofre mínima influência de alimentos, tornando-a ideal para uso ambulatorial em infecções leves a moderadas. Já a ampicilina, com menor absorção oral e maior influência de alimentos, é preferencialmente usada por via intravenosa em contextos hospitalares para infecções graves. Ambas têm espectro semelhante."
+              }
+            },
 
           ]
         },
