@@ -8129,6 +8129,68 @@ const App = () => {
                 explanation: "A ampicilina tem absorção oral inferior à amoxicilina, por isso é preferencialmente utilizada por via intravenosa em contextos hospitalares para infecções graves como meningite bacteriana, endocardite, infecções por Listeria e Shigella, e infecções neonatais, onde se necessita de alta concentração sérica."
               }
             },
+            {
+              title: "Aminopenicilinas - Amoxicilina",
+              content: `
+                <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">💊 Amoxicilina</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #d1fae5;">
+                    Aminopenicilina de <strong style="color: white;">escolha para uso ambulatorial</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">✨ Principal Vantagem</h4>
+                  <p style="font-size: 15px; line-height: 1.6; color: #065f46;">
+                    Tem <strong>biodisponibilidade oral muito superior</strong>, sendo preferida para administração ambulatorial, pois atinge <strong>níveis séricos mais altos</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <h4 style="color: #1e40af; margin-bottom: 15px; font-size: 17px;">🎯 Indicações (Ambulatoriais)</h4>
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin-bottom: 12px;">
+                    Usada em <strong>infecções leves a moderadas</strong>:
+                  </p>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    <div style="background: #eff6ff; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">🦠 <strong>Amigdalite</strong></p>
+                    </div>
+                    <div style="background: #eff6ff; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">👃 <strong>Sinusite</strong></p>
+                    </div>
+                    <div style="background: #eff6ff; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">👂 <strong>Otite</strong></p>
+                    </div>
+                    <div style="background: #eff6ff; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">🫁 <strong>Pneumonia de comunidade</strong></p>
+                    </div>
+                    <div style="background: #eff6ff; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">💧 <strong>Infecção urinária</strong></p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 10px; font-size: 16px;">🏠 Benefícios do Uso Ambulatorial</h4>
+                  <ul style="font-size: 14px; line-height: 1.8; color: #78350f; margin: 0; padding-left: 20px;">
+                    <li>Facilita o <strong>tratamento domiciliar</strong></li>
+                    <li><strong>Menos efeitos colaterais gastrointestinais</strong> comparado à ampicilina</li>
+                    <li>Melhor aderência ao tratamento</li>
+                  </ul>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal vantagem da amoxicilina em relação à ampicilina no contexto ambulatorial?",
+                options: [
+                  "A) Tem espectro mais amplo contra Gram-negativos",
+                  "B) É resistente às β-lactamases",
+                  "C) Tem biodisponibilidade oral muito superior, atingindo níveis séricos mais altos e causando menos efeitos colaterais gastrointestinais",
+                  "D) Pode ser usada em infecções graves como meningite"
+                ],
+                correct: 2,
+                explanation: "A amoxicilina tem biodisponibilidade oral muito superior à ampicilina, atingindo níveis séricos mais altos quando administrada por via oral. Isso a torna a aminopenicilina de escolha para tratamento ambulatorial de infecções leves a moderadas (amigdalite, sinusite, otite, pneumonia de comunidade, ITU), além de causar menos efeitos colaterais gastrointestinais."
+              }
+            },
 
           ]
         },
