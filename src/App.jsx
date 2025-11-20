@@ -8254,6 +8254,67 @@ const App = () => {
                 explanation: "A principal diferença prática é que a amoxicilina tem absorção oral muito superior e sofre mínima influência de alimentos, tornando-a ideal para uso ambulatorial em infecções leves a moderadas. Já a ampicilina, com menor absorção oral e maior influência de alimentos, é preferencialmente usada por via intravenosa em contextos hospitalares para infecções graves. Ambas têm espectro semelhante."
               }
             },
+            {
+              title: "Aminopenicilinas Combinadas com Inibidores de β-lactamase",
+              content: `
+                <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🛡️ Inibidores de β-lactamase</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #fef3c7;">
+                    Combinação estratégica para <strong style="color: white;">superar a resistência bacteriana</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <h4 style="color: #1e40af; margin-bottom: 15px; font-size: 17px;">🔬 Mecanismo de Ação</h4>
+                  <p style="font-size: 15px; line-height: 1.6; color: #1e3a8a; margin-bottom: 12px;">
+                    <strong>Inibidores de β-lactamase</strong> (clavulanato e sulbactam) ligam-se <strong>irreversivelmente</strong> às β-lactamases bacterianas, impedindo a degradação do antibiótico e <strong>restaurando sua atividade original</strong>.
+                  </p>
+                  <div style="background: #dbeafe; padding: 15px; border-radius: 8px; margin-top: 12px;">
+                    <p style="font-size: 14px; color: #1e40af; margin: 0;">
+                      💡 <strong>Principais inibidores:</strong> Clavulanato e Sulbactam
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 15px; font-size: 17px;">🚀 Analogia: Sistema de Míssil e Contra-Míssil</h4>
+                  <div style="display: grid; gap: 12px;">
+                    <div style="background: #fef9c3; padding: 15px; border-radius: 8px; border-left: 3px solid #eab308;">
+                      <p style="font-size: 14px; color: #78350f; margin: 0;">
+                        💥 <strong>1º Míssil:</strong> Antibiótico (ataque inicial)
+                      </p>
+                    </div>
+                    <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 3px solid #ef4444;">
+                      <p style="font-size: 14px; color: #991b1b; margin: 0;">
+                        🛡️ <strong>Contra-míssil:</strong> β-lactamase (defesa da bactéria)
+                      </p>
+                    </div>
+                    <div style="background: #dcfce7; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        ✨ <strong>Contra-contra-míssil:</strong> Inibidor de β-lactamase (neutraliza a defesa)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #ecfdf5; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #065f46; margin: 0;">
+                    ✅ <strong>Resultado:</strong> O inibidor neutraliza a β-lactamase, permitindo que o antibiótico atinja seu alvo e destrua a bactéria.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Como os inibidores de β-lactamase restauram a eficácia dos antibióticos β-lactâmicos?",
+                options: [
+                  "A) Aumentam a produção de antibiótico pela bactéria",
+                  "B) Ligam-se irreversivelmente às β-lactamases bacterianas, impedindo que degradem o antibiótico e restaurando sua atividade",
+                  "C) Destroem diretamente a parede celular bacteriana",
+                  "D) Impedem a bactéria de se multiplicar"
+                ],
+                correct: 1,
+                explanation: "Os inibidores de β-lactamase (como clavulanato e sulbactam) funcionam ligando-se irreversivelmente às β-lactamases bacterianas. Isso impede que essas enzimas degradem o antibiótico β-lactâmico, restaurando sua atividade original. É como um 'contra-contra-míssil' que neutraliza a defesa da bactéria (β-lactamase), permitindo que o antibiótico (míssil) atinja seu alvo."
+              }
+            },
 
           ]
         },
