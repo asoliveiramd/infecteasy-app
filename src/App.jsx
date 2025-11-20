@@ -8315,6 +8315,71 @@ const App = () => {
                 explanation: "Os inibidores de β-lactamase (como clavulanato e sulbactam) funcionam ligando-se irreversivelmente às β-lactamases bacterianas. Isso impede que essas enzimas degradem o antibiótico β-lactâmico, restaurando sua atividade original. É como um 'contra-contra-míssil' que neutraliza a defesa da bactéria (β-lactamase), permitindo que o antibiótico (míssil) atinja seu alvo."
               }
             },
+            {
+              title: "Aminopenicilinas com Inibidores de β-lactamase - Vantagens",
+              content: `
+                <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">✨ Vantagens da Combinação</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #d1fae5;">
+                    Ampliação significativa do <strong style="color: white;">espectro antimicrobiano</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 12px; font-size: 16px;">🇧🇷 Disponibilidade no Brasil</h4>
+                  <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0;">
+                    Comercialmente no Brasil, temos apenas a <strong>amoxicilina com clavulanato</strong>. A ampicilina com sulbactam caiu em desuso.
+                  </p>
+                </div>
+                
+                <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">✅ Principais Vantagens</h4>
+                  <div style="display: grid; gap: 12px;">
+                    <div style="background: #d1fae5; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 15px; color: #065f46; margin: 0;">
+                        🎯 <strong>Amplia espectro para produtores de β-lactamase</strong><br/>
+                        <span style="font-size: 13px; color: #047857;">Cobre bactérias que antes eram resistentes</span>
+                      </p>
+                    </div>
+                    <div style="background: #d1fae5; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 15px; color: #065f46; margin: 0;">
+                        🦠 <strong>Ativo contra anaeróbios</strong><br/>
+                        <span style="font-size: 13px; color: #047857;">Importante para infecções mistas</span>
+                      </p>
+                    </div>
+                    <div style="background: #d1fae5; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 15px; color: #065f46; margin: 0;">
+                        🔄 <strong>Maior eficácia em infecções mistas</strong><br/>
+                        <span style="font-size: 13px; color: #047857;">Cobre múltiplos tipos de bactérias simultaneamente</span>
+                      </p>
+                    </div>
+                    <div style="background: #d1fae5; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 15px; color: #065f46; margin: 0;">
+                        🎯 <strong>Opção para infecções moderadamente graves</strong><br/>
+                        <span style="font-size: 13px; color: #047857;">Ponte entre antibióticos simples e de amplo espectro</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Conclusão:</strong> A adição do inibidor de β-lactamase aumenta significativamente o espectro antimicrobiano, tornando essas combinações uma <strong>opção versátil para diversas infecções comunitárias</strong>.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal vantagem de adicionar um inibidor de β-lactamase à amoxicilina?",
+                options: [
+                  "A) Reduz o custo do tratamento",
+                  "B) Amplia o espectro para bactérias produtoras de β-lactamase, incluindo anaeróbios, tornando-a mais eficaz em infecções mistas e moderadamente graves",
+                  "C) Elimina todos os efeitos colaterais do antibiótico",
+                  "D) Permite uso em infecções virais"
+                ],
+                correct: 1,
+                explanation: "A adição do inibidor de β-lactamase (clavulanato) à amoxicilina amplia significativamente o espectro antimicrobiano, permitindo cobertura de bactérias produtoras de β-lactamase que seriam resistentes à amoxicilina sozinha. Além disso, é ativo contra anaeróbios e mais eficaz em infecções mistas, tornando-se uma opção versátil para infecções comunitárias moderadamente graves."
+              }
+            },
 
           ]
         },
