@@ -8447,9 +8447,9 @@ const App = () => {
                     São comumente usadas para infecções de pele e tecidos moles.
                   </p>
                   <p style="font-size: 16px; line-height: 1.6;">
-                    A <strong>cefalexina</strong> é amplamente utilizada no ambulatório devido à sua 
+                    A <strong>cefalexina</strong> e <strong>cefadroxila</strong> são amplamente utilizadas no ambulatório devido à sua 
                     boa biodisponibilidade oral, perfil de segurança favorável e eficácia contra 
-                    patógenos comuns de pele.
+                    patógenos comuns de pele. Porém, a segunda tem melhor posologia sendo mais adequada.
                   </p>
                 </div>
                 
