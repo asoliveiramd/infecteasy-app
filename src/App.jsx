@@ -8474,6 +8474,86 @@ const App = () => {
                 correct: 1,
                 explanation: "A cefalexina, uma cefalosporina de 1ª geração, é uma escolha comum para infecções de pele e tecidos moles devido à sua eficácia contra cocos Gram-positivos."
               }
+            },
+            {
+              title: "Cefalosporinas de 1ª Geração - Características gerais",
+              content: `
+                <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">📊 Características Gerais</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #fef3c7;">
+                    Perfil de atividade das <strong style="color: white;">cefalosporinas de 1ª geração</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">✅ Atividade Antimicrobiana</h4>
+                  <div style="background: #d1fae5; padding: 15px; border-radius: 8px; margin-bottom: 12px;">
+                    <p style="font-size: 15px; color: #065f46; margin: 0;">
+                      🎯 <strong>Melhor atividade contra Gram-positivos que contra Gram-negativos</strong><br/>
+                      <span style="font-size: 13px; color: #047857;">Especialmente eficaz contra Staphylococcus e Streptococcus</span>
+                    </p>
+                  </div>
+                  <div style="background: #d1fae5; padding: 15px; border-radius: 8px;">
+                    <p style="font-size: 15px; color: #065f46; margin: 0;">
+                      🛡️ <strong>Resistentes a algumas β-lactamases estafilocócicas</strong><br/>
+                      <span style="font-size: 13px; color: #047857;">Vantagem sobre penicilinas naturais</span>
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #ef4444;">
+                  <h4 style="color: #dc2626; margin-bottom: 15px; font-size: 17px;">❌ Não São Ativas Contra</h4>
+                  <div style="display: grid; gap: 10px;">
+                    <div style="background: #fee2e2; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #991b1b; margin: 0;">
+                        ⚠️ <strong><em>S. aureus</em> meticilino resistente (MRSA)</strong>
+                      </p>
+                    </div>
+                    <div style="background: #fee2e2; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #991b1b; margin: 0;">
+                        ⚠️ <strong>Enterococos</strong>
+                      </p>
+                    </div>
+                    <div style="background: #fee2e2; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #991b1b; margin: 0;">
+                        ⚠️ <strong><em>Listeria</em></strong>
+                      </p>
+                    </div>
+                    <div style="background: #fee2e2; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #991b1b; margin: 0;">
+                        ⚠️ <strong><em>Haemophilus</em></strong>
+                      </p>
+                    </div>
+                    <div style="background: #fee2e2; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #991b1b; margin: 0;">
+                        ⚠️ <strong><em>Moraxella</em></strong>
+                      </p>
+                    </div>
+                    <div style="background: #fee2e2; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #991b1b; margin: 0;">
+                        ⚠️ <strong>Anaeróbios</strong>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> Apesar de resistentes a algumas β-lactamases estafilocócicas, as cefalosporinas de 1ª geração <strong>não são eficazes contra MRSA</strong>, que possui resistência mediada por alteração das PBPs.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual das seguintes afirmações sobre as cefalosporinas de 1ª geração está correta?",
+                options: [
+                  "A) São eficazes contra MRSA e enterococos",
+                  "B) Têm melhor atividade contra Gram-positivos, são resistentes a algumas β-lactamases estafilocócicas, mas não são ativas contra MRSA, enterococos, Listeria, Haemophilus, Moraxella e anaeróbios",
+                  "C) São a primeira escolha para infecções por Haemophilus",
+                  "D) Têm ampla cobertura contra anaeróbios"
+                ],
+                correct: 1,
+                explanation: "As cefalosporinas de 1ª geração apresentam melhor atividade contra Gram-positivos e são resistentes a algumas β-lactamases estafilocócicas (vantagem sobre penicilinas naturais). Porém, não são ativas contra MRSA (resistência por alteração de PBPs), enterococos, Listeria, Haemophilus, Moraxella e anaeróbios."
+              }
             }
           ]
         },
