@@ -8554,6 +8554,82 @@ const App = () => {
                 correct: 1,
                 explanation: "As cefalosporinas de 1ª geração apresentam melhor atividade contra Gram-positivos e são resistentes a algumas β-lactamases estafilocócicas (vantagem sobre penicilinas naturais). Porém, não são ativas contra MRSA (resistência por alteração de PBPs), enterococos, Listeria, Haemophilus, Moraxella e anaeróbios."
               }
+            },
+            {
+              title: "Cefalosporinas de 1ª Geração - Espectro de ação",
+              content: `
+                <div style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Espectro de Ação</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #dbeafe;">
+                    Principais <strong style="color: white;">microrganismos cobertos</strong> pelas cefalosporinas de 1ª geração.
+                  </p>
+                </div>
+                
+                <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">🟢 Gram-positivos</h4>
+                  <div style="display: grid; gap: 12px;">
+                    <div style="background: #d1fae5; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 15px; color: #065f46; margin: 0;">
+                        🦠 <strong><em>Staphylococcus aureus</em> (não-MRSA)</strong><br/>
+                        <span style="font-size: 13px; color: #047857;">Sensível à meticilina/oxacilina</span>
+                      </p>
+                    </div>
+                    <div style="background: #d1fae5; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 15px; color: #065f46; margin: 0;">
+                        🦠 <strong><em>Streptococcus pyogenes</em> (SBHGA)</strong><br/>
+                        <span style="font-size: 13px; color: #047857;">Estreptococo beta-hemolítico do grupo A</span>
+                      </p>
+                    </div>
+                    <div style="background: #d1fae5; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 15px; color: #065f46; margin: 0;">
+                        🦠 <strong><em>Streptococcus pneumoniae</em></strong><br/>
+                        <span style="font-size: 13px; color: #047857;">Pneumococo</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fef9c3; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 15px; font-size: 17px;">🟠 Gram-negativos (limitado)</h4>
+                  <div style="display: grid; gap: 12px;">
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 3px solid #f59e0b;">
+                      <p style="font-size: 15px; color: #78350f; margin: 0;">
+                        🦠 <strong><em>Escherichia coli</em> (algumas cepas)</strong><br/>
+                        <span style="font-size: 13px; color: #92400e;">Cobertura limitada e variável</span>
+                      </p>
+                    </div>
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 3px solid #f59e0b;">
+                      <p style="font-size: 15px; color: #78350f; margin: 0;">
+                        🦠 <strong><em>Proteus mirabilis</em></strong><br/>
+                        <span style="font-size: 13px; color: #92400e;">Boa atividade</span>
+                      </p>
+                    </div>
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 3px solid #f59e0b;">
+                      <p style="font-size: 15px; color: #78350f; margin: 0;">
+                        🦠 <strong><em>Klebsiella pneumoniae</em> (algumas cepas)</strong><br/>
+                        <span style="font-size: 13px; color: #92400e;">Cobertura limitada e variável</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> O espectro é predominantemente voltado para <strong>Gram-positivos</strong>, com cobertura <strong>limitada e variável</strong> para alguns Gram-negativos. Não deve ser usada como primeira escolha para infecções por Gram-negativos.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é o principal grupo de microrganismos coberto pelas cefalosporinas de 1ª geração?",
+                options: [
+                  "A) Gram-negativos, incluindo Pseudomonas e Haemophilus",
+                  "B) Gram-positivos como S. aureus (não-MRSA), S. pyogenes e S. pneumoniae, com cobertura limitada para alguns Gram-negativos como E. coli, P. mirabilis e K. pneumoniae",
+                  "C) Anaeróbios e enterococos",
+                  "D) MRSA e Listeria"
+                ],
+                correct: 1,
+                explanation: "As cefalosporinas de 1ª geração têm espectro predominantemente voltado para Gram-positivos (S. aureus não-MRSA, S. pyogenes, S. pneumoniae), com cobertura limitada e variável para alguns Gram-negativos (E. coli, P. mirabilis, K. pneumoniae). Não são ativas contra MRSA, enterococos, Listeria, Haemophilus, Moraxella ou anaeróbios."
+              }
             }
           ]
         },
