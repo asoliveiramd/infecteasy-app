@@ -8712,6 +8712,94 @@ const App = () => {
                 correct: 1,
                 explanation: "As cefalosporinas de 2ª geração apresentam espectro ampliado para Gram-negativos e maior resistência a algumas β-lactamases em comparação com a 1ª geração. Porém, geralmente têm atividade menor contra Gram-positivos (embora ainda significativa), representando um equilíbrio entre as duas coberturas."
               }
+            },
+            {
+              title: "Cefalosporinas de 2ª Geração - Espectro de Ação",
+              content: `
+                <div style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Espectro de Ação - 2ª Geração</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #cffafe;">
+                    Cobertura <strong style="color: white;">ampliada</strong> com destaque para infecções respiratórias.
+                  </p>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    🛡️ <strong>Vantagem chave:</strong> Por ter <strong>maior resistência a algumas β-lactamases</strong> (mais que as de primeira geração), consegue atingir bactérias como <em>Haemophilus</em> e <em>Moraxella</em>, ajudando bastante em <strong>infecções respiratórias</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">🟢 Gram-positivos</h4>
+                  <div style="display: grid; gap: 12px;">
+                    <div style="background: #d1fae5; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 15px; color: #065f46; margin: 0;">
+                        🦠 <strong><em>Streptococcus pyogenes</em></strong><br/>
+                        <span style="font-size: 13px; color: #047857;">SBHGA - Estreptococo beta-hemolítico do grupo A</span>
+                      </p>
+                    </div>
+                    <div style="background: #d1fae5; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 15px; color: #065f46; margin: 0;">
+                        🦠 <strong><em>Streptococcus pneumoniae</em></strong><br/>
+                        <span style="font-size: 13px; color: #047857;">Pneumococo</span>
+                      </p>
+                    </div>
+                    <div style="background: #d1fae5; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 15px; color: #065f46; margin: 0;">
+                        🦠 <strong><em>Staphylococcus aureus</em> (sensível à meticilina)</strong><br/>
+                        <span style="font-size: 13px; color: #047857;">Não-MRSA</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fef9c3; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 15px; font-size: 17px;">🟠 Gram-negativos (ampliado)</h4>
+                  <div style="display: grid; gap: 12px;">
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 3px solid #f59e0b;">
+                      <p style="font-size: 15px; color: #78350f; margin: 0;">
+                        🦠 <strong><em>Haemophilus influenzae</em></strong> ⭐<br/>
+                        <span style="font-size: 13px; color: #92400e;">Importante em infecções respiratórias</span>
+                      </p>
+                    </div>
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 3px solid #f59e0b;">
+                      <p style="font-size: 15px; color: #78350f; margin: 0;">
+                        🦠 <strong><em>Moraxella catarrhalis</em></strong> ⭐<br/>
+                        <span style="font-size: 13px; color: #92400e;">Importante em infecções respiratórias</span>
+                      </p>
+                    </div>
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 3px solid #f59e0b;">
+                      <p style="font-size: 15px; color: #78350f; margin: 0;">
+                        🦠 <strong><em>Neisseria</em> spp.</strong><br/>
+                        <span style="font-size: 13px; color: #92400e;">Inclui N. gonorrhoeae e N. meningitidis</span>
+                      </p>
+                    </div>
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 3px solid #f59e0b;">
+                      <p style="font-size: 15px; color: #78350f; margin: 0;">
+                        🦠 <strong><em>Enterobacter, Providencia, Citrobacter</em></strong><br/>
+                        <span style="font-size: 13px; color: #92400e;">Algumas cepas</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #065f46; margin: 0;">
+                    💡 <strong>Destaque Clínico:</strong> A cobertura de <strong><em>Haemophilus influenzae</em> e <em>Moraxella catarrhalis</em></strong> torna as cefalosporinas de 2ª geração especialmente úteis em <strong>sinusites, otites médias e exacerbações de DPOC</strong>.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal vantagem das cefalosporinas de 2ª geração em infecções respiratórias?",
+                options: [
+                  "A) São eficazes contra MRSA",
+                  "B) Por terem maior resistência a algumas β-lactamases, conseguem atingir Haemophilus influenzae e Moraxella catarrhalis, importantes em infecções respiratórias",
+                  "C) Têm melhor atividade contra Gram-positivos que a 1ª geração",
+                  "D) São ativas contra Pseudomonas aeruginosa"
+                ],
+                correct: 1,
+                explanation: "As cefalosporinas de 2ª geração têm maior resistência a algumas β-lactamases em comparação com a 1ª geração, permitindo cobertura de Haemophilus influenzae e Moraxella catarrhalis, patógenos frequentemente envolvidos em sinusites, otites médias e exacerbações de DPOC. Isso as torna especialmente úteis em infecções respiratórias."
+              }
             }
           ]
         },
