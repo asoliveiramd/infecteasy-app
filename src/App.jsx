@@ -8800,6 +8800,84 @@ const App = () => {
                 correct: 1,
                 explanation: "As cefalosporinas de 2ª geração têm maior resistência a algumas β-lactamases em comparação com a 1ª geração, permitindo cobertura de Haemophilus influenzae e Moraxella catarrhalis, patógenos frequentemente envolvidos em sinusites, otites médias e exacerbações de DPOC. Isso as torna especialmente úteis em infecções respiratórias."
               }
+            },
+            {
+              title: "Cefuroxima - a grande representante",
+              content: `
+                <div style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">⭐ Cefuroxima</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #fce7f3;">
+                    A <strong style="color: white;">principal cefalosporina de 2ª geração</strong> no uso ambulatorial.
+                  </p>
+                </div>
+                
+                <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">✅ Vantagens da Cefuroxima</h4>
+                  <div style="display: grid; gap: 12px;">
+                    <div style="background: #d1fae5; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 15px; color: #065f46; margin: 0;">
+                        🛡️ <strong>Resistente a várias β-lactamases</strong><br/>
+                        <span style="font-size: 13px; color: #047857;">Supera muitas bactérias resistentes às penicilinas</span>
+                      </p>
+                    </div>
+                    <div style="background: #d1fae5; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 15px; color: #065f46; margin: 0;">
+                        🫁 <strong>Boa penetração em tecidos respiratórios</strong><br/>
+                        <span style="font-size: 13px; color: #047857;">Atinge concentrações adequadas nos sítios de infecção</span>
+                      </p>
+                    </div>
+                    <div style="background: #d1fae5; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 15px; color: #065f46; margin: 0;">
+                        ⏰ <strong>Posologia de 12/12h</strong><br/>
+                        <span style="font-size: 13px; color: #047857;">Melhor adesão ao tratamento (2x ao dia)</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <h4 style="color: #1e40af; margin-bottom: 15px; font-size: 17px;">🎯 Principais Indicações</h4>
+                  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+                    <div style="background: #dbeafe; padding: 12px; border-radius: 8px; text-align: center;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0; font-weight: bold;">
+                        👃 Sinusite
+                      </p>
+                    </div>
+                    <div style="background: #dbeafe; padding: 12px; border-radius: 8px; text-align: center;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0; font-weight: bold;">
+                        👂 Otite média
+                      </p>
+                    </div>
+                    <div style="background: #dbeafe; padding: 12px; border-radius: 8px; text-align: center;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0; font-weight: bold;">
+                        🫁 Pneumonia
+                      </p>
+                    </div>
+                    <div style="background: #dbeafe; padding: 12px; border-radius: 8px; text-align: center;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0; font-weight: bold;">
+                        🦠 Exacerbação de DPOC
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0;">
+                    💡 <strong>Destaque:</strong> A combinação de <strong>resistência a β-lactamases, boa penetração tecidual e posologia conveniente</strong> torna a cefuroxima uma <strong>excelente escolha</strong> para infecções respiratórias comunitárias.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Quais são as principais vantagens da cefuroxima no tratamento de infecções respiratórias?",
+                options: [
+                  "A) É eficaz contra MRSA e tem posologia de 24/24h",
+                  "B) É resistente a várias β-lactamases, tem boa penetração em tecidos respiratórios e posologia de 12/12h (melhor adesão)",
+                  "C) Tem cobertura para Pseudomonas e anaeróbios",
+                  "D) É mais barata que as penicilinas e tem menor taxa de efeitos adversos"
+                ],
+                correct: 1,
+                explanation: "A cefuroxima, principal cefalosporina de 2ª geração no uso ambulatorial, apresenta três vantagens principais: (1) resistência a várias β-lactamases, permitindo cobertura de patógenos resistentes; (2) boa penetração em tecidos respiratórios, atingindo concentrações adequadas; e (3) posologia de 12/12h, facilitando a adesão ao tratamento. Essas características a tornam excelente escolha para sinusites, otites, pneumonias e exacerbações de DPOC."
+              }
             }
           ]
         },
