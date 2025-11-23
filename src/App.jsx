@@ -8630,6 +8630,88 @@ const App = () => {
                 correct: 1,
                 explanation: "As cefalosporinas de 1ª geração têm espectro predominantemente voltado para Gram-positivos (S. aureus não-MRSA, S. pyogenes, S. pneumoniae), com cobertura limitada e variável para alguns Gram-negativos (E. coli, P. mirabilis, K. pneumoniae). Não são ativas contra MRSA, enterococos, Listeria, Haemophilus, Moraxella ou anaeróbios."
               }
+            },
+            {
+              title: "Cefalosporinas de 2ª Geração - Características Gerais",
+              content: `
+                <div style="background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🔄 2ª Geração</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #ede9fe;">
+                    Evolução com <strong style="color: white;">espectro ampliado</strong> para Gram-negativos.
+                  </p>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <h4 style="color: #1e40af; margin-bottom: 15px; font-size: 17px;">📈 Principais Características</h4>
+                  <div style="display: grid; gap: 12px;">
+                    <div style="background: #dbeafe; padding: 15px; border-radius: 8px; border-left: 3px solid #3b82f6;">
+                      <p style="font-size: 15px; color: #1e3a8a; margin: 0;">
+                        🎯 <strong>Espectro ampliado para Gram-negativos</strong><br/>
+                        <span style="font-size: 13px; color: #1e40af;">Em relação à 1ª geração</span>
+                      </p>
+                    </div>
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 3px solid #f59e0b;">
+                      <p style="font-size: 15px; color: #78350f; margin: 0;">
+                        ⚠️ <strong>Atividade contra Gram-positivos geralmente menor</strong><br/>
+                        <span style="font-size: 13px; color: #92400e;">Mas ainda significativa</span>
+                      </p>
+                    </div>
+                    <div style="background: #dcfce7; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 15px; color: #065f46; margin: 0;">
+                        🛡️ <strong>Maior resistência a algumas β-lactamases</strong><br/>
+                        <span style="font-size: 13px; color: #047857;">Vantagem sobre 1ª geração</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">🔄 Comparação com 1ª Geração</h4>
+                  <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden;">
+                    <thead>
+                      <tr style="background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); color: white;">
+                        <th style="padding: 12px; text-align: left; border: 1px solid #c4b5fd;">Característica</th>
+                        <th style="padding: 12px; text-align: center; border: 1px solid #c4b5fd;">1ª Geração</th>
+                        <th style="padding: 12px; text-align: center; border: 1px solid #c4b5fd;">2ª Geração</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr style="background: #f9fafb;">
+                        <td style="padding: 10px; border: 1px solid #e5e7eb; font-weight: bold;">Gram-positivos</td>
+                        <td style="padding: 10px; border: 1px solid #e5e7eb; text-align: center;">⭐⭐⭐</td>
+                        <td style="padding: 10px; border: 1px solid #e5e7eb; text-align: center;">⭐⭐</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 10px; border: 1px solid #e5e7eb; font-weight: bold;">Gram-negativos</td>
+                        <td style="padding: 10px; border: 1px solid #e5e7eb; text-align: center;">⭐</td>
+                        <td style="padding: 10px; border: 1px solid #e5e7eb; text-align: center; background: #dcfce7;">⭐⭐⭐</td>
+                      </tr>
+                      <tr style="background: #f9fafb;">
+                        <td style="padding: 10px; border: 1px solid #e5e7eb; font-weight: bold;">Resistência a β-lactamases</td>
+                        <td style="padding: 10px; border: 1px solid #e5e7eb; text-align: center;">⭐⭐</td>
+                        <td style="padding: 10px; border: 1px solid #e5e7eb; text-align: center; background: #dcfce7;">⭐⭐⭐</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0;">
+                    💡 <strong>Importante:</strong> A 2ª geração representa um <strong>equilíbrio</strong> entre cobertura de Gram-positivos e Gram-negativos, sendo útil em infecções mistas ou quando há necessidade de cobertura mais ampla.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal diferença entre as cefalosporinas de 2ª geração e as de 1ª geração?",
+                options: [
+                  "A) A 2ª geração tem melhor atividade contra Gram-positivos",
+                  "B) A 2ª geração tem espectro ampliado para Gram-negativos e maior resistência a β-lactamases, mas atividade geralmente menor contra Gram-positivos",
+                  "C) A 2ª geração é eficaz contra MRSA",
+                  "D) Não há diferenças significativas entre as gerações"
+                ],
+                correct: 1,
+                explanation: "As cefalosporinas de 2ª geração apresentam espectro ampliado para Gram-negativos e maior resistência a algumas β-lactamases em comparação com a 1ª geração. Porém, geralmente têm atividade menor contra Gram-positivos (embora ainda significativa), representando um equilíbrio entre as duas coberturas."
+              }
             }
           ]
         },
