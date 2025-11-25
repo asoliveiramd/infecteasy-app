@@ -8886,7 +8886,92 @@ const App = () => {
           title: "Inibidores da Síntese Proteica",
           duration: "18 min",
           xp: 90,
-          sections: []
+          sections: [
+            {
+              title: "Mecanismo de ação",
+              content: `
+                <div style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🧬 Mecanismo de Ação</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #ede9fe;">
+                    Inibição da <strong style="color: white;">síntese proteica bacteriana</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <h4 style="color: #1e40af; margin-bottom: 15px; font-size: 17px;">🎯 Como Funcionam</h4>
+                  <p style="font-size: 15px; line-height: 1.6; color: #1e3a8a; margin-bottom: 12px;">
+                    Os <strong>Inibidores da Síntese Proteica</strong> ligam-se aos <strong>ribossomos bacterianos</strong>, impedindo a síntese proteica que é essencial para a vida da bactéria.
+                  </p>
+                  <p style="font-size: 15px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    Os ribossomos têm <strong>duas subunidades</strong> (30S e 50S) onde os antibióticos se ligam.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">🧬 Subunidades-alvo dos Ribossomos</h4>
+                  
+                  <div style="background: #dbeafe; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                    <h5 style="color: #1e40af; margin-bottom: 12px; font-size: 16px;">🔵 Subunidade 30S</h5>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                      <div style="background: white; padding: 12px; border-radius: 6px; text-align: center;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0; font-weight: bold;">
+                          💊 Aminoglicosídeos
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px; text-align: center;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0; font-weight: bold;">
+                          💊 Tetraciclinas
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                    <h5 style="color: #92400e; margin-bottom: 12px; font-size: 16px;">🟡 Subunidade 50S</h5>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                      <div style="background: white; padding: 12px; border-radius: 6px; text-align: center;">
+                        <p style="font-size: 14px; color: #78350f; margin: 0; font-weight: bold;">
+                          💊 Macrolídeos
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px; text-align: center;">
+                        <p style="font-size: 14px; color: #78350f; margin: 0; font-weight: bold;">
+                          💊 Lincosamidas
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px; text-align: center;">
+                        <p style="font-size: 14px; color: #78350f; margin: 0; font-weight: bold;">
+                          💊 Fenicol
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px; text-align: center;">
+                        <p style="font-size: 14px; color: #78350f; margin: 0; font-weight: bold;">
+                          💊 Oxazolidinonas
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #065f46; margin: 0;">
+                    💡 <strong>Importante:</strong> A diferença na <strong>subunidade-alvo</strong> (30S vs 50S) determina o espectro de ação e as características farmacológicas de cada classe de antibióticos.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é o mecanismo de ação dos inibidores da síntese proteica?",
+                options: [
+                  "A) Inibem a síntese da parede celular bacteriana",
+                  "B) Ligam-se aos ribossomos bacterianos (subunidades 30S e 50S), impedindo a síntese proteica essencial para a vida da bactéria",
+                  "C) Destroem a membrana celular bacteriana",
+                  "D) Inibem a replicação do DNA bacteriano"
+                ],
+                correct: 1,
+                explanation: "Os inibidores da síntese proteica atuam ligando-se aos ribossomos bacterianos, que possuem duas subunidades (30S e 50S). Diferentes classes de antibióticos atuam em diferentes subunidades: a subunidade 30S (aminoglicosídeos e tetraciclinas) ou a subunidade 50S (macrolídeos, lincosamidas, fenicol e oxazolidinonas). Ao impedir a síntese proteica, esses antibióticos impedem o crescimento e sobrevivência da bactéria."
+              }
+            }
+          ]
         },
         {
           id: 5,
