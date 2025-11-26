@@ -9472,6 +9472,93 @@ const App = () => {
         },
         {
           id: 8,
+          title: "Lincosamidas",
+          duration: "12 min",
+          xp: 75,
+          sections: [
+            {
+              title: "Características gerais",
+              content: `
+                <div style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">💊 Lincosamidas</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #fce7f3;">
+                    <strong style="color: white;">Clindamicina</strong> - único representante em uso.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">✨ Duas Características Importantes</h4>
+                  
+                  <div style="background: #dbeafe; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                    <h5 style="color: #1e40af; margin-bottom: 12px; font-size: 16px;">🦴 Excelente Penetração</h5>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
+                      <div style="background: white; padding: 12px; border-radius: 6px; text-align: center;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          🦴 <strong>Tecido ósseo</strong>
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px; text-align: center;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          💧 <strong>Abscessos</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 12px; font-size: 16px;">🦠 Boa Atividade contra Anaeróbios</h5>
+                    <p style="font-size: 15px; line-height: 1.6; color: #065f46; margin: 0;">
+                      Incluindo <strong>anaeróbios orais</strong> (importantes em infecções odontogênicas).
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <h4 style="color: #1e40af; margin-bottom: 15px; font-size: 17px;">💊 Fármaco Disponível</h4>
+                  <div style="background: white; padding: 18px; border-radius: 8px; border: 2px solid #ec4899;">
+                    <h5 style="color: #be185d; margin-bottom: 10px; font-size: 16px;">⭐ Clindamicina</h5>
+                    <p style="font-size: 15px; line-height: 1.6; color: #831843; margin-bottom: 10px;">
+                      <strong>Vias de administração:</strong>
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
+                      <div style="background: #fce7f3; padding: 8px; border-radius: 6px; text-align: center;">
+                        <p style="font-size: 13px; color: #831843; margin: 0;">💊 Oral</p>
+                      </div>
+                      <div style="background: #fce7f3; padding: 8px; border-radius: 6px; text-align: center;">
+                        <p style="font-size: 13px; color: #831843; margin: 0;">💉 IV</p>
+                      </div>
+                      <div style="background: #fce7f3; padding: 8px; border-radius: 6px; text-align: center;">
+                        <p style="font-size: 13px; color: #831843; margin: 0;">💉 IM</p>
+                      </div>
+                      <div style="background: #fce7f3; padding: 8px; border-radius: 6px; text-align: center;">
+                        <p style="font-size: 13px; color: #831843; margin: 0;">🧪 Tópica</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0;">
+                    💡 <strong>Importante:</strong> A <strong>clindamicina</strong> é especialmente útil em infecções ósseas (osteomielite), abscessos profundos e infecções por anaeróbios (incluindo infecções odontogênicas). A disponibilidade em múltiplas vias de administração (oral, IV, IM e tópica) aumenta sua versatilidade clínica.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Quais são as duas características mais importantes da clindamicina?",
+                options: [
+                  "A) Boa absorção oral e baixo custo",
+                  "B) Excelente penetração óssea e em abscessos, e boa atividade contra anaeróbios (inclusive orais)",
+                  "C) Resistência a β-lactamases e amplo espectro contra Gram-negativos",
+                  "D) Longa meia-vida e dose única diária"
+                ],
+                correct: 1,
+                explanation: "As duas características mais importantes da clindamicina são: (1) excelente penetração óssea e em abscessos, tornando-a ideal para osteomielite e abscessos profundos; (2) boa atividade contra anaeróbios, incluindo anaeróbios orais, sendo muito útil em infecções odontogênicas. A clindamicina é o único representante das lincosamidas em uso e está disponível em múltiplas vias de administração (oral, IV, IM e tópica), aumentando sua versatilidade clínica."
+              }
+            }
+          ]
+        },
+        {
+          id: 9,
           title: "Inibidores da Síntese de Ácido Nucleico",
           duration: "16 min",
           xp: 85,
