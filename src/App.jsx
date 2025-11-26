@@ -9362,6 +9362,111 @@ const App = () => {
                 correct: 1,
                 explanation: "As tetraciclinas quelam cálcio, o que pode prejudicar a formação de ossos e dentes em crianças menores de 8 anos e em fetos de gestantes. Por isso, são contraindicadas nessas populações. Além disso, a quelação de cálcio também explica por que a absorção oral é prejudicada por alimentos com cálcio (leite, queijo) e antiácidos. A doxiciclina é o fármaco mais usado ambulatorialmente por ser mais estável e ter melhor perfil farmacocinético."
               }
+            },
+            {
+              title: "Espectro de ação",
+              content: `
+                <div style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Espectro de Ação</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #ede9fe;">
+                    Espectro <strong style="color: white;">relativamente amplo</strong>, estratégica e pouco usada.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">🦠 Cobertura Antimicrobiana</h4>
+                  
+                  <div style="background: #dcfce7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 12px; font-size: 16px;">🟢 Gram-positivos</h5>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #065f46; margin: 0;">
+                          🦠 <strong>Streptococcus pneumoniae</strong> (Pneumococo)
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #065f46; margin: 0;">
+                          🦠 <strong>Staphylococcus aureus</strong> (incluindo alguns MRSA comunitários)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                    <h5 style="color: #92400e; margin-bottom: 12px; font-size: 16px;">🟠 Gram-negativos</h5>
+                    <div style="background: white; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #78350f; margin: 0;">
+                        🦠 <strong>Haemophilus influenzae</strong>
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                    <h5 style="color: #1e40af; margin-bottom: 12px; font-size: 16px;">🔵 Atípicos e Outros</h5>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          🦠 <strong>Mycoplasma pneumoniae</strong>
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          🦠 <strong>Chlamydia</strong> spp.
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          🦠 <strong>Anaeróbios orais</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 15px; font-size: 17px;">🎯 Indicações Especiais (Infectologia)</h4>
+                  <p style="font-size: 15px; line-height: 1.6; color: #78350f; margin-bottom: 10px;">
+                    Em situações <strong>menos comuns</strong> e mais próprias da infectologia:
+                  </p>
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 15px;">
+                    <div style="background: white; padding: 12px; border-radius: 6px; border: 2px solid #f59e0b;">
+                      <p style="font-size: 14px; color: #78350f; margin: 0;">
+                        🦠 <strong>Anaplasma</strong>
+                      </p>
+                    </div>
+                    <div style="background: white; padding: 12px; border-radius: 6px; border: 2px solid #f59e0b;">
+                      <p style="font-size: 14px; color: #78350f; margin: 0;">
+                        🦠 <strong>Ehrlichia</strong>
+                      </p>
+                    </div>
+                    <div style="background: white; padding: 12px; border-radius: 6px; border: 2px solid #f59e0b;">
+                      <p style="font-size: 14px; color: #78350f; margin: 0;">
+                        🦠 <strong>Rickettsias</strong>
+                      </p>
+                    </div>
+                  </div>
+                  <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 15px 0 0 0;">
+                    💡 Doxiciclina é <strong>tratamento prioritário</strong> para essas infecções.
+                  </p>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> Apesar do espectro amplo, a doxiciclina é <strong>estratégica e pouco usada</strong> no dia a dia ambulatorial, sendo reservada para situações específicas como infecções por atípicos, anaeróbios orais e patógenos transmitidos por carrapatos (Anaplasma, Ehrlichia, Rickettsias).
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Para quais infecções a doxiciclina é considerada tratamento prioritário?",
+                options: [
+                  "A) Infecções urinárias por E. coli",
+                  "B) Infecções por Anaplasma, Ehrlichia e Rickettsias (transmitidas por carrapatos)",
+                  "C) Meningite bacteriana por S. pneumoniae",
+                  "D) Infecções de pele por Pseudomonas"
+                ],
+                correct: 1,
+                explanation: "A doxiciclina é tratamento prioritário para infecções por Anaplasma, Ehrlichia e Rickettsias, que são patógenos transmitidos por carrapatos. Além disso, tem espectro relativamente amplo cobrindo: Gram-positivos (S. pneumoniae, S. aureus incluindo alguns MRSA comunitários), Gram-negativos (H. influenzae), atípicos (Mycoplasma, Chlamydia) e anaeróbios orais. Apesar do espectro amplo, é estratégica e pouco usada no dia a dia ambulatorial, sendo reservada para situações específicas."
+              }
             }
           ]
         },
