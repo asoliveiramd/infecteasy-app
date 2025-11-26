@@ -10062,6 +10062,106 @@ const App = () => {
                 correct: 1,
                 explanation: "As quinolonas são contraindicadas em pacientes com miastenia gravis porque podem ocasionar piora clínica da doença, assim como os aminoglicosídeos. Ambas as classes de antibióticos podem interferir na transmissão neuromuscular, agravando os sintomas da miastenia gravis. As outras contraindicações importantes incluem crianças e adolescentes em crescimento (embora o uso tenha sido paulatinamente liberado quando não há opções), gestantes e lactantes, e pacientes com histórico de tendinopatia por quinolonas."
               }
+            },
+            {
+              title: "Características por Geração",
+              content: `
+                <div style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">📊 Características por Geração</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #e0e7ff;">
+                    A <strong style="color: white;">primeira geração está praticamente fora de uso</strong>. Seguem os dados gerais sobre as gerações seguintes:
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">📈 Comparação entre Gerações</h4>
+                  
+                  <div style="background: white; padding: 20px; border-radius: 8px; margin: 15px 0; border: 2px solid #bfdbfe;">
+                    <h5 style="color: #1e40af; margin-bottom: 15px; font-size: 16px;">🔵 2ª Geração</h5>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
+                      <div style="background: #dcfce7; padding: 12px; border-radius: 6px; border-left: 3px solid #10b981;">
+                        <p style="font-size: 14px; color: #065f46; margin: 0;">
+                          <strong>Atividade Gram-negativos:</strong> 🟢 Excelente
+                        </p>
+                      </div>
+                      <div style="background: #fef3c7; padding: 12px; border-radius: 6px; border-left: 3px solid #f59e0b;">
+                        <p style="font-size: 14px; color: #78350f; margin: 0;">
+                          <strong>Atividade Gram-positivos:</strong> 🟡 Limitada
+                        </p>
+                      </div>
+                      <div style="background: #fef3c7; padding: 12px; border-radius: 6px; border-left: 3px solid #f59e0b;">
+                        <p style="font-size: 14px; color: #78350f; margin: 0;">
+                          <strong>Atividade atípicos:</strong> 🟡 Limitada
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: white; padding: 20px; border-radius: 8px; margin: 15px 0; border: 2px solid #a5b4fc;">
+                    <h5 style="color: #4338ca; margin-bottom: 15px; font-size: 16px;">🔵 3ª Geração</h5>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
+                      <div style="background: #dbeafe; padding: 12px; border-radius: 6px; border-left: 3px solid #3b82f6;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          <strong>Atividade Gram-negativos:</strong> 🔵 Muito boa
+                        </p>
+                      </div>
+                      <div style="background: #dbeafe; padding: 12px; border-radius: 6px; border-left: 3px solid #3b82f6;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          <strong>Atividade Gram-positivos:</strong> 🔵 Boa
+                        </p>
+                      </div>
+                      <div style="background: #dcfce7; padding: 12px; border-radius: 6px; border-left: 3px solid #10b981;">
+                        <p style="font-size: 14px; color: #065f46; margin: 0;">
+                          <strong>Atividade atípicos:</strong> 🟢 Excelente
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: white; padding: 20px; border-radius: 8px; margin: 15px 0; border: 2px solid #818cf8;">
+                    <h5 style="color: #312e81; margin-bottom: 15px; font-size: 16px;">🔵 4ª Geração</h5>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
+                      <div style="background: #dbeafe; padding: 12px; border-radius: 6px; border-left: 3px solid #3b82f6;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          <strong>Atividade Gram-negativos:</strong> 🔵 Boa
+                        </p>
+                      </div>
+                      <div style="background: #dcfce7; padding: 12px; border-radius: 6px; border-left: 3px solid #10b981;">
+                        <p style="font-size: 14px; color: #065f46; margin: 0;">
+                          <strong>Atividade Gram-positivos:</strong> 🟢 Excelente
+                        </p>
+                      </div>
+                      <div style="background: #dcfce7; padding: 12px; border-radius: 6px; border-left: 3px solid #10b981;">
+                        <p style="font-size: 14px; color: #065f46; margin: 0;">
+                          <strong>Atividade atípicos:</strong> 🟢 Excelente
+                        </p>
+                      </div>
+                      <div style="background: #dbeafe; padding: 12px; border-radius: 6px; border-left: 3px solid #3b82f6;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          <strong>Atividade anaeróbios:</strong> 🔵 Boa
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> A evolução das gerações de quinolonas mostra uma <strong>ampliação progressiva do espectro</strong>: a 2ª geração tem excelente atividade contra Gram-negativos mas limitada contra Gram-positivos e atípicos; a 3ª geração mantém muito boa atividade contra Gram-negativos e adiciona boa cobertura de Gram-positivos e excelente cobertura de atípicos; a 4ª geração tem excelente atividade contra Gram-positivos e atípicos, boa atividade contra Gram-negativos e adiciona cobertura de anaeróbios.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual geração de quinolonas tem excelente atividade contra atípicos e também adiciona cobertura de anaeróbios?",
+                options: [
+                  "A) 2ª geração (norfloxacino, ciprofloxacino)",
+                  "B) 3ª geração (levofloxacino)",
+                  "C) 4ª geração (moxifloxacino)",
+                  "D) 1ª geração (ácido nalidíxico)"
+                ],
+                correct: 2,
+                explanation: "A 4ª geração de quinolonas (moxifloxacino) tem excelente atividade contra Gram-positivos e atípicos, além de adicionar boa cobertura de anaeróbios. A 2ª geração tem excelente atividade contra Gram-negativos mas limitada contra Gram-positivos e atípicos. A 3ª geração tem excelente atividade contra atípicos, muito boa contra Gram-negativos e boa contra Gram-positivos, mas não cobre anaeróbios. A 1ª geração está praticamente fora de uso."
+              }
             }
           ]
         },
