@@ -536,7 +536,7 @@ const App = () => {
           ]
         },
         {
-          id: 5,
+          id: 10,
           title: "Gram Positivos",
           duration: "18 min",
           xp: 90,
@@ -746,7 +746,7 @@ const App = () => {
           ]
         },
         {
-          id: 6,
+          id: 10,
           title: "Gram Negativos",
           duration: "15 min",
           xp: 75,
@@ -905,7 +905,7 @@ const App = () => {
           ]
         },
         {
-          id: 7,
+          id: 10,
           title: "Provas de Bancada",
           duration: "10 min",
           xp: 50,
@@ -1015,7 +1015,7 @@ const App = () => {
           ]
         },
         {
-          id: 8,
+          id: 10,
           title: "Cultura Bacteriana: Princípios",
           duration: "15 min",
           xp: 80,
@@ -1108,7 +1108,7 @@ const App = () => {
           ]
         },
         {
-          id: 9,
+          id: 10,
           title: "Testes Bioquímicos Rápidos",
           duration: "10 min",
           xp: 55,
@@ -3134,7 +3134,7 @@ const App = () => {
           ]
         },
                 {
-          id: 5,
+          id: 10,
           title: "Métodos Quantitativos",
           duration: "30 min",
           xp: 150,
@@ -3686,7 +3686,7 @@ const App = () => {
   ]
         },
                 {
-          id: 6,
+          id: 10,
           title: "Sistemas Automatizados",
           duration: "12 min",
           xp: 60,
@@ -3855,7 +3855,7 @@ const App = () => {
             }]
         },
                 {
-          id: 7,
+          id: 10,
           title: "Testes Fenotípicos Especiais",
           duration: "20 min",
           xp: 100,
@@ -4037,7 +4037,7 @@ const App = () => {
           ]
         },
                 {
-          id: 8,
+          id: 10,
           title: "Métodos Moleculares em TSA",
           duration: "16 min",
           xp: 80,
@@ -4113,7 +4113,7 @@ const App = () => {
           ]
         },
                 {
-          id: 9,
+          id: 10,
           title: "Interpretação Clínica dos Resultados",
           duration: "45 min",
           xp: 225,
@@ -9046,7 +9046,92 @@ const App = () => {
           ]
         },
         {
-          id: 5,
+          id: 10,
+          title: "Macrolídeos",
+          duration: "20 min",
+          xp: 95,
+          sections: [
+            {
+              title: "Características gerais",
+              content: `
+                <div style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">💊 Macrolídeos</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #fce7f3;">
+                    Moléculas com <strong style="color: white;">características bastante específicas</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">✨ Principais Características</h4>
+                  
+                  <div style="background: #dbeafe; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                    <h5 style="color: #1e40af; margin-bottom: 10px; font-size: 16px;">🧬 Mecanismo de Ação</h5>
+                    <p style="font-size: 15px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                      Inibem a <strong>translocação do ribossomo</strong> na <strong>subunidade 50S</strong>
+                    </p>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 10px; font-size: 16px;">🎯 Boa Penetração Intracelular</h5>
+                    <p style="font-size: 15px; line-height: 1.6; color: #065f46; margin: 0;">
+                      Alcançam altas concentrações dentro das células, sendo eficazes contra <strong>agentes intracelulares</strong>
+                    </p>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                    <h5 style="color: #92400e; margin-bottom: 10px; font-size: 16px;">🔥 Efeito Anti-inflamatório Adicional</h5>
+                    <p style="font-size: 15px; line-height: 1.6; color: #78350f; margin: 0;">
+                      Principalmente a <strong>azitromicina</strong>, que possui propriedades imunomoduladoras
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <h4 style="color: #1e40af; margin-bottom: 15px; font-size: 17px;">🦠 Agentes Intracelulares Cobertos</h4>
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin-bottom: 12px;">
+                    A <strong>boa penetração intracelular</strong> traz vantagem para tratamento de agentes intracelulares:
+                  </p>
+                  <div style="display: grid; gap: 10px;">
+                    <div style="background: #dbeafe; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0; font-weight: bold;">
+                        🦠 <em>Chlamydia trachomatis</em>
+                      </p>
+                    </div>
+                    <div style="background: #dbeafe; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0; font-weight: bold;">
+                        🦠 <em>Mycoplasma pneumoniae</em>
+                      </p>
+                    </div>
+                    <div style="background: #dbeafe; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0; font-weight: bold;">
+                        🦠 <em>Legionella pneumophila</em>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #065f46; margin: 0;">
+                    💡 <strong>Importante:</strong> A combinação de <strong>penetração intracelular</strong> e <strong>efeito anti-inflamatório</strong> torna os macrolídeos especialmente úteis em <strong>infecções respiratórias</strong> e <strong>infecções por agentes atípicos</strong>.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal vantagem da boa penetração intracelular dos macrolídeos?",
+                options: [
+                  "A) Permite tratamento de infecções do sistema nervoso central",
+                  "B) Torna-os eficazes contra agentes intracelulares como Chlamydia trachomatis, Mycoplasma pneumoniae e Legionella pneumophila",
+                  "C) Aumenta a resistência a β-lactamases",
+                  "D) Reduz a necessidade de doses múltiplas diárias"
+                ],
+                correct: 1,
+                explanation: "A boa penetração intracelular dos macrolídeos é uma vantagem fundamental, pois permite o tratamento eficaz de agentes intracelulares como Chlamydia trachomatis (infecções genitais), Mycoplasma pneumoniae (pneumonia atípica) e Legionella pneumophila (doença dos legionários). Além disso, os macrolídeos inibem a translocação do ribossomo na subunidade 50S e alguns, como a azitromicina, possuem efeito anti-inflamatório adicional."
+              }
+            }
+          ]
+        },
+        {
+          id: 10,
           title: "Inibidores da Síntese de Ácido Nucleico",
           duration: "16 min",
           xp: 85,
@@ -9173,7 +9258,7 @@ const App = () => {
           ]
         },
         {
-          id: 5,
+          id: 10,
           title: "Infecções da Pele - Celulite e Erisipela",
           duration: "22 min",
           xp: 110,
@@ -9312,7 +9397,7 @@ const App = () => {
           ]
         },
         {
-          id: 6,
+          id: 10,
           title: "Infecções de Vias Aéreas",
           duration: "25 min",
           xp: 120,
@@ -9412,7 +9497,7 @@ const App = () => {
           ]
         },
         {
-          id: 7,
+          id: 10,
           title: "Pneumonia Ambulatorial",
           duration: "30 min",
           xp: 150,
@@ -9501,7 +9586,7 @@ const App = () => {
           ]
         },
         {
-          id: 8,
+          id: 10,
           title: "Infecções do Trato Gastrointestinal",
           duration: "25 min",
           xp: 125,
@@ -9679,7 +9764,7 @@ const App = () => {
           ]
         },
         {
-          id: 9,
+          id: 10,
           title: "Infecções do Trato Urinário",
           duration: "28 min",
           xp: 140,
