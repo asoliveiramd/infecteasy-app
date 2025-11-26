@@ -9644,122 +9644,68 @@ const App = () => {
           xp: 85,
           sections: [
             {
-              title: "Quinolonas",
+              title: "Mecanismo de ação",
               content: `
-                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #0369a1; margin-bottom: 15px;">🧬 Quinolonas</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    As <strong>quinolonas</strong> são uma classe de antibióticos que atuam inibindo a síntese de DNA bacteriano 
-                    através da inibição das enzimas <strong>DNA girase</strong> e <strong>topoisomerase IV</strong>. 
-                    São classificadas em gerações com espectros de ação distintos.
+                <div style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🧬 Mecanismo de Ação</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #ede9fe;">
+                    Estes antibióticos <strong style="color: white;">interferem nas enzimas essenciais</strong> para a replicação do DNA ou transcrição do RNA bacteriano.
                   </p>
-                  
-                  <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                    <h4 style="color: #0277bd; margin-bottom: 10px;">📊 Gerações de Quinolonas</h4>
-                    <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
-                      <thead>
-                        <tr style="background: #b3e5fc;">
-                          <th style="padding: 8px; border: 1px solid #81d4fa; text-align: left;">Geração</th>
-                          <th style="padding: 8px; border: 1px solid #81d4fa; text-align: left;">Exemplos</th>
-                          <th style="padding: 8px; border: 1px solid #81d4fa; text-align: left;">Espectro Principal</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td style="padding: 8px; border: 1px solid #b3e5fc;">2ª Geração</td>
-                          <td style="padding: 8px; border: 1px solid #b3e5fc;">Ciprofloxacino, Norfloxacino</td>
-                          <td style="padding: 8px; border: 1px solid #b3e5fc;">Gram-negativos, Pseudomonas</td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 8px; border: 1px solid #b3e5fc;">3ª Geração</td>
-                          <td style="padding: 8px; border: 1px solid #b3e5fc;">Levofloxacino</td>
-                          <td style="padding: 8px; border: 1px solid #b3e5fc;">Gram-positivos + atípicos</td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 8px; border: 1px solid #b3e5fc;">4ª Geração</td>
-                          <td style="padding: 8px; border: 1px solid #b3e5fc;">Moxifloxacino</td>
-                          <td style="padding: 8px; border: 1px solid #b3e5fc;">Amplo + anaeróbios</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  
-                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
-                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Indicações Clínicas</h4>
-                    <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                      <li><strong>Ciprofloxacino:</strong> ITUs complicadas, infecções por Pseudomonas</li>
-                      <li><strong>Levofloxacino:</strong> Pneumonia comunitária, sinusite</li>
-                      <li><strong>Moxifloxacino:</strong> Pneumonia com suspeita de anaeróbios</li>
-                    </ul>
-                  </div>
                 </div>
-              `,
-              question: {
-                text: "Qual das seguintes quinolonas é mais ativa contra Pseudomonas aeruginosa?",
-                options: [
-                  "Norfloxacino",
-                  "Ciprofloxacino",
-                  "Levofloxacino",
-                  "Moxifloxacino"
-                ],
-                correct: 1,
-                explanation: "O ciprofloxacino (2ª geração) é a quinolona com maior atividade antipseudomonas, sendo uma escolha importante para infecções causadas por este patógeno."
-              }
-            },
-            {
-              title: "Nitrofuranos",
-              content: `
-                <div style="background: #fef7ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
-                  <h3 style="color: #a21caf; margin-bottom: 15px;">💊 Nitrofuranos</h3>
-                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    A <strong>nitrofurantoína</strong> é um antibiótico da classe dos nitrofuranos, usado 
-                    exclusivamente para o tratamento de <strong>infecções do trato urinário (ITUs) não complicadas</strong>. 
-                    Sua ação se concentra na bexiga, com baixa penetração em outros tecidos.
-                  </p>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">💊 Principais Classes</h4>
                   
-                  <div style="background: #fce7f3; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                    <h4 style="color: #be185d; margin-bottom: 10px;">🎯 Espectro de Ação</h4>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                      <div>
-                        <h5 style="color: #059669; margin-bottom: 8px;">✅ Ativo contra:</h5>
-                        <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                          <li>Escherichia coli</li>
-                          <li>Staphylococcus saprophyticus</li>
-                          <li>Enterococcus faecalis</li>
-                          <li>Klebsiella spp.</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h5 style="color: #dc2626; margin-bottom: 8px;">❌ Não ativo contra:</h5>
-                        <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                          <li>Proteus spp.</li>
-                          <li>Pseudomonas aeruginosa</li>
-                          <li>Serratia spp.</li>
-                          <li>Enterobacter spp.</li>
-                        </ul>
-                      </div>
+                  <div style="background: #dbeafe; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                    <h5 style="color: #1e40af; margin-bottom: 12px; font-size: 16px;">🔵 Quinolonas</h5>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-top: 10px;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0 0 8px 0;">
+                        🎯 <strong>Inibem a DNA girase e topoisomerase IV</strong>
+                      </p>
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                        🧬 <strong>Impedem o superenovelamento do DNA</strong>
+                      </p>
                     </div>
                   </div>
                   
-                  <div style="background: #fff7ed; padding: 15px; border-radius: 8px; border-left: 4px solid #ea580c;">
-                    <h4 style="color: #c2410c; margin-bottom: 10px;">⚠️ Limitações</h4>
-                    <p style="font-size: 14px; line-height: 1.5;">
-                      A nitrofurantoína não deve ser usada em pielonefrites ou ITUs complicadas, 
-                      pois não atinge concentrações terapêuticas adequadas no parênquima renal.
-                    </p>
+                  <div style="background: #fce7f3; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #ec4899;">
+                    <h5 style="color: #be185d; margin-bottom: 12px; font-size: 16px;">🔴 Rifamicinas</h5>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-top: 10px;">
+                      <p style="font-size: 14px; color: #9f1239; margin: 0 0 8px 0;">
+                        🎯 <strong>Inibem a RNA polimerase bacteriana</strong>
+                      </p>
+                      <p style="font-size: 14px; color: #9f1239; margin: 0;">
+                        🧬 <strong>Bloqueiam a síntese de RNA</strong>
+                      </p>
+                    </div>
                   </div>
+                  
+                  <div style="background: #fef3c7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                    <h5 style="color: #92400e; margin-bottom: 12px; font-size: 16px;">🟡 Nitrofuranos</h5>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-top: 10px;">
+                      <p style="font-size: 14px; color: #78350f; margin: 0;">
+                        💥 <strong>Formam metabólitos reativos que danificam o DNA</strong>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> Diferentemente dos inibidores da síntese da parede celular e da síntese proteica, esta classe atua diretamente no <strong>material genético bacteriano</strong>, interferindo na replicação do DNA (quinolonas e nitrofuranos) ou na transcrição do RNA (rifamicinas). Esse mecanismo de ação único confere características farmacológicas e espectros de ação distintos.
+                  </p>
                 </div>
               `,
               question: {
-                text: "Qual dos seguintes patógenos NÃO é coberto pela nitrofurantoína?",
+                text: "Qual é o principal alvo das quinolonas no mecanismo de ação antibacteriano?",
                 options: [
-                  "Escherichia coli",
-                  "Staphylococcus saprophyticus",
-                  "Proteus mirabilis",
-                  "Enterococcus faecalis"
+                  "A) RNA polimerase bacteriana, bloqueando a síntese de RNA",
+                  "B) DNA girase e topoisomerase IV, impedindo o superenovelamento do DNA",
+                  "C) Ribossomos bacterianos, inibindo a síntese proteica",
+                  "D) Parede celular bacteriana, impedindo sua síntese"
                 ],
-                correct: 2,
-                explanation: "A nitrofurantoína não tem atividade contra Proteus, Pseudomonas e Serratia, sendo uma escolha inadequada para infecções causadas por esses microrganismos."
+                correct: 1,
+                explanation: "As quinolonas atuam inibindo a DNA girase e a topoisomerase IV, enzimas essenciais para o superenovelamento do DNA bacteriano durante a replicação. Esse mecanismo impede a replicação do DNA bacteriano, levando à morte celular. As rifamicinas inibem a RNA polimerase (opção A), e os nitrofuranos formam metabólitos reativos que danificam o DNA diretamente."
               }
             }
           ]
