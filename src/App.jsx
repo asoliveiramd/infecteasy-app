@@ -9554,6 +9554,86 @@ const App = () => {
                 correct: 1,
                 explanation: "As duas características mais importantes da clindamicina são: (1) excelente penetração óssea e em abscessos, tornando-a ideal para osteomielite e abscessos profundos; (2) boa atividade contra anaeróbios, incluindo anaeróbios orais, sendo muito útil em infecções odontogênicas. A clindamicina é o único representante das lincosamidas em uso e está disponível em múltiplas vias de administração (oral, IV, IM e tópica), aumentando sua versatilidade clínica."
               }
+            },
+            {
+              title: "Espectro de ação",
+              content: `
+                <div style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Espectro de Ação</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #cffafe;">
+                    Droga <strong style="color: white;">importante</strong> no uso ambulatorial devido às suas características únicas.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">🦠 Cobertura Antimicrobiana</h4>
+                  
+                  <div style="background: #dcfce7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 12px; font-size: 16px;">🟢 Gram-positivos</h5>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #065f46; margin: 0;">
+                          🦠 <strong>Staphylococcus aureus</strong> (incluindo algumas cepas produtoras de β-lactamase)
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #065f46; margin: 0;">
+                          🦠 <strong>Streptococcus pyogenes</strong> (SBHGA)
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #065f46; margin: 0;">
+                          🦠 <strong>Streptococcus pneumoniae</strong> (Pneumococo)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                    <h5 style="color: #1e40af; margin-bottom: 12px; font-size: 16px;">🔵 Anaeróbios</h5>
+                    <div style="background: white; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                        🦠 <strong>Excelente atividade contra anaeróbios orais</strong>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 15px; font-size: 17px;">🎯 Indicações Especiais</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #f59e0b;">
+                    <h5 style="color: #92400e; margin-bottom: 10px; font-size: 16px;">⭐ MRSA (Staphylococcus aureus resistente à oxacilina)</h5>
+                    <p style="font-size: 15px; line-height: 1.6; color: #78350f; margin: 0;">
+                      A clindamicina é uma <strong>excelente opção</strong> para tratamento de infecções por MRSA.
+                    </p>
+                  </div>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #f59e0b;">
+                    <h5 style="color: #92400e; margin-bottom: 10px; font-size: 16px;">🦷 Infecções de Boca (Odontogênicas)</h5>
+                    <p style="font-size: 15px; line-height: 1.6; color: #78350f; margin: 0;">
+                      <strong>Disputa com amoxicilina/clavulanato</strong> como primeira escolha para infecções odontogênicas.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> A clindamicina é especialmente valiosa por sua <strong>atividade contra MRSA</strong> e <strong>excelente cobertura de anaeróbios orais</strong>, tornando-a uma das melhores opções para infecções odontogênicas. Além disso, cobre Gram-positivos importantes como S. aureus (incluindo produtores de β-lactamase), S. pyogenes e S. pneumoniae.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que a clindamicina é considerada uma excelente opção para infecções odontogênicas?",
+                options: [
+                  "A) Porque tem amplo espectro contra Gram-negativos",
+                  "B) Porque tem excelente atividade contra anaeróbios orais e cobre Gram-positivos, disputando com amoxicilina/clavulanato como primeira escolha",
+                  "C) Porque é resistente a todas as β-lactamases",
+                  "D) Porque tem longa meia-vida e dose única diária"
+                ],
+                correct: 1,
+                explanation: "A clindamicina é excelente para infecções odontogênicas devido à sua excelente atividade contra anaeróbios orais (que são os principais causadores dessas infecções) e boa cobertura de Gram-positivos (S. aureus, S. pyogenes, S. pneumoniae). Disputa com amoxicilina/clavulanato como primeira escolha para essas infecções. Além disso, é uma excelente opção para infecções por MRSA (Staphylococcus aureus resistente à oxacilina), incluindo cepas produtoras de β-lactamase."
+              }
             }
           ]
         },
