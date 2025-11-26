@@ -8970,6 +8970,78 @@ const App = () => {
                 correct: 1,
                 explanation: "Os inibidores da síntese proteica atuam ligando-se aos ribossomos bacterianos, que possuem duas subunidades (30S e 50S). Diferentes classes de antibióticos atuam em diferentes subunidades: a subunidade 30S (aminoglicosídeos e tetraciclinas) ou a subunidade 50S (macrolídeos, lincosamidas, fenicol e oxazolidinonas). Ao impedir a síntese proteica, esses antibióticos impedem o crescimento e sobrevivência da bactéria."
               }
+            },
+            {
+              title: "Os Inibidores da Síntese Proteica Ambulatoriais",
+              content: `
+                <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🏥 Uso Ambulatorial</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #d1fae5;">
+                    Principais classes para a <strong style="color: white;">prática clínica ambulatorial</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 15px; font-size: 17px;">⚠️ Característica Geral</h4>
+                  <p style="font-size: 15px; line-height: 1.6; color: #78350f; margin-bottom: 10px;">
+                    Os Inibidores da Síntese Proteica são <strong>majoritariamente bacteriostáticos</strong>.
+                  </p>
+                  <p style="font-size: 15px; line-height: 1.6; color: #78350f; margin: 0;">
+                    A ligação em <strong>diferentes sítios do ribossomo</strong> explica os diversos espectros de ação e padrões de resistência.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">💊 Principais Classes Ambulatoriais</h4>
+                  
+                  <div style="background: #fce7f3; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #ec4899;">
+                    <h5 style="color: #9f1239; margin-bottom: 12px; font-size: 16px;">🔴 Macrolídeos (50S)</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #831843; margin-bottom: 10px;">
+                      <strong>Exemplos:</strong> Eritromicina, Claritromicina, Azitromicina
+                    </p>
+                    <p style="font-size: 14px; line-height: 1.6; color: #831843; margin: 0;">
+                      <strong>🎯 Cobertura:</strong> Boa para Gram-positivos e atípicos
+                    </p>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                    <h5 style="color: #1e40af; margin-bottom: 12px; font-size: 16px;">🔵 Tetraciclinas (30S)</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin-bottom: 10px;">
+                      <strong>Exemplos:</strong> Doxiciclina, Minociclina
+                    </p>
+                    <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                      <strong>🎯 Cobertura:</strong> Amplo espectro incluindo atípicos, anaeróbios e alguns protozoários
+                    </p>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                    <h5 style="color: #92400e; margin-bottom: 12px; font-size: 16px;">🟡 Lincosamidas (50S)</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin-bottom: 10px;">
+                      <strong>Exemplos:</strong> Clindamicina
+                    </p>
+                    <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0;">
+                      <strong>🎯 Cobertura:</strong> Excelente para Gram-positivos e anaeróbios, inclusive anaeróbios orais
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #065f46; margin: 0;">
+                    💡 <strong>Importância Clínica:</strong> Estes antibióticos são <strong>fundamentais</strong> para o tratamento de infecções por <strong>Gram-positivos, atípicos e anaeróbios</strong>, especialmente em <strong>pacientes alérgicos aos β-lactâmicos</strong>.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Quais são as principais classes de inibidores da síntese proteica utilizadas na prática ambulatorial?",
+                options: [
+                  "A) Aminoglicosídeos, Fenicol e Oxazolidinonas",
+                  "B) Macrolídeos (50S), Tetraciclinas (30S) e Lincosamidas (50S)",
+                  "C) Penicilinas, Cefalosporinas e Carbapenemas",
+                  "D) Quinolonas, Sulfonamidas e Trimetoprima"
+                ],
+                correct: 1,
+                explanation: "Na prática ambulatorial, as principais classes de inibidores da síntese proteica são: (1) Macrolídeos (50S) - eritromicina, claritromicina, azitromicina, com boa cobertura para Gram-positivos e atípicos; (2) Tetraciclinas (30S) - doxiciclina, minociclina, com amplo espectro incluindo atípicos, anaeróbios e alguns protozoários; e (3) Lincosamidas (50S) - clindamicina, excelente para Gram-positivos e anaeróbios. Esses antibióticos são fundamentais especialmente em pacientes alérgicos aos β-lactâmicos."
+              }
             }
           ]
         },
