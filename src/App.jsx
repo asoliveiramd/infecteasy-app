@@ -8882,7 +8882,7 @@ const App = () => {
           ]
         },
         {
-          id: 4,
+          id: 5,
           title: "Inibidores da Síntese Proteica",
           duration: "18 min",
           xp: 90,
@@ -9046,7 +9046,7 @@ const App = () => {
           ]
         },
         {
-          id: 10,
+          id: 6,
           title: "Macrolídeos",
           duration: "20 min",
           xp: 95,
@@ -9131,7 +9131,7 @@ const App = () => {
           ]
         },
         {
-          id: 10,
+          id: 7,
           title: "Inibidores da Síntese de Ácido Nucleico",
           duration: "16 min",
           xp: 85,
