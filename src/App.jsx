@@ -9127,6 +9127,72 @@ const App = () => {
                 correct: 1,
                 explanation: "A boa penetração intracelular dos macrolídeos é uma vantagem fundamental, pois permite o tratamento eficaz de agentes intracelulares como Chlamydia trachomatis (infecções genitais), Mycoplasma pneumoniae (pneumonia atípica) e Legionella pneumophila (doença dos legionários). Além disso, os macrolídeos inibem a translocação do ribossomo na subunidade 50S e alguns, como a azitromicina, possuem efeito anti-inflamatório adicional."
               }
+            },
+            {
+              title: "Fármacos mais usados",
+              content: `
+                <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">💊 Fármacos Ambulatoriais</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #dbeafe;">
+                    Principais <strong style="color: white;">macrolídeos</strong> utilizados na prática ambulatorial.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">💊 Principais Macrolídeos</h4>
+                  
+                  <div style="background: #fee2e2; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #ef4444;">
+                    <h5 style="color: #991b1b; margin-bottom: 12px; font-size: 16px;">⚠️ Eritromicina (1ª geração)</h5>
+                    <p style="font-size: 15px; line-height: 1.6; color: #7f1d1d; margin: 0;">
+                      Marcada por <strong>efeitos adversos gastrointestinais mais intensos</strong>, particularmente em adultos.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 12px; font-size: 16px;">✅ Claritromicina</h5>
+                    <p style="font-size: 15px; line-height: 1.6; color: #065f46; margin-bottom: 10px;">
+                      <strong>✨ Melhor perfil farmacocinético</strong> com muito menos efeitos GI.
+                    </p>
+                    <p style="font-size: 15px; line-height: 1.6; color: #065f46; margin: 0;">
+                      Bastante <strong>segura</strong> quando bem indicada.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                    <h5 style="color: #1e40af; margin-bottom: 12px; font-size: 16px;">⭐ Azitromicina</h5>
+                    <p style="font-size: 15px; line-height: 1.6; color: #1e3a8a; margin-bottom: 10px;">
+                      Bem <strong>superponível à claritromicina</strong> no que tange a indicações terapêuticas.
+                    </p>
+                    <div style="background: #eff6ff; padding: 15px; border-radius: 6px; margin-top: 10px;">
+                      <p style="font-size: 14px; line-height: 1.6; color: #1e40af; margin: 0;">
+                        <strong>🎯 Principais características:</strong>
+                      </p>
+                      <ul style="margin: 10px 0 0 20px; padding: 0; color: #1e3a8a;">
+                        <li style="margin: 5px 0;">Meia-vida longa</li>
+                        <li style="margin: 5px 0;">Dose única diária</li>
+                        <li style="margin: 5px 0;">Menos interações medicamentosas</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0;">
+                    💡 <strong>Evolução:</strong> A <strong>eritromicina</strong> (1ª geração) foi substituída por <strong>claritromicina</strong> e <strong>azitromicina</strong> devido ao melhor perfil de efeitos adversos e maior conveniência posológica.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal vantagem da azitromicina em relação à eritromicina?",
+                options: [
+                  "A) Tem espectro mais amplo contra Gram-negativos",
+                  "B) Meia-vida longa, dose única diária e menos interações medicamentosas, além de muito menos efeitos gastrointestinais",
+                  "C) É resistente a todas as β-lactamases",
+                  "D) Pode ser usada em infecções do sistema nervoso central"
+                ],
+                correct: 1,
+                explanation: "A azitromicina apresenta várias vantagens em relação à eritromicina (1ª geração): (1) meia-vida longa permitindo dose única diária, melhorando a adesão; (2) muito menos efeitos gastrointestinais, que são intensos com eritromicina especialmente em adultos; (3) menos interações medicamentosas. A claritromicina também apresenta melhor perfil farmacocinético e menos efeitos GI que a eritromicina, sendo bastante segura quando bem indicada. Ambas (azitromicina e claritromicina) são superponíveis quanto às indicações terapêuticas."
+              }
             }
           ]
         },
