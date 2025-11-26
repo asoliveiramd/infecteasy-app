@@ -9982,6 +9982,86 @@ const App = () => {
                 correct: 1,
                 explanation: "A conduta adequada é não abrir mão das quinolonas quando elas forem amplamente vantajosas, pois apesar dos efeitos adversos relevantes (tendinopatias, prolongamento do QT, neuropatia periférica, fotossensibilidade e alterações no SNC), esses efeitos são reversíveis uma vez retirada a medicação. No entanto, é importante ficar atento e aconselhar os pacientes a observarem sintomas como dor em tendões. As quinolonas são drogas extremamente úteis e seu uso não deve ser evitado quando indicado, mas requer monitoramento adequado."
               }
+            },
+            {
+              title: "Contraindicações importantes",
+              content: `
+                <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🚫 Contraindicações Importantes</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #fef3c7;">
+                    As contraindicações <strong style="color: white;">não são muitas</strong>, mas devem ser respeitadas.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">🚨 Principais Contraindicações</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <h5 style="color: #92400e; margin-bottom: 8px; font-size: 15px;">🧒 Crianças e Adolescentes em Crescimento</h5>
+                      <p style="font-size: 14px; color: #78350f; margin: 0;">
+                        Risco de alterações no desenvolvimento ósseo e cartilaginoso
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fce7f3; padding: 15px; border-radius: 8px; border-left: 4px solid #ec4899;">
+                      <h5 style="color: #9f1239; margin-bottom: 8px; font-size: 15px;">🤰 Gestantes e Lactantes</h5>
+                      <p style="font-size: 14px; color: #831843; margin: 0;">
+                        Risco para o feto e lactente
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                      <h5 style="color: #991b1b; margin-bottom: 8px; font-size: 15px;">🦵 Pacientes com Miastenia Gravis</h5>
+                      <p style="font-size: 14px; color: #7f1d1d; margin: 0;">
+                        Pode ocasionar <strong>piora clínica</strong> (assim como aminoglicosídeos)
+                      </p>
+                    </div>
+                    
+                    <div style="background: #dbeafe; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                      <h5 style="color: #1e40af; margin-bottom: 8px; font-size: 15px;">🦴 Histórico de Tendinopatia por Quinolonas</h5>
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                        Risco aumentado de recorrência
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">💡 Considerações Especiais</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 10px; font-size: 16px;">🧒 Uso em Crianças</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #065f46; margin: 0;">
+                      O uso de quinolonas em crianças tem sido <strong>paulatinamente liberado</strong>, particularmente quando <strong>não há muitas opções adicionais</strong>.
+                    </p>
+                  </div>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 10px; font-size: 16px;">🦵 Miastenia Gravis</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #065f46; margin: 0;">
+                      Assim como os <strong>aminoglicosídeos</strong>, o uso das quinolonas pode ocasionar <strong>piora clínica</strong> em pacientes com miastenia gravis.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> As contraindicações das quinolonas não são muitas, mas devem ser respeitadas: <strong>crianças e adolescentes em crescimento</strong> (embora o uso tenha sido paulatinamente liberado quando não há opções), <strong>gestantes e lactantes</strong>, <strong>pacientes com miastenia gravis</strong> (risco de piora clínica, assim como com aminoglicosídeos), e pacientes com <strong>histórico de tendinopatia por quinolonas</strong>.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que as quinolonas são contraindicadas em pacientes com miastenia gravis?",
+                options: [
+                  "A) Porque causam fotossensibilidade grave nesses pacientes",
+                  "B) Porque podem ocasionar piora clínica, assim como os aminoglicosídeos",
+                  "C) Porque aumentam o risco de ruptura de tendão de Aquiles",
+                  "D) Porque não têm boa biodisponibilidade oral em pacientes com miastenia"
+                ],
+                correct: 1,
+                explanation: "As quinolonas são contraindicadas em pacientes com miastenia gravis porque podem ocasionar piora clínica da doença, assim como os aminoglicosídeos. Ambas as classes de antibióticos podem interferir na transmissão neuromuscular, agravando os sintomas da miastenia gravis. As outras contraindicações importantes incluem crianças e adolescentes em crescimento (embora o uso tenha sido paulatinamente liberado quando não há opções), gestantes e lactantes, e pacientes com histórico de tendinopatia por quinolonas."
+              }
             }
           ]
         },
