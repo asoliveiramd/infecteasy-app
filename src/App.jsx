@@ -9193,6 +9193,90 @@ const App = () => {
                 correct: 1,
                 explanation: "A azitromicina apresenta várias vantagens em relação à eritromicina (1ª geração): (1) meia-vida longa permitindo dose única diária, melhorando a adesão; (2) muito menos efeitos gastrointestinais, que são intensos com eritromicina especialmente em adultos; (3) menos interações medicamentosas. A claritromicina também apresenta melhor perfil farmacocinético e menos efeitos GI que a eritromicina, sendo bastante segura quando bem indicada. Ambas (azitromicina e claritromicina) são superponíveis quanto às indicações terapêuticas."
               }
+            },
+            {
+              title: "Espectro de ação",
+              content: `
+                <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Espectro de Ação</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #d1fae5;">
+                    Drogas <strong style="color: white;">estratégicas</strong> que complementam os β-lactâmicos.
+                  </p>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 15px; font-size: 17px;">💡 Papel Estratégico</h4>
+                  <p style="font-size: 15px; line-height: 1.6; color: #78350f; margin-bottom: 10px;">
+                    Não são muito <strong>potentes</strong>, porém, tratam bactérias que <strong>escapam dos β-lactâmicos</strong>.
+                  </p>
+                  <p style="font-size: 15px; line-height: 1.6; color: #78350f; margin: 0;">
+                    Em especial, bactérias que <strong>não têm parede celular</strong>, que é o alvo dos β-lactâmicos.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">🦠 Cobertura Antimicrobiana</h4>
+                  
+                  <div style="background: #dcfce7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 12px; font-size: 16px;">🟢 Gram-positivos</h5>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #065f46; margin: 0;">
+                          🦠 <strong>Streptococcus pneumoniae</strong> (Pneumococo)
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #065f46; margin: 0;">
+                          🦠 <strong>Streptococcus pyogenes</strong> (SBHGA)
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #065f46; margin: 0;">
+                          🦠 <strong>Staphylococcus aureus</strong> (incluindo MRSA de comunidade)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                    <h5 style="color: #1e40af; margin-bottom: 12px; font-size: 16px;">🔵 Atípicos (Intracelulares sem parede)</h5>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          🦠 <strong>Mycoplasma pneumoniae</strong>
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          🦠 <strong>Chlamydia pneumoniae</strong>, <strong>C. trachomatis</strong>
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          🦠 <strong>Legionella pneumophila</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> Os atípicos são <strong>intracelulares</strong> e <strong>não têm parede celular</strong>, por isso são naturalmente resistentes aos β-lactâmicos. Os macrolídeos, com sua excelente <strong>penetração intracelular</strong>, são a escolha ideal para esses patógenos.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que os macrolídeos são considerados drogas estratégicas que complementam os β-lactâmicos?",
+                options: [
+                  "A) Porque são mais potentes que os β-lactâmicos contra Gram-negativos",
+                  "B) Porque tratam bactérias que escapam dos β-lactâmicos, especialmente atípicos intracelulares sem parede celular como Mycoplasma, Chlamydia e Legionella",
+                  "C) Porque são resistentes a todas as β-lactamases",
+                  "D) Porque podem ser usados em infecções do sistema nervoso central"
+                ],
+                correct: 1,
+                explanation: "Os macrolídeos são drogas estratégicas porque, embora não sejam muito potentes, tratam bactérias que escapam dos β-lactâmicos. Em especial, cobrem atípicos intracelulares que não têm parede celular (alvo dos β-lactâmicos): Mycoplasma pneumoniae, Chlamydia pneumoniae, C. trachomatis e Legionella pneumophila. Além disso, cobrem Gram-positivos importantes como S. pneumoniae, S. pyogenes e S. aureus (incluindo MRSA de comunidade). A excelente penetração intracelular dos macrolídeos os torna ideais para esses patógenos."
+              }
             }
           ]
         },
