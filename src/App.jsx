@@ -9888,6 +9888,100 @@ const App = () => {
                 correct: 1,
                 explanation: "A evolução das quinolonas ao longo das gerações resultou em ampliação progressiva do espectro de ação: a 1ª geração (ácido nalidíxico) tinha uso limitado a ITU; a 2ª geração (norfloxacino, ciprofloxacino) ampliou para Gram-negativos; a 3ª geração (levofloxacino) melhorou a cobertura de Gram-positivos e atípicos; e a 4ª geração (moxifloxacino) ampliou para anaeróbios. Todas as gerações são bactericidas e compartilham características gerais como boa biodisponibilidade oral e excelente penetração tissular."
               }
+            },
+            {
+              title: "Efeitos adversos relevantes",
+              content: `
+                <div style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">⚠️ Efeitos Adversos Relevantes</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #fecaca;">
+                    A despeito de ser um grupo <strong style="color: white;">extremamente útil</strong>, existe um certo receio com efeitos adversos.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">🚨 Principais Efeitos Adversos</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                    <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                      <h5 style="color: #991b1b; margin-bottom: 8px; font-size: 15px;">🦵 Tendinopatias e Ruptura de Tendão</h5>
+                      <p style="font-size: 14px; color: #7f1d1d; margin: 0;">
+                        Principalmente tendão de <strong>Aquiles</strong>
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <h5 style="color: #92400e; margin-bottom: 8px; font-size: 15px;">❤️ Prolongamento do Intervalo QT</h5>
+                      <p style="font-size: 14px; color: #78350f; margin: 0;">
+                        Especialmente com <strong>moxifloxacino</strong>
+                      </p>
+                    </div>
+                    
+                    <div style="background: #dbeafe; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                      <h5 style="color: #1e40af; margin-bottom: 8px; font-size: 15px;">🧠 Neuropatia Periférica</h5>
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                        Alterações sensoriais nos membros
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #eab308;">
+                      <h5 style="color: #854d0e; margin-bottom: 8px; font-size: 15px;">☀️ Fotossensibilidade</h5>
+                      <p style="font-size: 14px; color: #713f12; margin: 0;">
+                        Maior sensibilidade à luz solar
+                      </p>
+                    </div>
+                    
+                    <div style="background: #e0e7ff; padding: 15px; border-radius: 8px; border-left: 4px solid #6366f1;">
+                      <h5 style="color: #3730a3; margin-bottom: 8px; font-size: 15px;">🧠 Alterações no SNC</h5>
+                      <p style="font-size: 14px; color: #312e81; margin: 0;">
+                        Insônia, tontura, convulsões
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">✅ Orientações Importantes</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 10px; font-size: 16px;">👍 Não Abrir Mão Quando Vantajoso</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #065f46; margin: 0;">
+                      Não se deve abrir mão dessas drogas quando elas forem <strong>amplamente vantajosas</strong>.
+                    </p>
+                  </div>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 10px; font-size: 16px;">🔄 Efeitos Reversíveis</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #065f46; margin: 0;">
+                      Os efeitos adversos são <strong>reversíveis</strong> uma vez retirada a medicação.
+                    </p>
+                  </div>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 10px; font-size: 16px;">👁️ Monitoramento</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #065f46; margin: 0;">
+                      Pacientes devem ser <strong>aconselhados a observar</strong> se terão dor em tendões, por exemplo.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> Apesar dos efeitos adversos relevantes (tendinopatias, prolongamento do QT, neuropatia periférica, fotossensibilidade e alterações no SNC), as quinolonas são drogas <strong>extremamente úteis</strong> e não se deve abrir mão delas quando forem amplamente vantajosas. Os efeitos adversos são <strong>reversíveis</strong> após a suspensão da medicação, mas é importante <strong>monitorar</strong> e aconselhar os pacientes a observarem sintomas como dor em tendões.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a conduta adequada em relação aos efeitos adversos das quinolonas?",
+                options: [
+                  "A) Evitar sempre o uso de quinolonas devido aos efeitos adversos graves e irreversíveis",
+                  "B) Não abrir mão das quinolonas quando forem amplamente vantajosas, pois os efeitos adversos são reversíveis, mas aconselhar pacientes a observarem sintomas como dor em tendões",
+                  "C) Usar quinolonas sem restrições, pois os efeitos adversos são raros e não requerem monitoramento",
+                  "D) Prescrever quinolonas apenas em ambiente hospitalar devido ao risco de efeitos adversos"
+                ],
+                correct: 1,
+                explanation: "A conduta adequada é não abrir mão das quinolonas quando elas forem amplamente vantajosas, pois apesar dos efeitos adversos relevantes (tendinopatias, prolongamento do QT, neuropatia periférica, fotossensibilidade e alterações no SNC), esses efeitos são reversíveis uma vez retirada a medicação. No entanto, é importante ficar atento e aconselhar os pacientes a observarem sintomas como dor em tendões. As quinolonas são drogas extremamente úteis e seu uso não deve ser evitado quando indicado, mas requer monitoramento adequado."
+              }
             }
           ]
         },
