@@ -9789,6 +9789,110 @@ const App = () => {
         },
         {
           id: 10,
+          title: "Quinolonas",
+          duration: "18 min",
+          xp: 90,
+          sections: [
+            {
+              title: "Características gerais e Evolução das quinolonas",
+              content: `
+                <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🌟 Quinolonas</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #dbeafe;">
+                    Uma das <strong style="color: white;">categorias mais usadas</strong> devido ao seu conjunto de características vantajosas.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">📊 Características Gerais</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                    <div style="background: #dcfce7; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        ⚔️ <strong>Antibióticos bactericidas</strong>
+                      </p>
+                    </div>
+                    
+                    <div style="background: #dbeafe; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                        💊 <strong>Boa biodisponibilidade oral</strong>
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fce7f3; padding: 15px; border-radius: 8px; border-left: 4px solid #ec4899;">
+                      <p style="font-size: 14px; color: #9f1239; margin: 0;">
+                        🔬 <strong>Excelente penetração tissular e intracelular</strong>
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <p style="font-size: 14px; color: #78350f; margin: 0;">
+                        🎯 <strong>Amplo espectro</strong> (varia por geração)
+                      </p>
+                    </div>
+                    
+                    <div style="background: #e0e7ff; padding: 15px; border-radius: 8px; border-left: 4px solid #6366f1;">
+                      <p style="font-size: 14px; color: #3730a3; margin: 0;">
+                        ⏱️ <strong>Meia-vida longa</strong> (exceto norfloxacino)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">📈 Evolução das Quinolonas</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #e5e7eb;">
+                    <h5 style="color: #6b7280; margin-bottom: 10px; font-size: 16px;">🔵 1ª Geração</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #374151; margin: 0;">
+                      <strong>Ácido nalidíxico</strong> - Uso limitado a ITU
+                    </p>
+                  </div>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #bfdbfe;">
+                    <h5 style="color: #1e40af; margin-bottom: 10px; font-size: 16px;">🔵 2ª Geração</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                      <strong>Norfloxacino, Ciprofloxacino</strong> - Ampliação para Gram-negativos
+                    </p>
+                  </div>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #a5b4fc;">
+                    <h5 style="color: #4338ca; margin-bottom: 10px; font-size: 16px;">🔵 3ª Geração</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #3730a3; margin: 0;">
+                      <strong>Levofloxacino</strong> - Melhor para Gram-positivos e atípicos
+                    </p>
+                  </div>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #818cf8;">
+                    <h5 style="color: #312e81; margin-bottom: 10px; font-size: 16px;">🔵 4ª Geração</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #1e1b4b; margin: 0;">
+                      <strong>Moxifloxacino</strong> - Ampliação para anaeróbios
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> As quinolonas são uma das categorias de antibióticos <strong>mais usadas</strong> devido ao conjunto de características vantajosas: são <strong>bactericidas</strong>, têm <strong>boa biodisponibilidade oral</strong>, <strong>excelente penetração tissular e intracelular</strong>, <strong>amplo espectro</strong> (que varia por geração) e <strong>meia-vida longa</strong> (exceto norfloxacino). A evolução das gerações ampliou progressivamente o espectro: da 1ª geração (limitada a ITU) até a 4ª geração (cobertura de anaeróbios).
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal diferença entre as gerações de quinolonas em termos de espectro de ação?",
+                options: [
+                  "A) Todas as gerações têm o mesmo espectro, variando apenas a potência",
+                  "B) A evolução das gerações ampliou progressivamente o espectro: da 1ª geração (limitada a ITU) até a 4ª geração (cobertura de anaeróbios)",
+                  "C) As gerações mais antigas têm espectro mais amplo que as mais recentes",
+                  "D) Apenas a 1ª geração tem atividade bactericida"
+                ],
+                correct: 1,
+                explanation: "A evolução das quinolonas ao longo das gerações resultou em ampliação progressiva do espectro de ação: a 1ª geração (ácido nalidíxico) tinha uso limitado a ITU; a 2ª geração (norfloxacino, ciprofloxacino) ampliou para Gram-negativos; a 3ª geração (levofloxacino) melhorou a cobertura de Gram-positivos e atípicos; e a 4ª geração (moxifloxacino) ampliou para anaeróbios. Todas as gerações são bactericidas e compartilham características gerais como boa biodisponibilidade oral e excelente penetração tissular."
+              }
+            }
+          ]
+        },
+        {
+          id: 11,
           title: "Infecções da Pele - Celulite e Erisipela",
           duration: "22 min",
           xp: 110,
