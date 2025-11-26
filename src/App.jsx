@@ -9707,6 +9707,83 @@ const App = () => {
                 correct: 1,
                 explanation: "As quinolonas atuam inibindo a DNA girase e a topoisomerase IV, enzimas essenciais para o superenovelamento do DNA bacteriano durante a replicação. Esse mecanismo impede a replicação do DNA bacteriano, levando à morte celular. As rifamicinas inibem a RNA polimerase (opção A), e os nitrofuranos formam metabólitos reativos que danificam o DNA diretamente."
               }
+            },
+            {
+              title: "Características clínicas importantes",
+              content: `
+                <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">⭐ Características Clínicas Importantes</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #d1fae5;">
+                    Geralmente são <strong style="color: white;">drogas potentes e de amplo espectro</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">🎯 Principais Características</h4>
+                  
+                  <div style="background: #dbeafe; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                    <h5 style="color: #1e40af; margin-bottom: 12px; font-size: 16px;">💊 Quinolonas</h5>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-top: 10px;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                        🌟 <strong>Podem ser usadas em várias condições clínicas diversas</strong>
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 12px; font-size: 16px;">🔬 Penetração Tissular e Intracelular</h5>
+                    <div style="background: white; padding: 15px; border-radius: 6px; margin-top: 10px;">
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        ✨ <strong>Excelente penetração tissular e intracelular</strong>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 15px; font-size: 17px;">💡 Vantagens Clínicas</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; border: 2px solid #fbbf24;">
+                      <h5 style="color: #92400e; margin-bottom: 8px; font-size: 15px;">🎯 Amplo Espectro</h5>
+                      <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0;">
+                        Cobertura contra diversos patógenos, permitindo uso empírico em múltiplas situações clínicas.
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border: 2px solid #fbbf24;">
+                      <h5 style="color: #92400e; margin-bottom: 8px; font-size: 15px;">🔬 Penetração Tecidual</h5>
+                      <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0;">
+                        Excelente distribuição em tecidos e penetração intracelular, útil para infecções profundas e intracelulares.
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border: 2px solid #fbbf24;">
+                      <h5 style="color: #92400e; margin-bottom: 8px; font-size: 15px;">💪 Potência</h5>
+                      <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0;">
+                        Alta atividade bactericida, permitindo tratamento eficaz de infecções graves.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> Os inibidores da síntese de ácido nucleico, especialmente as quinolonas, são drogas <strong>potentes e de amplo espectro</strong> com <strong>excelente penetração tissular e intracelular</strong>. Essas características tornam as quinolonas particularmente versáteis, podendo ser usadas em <strong>várias condições clínicas diversas</strong>, desde infecções do trato urinário até pneumonias e infecções intra-abdominais.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual característica dos inibidores da síntese de ácido nucleico, especialmente as quinolonas, os torna particularmente úteis em diversas condições clínicas?",
+                options: [
+                  "A) Baixo custo e disponibilidade em todas as unidades de saúde",
+                  "B) Excelente penetração tissular e intracelular, além de serem drogas potentes e de amplo espectro",
+                  "C) Ausência completa de efeitos adversos e contraindicações",
+                  "D) Ação exclusiva contra bactérias Gram-positivas"
+                ],
+                correct: 1,
+                explanation: "Os inibidores da síntese de ácido nucleico, particularmente as quinolonas, são drogas potentes e de amplo espectro com excelente penetração tissular e intracelular. Essas características permitem que sejam usadas em várias condições clínicas diversas, desde infecções urinárias até infecções respiratórias, intra-abdominais e de tecidos profundos. A excelente penetração intracelular também as torna úteis para infecções causadas por patógenos intracelulares."
+              }
             }
           ]
         },
