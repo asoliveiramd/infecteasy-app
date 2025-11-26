@@ -9282,6 +9282,91 @@ const App = () => {
         },
         {
           id: 7,
+          title: "Tetraciclinas",
+          duration: "16 min",
+          xp: 85,
+          sections: [
+            {
+              title: "Características gerais",
+              content: `
+                <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">💊 Tetraciclinas</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #fef3c7;">
+                    Antibióticos <strong style="color: white;">estratégicos</strong> com amplo espectro de ação.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">✨ Principais Características</h4>
+                  
+                  <div style="background: #dcfce7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 12px; font-size: 16px;">🎯 Amplo Espectro</h5>
+                    <p style="font-size: 15px; line-height: 1.6; color: #065f46; margin: 0;">
+                      Cobertura para Gram-positivos, Gram-negativos, atípicos e alguns protozoários.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                    <h5 style="color: #1e40af; margin-bottom: 12px; font-size: 16px;">📍 Boa Penetração em Tecidos</h5>
+                    <p style="font-size: 15px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                      Incluindo <strong>próstata</strong> e <strong>SNC</strong> (sistema nervoso central).
+                    </p>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #ef4444;">
+                    <h5 style="color: #991b1b; margin-bottom: 12px; font-size: 16px;">⚠️ Quelação de Cálcio</h5>
+                    <p style="font-size: 15px; line-height: 1.6; color: #7f1d1d; margin-bottom: 10px;">
+                      <strong>Contraindicado em:</strong>
+                    </p>
+                    <ul style="margin: 10px 0 0 20px; padding: 0; color: #7f1d1d;">
+                      <li style="margin: 5px 0;">Crianças <strong>&lt;8 anos</strong></li>
+                      <li style="margin: 5px 0;">Gestantes</li>
+                    </ul>
+                    <p style="font-size: 14px; line-height: 1.6; color: #7f1d1d; margin: 10px 0 0 0;">
+                      <em>Razão:</em> Prejudica formação de ossos e dentes.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                    <h5 style="color: #92400e; margin-bottom: 12px; font-size: 16px;">🍽️ Absorção Oral</h5>
+                    <p style="font-size: 15px; line-height: 1.6; color: #78350f; margin: 0;">
+                      Prejudicada por <strong>alimentos com cálcio</strong> (leite, queijo) e <strong>antiácidos</strong>.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <h4 style="color: #1e40af; margin-bottom: 15px; font-size: 17px;">💊 Fármaco Mais Usado Ambulatorialmente</h4>
+                  <div style="background: white; padding: 18px; border-radius: 8px; border: 2px solid #3b82f6;">
+                    <h5 style="color: #1e40af; margin-bottom: 10px; font-size: 16px;">⭐ Doxiciclina</h5>
+                    <p style="font-size: 15px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                      Mais <strong>estável</strong> e com <strong>melhor perfil farmacocinético</strong> que outras tetraciclinas.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0;">
+                    💡 <strong>Importante:</strong> A <strong>doxiciclina</strong> é preferida por sua maior estabilidade, melhor absorção oral e posologia mais conveniente (1-2x ao dia). Deve ser administrada <strong>longe de alimentos com cálcio</strong> para garantir absorção adequada.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que as tetraciclinas são contraindicadas em crianças menores de 8 anos e gestantes?",
+                options: [
+                  "A) Porque causam resistência bacteriana precoce",
+                  "B) Porque quelam cálcio, prejudicando a formação de ossos e dentes",
+                  "C) Porque não são eficazes nessa faixa etária",
+                  "D) Porque causam efeitos gastrointestinais graves"
+                ],
+                correct: 1,
+                explanation: "As tetraciclinas quelam cálcio, o que pode prejudicar a formação de ossos e dentes em crianças menores de 8 anos e em fetos de gestantes. Por isso, são contraindicadas nessas populações. Além disso, a quelação de cálcio também explica por que a absorção oral é prejudicada por alimentos com cálcio (leite, queijo) e antiácidos. A doxiciclina é o fármaco mais usado ambulatorialmente por ser mais estável e ter melhor perfil farmacocinético."
+              }
+            }
+          ]
+        },
+        {
+          id: 8,
           title: "Inibidores da Síntese de Ácido Nucleico",
           duration: "16 min",
           xp: 85,
