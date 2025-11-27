@@ -10536,6 +10536,95 @@ const App = () => {
                 correct: 1,
                 explanation: "O levofloxacino (3ª geração) é conhecido como 'quinolona respiratória' porque tem ganho de atividade contra estreptococos (incluindo S. pneumoniae resistente à penicilina) e atípicos respiratórios (Mycoplasma pneumoniae, Chlamydia pneumoniae, Legionella pneumophila). Essa combinação de cobertura é ideal para infecções respiratórias. Em compensação, tem menor atividade contra Pseudomonas em comparação com o ciprofloxacino. A atividade contra anaeróbios é característica da 4ª geração (moxifloxacino)."
               }
+            },
+            {
+              title: "3ª Geração - Indicações principais",
+              content: `
+                <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Indicações Principais</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #d1fae5;">
+                    Enquanto a <strong style="color: white;">segunda geração tem foco predominantemente em via urinária</strong>, a <strong style="color: white;">terceira geração mira a via respiratória</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">📊 Principais Indicações</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                    <div style="background: #dbeafe; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                      <h5 style="color: #1e40af; margin-bottom: 8px; font-size: 15px;">🫁 Pneumonia Adquirida na Comunidade</h5>
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                        Principal indicação da 3ª geração
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <h5 style="color: #92400e; margin-bottom: 8px; font-size: 15px;">👨‍🦼 Exacerbação de DPOC</h5>
+                      <p style="font-size: 14px; color: #78350f; margin: 0;">
+                        Cobertura ideal para patógenos respiratórios
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fce7f3; padding: 15px; border-radius: 8px; border-left: 4px solid #ec4899;">
+                      <h5 style="color: #9f1239; margin-bottom: 8px; font-size: 15px;">🤧 Sinusite Bacteriana Aguda</h5>
+                      <p style="font-size: 14px; color: #831843; margin: 0;">
+                        Atividade contra patógenos sinusais
+                      </p>
+                    </div>
+                    
+                    <div style="background: #dcfce7; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                      <h5 style="color: #047857; margin-bottom: 8px; font-size: 15px;">💧 ITU Complicada</h5>
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        Mantém atividade contra uropatogênicos
+                      </p>
+                    </div>
+                    
+                    <div style="background: #e0e7ff; padding: 15px; border-radius: 8px; border-left: 4px solid #6366f1;">
+                      <h5 style="color: #3730a3; margin-bottom: 8px; font-size: 15px;">🦠 Infecções por Patógenos Respiratórios Resistentes</h5>
+                      <p style="font-size: 14px; color: #312e81; margin: 0;">
+                        Incluindo S. pneumoniae resistente à penicilina
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #e0e7ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #6366f1;">
+                  <h4 style="color: #3730a3; margin-bottom: 15px; font-size: 17px;">🔄 Comparação de Foco</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                      <div style="background: #dbeafe; padding: 15px; border-radius: 6px; text-align: center; border: 2px solid #3b82f6;">
+                        <p style="font-size: 13px; color: #1e40af; margin: 0; font-weight: bold;">2ª Geração</p>
+                        <p style="font-size: 16px; color: #3b82f6; margin: 10px 0;">💧</p>
+                        <p style="font-size: 12px; color: #1e3a8a; margin: 0;">Foco: Via Urinária</p>
+                      </div>
+                      
+                      <div style="background: #dcfce7; padding: 15px; border-radius: 6px; text-align: center; border: 2px solid #10b981;">
+                        <p style="font-size: 13px; color: #047857; margin: 0; font-weight: bold;">3ª Geração</p>
+                        <p style="font-size: 16px; color: #10b981; margin: 10px 0;">🫁</p>
+                        <p style="font-size: 12px; color: #065f46; margin: 0;">Foco: Via Respiratória</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> Enquanto a <strong>2ª geração tem foco predominantemente em via urinária</strong>, a <strong>3ª geração mira a via respiratória</strong>. As principais indicações incluem <strong>pneumonia adquirida na comunidade</strong>, exacerbação de DPOC, sinusite bacteriana aguda, ITU complicada e infecções por patógenos respiratórios resistentes (incluindo S. pneumoniae resistente à penicilina).
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal diferença de foco entre a 2ª e a 3ª geração de quinolonas?",
+                options: [
+                  "A) A 2ª geração foca em infecções respiratórias e a 3ª geração em infecções urinárias",
+                  "B) A 2ª geração foca predominantemente em via urinária e a 3ª geração mira a via respiratória",
+                  "C) Ambas têm o mesmo foco em infecções urinárias",
+                  "D) A 2ª geração foca em anaeróbios e a 3ª geração em Gram-positivos"
+                ],
+                correct: 1,
+                explanation: "A principal diferença de foco entre as gerações é que a 2ª geração (ciprofloxacino, norfloxacino) tem foco predominantemente em via urinária (ITU, prostatite), enquanto a 3ª geração (levofloxacino) mira a via respiratória, sendo conhecida como 'quinolona respiratória'. As principais indicações da 3ª geração incluem pneumonia adquirida na comunidade, exacerbação de DPOC, sinusite bacteriana aguda, ITU complicada e infecções por patógenos respiratórios resistentes."
+              }
             }
           ]
         },
