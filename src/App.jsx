@@ -10265,6 +10265,86 @@ const App = () => {
                 correct: 1,
                 explanation: "A principal limitação do ciprofloxacino (2ª geração) é que não é ativo contra estreptococos, apesar de ter excelente atividade contra Gram-negativos. O ciprofloxacino tem excelente atividade contra enterobactérias (E. coli, Klebsiella, Proteus, Enterobacter), Salmonella, Shigella, Campylobacter e é a melhor opção contra Pseudomonas aeruginosa dentre as quinolonas. Tem atividade limitada contra Gram-positivos, cobrindo apenas Staphylococcus aureus, mas não estreptococos."
               }
+            },
+            {
+              title: "2ª Geração - Indicações principais",
+              content: `
+                <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Indicações Principais</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #d1fae5;">
+                    São <strong style="color: white;">excelentes para infecções urinárias!</strong>
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">📊 Principais Indicações</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                    <div style="background: #dbeafe; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                      <h5 style="color: #1e40af; margin-bottom: 8px; font-size: 15px;">💧 ITU Não Complicada e Complicada</h5>
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                        Excelente opção para infecções do trato urinário
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <h5 style="color: #92400e; margin-bottom: 8px; font-size: 15px;">🤢 Gastroenterite Bacteriana</h5>
+                      <p style="font-size: 14px; color: #78350f; margin: 0;">
+                        Atividade contra Salmonella, Shigella, Campylobacter
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fce7f3; padding: 15px; border-radius: 8px; border-left: 4px solid #ec4899;">
+                      <h5 style="color: #9f1239; margin-bottom: 8px; font-size: 15px;">🧑 Prostatite</h5>
+                      <p style="font-size: 14px; color: #831843; margin: 0;">
+                        Excelente penetração prostática
+                      </p>
+                    </div>
+                    
+                    <div style="background: #dcfce7; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                      <h5 style="color: #047857; margin-bottom: 8px; font-size: 15px;">🦴 Infecções Ósseas (Ciprofloxacino)</h5>
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        Excelente penetração óssea
+                      </p>
+                    </div>
+                    
+                    <div style="background: #e0e7ff; padding: 15px; border-radius: 8px; border-left: 4px solid #6366f1;">
+                      <h5 style="color: #3730a3; margin-bottom: 8px; font-size: 15px;">🦠 Infecções por Pseudomonas (Ciprofloxacino)</h5>
+                      <p style="font-size: 14px; color: #312e81; margin: 0;">
+                        Melhor opção dentre as quinolonas
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">🔬 Vantagem Farmacológica</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 10px; font-size: 16px;">✨ Excelente Penetração Tecidual</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #065f46; margin: 0;">
+                      A <strong>farmacocinética das quinolonas favorece muito</strong> o tratamento de infecções de <strong>próstata e ósseas</strong>, tecidos de <strong>difícil penetração para muitas moléculas</strong>.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> A 2ª geração de quinolonas é <strong>excelente para infecções urinárias</strong> (complicadas e não complicadas), gastroenterite bacteriana, prostatite, infecções ósseas e infecções por Pseudomonas (ciprofloxacino). A <strong>farmacocinética das quinolonas favorece muito</strong> o tratamento de infecções de <strong>próstata e ósseas</strong>, tecidos de difícil penetração para muitas outras moléculas.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que as quinolonas de 2ª geração são particularmente úteis para infecções de próstata e ósseas?",
+                options: [
+                  "A) Porque têm atividade específica contra anaeróbios",
+                  "B) Porque a farmacocinética das quinolonas favorece muito a penetração nesses tecidos de difícil acesso para muitas moléculas",
+                  "C) Porque são as únicas drogas ativas contra Gram-positivos",
+                  "D) Porque têm excelente atividade contra estreptococos"
+                ],
+                correct: 1,
+                explanation: "As quinolonas de 2ª geração são particularmente úteis para infecções de próstata e ósseas porque a farmacocinética das quinolonas favorece muito a penetração nesses tecidos de difícil acesso para muitas outras moléculas. Essa excelente penetração tecidual, além da boa biodisponibilidade oral e atividade contra Gram-negativos, torna as quinolonas excelentes para ITU (complicada e não complicada), gastroenterite bacteriana, prostatite, infecções ósseas e infecções por Pseudomonas (ciprofloxacino)."
+              }
             }
           ]
         },
