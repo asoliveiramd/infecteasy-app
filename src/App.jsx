@@ -10162,6 +10162,109 @@ const App = () => {
                 correct: 2,
                 explanation: "A 4ª geração de quinolonas (moxifloxacino) tem excelente atividade contra Gram-positivos e atípicos, além de adicionar boa cobertura de anaeróbios. A 2ª geração tem excelente atividade contra Gram-negativos mas limitada contra Gram-positivos e atípicos. A 3ª geração tem excelente atividade contra atípicos, muito boa contra Gram-negativos e boa contra Gram-positivos, mas não cobre anaeróbios. A 1ª geração está praticamente fora de uso."
               }
+            },
+            {
+              title: "2ª Geração - Características Principais e Espectro de Ação",
+              content: `
+                <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🔵 2ª Geração</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #dbeafe;">
+                    Drogas com <strong style="color: white;">excelente atividade contra Gram-negativos</strong> e atividade limitada contra Gram-positivos.
+                  </p>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 15px; font-size: 17px;">⭐ Destaque Especial</h4>
+                  <p style="font-size: 15px; line-height: 1.6; color: #78350f; margin: 0;">
+                    O <strong>Ciprofloxacino</strong> é <strong>excelente opção contra Pseudomonas aeruginosa</strong>
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">🎯 Espectro de Ação</h4>
+                  
+                  <div style="background: #dcfce7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 12px; font-size: 16px;">🟢 Gram-negativos (Excelente)</h5>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                      <h6 style="color: #065f46; margin-bottom: 10px; font-size: 15px;">Enterobactérias</h6>
+                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                        <div style="background: #f0fdf4; padding: 8px; border-radius: 4px;">
+                          <p style="font-size: 13px; color: #166534; margin: 0;">• E. coli</p>
+                        </div>
+                        <div style="background: #f0fdf4; padding: 8px; border-radius: 4px;">
+                          <p style="font-size: 13px; color: #166534; margin: 0;">• Klebsiella</p>
+                        </div>
+                        <div style="background: #f0fdf4; padding: 8px; border-radius: 4px;">
+                          <p style="font-size: 13px; color: #166534; margin: 0;">• Proteus</p>
+                        </div>
+                        <div style="background: #f0fdf4; padding: 8px; border-radius: 4px;">
+                          <p style="font-size: 13px; color: #166534; margin: 0;">• Enterobacter</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                      <h6 style="color: #065f46; margin-bottom: 10px; font-size: 15px;">Outros</h6>
+                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                        <div style="background: #f0fdf4; padding: 8px; border-radius: 4px;">
+                          <p style="font-size: 13px; color: #166534; margin: 0;">• Salmonella</p>
+                        </div>
+                        <div style="background: #f0fdf4; padding: 8px; border-radius: 4px;">
+                          <p style="font-size: 13px; color: #166534; margin: 0;">• Shigella</p>
+                        </div>
+                        <div style="background: #f0fdf4; padding: 8px; border-radius: 4px;">
+                          <p style="font-size: 13px; color: #166534; margin: 0;">• Campylobacter</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                    <h5 style="color: #92400e; margin-bottom: 12px; font-size: 16px;">🟡 Gram-positivos (Limitado)</h5>
+                    <div style="background: white; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #78350f; margin: 0;">
+                        • <strong>Staphylococcus aureus</strong>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #dc2626;">
+                  <h4 style="color: #991b1b; margin-bottom: 15px; font-size: 17px;">⚠️ Pontos de Atenção</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #dc2626;">
+                    <h5 style="color: #991b1b; margin-bottom: 10px; font-size: 16px;">❌ Não Ativo Contra Estreptococos</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #7f1d1d; margin: 0;">
+                      Lembrar que <strong>ciprofloxacino não é ativo contra estreptococos!</strong>
+                    </p>
+                  </div>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 10px; font-size: 16px;">✅ Melhor Opção para Pseudomonas</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #065f46; margin: 0;">
+                      É a <strong>melhor opção contra P. aeruginosa</strong> dentre as quinolonas.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> A 2ª geração de quinolonas tem <strong>excelente atividade contra Gram-negativos</strong> (enterobactérias, Salmonella, Shigella, Campylobacter) mas <strong>atividade limitada contra Gram-positivos</strong> (apenas S. aureus). O <strong>ciprofloxacino não é ativo contra estreptococos</strong>, mas é a <strong>melhor opção contra Pseudomonas aeruginosa</strong> dentre todas as quinolonas.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal limitação do ciprofloxacino (2ª geração) em relação ao espectro de ação?",
+                options: [
+                  "A) Não tem atividade contra Pseudomonas aeruginosa",
+                  "B) Não é ativo contra estreptococos, apesar de ter excelente atividade contra Gram-negativos",
+                  "C) Não tem atividade contra enterobactérias",
+                  "D) Não tem atividade contra Staphylococcus aureus"
+                ],
+                correct: 1,
+                explanation: "A principal limitação do ciprofloxacino (2ª geração) é que não é ativo contra estreptococos, apesar de ter excelente atividade contra Gram-negativos. O ciprofloxacino tem excelente atividade contra enterobactérias (E. coli, Klebsiella, Proteus, Enterobacter), Salmonella, Shigella, Campylobacter e é a melhor opção contra Pseudomonas aeruginosa dentre as quinolonas. Tem atividade limitada contra Gram-positivos, cobrindo apenas Staphylococcus aureus, mas não estreptococos."
+              }
             }
           ]
         },
