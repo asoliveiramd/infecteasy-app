@@ -10433,6 +10433,109 @@ const App = () => {
                 correct: 1,
                 explanation: "A principal vantagem da 3ª geração de quinolonas (levofloxacino) em relação à 2ª geração é a excelente atividade contra patógenos atípicos e melhor atividade contra Gram-positivos, mantendo boa atividade contra Gram-negativos. Com a evolução das moléculas, foi-se ganhando espectro de ação. O levofloxacino é o isômero ativo do ofloxacino e é duas vezes mais potente. A atividade contra anaeróbios é característica da 4ª geração (moxifloxacino)."
               }
+            },
+            {
+              title: "3ª Geração - Espectro de ação",
+              content: `
+                <div style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Espectro de Ação</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #ede9fe;">
+                    Espectro <strong style="color: white;">ampliado e balanceado</strong> da 3ª geração
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">🦠 Cobertura Antimicrobiana</h4>
+                  
+                  <div style="background: #dcfce7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 12px; font-size: 16px;">🟢 Gram-positivos</h5>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #065f46; margin: 0;">
+                          • <strong>Streptococcus pneumoniae</strong> (incluindo cepas resistentes à penicilina)
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #065f46; margin: 0;">
+                          • <strong>Staphylococcus aureus</strong> (sensível à meticilina)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                    <h5 style="color: #1e40af; margin-bottom: 12px; font-size: 16px;">🔵 Gram-negativos</h5>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          • <strong>Enterobactérias</strong> (similar às 2ª geração)
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          • <strong>Pseudomonas aeruginosa</strong> (menos ativo que ciprofloxacino)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                    <h5 style="color: #92400e; margin-bottom: 12px; font-size: 16px;">⭐ Atípicos</h5>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #78350f; margin: 0;">
+                          • <strong>Mycoplasma pneumoniae</strong>
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #78350f; margin: 0;">
+                          • <strong>Chlamydia pneumoniae</strong>
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #78350f; margin: 0;">
+                          • <strong>Legionella pneumophila</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #e0e7ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #6366f1;">
+                  <h4 style="color: #3730a3; margin-bottom: 15px; font-size: 17px;">💊 Quinolona Respiratória</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 10px; font-size: 16px;">✅ Ganho de Atividade</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #065f46; margin: 0;">
+                      Pelo <strong>ganho de atividade contra estreptococos e atípicos</strong>, o levofloxacino é conhecido como <strong>quinolona respiratória</strong>.
+                    </p>
+                  </div>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #f59e0b;">
+                    <h5 style="color: #92400e; margin-bottom: 10px; font-size: 16px;">⚠️ Compensação</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0;">
+                      Em compensação, tem <strong>menor atividade contra Pseudomonas</strong> em comparação com o ciprofloxacino.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> A 3ª geração (levofloxacino) tem <strong>excelente cobertura de Gram-positivos</strong> (incluindo S. pneumoniae resistente à penicilina), <strong>Gram-negativos</strong> (enterobactérias) e <strong>atípicos respiratórios</strong> (Mycoplasma, Chlamydia, Legionella). Pelo ganho de atividade contra estreptococos e atípicos, é conhecida como <strong>quinolona respiratória</strong>, porém tem <strong>menor atividade contra Pseudomonas</strong> que o ciprofloxacino.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que o levofloxacino (3ª geração) é conhecido como 'quinolona respiratória'?",
+                options: [
+                  "A) Porque tem melhor atividade contra Pseudomonas aeruginosa que o ciprofloxacino",
+                  "B) Porque tem ganho de atividade contra estreptococos e atípicos respiratórios (Mycoplasma, Chlamydia, Legionella)",
+                  "C) Porque é a única quinolona com atividade contra anaeróbios",
+                  "D) Porque tem atividade exclusiva contra Staphylococcus aureus"
+                ],
+                correct: 1,
+                explanation: "O levofloxacino (3ª geração) é conhecido como 'quinolona respiratória' porque tem ganho de atividade contra estreptococos (incluindo S. pneumoniae resistente à penicilina) e atípicos respiratórios (Mycoplasma pneumoniae, Chlamydia pneumoniae, Legionella pneumophila). Essa combinação de cobertura é ideal para infecções respiratórias. Em compensação, tem menor atividade contra Pseudomonas em comparação com o ciprofloxacino. A atividade contra anaeróbios é característica da 4ª geração (moxifloxacino)."
+              }
             }
           ]
         },
