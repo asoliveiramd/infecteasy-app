@@ -10345,6 +10345,94 @@ const App = () => {
                 correct: 1,
                 explanation: "As quinolonas de 2ª geração são particularmente úteis para infecções de próstata e ósseas porque a farmacocinética das quinolonas favorece muito a penetração nesses tecidos de difícil acesso para muitas outras moléculas. Essa excelente penetração tecidual, além da boa biodisponibilidade oral e atividade contra Gram-negativos, torna as quinolonas excelentes para ITU (complicada e não complicada), gastroenterite bacteriana, prostatite, infecções ósseas e infecções por Pseudomonas (ciprofloxacino)."
               }
+            },
+            {
+              title: "3ª Geração - Características principais",
+              content: `
+                <div style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🔵 3ª Geração</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #e0e7ff;">
+                    Com a <strong style="color: white;">evolução das moléculas</strong>, com o tempo, foi-se <strong style="color: white;">ganhando espectro de ação</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">📊 Características Principais</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                    <div style="background: #dcfce7; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                      <h5 style="color: #047857; margin-bottom: 8px; font-size: 15px;">🔼 Melhor Atividade contra Gram-positivos</h5>
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        Melhor que a 2ª geração
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <h5 style="color: #92400e; margin-bottom: 8px; font-size: 15px;">⭐ Excelente Atividade contra Patógenos Atípicos</h5>
+                      <p style="font-size: 14px; color: #78350f; margin: 0;">
+                        Grande vantagem da 3ª geração
+                      </p>
+                    </div>
+                    
+                    <div style="background: #dbeafe; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                      <h5 style="color: #1e40af; margin-bottom: 8px; font-size: 15px;">🔹 Mantém Boa Atividade contra Gram-negativos</h5>
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                        Não perde a atividade da 2ª geração
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #e0e7ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #6366f1;">
+                  <h4 style="color: #3730a3; margin-bottom: 15px; font-size: 17px;">💊 Levofloxacino</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #6366f1;">
+                    <h5 style="color: #3730a3; margin-bottom: 10px; font-size: 16px;">🧬 Isômero Ativo do Ofloxacino</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #312e81; margin: 0;">
+                      O levofloxacino é o <strong>isômero ativo do ofloxacino</strong>, e é <strong>duas vezes mais potente</strong>.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 15px; font-size: 17px;">📈 Evolução do Espectro</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                      <div style="background: #dcfce7; padding: 12px; border-radius: 6px; text-align: center;">
+                        <p style="font-size: 13px; color: #065f46; margin: 0; font-weight: bold;">2ª Geração</p>
+                        <p style="font-size: 12px; color: #047857; margin: 5px 0 0 0;">Gram-negativos +++</p>
+                        <p style="font-size: 12px; color: #78350f; margin: 5px 0 0 0;">Gram-positivos +</p>
+                        <p style="font-size: 12px; color: #78350f; margin: 5px 0 0 0;">Atípicos +</p>
+                      </div>
+                      
+                      <div style="background: #e0e7ff; padding: 12px; border-radius: 6px; text-align: center;">
+                        <p style="font-size: 13px; color: #3730a3; margin: 0; font-weight: bold;">3ª Geração</p>
+                        <p style="font-size: 12px; color: #1e40af; margin: 5px 0 0 0;">Gram-negativos ++</p>
+                        <p style="font-size: 12px; color: #047857; margin: 5px 0 0 0;">Gram-positivos ++</p>
+                        <p style="font-size: 12px; color: #047857; margin: 5px 0 0 0;">Atípicos +++</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> A 3ª geração de quinolonas representa uma <strong>evolução</strong> em relação à 2ª geração: tem <strong>melhor atividade contra Gram-positivos</strong>, <strong>excelente atividade contra patógenos atípicos</strong> (grande vantagem) e <strong>mantém boa atividade contra Gram-negativos</strong>. O <strong>levofloxacino</strong> é o isômero ativo do ofloxacino e é <strong>duas vezes mais potente</strong>.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal vantagem da 3ª geração de quinolonas em relação à 2ª geração?",
+                options: [
+                  "A) Melhor atividade contra Pseudomonas aeruginosa",
+                  "B) Excelente atividade contra patógenos atípicos e melhor atividade contra Gram-positivos, mantendo boa atividade contra Gram-negativos",
+                  "C) Atividade contra anaeróbios",
+                  "D) Menor risco de efeitos adversos"
+                ],
+                correct: 1,
+                explanation: "A principal vantagem da 3ª geração de quinolonas (levofloxacino) em relação à 2ª geração é a excelente atividade contra patógenos atípicos e melhor atividade contra Gram-positivos, mantendo boa atividade contra Gram-negativos. Com a evolução das moléculas, foi-se ganhando espectro de ação. O levofloxacino é o isômero ativo do ofloxacino e é duas vezes mais potente. A atividade contra anaeróbios é característica da 4ª geração (moxifloxacino)."
+              }
             }
           ]
         },
