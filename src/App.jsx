@@ -11411,6 +11411,138 @@ const App = () => {
                 correct: 1,
                 explanation: "A combinação de sulfametoxazol com trimetoprima (cotrimoxazol) é mais eficaz porque a combinação sinérgica bloqueia duas etapas da síntese de folato. O sulfametoxazol inibe a di-hidropteroato sintase (bloqueando PABA → ácido diidropteroico) e a trimetoprima inibe a di-hidrofolato redutase (bloqueando di-hidrofolato → tetra-hidrofolato). Esse duplo bloqueio sequencial impede a produção de DNA e proteínas bacterianas, inviabilizando a bactéria e resultando em efeito bactericida, diferentemente do efeito bacteriostático de cada droga isoladamente."
               }
+            },
+            {
+              title: "Espectro de ação",
+              content: `
+                <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Espectro de Ação</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #dbeafe;">
+                    É uma droga <strong style="color: white;">pouco eficaz contra infecções graves</strong>. Mas <strong style="color: white;">ideal para o ambulatório</strong>. Desde infecções em vias aéreas superiores até infecções urinárias.
+                  </p>
+                </div>
+                
+                <div style="background: #fce7f3; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #ec4899;">
+                  <h4 style="color: #9f1239; margin-bottom: 15px; font-size: 17px;">🧱 Excelente Penetração Prostática</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <p style="font-size: 14px; line-height: 1.6; color: #831843; margin: 0;">
+                      Tem uma <strong>excelente penetração em próstata</strong>, viabilizando o seu uso na infecção desse órgão.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">🦠 Cobertura Antimicrobiana</h4>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                    <h5 style="color: #1e40af; margin-bottom: 15px; font-size: 16px;">🔵 Gram-negativos</h5>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                      <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #3b82f6;">
+                        <h6 style="color: #1e40af; margin-bottom: 8px; font-size: 14px;">⚠️ Escherichia coli</h6>
+                        <p style="font-size: 13px; color: #1e3a8a; margin: 0;">
+                          <span style="background: #fee2e2; padding: 2px 6px; border-radius: 4px; color: #991b1b; font-size: 12px;">Resistência crescente</span>
+                        </p>
+                      </div>
+                      
+                      <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #3b82f6;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          Klebsiella, Enterobacter, Proteus
+                        </p>
+                      </div>
+                      
+                      <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #3b82f6;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          Salmonella, Shigella
+                        </p>
+                      </div>
+                      
+                      <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #3b82f6;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          Haemophilus influenzae
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 15px; font-size: 16px;">🟢 Gram-positivos</h5>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                      <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                        <p style="font-size: 14px; color: #065f46; margin: 0;">
+                          Streptococcus pneumoniae
+                        </p>
+                      </div>
+                      
+                      <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                        <p style="font-size: 14px; color: #065f46; margin: 0;">
+                          Streptococcus pyogenes (SBHGA)
+                        </p>
+                      </div>
+                      
+                      <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                        <h6 style="color: #047857; margin-bottom: 8px; font-size: 14px;">Staphylococcus aureus</h6>
+                        <p style="font-size: 13px; color: #065f46; margin: 0;">
+                          Incluindo <strong>alguns MRSA comunitários</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 15px; font-size: 17px;">🎯 Indicações Ideais</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; text-align: center;">
+                      <p style="font-size: 14px; color: #78350f; margin: 0; font-weight: bold;">
+                        🤧 Vias Aéreas Superiores
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; text-align: center;">
+                      <p style="font-size: 14px; color: #78350f; margin: 0; font-weight: bold;">
+                        💧 Infecções Urinárias
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; grid-column: span 2;">
+                      <p style="font-size: 14px; color: #78350f; margin: 0; font-weight: bold;">
+                        🧱 Prostatite (excelente penetração)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #dc2626;">
+                  <h4 style="color: #991b1b; margin-bottom: 15px; font-size: 17px;">⚠️ Limitação Importante</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #dc2626;">
+                    <p style="font-size: 14px; line-height: 1.6; color: #7f1d1d; margin: 0;">
+                      ❌ <strong>Pouco eficaz contra infecções graves</strong>. Ideal para uso <strong>ambulatorial</strong>.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> O cotrimoxazol é <strong>ideal para o ambulatório</strong>, desde infecções em vias aéreas superiores até infecções urinárias. Tem <strong>excelente penetração em próstata</strong>, viabilizando seu uso em prostatite. Cobertura: <strong>Gram-negativos</strong> (E. coli com resistência crescente, Klebsiella, Enterobacter, Proteus, Salmonella, Shigella, H. influenzae) e <strong>Gram-positivos</strong> (S. pneumoniae, S. pyogenes, S. aureus incluindo alguns MRSA comunitários). Porém, é <strong>pouco eficaz contra infecções graves</strong>.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal vantagem do cotrimoxazol (sulfametoxazol + trimetoprima) para o tratamento de prostatite?",
+                options: [
+                  "A) Porque tem atividade exclusiva contra Pseudomonas aeruginosa",
+                  "B) Porque tem excelente penetração em próstata, viabilizando seu uso na infecção desse órgão",
+                  "C) Porque é a droga mais eficaz contra infecções graves",
+                  "D) Porque não tem resistência bacteriana"
+                ],
+                correct: 1,
+                explanation: "A principal vantagem do cotrimoxazol para o tratamento de prostatite é que tem excelente penetração em próstata, viabilizando seu uso na infecção desse órgão. A próstata é um tecido de difícil penetração para muitos antibióticos, mas o cotrimoxazol atinge bons níveis teciduais nesse órgão. O cotrimoxazol é ideal para uso ambulatorial, cobrindo Gram-negativos (E. coli, Klebsiella, Enterobacter, Proteus, Salmonella, Shigella, H. influenzae) e Gram-positivos (S. pneumoniae, S. pyogenes, S. aureus incluindo alguns MRSA comunitários), mas é pouco eficaz contra infecções graves."
+              }
             }
           ]
         },
