@@ -12041,6 +12041,143 @@ const App = () => {
                 correct: 1,
                 explanation: "\"Pecar por excesso\" ao prescrever antibióticos é considerado um problema porque o próprio excesso é o maior dos pecados. O uso irracional de antibióticos causa: resistência bacteriana (uso indiscriminado aumenta resistência), efeitos adversos (exposição desnecessária a efeitos colaterais), custos desnecessários e disbiose (alteração da microbiota normal). O uso racional de antibióticos é essencial para prevenir resistência. Se não é urgência, tem tempo para continuar a investigação e ponderar outras possibilidades - espere! Não abra mão do diagnóstico correto tão facilmente!"
               }
+            },
+            {
+              title: "Produção de resistência",
+              content: `
+                <div style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🦠 Produção de Resistência</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #fee2e2;">
+                    Entenda como a manutenção desnecessária de antibióticos induz resistência bacteriana.
+                  </p>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">✅ Quando Retirar o Antibiótico</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <p style="font-size: 14px; line-height: 1.6; color: #065f46; margin: 0;">
+                      Se a infecção já deu <strong>fortes evidências de já ter sido resolvida</strong>, o paciente já tem <strong>dias sem sintomas</strong>, <strong>retire o antibiótico!</strong>
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #dc2626;">
+                  <h4 style="color: #991b1b; margin-bottom: 15px; font-size: 17px;">❌ Mito: Retirar "Antes do Tempo" Induz Resistência</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <h5 style="color: #991b1b; margin-bottom: 12px; font-size: 15px;">❌ FALSO</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #7f1d1d; margin: 0;">
+                      Retirar antibiótico "antes do tempo" <strong>NÃO induz resistência</strong>.
+                    </p>
+                  </div>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #dc2626;">
+                    <h5 style="color: #991b1b; margin-bottom: 12px; font-size: 15px;">✅ VERDADEIRO</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #7f1d1d; margin: 0;">
+                      A <strong>manutenção desnecessária do antibiótico</strong>, sim, <strong>induz resistência!</strong>
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #e0e7ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #6366f1;">
+                  <h4 style="color: #4338ca; margin-bottom: 15px; font-size: 17px;">🧬 Mecanismo Darwiniano de Resistência</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <p style="font-size: 14px; line-height: 1.6; color: #4338ca; margin: 0;">
+                      Lembre-se - a <strong>resistência obedece a um mecanismo darwiniano de adaptação da bactéria</strong> a uma <strong>pressão seletiva exercida pelo antibiótico</strong>.
+                    </p>
+                  </div>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #6366f1;">
+                    <h5 style="color: #4338ca; margin-bottom: 12px; font-size: 15px;">⚠️ Consequência</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #4338ca; margin: 0;">
+                      Se você <strong>mantém o antibiótico desnecessariamente</strong>, você <strong>induz resistência sem ganho para o paciente</strong>.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 15px; font-size: 17px;">🔄 Como Funciona a Pressão Seletiva</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #f59e0b;">
+                      <h6 style="color: #92400e; margin-bottom: 8px; font-size: 14px;">1️⃣ População Bacteriana Mista</h6>
+                      <p style="font-size: 13px; color: #78350f; margin: 0;">
+                        Bactérias sensíveis e resistentes coexistem
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #f59e0b;">
+                      <h6 style="color: #92400e; margin-bottom: 8px; font-size: 14px;">2️⃣ Pressão Seletiva do Antibiótico</h6>
+                      <p style="font-size: 13px; color: #78350f; margin: 0;">
+                        Antibiótico elimina bactérias sensíveis
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #f59e0b;">
+                      <h6 style="color: #92400e; margin-bottom: 8px; font-size: 14px;">3️⃣ Sobrevivência das Resistentes</h6>
+                      <p style="font-size: 13px; color: #78350f; margin: 0;">
+                        Bactérias resistentes sobrevivem e se multiplicam
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #dc2626; border: 2px solid #dc2626;">
+                      <h6 style="color: #991b1b; margin-bottom: 8px; font-size: 14px;">4️⃣ Manutenção Desnecessária</h6>
+                      <p style="font-size: 13px; color: #7f1d1d; margin: 0; font-weight: bold;">
+                        Antibiótico mantido após resolução da infecção = Pressão seletiva sem benefício
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">✅ Princípios para Evitar Resistência</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        ✅ Retirar antibiótico quando infecção resolvida
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        ✅ Não manter antibiótico desnecessariamente
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        ✅ Lembrar que manutenção desnecessária induz resistência
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        ✅ Evitar pressão seletiva sem ganho para o paciente
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> Se a infecção já deu <strong>fortes evidências de já ter sido resolvida</strong>, o paciente já tem <strong>dias sem sintomas</strong>, <strong>retire o antibiótico!</strong> Retirar antibiótico "antes do tempo" <strong>NÃO induz resistência</strong>. A <strong>manutenção desnecessária</strong>, sim! Lembre-se - a <strong>resistência obedece a um mecanismo darwiniano de adaptação da bactéria</strong> a uma <strong>pressão seletiva exercida pelo antibiótico</strong>. Se você o <strong>mantém desnecessariamente</strong>, você <strong>induz resistência sem ganho para o paciente</strong>.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a verdade sobre retirar antibiótico \"antes do tempo\" e a produção de resistência?",
+                options: [
+                  "A) Retirar antibiótico antes do tempo sempre induz resistência bacteriana",
+                  "B) Retirar antibiótico \"antes do tempo\" NÃO induz resistência. A manutenção desnecessária do antibiótico, sim, pois a resistência obedece a um mecanismo darwiniano de adaptação da bactéria a uma pressão seletiva exercida pelo antibiótico",
+                  "C) A duração do tratamento não tem relação com resistência bacteriana",
+                  "D) Quanto mais tempo o antibiótico for mantido, menor a resistência"
+                ],
+                correct: 1,
+                explanation: "A verdade sobre retirar antibiótico \"antes do tempo\" é que isso NÃO induz resistência. A manutenção desnecessária do antibiótico, sim, induz resistência! Se a infecção já deu fortes evidências de já ter sido resolvida e o paciente já tem dias sem sintomas, retire o antibiótico! A resistência obedece a um mecanismo darwiniano de adaptação da bactéria a uma pressão seletiva exercida pelo antibiótico. Se você mantém o antibiótico desnecessariamente, você induz resistência sem ganho para o paciente, pois as bactérias resistentes sobrevivem e se multiplicam sob pressão seletiva contínua."
+              }
             }
           ]
         },
