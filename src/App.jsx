@@ -12441,8 +12441,8 @@ const App = () => {
         {
           id: 16,
           title: "Infecções da Pele",
-          duration: "16 min",
-          xp: 80,
+          duration: "24 min",
+          xp: 120,
           sections: [
             {
               title: "Celulite",
@@ -12594,6 +12594,71 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "O antibiótico restringe o território da doença, mas não impede que células mortas sejam descartadas. Portanto, a formação de bolhas durante o tratamento é um processo esperado e não indica falha terapêutica."
+              }
+            },
+            {
+              title: "Diferenciação",
+              content: `
+                <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🔍 Diferenciação entre Celulite e Erisipela</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A diferenciação entre celulite e erisipela baseia-se principalmente na <strong>profundidade da infecção</strong> e na <strong>delimitação das bordas</strong>.
+                  </p>
+                  
+                  <div style="background: #dbeafe; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #1e40af; margin-bottom: 10px;">🔄 Comparação</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                      <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                        <h5 style="color: #991b1b; margin-bottom: 10px;">🦠 Celulite</h5>
+                        <ul style="font-size: 14px; line-height: 1.6; margin: 0; padding-left: 20px;">
+                          <li><strong>Profundidade</strong>: Derme e hipoderme (mais profunda)</li>
+                          <li><strong>Bordas</strong>: Limites imprecisos que se misturam com a pele adjacente</li>
+                          <li><strong>Característica</strong>: Bordas mal definidas</li>
+                        </ul>
+                      </div>
+                      <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                        <h5 style="color: #991b1b; margin-bottom: 10px;">🔴 Erisipela</h5>
+                        <ul style="font-size: 14px; line-height: 1.6; margin: 0; padding-left: 20px;">
+                          <li><strong>Profundidade</strong>: Derme e vasos linfáticos (mais superficial)</li>
+                          <li><strong>Bordas</strong>: Bordas bem definidas e elevadas</li>
+                          <li><strong>Característica</strong>: Bordas bem demarcadas</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #b45309; margin-bottom: 10px;">⚠️ Dificuldade na Diferenciação</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      Porém, <strong>algumas vezes é muito difícil de fazer a diferenciação</strong> entre celulite e erisipela.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #d1fae5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                    <h4 style="color: #047857; margin-bottom: 10px;">✅ Boa Notícia</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      A boa notícia é que <strong>as duas são tratadas com o mesmo tipo de antibiótico</strong>. Portanto, mesmo que a diferenciação seja difícil, o tratamento não será prejudicado.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 15px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      A diferenciação baseia-se na <strong>profundidade da infecção</strong> e na <strong>delimitação das bordas</strong>. A erisipela tem <strong>bordas bem definidas e elevadas</strong>, enquanto a celulite apresenta <strong>limites imprecisos</strong>. Mesmo que a diferenciação seja difícil, <strong>ambas são tratadas com o mesmo tipo de antibiótico</strong>.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal diferença entre celulite e erisipela que ajuda na diferenciação clínica?",
+                options: [
+                  "A celulite tem bordas bem definidas e a erisipela tem bordas imprecisas",
+                  "A erisipela tem bordas bem definidas e elevadas, enquanto a celulite apresenta limites imprecisos que se misturam com a pele adjacente",
+                  "A celulite é mais superficial que a erisipela",
+                  "A erisipela não causa dor, enquanto a celulite causa dor intensa"
+                ],
+                correct: 1,
+                explanation: "A erisipela tem bordas bem definidas e elevadas, enquanto a celulite apresenta limites imprecisos que se misturam com a pele adjacente. A diferenciação baseia-se principalmente na profundidade da infecção e na delimitação das bordas."
               }
             }
           ]
