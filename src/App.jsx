@@ -13330,8 +13330,8 @@ const App = () => {
         {
           id: 17,
           title: "Infecções de Vias Aéreas Superiores (IVAS)",
-          duration: "80 min",
-          xp: 400,
+          duration: "88 min",
+          xp: 440,
           sections: [
             {
               title: "Introdução",
@@ -14647,6 +14647,137 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "Os macrolídeos são uma boa escolha no caso de miringite bolhosa porque cobrem o Micoplasma (agente sugerido pela miringite bolhosa) e também cobrem bem pneumococos, moraxela e hemófilos que podem ser resistentes a beta-lactâmicos. Isso proporciona uma cobertura ampla e adequada para a situação clínica."
+              }
+            },
+            {
+              title: "IVAS - O que você não pode deixar de saber",
+              content: `
+                <div style="background: linear-gradient(135deg, #fef9e7 0%, #fef3c7 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d68910; margin-bottom: 15px;">💡 IVAS - O que você não pode deixar de saber</h3>
+                  
+                  <div style="background: #e0f2fe; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #075985; margin-bottom: 15px;">🦠 Viral vs. Bacteriano</h4>
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7; margin-bottom: 15px;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;">🤧 Pense em Etiologia Viral</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Se predominam <strong>espirros, coriza e obstrução nasal</strong>, pense em <strong>etiologia viral</strong>.
+                      </p>
+                    </div>
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;">🤕 Diferença na Dor de Garganta</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Viral:</strong> Irritação de garganta é mais frequente (desconforto leve)<br/>
+                        <strong>Amigdalite bacteriana:</strong> Dor é mais intensa (odinofagia importante)
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #166534; margin-bottom: 15px;">🦠 Amigdalite</h4>
+                    <div style="background: #bbf7d0; padding: 15px; border-radius: 8px; border-left: 4px solid #16a34a; margin-bottom: 15px;">
+                      <h5 style="color: #14532d; margin-bottom: 10px;">🦠 Agente Etiológico</h5>
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        Causada principalmente por <strong><em>S. pyogenes</em></strong>, que <strong>não desenvolve mecanismos enzimáticos de resistência</strong> (não produz beta-lactamase).
+                      </p>
+                      <div style="background: #86efac; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                          💊 <strong>Tratamento:</strong> Amoxicilina <strong>sem clavulanato</strong> (clavulanato é desnecessário).
+                        </p>
+                      </div>
+                    </div>
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 15px;">
+                      <h5 style="color: #92400e; margin-bottom: 10px;">⚠️ Se Persistir</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Se o tratamento não funcionar (sem melhora após 3 dias), considere <strong>síndrome da mononucleose</strong> (etiologia viral).
+                      </p>
+                    </div>
+                    <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">🔄 Se Inicialmente Melhorar e Depois Piorar</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Suspeite de <strong>abscesso periamigdaliano</strong> (complicação bacteriana).
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8daef; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #6b21a8; margin-bottom: 15px;">👃 Sinusite e Otite</h4>
+                    <div style="background: #d7bde2; padding: 15px; border-radius: 8px; border-left: 4px solid #7d3c98; margin-bottom: 15px;">
+                      <h5 style="color: #5b21b6; margin-bottom: 10px;">🦠 Considerar Origem Viral</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        A <strong>maioria das sinusites e otites é viral</strong>. Não prescreva antibióticos indiscriminadamente.
+                      </p>
+                    </div>
+                    <div style="background: #d7bde2; padding: 15px; border-radius: 8px; border-left: 4px solid #7d3c98; margin-bottom: 15px;">
+                      <h5 style="color: #5b21b6; margin-bottom: 10px;">👁️ Sinusite Bacteriana</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Na <strong>sinusite bacteriana</strong>, a <strong>dor é localizada</strong> e pode <strong>irradiar para os dentes</strong>.
+                      </p>
+                    </div>
+                    <div style="background: #d7bde2; padding: 15px; border-radius: 8px; border-left: 4px solid #7d3c98;">
+                      <h5 style="color: #5b21b6; margin-bottom: 10px;">💊 Tratamento se Confirmada Etiologia Bacteriana</h5>
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        Use <strong>amoxicilina com clavulanato</strong> devido à presença de <strong><em>Moraxella</em></strong> e <strong><em>Haemophilus</em></strong> produtores de beta-lactamase.
+                      </p>
+                      <div style="background: #c084fc; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                          📌 <strong>Lembrete:</strong> O clavulanato inibe a beta-lactamase, permitindo que a amoxicilina seja eficaz.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 15px; border-radius: 8px; border-left: 4px solid #1abc9c; margin: 20px 0;">
+                    <h4 style="color: #0e6655; margin-bottom: 10px;">📊 Resumo dos Pontos-Chave</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+                      <thead>
+                        <tr style="background: #d1f2eb;">
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Condição</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Ponto-Chave</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Viral vs. Bacteriano</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Espirros, coriza, obstrução nasal → Viral</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Amigdalite</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><em>S. pyogenes</em> → Amoxicilina sem clavulanato</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Falha do tratamento</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Sem melhora → Mononucleose; Melhora + piora → Abscesso</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Sinusite/Otite</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Maioria viral; Se bacteriana → Amoxicilina + Clavulanato</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Sinusite bacteriana</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Dor localizada, irradia para dentes</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Final</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>Viral vs. Bacteriano:</strong> Espirros, coriza, obstrução nasal → Viral. <strong>Amigdalite:</strong> <em>S. pyogenes</em> (não produz beta-lactamase) → Amoxicilina sem clavulanato. Se persistir → Mononucleose. Se melhorar e piorar → Abscesso periamigdaliano. <strong>Sinusite/Otite:</strong> Maioria viral. Se bacteriana (dor localizada, irradia para dentes) → Amoxicilina + Clavulanato (<em>Moraxella</em> e <em>Haemophilus</em> produzem beta-lactamase).
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Por que se usa amoxicilina SEM clavulanato na amigdalite, mas amoxicilina COM clavulanato na sinusite/otite bacteriana?",
+                options: [
+                  "Porque a amigdalite é sempre viral e a sinusite é sempre bacteriana",
+                  "Porque o S. pyogenes (amigdalite) não produz beta-lactamase, mas Moraxella e Haemophilus (sinusite/otite) produzem",
+                  "Porque a amoxicilina com clavulanato é contraindicada em amigdalite",
+                  "Porque o clavulanato só funciona em infecções dos seios paranasais"
+                ],
+                correct: 1,
+                explanation: "Usa-se amoxicilina SEM clavulanato na amigdalite porque o S. pyogenes (principal agente) não produz beta-lactamase, tornando o clavulanato desnecessário. Já na sinusite/otite bacteriana, usa-se amoxicilina COM clavulanato porque Moraxella catarrhalis e algumas cepas de Haemophilus influenzae produzem beta-lactamase, e o clavulanato inibe essa enzima, permitindo que a amoxicilina seja eficaz."
               }
             }
           ]
