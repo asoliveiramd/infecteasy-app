@@ -12178,6 +12178,132 @@ const App = () => {
                 correct: 1,
                 explanation: "A verdade sobre retirar antibiótico \"antes do tempo\" é que isso NÃO induz resistência. A manutenção desnecessária do antibiótico, sim, induz resistência! Se a infecção já deu fortes evidências de já ter sido resolvida e o paciente já tem dias sem sintomas, retire o antibiótico! A resistência obedece a um mecanismo darwiniano de adaptação da bactéria a uma pressão seletiva exercida pelo antibiótico. Se você mantém o antibiótico desnecessariamente, você induz resistência sem ganho para o paciente, pois as bactérias resistentes sobrevivem e se multiplicam sob pressão seletiva contínua."
               }
+            },
+            {
+              title: "Critério para escolha correta",
+              content: `
+                <div style="background: linear-gradient(135deg, #6366f1 0%, #4338ca 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Critério para Escolha Correta</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #e0e7ff;">
+                    A escolha do antibiótico deve ser baseada no sítio anatômico, patógenos prováveis e fatores do paciente.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">📚 Neste Módulo</h4>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                    <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                      Nesse <strong>módulo de antibioticoterapia oral</strong>, você vai aprender a fazer isso.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #e0e7ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #6366f1;">
+                  <h4 style="color: #4338ca; margin-bottom: 15px; font-size: 17px;">🧠 Raciocínio Clínico</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <p style="font-size: 14px; line-height: 1.6; color: #4338ca; margin: 0;">
+                      Se tiver <strong>suspeita de infecção em um determinado sítio</strong>, pense:
+                    </p>
+                  </div>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #6366f1;">
+                    <h5 style="color: #4338ca; margin-bottom: 12px; font-size: 15px;">❓ Perguntas-Chave</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #4338ca; margin: 0;">
+                      Quais as <strong>bactérias que habitualmente estão presentes nessa parte do corpo?</strong>
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 15px; font-size: 17px;">🔍 Perguntas para Orientar a Escolha</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <h6 style="color: #047857; margin-bottom: 8px; font-size: 14px;">🟢 Gram-positivo?</h6>
+                      <p style="font-size: 13px; color: #065f46; margin: 0;">
+                        Considerar cobertura para Gram-positivos
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #ef4444;">
+                      <h6 style="color: #991b1b; margin-bottom: 8px; font-size: 14px;">🔴 Gram-negativo?</h6>
+                      <p style="font-size: 13px; color: #7f1d1d; margin: 0;">
+                        Considerar cobertura para Gram-negativos
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #6366f1;">
+                      <h6 style="color: #4338ca; margin-bottom: 8px; font-size: 14px;">🦠 Tem anaeróbios?</h6>
+                      <p style="font-size: 13px; color: #4338ca; margin: 0;">
+                        Considerar cobertura para anaeróbios
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #f59e0b;">
+                      <h6 style="color: #92400e; margin-bottom: 8px; font-size: 14px;">⭐ Tem atípicos?</h6>
+                      <p style="font-size: 13px; color: #78350f; margin: 0;">
+                        Considerar cobertura para atípicos
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">🎯 Baseado nisso, faça sua escolha</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <p style="font-size: 14px; line-height: 1.6; color: #065f46; margin: 0;">
+                      💡 Vamos abordar isso logo nas próximas lições!
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #e0e7ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #6366f1;">
+                  <h4 style="color: #4338ca; margin-bottom: 15px; font-size: 17px;">📊 Fatores a Considerar</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; border: 2px solid #6366f1;">
+                      <h6 style="color: #4338ca; margin-bottom: 8px; font-size: 14px;">🎯 Sítio Anatômico</h6>
+                      <p style="font-size: 12px; color: #4338ca; margin: 0;">
+                        Local da infecção
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; border: 2px solid #10b981;">
+                      <h6 style="color: #047857; margin-bottom: 8px; font-size: 14px;">🦠 Patógenos Prováveis</h6>
+                      <p style="font-size: 12px; color: #047857; margin: 0;">
+                        Bactérias esperadas
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; border: 2px solid #f59e0b;">
+                      <h6 style="color: #92400e; margin-bottom: 8px; font-size: 14px;">👤 Fatores do Paciente</h6>
+                      <p style="font-size: 12px; color: #92400e; margin: 0;">
+                        Condições individuais
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> A <strong>escolha do antibiótico deve ser baseada no sítio anatômico, patógenos prováveis e fatores do paciente</strong>. Se tiver <strong>suspeita de infecção em um determinado sítio</strong>, pense: <strong>quais as bactérias que habitualmente estão presentes nessa parte do corpo?</strong> <strong>Gram-positivo? Gram-negativo? Tem anaeróbios ou atípicos?</strong> Baseado nisso, <strong>faça sua escolha</strong>. Vamos abordar isso logo nas próximas lições!
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é o raciocínio clínico correto para escolher o antibiótico adequado?",
+                options: [
+                  "A) Escolher sempre o antibiótico de espectro mais amplo disponível",
+                  "B) Basear a escolha no sítio anatômico, patógenos prováveis (Gram-positivo? Gram-negativo? Anaeróbios? Atípicos?) e fatores do paciente",
+                  "C) Escolher o antibiótico mais barato disponível",
+                  "D) Prescrever sempre o mesmo antibiótico independentemente do sítio de infecção"
+                ],
+                correct: 1,
+                explanation: "O raciocínio clínico correto para escolher o antibiótico adequado é basear a escolha no sítio anatômico, patógenos prováveis e fatores do paciente. Se tiver suspeita de infecção em um determinado sítio, pense: quais as bactérias que habitualmente estão presentes nessa parte do corpo? Gram-positivo? Gram-negativo? Tem anaeróbios ou atípicos? Baseado nisso, faça sua escolha. Este raciocínio permite uma antibioticoterapia racional e direcionada, evitando o uso de espectro mais amplo que o necessário e reduzindo resistência bacteriana."
+              }
             }
           ]
         },
