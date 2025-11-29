@@ -11902,6 +11902,145 @@ const App = () => {
                 correct: 1,
                 explanation: "Solicitar urocultura para paciente assintomático é considerada má prática pelo movimento Choose Wisely porque a bactéria é um componente natural do corpo. Temos cerca de 10 trilhões de células e 5 a 10 vezes mais que isso em número de bactérias. Portanto, o fato de encontrar uma bactéria em uma cultura não autoriza a dizer que encontrou um patógeno, especialmente se o meio não for estéril (como a urina). A bacteriúria assintomática é o maior exemplo disso no ambulatório. O movimento Choose Wisely promove práticas médicas baseadas em evidências, evitando exames e tratamentos desnecessários."
               }
+            },
+            {
+              title: "Uso Racional",
+              content: `
+                <div style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">⚖️ Uso Racional</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #fee2e2;">
+                    O uso racional de antibióticos é essencial para prevenir resistência.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">⏸️ Quando Não é Urgência</h4>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                    <h5 style="color: #1e40af; margin-bottom: 15px; font-size: 16px;">⏳ Espere!</h5>
+                    
+                    <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                      <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                        Se <strong>não é urgência</strong>, tem tempo para <strong>continuar a investigação</strong> e <strong>ponderar outras possibilidades</strong> - <strong>espere!</strong>
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                      <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                        <strong>Não abra mão do diagnóstico correto tão facilmente!</strong>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #dc2626;">
+                  <h4 style="color: #991b1b; margin-bottom: 15px; font-size: 17px;">❌ Mito: "Pecar por Excesso"</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <p style="font-size: 14px; line-height: 1.6; color: #7f1d1d; margin: 0;">
+                      Alguns dizem que deve-se prescrever o antibiótico para <strong>"pecar por excesso"</strong>.
+                    </p>
+                  </div>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #dc2626;">
+                    <h5 style="color: #991b1b; margin-bottom: 12px; font-size: 15px;">⚠️ Realidade</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #7f1d1d; margin: 0;">
+                      Isso seria correto se o <strong>próprio excesso não fosse o maior dos pecados!</strong>
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 15px; font-size: 17px;">🚨 Consequências do Uso Irracional</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #f59e0b;">
+                      <h6 style="color: #92400e; margin-bottom: 8px; font-size: 14px;">🦠 Resistência Bacteriana</h6>
+                      <p style="font-size: 13px; color: #78350f; margin: 0;">
+                        Uso indiscriminado aumenta resistência
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #f59e0b;">
+                      <h6 style="color: #92400e; margin-bottom: 8px; font-size: 14px;">⚠️ Efeitos Adversos</h6>
+                      <p style="font-size: 13px; color: #78350f; margin: 0;">
+                        Exposição desnecessária a efeitos colaterais
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #f59e0b;">
+                      <h6 style="color: #92400e; margin-bottom: 8px; font-size: 14px;">💰 Custos</h6>
+                      <p style="font-size: 13px; color: #78350f; margin: 0;">
+                        Aumento de custos desnecessários
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #f59e0b;">
+                      <h6 style="color: #92400e; margin-bottom: 8px; font-size: 14px;">🦠 Disbiose</h6>
+                      <p style="font-size: 13px; color: #78350f; margin: 0;">
+                        Alteração da microbiota normal
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">✅ Princípios do Uso Racional</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        ✅ Prescrever apenas quando necessário
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        ✅ Buscar diagnóstico correto antes de prescrever
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        ✅ Esperar quando não é urgência
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        ✅ Lembrar que o excesso é o maior dos pecados
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #e0e7ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #6366f1;">
+                  <h4 style="color: #4338ca; margin-bottom: 15px; font-size: 17px;">💭 Reflexão</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <p style="font-size: 14px; line-height: 1.6; color: #4338ca; margin: 0; font-style: italic;">
+                      "Isso seria correto se o próprio excesso não fosse o maior dos pecados!"
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> O <strong>uso racional de antibióticos é essencial para prevenir resistência</strong>. Se <strong>não é urgência</strong>, tem tempo para <strong>continuar a investigação</strong> e <strong>ponderar outras possibilidades</strong> - <strong>espere!</strong> <strong>Não abra mão do diagnóstico correto tão facilmente!</strong> Alguns dizem que deve-se prescrever o antibiótico para "pecar por excesso". Isso seria correto se o <strong>próprio excesso não fosse o maior dos pecados!</strong>
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que \"pecar por excesso\" ao prescrever antibióticos é considerado um problema?",
+                options: [
+                  "A) Porque os antibióticos são muito caros",
+                  "B) Porque o próprio excesso é o maior dos pecados, causando resistência bacteriana, efeitos adversos, custos desnecessários e disbiose",
+                  "C) Porque os antibióticos não são eficazes",
+                  "D) Porque os pacientes não gostam de tomar antibióticos"
+                ],
+                correct: 1,
+                explanation: "\"Pecar por excesso\" ao prescrever antibióticos é considerado um problema porque o próprio excesso é o maior dos pecados. O uso irracional de antibióticos causa: resistência bacteriana (uso indiscriminado aumenta resistência), efeitos adversos (exposição desnecessária a efeitos colaterais), custos desnecessários e disbiose (alteração da microbiota normal). O uso racional de antibióticos é essencial para prevenir resistência. Se não é urgência, tem tempo para continuar a investigação e ponderar outras possibilidades - espere! Não abra mão do diagnóstico correto tão facilmente!"
+              }
             }
           ]
         },
