@@ -12441,8 +12441,8 @@ const App = () => {
         {
           id: 16,
           title: "Infecções da Pele",
-          duration: "56 min",
-          xp: 280,
+          duration: "64 min",
+          xp: 320,
           sections: [
             {
               title: "Celulite",
@@ -13018,6 +13018,109 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "A amoxicilina sem clavulanato é suficiente para o tratamento da erisipela porque o principal agente etiológico é o Streptococcus pyogenes, que não produz beta-lactamase. Já na celulite, onde há suspeita de Staphylococcus aureus produtor de beta-lactamase, é preferível usar amoxicilina com clavulanato ou cefadroxil."
+              }
+            },
+            {
+              title: "Tratamento de Furúnculo/Abscesso",
+              content: `
+                <div style="background: linear-gradient(135deg, #fef9e7 0%, #fef5e7 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d68910; margin-bottom: 15px;">🩹 Tratamento de Furúnculo/Abscesso</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                    A abordagem depende da <strong>gravidade</strong> e do <strong>grau de disseminação</strong> da doença.
+                  </p>
+                  
+                  <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #166534; margin-bottom: 15px;">🟢 Casos Leves (pequeno <5cm ou drenagem espontânea)</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                      <div style="background: #bbf7d0; padding: 15px; border-radius: 8px; border-left: 4px solid #16a34a;">
+                        <h5 style="color: #14532d; margin-bottom: 10px;">🧵 Compressas Mornas</h5>
+                        <p style="font-size: 14px; line-height: 1.5;">
+                          Várias vezes ao dia para facilitar a drenagem
+                        </p>
+                      </div>
+                      <div style="background: #bbf7d0; padding: 15px; border-radius: 8px; border-left: 4px solid #16a34a;">
+                        <h5 style="color: #14532d; margin-bottom: 10px;">❌ Sem Antibióticos Sistêmicos</h5>
+                        <p style="font-size: 14px; line-height: 1.5;">
+                          Não há necessidade de antibióticos orais
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 15px;">🔴 Casos com Complicações</h4>
+                    <div style="background: #fecaca; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">🔪 Drenagem Cirúrgica</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Indicação:</strong> Abscesso >5cm
+                      </p>
+                    </div>
+                    <div style="background: #fecaca; padding: 15px; border-radius: 8px;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">💊 Antibiótico se houver:</h5>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                        <li>Febre</li>
+                        <li>Celulite circundante</li>
+                        <li>Imunossuppressão</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e0f2fe; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #075985; margin-bottom: 15px;">🎯 Localizado (poucas lesões)</h4>
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;">🧴 Mupirocina Tópica 2%</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Posologia:</strong> 2x/dia por 5 dias
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #b45309; margin-bottom: 15px;">⚠️ Disseminado ou Grave</h4>
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <h5 style="color: #92400e; margin-bottom: 10px;">💊 Antibiótico Oral</h5>
+                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
+                        <div style="background: #fcd34d; padding: 10px; border-radius: 6px;">
+                          <strong>Amoxicilina + Clavulanato</strong>
+                        </div>
+                        <div style="background: #fcd34d; padding: 10px; border-radius: 6px;">
+                          <strong>Cefalosporina de 1ª geração</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8daef; padding: 15px; border-radius: 8px; border-left: 4px solid #7d3c98; margin: 20px 0;">
+                    <h4 style="color: #6b21a8; margin-bottom: 10px;">📊 Fluxograma de Decisão</h4>
+                    <div style="background: #d7bde2; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; line-height: 1.8; margin: 0;">
+                        <strong>Pequeno (<5cm):</strong> Compressas mornas<br/>
+                        <strong>Grande (>5cm):</strong> Drenagem cirúrgica<br/>
+                        <strong>Localizado:</strong> Mupirocina tópica<br/>
+                        <strong>Disseminado/Grave:</strong> Antibiótico oral<br/>
+                        <strong>Com complicações:</strong> Antibiótico + drenagem
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>Casos leves</strong> (<5cm): compressas mornas, sem antibióticos. <strong>Casos com complicações</strong>: drenagem cirúrgica (>5cm) e antibiótico se houver febre, celulite circundante ou imunossuppressão. <strong>Localizado</strong>: mupirocina tópica 2% (2x/dia por 5 dias). <strong>Disseminado/grave</strong>: antibiótico oral (amoxicilina+clavulanato ou cefalosporina de 1ª geração).
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é a conduta adequada para um furúnculo pequeno (<5cm) sem complicações?",
+                options: [
+                  "Drenagem cirúrgica imediata",
+                  "Compressas mornas várias vezes ao dia, sem necessidade de antibióticos sistêmicos",
+                  "Antibiótico oral por 10 dias",
+                  "Mupirocina tópica associada a antibiótico oral"
+                ],
+                correct: 1,
+                explanation: "Para furúnculos pequenos (<5cm) sem complicações, a conduta é conservadora com compressas mornas várias vezes ao dia para facilitar a drenagem espontânea, sem necessidade de antibióticos sistêmicos. Antibióticos são indicados apenas se houver febre, celulite circundante ou imunossuppressão."
               }
             }
           ]
