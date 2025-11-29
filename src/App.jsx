@@ -13330,8 +13330,8 @@ const App = () => {
         {
           id: 17,
           title: "Infecções de Vias Aéreas Superiores (IVAS)",
-          duration: "40 min",
-          xp: 200,
+          duration: "48 min",
+          xp: 240,
           sections: [
             {
               title: "Introdução",
@@ -13928,6 +13928,133 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "O abscesso periamigdaliano apresenta um padrão característico: o paciente melhora inicialmente com o tratamento e volta a ter sintomas alguns dias depois. Nesse caso, deve-se investigar com tomografia e, se confirmado, reiniciar amoxicilina por duas semanas. Já na mononucleose, o paciente não melhora após o terceiro dia. Importante: nenhuma das duas situações é por resistência bacteriana!"
+              }
+            },
+            {
+              title: "Sinusite Bacteriana Aguda",
+              content: `
+                <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">👃 Sinusite Bacteriana Aguda</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                    Diferenciar sinusite viral de bacteriana é fundamental para evitar o uso desnecessário de antibióticos.
+                  </p>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 20px 0;">
+                    <h4 style="color: #b45309; margin-bottom: 10px;">⚠️ Importante</h4>
+                    <p style="font-size: 15px; line-height: 1.6; margin: 0;">
+                      <strong>A maioria das sinusites é viral!</strong> Não prescreva antibióticos sem critérios adequados.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #1e40af; margin-bottom: 15px;">🔍 Diagnóstico de Sinusite Bacteriana</h4>
+                    <p style="font-size: 14px; line-height: 1.5; margin-bottom: 15px;">
+                      Para considerar <strong>etiologia bacteriana</strong>, observe:
+                    </p>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 15px;">
+                      <div style="background: #bfdbfe; padding: 15px; border-radius: 8px; border-left: 4px solid #2563eb;">
+                        <h5 style="color: #1e3a8a; margin-bottom: 10px;">📅 Sintomas Persistentes</h5>
+                        <p style="font-size: 14px; line-height: 1.5;">
+                          <strong>>10 dias sem melhora</strong>
+                        </p>
+                      </div>
+                      <div style="background: #bfdbfe; padding: 15px; border-radius: 8px; border-left: 4px solid #2563eb;">
+                        <h5 style="color: #1e3a8a; margin-bottom: 10px;">🔄 "Double Sickening"</h5>
+                        <p style="font-size: 14px; line-height: 1.5;">
+                          <strong>Piora após melhora inicial</strong> (sugere superação bacteriana)
+                        </p>
+                      </div>
+                      <div style="background: #bfdbfe; padding: 15px; border-radius: 8px; border-left: 4px solid #2563eb;">
+                        <h5 style="color: #1e3a8a; margin-bottom: 10px;">🦷 Dor Localizada</h5>
+                        <p style="font-size: 14px; line-height: 1.5;">
+                          <strong>Dor localizada e irradiada para dentes</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 15px;">❌ Mito Comum</h4>
+                    <div style="background: #fecaca; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">⚠️ Secreção Purulenta ≠ Infecção Bacteriana</h5>
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        <strong>Apenas a presença de secreção purulenta NÃO indica infecção bacteriana!</strong>
+                      </p>
+                      <div style="background: #fca5a5; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                          O <strong>pus na IVAS de natureza viral</strong> provém de <strong>leucócitos mortos</strong> durante a inflamação contra o vírus. Não é sinônimo de infecção bacteriana!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 15px; border-radius: 8px; border-left: 4px solid #1abc9c; margin: 20px 0;">
+                    <h4 style="color: #0e6655; margin-bottom: 10px;">📊 Critérios para Antibioticoterapia</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+                      <thead>
+                        <tr style="background: #d1f2eb;">
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Critério</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Descrição</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Indica ATB?</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Sintomas >10 dias</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Sem melhora após 10 dias</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">✅ Sim</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Double sickening</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Piora após melhora inicial</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">✅ Sim</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Dor localizada</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Irradiada para dentes</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">✅ Sim</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Secreção purulenta</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Apenas secreção amarela/verde</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">❌ Não (sozinha)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #e8daef; padding: 15px; border-radius: 8px; border-left: 4px solid #7d3c98; margin: 20px 0;">
+                    <h4 style="color: #6b21a8; margin-bottom: 10px;">📝 Resumo dos Critérios</h4>
+                    <div style="background: #d7bde2; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; line-height: 1.8; margin: 0;">
+                        <strong>✅ Indicam sinusite bacteriana:</strong><br/>
+                        1. Sintomas persistentes >10 dias sem melhora<br/>
+                        2. Piora após melhora inicial ("double sickening")<br/>
+                        3. Dor localizada e irradiada para dentes<br/><br/>
+                        <strong>❌ Não indicam sozinhos:</strong><br/>
+                        Secreção purulenta (pode ser viral!)
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>A maioria das sinusites é viral!</strong> Para considerar etiologia bacteriana, observe: sintomas persistentes >10 dias sem melhora, piora após melhora inicial ("double sickening"), ou dor localizada irradiada para dentes. <strong>Importante:</strong> Apenas a presença de secreção purulenta NÃO indica infecção bacteriana, pois o pus pode ser de leucócitos mortos na inflamação viral.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Por que a presença de secreção purulenta sozinha NÃO indica infecção bacteriana na sinusite?",
+                options: [
+                  "Porque a secreção purulenta sempre indica infecção fúngica",
+                  "Porque o pus na IVAS viral provém de leucócitos mortos durante a inflamação contra o vírus",
+                  "Porque a secreção purulenta é sempre de origem alérgica",
+                  "Porque a secreção purulenta indica apenas desidratação"
+                ],
+                correct: 1,
+                explanation: "A presença de secreção purulenta sozinha NÃO indica infecção bacteriana porque o pus na IVAS de natureza viral provém de leucócitos mortos durante a inflamação contra o vírus. Para considerar sinusite bacteriana, é necessário observar outros critérios: sintomas persistentes >10 dias, piora após melhora inicial (\"double sickening\"), ou dor localizada irradiada para dentes."
               }
             }
           ]
