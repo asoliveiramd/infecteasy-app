@@ -12304,6 +12304,137 @@ const App = () => {
                 correct: 1,
                 explanation: "O raciocínio clínico correto para escolher o antibiótico adequado é basear a escolha no sítio anatômico, patógenos prováveis e fatores do paciente. Se tiver suspeita de infecção em um determinado sítio, pense: quais as bactérias que habitualmente estão presentes nessa parte do corpo? Gram-positivo? Gram-negativo? Tem anaeróbios ou atípicos? Baseado nisso, faça sua escolha. Este raciocínio permite uma antibioticoterapia racional e direcionada, evitando o uso de espectro mais amplo que o necessário e reduzindo resistência bacteriana."
               }
+            },
+            {
+              title: "Benefício x Malefício",
+              content: `
+                <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">⚖️ Benefício x Malefício</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #fef3c7;">
+                    O benefício deve sempre superar o malefício ao prescrever antibióticos.
+                  </p>
+                </div>
+                
+                <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #dc2626;">
+                  <h4 style="color: #991b1b; margin-bottom: 15px; font-size: 17px;">❌ Exemplos de Uso Desnecessário</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <h5 style="color: #991b1b; margin-bottom: 12px; font-size: 15px;">❌ Clavulanato para Amigdalite Bacteriana</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #7f1d1d; margin: 0;">
+                      Não tem por que usar <strong>clavulanato</strong> para amigdalite bacteriana se o agente infeccioso <strong>não produz β-lactamase!</strong>
+                    </p>
+                  </div>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <h5 style="color: #991b1b; margin-bottom: 12px; font-size: 15px;">❌ Antibiótico para IVAS na Primeira Semana</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #7f1d1d; margin: 0;">
+                      Não tem por que usar antibiótico numa <strong>IVAS</strong> em um paciente que tem secreção, <strong>mesmo purulenta</strong>, se <strong>ainda está na primeira semana de doença!</strong>
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 15px; font-size: 17px;">⚠️ Exemplo: Amoxacilina e Infecção Urinária</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <h5 style="color: #92400e; margin-bottom: 12px; font-size: 15px;">❓ Pergunta</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0;">
+                      Uma mulher que usa <strong>amoxacilina</strong> aumenta substancialmente a chance de ter uma <strong>infecção urinária nos próximos dois meses</strong>. Por quê?
+                    </p>
+                  </div>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #f59e0b;">
+                    <h5 style="color: #92400e; margin-bottom: 12px; font-size: 15px;">✅ Resposta</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0;">
+                      A amoxacilina <strong>mata as bactérias naturais da bexiga</strong> e <strong>facilita a entrada de patógenos</strong> que vão ocupar seu lugar.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #e0e7ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #6366f1;">
+                  <h4 style="color: #4338ca; margin-bottom: 15px; font-size: 17px;">🧬 Mecanismo: Disbiose</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <h6 style="color: #047857; margin-bottom: 8px; font-size: 14px;">1️⃣ Estado Normal</h6>
+                      <p style="font-size: 13px; color: #065f46; margin: 0;">
+                        Bactérias naturais (microbiota) ocupam a bexiga e protegem contra patógenos
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #f59e0b;">
+                      <h6 style="color: #92400e; margin-bottom: 8px; font-size: 14px;">2️⃣ Uso de Antibiótico</h6>
+                      <p style="font-size: 13px; color: #78350f; margin: 0;">
+                        Amoxacilina mata as bactérias naturais da bexiga (disbiose)
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #dc2626; border: 2px solid #dc2626;">
+                      <h6 style="color: #991b1b; margin-bottom: 8px; font-size: 14px;">3️⃣ Entrada de Patógenos</h6>
+                      <p style="font-size: 13px; color: #7f1d1d; margin: 0; font-weight: bold;">
+                        Patógenos ocupam o lugar das bactérias naturais, aumentando risco de ITU
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">⚖️ Princípio do Benefício x Malefício</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        ✅ O benefício deve sempre superar o malefício
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        ✅ Não usar espectro mais amplo que o necessário
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        ✅ Não usar antibiótico quando não necessário
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        ✅ Considerar os efeitos colaterais (disbiose, resistência, etc.)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #dc2626;">
+                  <h4 style="color: #991b1b; margin-bottom: 15px; font-size: 17px;">⚠️ Cuidado: Tenha Segurança nas Suas Condutas!</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <p style="font-size: 14px; line-height: 1.6; color: #7f1d1d; margin: 0;">
+                      Sempre avalie se o <strong>benefício supera o malefício</strong> antes de prescrever antibióticos. Lembre-se dos <strong>efeitos colaterais</strong> como <strong>disbiose</strong>, <strong>resistência bacteriana</strong> e <strong>aumento do risco de infecções futuras</strong>.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> O <strong>benefício deve sempre superar o malefício</strong>. Não tem por que usar <strong>clavulanato</strong> para amigdalite bacteriana se o agente infeccioso <strong>não produz β-lactamase!</strong> Não tem por que usar antibiótico numa <strong>IVAS</strong> em um paciente que tem secreção, <strong>mesmo purulenta</strong>, se <strong>ainda está na primeira semana de doença!</strong> Uma mulher que usa <strong>amoxacilina</strong> aumenta substancialmente a chance de ter uma <strong>infecção urinária nos próximos dois meses</strong> porque a amoxacilina <strong>mata as bactérias naturais da bexiga</strong> e <strong>facilita a entrada de patógenos</strong>. <strong>Cuidado: tenha segurança nas suas condutas!</strong>
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que uma mulher que usa amoxacilina aumenta substancialmente a chance de ter uma infecção urinária nos próximos dois meses?",
+                options: [
+                  "A) Porque a amoxacilina é um antibiótico fraco que não trata infecções",
+                  "B) Porque a amoxacilina mata as bactérias naturais da bexiga (disbiose) e facilita a entrada de patógenos que vão ocupar seu lugar",
+                  "C) Porque a amoxacilina causa resistência bacteriana imediata",
+                  "D) Porque a amoxacilina aumenta a produção de β-lactamase"
+                ],
+                correct: 1,
+                explanation: "Uma mulher que usa amoxacilina aumenta substancialmente a chance de ter uma infecção urinária nos próximos dois meses porque a amoxacilina mata as bactérias naturais da bexiga (causando disbiose) e facilita a entrada de patógenos que vão ocupar seu lugar. Este é um exemplo clássico de como o uso desnecessário de antibióticos pode causar malefícios que superam os benefícios. O princípio do benefício x malefício deve sempre guiar a prescrição de antibióticos: não usar espectro mais amplo que o necessário, não usar antibiótico quando não necessário, e sempre considerar os efeitos colaterais como disbiose, resistência bacteriana e aumento do risco de infecções futuras."
+              }
             }
           ]
         },
