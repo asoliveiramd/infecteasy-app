@@ -13330,8 +13330,8 @@ const App = () => {
         {
           id: 17,
           title: "Infecções de Vias Aéreas Superiores (IVAS)",
-          duration: "24 min",
-          xp: 120,
+          duration: "32 min",
+          xp: 160,
           sections: [
             {
               title: "Introdução",
@@ -13676,6 +13676,125 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "A otite média aguda apresenta-se ao exame otoscópico com membrana timpânica hiperemiada (avermelhada) e abaulada (projetada para fora), indicando acúmulo de secreção purulenta no ouvido médio. Outros sintomas incluem otalgia, febre e irritabilidade, especialmente em crianças."
+              }
+            },
+            {
+              title: "Amigdalite",
+              content: `
+                <div style="background: linear-gradient(135deg, #fef9e7 0%, #fef5e7 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d68910; margin-bottom: 15px;">🩺 Amigdalite - Tratamento</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                    Compreender a <strong>etiologia</strong> e o <strong>tratamento adequado</strong> da amigdalite bacteriana é fundamental para evitar o uso desnecessário de inibidores de beta-lactamase.
+                  </p>
+                  
+                  <div style="background: #e8daef; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #6b21a8; margin-bottom: 15px;">🦠 Causa</h4>
+                    <div style="background: #ddd6fe; padding: 15px; border-radius: 8px; border-left: 4px solid #7c3aed; margin-bottom: 15px;">
+                      <h5 style="color: #5b21b6; margin-bottom: 10px;">🦠 <em>Streptococcus pyogenes</em></h5>
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        <strong>Estreptococo beta-hemolítico do grupo A</strong>
+                      </p>
+                      <div style="background: #c4b5fd; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; line-height: 1.5; margin: 0;">
+                          ✅ <strong>Essa bactéria NÃO produz beta-lactamase!</strong>
+                        </p>
+                      </div>
+                    </div>
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <p style="font-size: 14px; line-height: 1.5; margin: 0;">
+                        ⚠️ <strong>Não há porque usar ácido clavulânico</strong> (inibidor de beta-lactamase) no tratamento da amigdalite estreptocócica.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #166534; margin-bottom: 15px;">💊 Tratamento</h4>
+                    <div style="background: #bbf7d0; padding: 15px; border-radius: 8px; border-left: 4px solid #16a34a; margin-bottom: 15px;">
+                      <h5 style="color: #14532d; margin-bottom: 10px;">✅ Primeira Escolha</h5>
+                      <div style="background: #86efac; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 15px; line-height: 1.6; margin: 0;">
+                          <strong>💊 Amoxicilina SEM clavulanato</strong><br/>
+                          <span style="font-size: 14px;">500mg de 8/8h por uma semana (7 dias)</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div style="background: #bbf7d0; padding: 15px; border-radius: 8px; border-left: 4px solid #16a34a;">
+                      <h5 style="color: #14532d; margin-bottom: 10px;">🔄 Para Alérgicos</h5>
+                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
+                        <div style="background: #86efac; padding: 12px; border-radius: 6px;">
+                          <strong>💊 Azitromicina</strong><br/>
+                          <span style="font-size: 13px;">500mg ao dia<br/>por 3-5 dias</span>
+                        </div>
+                        <div style="background: #86efac; padding: 12px; border-radius: 6px;">
+                          <strong>💊 Clindamicina</strong><br/>
+                          <span style="font-size: 13px;">300mg de 8/8h<br/>por uma semana</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7; margin: 20px 0;">
+                    <h4 style="color: #075985; margin-bottom: 10px;">💡 Racional Terapêutico</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      Como o <em>S. pyogenes</em> <strong>não produz beta-lactamase</strong>, a amoxicilina simples (sem clavulanato) é suficiente e eficaz. O uso de amoxicilina + clavulanato seria desnecessário, aumentaria custos e o risco de efeitos adversos (especialmente diarreia).
+                    </p>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 15px; border-radius: 8px; border-left: 4px solid #1abc9c; margin: 20px 0;">
+                    <h4 style="color: #0e6655; margin-bottom: 10px;">📊 Resumo do Tratamento</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+                      <thead>
+                        <tr style="background: #d1f2eb;">
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Situação</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Antibiótico</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Posologia</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Primeira escolha</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Amoxicilina</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">500mg 8/8h por 7 dias</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Alérgico (opção 1)</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Azitromicina</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">500mg 1x/dia por 3-5 dias</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Alérgico (opção 2)</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Clindamicina</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">300mg 8/8h por 7 dias</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626; margin: 20px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 10px;">❌ Evitar</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>Amoxicilina + Clavulanato</strong> é desnecessário para amigdalite estreptocócica, pois o <em>S. pyogenes</em> não produz beta-lactamase. O clavulanato aumenta custos e efeitos adversos sem benefício adicional.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>Causa:</strong> <em>S. pyogenes</em> (não produz beta-lactamase). <strong>Tratamento:</strong> Amoxicilina 500mg 8/8h por 7 dias (sem clavulanato). <strong>Alérgicos:</strong> Azitromicina 500mg/dia por 3-5 dias ou Clindamicina 300mg 8/8h por 7 dias. Não há necessidade de usar ácido clavulânico.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Por que não é necessário usar amoxicilina com clavulanato no tratamento da amigdalite estreptocócica?",
+                options: [
+                  "Porque o S. pyogenes é resistente ao clavulanato",
+                  "Porque o S. pyogenes não produz beta-lactamase",
+                  "Porque a amoxicilina sozinha não é eficaz",
+                  "Porque o clavulanato aumenta a resistência bacteriana"
+                ],
+                correct: 1,
+                explanation: "O S. pyogenes (Estreptococo beta-hemolítico do grupo A) não produz beta-lactamase, portanto a amoxicilina simples é suficiente e eficaz. O uso de clavulanato (inibidor de beta-lactamase) seria desnecessário, aumentando custos e o risco de efeitos adversos, especialmente diarreia, sem benefício adicional."
               }
             }
           ]
