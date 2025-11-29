@@ -12441,8 +12441,8 @@ const App = () => {
         {
           id: 16,
           title: "Infecções da Pele",
-          duration: "32 min",
-          xp: 160,
+          duration: "40 min",
+          xp: 200,
           sections: [
             {
               title: "Celulite",
@@ -12746,6 +12746,87 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "Furúnculos de repetição requerem descolonização para eliminar o Staphylococcus aureus colonizador, geralmente presente nas narinas. Medidas incluem mupirocina nasal, banhos com clorexidina ou hipoclorito, e troca diária de roupas de cama e toalhas."
+              }
+            },
+            {
+              title: "Impetigo",
+              content: `
+                <div style="background: linear-gradient(135deg, #fef9e7 0%, #fef5e7 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d68910; margin-bottom: 15px;">🦠 Impetigo</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    O impetigo é uma <strong>infecção superficial altamente contagiosa</strong>. Caracteriza-se por lesões vesicopustulosas que evoluem para <strong>crostas melicéricas (cor de mel)</strong>.
+                  </p>
+                  
+                  <div style="background: #fef5e7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #b9770e; margin-bottom: 10px;">👁️ Características Clínicas</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+                      <div style="background: #fdebd0; padding: 10px; border-radius: 6px;">
+                        <strong>🦠 Superfície</strong><br/>
+                        <span style="font-size: 14px;">Infecção superficial</span>
+                      </div>
+                      <div style="background: #fdebd0; padding: 10px; border-radius: 6px;">
+                        <strong>⚠️ Contágio</strong><br/>
+                        <span style="font-size: 14px;">Altamente contagioso</span>
+                      </div>
+                      <div style="background: #fdebd0; padding: 10px; border-radius: 6px;">
+                        <strong>🍯 Crostas</strong><br/>
+                        <span style="font-size: 14px;">Melicéricas (cor de mel)</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #117864; margin-bottom: 10px;">🦠 Tipos de Impetigo</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                      <div style="background: #d1f2eb; padding: 15px; border-radius: 8px; border-left: 4px solid #1abc9c;">
+                        <h5 style="color: #0e6655; margin-bottom: 10px;">🟡 Bolhoso</h5>
+                        <p style="font-size: 14px; line-height: 1.5;">
+                          Causado por <strong><em>Staphylococcus aureus</em></strong>
+                        </p>
+                      </div>
+                      <div style="background: #d1f2eb; padding: 15px; border-radius: 8px; border-left: 4px solid #1abc9c;">
+                        <h5 style="color: #0e6655; margin-bottom: 10px;">🟡 Não Bolhoso</h5>
+                        <p style="font-size: 14px; line-height: 1.5;">
+                          Causado por <strong><em>Streptococcus pyogenes</em></strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fdebd0; padding: 15px; border-radius: 8px; border-left: 4px solid #d68910; margin: 15px 0;">
+                    <h4 style="color: #b9770e; margin-bottom: 10px;">👶 Epidemiologia</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>Comum em crianças</strong> e em <strong>condições de higiene precária</strong>.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #e8daef; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #7d3c98; margin-bottom: 10px;">🔍 Evolução das Lesões</h4>
+                    <div style="background: #d7bde2; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; line-height: 1.5; margin: 0;">
+                        <strong>Lesões vesicopustulosas</strong> → <strong>Crostas melicéricas (cor de mel)</strong>
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 15px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      Impetigo é uma <strong>infecção superficial altamente contagiosa</strong> caracterizada por <strong>crostas melicéricas (cor de mel)</strong>. Pode ser <strong>bolhoso</strong> (<em>S. aureus</em>) ou <strong>não bolhoso</strong> (<em>S. pyogenes</em>). Comum em <strong>crianças</strong> e em <strong>condições de higiene precária</strong>.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é a característica mais marcante das lesões de impetigo?",
+                options: [
+                  "Bordas bem definidas e elevadas",
+                  "Crostas melicéricas (cor de mel)",
+                  "Nódulo doloroso com coleção purulenta central",
+                  "Lesões profundas que atingem o tecido subcutâneo"
+                ],
+                correct: 1,
+                explanation: "O impetigo é caracterizado por lesões vesicopustulosas que evoluem para crostas melicéricas (cor de mel). Trata-se de uma infecção superficial altamente contagiosa, comum em crianças e em condições de higiene precária."
               }
             }
           ]
