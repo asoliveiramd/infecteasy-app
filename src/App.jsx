@@ -12441,8 +12441,8 @@ const App = () => {
         {
           id: 16,
           title: "Infecções da Pele",
-          duration: "64 min",
-          xp: 320,
+          duration: "72 min",
+          xp: 360,
           sections: [
             {
               title: "Celulite",
@@ -13121,6 +13121,109 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "Para furúnculos pequenos (<5cm) sem complicações, a conduta é conservadora com compressas mornas várias vezes ao dia para facilitar a drenagem espontânea, sem necessidade de antibióticos sistêmicos. Antibióticos são indicados apenas se houver febre, celulite circundante ou imunossuppressão."
+              }
+            },
+            {
+              title: "Tratamento de Impetigo",
+              content: `
+                <div style="background: linear-gradient(135deg, #fef9e7 0%, #fef5e7 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d68910; margin-bottom: 15px;">🧴 Tratamento de Impetigo</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                    A escolha (<strong>tópico versus sistêmico</strong>) depende da <strong>quantidade de lesões</strong>, <strong>extensão</strong> e <strong>presença de sintomas sistêmicos</strong>.
+                  </p>
+                  
+                  <div style="background: #e0f2fe; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #075985; margin-bottom: 15px;">🧹 Medidas Gerais</h4>
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;">💧 Higiene Local</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Lavagem suave das lesões <strong>2–3x/dia</strong> com água e sabão neutro, removendo crostas <strong>sem fricção agressiva</strong>.
+                      </p>
+                    </div>
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;">⚠️ Prevenção de Contágio</h5>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                        <li>Evitar coçar</li>
+                        <li>Manter unhas curtas</li>
+                        <li>Não compartilhar toalhas/objetos pessoais</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #166534; margin-bottom: 15px;">🧴 Tratamento Tópico</h4>
+                    <div style="background: #bbf7d0; padding: 15px; border-radius: 8px; border-left: 4px solid #16a34a;">
+                      <h5 style="color: #14532d; margin-bottom: 10px;">🎯 Indicação</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Quadros <strong>leves/localizados</strong>:
+                      </p>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px; margin-top: 8px;">
+                        <li>Poucas lesões</li>
+                        <li>Área limitada</li>
+                        <li>Sem febre</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #b45309; margin-bottom: 15px;">💊 Tratamento Sistêmico</h4>
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                      <h5 style="color: #92400e; margin-bottom: 10px;">🎯 Indicações</h5>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                        <li>Muitas lesões</li>
+                        <li>Múltiplas áreas acometidas</li>
+                        <li>Impetigo bolhoso</li>
+                        <li>Falha do tratamento tópico</li>
+                        <li>Condições sistêmicas (febre, mal-estar, linfadenomegalia)</li>
+                      </ul>
+                    </div>
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px;">
+                      <h5 style="color: #92400e; margin-bottom: 10px;">💊 Escolhas Terapêuticas</h5>
+                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
+                        <div style="background: #fcd34d; padding: 10px; border-radius: 6px;">
+                          <strong>Cefadroxil</strong>
+                        </div>
+                        <div style="background: #fcd34d; padding: 10px; border-radius: 6px;">
+                          <strong>Amoxicilina/Clavulanato</strong>
+                        </div>
+                      </div>
+                      <p style="font-size: 13px; line-height: 1.4; margin-top: 10px; color: #92400e;">
+                        <strong>Alternativas:</strong> Macrolídeos ou outros esquemas em caso de alergia ou suspeita de MRSA
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8daef; padding: 15px; border-radius: 8px; border-left: 4px solid #7d3c98; margin: 20px 0;">
+                    <h4 style="color: #6b21a8; margin-bottom: 10px;">📊 Fluxograma de Decisão</h4>
+                    <div style="background: #d7bde2; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; line-height: 1.8; margin: 0;">
+                        <strong>🟢 Leve/Localizado:</strong> Tratamento tópico + medidas gerais<br/>
+                        <strong>🟡 Moderado/Extenso:</strong> Tratamento sistêmico<br/>
+                        <strong>🔴 Bolhoso:</strong> Tratamento sistêmico<br/>
+                        <strong>⚠️ Sintomas sistêmicos:</strong> Tratamento sistêmico<br/>
+                        <strong>🔁 Falha tópico:</strong> Tratamento sistêmico
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>Medidas gerais:</strong> Higiene local 2–3x/dia, evitar coçar, não compartilhar objetos. <strong>Tratamento tópico:</strong> Indicado para quadros leves/localizados. <strong>Tratamento sistêmico:</strong> Indicado quando há muitas lesões, múltiplas áreas, impetigo bolhoso, falha do tópico ou sintomas sistêmicos. <strong>Escolhas:</strong> Cefadroxil ou amoxicilina/clavulanato; macrolídeos em alergia ou suspeita de MRSA.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Quando está indicado o tratamento sistêmico para impetigo?",
+                options: [
+                  "Apenas quando há febre alta e hospitalização",
+                  "Em todos os casos de impetigo, independentemente da extensão",
+                  "Quando há muitas lesões, múltiplas áreas acometidas, impetigo bolhoso, falha do tratamento tópico ou condições sistêmicas",
+                  "Apenas em crianças menores de 2 anos"
+                ],
+                correct: 2,
+                explanation: "O tratamento sistêmico para impetigo está indicado quando há muitas lesões, múltiplas áreas acometidas, impetigo bolhoso, falha do tratamento tópico ou condições sistêmicas (febre, mal-estar, linfadenomegalia). Para quadros leves e localizados, o tratamento tópico é suficiente."
               }
             }
           ]
