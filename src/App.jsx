@@ -12441,8 +12441,8 @@ const App = () => {
         {
           id: 16,
           title: "Infecções da Pele",
-          duration: "24 min",
-          xp: 120,
+          duration: "32 min",
+          xp: 160,
           sections: [
             {
               title: "Celulite",
@@ -12659,6 +12659,93 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "A erisipela tem bordas bem definidas e elevadas, enquanto a celulite apresenta limites imprecisos que se misturam com a pele adjacente. A diferenciação baseia-se principalmente na profundidade da infecção e na delimitação das bordas."
+              }
+            },
+            {
+              title: "Furúnculo/Abscesso",
+              content: `
+                <div style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">🟡 Furúnculo/Abscesso</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    Trata-se de <strong>infecção localizada e purulenta</strong> do folículo piloso e tecido circundante (furúnculo) ou formação de cavidade com pus (abscesso).
+                  </p>
+                  
+                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #b91c1c; margin-bottom: 10px;">🔍 Definições</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                      <div style="background: #fecaca; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                        <h5 style="color: #991b1b; margin-bottom: 10px;">🟡 Furúnculo</h5>
+                        <p style="font-size: 14px; line-height: 1.5;">
+                          <strong>Infecção localizada e purulenta</strong> do <strong>folículo piloso</strong> e tecido circundante.
+                        </p>
+                      </div>
+                      <div style="background: #fecaca; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                        <h5 style="color: #991b1b; margin-bottom: 10px;">🟡 Abscesso</h5>
+                        <p style="font-size: 14px; line-height: 1.5;">
+                          <strong>Formação de cavidade com pus</strong> no tecido.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #1e40af; margin-bottom: 10px;">👁️ Apresentação Clínica</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+                      <div style="background: #bfdbfe; padding: 10px; border-radius: 6px;">
+                        <strong>🔴 Nódulo Doloroso</strong><br/>
+                        <span style="font-size: 14px;">Lesão elevada e dolorosa</span>
+                      </div>
+                      <div style="background: #bfdbfe; padding: 10px; border-radius: 6px;">
+                        <strong>🔴 Eritematoso</strong><br/>
+                        <span style="font-size: 14px;">Vermelhidão local</span>
+                      </div>
+                      <div style="background: #bfdbfe; padding: 10px; border-radius: 6px;">
+                        <strong>🟡 Coleção Purulenta Central</strong><br/>
+                        <span style="font-size: 14px;">Pus no centro da lesão</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #b45309; margin-bottom: 10px;">🔁 Furúnculos de Repetição</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      Os furúnculos podem ser <strong>de repetição</strong>. Se assim for, <strong>precisa de descolonização</strong>.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                    <h4 style="color: #991b1b; margin-bottom: 10px;">⚠️ Descolonização</h4>
+                    <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                      Quando há furúnculos de repetição, é necessário realizar <strong>descolonização</strong> para eliminar o <em>Staphylococcus aureus</em> colonizador, geralmente presente nas narinas.
+                    </p>
+                    <div style="background: #fecaca; padding: 10px; border-radius: 6px; margin-top: 10px;">
+                      <strong>💃 Medidas de Descolonização:</strong><br/>
+                      <span style="font-size: 14px;">
+                        • Mupirocina nasal<br/>
+                        • Banhos com clorexidina ou hipoclorito<br/>
+                        • Troca diária de roupas de cama e toalhas
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 15px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      Furúnculo/abscesso é uma <strong>infecção localizada e purulenta</strong> que se apresenta como <strong>nódulo doloroso, eritematoso com coleção purulenta central</strong>. Furúnculos de repetição requerem <strong>descolonização</strong>.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "O que deve ser feito quando o paciente apresenta furúnculos de repetição?",
+                options: [
+                  "Aumentar a dose do antibiótico",
+                  "Realizar descolonização para eliminar o Staphylococcus aureus colonizador",
+                  "Trocar para um antibiótico de espectro mais amplo",
+                  "Suspender o tratamento antibiótico"
+                ],
+                correct: 1,
+                explanation: "Furúnculos de repetição requerem descolonização para eliminar o Staphylococcus aureus colonizador, geralmente presente nas narinas. Medidas incluem mupirocina nasal, banhos com clorexidina ou hipoclorito, e troca diária de roupas de cama e toalhas."
               }
             }
           ]
