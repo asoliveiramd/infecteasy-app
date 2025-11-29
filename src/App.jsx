@@ -10888,6 +10888,80 @@ const App = () => {
         },
         {
           id: 11,
+          title: "Nitrofuranos",
+          duration: "8 min",
+          xp: 40,
+          cards: [
+            {
+              title: "Características gerais",
+              content: `
+                <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">💊 Nitrofuranos</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #fef3c7;">
+                    Antibióticos sintéticos com <strong style="color: white;">uso exclusivo para infecções urinárias</strong>
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">📊 Características Gerais</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                    <div style="background: #dbeafe; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                      <h5 style="color: #1e40af; margin-bottom: 8px; font-size: 15px;">🧬 Antibióticos Sintéticos</h5>
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                        <strong>Danificam o DNA bacteriano</strong>
+                      </p>
+                    </div>
+                    
+                    <div style="background: #dcfce7; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                      <h5 style="color: #047857; margin-bottom: 8px; font-size: 15px;">🔄 Múltiplos Mecanismos de Ação</h5>
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        O que <strong>dificulta desenvolvimento de resistência</strong>
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <h5 style="color: #92400e; margin-bottom: 8px; font-size: 15px;">💧 Uso Exclusivo para Infecções Urinárias</h5>
+                      <p style="font-size: 14px; color: #78350f; margin: 0;">
+                        Indicação específica e limitada
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #e0e7ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #6366f1;">
+                  <h4 style="color: #3730a3; margin-bottom: 15px; font-size: 17px;">💊 Único Representante de Uso Clínico</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #f59e0b;">
+                    <h5 style="color: #92400e; margin-bottom: 10px; font-size: 16px;">🟡 Nitrofurantoína</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0;">
+                      <strong>Única com uso clínico significativo</strong>
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> Os nitrofuranos são <strong>antibióticos sintéticos que danificam o DNA bacteriano</strong> através de <strong>múltiplos mecanismos de ação</strong>, o que dificulta o desenvolvimento de resistência. Seu <strong>uso é exclusivo para infecções urinárias</strong>. A <strong>nitrofurantoína</strong> é a única com uso clínico significativo.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que os nitrofuranos têm menor desenvolvimento de resistência bacteriana?",
+                options: [
+                  "A) Porque são usados apenas para infecções urinárias",
+                  "B) Porque possuem múltiplos mecanismos de ação, o que dificulta o desenvolvimento de resistência",
+                  "C) Porque são antibióticos naturais",
+                  "D) Porque têm baixa biodisponibilidade oral"
+                ],
+                correct: 1,
+                explanation: "Os nitrofuranos têm menor desenvolvimento de resistência bacteriana porque possuem múltiplos mecanismos de ação, o que dificulta o desenvolvimento de resistência. São antibióticos sintéticos que danificam o DNA bacteriano. Seu uso é exclusivo para infecções urinárias, e a nitrofurantoína é a única com uso clínico significativo."
+              }
+            }
+          ]
+        },
+        {
+          id: 12,
           title: "Infecções da Pele - Celulite e Erisipela",
           duration: "22 min",
           xp: 110,
