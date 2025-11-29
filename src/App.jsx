@@ -13330,8 +13330,8 @@ const App = () => {
         {
           id: 17,
           title: "Infecções de Vias Aéreas Superiores (IVAS)",
-          duration: "56 min",
-          xp: 280,
+          duration: "64 min",
+          xp: 320,
           sections: [
             {
               title: "Introdução",
@@ -14192,6 +14192,138 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "Na maioria das vezes, quando o paciente refere \"sinusites de repetição\", \"imunidade baixa\" ou \"gripado com frequência\", trata-se de uma rinosinusite de natureza alérgica, não de infecção bacteriana. Esses casos carecem de investigação (testes alérgicos, avaliação ORL) e não respondem a antibióticos. Cuidado para não prescrever antibióticos excessivamente!"
+              }
+            },
+            {
+              title: "Agentes Etiológicos das Sinusites Bacterianas",
+              content: `
+                <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🦠 Agentes Etiológicos das Sinusites Bacterianas</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                    Existem <strong>agentes variados</strong>, com <strong>características importantes</strong> para a escolha do antibiótico.
+                  </p>
+                  
+                  <div style="background: #e8daef; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #6b21a8; margin-bottom: 15px;">🦠 Principais Agentes</h4>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 15px;">
+                      <div style="background: #ddd6fe; padding: 15px; border-radius: 8px; border-left: 4px solid #7c3aed;">
+                        <h5 style="color: #5b21b6; margin-bottom: 10px;">🔵 <em>Streptococcus pneumoniae</em> (Pneumococos)</h5>
+                        <p style="font-size: 14px; line-height: 1.5;">
+                          Principal agente de sinusite bacteriana. Geralmente sensível a beta-lactâmicos.
+                        </p>
+                      </div>
+                      <div style="background: #ddd6fe; padding: 15px; border-radius: 8px; border-left: 4px solid #7c3aed;">
+                        <h5 style="color: #5b21b6; margin-bottom: 10px;">🟠 <em>Haemophilus influenzae</em></h5>
+                        <p style="font-size: 14px; line-height: 1.5;">
+                          Comum em sinusites, especialmente em crianças. Pode produzir beta-lactamase.
+                        </p>
+                      </div>
+                      <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                        <h5 style="color: #b45309; margin-bottom: 10px;">⚠️ <em>Moraxella catarrhalis</em></h5>
+                        <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                          <strong>Produz beta-lactamase!</strong> Resistência a beta-lactâmicos simples.
+                        </p>
+                        <div style="background: #fde68a; padding: 10px; border-radius: 6px;">
+                          <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                            🔑 <strong>Importante:</strong> Necessita de inibidor de beta-lactamase (clavulanato) para tratamento eficaz.
+                          </p>
+                        </div>
+                      </div>
+                      <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7;">
+                        <h5 style="color: #075985; margin-bottom: 10px;">🔵 Bactérias Atípicas</h5>
+                        <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                          <strong>Sem parede celular</strong> (Micoplasma, Clamídia)
+                        </p>
+                        <div style="background: #bae6fd; padding: 10px; border-radius: 6px;">
+                          <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                            🔑 <strong>Importante:</strong> Não respondem a beta-lactâmicos. Necessitam de macrolídeos ou quinolonas.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #166534; margin-bottom: 15px;">💊 Implicações Terapêuticas</h4>
+                    <div style="background: #bbf7d0; padding: 15px; border-radius: 8px; border-left: 4px solid #16a34a; margin-bottom: 15px;">
+                      <h5 style="color: #14532d; margin-bottom: 10px;">🔑 Beta-lactâmicos com Inibidor de Beta-lactamase</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        O uso de <strong>agentes beta-lactâmicos com inibidor de beta-lactamase</strong> (como amoxicilina + clavulanato) é importante para cobrir <em>M. catarrhalis</em> e cepas de <em>H. influenzae</em> produtoras de beta-lactamase.
+                      </p>
+                    </div>
+                    <div style="background: #bbf7d0; padding: 15px; border-radius: 8px; border-left: 4px solid #16a34a;">
+                      <h5 style="color: #14532d; margin-bottom: 10px;">🔑 Agentes Capazes de Atingir Atípicos</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Outra observação importante: usar <strong>agentes capazes de atingir atípicos</strong>, que são agentes <strong>sem parede celular</strong> (macrolídeos, quinolonas).
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 15px; border-radius: 8px; border-left: 4px solid #1abc9c; margin: 20px 0;">
+                    <h4 style="color: #0e6655; margin-bottom: 10px;">📊 Características dos Agentes</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+                      <thead>
+                        <tr style="background: #d1f2eb;">
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Agente</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Característica</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Implicação</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong><em>S. pneumoniae</em></strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Não produz beta-lactamase</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Sensível a beta-lactâmicos</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong><em>H. influenzae</em></strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Pode produzir beta-lactamase</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Inibidor de beta-lactamase</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong><em>M. catarrhalis</em></strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Produz beta-lactamase</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Inibidor de beta-lactamase</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Atípicas</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Sem parede celular</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Macrolídeos ou quinolonas</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 20px 0;">
+                    <h4 style="color: #b45309; margin-bottom: 10px;">💡 Escolha do Antibiótico</h4>
+                    <div style="background: #fde68a; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; line-height: 1.8; margin: 0;">
+                        <strong>💊 Primeira escolha:</strong> Amoxicilina + Clavulanato<br/>
+                        <strong>🔑 Razão:</strong> Cobre <em>S. pneumoniae</em>, <em>H. influenzae</em> e <em>M. catarrhalis</em> (produtora de beta-lactamase)<br/><br/>
+                        <strong>💊 Alternativa (alérgicos ou atípicos):</strong> Macrolídeos (azitromicina) ou Quinolonas respiratórias<br/>
+                        <strong>🔑 Razão:</strong> Atingem bactérias atípicas sem parede celular
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>Agentes principais:</strong> <em>S. pneumoniae</em>, <em>H. influenzae</em>, <em>M. catarrhalis</em> (produz beta-lactamase) e bactérias atípicas (sem parede celular). <strong>Tratamento:</strong> Beta-lactâmicos com inibidor de beta-lactamase (amoxicilina + clavulanato) para cobrir produtores de beta-lactamase. Para atípicos: macrolídeos ou quinolonas.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Por que é importante usar beta-lactâmicos com inibidor de beta-lactamase (como amoxicilina + clavulanato) no tratamento da sinusite bacteriana?",
+                options: [
+                  "Porque todos os agentes de sinusite produzem beta-lactamase",
+                  "Porque a Moraxella catarrhalis produz beta-lactamase e é um dos agentes da sinusite",
+                  "Porque o S. pneumoniae é resistente a beta-lactâmicos simples",
+                  "Porque as bactérias atípicas necessitam de inibidor de beta-lactamase"
+                ],
+                correct: 1,
+                explanation: "O uso de beta-lactâmicos com inibidor de beta-lactamase (como amoxicilina + clavulanato) é importante porque a Moraxella catarrhalis, um dos agentes etiológicos da sinusite bacteriana, produz beta-lactamase. Além disso, algumas cepas de H. influenzae também podem produzir beta-lactamase. O clavulanato inibe a beta-lactamase, permitindo que a amoxicilina seja eficaz contra esses agentes."
               }
             }
           ]
