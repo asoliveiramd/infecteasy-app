@@ -13330,8 +13330,8 @@ const App = () => {
         {
           id: 17,
           title: "Infecções de Vias Aéreas Superiores (IVAS)",
-          duration: "16 min",
-          xp: 80,
+          duration: "24 min",
+          xp: 120,
           sections: [
             {
               title: "Introdução",
@@ -13550,6 +13550,132 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "As bactérias atípicas como Micoplasma e Clamídia não respondem aos beta-lactâmicos (penicilinas, cefalosporinas) porque não possuem parede celular, que é o alvo de ação desses antibióticos. Para essas bactérias, são necessários antibióticos que atuam em outros alvos, como macrolídeos ou tetraciclinas."
+              }
+            },
+            {
+              title: "Principais IVAS Bacterianas",
+              content: `
+                <div style="background: linear-gradient(135deg, #fef9e7 0%, #fef5e7 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d68910; margin-bottom: 15px;">🩺 Principais IVAS Bacterianas</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                    Conhecer as <strong>principais IVAS bacterianas</strong> e suas características clínicas é essencial para o diagnóstico e tratamento adequados.
+                  </p>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #b45309; margin-bottom: 15px;">🩺 Amigdalite</h4>
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 15px;">
+                      <h5 style="color: #92400e; margin-bottom: 10px;">📌 Definição</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Inflamação das <strong>tonsilas palatinas</strong>, frequentemente causada por <strong><em>Streptococcus pyogenes</em></strong>.
+                      </p>
+                    </div>
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <h5 style="color: #92400e; margin-bottom: 10px;">👁️ Apresentação Clínica</h5>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                        <li><strong>Odinofagia</strong> (dor ao engolir)</li>
+                        <li><strong>Febre</strong></li>
+                        <li><strong>Exsudato purulento nas amígdalas</strong></li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e0f2fe; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #075985; margin-bottom: 15px;">👃 Sinusite Bacteriana Aguda</h4>
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7; margin-bottom: 15px;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;">📌 Definição</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Inflamação da <strong>mucosa dos seios paranasais</strong>, com <strong>secreção purulenta</strong>.
+                      </p>
+                    </div>
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;">👁️ Apresentação Clínica</h5>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                        <li><strong>Secreção nasal purulenta</strong></li>
+                        <li><strong>Dor facial</strong> (pressão nos seios)</li>
+                        <li><strong>Congestão nasal</strong></li>
+                        <li><strong>Febre</strong> (pode estar presente)</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 15px;">👂 Otite Média Aguda</h4>
+                    <div style="background: #fecaca; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626; margin-bottom: 15px;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">📌 Definição</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Infecção do <strong>ouvido médio</strong>, comum em <strong>crianças</strong>.
+                      </p>
+                    </div>
+                    <div style="background: #fecaca; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">👁️ Apresentação Clínica</h5>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                        <li><strong>Otalgia</strong> (dor de ouvido)</li>
+                        <li><strong>Febre</strong></li>
+                        <li><strong>Irritabilidade</strong> (especialmente em crianças)</li>
+                        <li><strong>Membrana timpânica hiperemiada e abaulada</strong> ao otoscópio</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 15px; border-radius: 8px; border-left: 4px solid #1abc9c; margin: 20px 0;">
+                    <h4 style="color: #0e6655; margin-bottom: 10px;">📊 Resumo Comparativo</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+                      <thead>
+                        <tr style="background: #d1f2eb;">
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">IVAS</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Local Afetado</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Sintomas Principais</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Amigdalite</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Tonsilas palatinas</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Odinofagia, febre, exsudato</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Sinusite</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Seios paranasais</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Secreção purulenta, dor facial</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Otite</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Ouvido médio</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Otalgia, febre, membrana abaulada</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #e8daef; padding: 15px; border-radius: 8px; border-left: 4px solid #7d3c98; margin: 20px 0;">
+                    <h4 style="color: #6b21a8; margin-bottom: 10px;">🎯 Agentes Etiológicos Comuns</h4>
+                    <div style="background: #d7bde2; padding: 12px; border-radius: 6px;">
+                      <ul style="font-size: 14px; line-height: 1.8; margin-left: 20px;">
+                        <li><strong>Amigdalite:</strong> <em>S. pyogenes</em> (principal)</li>
+                        <li><strong>Sinusite:</strong> <em>S. pneumoniae</em>, <em>H. influenzae</em>, <em>M. catarrhalis</em></li>
+                        <li><strong>Otite:</strong> <em>S. pneumoniae</em>, <em>H. influenzae</em>, <em>M. catarrhalis</em></li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>Amigdalite:</strong> Inflamação das tonsilas palatinas por <em>S. pyogenes</em>, com odinofagia, febre e exsudato. <strong>Sinusite:</strong> Inflamação dos seios paranasais com secreção purulenta e dor facial. <strong>Otite Média Aguda:</strong> Infecção do ouvido médio comum em crianças, com otalgia, febre e membrana timpânica hiperemiada e abaulada.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é a apresentação clínica característica da otite média aguda ao exame otoscópico?",
+                options: [
+                  "Membrana timpânica transparente e móvel",
+                  "Membrana timpânica hiperemiada e abaulada",
+                  "Membrana timpânica perfurada com secreção serosa",
+                  "Membrana timpânica retraída e opaca"
+                ],
+                correct: 1,
+                explanation: "A otite média aguda apresenta-se ao exame otoscópico com membrana timpânica hiperemiada (avermelhada) e abaulada (projetada para fora), indicando acúmulo de secreção purulenta no ouvido médio. Outros sintomas incluem otalgia, febre e irritabilidade, especialmente em crianças."
               }
             }
           ]
