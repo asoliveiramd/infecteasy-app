@@ -11771,6 +11771,142 @@ const App = () => {
         },
         {
           id: 15,
+          title: "Considerações Sobre Antibioticoterapia",
+          duration: "12 min",
+          xp: 60,
+          sections: [
+            {
+              title: "Componente Natural do Corpo",
+              content: `
+                <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🦠 Componente Natural do Corpo</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #d1fae5;">
+                    Ao prescrever antibióticos, sempre lembre-se:
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">📊 Dados Importantes</h4>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                    <h5 style="color: #1e40af; margin-bottom: 15px; font-size: 16px;">🦠 A Bactéria é um Componente Natural do Corpo</h5>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
+                      <div style="background: white; padding: 18px; border-radius: 8px; text-align: center; border: 2px solid #3b82f6;">
+                        <h6 style="color: #1e40af; margin-bottom: 8px; font-size: 14px;">👤 Células Humanas</h6>
+                        <p style="font-size: 24px; color: #1e40af; margin: 0; font-weight: bold;">
+                          10 trilhões
+                        </p>
+                      </div>
+                      
+                      <div style="background: white; padding: 18px; border-radius: 8px; text-align: center; border: 2px solid #10b981;">
+                        <h6 style="color: #047857; margin-bottom: 8px; font-size: 14px;">🦠 Bactérias</h6>
+                        <p style="font-size: 24px; color: #047857; margin: 0; font-weight: bold;">
+                          50-100 trilhões
+                        </p>
+                        <p style="font-size: 12px; color: #065f46; margin-top: 5px;">
+                          (5-10x mais)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                    <h5 style="color: #92400e; margin-bottom: 15px; font-size: 16px;">⚠️ Importante</h5>
+                    
+                    <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                      <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0;">
+                        Portanto, o fato de <strong>encontrar uma bactéria em uma cultura</strong>, <strong>não te autoriza a dizer que encontrou um patógeno</strong>.
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                      <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0;">
+                        Essa afirmação é <strong>particularmente importante se o meio não for estéril</strong>.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #dc2626;">
+                  <h4 style="color: #991b1b; margin-bottom: 15px; font-size: 17px;">🚨 Exemplo Clássico: Bacteriúria Assintomática</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <p style="font-size: 14px; line-height: 1.6; color: #7f1d1d; margin: 0;">
+                      Talvez o <strong>maior exemplo disso no ambulatório</strong> é a <strong>bacteriúria assintomática</strong>.
+                    </p>
+                  </div>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #dc2626;">
+                    <h5 style="color: #991b1b; margin-bottom: 12px; font-size: 15px;">❌ Má Prática</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #7f1d1d; margin: 0;">
+                      Solicitar <strong>urocultura para paciente assintomático</strong> é considerada <strong>má prática</strong> pelo movimento <strong>Choose Wisely</strong>.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #e0e7ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #6366f1;">
+                  <h4 style="color: #4338ca; margin-bottom: 15px; font-size: 17px;">📚 Choose Wisely</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <p style="font-size: 14px; line-height: 1.6; color: #4338ca; margin: 0;">
+                      Movimento internacional que promove <strong>práticas médicas baseadas em evidências</strong>, evitando exames e tratamentos desnecessários.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">✅ Princípios para Prescrição de Antibióticos</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        ✅ Considerar o contexto clínico
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        ✅ Avaliar se o meio é estéril ou não
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        ✅ Não solicitar culturas em pacientes assintomáticos
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        ✅ Lembrar que bactérias são componentes naturais do corpo
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> A <strong>bactéria é um componente natural do corpo</strong>. Temos cerca de <strong>10 trilhões de células</strong> e <strong>5 a 10 vezes mais que isso em número de bactérias</strong>. Portanto, o fato de encontrar uma bactéria em uma cultura, <strong>não te autoriza a dizer que encontrou um patógeno</strong>. Essa afirmação é particularmente importante se o meio não for estéril. O maior exemplo disso no ambulatório é a <strong>bacteriúria assintomática</strong>. Solicitar <strong>urocultura para paciente assintomático</strong> é considerada <strong>má prática</strong> pelo movimento <strong>Choose Wisely</strong>.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que solicitar urocultura para paciente assintomático é considerada má prática pelo movimento Choose Wisely?",
+                options: [
+                  "A) Porque a urocultura é um exame muito caro",
+                  "B) Porque a bactéria é um componente natural do corpo e encontrar uma bactéria em uma cultura não autoriza a dizer que encontrou um patógeno, especialmente em meios não estéreis como a urina",
+                  "C) Porque a urocultura não é um exame confiável",
+                  "D) Porque todos os pacientes com bacteriúria devem ser tratados"
+                ],
+                correct: 1,
+                explanation: "Solicitar urocultura para paciente assintomático é considerada má prática pelo movimento Choose Wisely porque a bactéria é um componente natural do corpo. Temos cerca de 10 trilhões de células e 5 a 10 vezes mais que isso em número de bactérias. Portanto, o fato de encontrar uma bactéria em uma cultura não autoriza a dizer que encontrou um patógeno, especialmente se o meio não for estéril (como a urina). A bacteriúria assintomática é o maior exemplo disso no ambulatório. O movimento Choose Wisely promove práticas médicas baseadas em evidências, evitando exames e tratamentos desnecessários."
+              }
+            }
+          ]
+        },
+        {
+          id: 16,
           title: "Infecções da Pele - Celulite e Erisipela",
           duration: "22 min",
           xp: 110,
