@@ -13330,8 +13330,8 @@ const App = () => {
         {
           id: 17,
           title: "Infecções de Vias Aéreas Superiores (IVAS)",
-          duration: "64 min",
-          xp: 320,
+          duration: "72 min",
+          xp: 360,
           sections: [
             {
               title: "Introdução",
@@ -14324,6 +14324,170 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "O uso de beta-lactâmicos com inibidor de beta-lactamase (como amoxicilina + clavulanato) é importante porque a Moraxella catarrhalis, um dos agentes etiológicos da sinusite bacteriana, produz beta-lactamase. Além disso, algumas cepas de H. influenzae também podem produzir beta-lactamase. O clavulanato inibe a beta-lactamase, permitindo que a amoxicilina seja eficaz contra esses agentes."
+              }
+            },
+            {
+              title: "Otite Média Aguda - Características",
+              content: `
+                <div style="background: linear-gradient(135deg, #fef3c7 0%, #fef9e7 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #b45309; margin-bottom: 15px;">👂 Otite Média Aguda - Características</h3>
+                  
+                  <div style="background: #e0f2fe; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #075985; margin-bottom: 15px;">📈 Epidemiologia</h4>
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;">👶 Mais Comum em Crianças</h5>
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        <strong>Pico de incidência:</strong> Entre 6-24 meses de idade
+                      </p>
+                      <div style="background: #7dd3fc; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                          📌 A otite média aguda é uma das infecções mais comuns na infância, especialmente entre 6 meses e 2 anos de idade.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #b45309; margin-bottom: 15px;">👁️ Apresentação Clínica</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                      <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                        <h5 style="color: #92400e; margin-bottom: 10px;">🤕 Otalgia</h5>
+                        <p style="font-size: 14px; line-height: 1.5;">
+                          Dor de ouvido (principal sintoma)
+                        </p>
+                      </div>
+                      <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                        <h5 style="color: #92400e; margin-bottom: 10px;">🤒 Febre</h5>
+                        <p style="font-size: 14px; line-height: 1.5;">
+                          Comum, especialmente em crianças
+                        </p>
+                      </div>
+                      <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                        <h5 style="color: #92400e; margin-bottom: 10px;">😭 Irritabilidade</h5>
+                        <p style="font-size: 14px; line-height: 1.5;">
+                          Criança irritada, choro frequente
+                        </p>
+                      </div>
+                      <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                        <h5 style="color: #92400e; margin-bottom: 10px;">👂 Puxar a Orelha</h5>
+                        <p style="font-size: 14px; line-height: 1.5;">
+                          Sinal clássico em crianças pequenas
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #166534; margin-bottom: 15px;">🔍 Exame Otosópico</h4>
+                    <div style="background: #bbf7d0; padding: 15px; border-radius: 8px; border-left: 4px solid #16a34a; margin-bottom: 15px;">
+                      <h5 style="color: #14532d; margin-bottom: 10px;">🟡 Membrana Timpânica Hiperemiada e Abaulada</h5>
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        <strong>Hiperemia:</strong> Membrana avermelhada (hiperemiada)<br/>
+                        <strong>Abaulamento:</strong> Membrana projetada para fora devido ao acúmulo de secreção
+                      </p>
+                      <div style="background: #86efac; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                          📌 <strong>Achado característico:</strong> Membrana timpânica hiperemiada (avermelhada) e abaulada (projetada para fora).
+                        </p>
+                      </div>
+                    </div>
+                    <div style="background: #bbf7d0; padding: 15px; border-radius: 8px; border-left: 4px solid #16a34a;">
+                      <h5 style="color: #14532d; margin-bottom: 10px;">💧 Otorreia Purulenta</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Pode haver <strong>otorreia purulenta</strong> (saída de secreção purulenta pelo ouvido) se houver <strong>perfuração</strong> da membrana timpânica.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8daef; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #6b21a8; margin-bottom: 15px;">🦠 Agentes Etiológicos</h4>
+                    <div style="background: #d7bde2; padding: 15px; border-radius: 8px; border-left: 4px solid #7d3c98; margin-bottom: 15px;">
+                      <h5 style="color: #5b21b6; margin-bottom: 10px;">🔄 Mesmos da Sinusite Bacteriana</h5>
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        Os agentes etiológicos da otite média aguda são os <strong>mesmos da sinusite bacteriana</strong>:
+                      </p>
+                      <ul style="font-size: 14px; line-height: 1.8; margin-left: 20px;">
+                        <li><strong><em>S. pneumoniae</em></strong> (Pneumococo)</li>
+                        <li><strong><em>H. influenzae</em></strong></li>
+                        <li><strong><em>M. catarrhalis</em></strong> (produz beta-lactamase)</li>
+                        <li><strong>Bactérias atípicas</strong> (raras em crianças)</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 15px;">🔍 Fisiopatologia</h4>
+                    <div style="background: #fecaca; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">🦠 Precedida por IVAS Viral</h5>
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        Frequentemente <strong>precedida por infecção viral de vias aéreas superiores</strong>, que causa:
+                      </p>
+                      <div style="background: #fca5a5; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 13px; line-height: 1.6; margin: 0;">
+                          🔹 <strong>Disfunção da tuba auditiva</strong> (edema e obstrução)<br/>
+                          🔹 <strong>Acúmulo de secreção no ouvido médio</strong><br/>
+                          🔹 <strong>Ambiente propício para proliferação bacteriana</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 15px; border-radius: 8px; border-left: 4px solid #1abc9c; margin: 20px 0;">
+                    <h4 style="color: #0e6655; margin-bottom: 10px;">📊 Resumo das Características</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+                      <thead>
+                        <tr style="background: #d1f2eb;">
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Aspecto</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Características</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Epidemiologia</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Mais comum em crianças (pico 6-24 meses)</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Sintomas</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Otalgia, febre, irritabilidade, puxar a orelha</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Exame otosópico</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Membrana timpânica hiperemiada e abaulada</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Complicação</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Otorreia purulenta (se perfuração)</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Agentes</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><em>S. pneumoniae</em>, <em>H. influenzae</em>, <em>M. catarrhalis</em></td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Fisiopatologia</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Precedida por IVAS viral → disfunção da tuba auditiva</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>Epidemiologia:</strong> Mais comum em crianças (pico 6-24 meses). <strong>Apresentação:</strong> Otalgia, febre, irritabilidade, puxar a orelha. <strong>Exame:</strong> Membrana timpânica hiperemiada e abaulada. <strong>Agentes:</strong> Mesmos da sinusite (<em>S. pneumoniae</em>, <em>H. influenzae</em>, <em>M. catarrhalis</em>). <strong>Fisiopatologia:</strong> Precedida por IVAS viral que causa disfunção da tuba auditiva e acúmulo de secreção.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é o mecanismo fisiopatológico mais comum que precede a otite média aguda?",
+                options: [
+                  "Trauma direto na membrana timpânica",
+                  "Infecção viral de vias aéreas superiores causando disfunção da tuba auditiva",
+                  "Infecção bacteriana primária do ouvido médio",
+                  "Alergia alimentar causando inflamação do ouvido médio"
+                ],
+                correct: 1,
+                explanation: "A otite média aguda é frequentemente precedida por infecção viral de vias aéreas superiores, que causa disfunção da tuba auditiva (edema e obstrução) e acúmulo de secreção no ouvido médio. Esse ambiente úmido e rico em nutrientes torna-se propício para a proliferação bacteriana, levando à otite média aguda bacteriana."
               }
             }
           ]
