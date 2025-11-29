@@ -13330,8 +13330,8 @@ const App = () => {
         {
           id: 17,
           title: "Infecções de Vias Aéreas Superiores (IVAS)",
-          duration: "32 min",
-          xp: 160,
+          duration: "40 min",
+          xp: 200,
           sections: [
             {
               title: "Introdução",
@@ -13795,6 +13795,139 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "O S. pyogenes (Estreptococo beta-hemolítico do grupo A) não produz beta-lactamase, portanto a amoxicilina simples é suficiente e eficaz. O uso de clavulanato (inibidor de beta-lactamase) seria desnecessário, aumentando custos e o risco de efeitos adversos, especialmente diarreia, sem benefício adicional."
+              }
+            },
+            {
+              title: "Falha do tratamento com amoxicilina - O que fazer?",
+              content: `
+                <div style="background: linear-gradient(135deg, #fef9e7 0%, #fef5e7 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d68910; margin-bottom: 15px;">⚠️ Falha do Tratamento com Amoxicilina</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                    Existem <strong>duas situações</strong> em que o tratamento com amoxicilina pode falhar. <strong>Nenhuma delas é por resistência bacteriana!</strong>
+                  </p>
+                  
+                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626; margin: 20px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 10px;">⚠️ Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5; margin: 0;">
+                      <strong>Não adianta ficar mudando de antibiótico</strong> na suposição de resistência microbiana. As causas de falha são outras!
+                    </p>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #b45309; margin-bottom: 15px;">🟡 Situação 1: Abscesso Periamigdaliano</h4>
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 15px;">
+                      <h5 style="color: #92400e; margin-bottom: 10px;">📅 Padrão Temporal</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Inicialmente o paciente melhora</strong> com o tratamento e <strong>volta a ter sintomas alguns dias depois</strong>.
+                      </p>
+                    </div>
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 15px;">
+                      <h5 style="color: #92400e; margin-bottom: 10px;">🔍 Investigação</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Investigue com <strong>tomografia</strong>.
+                      </p>
+                    </div>
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <h5 style="color: #92400e; margin-bottom: 10px;">💊 Conduta</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Se confirmar abscesso: <strong>Reinicie amoxicilina e mantenha por duas semanas</strong>.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #1e40af; margin-bottom: 15px;">🔵 Situação 2: Síndrome da Mononucleose Infecciosa (Doença Viral)</h4>
+                    <div style="background: #bfdbfe; padding: 15px; border-radius: 8px; border-left: 4px solid #2563eb; margin-bottom: 15px;">
+                      <h5 style="color: #1e3a8a; margin-bottom: 10px;">📅 Padrão Temporal</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        O paciente <strong>não melhora com a amoxicilina após o terceiro dia</strong>.
+                      </p>
+                    </div>
+                    <div style="background: #bfdbfe; padding: 15px; border-radius: 8px; border-left: 4px solid #2563eb; margin-bottom: 15px;">
+                      <h5 style="color: #1e3a8a; margin-bottom: 10px;">⚠️ Importante</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Não vai melhorar com nenhum antibiótico</strong> (etiologia viral).
+                      </p>
+                    </div>
+                    <div style="background: #bfdbfe; padding: 15px; border-radius: 8px; border-left: 4px solid #2563eb; margin-bottom: 15px;">
+                      <h5 style="color: #1e3a8a; margin-bottom: 10px;">🔍 Investigação</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Faça <strong>sorologias</strong> para confirmar mononucleose.
+                      </p>
+                    </div>
+                    <div style="background: #bfdbfe; padding: 15px; border-radius: 8px; border-left: 4px solid #2563eb;">
+                      <h5 style="color: #1e3a8a; margin-bottom: 10px;">💊 Conduta</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Use <strong>analgésicos e medidas de suporte</strong>, apenas. Não há indicação de antibiótico.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 15px; border-radius: 8px; border-left: 4px solid #1abc9c; margin: 20px 0;">
+                    <h4 style="color: #0e6655; margin-bottom: 10px;">📊 Comparação das Situações</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+                      <thead>
+                        <tr style="background: #d1f2eb;">
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Característica</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Abscesso Periamigdaliano</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Mononucleose</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Padrão</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Melhora inicial + recidiva</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Sem melhora após 3 dias</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Etiologia</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Bacteriana (complicação)</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Viral (EBV)</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Investigação</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Tomografia</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Sorologias</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Tratamento</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Amoxicilina por 2 semanas</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Analgésicos + suporte</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626; margin: 20px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 10px;">❌ Não Fazer</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>Não fique mudando de antibiótico</strong> na suposição de resistência microbiana. As causas de falha do tratamento com amoxicilina são:
+                    </p>
+                    <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px; margin-top: 10px;">
+                      <li>Complicação (abscesso periamigdaliano)</li>
+                      <li>Etiologia viral (mononucleose)</li>
+                      <li><strong>Nenhuma delas é por resistência bacteriana!</strong></li>
+                    </ul>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>Abscesso periamigdaliano:</strong> Melhora inicial + recidiva. Investigue com tomografia e reinicie amoxicilina por 2 semanas. <strong>Mononucleose:</strong> Sem melhora após 3 dias. Faça sorologias e use analgésicos + suporte. <strong>Importante:</strong> Não fique mudando de antibiótico. Nenhuma das causas de falha é por resistência bacteriana!
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é o padrão temporal característico do abscesso periamigdaliano após tratamento com amoxicilina?",
+                options: [
+                  "Paciente não melhora após o terceiro dia de tratamento",
+                  "Paciente melhora inicialmente e volta a ter sintomas alguns dias depois",
+                  "Paciente apresenta resistência bacteriana desde o início",
+                  "Paciente melhora completamente e não apresenta recidiva"
+                ],
+                correct: 1,
+                explanation: "O abscesso periamigdaliano apresenta um padrão característico: o paciente melhora inicialmente com o tratamento e volta a ter sintomas alguns dias depois. Nesse caso, deve-se investigar com tomografia e, se confirmado, reiniciar amoxicilina por duas semanas. Já na mononucleose, o paciente não melhora após o terceiro dia. Importante: nenhuma das duas situações é por resistência bacteriana!"
               }
             }
           ]
