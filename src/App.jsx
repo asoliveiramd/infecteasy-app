@@ -11073,6 +11073,129 @@ const App = () => {
         },
         {
           id: 12,
+          title: "Inibidores do Metabolismo Bacteriano",
+          duration: "10 min",
+          xp: 50,
+          sections: [
+            {
+              title: "Mecanismo de ação e componentes",
+              content: `
+                <div style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🧬 Inibidores do Metabolismo Bacteriano</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #ede9fe;">
+                    Estes antibióticos <strong style="color: white;">bloqueiam a síntese de folato</strong> que é crucial para a produção de purinas e pirimidinas, componentes essenciais do DNA e RNA bacteriano.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">🔬 Mecanismo de Ação</h4>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                    <h5 style="color: #1e40af; margin-bottom: 15px; font-size: 16px;">🟦 Sulfonamidas</h5>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                      <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #3b82f6;">
+                        <h6 style="color: #1e40af; margin-bottom: 8px; font-size: 14px;">⛔ Inibem a di-hidropteroato sintase</h6>
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          Bloqueiam conversão de <strong>PABA</strong> em <strong>ácido diidropteroico</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 15px; font-size: 16px;">🟩 Trimetoprima</h5>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                      <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                        <h6 style="color: #047857; margin-bottom: 8px; font-size: 14px;">⛔ Inibe a di-hidrofolato redutase</h6>
+                        <p style="font-size: 14px; color: #065f46; margin: 0;">
+                          Bloqueia conversão de <strong>di-hidrofolato</strong> em <strong>tetra-hidrofolato</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 15px; font-size: 17px;">🧱 Via do Folato</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                      <div style="background: #dbeafe; padding: 15px; border-radius: 8px; text-align: center;">
+                        <p style="font-size: 14px; color: #1e40af; margin: 0; font-weight: bold;">
+                          PABA
+                        </p>
+                      </div>
+                      
+                      <div style="text-align: center; color: #dc2626; font-size: 20px; font-weight: bold;">
+                        ↓<br/>
+                        <span style="font-size: 12px; background: #fee2e2; padding: 4px 8px; border-radius: 4px;">❌ Sulfonamidas</span>
+                      </div>
+                      
+                      <div style="background: #dbeafe; padding: 15px; border-radius: 8px; text-align: center;">
+                        <p style="font-size: 14px; color: #1e40af; margin: 0; font-weight: bold;">
+                          Ácido Diidropteroico
+                        </p>
+                      </div>
+                      
+                      <div style="text-align: center; color: #1e40af; font-size: 20px; font-weight: bold;">
+                        ↓
+                      </div>
+                      
+                      <div style="background: #dcfce7; padding: 15px; border-radius: 8px; text-align: center;">
+                        <p style="font-size: 14px; color: #047857; margin: 0; font-weight: bold;">
+                          Di-hidrofolato
+                        </p>
+                      </div>
+                      
+                      <div style="text-align: center; color: #dc2626; font-size: 20px; font-weight: bold;">
+                        ↓<br/>
+                        <span style="font-size: 12px; background: #fee2e2; padding: 4px 8px; border-radius: 4px;">❌ Trimetoprima</span>
+                      </div>
+                      
+                      <div style="background: #dcfce7; padding: 15px; border-radius: 8px; text-align: center;">
+                        <p style="font-size: 14px; color: #047857; margin: 0; font-weight: bold;">
+                          Tetra-hidrofolato
+                        </p>
+                      </div>
+                      
+                      <div style="text-align: center; color: #047857; font-size: 20px; font-weight: bold;">
+                        ↓
+                      </div>
+                      
+                      <div style="background: #fef3c7; padding: 15px; border-radius: 8px; text-align: center;">
+                        <p style="font-size: 14px; color: #92400e; margin: 0; font-weight: bold;">
+                          Purinas e Pirimidinas<br/>
+                          <span style="font-size: 12px; color: #78350f;">(DNA e RNA)</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> Os inibidores do metabolismo bacteriano <strong>bloqueiam a síntese de folato</strong>, crucial para a produção de purinas e pirimidinas (DNA e RNA). As <strong>sulfonamidas</strong> inibem a di-hidropteroato sintase (bloqueando PABA → ácido diidropteroico), enquanto a <strong>trimetoprima</strong> inibe a di-hidrofolato redutase (bloqueando di-hidrofolato → tetra-hidrofolato).
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a diferença entre o mecanismo de ação das sulfonamidas e da trimetoprima?",
+                options: [
+                  "A) Ambas inibem a mesma enzima (di-hidrofolato redutase)",
+                  "B) As sulfonamidas inibem a di-hidropteroato sintase (bloqueando PABA → ácido diidropteroico) e a trimetoprima inibe a di-hidrofolato redutase (bloqueando di-hidrofolato → tetra-hidrofolato)",
+                  "C) As sulfonamidas bloqueiam a síntese de DNA diretamente e a trimetoprima bloqueia a síntese de RNA",
+                  "D) Ambas inibem a di-hidropteroato sintase em etapas diferentes"
+                ],
+                correct: 1,
+                explanation: "A diferença entre o mecanismo de ação das sulfonamidas e da trimetoprima está nas enzimas que cada uma inibe na via do folato. As sulfonamidas inibem a di-hidropteroato sintase, bloqueando a conversão de PABA em ácido diidropteroico (etapa inicial). Já a trimetoprima inibe a di-hidrofolato redutase, bloqueando a conversão de di-hidrofolato em tetra-hidrofolato (etapa posterior). Ambas bloqueiam a síntese de folato, essencial para a produção de purinas e pirimidinas (DNA e RNA bacteriano)."
+              }
+            }
+          ]
+        },
+        {
+          id: 13,
           title: "Infecções da Pele - Celulite e Erisipela",
           duration: "22 min",
           xp: 110,
