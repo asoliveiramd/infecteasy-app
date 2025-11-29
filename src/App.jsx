@@ -10792,6 +10792,97 @@ const App = () => {
                 correct: 1,
                 explanation: "O moxifloxacino (4ª geração) deve ser evitado para tratar bactérias que as gerações anteriores possam cuidar porque, pelo seu perfil mais amplo (incluindo anaeróbios), deve-se preservá-lo para situações que realmente necessitem dessa cobertura. Além disso, algumas vezes as gerações anteriores têm até melhor eficácia para patógenos específicos, como o ciprofloxacino para Pseudomonas aeruginosa. Esse é um princípio de economia antimicrobiana."
               }
+            },
+            {
+              title: "4ª Geração - Indicações principais",
+              content: `
+                <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Indicações Principais</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #d1fae5;">
+                    Indicações <strong style="color: white;">específicas e seletivas</strong> da 4ª geração
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">📊 Indicações Possíveis</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                    <div style="background: #dbeafe; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                      <h5 style="color: #1e40af; margin-bottom: 8px; font-size: 15px;">🫁 Infecções Respiratórias por Patógenos Resistentes</h5>
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                        Quando há resistência a outras opções
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <h5 style="color: #92400e; margin-bottom: 8px; font-size: 15px;">🤧 Sinusite Bacteriana Complicada</h5>
+                      <p style="font-size: 14px; color: #78350f; margin: 0;">
+                        Cobertura ampla incluindo anaeróbios
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                      <h5 style="color: #991b1b; margin-bottom: 8px; font-size: 15px;">🦠 Infecções Intra-abdominais</h5>
+                      <p style="font-size: 14px; color: #7f1d1d; margin: 0;">
+                        <strong>Diferencial da 4ª geração</strong> pelo efeito em anaeróbios
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">✨ Perfil de Atividade</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 10px; font-size: 16px;">🏆 Melhor Perfil contra Gram-positivos</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #065f46; margin: 0;">
+                      As quinolonas de 4ª geração possuem o <strong>melhor perfil de atividade contra Gram-positivos</strong> entre todas as gerações.
+                    </p>
+                  </div>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #f59e0b;">
+                    <h5 style="color: #92400e; margin-bottom: 10px; font-size: 16px;">⭐ Excelente Cobertura de Atípicos</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0;">
+                      Mantém <strong>excelente cobertura para patógenos atípicos</strong>.
+                    </p>
+                  </div>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #dc2626;">
+                    <h5 style="color: #991b1b; margin-bottom: 10px; font-size: 16px;">🔴 Espectro Ampliado para Anaeróbios</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #7f1d1d; margin: 0;">
+                      Amplia o espectro contra <strong>anaeróbios</strong>.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #dc2626;">
+                  <h4 style="color: #991b1b; margin-bottom: 15px; font-size: 17px;">🎯 Diferencial da 4ª Geração</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #dc2626;">
+                    <h5 style="color: #991b1b; margin-bottom: 10px; font-size: 16px;">🦠 Infecções Abdominais Não Urinárias</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #7f1d1d; margin: 0;">
+                      Pelo <strong>efeito em anaeróbios</strong>, sua indicação para <strong>infecções abdominais não urinárias</strong> é o seu <strong>diferencial</strong>.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> As quinolonas de 4ª geração possuem o <strong>melhor perfil de atividade contra Gram-positivos</strong> entre todas as gerações, mantendo <strong>excelente cobertura para patógenos atípicos</strong> e ampliando o espectro contra <strong>anaeróbios</strong>. Pelo efeito em anaeróbios, sua indicação para <strong>infecções abdominais não urinárias</strong> (infecções intra-abdominais) é o seu <strong>diferencial</strong>.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é o diferencial da 4ª geração de quinolonas (moxifloxacino) que permite sua indicação para infecções abdominais não urinárias?",
+                options: [
+                  "A) Melhor atividade contra Pseudomonas aeruginosa",
+                  "B) Efeito em anaeróbios, além do melhor perfil contra Gram-positivos e excelente cobertura de atípicos",
+                  "C) Única quinolona com atividade contra Gram-negativos",
+                  "D) Menor custo em comparação com outras quinolonas"
+                ],
+                correct: 1,
+                explanation: "O diferencial da 4ª geração de quinolonas (moxifloxacino) que permite sua indicação para infecções abdominais não urinárias (infecções intra-abdominais) é o efeito em anaeróbios, além de possuir o melhor perfil de atividade contra Gram-positivos entre todas as gerações e manter excelente cobertura para patógenos atípicos. As outras indicações incluem infecções respiratórias por patógenos resistentes e sinusite bacteriana complicada."
+              }
             }
           ]
         },
