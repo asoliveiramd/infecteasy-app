@@ -10625,6 +10625,173 @@ const App = () => {
                 correct: 1,
                 explanation: "A principal diferença de foco entre as gerações é que a 2ª geração (ciprofloxacino, norfloxacino) tem foco predominantemente em via urinária (ITU, prostatite), enquanto a 3ª geração (levofloxacino) mira a via respiratória, sendo conhecida como 'quinolona respiratória'. As principais indicações da 3ª geração incluem pneumonia adquirida na comunidade, exacerbação de DPOC, sinusite bacteriana aguda, ITU complicada e infecções por patógenos respiratórios resistentes."
               }
+            },
+            {
+              title: "4ª Geração - Características principais",
+              content: `
+                <div style="background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🔴 4ª Geração</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #fecaca;">
+                    Essa categoria <strong style="color: white;">acrescenta a importante atividade contra anaeróbios</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">📊 Características Principais</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                    <div style="background: #dcfce7; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                      <h5 style="color: #047857; margin-bottom: 8px; font-size: 15px;">🌐 Amplo Espectro</h5>
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        Potente atividade contra <strong>Gram-positivos</strong>
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <h5 style="color: #92400e; margin-bottom: 8px; font-size: 15px;">⭐ Excelente contra Atípicos</h5>
+                      <p style="font-size: 14px; color: #78350f; margin: 0;">
+                        Mantém excelente atividade contra <strong>patógenos atípicos</strong>
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                      <h5 style="color: #991b1b; margin-bottom: 8px; font-size: 15px;">🦠 Atividade contra Anaeróbios</h5>
+                      <p style="font-size: 14px; color: #7f1d1d; margin: 0;">
+                        <strong>Maior atividade contra anaeróbios</strong> (diferencial da 4ª geração)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #e0e7ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #6366f1;">
+                  <h4 style="color: #3730a3; margin-bottom: 15px; font-size: 17px;">💊 Representante</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #dc2626;">
+                    <h5 style="color: #991b1b; margin-bottom: 10px; font-size: 16px;">🔴 Moxifloxacino</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #7f1d1d; margin: 0;">
+                      Principal representante da 4ª geração de quinolonas
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> A 4ª geração (moxifloxacino) acrescenta a <strong>importante atividade contra anaeróbios</strong>, além de ter <strong>amplo espectro com potente atividade contra Gram-positivos</strong> e manter <strong>excelente atividade contra patógenos atípicos</strong>. Essa é a principal diferença em relação às gerações anteriores.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é o principal diferencial da 4ª geração de quinolonas (moxifloxacino) em relação às gerações anteriores?",
+                options: [
+                  "A) Melhor atividade contra Pseudomonas aeruginosa",
+                  "B) Atividade contra anaeróbios, além de manter amplo espectro contra Gram-positivos e atípicos",
+                  "C) Única quinolona com atividade contra Gram-negativos",
+                  "D) Menor risco de efeitos adversos"
+                ],
+                correct: 1,
+                explanation: "O principal diferencial da 4ª geração de quinolonas (moxifloxacino) é a atividade contra anaeróbios, além de manter amplo espectro com potente atividade contra Gram-positivos e excelente atividade contra patógenos atípicos. Essa adição da cobertura de anaeróbios é o que diferencia a 4ª geração das anteriores. Em compensação, tem menor atividade contra Pseudomonas que o ciprofloxacino."
+              }
+            },
+            {
+              title: "4ª Geração - Espectro de ação",
+              content: `
+                <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Espectro de Ação</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #fef3c7;">
+                    Pelo seu <strong style="color: white;">perfil mais amplo</strong>, deve ser <strong style="color: white;">evitado para tratar bactérias que as gerações anteriores possam cuidar</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 15px; font-size: 17px;">⚠️ Princípio de Economia Antimicrobiana</h4>
+                  <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0;">
+                    Algumas vezes as gerações anteriores têm até <strong>melhor eficácia</strong>. <strong>Exemplo:</strong> Para <em>P. aeruginosa</em>, a melhor quinolona é <strong>ciprofloxacino</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">🦠 Cobertura Antimicrobiana</h4>
+                  
+                  <div style="background: #dcfce7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 12px; font-size: 16px;">🟢 Gram-positivos</h5>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #065f46; margin: 0;">
+                          • <strong>S. pneumoniae</strong>
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #065f46; margin: 0;">
+                          • <strong>S. aureus</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                    <h5 style="color: #1e40af; margin-bottom: 12px; font-size: 16px;">🔵 Gram-negativos</h5>
+                    <div style="background: white; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                        Similar às 3ª geração, porém <strong>menor atividade contra Pseudomonas</strong>
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                    <h5 style="color: #92400e; margin-bottom: 12px; font-size: 16px;">⭐ Atípicos</h5>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #78350f; margin: 0;">
+                          • <strong>Mycoplasma</strong>
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #78350f; margin: 0;">
+                          • <strong>Chlamydia</strong>
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #78350f; margin: 0;">
+                          • <strong>Legionella</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #dc2626;">
+                    <h5 style="color: #991b1b; margin-bottom: 12px; font-size: 16px;">🔴 Anaeróbios</h5>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #7f1d1d; margin: 0;">
+                          • <strong>Bacteroides fragilis</strong>
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #7f1d1d; margin: 0;">
+                          • <strong>Clostridium difficile</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> A 4ª geração (moxifloxacino) tem <strong>amplo espectro</strong> cobrindo Gram-positivos, Gram-negativos (similar à 3ª geração, mas com <strong>menor atividade contra Pseudomonas</strong>), atípicos e <strong>anaeróbios</strong> (Bacteroides fragilis, Clostridium difficile). Pelo perfil mais amplo, deve ser <strong>evitado para tratar bactérias que as gerações anteriores possam cuidar</strong>, pois algumas vezes têm até melhor eficácia (ex: ciprofloxacino para P. aeruginosa).
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que o moxifloxacino (4ª geração) deve ser evitado para tratar bactérias que as gerações anteriores possam cuidar?",
+                options: [
+                  "A) Porque tem mais efeitos adversos que as outras gerações",
+                  "B) Porque pelo seu perfil mais amplo, deve-se preservá-lo, e algumas vezes as gerações anteriores têm até melhor eficácia (ex: ciprofloxacino para P. aeruginosa)",
+                  "C) Porque não tem atividade contra Gram-positivos",
+                  "D) Porque é contraindicado em infecções respiratórias"
+                ],
+                correct: 1,
+                explanation: "O moxifloxacino (4ª geração) deve ser evitado para tratar bactérias que as gerações anteriores possam cuidar porque, pelo seu perfil mais amplo (incluindo anaeróbios), deve-se preservá-lo para situações que realmente necessitem dessa cobertura. Além disso, algumas vezes as gerações anteriores têm até melhor eficácia para patógenos específicos, como o ciprofloxacino para Pseudomonas aeruginosa. Esse é um princípio de economia antimicrobiana."
+              }
             }
           ]
         },
