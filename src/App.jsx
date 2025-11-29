@@ -13330,8 +13330,8 @@ const App = () => {
         {
           id: 17,
           title: "Infecções de Vias Aéreas Superiores (IVAS)",
-          duration: "8 min",
-          xp: 40,
+          duration: "16 min",
+          xp: 80,
           sections: [
             {
               title: "Introdução",
@@ -13413,6 +13413,143 @@ const App = () => {
                 ],
                 correct: 2,
                 explanation: "Aproximadamente 80% das IVAS são de etiologia viral, não necessitando de antibioticoterapia. Isso torna fundamental a diferenciação entre etiologia viral e bacteriana para evitar o uso desnecessário de antibióticos, que contribui para resistência bacteriana e efeitos adversos."
+              }
+            },
+            {
+              title: "Agentes Etiológicos das IVAS",
+              content: `
+                <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🦠 Agentes Etiológicos das IVAS</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                    Conhecer os <strong>principais agentes bacterianos</strong> das IVAS é fundamental para a escolha adequada da antibioticoterapia.
+                  </p>
+                  
+                  <div style="background: #e8daef; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #6b21a8; margin-bottom: 15px;">🟣 Bactérias Gram-positivas</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                      <div style="background: #ddd6fe; padding: 15px; border-radius: 8px; border-left: 4px solid #7c3aed;">
+                        <h5 style="color: #5b21b6; margin-bottom: 10px;">🦠 <em>S. pneumoniae</em></h5>
+                        <p style="font-size: 14px; line-height: 1.5;">
+                          <strong>Principal causa</strong> de:
+                        </p>
+                        <ul style="font-size: 13px; line-height: 1.4; margin-left: 20px; margin-top: 8px;">
+                          <li>Sinusite bacteriana</li>
+                          <li>Otite bacteriana</li>
+                        </ul>
+                      </div>
+                      <div style="background: #ddd6fe; padding: 15px; border-radius: 8px; border-left: 4px solid #7c3aed;">
+                        <h5 style="color: #5b21b6; margin-bottom: 10px;">🦠 <em>S. pyogenes</em></h5>
+                        <p style="font-size: 14px; line-height: 1.5;">
+                          <strong>Estreptococo beta-hemolítico do grupo A</strong>
+                        </p>
+                        <p style="font-size: 13px; line-height: 1.4; margin-top: 8px;">
+                          Causa <strong>predominante</strong> de amigdalite bacteriana
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #b45309; margin-bottom: 15px;">🟠 Bactérias Gram-negativas</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                      <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                        <h5 style="color: #92400e; margin-bottom: 10px;">🦠 <em>H. influenzae</em></h5>
+                        <p style="font-size: 14px; line-height: 1.5;">
+                          Comum em:
+                        </p>
+                        <ul style="font-size: 13px; line-height: 1.4; margin-left: 20px; margin-top: 8px;">
+                          <li>Sinusite</li>
+                          <li>Otite</li>
+                        </ul>
+                        <p style="font-size: 13px; line-height: 1.4; margin-top: 8px;">
+                          <strong>Especialmente em crianças</strong>
+                        </p>
+                      </div>
+                      <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                        <h5 style="color: #92400e; margin-bottom: 10px;">🦠 <em>Moraxella catarrhalis</em></h5>
+                        <p style="font-size: 14px; line-height: 1.5;">
+                          <strong>Produtora de beta-lactamase</strong>
+                        </p>
+                        <p style="font-size: 13px; line-height: 1.4; margin-top: 8px;">
+                          Frequente em sinusite e otite <strong>pediátrica</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #1e40af; margin-bottom: 15px;">🔵 Bactérias Atípicas</h4>
+                    <div style="background: #bfdbfe; padding: 15px; border-radius: 8px; border-left: 4px solid #2563eb;">
+                      <h5 style="color: #1e3a8a; margin-bottom: 10px;">🦠 Micoplasma, Clamídia</h5>
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        <strong>Característica especial:</strong> Sem parede celular
+                      </p>
+                      <div style="background: #93c5fd; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                          ⚠️ <strong>Não respondem a beta-lactâmicos</strong> (penicilinas, cefalosporinas) devido à ausência de parede celular
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 15px; border-radius: 8px; border-left: 4px solid #1abc9c; margin: 20px 0;">
+                    <h4 style="color: #0e6655; margin-bottom: 10px;">📊 Resumo por Tipo</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+                      <thead>
+                        <tr style="background: #d1f2eb;">
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Tipo</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Agente</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Principais Infecções</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Gram +</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><em>S. pneumoniae</em></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Sinusite, Otite</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Gram +</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><em>S. pyogenes</em></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Amigdalite</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Gram -</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><em>H. influenzae</em></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Sinusite, Otite (crianças)</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Gram -</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><em>M. catarrhalis</em></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Sinusite, Otite pediátrica</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Atípicas</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Micoplasma, Clamídia</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Faringite, Pneumonia</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>Gram-positivas:</strong> <em>S. pneumoniae</em> (sinusite/otite) e <em>S. pyogenes</em> (amigdalite). <strong>Gram-negativas:</strong> <em>H. influenzae</em> e <em>M. catarrhalis</em> (sinusite/otite pediátrica, esta última produtora de beta-lactamase). <strong>Atípicas:</strong> Micoplasma e Clamídia (sem parede celular, não respondem a beta-lactâmicos).
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Por que as bactérias atípicas (Micoplasma e Clamídia) não respondem aos antibióticos beta-lactâmicos?",
+                options: [
+                  "Porque produzem beta-lactamase",
+                  "Porque não possuem parede celular",
+                  "Porque são bactérias Gram-negativas",
+                  "Porque são resistentes a todos os antibióticos"
+                ],
+                correct: 1,
+                explanation: "As bactérias atípicas como Micoplasma e Clamídia não respondem aos beta-lactâmicos (penicilinas, cefalosporinas) porque não possuem parede celular, que é o alvo de ação desses antibióticos. Para essas bactérias, são necessários antibióticos que atuam em outros alvos, como macrolídeos ou tetraciclinas."
               }
             }
           ]
