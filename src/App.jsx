@@ -12441,9 +12441,89 @@ const App = () => {
         {
           id: 16,
           title: "Infecções da Pele",
-          duration: "0 min",
-          xp: 0,
+          duration: "8 min",
+          xp: 40,
           sections: [
+            {
+              title: "Celulite",
+              content: `
+                <div style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">🦠 Celulite Bacteriana</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A celulite é uma <strong>infecção difusa do tecido subcutâneo</strong> (derme e hipoderme) que apresenta características clínicas marcantes.
+                  </p>
+                  
+                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #b91c1c; margin-bottom: 10px;">🔍 Características da Celulite</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                      <div style="background: #fecaca; padding: 10px; border-radius: 6px;">
+                        <strong>🦠 Infecção Difusa</strong><br/>
+                        <span style="font-size: 14px;">Tecido subcutâneo (derme e hipoderme)</span>
+                      </div>
+                      <div style="background: #fecaca; padding: 10px; border-radius: 6px;">
+                        <strong>🔴 Eritema</strong><br/>
+                        <span style="font-size: 14px;">Vermelhidão difusa</span>
+                      </div>
+                      <div style="background: #fecaca; padding: 10px; border-radius: 6px;">
+                        <strong>💧 Edema</strong><br/>
+                        <span style="font-size: 14px;">Inchaço local</span>
+                      </div>
+                      <div style="background: #fecaca; padding: 10px; border-radius: 6px;">
+                        <strong>⚡ Dor</strong><br/>
+                        <span style="font-size: 14px;">Dor local marcante</span>
+                      </div>
+                      <div style="background: #fecaca; padding: 10px; border-radius: 6px;">
+                        <strong>🔥 Calor Local</strong><br/>
+                        <span style="font-size: 14px;">Aumento de temperatura</span>
+                      </div>
+                      <div style="background: #fecaca; padding: 10px; border-radius: 6px;">
+                        <strong>⏱️ Evolução Rápida</strong><br/>
+                        <span style="font-size: 14px;">Sem coleção purulenta</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #b45309; margin-bottom: 10px;">📌 Bordas Mal Definidas</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      As bordas da celulite <strong>se misturam com a pele normal</strong>, diferentemente da erisipela que tem bordas bem definidas.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                    <h4 style="color: #991b1b; margin-bottom: 10px;">⚠️ Sinais Marcantes</h4>
+                    <div style="display: grid; gap: 10px;">
+                      <div style="background: #fecaca; padding: 10px; border-radius: 6px;">
+                        <strong>⚡ Dor Local</strong><br/>
+                        <span style="font-size: 14px;">Chama a atenção a <strong>dor local</strong>. Dificilmente a celulite bacteriana virá sem dor. Nesse caso, pense em outra causa.</span>
+                      </div>
+                      <div style="background: #fecaca; padding: 10px; border-radius: 6px;">
+                        <strong>🌡️ Febre</strong><br/>
+                        <span style="font-size: 14px;">A <strong>febre</strong> também é um componente marcante da celulite bacteriana.</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 15px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      A celulite é uma <strong>infecção difusa do tecido subcutâneo</strong> com <strong>eritema, edema, dor e calor local</strong>, <strong>evolução rápida sem coleção purulenta</strong> e <strong>bordas mal definidas</strong>. A <strong>dor local</strong> e a <strong>febre</strong> são componentes marcantes.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual característica é marcante na celulite bacteriana e sua ausência deve fazer pensar em outra causa?",
+                options: [
+                  "Bordas bem definidas",
+                  "Dor local",
+                  "Coleção purulenta",
+                  "Evolução lenta"
+                ],
+                correct: 1,
+                explanation: "A dor local é um componente marcante da celulite bacteriana. Dificilmente a celulite bacteriana virá sem dor. Nesse caso, deve-se pensar em outra causa."
+              }
+            }
           ]
         },
         {
