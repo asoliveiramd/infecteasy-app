@@ -11662,6 +11662,110 @@ const App = () => {
                 correct: 1,
                 explanation: "A principal diferença entre metronidazol e clindamicina em relação ao espectro de ação contra anaeróbios é que o metronidazol é importante para anaeróbios abdominais (usado em diverticulite, abscessos intra-abdominais e infecções ginecológicas) enquanto a clindamicina trata predominantemente anaeróbios de boca (infecções odontogênicas). O metronidazol também é excelente para protozoários (Giardia, Trichomonas). Essa diferença de espectro é importante para a escolha adequada do antibiótico conforme o sítio de infecção."
               }
+            },
+            {
+              title: "Ácido graxo monocarboxílico",
+              content: `
+                <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🧪 Ácido Graxo Monocarboxílico</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #fef3c7;">
+                    Classe de antibióticos com <strong style="color: white;">uso exclusivamente tópico</strong> para infecções de pele.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">💊 Mupirocina</h4>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                    <h5 style="color: #1e40af; margin-bottom: 15px; font-size: 16px;">⚙️ Mecanismo de Ação</h5>
+                    
+                    <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                      <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                        <strong>Inibe a isoleucil-tRNA sintetase</strong>, uma enzima essencial para a <strong>síntese proteica bacteriana</strong>.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 15px; font-size: 16px;">🎯 Espectro de Ação</h5>
+                    
+                    <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #10b981;">
+                      <h6 style="color: #047857; margin-bottom: 8px; font-size: 14px;">🟢 Bactérias Gram-positivas</h6>
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        Indicada para <strong>bactérias Gram-positivas</strong>
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                    <h5 style="color: #92400e; margin-bottom: 15px; font-size: 16px;">📌 Via de Administração</h5>
+                    
+                    <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #f59e0b;">
+                      <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0; text-align: center;">
+                        ❗ <strong>Uso SOMENTE TÓPICO</strong>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #e0e7ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #6366f1;">
+                  <h4 style="color: #4338ca; margin-bottom: 15px; font-size: 17px;">🎯 Indicações Principais</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <h5 style="color: #4338ca; margin-bottom: 12px; font-size: 15px;">🩹 Infecções de Pele Pequenas</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #4338ca; margin: 0;">
+                      Usado para <strong>infecções de pele pequenas</strong> para <strong>evitar uso de antibioticoterapia sistêmica</strong>.
+                    </p>
+                  </div>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 15px;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #6366f1;">
+                      <p style="font-size: 14px; color: #4338ca; margin: 0;">
+                        🩹 Impetigo
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #6366f1;">
+                      <p style="font-size: 14px; color: #4338ca; margin: 0;">
+                        🩹 Foliculite superficial
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #6366f1;">
+                      <p style="font-size: 14px; color: #4338ca; margin: 0;">
+                        🩹 Pequenas lesões infectadas
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">✅ Vantagem</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <p style="font-size: 14px; line-height: 1.6; color: #065f46; margin: 0;">
+                      💡 Permite tratar <strong>infecções de pele pequenas</strong> sem necessidade de <strong>antibioticoterapia sistêmica</strong>, reduzindo efeitos adversos e resistência bacteriana.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> A <strong>mupirocina</strong> inibe a <strong>isoleucil-tRNA sintetase</strong>, uma enzima essencial para a síntese proteica bacteriana. É indicada para <strong>bactérias Gram-positivas</strong> e seu uso é <strong>somente tópico</strong>. Usada para <strong>infecções de pele pequenas</strong> (impetigo, foliculite superficial, pequenas lesões infectadas) para <strong>evitar uso de antibioticoterapia sistêmica</strong>.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que a mupirocina é usada para infecções de pele pequenas?",
+                options: [
+                  "A) Porque tem excelente biodisponibilidade oral",
+                  "B) Porque é eficaz contra bactérias Gram-negativas",
+                  "C) Porque permite tratar infecções de pele pequenas sem necessidade de antibioticoterapia sistêmica, reduzindo efeitos adversos e resistência bacteriana",
+                  "D) Porque inibe a síntese de ácido nucleico bacteriano"
+                ],
+                correct: 2,
+                explanation: "A mupirocina é usada para infecções de pele pequenas porque permite tratar essas infecções sem necessidade de antibioticoterapia sistêmica, reduzindo efeitos adversos e resistência bacteriana. A mupirocina é um ácido graxo monocarboxílico que inibe a isoleucil-tRNA sintetase, uma enzima essencial para a síntese proteica bacteriana. É indicada para bactérias Gram-positivas e seu uso é somente tópico, sendo eficaz para impetigo, foliculite superficial e pequenas lesões infectadas."
+              }
             }
           ]
         },
