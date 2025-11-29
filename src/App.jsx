@@ -13330,8 +13330,8 @@ const App = () => {
         {
           id: 17,
           title: "Infecções de Vias Aéreas Superiores (IVAS)",
-          duration: "64 min",
-          xp: 320,
+          duration: "72 min",
+          xp: 360,
           sections: [
             {
               title: "Introdução",
@@ -14324,6 +14324,139 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "O uso de beta-lactâmicos com inibidor de beta-lactamase (como amoxicilina + clavulanato) é importante porque a Moraxella catarrhalis, um dos agentes etiológicos da sinusite bacteriana, produz beta-lactamase. Além disso, algumas cepas de H. influenzae também podem produzir beta-lactamase. O clavulanato inibe a beta-lactamase, permitindo que a amoxicilina seja eficaz contra esses agentes."
+              }
+            },
+            {
+              title: "Otite Média Aguda - Tratamento",
+              content: `
+                <div style="background: linear-gradient(135deg, #fef9e7 0%, #fef5e7 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d68910; margin-bottom: 15px;">👂 Otite Média Aguda - Tratamento</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                    O tratamento deve <strong>atingir as bactérias mais comuns</strong> da otite média aguda.
+                  </p>
+                  
+                  <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #166534; margin-bottom: 15px;">💊 Primeira Escolha</h4>
+                    <div style="background: #bbf7d0; padding: 15px; border-radius: 8px; border-left: 4px solid #16a34a; margin-bottom: 15px;">
+                      <h5 style="color: #14532d; margin-bottom: 10px;">✅ Amoxicilina + Clavulanato</h5>
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        Cobre as bactérias mais comuns: <em>S. pneumoniae</em>, <em>H. influenzae</em> e <em>M. catarrhalis</em>.
+                      </p>
+                      <div style="background: #86efac; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                          📌 <strong>Observação:</strong> Os atípicos não são cobertos. Porém, são <strong>raros em crianças</strong>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #b45309; margin-bottom: 15px;">🔍 Situação Especial: Miringite Bolhosa</h4>
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 15px;">
+                      <h5 style="color: #92400e; margin-bottom: 10px;">👁️ Exame Físico</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Se no exame físico tiver uma <strong>miringite bolhosa</strong>, existe a possibilidade de um <strong><em>Micoplasma</em></strong>.
+                      </p>
+                    </div>
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <h5 style="color: #92400e; margin-bottom: 10px;">💊 Macrolídeos</h5>
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        Nesse caso, <strong>macrolídeos</strong> são melhor escolha:
+                      </p>
+                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
+                        <div style="background: #fcd34d; padding: 12px; border-radius: 6px;">
+                          <strong>💊 Azitromicina</strong><br/>
+                          <span style="font-size: 13px;">500mg ao dia<br/>por 5 dias</span>
+                        </div>
+                        <div style="background: #fcd34d; padding: 12px; border-radius: 6px;">
+                          <strong>💊 Claritromicina</strong><br/>
+                          <span style="font-size: 13px;">500mg ao dia<br/>por 7-10 dias</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e0f2fe; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #075985; margin-bottom: 15px;">🔑 Outra Opção: Levofloxacino</h4>
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7; margin-bottom: 15px;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;">✅ Vantagem</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        É uma <strong>boa opção para todas as bactérias</strong> (cobre típicas e atípicas).
+                      </p>
+                    </div>
+                    <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">⚠️ Cautela</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Deve ser usado com <strong>cautela em crianças</strong> (risco de alterações na cartilagem de crescimento).
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 15px; border-radius: 8px; border-left: 4px solid #1abc9c; margin: 20px 0;">
+                    <h4 style="color: #0e6655; margin-bottom: 10px;">📊 Resumo do Tratamento</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+                      <thead>
+                        <tr style="background: #d1f2eb;">
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Situação</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Antibiótico</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Posologia</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Primeira escolha</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Amoxicilina + Clavulanato</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Dose padrão por 7-10 dias</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Miringite bolhosa</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Azitromicina</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">500mg 1x/dia por 5 dias</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Miringite bolhosa</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Claritromicina</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">500mg 1x/dia por 7-10 dias</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Cobertura ampla</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Levofloxacino</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Cautela em crianças</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #e8daef; padding: 15px; border-radius: 8px; border-left: 4px solid #7d3c98; margin: 20px 0;">
+                    <h4 style="color: #6b21a8; margin-bottom: 10px;">💡 Pontos-Chave</h4>
+                    <div style="background: #d7bde2; padding: 12px; border-radius: 6px;">
+                      <ul style="font-size: 14px; line-height: 1.8; margin-left: 20px;">
+                        <li><strong>Primeira escolha:</strong> Amoxicilina + Clavulanato (cobre bactérias comuns)</li>
+                        <li><strong>Atípicos são raros em crianças</strong>, não é necessário cobrir rotineiramente</li>
+                        <li><strong>Miringite bolhosa:</strong> Sugere <em>Micoplasma</em> → Macrolídeos</li>
+                        <li><strong>Levofloxacino:</strong> Boa cobertura, mas cautela em crianças</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>Primeira escolha:</strong> Amoxicilina + Clavulanato (atípicos raros em crianças). <strong>Miringite bolhosa:</strong> Sugere <em>Micoplasma</em> → Macrolídeos (azitromicina 500mg/dia por 5 dias ou claritromicina 500mg/dia por 7-10 dias). <strong>Levofloxacino:</strong> Boa opção para todas as bactérias, mas cautela em crianças.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Quando deve-se considerar o uso de macrolídeos no tratamento da otite média aguda?",
+                options: [
+                  "Em todos os casos de otite média aguda, pois atípicos são comuns em crianças",
+                  "Quando há miringite bolhosa ao exame físico, sugerindo possível Micoplasma",
+                  "Apenas em adultos, pois crianças não podem usar macrolídeos",
+                  "Quando há alergia a quinolonas"
+                ],
+                correct: 1,
+                explanation: "Deve-se considerar o uso de macrolídeos quando há miringite bolhosa ao exame físico, pois isso sugere a possibilidade de Micoplasma como agente etiológico. Nesse caso, macrolídeos (azitromicina 500mg/dia por 5 dias ou claritromicina 500mg/dia por 7-10 dias) são melhor escolha. Na maioria dos casos, amoxicilina + clavulanato é suficiente, pois atípicos são raros em crianças."
               }
             }
           ]
