@@ -13330,8 +13330,8 @@ const App = () => {
         {
           id: 17,
           title: "Infecções de Vias Aéreas Superiores (IVAS)",
-          duration: "72 min",
-          xp: 360,
+          duration: "80 min",
+          xp: 400,
           sections: [
             {
               title: "Introdução",
@@ -14488,6 +14488,165 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "A otite média aguda é frequentemente precedida por infecção viral de vias aéreas superiores, que causa disfunção da tuba auditiva (edema e obstrução) e acúmulo de secreção no ouvido médio. Esse ambiente úmido e rico em nutrientes torna-se propício para a proliferação bacteriana, levando à otite média aguda bacteriana."
+              }
+            },
+            {
+              title: "Otite Média Aguda e Sinusite - Tratamento",
+              content: `
+                <div style="background: linear-gradient(135deg, #dcfce7 0%, #d1fae5 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #166534; margin-bottom: 15px;">💊 Otite Média Aguda e Sinusite - Tratamento</h3>
+                  
+                  <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 15px;">⚠️ Lembretes Importantes</h4>
+                    <div style="background: #fecaca; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626; margin-bottom: 15px;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">🦠 Raramente é Bacteriana!</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Maioria é viral!</strong> Não prescreva antibióticos indiscriminadamente.
+                      </p>
+                    </div>
+                    <div style="background: #fecaca; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">💧 Pus Não Significa Infecção Bacteriana!</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        A presença de <strong>pus</strong> (secreção purulenta) <strong>NÃO significa infecção bacteriana</strong>! Pode ser de origem viral.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #166534; margin-bottom: 15px;">💊 Primeira Escolha</h4>
+                    <div style="background: #bbf7d0; padding: 15px; border-radius: 8px; border-left: 4px solid #16a34a; margin-bottom: 15px;">
+                      <h5 style="color: #14532d; margin-bottom: 10px;">✅ Amoxicilina + Clavulanato</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Cobre as bactérias mais comuns: <em>S. pneumoniae</em>, <em>H. influenzae</em> e <em>M. catarrhalis</em>.
+                      </p>
+                    </div>
+                    <div style="background: #bbf7d0; padding: 15px; border-radius: 8px; border-left: 4px solid #16a34a;">
+                      <h5 style="color: #14532d; margin-bottom: 10px;">✅ Cefuroxima (Alternativa Boa)</h5>
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        Cefalosporina de 2ª geração com boa cobertura para os agentes comuns.
+                      </p>
+                      <div style="background: #86efac; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                          📌 <strong>Observação:</strong> Os atípicos não são cobertos. Porém, são <strong>raros em crianças</strong>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #b45309; margin-bottom: 15px;">🔍 Situação Especial: Miringite Bolhosa</h4>
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 15px;">
+                      <h5 style="color: #92400e; margin-bottom: 10px;">👁️ Exame Físico</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Se no exame físico tiver uma <strong>miringite bolhosa</strong>, existe a possibilidade de um <strong><em>Micoplasma</em></strong>.
+                      </p>
+                    </div>
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <h5 style="color: #92400e; margin-bottom: 10px;">💊 Macrolídeos</h5>
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        Nesse caso, <strong>macrolídeos</strong> são melhor escolha:
+                      </p>
+                      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
+                        <div style="background: #fcd34d; padding: 12px; border-radius: 6px;">
+                          <strong>💊 Azitromicina</strong><br/>
+                          <span style="font-size: 13px;">500mg ao dia<br/>por 5 dias</span>
+                        </div>
+                        <div style="background: #fcd34d; padding: 12px; border-radius: 6px;">
+                          <strong>💊 Claritromicina</strong><br/>
+                          <span style="font-size: 13px;">500mg ao dia<br/>por 7-10 dias</span>
+                        </div>
+                      </div>
+                      <div style="background: #fcd34d; padding: 12px; border-radius: 6px; margin-top: 10px;">
+                        <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                          📌 <strong>Vantagem dos macrolídeos:</strong> Cobrem bem pneumococos, moraxela e hemófilos que podem ser resistentes a beta-lactâmicos.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e0f2fe; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #075985; margin-bottom: 15px;">🔑 Outra Opção: Levofloxacino</h4>
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7; margin-bottom: 15px;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;">✅ Vantagem</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        É uma <strong>boa opção para todas as bactérias</strong> (cobre típicas e atípicas).
+                      </p>
+                    </div>
+                    <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">⚠️ Cautela</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Deve ser usado com <strong>cautela em crianças</strong> (risco de alterações na cartilagem de crescimento).
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 15px; border-radius: 8px; border-left: 4px solid #1abc9c; margin: 20px 0;">
+                    <h4 style="color: #0e6655; margin-bottom: 10px;">📊 Resumo do Tratamento</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+                      <thead>
+                        <tr style="background: #d1f2eb;">
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Situação</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Antibiótico</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Observações</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Primeira escolha</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Amoxicilina + Clavulanato</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Cobre bactérias comuns</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Alternativa</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Cefuroxima</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Cefalosporina de 2ª geração</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Miringite bolhosa</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Azitromicina ou Claritromicina</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Cobre Micoplasma e resistentes</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Cobertura ampla</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Levofloxacino</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Cautela em crianças</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #e8daef; padding: 15px; border-radius: 8px; border-left: 4px solid #7d3c98; margin: 20px 0;">
+                    <h4 style="color: #6b21a8; margin-bottom: 10px;">💡 Pontos-Chave</h4>
+                    <div style="background: #d7bde2; padding: 12px; border-radius: 6px;">
+                      <ul style="font-size: 14px; line-height: 1.8; margin-left: 20px;">
+                        <li><strong>Maioria é viral!</strong> Pus não significa infecção bacteriana</li>
+                        <li><strong>Primeira escolha:</strong> Amoxicilina + Clavulanato ou Cefuroxima</li>
+                        <li><strong>Atípicos são raros em crianças</strong>, não é necessário cobrir rotineiramente</li>
+                        <li><strong>Miringite bolhosa:</strong> Sugere <em>Micoplasma</em> → Macrolídeos</li>
+                        <li><strong>Macrolídeos:</strong> Cobrem bem pneumococos, moraxela e hemófilos resistentes</li>
+                        <li><strong>Levofloxacino:</strong> Boa cobertura, mas cautela em crianças</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>Lembrete:</strong> Maioria é viral! Pus não significa infecção bacteriana. <strong>Primeira escolha:</strong> Amoxicilina + Clavulanato ou Cefuroxima (atípicos raros em crianças). <strong>Miringite bolhosa:</strong> Sugere <em>Micoplasma</em> → Macrolídeos (azitromicina 500mg/dia por 5 dias ou claritromicina 500mg/dia por 7-10 dias) que cobrem bem pneumococos, moraxela e hemófilos resistentes. <strong>Levofloxacino:</strong> Boa opção para todas as bactérias, mas cautela em crianças.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Por que os macrolídeos são uma boa escolha no caso de miringite bolhosa?",
+                options: [
+                  "Porque cobrem apenas bactérias atípicas",
+                  "Porque cobrem Micoplasma e também pneumococos, moraxela e hemófilos que podem ser resistentes a beta-lactâmicos",
+                  "Porque são mais baratos que amoxicilina + clavulanato",
+                  "Porque não têm efeitos adversos em crianças"
+                ],
+                correct: 1,
+                explanation: "Os macrolídeos são uma boa escolha no caso de miringite bolhosa porque cobrem o Micoplasma (agente sugerido pela miringite bolhosa) e também cobrem bem pneumococos, moraxela e hemófilos que podem ser resistentes a beta-lactâmicos. Isso proporciona uma cobertura ampla e adequada para a situação clínica."
               }
             }
           ]
