@@ -12441,8 +12441,8 @@ const App = () => {
         {
           id: 16,
           title: "Infecções da Pele",
-          duration: "72 min",
-          xp: 360,
+          duration: "80 min",
+          xp: 400,
           sections: [
             {
               title: "Celulite",
@@ -13224,6 +13224,105 @@ const App = () => {
                 ],
                 correct: 2,
                 explanation: "O tratamento sistêmico para impetigo está indicado quando há muitas lesões, múltiplas áreas acometidas, impetigo bolhoso, falha do tratamento tópico ou condições sistêmicas (febre, mal-estar, linfadenomegalia). Para quadros leves e localizados, o tratamento tópico é suficiente."
+              }
+            },
+            {
+              title: "Resumo",
+              content: `
+                <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">📝 Resumo - Infecções da Pele</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                    Síntese dos <strong>principais pontos</strong> sobre o manejo das infecções de pele no ambiente ambulatorial.
+                  </p>
+                  
+                  <div style="background: #e8f8f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #117864; margin-bottom: 15px;">🦠 Etiologia</h4>
+                    <div style="background: #d1f2eb; padding: 15px; border-radius: 8px; border-left: 4px solid #1abc9c;">
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Predominantemente <strong>cocos Gram-positivos</strong> dos gêneros <strong><em>Staphylococcus</em></strong> e <strong><em>Streptococcus</em></strong>.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #166534; margin-bottom: 15px;">💊 Tratamento Empírico</h4>
+                    <div style="background: #bbf7d0; padding: 15px; border-radius: 8px; border-left: 4px solid #16a34a;">
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Cefalosporina de 1ª geração</strong> (cefadroxil) ou <strong>amoxicilina com/sem clavulanato</strong>, dependendo da suspeita clínica.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e0f2fe; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #075985; margin-bottom: 15px;">🧴 Tratamento Tópico</h4>
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7;">
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Mupirocina</strong> para impetigo localizado. Eficaz e limita o uso desnecessário de antibióticos sistêmicos.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 15px;">🔪 Procedimentos</h4>
+                    <div style="background: #fecaca; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Drenagem cirúrgica</strong> para abscessos <strong>maiores que 5cm</strong> ou com <strong>sinais sistêmicos de infecção</strong>.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #b45309; margin-bottom: 15px;">🔁 Descolonização</h4>
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 12px;">
+                        Em casos de <strong>recorrência frequente</strong> de furúnculos ou abscessos, considerar descolonização de <em>S. aureus</em>:
+                      </p>
+                      <div style="background: #fcd34d; padding: 12px; border-radius: 6px; margin-bottom: 10px;">
+                        <strong>🧴 Banhos de Sabonete de Clorexidina 2%</strong><br/>
+                        <span style="font-size: 13px;">Por duas semanas</span>
+                      </div>
+                      <div style="background: #fcd34d; padding: 12px; border-radius: 6px; margin-bottom: 10px;">
+                        <strong>👃 Mupirocina Nasal</strong><br/>
+                        <span style="font-size: 13px;">3x/dia por 10 dias</span>
+                      </div>
+                      <div style="background: #fed7aa; padding: 12px; border-radius: 6px;">
+                        <strong>🔍 Investigação</strong><br/>
+                        <span style="font-size: 13px;">Investigar condições predisponentes como diabetes ou imunodeficiências</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8daef; padding: 15px; border-radius: 8px; border-left: 4px solid #7d3c98; margin: 20px 0;">
+                    <h4 style="color: #6b21a8; margin-bottom: 10px;">📊 Pontos-Chave</h4>
+                    <div style="background: #d7bde2; padding: 12px; border-radius: 6px;">
+                      <ul style="font-size: 14px; line-height: 1.8; margin-left: 20px;">
+                        <li><strong>Etiologia:</strong> Cocos Gram-positivos (<em>Staphylococcus</em> e <em>Streptococcus</em>)</li>
+                        <li><strong>Tratamento empírico:</strong> Cefadroxil ou amoxicilina ± clavulanato</li>
+                        <li><strong>Tratamento tópico:</strong> Mupirocina para casos localizados</li>
+                        <li><strong>Drenagem:</strong> Abscessos >5cm ou sinais sistêmicos</li>
+                        <li><strong>Descolonização:</strong> Clorexidina + mupirocina nasal em casos recorrentes</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      As infecções de pele são predominantemente causadas por <strong>cocos Gram-positivos</strong>. O tratamento empírico inclui <strong>cefalosporina de 1ª geração ou amoxicilina ± clavulanato</strong>. <strong>Mupirocina tópica</strong> é eficaz para impetigo localizado. <strong>Drenagem cirúrgica</strong> é indicada para abscessos >5cm. Em casos recorrentes, considerar <strong>descolonização</strong> com clorexidina e mupirocina nasal, além de investigar condições predisponentes.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Em casos de recorrência frequente de furúnculos, qual é a conduta recomendada para descolonização de S. aureus?",
+                options: [
+                  "Antibiótico oral por 30 dias",
+                  "Banhos de clorexidina 2% por duas semanas e mupirocina nasal 3x/dia por 10 dias, além de investigar condições predisponentes",
+                  "Apenas mupirocina tópica nas lesões",
+                  "Drenagem cirúrgica preventiva"
+                ],
+                correct: 1,
+                explanation: "Em casos de recorrência frequente de furúnculos ou abscessos, a descolonização de S. aureus deve incluir banhos de sabonete de clorexidina 2% por duas semanas e mupirocina nasal 3x/dia por 10 dias. Além disso, é importante investigar condições predisponentes como diabetes ou imunodeficiências."
               }
             }
           ]
