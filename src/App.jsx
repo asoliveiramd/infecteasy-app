@@ -10957,6 +10957,117 @@ const App = () => {
                 correct: 1,
                 explanation: "Os nitrofuranos têm menor desenvolvimento de resistência bacteriana porque possuem múltiplos mecanismos de ação, o que dificulta o desenvolvimento de resistência. São antibióticos sintéticos que danificam o DNA bacteriano. Seu uso é exclusivo para infecções urinárias, e a nitrofurantoína é a única com uso clínico significativo."
               }
+            },
+            {
+              title: "Espectro de ação",
+              content: `
+                <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Espectro de Ação</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #dbeafe;">
+                    A nitrofurantoína é <strong style="color: white;">ativa contra principais uropatogênicos</strong>
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">🦠 Cobertura Antimicrobiana</h4>
+                  
+                  <div style="background: #dbeafe; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                    <h5 style="color: #1e40af; margin-bottom: 12px; font-size: 16px;">🔵 Gram-negativos</h5>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                      <div style="background: white; padding: 12px; border-radius: 6px; border: 2px solid #10b981;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          • <strong>Escherichia coli</strong> (principal patogênio urinário)
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          • <strong>Klebsiella</strong> spp.
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          • <strong>Enterobacter</strong> spp.
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          • <strong>Citrobacter</strong> spp.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                    <h5 style="color: #047857; margin-bottom: 12px; font-size: 16px;">🟢 Gram-positivos</h5>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #065f46; margin: 0;">
+                          • <strong>Staphylococcus saprophyticus</strong>
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #065f46; margin: 0;">
+                          • <strong>Enterococcus faecalis</strong> (algumas cepas)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #dc2626;">
+                    <h5 style="color: #991b1b; margin-bottom: 12px; font-size: 16px;">❌ Não Ativos Contra</h5>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #7f1d1d; margin: 0;">
+                          • <strong>Proteus</strong> spp.
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #7f1d1d; margin: 0;">
+                          • <strong>Pseudomonas aeruginosa</strong>
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #7f1d1d; margin: 0;">
+                          • <strong>Serratia marcescens</strong>
+                        </p>
+                      </div>
+                      <div style="background: white; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 14px; color: #7f1d1d; margin: 0;">
+                          • <strong>Morganella morganii</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 15px; font-size: 17px;">⚠️ Importante sobre BrCAST</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #f59e0b;">
+                    <h5 style="color: #92400e; margin-bottom: 10px; font-size: 16px;">📋 Ponto de Corte</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0;">
+                      No <strong>BrCAST</strong> temos ponto de corte <strong>apenas para <em>E. coli</em></strong>. Portanto, o uso nas demais bactérias deve ser <strong>com cautela</strong>.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> A nitrofurantoína é ativa contra <strong>Gram-negativos</strong> (<em>E. coli</em>, Klebsiella, Enterobacter, Citrobacter) e <strong>Gram-positivos</strong> (S. saprophyticus, E. faecalis). <strong>Não é ativa</strong> contra Proteus, Pseudomonas, Serratia e Morganella. No <strong>BrCAST</strong>, há ponto de corte <strong>apenas para <em>E. coli</em></strong>, portanto o uso nas demais bactérias deve ser com cautela.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que o uso de nitrofurantoína para bactérias diferentes de E. coli deve ser feito com cautela?",
+                options: [
+                  "A) Porque a nitrofurantoína não tem atividade contra outras bactérias",
+                  "B) Porque no BrCAST há ponto de corte apenas para E. coli, tornando o uso em outras bactérias menos validado",
+                  "C) Porque a nitrofurantoína é tóxica para pacientes com infecções por outras bactérias",
+                  "D) Porque a nitrofurantoína só pode ser usada em ITU complicada"
+                ],
+                correct: 1,
+                explanation: "O uso de nitrofurantoína para bactérias diferentes de E. coli deve ser feito com cautela porque no BrCAST há ponto de corte apenas para E. coli, tornando o uso em outras bactérias menos validado clinicamente. Embora a nitrofurantoína tenha atividade in vitro contra outras enterobactérias (Klebsiella, Enterobacter, Citrobacter) e alguns Gram-positivos (S. saprophyticus, E. faecalis), a ausência de pontos de corte estabelecidos indica falta de evidências clínicas robustas para essas indicações. A nitrofurantoína não é ativa contra Proteus, Pseudomonas, Serratia e Morganella."
+              }
             }
           ]
         },
