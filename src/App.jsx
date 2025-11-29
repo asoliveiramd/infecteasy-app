@@ -12441,8 +12441,8 @@ const App = () => {
         {
           id: 16,
           title: "Infecções da Pele",
-          duration: "48 min",
-          xp: 240,
+          duration: "56 min",
+          xp: 280,
           sections: [
             {
               title: "Celulite",
@@ -12911,6 +12911,113 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "O principal agente etiológico da erisipela é o Streptococcus pyogenes. A porta de entrada geralmente são lesões por trauma ou micose interdigital. Diferentemente da celulite e do impetigo, que podem ser causados por ambos S. pyogenes e S. aureus, a erisipela é predominantemente causada pelo S. pyogenes."
+              }
+            },
+            {
+              title: "Tratamento de Erisipela e Celulite",
+              content: `
+                <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #15803d; margin-bottom: 15px;">💊 Tratamento de Erisipela e Celulite</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                    O tratamento adequado de erisipela e celulite depende do <strong>agente etiológico suspeito</strong> e da <strong>presença de alergias</strong>.
+                  </p>
+                  
+                  <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #166534; margin-bottom: 15px;">✅ Primeira Escolha</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
+                      <div style="background: #bbf7d0; padding: 15px; border-radius: 8px; border-left: 4px solid #16a34a;">
+                        <h5 style="color: #14532d; margin-bottom: 10px;">💊 Cefadroxil</h5>
+                        <p style="font-size: 14px; line-height: 1.5; margin-bottom: 8px;">
+                          <strong>Duração:</strong> 7-10 dias
+                        </p>
+                        <p style="font-size: 13px; line-height: 1.4; color: #166534;">
+                          Cobre tanto <em>S. pyogenes</em> quanto <em>S. aureus</em>
+                        </p>
+                      </div>
+                      <div style="background: #bbf7d0; padding: 15px; border-radius: 8px; border-left: 4px solid #16a34a;">
+                        <h5 style="color: #14532d; margin-bottom: 10px;">💊 Amoxicilina</h5>
+                        <p style="font-size: 14px; line-height: 1.5; margin-bottom: 8px;">
+                          <strong>Indicação:</strong> Erisipela
+                        </p>
+                        <p style="font-size: 13px; line-height: 1.4; color: #166534;">
+                          Suficiente para <em>S. pyogenes</em>
+                        </p>
+                      </div>
+                      <div style="background: #bbf7d0; padding: 15px; border-radius: 8px; border-left: 4px solid #16a34a;">
+                        <h5 style="color: #14532d; margin-bottom: 10px;">💊 Amoxicilina + Clavulanato</h5>
+                        <p style="font-size: 14px; line-height: 1.5; margin-bottom: 8px;">
+                          <strong>Indicação:</strong> Celulite
+                        </p>
+                        <p style="font-size: 13px; line-height: 1.4; color: #166534;">
+                          Cobre <em>S. aureus</em> produtor de beta-lactamase
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #b45309; margin-bottom: 15px;">🔄 Alternativas para Alérgicos</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
+                      <div style="background: #fde68a; padding: 15px; border-radius: 8px; border: 2px solid #f59e0b;">
+                        <h5 style="color: #92400e; margin-bottom: 8px;">💊 Clindamicina</h5>
+                        <p style="font-size: 13px; line-height: 1.4;">
+                          Boa opção para alérgicos a beta-lactâmicos
+                        </p>
+                      </div>
+                      <div style="background: #fde68a; padding: 15px; border-radius: 8px; border: 2px solid #f59e0b;">
+                        <h5 style="color: #92400e; margin-bottom: 8px;">💊 Macrolídeos</h5>
+                        <p style="font-size: 13px; line-height: 1.4;">
+                          Alternativa para alérgicos
+                        </p>
+                      </div>
+                      <div style="background: #fde68a; padding: 15px; border-radius: 8px; border: 2px solid #f59e0b;">
+                        <h5 style="color: #92400e; margin-bottom: 8px;">💊 TMP-SMX</h5>
+                        <p style="font-size: 13px; line-height: 1.4;">
+                          Sulfametoxazol + Trimetoprima
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 15px; border-radius: 8px; border-left: 4px solid #2563eb; margin: 20px 0;">
+                    <h4 style="color: #1e40af; margin-bottom: 10px;">💡 Racional Terapêutico</h4>
+                    <div style="background: #bfdbfe; padding: 12px; border-radius: 6px; margin-bottom: 10px;">
+                      <p style="font-size: 14px; line-height: 1.5; margin: 0;">
+                        <strong>🟢 Erisipela (<em>S. pyogenes</em>):</strong> Amoxicilina <strong>sem clavulanato</strong> é suficiente
+                      </p>
+                    </div>
+                    <div style="background: #bfdbfe; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; line-height: 1.5; margin: 0;">
+                        <strong>🟡 Celulite (suspeita de <em>S. aureus</em> produtor de beta-lactamase):</strong> Prefira amoxicilina com clavulanato ou cefadroxil
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626; margin: 20px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 10px;">⚠️ Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      Quando há suspeita de <strong><em>S. aureus</em> produtor de beta-lactamase</strong>, o clavulanato (inibidor de beta-lactamase) é necessário para garantir a eficácia do tratamento.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>Primeira escolha:</strong> Cefadroxil (7-10 dias), amoxicilina (erisipela) ou amoxicilina com clavulanato (celulite). <strong>Alternativas para alérgicos:</strong> Clindamicina, macrolídeos ou TMP-SMX. Para <em>S. pyogenes</em>, amoxicilina sem clavulanato é suficiente; para <em>S. aureus</em> produtor de beta-lactamase, prefira amoxicilina com clavulanato ou cefadroxil.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Por que a amoxicilina sem clavulanato é suficiente para o tratamento da erisipela?",
+                options: [
+                  "Porque a erisipela é causada principalmente por S. aureus que não produz beta-lactamase",
+                  "Porque a erisipela é causada principalmente por S. pyogenes, que não produz beta-lactamase",
+                  "Porque a erisipela é uma infecção superficial que não requer antibióticos potentes",
+                  "Porque o clavulanato é contra-indicado em infecções de pele"
+                ],
+                correct: 1,
+                explanation: "A amoxicilina sem clavulanato é suficiente para o tratamento da erisipela porque o principal agente etiológico é o Streptococcus pyogenes, que não produz beta-lactamase. Já na celulite, onde há suspeita de Staphylococcus aureus produtor de beta-lactamase, é preferível usar amoxicilina com clavulanato ou cefadroxil."
               }
             }
           ]
