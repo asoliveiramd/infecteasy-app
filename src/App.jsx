@@ -12441,8 +12441,8 @@ const App = () => {
         {
           id: 16,
           title: "Infecções da Pele",
-          duration: "8 min",
-          xp: 40,
+          duration: "16 min",
+          xp: 80,
           sections: [
             {
               title: "Celulite",
@@ -12522,6 +12522,78 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "A dor local é um componente marcante da celulite bacteriana. Dificilmente a celulite bacteriana virá sem dor. Nesse caso, deve-se pensar em outra causa."
+              }
+            },
+            {
+              title: "Erisipela",
+              content: `
+                <div style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #dc2626; margin-bottom: 15px;">🔴 Erisipela</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                    A erisipela é uma <strong>infecção superficial da derme e vasos linfáticos</strong> com características clínicas distintas da celulite.
+                  </p>
+                  
+                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #b91c1c; margin-bottom: 10px;">🔍 Características da Erisipela</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                      <div style="background: #fecaca; padding: 10px; border-radius: 6px;">
+                        <strong>🦠 Infecção Superficial</strong><br/>
+                        <span style="font-size: 14px;">Derme e vasos linfáticos</span>
+                      </div>
+                      <div style="background: #fecaca; padding: 10px; border-radius: 6px;">
+                        <strong>📌 Bordas Bem Demarcadas</strong><br/>
+                        <span style="font-size: 14px;">Bordas elevadas (sinal característico)</span>
+                      </div>
+                      <div style="background: #fecaca; padding: 10px; border-radius: 6px;">
+                        <strong>🦵 Localização</strong><br/>
+                        <span style="font-size: 14px;">Pode afetar predominantemente pernas</span>
+                      </div>
+                      <div style="background: #fecaca; padding: 10px; border-radius: 6px;">
+                        <strong>✨ Eritema Brilhante</strong><br/>
+                        <span style="font-size: 14px;">Edema mais pronunciado</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #b45309; margin-bottom: 10px;">🚪 Portas de Entrada</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      Deve-se sempre <strong>checar se não há portas de entrada nos pés</strong>. Frequentemente essa porta é uma <strong>lesão por manipulação de unha</strong> ou um <strong>tinea pedis</strong> (frieira) que igualmente deverá ser tratada.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                    <h4 style="color: #1e40af; margin-bottom: 10px;">💧 Evolução com Bolhas</h4>
+                    <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                      Em geral, o paciente evolui com <strong>bolhas predominantemente na parte posterior da perna</strong>. Essas bolhas podem evoluir para feridas.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                    <h4 style="color: #991b1b; margin-bottom: 10px;">⚠️ Importante sobre o Tratamento</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      Vale lembrar que o <strong>antibiótico restringe o território da doença</strong>. Ele <strong>não impede que células mortas sejam descartadas</strong>. Portanto, <strong>não faz sentido mudar o antibiótico só porque formaram-se bolhas durante seu uso</strong>.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 15px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      A erisipela é uma <strong>infecção superficial da derme e vasos linfáticos</strong> com <strong>bordas bem demarcadas e elevadas</strong>, <strong>eritema brilhante e edema mais pronunciado</strong>. Deve-se sempre <strong>checar portas de entrada nos pés</strong> e tratar lesões associadas. A formação de bolhas durante o tratamento é esperada e não indica falha terapêutica.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Por que não se deve mudar o antibiótico quando formam-se bolhas durante o tratamento da erisipela?",
+                options: [
+                  "Porque as bolhas indicam que o antibiótico está funcionando perfeitamente",
+                  "Porque o antibiótico restringe o território da doença, mas não impede que células mortas sejam descartadas, sendo a formação de bolhas um processo esperado",
+                  "Porque as bolhas são causadas por uma reação alérgica ao antibiótico",
+                  "Porque as bolhas indicam que a infecção está se espalhando"
+                ],
+                correct: 1,
+                explanation: "O antibiótico restringe o território da doença, mas não impede que células mortas sejam descartadas. Portanto, a formação de bolhas durante o tratamento é um processo esperado e não indica falha terapêutica."
               }
             }
           ]
