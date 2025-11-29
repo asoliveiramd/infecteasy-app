@@ -13330,8 +13330,8 @@ const App = () => {
         {
           id: 17,
           title: "Infecções de Vias Aéreas Superiores (IVAS)",
-          duration: "48 min",
-          xp: 240,
+          duration: "56 min",
+          xp: 280,
           sections: [
             {
               title: "Introdução",
@@ -14055,6 +14055,143 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "A presença de secreção purulenta sozinha NÃO indica infecção bacteriana porque o pus na IVAS de natureza viral provém de leucócitos mortos durante a inflamação contra o vírus. Para considerar sinusite bacteriana, é necessário observar outros critérios: sintomas persistentes >10 dias, piora após melhora inicial (\"double sickening\"), ou dor localizada irradiada para dentes."
+              }
+            },
+            {
+              title: "Pontos de Atenção",
+              content: `
+                <div style="background: linear-gradient(135deg, #fef9e7 0%, #fef5e7 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #d68910; margin-bottom: 15px;">⚠️ Pontos de Atenção</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                    Compreender as diferenças entre <strong>rinosinusite viral, bacteriana e alérgica</strong> é fundamental para evitar a prescrição excessiva de antibióticos.
+                  </p>
+                  
+                  <div style="background: #e0f2fe; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #075985; margin-bottom: 15px;">🗣️ Confusão de Conceitos</h4>
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7; margin-bottom: 15px;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;">🤔 Paciente Confunde</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Lembre-se que o paciente com frequência <strong>confunde conceitos</strong> como <strong>sinusite e rinite</strong>.
+                      </p>
+                    </div>
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;">🦠 Rinosinusite</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Em geral, quem tem uma <strong>IVAS de natureza viral</strong>, faz uma <strong>rinosinusite</strong>. O mesmo ocorre com <strong>rinite alérgica</strong>.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #b45309; margin-bottom: 15px;">🔄 Queixas Recorrentes</h4>
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 15px;">
+                      <h5 style="color: #92400e; margin-bottom: 10px;">🗣️ Frases Comuns do Paciente</h5>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                        <li>"Minha <strong>imunidade está ruim</strong>"</li>
+                        <li>"Estou ficando <strong>gripado com frequência</strong>"</li>
+                        <li>"Venho tendo <strong>uma sinusite atrás da outra</strong>"</li>
+                      </ul>
+                    </div>
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <h5 style="color: #92400e; margin-bottom: 10px;">🔍 Diagnóstico Mais Provável</h5>
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        Na <strong>maioria das vezes</strong>, trata-se de uma <strong>rinosinusite de natureza alérgica</strong>.
+                      </p>
+                      <div style="background: #fcd34d; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                          ⚠️ <strong>Carece de investigação</strong> para definir o diagnóstico (testes alérgicos, avaliação otorrinolaringológica).
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 15px;">❌ Cuidado!</h4>
+                    <div style="background: #fecaca; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">⚠️ Não Prescreva Antibióticos Excessivamente</h5>
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        <strong>Cuidado para não prescrever antibióticos excessivamente</strong> para esse paciente!
+                      </p>
+                      <div style="background: #fca5a5; padding: 12px; border-radius: 6px;">
+                        <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                          Rinosinusite alérgica <strong>NÃO responde a antibióticos</strong>. O tratamento adequado envolve anti-histamínicos, corticoides nasais e medidas de controle ambiental.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 15px; border-radius: 8px; border-left: 4px solid #1abc9c; margin: 20px 0;">
+                    <h4 style="color: #0e6655; margin-bottom: 10px;">📊 Diagnóstico Diferencial</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+                      <thead>
+                        <tr style="background: #d1f2eb;">
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Tipo</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Características</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Tratamento</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Viral</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Autolimitada, <10 dias</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Sintomático</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Bacteriana</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">>10 dias ou double sickening</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Antibiótico</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Alérgica</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Recorrente, sazonal, prurido</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Anti-histamínico + corticoide nasal</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #e8daef; padding: 15px; border-radius: 8px; border-left: 4px solid #7d3c98; margin: 20px 0;">
+                    <h4 style="color: #6b21a8; margin-bottom: 10px;">💡 Dicas Práticas</h4>
+                    <div style="background: #d7bde2; padding: 12px; border-radius: 6px;">
+                      <ul style="font-size: 14px; line-height: 1.8; margin-left: 20px;">
+                        <li><strong>Paciente com "sinusites de repetição"</strong>: Pense em alergia!</li>
+                        <li><strong>"Imunidade baixa"</strong>: Geralmente é rinosinusite alérgica, não imunodeficiência</li>
+                        <li><strong>Investigue</strong>: Testes alérgicos, avaliação ORL</li>
+                        <li><strong>Não prescreva antibióticos</strong> sem critérios para sinusite bacteriana</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dcfce7; padding: 15px; border-radius: 8px; border-left: 4px solid #16a34a; margin: 20px 0;">
+                    <h4 style="color: #166534; margin-bottom: 10px;">✅ Abordagem Adequada</h4>
+                    <div style="background: #bbf7d0; padding: 12px; border-radius: 6px;">
+                      <p style="font-size: 14px; line-height: 1.6; margin: 0;">
+                        <strong>1.</strong> Diferencie rinosinusite viral, bacteriana e alérgica<br/>
+                        <strong>2.</strong> Investigue causas alérgicas em casos recorrentes<br/>
+                        <strong>3.</strong> Use antibióticos apenas com critérios para sinusite bacteriana<br/>
+                        <strong>4.</strong> Eduque o paciente sobre a diferença entre rinite e sinusite
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      Pacientes frequentemente confundem sinusite e rinite. Queixas de "sinusites de repetição", "imunidade baixa" ou "gripado com frequência" geralmente indicam <strong>rinosinusite alérgica</strong>, não infecção bacteriana. <strong>Cuidado para não prescrever antibióticos excessivamente!</strong> Investigue causas alérgicas e trate adequadamente.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Quando um paciente refere \"sinusites de repetição\" ou \"imunidade baixa\", qual é o diagnóstico mais provável na maioria das vezes?",
+                options: [
+                  "Sinusite bacteriana recorrente por resistência bacteriana",
+                  "Rinosinusite de natureza alérgica",
+                  "Imunodeficiência primária",
+                  "Sinusite fúngica invasiva"
+                ],
+                correct: 1,
+                explanation: "Na maioria das vezes, quando o paciente refere \"sinusites de repetição\", \"imunidade baixa\" ou \"gripado com frequência\", trata-se de uma rinosinusite de natureza alérgica, não de infecção bacteriana. Esses casos carecem de investigação (testes alérgicos, avaliação ORL) e não respondem a antibióticos. Cuidado para não prescrever antibióticos excessivamente!"
               }
             }
           ]
