@@ -13328,6 +13328,96 @@ const App = () => {
           ]
         },
         {
+          id: 17,
+          title: "Infecções de Vias Aéreas Superiores (IVAS)",
+          duration: "8 min",
+          xp: 40,
+          sections: [
+            {
+              title: "Introdução",
+              content: `
+                <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🩸 Introdução - IVAS</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                    As <strong>Infecções de Vias Aéreas Superiores (IVAS)</strong> são extremamente comuns na prática clínica e representam um dos <strong>principais motivos de consulta médica</strong>.
+                  </p>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #1e40af; margin-bottom: 15px;">🎯 Importância da Diferenciação Etiológica</h4>
+                    <div style="background: #bfdbfe; padding: 15px; border-radius: 8px; border-left: 4px solid #2563eb;">
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        É fundamental <strong>distinguir entre etiologia viral e bacteriana</strong> para evitar o <strong>uso desnecessário de antibióticos</strong>.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #b45309; margin-bottom: 15px;">⚠️ Lembrete Importante</h4>
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <p style="font-size: 15px; line-height: 1.6; margin: 0;">
+                        <strong>📊 Aproximadamente 80% das IVAS são de etiologia viral</strong>, não necessitando de antibioticoterapia.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #117864; margin-bottom: 15px;">📊 Dados Epidemiológicos</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                      <div style="background: #d1f2eb; padding: 15px; border-radius: 8px; border-left: 4px solid #1abc9c;">
+                        <h5 style="color: #0e6655; margin-bottom: 10px;">🦠 Etiologia Viral</h5>
+                        <p style="font-size: 24px; font-weight: bold; color: #0e6655; margin: 10px 0;">~80%</p>
+                        <p style="font-size: 13px; line-height: 1.4;">
+                          Maioria dos casos<br/>
+                          <strong>Não necessita antibiótico</strong>
+                        </p>
+                      </div>
+                      <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                        <h5 style="color: #991b1b; margin-bottom: 10px;">🦠 Etiologia Bacteriana</h5>
+                        <p style="font-size: 24px; font-weight: bold; color: #991b1b; margin: 10px 0;">~20%</p>
+                        <p style="font-size: 13px; line-height: 1.4;">
+                          Minoria dos casos<br/>
+                          <strong>Pode necessitar antibiótico</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626; margin: 20px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 10px;">🚫 Evitar Uso Inadequado de Antibióticos</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      O uso desnecessário de antibióticos contribui para:
+                    </p>
+                    <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px; margin-top: 10px;">
+                      <li>Resistência bacteriana</li>
+                      <li>Efeitos adversos desnecessários</li>
+                      <li>Custos adicionais</li>
+                      <li>Alteração da microbiota</li>
+                    </ul>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      As IVAS são <strong>extremamente comuns</strong> e representam um dos principais motivos de consulta. <strong>Aproximadamente 80% são de etiologia viral</strong>, não necessitando de antibióticos. É fundamental distinguir entre etiologia viral e bacteriana para evitar o uso inadequado de antimicrobianos.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é a proporção aproximada de IVAS que são de etiologia viral?",
+                options: [
+                  "Aproximadamente 20%",
+                  "Aproximadamente 50%",
+                  "Aproximadamente 80%",
+                  "Aproximadamente 100%"
+                ],
+                correct: 2,
+                explanation: "Aproximadamente 80% das IVAS são de etiologia viral, não necessitando de antibioticoterapia. Isso torna fundamental a diferenciação entre etiologia viral e bacteriana para evitar o uso desnecessário de antibióticos, que contribui para resistência bacteriana e efeitos adversos."
+              }
+            }
+          ]
+        },
+        {
           id: 10,
           title: "Pneumonia Ambulatorial",
           duration: "30 min",
