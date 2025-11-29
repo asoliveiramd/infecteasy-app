@@ -11191,6 +11191,103 @@ const App = () => {
                 correct: 1,
                 explanation: "A diferença entre o mecanismo de ação das sulfonamidas e da trimetoprima está nas enzimas que cada uma inibe na via do folato. As sulfonamidas inibem a di-hidropteroato sintase, bloqueando a conversão de PABA em ácido diidropteroico (etapa inicial). Já a trimetoprima inibe a di-hidrofolato redutase, bloqueando a conversão de di-hidrofolato em tetra-hidrofolato (etapa posterior). Ambas bloqueiam a síntese de folato, essencial para a produção de purinas e pirimidinas (DNA e RNA bacteriano)."
               }
+            },
+            {
+              title: "Características clínicas importantes",
+              content: `
+                <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">📊 Características Clínicas Importantes</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #d1fae5;">
+                    As <strong style="color: white;">sulfas foram os primeiros antibióticos comercialmente usados</strong>. Foram contemporâneos da penicilina de Fleming e se mantêm úteis até hoje. São <strong style="color: white;">baratas e eficazes</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">✨ Principais Características</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                    <div style="background: #dcfce7; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                      <h5 style="color: #047857; margin-bottom: 8px; font-size: 15px;">🤝 Efeito Sinérgico</h5>
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        Quando usados em <strong>combinação</strong>
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <h5 style="color: #92400e; margin-bottom: 8px; font-size: 15px;">⚔️ Bacteriostáticos vs Bactericidas</h5>
+                      <p style="font-size: 14px; color: #78350f; margin: 0;">
+                        <strong>Bacteriostáticos isoladamente</strong>, <strong>bactericidas em combinação</strong>
+                      </p>
+                    </div>
+                    
+                    <div style="background: #dbeafe; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                      <h5 style="color: #1e40af; margin-bottom: 8px; font-size: 15px;">🌐 Espectro Amplo</h5>
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                        Quando <strong>combinados</strong>
+                      </p>
+                    </div>
+                    
+                    <div style="background: #e0e7ff; padding: 15px; border-radius: 8px; border-left: 4px solid #6366f1;">
+                      <h5 style="color: #4338ca; margin-bottom: 8px; font-size: 15px;">💊 Excelente Biodisponibilidade Oral</h5>
+                      <p style="font-size: 14px; color: #3730a3; margin: 0;">
+                        Fácil administração
+                      </p>
+                    </div>
+                    
+                    <div style="background: #dcfce7; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                      <h5 style="color: #047857; margin-bottom: 8px; font-size: 15px;">💰 Baixo Custo</h5>
+                      <p style="font-size: 14px; color: #065f46; margin: 0;">
+                        Acessível e econômico
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fce7f3; padding: 15px; border-radius: 8px; border-left: 4px solid #ec4899;">
+                      <h5 style="color: #9f1239; margin-bottom: 8px; font-size: 15px;">🧱 Bons Níveis Teciduais</h5>
+                      <p style="font-size: 14px; color: #831843; margin: 0;">
+                        Incluindo <strong>próstata</strong>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #dc2626;">
+                  <h4 style="color: #991b1b; margin-bottom: 15px; font-size: 17px;">⚠️ Ponto de Atenção</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0; border: 2px solid #dc2626;">
+                    <h5 style="color: #991b1b; margin-bottom: 10px; font-size: 16px;">🔴 Resistência Crescente</h5>
+                    <p style="font-size: 14px; line-height: 1.6; color: #7f1d1d; margin: 0;">
+                      Especialmente em <strong>infecções comunitárias</strong>
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 15px; font-size: 17px;">📜 História</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0;">
+                      🕰️ As <strong>sulfas foram os primeiros antibióticos comercialmente usados</strong>, contemporâneos da penicilina de Fleming. Apesar de terem sido desenvolvidas há décadas, <strong>se mantêm úteis até hoje</strong> devido ao seu <strong>baixo custo</strong>, <strong>eficácia</strong> e <strong>excelente biodisponibilidade oral</strong>.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> As sulfas foram os <strong>primeiros antibióticos comercialmente usados</strong> e se mantêm úteis até hoje. Principais características: <strong>efeito sinérgico em combinação</strong>, <strong>bacteriostáticos isoladamente mas bactericidas em combinação</strong>, <strong>espectro amplo quando combinados</strong>, <strong>excelente biodisponibilidade oral</strong>, <strong>baixo custo</strong>, <strong>bons níveis teciduais (incluindo próstata)</strong>. Porém, há <strong>resistência crescente</strong>, especialmente em infecções comunitárias.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que as sulfas (sulfonamidas) são bacteriostáticas isoladamente mas bactericidas em combinação?",
+                options: [
+                  "A) Porque isoladamente têm baixa biodisponibilidade oral",
+                  "B) Porque apresentam efeito sinérgico quando usadas em combinação (geralmente com trimetoprima), bloqueando a via do folato em etapas diferentes",
+                  "C) Porque a combinação aumenta a penetração tecidual",
+                  "D) Porque isoladamente não atingem a próstata"
+                ],
+                correct: 1,
+                explanation: "As sulfas são bacteriostáticas isoladamente mas bactericidas em combinação porque apresentam efeito sinérgico quando usadas em combinação (geralmente com trimetoprima), bloqueando a via do folato em etapas diferentes. As sulfonamidas inibem a di-hidropteroato sintase (PABA → ácido diidropteroico) e a trimetoprima inibe a di-hidrofolato redutase (di-hidrofolato → tetra-hidrofolato). Essa dupla inibição sequencial na via do folato resulta em efeito bactericida. As sulfas foram os primeiros antibióticos comercialmente usados e se mantêm úteis até hoje devido ao baixo custo, eficácia e excelente biodisponibilidade oral, apesar da resistência crescente em infecções comunitárias."
+              }
             }
           ]
         },
