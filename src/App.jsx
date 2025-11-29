@@ -12441,8 +12441,8 @@ const App = () => {
         {
           id: 16,
           title: "Infecções da Pele",
-          duration: "40 min",
-          xp: 200,
+          duration: "48 min",
+          xp: 240,
           sections: [
             {
               title: "Celulite",
@@ -12827,6 +12827,90 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "O impetigo é caracterizado por lesões vesicopustulosas que evoluem para crostas melicéricas (cor de mel). Trata-se de uma infecção superficial altamente contagiosa, comum em crianças e em condições de higiene precária."
+              }
+            },
+            {
+              title: "Agentes Etiológicos e Portas de Entrada",
+              content: `
+                <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">📊 Agentes Etiológicos e Portas de Entrada</h3>
+                  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                    Compreender os <strong>agentes etiológicos</strong> e as <strong>portas de entrada</strong> das infecções de pele é fundamental para o diagnóstico e tratamento adequados.
+                  </p>
+                  
+                  <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin: 20px 0;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                      <thead>
+                        <tr style="background: #0369a1; color: white;">
+                          <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">🦠 Infecção</th>
+                          <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">💉 Bactéria Principal</th>
+                          <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">🚪 Porta de Entrada</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr style="background: #f0f9ff;">
+                          <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">🔴 Celulite</td>
+                          <td style="padding: 12px; border: 1px solid #ddd;"><em>Streptococcus pyogenes</em>, <em>Staphylococcus aureus</em></td>
+                          <td style="padding: 12px; border: 1px solid #ddd;">Feridas, úlceras, fissuras</td>
+                        </tr>
+                        <tr style="background: white;">
+                          <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">🔴 Erisipela</td>
+                          <td style="padding: 12px; border: 1px solid #ddd;"><em>Streptococcus pyogenes</em></td>
+                          <td style="padding: 12px; border: 1px solid #ddd;">Lesões por trauma ou micose interdigital</td>
+                        </tr>
+                        <tr style="background: #f0f9ff;">
+                          <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">🟡 Furúnculo</td>
+                          <td style="padding: 12px; border: 1px solid #ddd;"><em>Staphylococcus aureus</em> (MRSA possível)</td>
+                          <td style="padding: 12px; border: 1px solid #ddd;">Folículo piloso</td>
+                        </tr>
+                        <tr style="background: white;">
+                          <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">🦠 Impetigo</td>
+                          <td style="padding: 12px; border: 1px solid #ddd;"><em>Staphylococcus aureus</em>, <em>Streptococcus pyogenes</em></td>
+                          <td style="padding: 12px; border: 1px solid #ddd;">Pequenos traumas/lesões</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #d97706; margin: 20px 0;">
+                    <h4 style="color: #b45309; margin-bottom: 10px;">⚠️ Atenção Especial</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>MRSA (Staphylococcus aureus resistente à meticilina)</strong> pode estar presente em furúnculos, especialmente em casos recorrentes ou em pacientes com fatores de risco.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 15px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #117864; margin-bottom: 10px;">🔑 Pontos-Chave</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                      <div style="background: #d1f2eb; padding: 12px; border-radius: 6px;">
+                        <strong>💉 Streptococcus pyogenes</strong><br/>
+                        <span style="font-size: 13px;">Principal agente da erisipela; também causa celulite e impetigo</span>
+                      </div>
+                      <div style="background: #d1f2eb; padding: 12px; border-radius: 6px;">
+                        <strong>💉 Staphylococcus aureus</strong><br/>
+                        <span style="font-size: 13px;">Presente em todas as infecções; único agente do furúnculo</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>Streptococcus pyogenes</strong> é o principal agente da <strong>erisipela</strong>, enquanto <strong>Staphylococcus aureus</strong> é o único agente do <strong>furúnculo</strong>. A <strong>celulite</strong> e o <strong>impetigo</strong> podem ser causados por ambos. As portas de entrada variam desde pequenos traumas até feridas e úlceras.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é o principal agente etiológico da erisipela?",
+                options: [
+                  "Staphylococcus aureus",
+                  "Streptococcus pyogenes",
+                  "Ambos Staphylococcus aureus e Streptococcus pyogenes",
+                  "MRSA (Staphylococcus aureus resistente à meticilina)"
+                ],
+                correct: 1,
+                explanation: "O principal agente etiológico da erisipela é o Streptococcus pyogenes. A porta de entrada geralmente são lesões por trauma ou micose interdigital. Diferentemente da celulite e do impetigo, que podem ser causados por ambos S. pyogenes e S. aureus, a erisipela é predominantemente causada pelo S. pyogenes."
               }
             }
           ]
