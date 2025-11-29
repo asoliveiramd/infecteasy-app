@@ -11293,6 +11293,129 @@ const App = () => {
         },
         {
           id: 13,
+          title: "Sulfametoxazol com Trimetoprima (Cotrimoxazol)",
+          duration: "12 min",
+          xp: 60,
+          sections: [
+            {
+              title: "Mecanismo de ação",
+              content: `
+                <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🔬 Mecanismo de Ação</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #fef3c7;">
+                    Quando combinados, <strong style="color: white;">sulfas e trimetoprima oferecem uma ação muito eficaz!</strong> Atuam em mais de um ponto do metabolismo inviabilizando a bactéria alvo.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">✨ Ação Sinérgica</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 15px;">
+                    <div style="background: #dbeafe; padding: 20px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                      <h5 style="color: #1e40af; margin-bottom: 12px; font-size: 16px;">🔗 Combinação Sinérgica</h5>
+                      <p style="font-size: 14px; color: #1e3a8a; margin: 0; line-height: 1.6;">
+                        Bloqueia <strong>duas etapas da síntese de folato</strong>
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fee2e2; padding: 20px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                      <h5 style="color: #991b1b; margin-bottom: 12px; font-size: 16px;">❌ Impede Produção</h5>
+                      <p style="font-size: 14px; color: #7f1d1d; margin: 0; line-height: 1.6;">
+                        Impede a produção de <strong>DNA e de proteínas bacterianas</strong>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                  <h4 style="color: #92400e; margin-bottom: 15px; font-size: 17px;">🧱 Duplo Bloqueio na Via do Folato</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                      <div style="background: #dbeafe; padding: 15px; border-radius: 8px; text-align: center;">
+                        <p style="font-size: 14px; color: #1e40af; margin: 0; font-weight: bold;">
+                          PABA
+                        </p>
+                      </div>
+                      
+                      <div style="text-align: center; color: #dc2626; font-size: 20px; font-weight: bold;">
+                        ↓<br/>
+                        <span style="font-size: 12px; background: #fee2e2; padding: 4px 8px; border-radius: 4px;">❌ SULFAMETOXAZOL</span>
+                      </div>
+                      
+                      <div style="background: #dbeafe; padding: 15px; border-radius: 8px; text-align: center;">
+                        <p style="font-size: 14px; color: #1e40af; margin: 0; font-weight: bold;">
+                          Ácido Diidropteroico
+                        </p>
+                      </div>
+                      
+                      <div style="text-align: center; color: #1e40af; font-size: 20px; font-weight: bold;">
+                        ↓
+                      </div>
+                      
+                      <div style="background: #dcfce7; padding: 15px; border-radius: 8px; text-align: center;">
+                        <p style="font-size: 14px; color: #047857; margin: 0; font-weight: bold;">
+                          Di-hidrofolato
+                        </p>
+                      </div>
+                      
+                      <div style="text-align: center; color: #dc2626; font-size: 20px; font-weight: bold;">
+                        ↓<br/>
+                        <span style="font-size: 12px; background: #fee2e2; padding: 4px 8px; border-radius: 4px;">❌ TRIMETOPRIMA</span>
+                      </div>
+                      
+                      <div style="background: #dcfce7; padding: 15px; border-radius: 8px; text-align: center;">
+                        <p style="font-size: 14px; color: #047857; margin: 0; font-weight: bold;">
+                          Tetra-hidrofolato
+                        </p>
+                      </div>
+                      
+                      <div style="text-align: center; color: #047857; font-size: 20px; font-weight: bold;">
+                        ↓
+                      </div>
+                      
+                      <div style="background: #fef3c7; padding: 15px; border-radius: 8px; text-align: center;">
+                        <p style="font-size: 14px; color: #92400e; margin: 0; font-weight: bold;">
+                          Purinas e Pirimidinas<br/>
+                          <span style="font-size: 12px; color: #78350f;">(DNA e RNA)</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">💪 Efeito Bactericida</h4>
+                  
+                  <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                    <p style="font-size: 14px; line-height: 1.6; color: #065f46; margin: 0;">
+                      A <strong>combinação sinérgica</strong> de sulfametoxazol e trimetoprima resulta em <strong>efeito bactericida</strong>, diferentemente do efeito bacteriostático de cada droga isoladamente. O <strong>duplo bloqueio sequencial</strong> na via do folato impede a produção de DNA e proteínas bacterianas, inviabilizando a bactéria.
+                    </p>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> Quando combinados, sulfametoxazol e trimetoprima oferecem <strong>ação muito eficaz</strong> ao atuar em <strong>dois pontos diferentes</strong> do metabolismo bacteriano. A <strong>combinação sinérgica bloqueia duas etapas da síntese de folato</strong>, impedindo a produção de DNA e proteínas bacterianas, resultando em <strong>efeito bactericida</strong>.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que a combinação de sulfametoxazol com trimetoprima (cotrimoxazol) é mais eficaz que cada droga isoladamente?",
+                options: [
+                  "A) Porque aumenta a biodisponibilidade oral de ambas as drogas",
+                  "B) Porque a combinação sinérgica bloqueia duas etapas da síntese de folato, impedindo a produção de DNA e proteínas bacterianas, resultando em efeito bactericida",
+                  "C) Porque reduz os efeitos adversos de cada droga",
+                  "D) Porque aumenta a penetração no sistema nervoso central"
+                ],
+                correct: 1,
+                explanation: "A combinação de sulfametoxazol com trimetoprima (cotrimoxazol) é mais eficaz porque a combinação sinérgica bloqueia duas etapas da síntese de folato. O sulfametoxazol inibe a di-hidropteroato sintase (bloqueando PABA → ácido diidropteroico) e a trimetoprima inibe a di-hidrofolato redutase (bloqueando di-hidrofolato → tetra-hidrofolato). Esse duplo bloqueio sequencial impede a produção de DNA e proteínas bacterianas, inviabilizando a bactéria e resultando em efeito bactericida, diferentemente do efeito bacteriostático de cada droga isoladamente."
+              }
+            }
+          ]
+        },
+        {
+          id: 14,
           title: "Infecções da Pele - Celulite e Erisipela",
           duration: "22 min",
           xp: 110,
