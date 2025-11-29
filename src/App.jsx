@@ -11548,6 +11548,125 @@ const App = () => {
         },
         {
           id: 14,
+          title: "Outros Antibióticos Ambulatoriais",
+          duration: "15 min",
+          xp: 75,
+          sections: [
+            {
+              title: "Nitroimidazóis",
+              content: `
+                <div style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🔬 Nitroimidazóis</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #ede9fe;">
+                    Classe de antibióticos com <strong style="color: white;">excelente atividade contra anaeróbios e protozoários</strong>.
+                  </p>
+                </div>
+                
+                <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #374151; margin-bottom: 15px; font-size: 17px;">💊 Metronidazol</h4>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                    <h5 style="color: #1e40af; margin-bottom: 15px; font-size: 16px;">🎯 Espectro de Ação</h5>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                      <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #3b82f6;">
+                        <h6 style="color: #1e40af; margin-bottom: 8px; font-size: 14px;">🦠 Anaeróbios</h6>
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          <strong>Excelente para anaeróbios</strong>
+                        </p>
+                      </div>
+                      
+                      <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #3b82f6;">
+                        <h6 style="color: #1e40af; margin-bottom: 8px; font-size: 14px;">🦠 Protozoários</h6>
+                        <p style="font-size: 14px; color: #1e3a8a; margin: 0;">
+                          <strong>Giardia, Trichomonas</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #f59e0b;">
+                    <h5 style="color: #92400e; margin-bottom: 15px; font-size: 16px;">📌 Importante</h5>
+                    
+                    <div style="background: white; padding: 18px; border-radius: 8px; margin: 15px 0;">
+                      <p style="font-size: 14px; line-height: 1.6; color: #78350f; margin: 0;">
+                        Trata-se de <strong>droga importante para anaeróbios abdominais</strong>. Fazendo um <strong>contraponto à clindamicina</strong> que trata predominantemente <strong>anaeróbios de boca</strong>.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #10b981;">
+                  <h4 style="color: #047857; margin-bottom: 15px; font-size: 17px;">🎯 Indicações Principais</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <h6 style="color: #047857; margin-bottom: 8px; font-size: 14px;">🤢 Diverticulite</h6>
+                      <p style="font-size: 13px; color: #065f46; margin: 0;">
+                        Infecção dos divertículos intestinais
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <h6 style="color: #047857; margin-bottom: 8px; font-size: 14px;">🦠 Abscessos Intra-abdominais</h6>
+                      <p style="font-size: 13px; color: #065f46; margin: 0;">
+                        Coleções purulentas na cavidade abdominal
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 3px solid #10b981;">
+                      <h6 style="color: #047857; margin-bottom: 8px; font-size: 14px;">🤰 Infecções Ginecológicas</h6>
+                      <p style="font-size: 13px; color: #065f46; margin: 0;">
+                        Vaginose bacteriana, DIP
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #e0e7ff; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #6366f1;">
+                  <h4 style="color: #4338ca; margin-bottom: 15px; font-size: 17px;">⚖️ Comparação: Metronidazol vs Clindamicina</h4>
+                  
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div style="background: white; padding: 18px; border-radius: 8px; border: 2px solid #8b5cf6;">
+                      <h5 style="color: #6d28d9; margin-bottom: 12px; font-size: 15px; text-align: center;">💊 Metronidazol</h5>
+                      <p style="font-size: 13px; color: #5b21b6; margin: 0; text-align: center; line-height: 1.6;">
+                        <strong>Anaeróbios Abdominais</strong><br/>
+                        <span style="font-size: 12px;">(Diverticulite, abscessos)</span>
+                      </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 18px; border-radius: 8px; border: 2px solid #ec4899;">
+                      <h5 style="color: #be185d; margin-bottom: 12px; font-size: 15px; text-align: center;">💊 Clindamicina</h5>
+                      <p style="font-size: 13px; color: #9f1239; margin: 0; text-align: center; line-height: 1.6;">
+                        <strong>Anaeróbios de Boca</strong><br/>
+                        <span style="font-size: 12px;">(Infecções odontogênicas)</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div style="background: #eff6ff; padding: 18px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6;">
+                  <p style="font-size: 14px; line-height: 1.6; color: #1e3a8a; margin: 0;">
+                    💡 <strong>Importante:</strong> O <strong>metronidazol</strong> é <strong>excelente para anaeróbios e protozoários</strong> (Giardia, Trichomonas). Trata-se de <strong>droga importante para anaeróbios abdominais</strong>, fazendo um <strong>contraponto à clindamicina</strong> que trata predominantemente <strong>anaeróbios de boca</strong>. Usado em <strong>diverticulite, abscessos intra-abdominais e infecções ginecológicas</strong>.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal diferença entre metronidazol e clindamicina em relação ao espectro de ação contra anaeróbios?",
+                options: [
+                  "A) Metronidazol é eficaz contra anaeróbios de boca e clindamicina contra anaeróbios abdominais",
+                  "B) Metronidazol é importante para anaeróbios abdominais (diverticulite, abscessos) enquanto clindamicina trata predominantemente anaeróbios de boca (infecções odontogênicas)",
+                  "C) Ambos têm o mesmo espectro de ação contra anaeróbios",
+                  "D) Metronidazol não tem atividade contra anaeróbios"
+                ],
+                correct: 1,
+                explanation: "A principal diferença entre metronidazol e clindamicina em relação ao espectro de ação contra anaeróbios é que o metronidazol é importante para anaeróbios abdominais (usado em diverticulite, abscessos intra-abdominais e infecções ginecológicas) enquanto a clindamicina trata predominantemente anaeróbios de boca (infecções odontogênicas). O metronidazol também é excelente para protozoários (Giardia, Trichomonas). Essa diferença de espectro é importante para a escolha adequada do antibiótico conforme o sítio de infecção."
+              }
+            }
+          ]
+        },
+        {
+          id: 15,
           title: "Infecções da Pele - Celulite e Erisipela",
           duration: "22 min",
           xp: 110,
