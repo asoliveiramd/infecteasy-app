@@ -10891,7 +10891,7 @@ const App = () => {
           title: "Nitrofuranos",
           duration: "8 min",
           xp: 40,
-          cards: [
+          sections: [
             {
               title: "Características gerais",
               content: `
