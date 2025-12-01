@@ -14785,8 +14785,8 @@ const App = () => {
         {
           id: 18,
           title: "Pneumonia Adquirida na Comunidade (PAC)",
-          duration: "8 min",
-          xp: 40,
+          duration: "16 min",
+          xp: 80,
           sections: [
             {
               title: "Definição",
@@ -14864,6 +14864,149 @@ const App = () => {
                 ],
                 correct: 2,
                 explanation: "A Pneumonia Adquirida na Comunidade (PAC) é caracterizada por ocorrer fora do ambiente hospitalar, em pacientes que não estiveram internados nos últimos 14 dias e sem exposição recente a procedimentos de saúde invasivos. As outras opções descrevem pneumonia hospitalar ou associada a cuidados de saúde."
+              }
+            },
+            {
+              title: "Critérios Diagnósticos da PAC",
+              content: `
+                <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🔍 Critérios Diagnósticos da PAC</h3>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 20px;">
+                    <h4 style="color: #92400e; margin-bottom: 10px;">📝 Resumo</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      De forma resumida, uma <strong>PAC</strong> obedece ao seguinte conjunto de achados:
+                    </p>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #075985; margin-bottom: 15px;">⏱️ Sintomas Agudos (<7 dias)</h4>
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7;">
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        <strong>📷 Com Infiltrado pulmonar novo</strong> na radiografia ou TC de tórax
+                      </p>
+                      <p style="font-size: 13px; line-height: 1.4; color: #0c4a6e;">
+                        📌 O infiltrado pulmonar é um critério essencial para o diagnóstico de PAC.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 15px;">🤒 Sintomas Principais</h4>
+                    <div style="background: #fecaca; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626; margin-bottom: 15px;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">🌡️ Febre</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>>38°C</strong> ou <strong>hipotermia</strong> (em idosos ou imunossuprimidos)
+                      </p>
+                    </div>
+                    <div style="background: #fecaca; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626; margin-bottom: 15px;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">🤧 Tosse</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Produtiva</strong> (com expectoração) ou <strong>seca</strong>
+                      </p>
+                    </div>
+                    <div style="background: #fecaca; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626; margin-bottom: 15px;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">💔 Dor Pleurítica</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Dor torácica que piora com a respiração profunda ou tosse
+                      </p>
+                    </div>
+                    <div style="background: #fecaca; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">💨 Dispneia</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Falta de ar, dificuldade respiratória
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #92400e; margin-bottom: 15px;">⚠️ Outros Sintomas</h4>
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 15px;">
+                      <h5 style="color: #78350f; margin-bottom: 10px;">🧠 Confusão Mental</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Comum em idosos</strong>. Pode ser o único sintoma em alguns casos.
+                      </p>
+                    </div>
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 15px;">
+                      <h5 style="color: #78350f; margin-bottom: 10px;">💨 Taquipneia</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>>20 respirações/minuto</strong>
+                      </p>
+                    </div>
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <h5 style="color: #78350f; margin-bottom: 10px;">🩸 Hipoxemia</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>SatO₂ <90%</strong> em ar ambiente
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8daef; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #6b21a8; margin-bottom: 15px;">👂 Ausculta Pulmonar</h4>
+                    <p style="font-size: 14px; line-height: 1.5; margin-bottom: 15px;">
+                      A <strong>ausculta pulmonar</strong> pode revelar:
+                    </p>
+                    <div style="background: #d7bde2; padding: 15px; border-radius: 8px; border-left: 4px solid #7d3c98;">
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                        <li><strong>Estertores crepitantes</strong>: Sons finos e agudos ("crepitações")</li>
+                        <li><strong>Sopro tubário</strong>: Som broncovésico aumentado (consolidação)</li>
+                        <li><strong>Redução do murmúrio vesicular</strong>: Diminuição dos sons respiratórios na área afetada</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 15px; border-radius: 8px; border-left: 4px solid #1abc9c; margin: 20px 0;">
+                    <h4 style="color: #0e6655; margin-bottom: 10px;">📊 Resumo dos Critérios</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+                      <thead>
+                        <tr style="background: #d1f2eb;">
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Categoria</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Achados</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Temporal</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Sintomas agudos (<7 dias)</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Radiológico</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Infiltrado pulmonar novo</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Clínico</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Febre, tosse, dor pleurítica, dispneia</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Sinais vitais</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Taquipneia, hipoxemia</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Ausculta</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Estertores, sopro tubário, murmúrio ↓</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Ponto-Chave</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      O diagnóstico de PAC requer <strong>sintomas agudos (<7 dias)</strong> + <strong>infiltrado pulmonar novo</strong> + <strong>sintomas respiratórios</strong> (febre, tosse, dor pleurítica, dispneia). Em <strong>idosos</strong>, a <strong>confusão mental</strong> pode ser o único sintoma.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual achado é essencial para o diagnóstico de Pneumonia Adquirida na Comunidade (PAC)?",
+                options: [
+                  "Febre acima de 38°C por mais de 7 dias",
+                  "Infiltrado pulmonar novo na radiografia ou TC de tórax",
+                  "Confusão mental em pacientes idosos",
+                  "Taquipneia acima de 30 respirações por minuto"
+                ],
+                correct: 1,
+                explanation: "O infiltrado pulmonar novo na radiografia ou TC de tórax é um critério essencial para o diagnóstico de PAC. Embora febre, confusão mental e taquipneia sejam sintomas importantes, o infiltrado pulmonar é necessário para confirmar o diagnóstico de pneumonia."
               }
             }
           ]
