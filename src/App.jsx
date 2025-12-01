@@ -14781,6 +14781,92 @@ const App = () => {
               }
             }
           ]
+        },
+        {
+          id: 18,
+          title: "Pneumonia Adquirida na Comunidade (PAC)",
+          duration: "8 min",
+          xp: 40,
+          sections: [
+            {
+              title: "Definição",
+              content: `
+                <div style="background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">💨 Pneumonia Adquirida na Comunidade (PAC)</h3>
+                  
+                  <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #075985; margin-bottom: 15px;">📝 Definição</h4>
+                    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+                      A <strong>Pneumonia Adquirida na Comunidade (PAC)</strong> é uma <strong>infecção aguda do parênquima pulmonar</strong> que ocorre:
+                    </p>
+                    
+                    <div style="background: #dbeafe; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7; margin-bottom: 15px;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;">✅ Critérios para Caracterizar PAC</h5>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                        <li><strong>Fora do ambiente hospitalar</strong>: Paciente não está internado</li>
+                        <li><strong>Sem internação recente</strong>: Não esteve internado nos últimos 14 dias</li>
+                        <li><strong>Sem exposição a procedimentos invasivos</strong>: Sem exposição recente a procedimentos de saúde invasivos</li>
+                      </ul>
+                    </div>
+                    
+                    <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626; margin-bottom: 15px;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">⚠️ Morbimortalidade</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Tem <strong>alta morbimortalidade</strong> especialmente em:
+                      </p>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px; margin-top: 10px;">
+                        <li><strong>👴 Idosos</strong>: Maior risco de complicações e óbito</li>
+                        <li><strong>🩺 Pacientes com comorbidades</strong>: Diabetes, DPOC, insuficiência cardíaca, imunossupressão</li>
+                      </ul>
+                    </div>
+                    
+                    <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <h5 style="color: #92400e; margin-bottom: 10px;">🔑 Diferença entre PAC e Pneumonia Hospitalar</h5>
+                      <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+                        <thead>
+                          <tr style="background: #fde68a;">
+                            <th style="padding: 8px; border: 1px solid #fcd34d; text-align: left;">Tipo</th>
+                            <th style="padding: 8px; border: 1px solid #fcd34d; text-align: left;">Local de Aquisição</th>
+                            <th style="padding: 8px; border: 1px solid #fcd34d; text-align: left;">Internação Recente</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td style="padding: 8px; border: 1px solid #fde68a;"><strong>PAC</strong></td>
+                            <td style="padding: 8px; border: 1px solid #fde68a;">Fora do hospital</td>
+                            <td style="padding: 8px; border: 1px solid #fde68a;">Não (>14 dias)</td>
+                          </tr>
+                          <tr style="background: #fef9c3;">
+                            <td style="padding: 8px; border: 1px solid #fde68a;"><strong>Hospitalar</strong></td>
+                            <td style="padding: 8px; border: 1px solid #fde68a;">Dentro do hospital</td>
+                            <td style="padding: 8px; border: 1px solid #fde68a;">Sim (<48h de internação)</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Resumo</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>PAC</strong> é uma infecção aguda do parênquima pulmonar que ocorre <strong>fora do ambiente hospitalar</strong>, em pacientes que <strong>não estiveram internados nos últimos 14 dias</strong> e <strong>sem exposição recente a procedimentos invasivos</strong>. Tem <strong>alta morbimortalidade</strong> especialmente em <strong>idosos</strong> e <strong>pacientes com comorbidades</strong>.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual dos seguintes critérios caracteriza uma Pneumonia Adquirida na Comunidade (PAC)?",
+                options: [
+                  "Paciente internado há 48 horas com infecção pulmonar",
+                  "Paciente que teve alta hospitalar há 7 dias e desenvolveu pneumonia",
+                  "Paciente sem internação nos últimos 14 dias que desenvolveu infecção pulmonar fora do hospital",
+                  "Paciente com ventilação mecânica que desenvolveu pneumonia após 72 horas"
+                ],
+                correct: 2,
+                explanation: "A Pneumonia Adquirida na Comunidade (PAC) é caracterizada por ocorrer fora do ambiente hospitalar, em pacientes que não estiveram internados nos últimos 14 dias e sem exposição recente a procedimentos de saúde invasivos. As outras opções descrevem pneumonia hospitalar ou associada a cuidados de saúde."
+              }
+            }
+          ]
         }
       ]
     },
