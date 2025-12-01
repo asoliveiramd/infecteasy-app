@@ -14785,8 +14785,8 @@ const App = () => {
         {
           id: 18,
           title: "Pneumonia Adquirida na Comunidade (PAC)",
-          duration: "24 min",
-          xp: 120,
+          duration: "32 min",
+          xp: 160,
           sections: [
             {
               title: "Definição",
@@ -15136,6 +15136,136 @@ const App = () => {
                 ],
                 correct: 3,
                 explanation: "A saturação de oxigênio NÃO faz parte da escala CURB-65. Os critérios são: Confusão (C), Ureia >50 mg/dL (U), Respiração >30 ipm (R), Blood pressure baixa - PAS <90 ou PAD <60 mmHg (B), e idade ≥65 anos (65). Embora a saturação de oxigênio seja importante na avaliação da PAC, ela não é um dos cinco critérios do CURB-65."
+              }
+            }
+,
+            {
+              title: "Interpretação da Escala CURB-65",
+              content: `
+                <div style="background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">📊 Interpretação da Escala CURB-65</h3>
+                  
+                  <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #10b981;">
+                    <h4 style="color: #059669; margin-bottom: 15px;">🟢 0-1 Pontos</h4>
+                    <div style="background: #d1fae5; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                      <h5 style="color: #065f46; margin-bottom: 10px;">✅ Conduta: Tratamento Ambulatorial</h5>
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        <strong>Baixo risco de mortalidade (<3%)</strong>. Paciente pode ser tratado em casa com <strong>antibióticos orais</strong> e <strong>acompanhamento ambulatorial</strong>.
+                      </p>
+                      <div style="background: #a7f3d0; padding: 10px; border-radius: 6px;">
+                        <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                          📌 <strong>Recomendação</strong>: Antibioticoterapia oral + retorno em 48-72h para reavaliação
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #f59e0b;">
+                    <h4 style="color: #92400e; margin-bottom: 15px;">🟡 2 Pontos</h4>
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                      <h5 style="color: #78350f; margin-bottom: 10px;">⚠️ Conduta: Considerar Internação Hospitalar</h5>
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        <strong>Risco intermediário de mortalidade (9%)</strong>. A decisão deve levar em conta <strong>fatores sociais e comorbidades</strong>.
+                      </p>
+                      <div style="background: #fcd34d; padding: 10px; border-radius: 6px; margin-bottom: 10px;">
+                        <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                          📌 <strong>Fatores a Considerar</strong>: Condições socioeconômicas, suporte familiar, comorbidades, adesão ao tratamento
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">⚠️ Atenção Especial</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        No caso intermediário (2 pontos), se <strong>não há segurança de um tratamento adequado</strong> (questões econômicas, uso de drogas e outras questões sociais), <strong>melhor iniciar uma internação</strong>.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #dc2626;">
+                    <h4 style="color: #991b1b; margin-bottom: 15px;">🔴 ≥3 Pontos</h4>
+                    <div style="background: #fecaca; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">🚨 Conduta: Internação Hospitalar Inconteste</h5>
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        <strong>Alto risco de mortalidade (15-40%)</strong>. <strong>Considerar UTI</strong> se pontuação <strong>4-5</strong>, especialmente se houver <strong>insuficiência respiratória</strong> ou <strong>choque séptico</strong>.
+                      </p>
+                      <div style="background: #fca5a5; padding: 10px; border-radius: 6px;">
+                        <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                          📌 <strong>Critérios para UTI</strong>: CURB-65 ≥4, insuficiência respiratória grave (necessidade de ventilação mecânica), choque séptico (necessidade de vasopressores)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #0e6655; margin-bottom: 15px;">📋 Tabela Resumo de Conduta</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+                      <thead>
+                        <tr style="background: #d1f2eb;">
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: center;">Pontuação</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: center;">Risco</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: center;">Mortalidade</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Conduta</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb; text-align: center;"><strong>0-1</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb; text-align: center;">🟢 Baixo</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb; text-align: center;"><3%</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Tratamento ambulatorial</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb; text-align: center;"><strong>2</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb; text-align: center;">🟡 Intermediário</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb; text-align: center;">9%</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Considerar internação (avaliar fatores sociais)</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb; text-align: center;"><strong>≥3</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb; text-align: center;">🔴 Alto</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb; text-align: center;">15-40%</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Internação hospitalar (UTI se ≥4)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 20px 0;">
+                    <h4 style="color: #92400e; margin-bottom: 10px;">🔑 Fatores Sociais no Escore 2</h4>
+                    <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                      Quando o paciente tem <strong>2 pontos</strong>, considere os seguintes fatores para decidir entre tratamento ambulatorial ou internação:
+                    </p>
+                    <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                      <li><strong>Questões econômicas</strong>: Capacidade de adquirir medicamentos</li>
+                      <li><strong>Uso de drogas</strong>: Risco de não adesão ao tratamento</li>
+                      <li><strong>Suporte familiar</strong>: Presença de cuidadores em casa</li>
+                      <li><strong>Moradia</strong>: Condições adequadas de repouso e higiene</li>
+                      <li><strong>Comorbidades</strong>: Diabetes, DPOC, insuficiência cardíaca</li>
+                    </ul>
+                    <p style="font-size: 13px; line-height: 1.4; margin-top: 10px; color: #78350f;">
+                      ⚠️ <strong>Se não há segurança de tratamento adequado, prefira a internação.</strong>
+                    </p>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Ponto-Chave</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      A <strong>interpretação do CURB-65</strong> orienta a conduta: <strong>0-1 ponto = ambulatorial</strong>, <strong>2 pontos = avaliar fatores sociais</strong> (se não há segurança, internar), <strong>≥3 pontos = internação hospitalar</strong> (considerar UTI se ≥4 pontos). O risco de mortalidade aumenta progressivamente: <3% (0-1), 9% (2), 15-40% (≥3).
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Um paciente com PAC apresenta CURB-65 = 2 pontos. Qual fator deve ser considerado na decisão entre tratamento ambulatorial ou internação?",
+                options: [
+                  "Presença de infiltrado pulmonar na radiografia",
+                  "Fatores sociais como condições econômicas e suporte familiar",
+                  "Uso prévio de antibióticos nos últimos 3 meses",
+                  "Presença de tosse produtiva com expectoração purulenta"
+                ],
+                correct: 1,
+                explanation: "Para pacientes com CURB-65 = 2 pontos (risco intermediário), a decisão entre tratamento ambulatorial ou internação deve levar em conta fatores sociais e comorbidades. Se não há segurança de um tratamento adequado (questões econômicas, uso de drogas, falta de suporte familiar), é melhor iniciar uma internação. Os outros fatores mencionados não são determinantes para essa decisão específica."
               }
             }
           ]
