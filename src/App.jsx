@@ -14785,8 +14785,8 @@ const App = () => {
         {
           id: 18,
           title: "Pneumonia Adquirida na Comunidade (PAC)",
-          duration: "16 min",
-          xp: 80,
+          duration: "24 min",
+          xp: 120,
           sections: [
             {
               title: "Definição",
@@ -15007,6 +15007,135 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "O infiltrado pulmonar novo na radiografia ou TC de tórax é um critério essencial para o diagnóstico de PAC. Embora febre, confusão mental e taquipneia sejam sintomas importantes, o infiltrado pulmonar é necessário para confirmar o diagnóstico de pneumonia."
+              }
+            }
+,
+            {
+              title: "Classificação de Gravidade - Escala CURB-65",
+              content: `
+                <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #92400e; margin-bottom: 15px;">📊 Classificação de Gravidade - Escala CURB-65</h3>
+                  
+                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626; margin-bottom: 20px;">
+                    <h4 style="color: #991b1b; margin-bottom: 10px;">⚠️ Importância</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      Essa é uma <strong>escala importante</strong> para definir se o seu paciente é realmente <strong>ambulatorial</strong> ou não.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #fef9c3; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #78350f; margin-bottom: 15px;">🔤 Mnemônico CURB-65</h4>
+                    
+                    <div style="background: #dbeafe; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7; margin-bottom: 15px;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;"><strong>C</strong> - Confusão</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Alteração no estado mental</strong>, como confusão ou agitação, com <strong>desorientação no tempo, espaço e pessoa</strong>.
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fecaca; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626; margin-bottom: 15px;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;"><strong>U</strong> - Ureia</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Níveis séricos de ureia <strong>>50 mg/dL</strong>, indicando <strong>disfunção renal</strong> que pode ser causada pela sepse.
+                      </p>
+                    </div>
+                    
+                    <div style="background: #e0f2fe; padding: 15px; border-radius: 8px; border-left: 4px solid #0ea5e9; margin-bottom: 15px;">
+                      <h5 style="color: #075985; margin-bottom: 10px;"><strong>R</strong> - Respiração</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Frequência respiratória elevada <strong>(>30 ipm)</strong>, sinalizando <strong>comprometimento respiratório grave</strong>.
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 15px;">
+                      <h5 style="color: #92400e; margin-bottom: 10px;"><strong>B</strong> - Blood Pressure</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Pressão arterial baixa <strong>(PAS <90 mmHg ou PAD <60 mmHg)</strong>, sugerindo <strong>instabilidade hemodinâmica</strong>.
+                      </p>
+                    </div>
+                    
+                    <div style="background: #d7bde2; padding: 15px; border-radius: 8px; border-left: 4px solid #7d3c98;">
+                      <h5 style="color: #4a235a; margin-bottom: 10px;"><strong>65</strong> - Idade</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Idade <strong>igual ou superior a 65 anos</strong>, fator de risco independente para <strong>pior prognóstico</strong>.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #0e6655; margin-bottom: 15px;">📋 Tabela Resumo CURB-65</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+                      <thead>
+                        <tr style="background: #d1f2eb;">
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Critério</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Definição</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: center;">Ponto</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>C</strong>onfusão</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Desorientação (tempo, espaço, pessoa)</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb; text-align: center;">1</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>U</strong>reia</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">>50 mg/dL</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb; text-align: center;">1</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>R</strong>espiração</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">>30 ipm</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb; text-align: center;">1</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>B</strong>lood Pressure</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">PAS <90 ou PAD <60 mmHg</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb; text-align: center;">1</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>65</strong> anos</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Idade ≥65 anos</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb; text-align: center;">1</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #92400e; margin-bottom: 15px;">🎯 Pontuação e Estratificação de Risco</h4>
+                    <p style="font-size: 14px; line-height: 1.5; margin-bottom: 15px;">
+                      A <strong>escala CURB-65</strong> é uma ferramenta validada para <strong>estratificação de risco</strong> em pacientes com PAC. <strong>Cada critério recebe 1 ponto quando presente</strong>, e a <strong>pontuação total orienta a decisão</strong> sobre o local de tratamento (ambulatorial ou hospitalar).
+                    </p>
+                    
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <h5 style="color: #78350f; margin-bottom: 10px;">📊 Interpretação da Pontuação</h5>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                        <li><strong>0-1 ponto</strong>: Baixo risco → <strong>Tratamento ambulatorial</strong></li>
+                        <li><strong>2 pontos</strong>: Risco intermediário → <strong>Considerar internação breve ou observação</strong></li>
+                        <li><strong>≥3 pontos</strong>: Alto risco → <strong>Internação hospitalar</strong></li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Ponto-Chave</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      A <strong>escala CURB-65</strong> é essencial para <strong>definir se o paciente pode ser tratado ambulatorialmente</strong> ou necessita internação. Cada critério vale <strong>1 ponto</strong>, e a pontuação total orienta a conduta: <strong>0-1 ponto = ambulatorial</strong>, <strong>2 pontos = considerar internação</strong>, <strong>≥3 pontos = internação hospitalar</strong>.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual dos seguintes critérios NÃO faz parte da escala CURB-65?",
+                options: [
+                  "Confusão mental com desorientação",
+                  "Ureia sérica >50 mg/dL",
+                  "Frequência respiratória >30 ipm",
+                  "Saturação de oxigênio <90%"
+                ],
+                correct: 3,
+                explanation: "A saturação de oxigênio NÃO faz parte da escala CURB-65. Os critérios são: Confusão (C), Ureia >50 mg/dL (U), Respiração >30 ipm (R), Blood pressure baixa - PAS <90 ou PAD <60 mmHg (B), e idade ≥65 anos (65). Embora a saturação de oxigênio seja importante na avaliação da PAC, ela não é um dos cinco critérios do CURB-65."
               }
             }
           ]
