@@ -14785,8 +14785,8 @@ const App = () => {
         {
           id: 18,
           title: "Pneumonia Adquirida na Comunidade (PAC)",
-          duration: "32 min",
-          xp: 160,
+          duration: "40 min",
+          xp: 200,
           sections: [
             {
               title: "Definição",
@@ -15266,6 +15266,152 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "Para pacientes com CURB-65 = 2 pontos (risco intermediário), a decisão entre tratamento ambulatorial ou internação deve levar em conta fatores sociais e comorbidades. Se não há segurança de um tratamento adequado (questões econômicas, uso de drogas, falta de suporte familiar), é melhor iniciar uma internação. Os outros fatores mencionados não são determinantes para essa decisão específica."
+              }
+            }
+,
+            {
+              title: "Agentes Etiológicos da PAC",
+              content: `
+                <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #0369a1; margin-bottom: 15px;">🦠 Agentes Etiológicos da PAC</h3>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 20px;">
+                    <h4 style="color: #92400e; margin-bottom: 10px;">⚠️ Consideração Importante</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      A pneumonia adquirida da comunidade em geral é causada por <strong>pneumococos</strong>. Porém, <strong>bactérias sem parede celular (atípicas)</strong> também podem estar presentes. Isso coloca o tratamento com <strong>beta-lactâmicos sozinho em posição de desvantagem</strong>.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #075985; margin-bottom: 15px;">🦠 Bactérias "Típicas"</h4>
+                    
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7; margin-bottom: 15px;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;"><strong>Streptococcus pneumoniae</strong> (Pneumococo)</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>~50% dos casos</strong> de PAC. Principal agente etiológico.
+                      </p>
+                    </div>
+                    
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7; margin-bottom: 15px;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;"><strong>Haemophilus influenzae</strong></h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Comum em pacientes com <strong>DPOC</strong> (Doença Pulmonar Obstrutiva Crônica).
+                      </p>
+                    </div>
+                    
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7; margin-bottom: 15px;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;"><strong>Staphylococcus aureus</strong></h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Frequente <strong>após influenza</strong>, assim como pneumococo. Pode causar pneumonia necrotizante grave.
+                      </p>
+                    </div>
+                    
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;"><strong>Klebsiella pneumoniae</strong></h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Mais comum em <strong>etilistas</strong> e <strong>diabéticos</strong>. Pode causar pneumonia com necrose (pneumonia de Friedländer).
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #92400e; margin-bottom: 15px;">🔵 Bactérias "Atípicas"</h4>
+                    <p style="font-size: 13px; line-height: 1.4; margin-bottom: 15px; color: #78350f;">
+                      ⚠️ <strong>Sem parede celular</strong> → Não respondem a beta-lactâmicos (penicilinas, cefalosporinas)
+                    </p>
+                    
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 15px;">
+                      <h5 style="color: #78350f; margin-bottom: 10px;"><strong>Mycoplasma pneumoniae</strong></h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Mais frequente em <strong>jovens</strong>. Causa <strong>epidemias a cada 3-5 anos</strong>. Pneumonia "atípica" com sintomas extrapulmonares.
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 15px;">
+                      <h5 style="color: #78350f; margin-bottom: 10px;"><strong>Chlamydia pneumoniae</strong></h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Infecção leve</strong>, frequentemente <strong>subclínica</strong>. Pode causar faringite e bronquite além de pneumonia.
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <h5 style="color: #78350f; margin-bottom: 10px;"><strong>Legionella pneumophila</strong></h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Associada a <strong>pneumonia grave</strong>, com <strong>sintomas extrapulmonares</strong> como <strong>diarreia</strong> e <strong>alterações neurológicas</strong>. Transmissão por aerossóis de água contaminada (ar-condicionado, chuveiros).
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #0e6655; margin-bottom: 15px;">📋 Tabela Resumo dos Agentes</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+                      <thead>
+                        <tr style="background: #d1f2eb;">
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Tipo</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Agente</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Características</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;" rowspan="4"><strong>Típicas</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><em>S. pneumoniae</em></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">~50% dos casos</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><em>H. influenzae</em></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Comum em DPOC</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><em>S. aureus</em></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Após influenza</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><em>K. pneumoniae</em></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Etilistas, diabéticos</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;" rowspan="3"><strong>Atípicas</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><em>Mycoplasma</em></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Jovens, epidemias 3-5 anos</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><em>Chlamydia</em></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Leve, subclínica</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><em>Legionella</em></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Grave, sintomas extrapulmonares</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626; margin: 20px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 10px;">⚠️ Tratamento Empírico</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      A <strong>identificação do agente etiológico raramente é possível ou necessária</strong> em casos ambulatoriais. O <strong>tratamento empírico</strong> deve cobrir os <strong>patógenos mais prováveis</strong>, considerando fatores epidemiológicos e clínicos.
+                    </p>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Ponto-Chave</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>S. pneumoniae</strong> é o principal agente (~50%). <strong>Bactérias atípicas</strong> (Mycoplasma, Chlamydia, Legionella) <strong>não possuem parede celular</strong> e <strong>não respondem a beta-lactâmicos</strong>. O tratamento empírico deve considerar tanto bactérias típicas quanto atípicas, especialmente em jovens (Mycoplasma) e casos graves (Legionella).
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Por que o tratamento com beta-lactâmicos sozinho pode ser inadequado para PAC?",
+                options: [
+                  "Porque o S. pneumoniae desenvolveu resistência aos beta-lactâmicos",
+                  "Porque bactérias atípicas sem parede celular podem estar presentes e não respondem a beta-lactâmicos",
+                  "Porque o H. influenzae sempre produz beta-lactamase",
+                  "Porque a Klebsiella pneumoniae é resistente a todos os beta-lactâmicos"
+                ],
+                correct: 1,
+                explanation: "O tratamento com beta-lactâmicos sozinho pode ser inadequado porque bactérias atípicas (Mycoplasma, Chlamydia, Legionella) sem parede celular podem estar presentes na PAC e não respondem a beta-lactâmicos, que atuam na síntese da parede celular bacteriana. Por isso, o tratamento empírico deve considerar cobertura para atípicos, especialmente com macrolídeos ou quinolonas respiratórias."
               }
             }
           ]
