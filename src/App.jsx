@@ -14785,8 +14785,8 @@ const App = () => {
         {
           id: 18,
           title: "Pneumonia Adquirida na Comunidade (PAC)",
-          duration: "48 min",
-          xp: 240,
+          duration: "56 min",
+          xp: 280,
           sections: [
             {
               title: "Definição",
@@ -15542,6 +15542,122 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "A terapia combinada beta-lactâmico + macrolídeo é recomendada porque visa cobrir tanto patógenos típicos (S. pneumoniae, H. influenzae, M. catarrhalis) quanto atípicos (Mycoplasma, Chlamydia, Legionella). Os beta-lactâmicos cobrem as bactérias típicas, enquanto os macrolídeos cobrem as atípicas, que não possuem parede celular e não respondem a beta-lactâmicos."
+              }
+            }
+,
+            {
+              title: "PAC - O que você não pode deixar de saber",
+              content: `
+                <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #92400e; margin-bottom: 15px;">💡 PAC - O que você não pode deixar de saber</h3>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #0284c7;">
+                    <h4 style="color: #075985; margin-bottom: 15px;">📊 Avaliação de Gravidade</h4>
+                    <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                      Utilize a <strong>escala CURB-65</strong> para definir o local de tratamento. Trate ambulatorialmente apenas pacientes com pontuação <strong>0-1</strong>.
+                    </p>
+                    <div style="background: #bae6fd; padding: 10px; border-radius: 6px;">
+                      <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                        📌 <strong>Lembre-se</strong>: CURB-65 = Confusão + Ureia >50 mg/dL + Respiração >30 ipm + Blood pressure baixa + 65 anos
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #f59e0b;">
+                    <h4 style="color: #92400e; margin-bottom: 15px;">🦠 Agentes Etiológicos</h4>
+                    <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                      Pense em <strong>pneumococos</strong> e <strong>atípicos</strong> como etiologias principais. Considere <strong>Staphylococcus aureus</strong> em casos <strong>pós-influenza</strong>.
+                    </p>
+                    <div style="background: #fde68a; padding: 10px; border-radius: 6px;">
+                      <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                        📌 <strong>Principais agentes</strong>: S. pneumoniae (~50%), Mycoplasma, Chlamydia, Legionella, H. influenzae (DPOC), S. aureus (pós-influenza), K. pneumoniae (etilistas, diabéticos)
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #10b981;">
+                    <h4 style="color: #059669; margin-bottom: 15px;">💊 Tratamento Empírico</h4>
+                    <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                      Associe <strong>amoxicilina/clavulanato</strong> ou <strong>cefuroxima</strong> com um <strong>macrolídeo</strong>. Alternativamente, use <strong>levofloxacino</strong> como monoterapia em pacientes selecionados.
+                    </p>
+                    <div style="background: #d1fae5; padding: 10px; border-radius: 6px;">
+                      <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                        📌 <strong>Esquema preferencial</strong>: Amoxicilina+Clavulanato (5-7d) + Azitromicina (3d) ou Claritromicina (7d)
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #dc2626;">
+                    <h4 style="color: #991b1b; margin-bottom: 15px;">🔄 Reavaliação</h4>
+                    <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                      A <strong>resposta ao tratamento deve ser avaliada em 48-72h</strong>. Persistência ou piora dos sintomas sugerem <strong>resistência bacteriana</strong>, <strong>complicações</strong> (como derrame pleural ou empiema) ou <strong>diagnóstico alternativo</strong>. Nesses casos, <strong>reavalie o paciente</strong> e considere <strong>investigação adicional</strong>.
+                    </p>
+                    <div style="background: #fecaca; padding: 10px; border-radius: 6px;">
+                      <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                        ⚠️ <strong>Sinais de alerta</strong>: Febre persistente, piora da dispneia, hipoxemia progressiva, alteração do nível de consciência
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #0e6655; margin-bottom: 15px;">📋 Resumo dos Pontos-Chave</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+                      <thead>
+                        <tr style="background: #d1f2eb;">
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Aspecto</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Ponto-Chave</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Gravidade</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">CURB-65 0-1 = ambulatorial</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Etiologia</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Pneumococos + atípicos (S. aureus pós-influenza)</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Tratamento</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Beta-lactâmico + Macrolídeo (ou Levofloxacino)</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Reavaliação</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">48-72h (investigar se sem melhora)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 20px 0;">
+                    <h4 style="color: #92400e; margin-bottom: 10px;">🔑 Causas de Falha Terapêutica</h4>
+                    <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                      <li><strong>Resistência bacteriana</strong>: Pneumococo resistente, MRSA</li>
+                      <li><strong>Complicações</strong>: Derrame pleural, empiema, abscesso pulmonar</li>
+                      <li><strong>Diagnóstico alternativo</strong>: Tuberculose, neoplasia, embolia pulmonar</li>
+                      <li><strong>Fatores do hospedeiro</strong>: Imunossupressão, comorbidades descompensadas</li>
+                      <li><strong>Adesão ao tratamento</strong>: Uso irregular de medicamentos</li>
+                    </ul>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Ponto-Chave Final</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>PAC ambulatorial</strong>: Use <strong>CURB-65</strong> para estratificar (0-1 = ambulatorial). Trate com <strong>beta-lactâmico + macrolídeo</strong> para cobrir típicos e atípicos. <strong>Reavalie em 48-72h</strong>: se sem melhora, investigue resistência, complicações ou diagnóstico alternativo. Considere <strong>S. aureus pós-influenza</strong>.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Quando deve-se reavaliar um paciente com PAC em tratamento ambulatorial?",
+                options: [
+                  "Após 7 dias do início do tratamento",
+                  "Em 48-72 horas, especialmente se houver persistência ou piora dos sintomas",
+                  "Somente se o paciente retornar com queixas",
+                  "Após completar o esquema antibiótico de 5-7 dias"
+                ],
+                correct: 1,
+                explanation: "A resposta ao tratamento deve ser avaliada em 48-72 horas. Persistência ou piora dos sintomas sugerem resistência bacteriana, complicações (como derrame pleural ou empiema) ou diagnóstico alternativo. Nesses casos, o paciente deve ser reavaliado e pode ser necessária investigação adicional. A reavaliação precoce permite identificar falhas terapêuticas e ajustar a conduta rapidamente."
               }
             }
           ]
