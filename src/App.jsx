@@ -14785,8 +14785,8 @@ const App = () => {
         {
           id: 18,
           title: "Pneumonia Adquirida na Comunidade (PAC)",
-          duration: "40 min",
-          xp: 200,
+          duration: "48 min",
+          xp: 240,
           sections: [
             {
               title: "Definição",
@@ -15412,6 +15412,136 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "O tratamento com beta-lactâmicos sozinho pode ser inadequado porque bactérias atípicas (Mycoplasma, Chlamydia, Legionella) sem parede celular podem estar presentes na PAC e não respondem a beta-lactâmicos, que atuam na síntese da parede celular bacteriana. Por isso, o tratamento empírico deve considerar cobertura para atípicos, especialmente com macrolídeos ou quinolonas respiratórias."
+              }
+            }
+,
+            {
+              title: "Tratamento da PAC",
+              content: `
+                <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #059669; margin-bottom: 15px;">💊 Tratamento da PAC</h3>
+                  
+                  <div style="background: #a7f3d0; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-bottom: 20px;">
+                    <h4 style="color: #065f46; margin-bottom: 10px;">🏠 Ambulatorial (CURB-65: 0-1)</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      O tratamento ambulatorial proposto é o seguinte:
+                    </p>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #075985; margin-bottom: 15px;">✅ Primeira Escolha - Terapia Combinada</h4>
+                    
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7; margin-bottom: 15px;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;">💊 Esquema 1</h5>
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        <strong>Amoxicilina + Clavulanato</strong> (por 5-7 dias)<br>
+                        <strong>+</strong><br>
+                        <strong>Azitromicina</strong> (por 3 dias) <strong>ou</strong> <strong>Claritromicina</strong> (por 7 dias)
+                      </p>
+                      <div style="background: #e0f2fe; padding: 10px; border-radius: 6px;">
+                        <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                          📌 <strong>Cobertura</strong>: Beta-lactâmico cobre típicos (pneumococo, H. influenzae, M. catarrhalis) + Macrolídeo cobre atípicos (Mycoplasma, Chlamydia, Legionella)
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;">💊 Esquema 2 (Alternativa)</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Cefuroxima</strong> (por 5-7 dias)<br>
+                        <strong>+</strong><br>
+                        <strong>Macrolídeo</strong> (azitromicina ou claritromicina)
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #92400e; margin-bottom: 15px;">🔄 Opção Monoterapia</h4>
+                    
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <h5 style="color: #78350f; margin-bottom: 10px;">💊 Levofloxacino</h5>
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        <strong>Levofloxacino</strong> (por 5-7 dias)
+                      </p>
+                      <div style="background: #fcd34d; padding: 10px; border-radius: 6px;">
+                        <p style="font-size: 13px; line-height: 1.4; margin: 0;">
+                          📌 <strong>Cobertura</strong>: Fluoroquinolona respiratória cobre tanto típicos quanto atípicos em monoterapia
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #0e6655; margin-bottom: 15px;">📋 Tabela Resumo do Tratamento</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+                      <thead>
+                        <tr style="background: #d1f2eb;">
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Esquema</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Medicamentos</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: center;">Duração</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>1ª Escolha</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Amoxicilina+Clavulanato + Azitromicina</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb; text-align: center;">5-7d + 3d</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>1ª Escolha</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Amoxicilina+Clavulanato + Claritromicina</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb; text-align: center;">5-7d + 7d</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Alternativa</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Cefuroxima + Macrolídeo</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb; text-align: center;">5-7d</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Monoterapia</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Levofloxacino</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb; text-align: center;">5-7d</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #92400e; margin-bottom: 15px;">💡 Considerações</h4>
+                    
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 15px;">
+                      <h5 style="color: #78350f; margin-bottom: 10px;">🔑 Terapia Combinada</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        A <strong>terapia combinada beta-lactâmico + macrolídeo</strong> visa cobrir tanto <strong>patógenos típicos</strong> (S. pneumoniae, H. influenzae, M. catarrhalis) <strong>quanto atípicos</strong> (Mycoplasma, Chlamydia, Legionella).
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fee2e2; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">⚠️ Fluoroquinolonas Respiratórias</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        As <strong>fluoroquinolonas respiratórias</strong> (levofloxacino, moxifloxacino) podem ser usadas como <strong>monoterapia</strong>. <strong>Não são primeira linha</strong> devido ao perfil de segurança (risco de tendinite, ruptura de tendão, prolongamento QT, neurotoxicidade).
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Ponto-Chave</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      O tratamento ambulatorial de PAC (CURB-65 0-1) deve cobrir <strong>típicos e atípicos</strong>. <strong>Primeira escolha</strong>: Amoxicilina+Clavulanato + Macrolídeo (azitromicina 3d ou claritromicina 7d). <strong>Alternativa</strong>: Cefuroxima + Macrolídeo. <strong>Monoterapia</strong>: Levofloxacino (não primeira linha devido ao perfil de segurança).
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Por que a terapia combinada beta-lactâmico + macrolídeo é recomendada no tratamento ambulatorial da PAC?",
+                options: [
+                  "Para aumentar a eficácia contra o S. pneumoniae resistente",
+                  "Para cobrir tanto patógenos típicos quanto atípicos",
+                  "Para reduzir o risco de efeitos adversos dos beta-lactâmicos",
+                  "Para encurtar a duração do tratamento para 3 dias"
+                ],
+                correct: 1,
+                explanation: "A terapia combinada beta-lactâmico + macrolídeo é recomendada porque visa cobrir tanto patógenos típicos (S. pneumoniae, H. influenzae, M. catarrhalis) quanto atípicos (Mycoplasma, Chlamydia, Legionella). Os beta-lactâmicos cobrem as bactérias típicas, enquanto os macrolídeos cobrem as atípicas, que não possuem parede celular e não respondem a beta-lactâmicos."
               }
             }
           ]
