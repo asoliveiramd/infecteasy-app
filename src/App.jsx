@@ -15662,6 +15662,131 @@ const App = () => {
             }
           ]
         }
+,
+        {
+          id: 19,
+          title: "Infecções do Trato Gastrointestinal",
+          duration: "8 min",
+          xp: 40,
+          sections: [
+            {
+              title: "Introdução",
+              content: `
+                <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #92400e; margin-bottom: 15px;">🩺 Introdução - Infecções do Trato Gastrointestinal</h3>
+                  
+                  <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 20px;">
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      As <strong>infecções do trato gastrointestinal</strong> estão entre as <strong>causas mais comuns de consultas médicas</strong> em todo o mundo. Nesta seção, abordaremos duas condições frequentes:
+                    </p>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #075985; margin-bottom: 15px;">🤢 Gastroenterite Aguda</h4>
+                    
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7; margin-bottom: 15px;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;">📌 Definição</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Inflamação do trato gastrointestinal</strong> causando <strong>diarreia</strong>, <strong>vômitos</strong> e <strong>dor abdominal</strong>. Pode ter etiologia <strong>viral</strong>, <strong>bacteriana</strong> ou <strong>parasitária</strong>.
+                      </p>
+                    </div>
+                    
+                    <div style="background: #e0f2fe; padding: 15px; border-radius: 8px;">
+                      <h5 style="color: #075985; margin-bottom: 10px;">👁️ Apresentação Clínica</h5>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                        <li><strong>Diarreia</strong>: Aumento da frequência e diminuição da consistência das fezes</li>
+                        <li><strong>Vômitos</strong>: Náuseas e vômitos frequentes</li>
+                        <li><strong>Dor Abdominal</strong>: Cólicas abdominais difusas</li>
+                        <li><strong>Febre</strong>: Pode estar presente, especialmente em etiologia bacteriana</li>
+                        <li><strong>Desidratação</strong>: Sinais de desidratação (mucosas secas, diminuição do turgor cutâneo)</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 15px;">🩹 Diverticulite Aguda</h4>
+                    
+                    <div style="background: #fecaca; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626; margin-bottom: 15px;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">📌 Definição</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Inflamação e infecção de divertículos</strong>, principalmente no <strong>cólon sigmoide</strong>. Causa <strong>dor abdominal intensa</strong>, geralmente no <strong>quadrante inferior esquerdo</strong>, <strong>febre</strong> e <strong>alterações do hábito intestinal</strong>.
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fee2e2; padding: 15px; border-radius: 8px;">
+                      <h5 style="color: #991b1b; margin-bottom: 10px;">👁️ Apresentação Clínica</h5>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                        <li><strong>Dor Abdominal</strong>: Intensa, geralmente no quadrante inferior esquerdo (QIE)</li>
+                        <li><strong>Febre</strong>: Comum, indica processo inflamatório/infeccioso</li>
+                        <li><strong>Alterações do Hábito Intestinal</strong>: Constipação ou diarreia</li>
+                        <li><strong>Náuseas e Vômitos</strong>: Podem estar presentes</li>
+                        <li><strong>Leucocitose</strong>: Elevação dos leucócitos no hemograma</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #0e6655; margin-bottom: 15px;">📋 Comparação: Gastroenterite vs Diverticulite</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+                      <thead>
+                        <tr style="background: #d1f2eb;">
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Aspecto</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Gastroenterite</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Diverticulite</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Local</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Trato GI (estômago, intestino)</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Divertículos (cólon sigmoide)</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Dor</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Cólicas difusas</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Intensa, QIE</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Diarreia</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Frequente</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Pode ocorrer</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Vômitos</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Comum</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Pode ocorrer</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Febre</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Variável</td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Comum</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-top: 20px;">
+                    <h4 style="color: #92400e; margin-bottom: 10px;">💡 Ponto-Chave</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      As <strong>infecções do trato gastrointestinal</strong> são muito comuns. <strong>Gastroenterite aguda</strong> causa diarreia, vômitos e dor abdominal difusa (etiologia viral, bacteriana ou parasitária). <strong>Diverticulite aguda</strong> causa dor intensa no QIE, febre e alterações do hábito intestinal (inflamação/infecção de divertículos no cólon sigmoide).
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal diferença na apresentação clínica entre gastroenterite aguda e diverticulite aguda?",
+                options: [
+                  "Gastroenterite causa febre alta, enquanto diverticulite não causa febre",
+                  "Gastroenterite causa dor abdominal difusa com diarreia, enquanto diverticulite causa dor intensa localizada no quadrante inferior esquerdo",
+                  "Gastroenterite é sempre de etiologia viral, enquanto diverticulite é sempre bacteriana",
+                  "Gastroenterite afeta apenas o estômago, enquanto diverticulite afeta todo o intestino"
+                ],
+                correct: 1,
+                explanation: "A principal diferença na apresentação clínica é que a gastroenterite aguda causa dor abdominal difusa (cólicas) associada a diarreia e vômitos, enquanto a diverticulite aguda causa dor abdominal intensa e localizada, geralmente no quadrante inferior esquerdo (onde está o cólon sigmoide, local mais comum dos divertículos). A gastroenterite pode ter etiologia viral, bacteriana ou parasitária, e ambas as condições podem causar febre."
+              }
+            }
+          ]
+        }
       ]
     },
     antimicrobianos: antimicrobianosModule
