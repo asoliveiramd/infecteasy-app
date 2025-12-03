@@ -15666,8 +15666,8 @@ const App = () => {
         {
           id: 19,
           title: "Infecções do Trato Gastrointestinal",
-          duration: "8 min",
-          xp: 40,
+          duration: "16 min",
+          xp: 80,
           sections: [
             {
               title: "Introdução",
@@ -15783,6 +15783,162 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "A principal diferença na apresentação clínica é que a gastroenterite aguda causa dor abdominal difusa (cólicas) associada a diarreia e vômitos, enquanto a diverticulite aguda causa dor abdominal intensa e localizada, geralmente no quadrante inferior esquerdo (onde está o cólon sigmoide, local mais comum dos divertículos). A gastroenterite pode ter etiologia viral, bacteriana ou parasitária, e ambas as condições podem causar febre."
+              }
+            }
+,
+            {
+              title: "Gastroenterocolite Aguda - Conceito",
+              content: `
+                <div style="background: linear-gradient(135deg, #dbeafe 0%, #bae6fd 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #075985; margin-bottom: 15px;">🤢 Gastroenterocolite Aguda - Conceito</h3>
+                  
+                  <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7; margin-bottom: 20px;">
+                    <h4 style="color: #0c4a6e; margin-bottom: 10px;">📌 Definição</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      A <strong>gastroenterocolite aguda (GECA)</strong> é uma <strong>síndrome caracterizada por inflamação do trato gastrointestinal</strong>, envolvendo:
+                    </p>
+                  </div>
+                  
+                  <div style="background: #e0f2fe; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #075985; margin-bottom: 15px;">🔍 Estruturas Envolvidas</h4>
+                    
+                    <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;">🔹 Estômago (gastro-)</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Inflamação da mucosa gástrica
+                      </p>
+                    </div>
+                    
+                    <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;">🔹 Intestino Delgado (entero-)</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Inflamação do intestino delgado (duodeno, jejuno, íleo)
+                      </p>
+                    </div>
+                    
+                    <div style="background: #f0f9ff; padding: 15px; border-radius: 8px;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 10px;">🔹 Cólon (-colite)</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Inflamação do intestino grosso (cólon)
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #92400e; margin-bottom: 15px;">👁️ Manifestações Clínicas</h4>
+                    
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
+                      <h5 style="color: #78350f; margin-bottom: 10px;">💧 Diarreia Aguda</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Aquosa</strong>, <strong>sanguinolenta</strong> ou <strong>mucoide</strong>
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
+                      <h5 style="color: #78350f; margin-bottom: 10px;">🤮 Náuseas e Vômitos</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Sintomas gastrointestinais altos
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
+                      <h5 style="color: #78350f; margin-bottom: 10px;">🤕 Dor Abdominal</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Cólicas</strong> ou <strong>difusa</strong>
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px;">
+                      <h5 style="color: #78350f; margin-bottom: 10px;">🌡️ Febre</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Presente em <strong>casos infecciosos</strong>
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #059669; margin-bottom: 15px;">⏱️ Curso Clínico</h4>
+                    
+                    <div style="background: #d1fae5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                      <h5 style="color: #065f46; margin-bottom: 10px;">✅ Normalmente Autolimitada</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        A <strong>maioria dura 3 a 7 dias</strong>. Resolução espontânea sem necessidade de tratamento específico na maioria dos casos.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 15px;">⚠️ Grupos de Risco</h4>
+                    
+                    <div style="background: #fecaca; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626; margin-bottom: 15px;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 10px;">🚨 Pode Ser Grave Em:</h5>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                        <li><strong>Extremos de idade</strong>: Crianças pequenas e idosos</li>
+                        <li><strong>Pacientes imunocomprometidos</strong>: HIV, quimioterapia, transplantados</li>
+                      </ul>
+                    </div>
+                    
+                    <div style="background: #fee2e2; padding: 15px; border-radius: 8px;">
+                      <h5 style="color: #991b1b; margin-bottom: 10px;">💧 Complicações</h5>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                        <li><strong>Desidratação significativa</strong>: Perda de líquidos e eletrólitos</li>
+                        <li><strong>Distúrbios hidroeletrolíticos</strong>: Hiponatremia, hipocalemia, acidose metabólica</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #e8f8f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #0e6655; margin-bottom: 15px;">📋 Resumo dos Pontos-Chave</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+                      <thead>
+                        <tr style="background: #d1f2eb;">
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Aspecto</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Característica</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Estruturas</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Estômago + Intestino delgado + Cólon</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Sintomas</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Diarreia, vômitos, dor abdominal, febre</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Duração</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">3-7 dias (autolimitada)</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Risco</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Extremos de idade, imunocomprometidos</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;"><strong>Complicações</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1f2eb;">Desidratação, distúrbios hidroeletrolíticos</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7; margin-top: 20px;">
+                    <h4 style="color: #075985; margin-bottom: 10px;">💡 Ponto-Chave</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      <strong>GECA</strong> é inflamação do <strong>estômago + intestino delgado + cólon</strong>, causando <strong>diarreia, vômitos, dor abdominal e febre</strong>. Normalmente <strong>autolimitada (3-7 dias)</strong>. Pode ser <strong>grave em extremos de idade e imunocomprometidos</strong>, com risco de <strong>desidratação e distúrbios hidroeletrolíticos</strong>.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal complicação da gastroenterocolite aguda em grupos de risco?",
+                options: [
+                  "Perfuração intestinal",
+                  "Desidratação significativa e distúrbios hidroeletrolíticos",
+                  "Obstrução intestinal",
+                  "Sangramento gastrointestinal maciço"
+                ],
+                correct: 1,
+                explanation: "A principal complicação da gastroenterocolite aguda, especialmente em grupos de risco (extremos de idade e imunocomprometidos), é a desidratação significativa e os distúrbios hidroeletrolíticos (hiponatremia, hipocalemia, acidose metabólica). Isso ocorre devido à perda de líquidos e eletrólitos pela diarreia e vômitos. As outras complicações mencionadas são raras em GECA não complicada."
               }
             }
           ]
