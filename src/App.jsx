@@ -15666,8 +15666,8 @@ const App = () => {
         {
           id: 19,
           title: "Infecções do Trato Gastrointestinal",
-          duration: "16 min",
-          xp: 80,
+          duration: "24 min",
+          xp: 120,
           sections: [
             {
               title: "Introdução",
@@ -15939,6 +15939,140 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "A principal complicação da gastroenterocolite aguda, especialmente em grupos de risco (extremos de idade e imunocomprometidos), é a desidratação significativa e os distúrbios hidroeletrolíticos (hiponatremia, hipocalemia, acidose metabólica). Isso ocorre devido à perda de líquidos e eletrólitos pela diarreia e vômitos. As outras complicações mencionadas são raras em GECA não complicada."
+              }
+            }
+,
+            {
+              title: "Causas da Gastroenterocolite Aguda",
+              content: `
+                <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #92400e; margin-bottom: 15px;">🦠 Causas da Gastroenterocolite Aguda</h3>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #075985; margin-bottom: 15px;">🦠 Causas Infecciosas</h4>
+                    
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7; margin-bottom: 15px;">
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Vírus</strong> (rotavírus, norovírus), <strong>bactérias</strong> (E. coli, Salmonella, Campylobacter, Shigella) e <strong>parasitas</strong> (Giardia, Entamoeba). São as <strong>causas mais comuns de GECA</strong> em todo o mundo.
+                      </p>
+                    </div>
+                    
+                    <div style="background: #e0f2fe; padding: 20px; border-radius: 8px;">
+                      <h5 style="color: #0c4a6e; margin-bottom: 15px;">🔹 Vírus</h5>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                        <li><strong>Rotavírus</strong>: Principal causa de diarreia grave em crianças</li>
+                        <li><strong>Norovírus</strong>: Causa surtos em ambientes fechados (navios, escolas)</li>
+                        <li><strong>Adenovírus</strong>: Comum em crianças pequenas</li>
+                      </ul>
+                      
+                      <h5 style="color: #0c4a6e; margin: 15px 0;">🔹 Bactérias</h5>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                        <li><strong>E. coli</strong>: Enterotoxigênica (diarreia do viajante) e enterohemorrágica (O157:H7)</li>
+                        <li><strong>Salmonella</strong>: Associada a alimentos contaminados (ovos, aves)</li>
+                        <li><strong>Campylobacter jejuni</strong>: Comum em carnes mal cozidas</li>
+                        <li><strong>Shigella</strong>: Causa disenteria (diarreia sanguinolenta)</li>
+                      </ul>
+                      
+                      <h5 style="color: #0c4a6e; margin: 15px 0;">🔹 Parasitas</h5>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                        <li><strong>Giardia lamblia</strong>: Diarreia crônica, comum em água contaminada</li>
+                        <li><strong>Entamoeba histolytica</strong>: Causa amebíase (disenteria amebiana)</li>
+                        <li><strong>Cryptosporidium</strong>: Comum em imunocomprometidos</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #991b1b; margin-bottom: 15px;">⚠️ Causas Não Infecciosas</h4>
+                    
+                    <div style="background: #fecaca; padding: 15px; border-radius: 8px; border-left: 4px solid #dc2626; margin-bottom: 15px;">
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Toxinas alimentares</strong> (Staphylococcus aureus, Bacillus cereus), <strong>alergias alimentares</strong>, <strong>medicamentos</strong> (antibióticos, anti-inflamatórios) e <strong>intoxicações químicas</strong>.
+                      </p>
+                    </div>
+                    
+                    <div style="background: #fee2e2; padding: 20px; border-radius: 8px;">
+                      <h5 style="color: #7f1d1d; margin-bottom: 15px;">🔹 Toxinas Alimentares</h5>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                        <li><strong>Staphylococcus aureus</strong>: Toxina pré-formada (início rápido, 1-6h)</li>
+                        <li><strong>Bacillus cereus</strong>: Associado a arroz reaquecido</li>
+                        <li><strong>Clostridium perfringens</strong>: Carnes e molhos contaminados</li>
+                      </ul>
+                      
+                      <h5 style="color: #7f1d1d; margin: 15px 0;">🔹 Medicamentos</h5>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                        <li><strong>Antibióticos</strong>: Alteram a microbiota intestinal</li>
+                        <li><strong>Anti-inflamatórios (AINEs)</strong>: Podem causar gastrite e enterite</li>
+                        <li><strong>Laxantes</strong>: Uso excessivo causa diarreia</li>
+                      </ul>
+                      
+                      <h5 style="color: #7f1d1d; margin: 15px 0;">🔹 Outras Causas</h5>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                        <li><strong>Alergias alimentares</strong>: Lactose, glúten</li>
+                        <li><strong>Intoxicações químicas</strong>: Metais pesados, pesticidas</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #059669; margin-bottom: 15px;">🦠 Principais Bactérias</h4>
+                    
+                    <div style="background: #d1fae5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-bottom: 15px;">
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Escherichia coli</strong> (enterotoxigênica e enterohemorrágica), <strong>Salmonella spp.</strong>, <strong>Campylobacter jejuni</strong>, <strong>Shigella spp.</strong> e <strong>Yersinia enterocolitica</strong>. Cada uma tem características clínicas e epidemiológicas distintas.
+                      </p>
+                    </div>
+                    
+                    <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px;">
+                      <thead>
+                        <tr style="background: #d1fae5;">
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Bactéria</th>
+                          <th style="padding: 10px; border: 1px solid #a7f3d0; text-align: left;">Características</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1fae5;"><strong>E. coli</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1fae5;">Enterotoxigênica (diarreia do viajante), Enterohemorrágica (O157:H7 - SHU)</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1fae5;"><strong>Salmonella</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1fae5;">Alimentos contaminados (ovos, aves), febre tifoide</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1fae5;"><strong>Campylobacter</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1fae5;">Carnes mal cozidas, pode causar Síndrome de Guillain-Barré</td>
+                        </tr>
+                        <tr style="background: #f0fdfa;">
+                          <td style="padding: 10px; border: 1px solid #d1fae5;"><strong>Shigella</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1fae5;">Disenteria (diarreia sanguinolenta), transmissão fecal-oral</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 10px; border: 1px solid #d1fae5;"><strong>Yersinia</strong></td>
+                          <td style="padding: 10px; border: 1px solid #d1fae5;">Pode mimetizar apendicite (dor em FID)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-top: 20px;">
+                    <h4 style="color: #92400e; margin-bottom: 10px;">💡 Ponto-Chave</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      A <strong>identificação da causa específica na maioria das vezes não é necessária</strong> para o manejo inicial, especialmente em casos leves. O tratamento é principalmente de suporte (hidratação). Investigação etiológica está indicada em casos graves, prolongados, com sangue nas fezes ou em grupos de risco.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Por que a identificação da causa específica da gastroenterocolite aguda geralmente não é necessária no manejo inicial?",
+                options: [
+                  "Porque todos os casos são virais e autolimitados",
+                  "Porque o tratamento é principalmente de suporte (hidratação), independente da causa em casos leves",
+                  "Porque não existem testes disponíveis para identificar a causa",
+                  "Porque antibióticos devem ser usados em todos os casos"
+                ],
+                correct: 1,
+                explanation: "A identificação da causa específica geralmente não é necessária no manejo inicial porque o tratamento é principalmente de suporte (hidratação e reposição de eletrólitos), independente da causa em casos leves e autolimitados. A investigação etiológica (coprocultura, pesquisa de parasitas) está indicada em casos graves, prolongados (>7 dias), com sangue nas fezes, febre alta, desidratação grave ou em grupos de risco (idosos, crianças, imunocomprometidos)."
               }
             }
           ]
