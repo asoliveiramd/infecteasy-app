@@ -15666,8 +15666,8 @@ const App = () => {
         {
           id: 19,
           title: "Infecções do Trato Gastrointestinal",
-          duration: "24 min",
-          xp: 120,
+          duration: "32 min",
+          xp: 160,
           sections: [
             {
               title: "Introdução",
@@ -16073,6 +16073,159 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "A identificação da causa específica geralmente não é necessária no manejo inicial porque o tratamento é principalmente de suporte (hidratação e reposição de eletrólitos), independente da causa em casos leves e autolimitados. A investigação etiológica (coprocultura, pesquisa de parasitas) está indicada em casos graves, prolongados (>7 dias), com sangue nas fezes, febre alta, desidratação grave ou em grupos de risco (idosos, crianças, imunocomprometidos)."
+              }
+            }
+,
+            {
+              title: "Estimativa de Gravidade - Casos Leves/Moderados",
+              content: `
+                <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #059669; margin-bottom: 15px;">📊 Estimativa de Gravidade - Casos Leves/Moderados</h3>
+                  
+                  <div style="background: #d1fae5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-bottom: 20px;">
+                    <h4 style="color: #065f46; margin-bottom: 10px;">🏠 Paciente Tipicamente Ambulatorial</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      O paciente tipicamente ambulatorial tem as seguintes características:
+                    </p>
+                  </div>
+                  
+                  <div style="background: #f0fdfa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #0e6655; margin-bottom: 15px;">✅ Características do Paciente Ambulatorial</h4>
+                    
+                    <div style="background: #e8f8f5; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
+                      <h5 style="color: #0e6655; margin-bottom: 10px;">💧 Diarreia Aquosa</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>≤5 evacuações/dia</strong> (frequência moderada)
+                      </p>
+                    </div>
+                    
+                    <div style="background: #e8f8f5; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
+                      <h5 style="color: #0e6655; margin-bottom: 10px;">🤮 Vômitos Ocasionais</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>≤3 episódios/dia</strong> (não persistentes)
+                      </p>
+                    </div>
+                    
+                    <div style="background: #e8f8f5; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
+                      <h5 style="color: #0e6655; margin-bottom: 10px;">🤕 Dor Abdominal</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Leve a moderada</strong> (cólicas toleráveis)
+                      </p>
+                    </div>
+                    
+                    <div style="background: #e8f8f5; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
+                      <h5 style="color: #0e6655; margin-bottom: 10px;">❌ Ausência de Sangue ou Muco</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Sem sangue ou muco visível nas fezes</strong> (diarreia aquosa simples)
+                      </p>
+                    </div>
+                    
+                    <div style="background: #e8f8f5; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
+                      <h5 style="color: #0e6655; margin-bottom: 10px;">🌡️ Febre</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Baixa ou ausente</strong> (<38°C)
+                      </p>
+                    </div>
+                    
+                    <div style="background: #e8f8f5; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
+                      <h5 style="color: #0e6655; margin-bottom: 10px;">💧 Desidratação</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Leve ou ausente</strong> (sem sinais graves de desidratação)
+                      </p>
+                    </div>
+                    
+                    <div style="background: #e8f8f5; padding: 15px; border-radius: 8px;">
+                      <h5 style="color: #0e6655; margin-bottom: 10px;">💧 Hidratação Oral</h5>
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        <strong>Paciente consegue manter hidratação oral</strong> (tolera líquidos por via oral)
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #075985; margin-bottom: 15px;">💧 Sinais de Desidratação Leve</h4>
+                    
+                    <div style="background: #bae6fd; padding: 15px; border-radius: 8px; border-left: 4px solid #0284c7; margin-bottom: 15px;">
+                      <p style="font-size: 14px; line-height: 1.5;">
+                        Pacientes com desidratação leve apresentam sinais sutis que podem ser manejados ambulatorialmente com hidratação oral:
+                      </p>
+                    </div>
+                    
+                    <div style="background: #e0f2fe; padding: 20px; border-radius: 8px;">
+                      <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                        <thead>
+                          <tr style="background: #bae6fd;">
+                            <th style="padding: 10px; border: 1px solid #7dd3fc; text-align: left;">Sinal</th>
+                            <th style="padding: 10px; border: 1px solid #7dd3fc; text-align: left;">Desidratação Leve</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td style="padding: 10px; border: 1px solid #bae6fd;"><strong>Sede</strong></td>
+                            <td style="padding: 10px; border: 1px solid #bae6fd;">Levemente aumentada</td>
+                          </tr>
+                          <tr style="background: #f0f9ff;">
+                            <td style="padding: 10px; border: 1px solid #bae6fd;"><strong>Mucosas</strong></td>
+                            <td style="padding: 10px; border: 1px solid #bae6fd;">Úmidas</td>
+                          </tr>
+                          <tr>
+                            <td style="padding: 10px; border: 1px solid #bae6fd;"><strong>Turgor Cutâneo</strong></td>
+                            <td style="padding: 10px; border: 1px solid #bae6fd;">Normal ou levemente diminuído</td>
+                          </tr>
+                          <tr style="background: #f0f9ff;">
+                            <td style="padding: 10px; border: 1px solid #bae6fd;"><strong>Diurese</strong></td>
+                            <td style="padding: 10px; border: 1px solid #bae6fd;">Presente e adequada</td>
+                          </tr>
+                          <tr>
+                            <td style="padding: 10px; border: 1px solid #bae6fd;"><strong>Pulso</strong></td>
+                            <td style="padding: 10px; border: 1px solid #bae6fd;">Normal</td>
+                          </tr>
+                          <tr style="background: #f0f9ff;">
+                            <td style="padding: 10px; border: 1px solid #bae6fd;"><strong>Perda de Peso</strong></td>
+                            <td style="padding: 10px; border: 1px solid #bae6fd;"><3% do peso corporal</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h4 style="color: #92400e; margin-bottom: 15px;">⚠️ Quando Considerar Internação</h4>
+                    
+                    <div style="background: #fde68a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                      <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
+                        <strong>Sinais de Alerta</strong> que indicam necessidade de avaliação hospitalar:
+                      </p>
+                      <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
+                        <li><strong>Diarreia sanguinolenta</strong> (disenteria)</li>
+                        <li><strong>Vômitos persistentes</strong> (>3 episódios/dia ou incoercíveis)</li>
+                        <li><strong>Febre alta</strong> (>38,5°C) ou persistente</li>
+                        <li><strong>Desidratação moderada a grave</strong> (mucosas secas, turgor diminuído, oligúria)</li>
+                        <li><strong>Incapacidade de manter hidratação oral</strong></li>
+                        <li><strong>Dor abdominal intensa</strong> ou sinais de abdome agudo</li>
+                        <li><strong>Grupos de risco</strong>: Extremos de idade, imunocomprometidos, comorbidades</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin-top: 20px;">
+                    <h4 style="color: #059669; margin-bottom: 10px;">💡 Ponto-Chave</h4>
+                    <p style="font-size: 14px; line-height: 1.5;">
+                      Pacientes com <strong>diarreia aquosa ≤5x/dia</strong>, <strong>vômitos ocasionais ≤3x/dia</strong>, <strong>sem sangue nas fezes</strong>, <strong>febre baixa/ausente</strong> e <strong>desidratação leve</strong> (mucosas úmidas, turgor normal, diurese adequada, perda de peso <3%) podem ser tratados <strong>ambulatorialmente com hidratação oral</strong>. Sinais de alerta (sangue, vômitos persistentes, febre alta, desidratação moderada/grave) indicam necessidade de avaliação hospitalar.
+                    </p>
+                  </div>
+                </div>
+              `,
+              question: {
+                text: "Qual dos seguintes achados NÃO é compatível com desidratação leve em um paciente com gastroenterocolite aguda?",
+                options: [
+                  "Sede levemente aumentada e mucosas úmidas",
+                  "Turgor cutâneo normal ou levemente diminuído",
+                  "Mucosas secas e oligúria (diurese diminuída)",
+                  "Perda de peso <3% do peso corporal"
+                ],
+                correct: 2,
+                explanation: "Mucosas secas e oligúria (diurese diminuída) são sinais de desidratação moderada a grave, não de desidratação leve. Na desidratação leve, as mucosas estão úmidas, o turgor cutâneo está normal ou levemente diminuído, a diurese está presente e adequada, e a perda de peso é <3% do peso corporal. Pacientes com mucosas secas e oligúria necessitam de avaliação hospitalar e possivelmente hidratação venosa."
               }
             }
           ]
