@@ -15666,8 +15666,8 @@ const App = () => {
         {
           id: 19,
           title: "Infecções do Trato Gastrointestinal",
-          duration: "32 min",
-          xp: 160,
+          duration: "40 min",
+          xp: 200,
           sections: [
             {
               title: "Introdução",
@@ -16226,6 +16226,60 @@ const App = () => {
                 ],
                 correct: 2,
                 explanation: "Mucosas secas e oligúria (diurese diminuída) são sinais de desidratação moderada a grave, não de desidratação leve. Na desidratação leve, as mucosas estão úmidas, o turgor cutâneo está normal ou levemente diminuído, a diurese está presente e adequada, e a perda de peso é <3% do peso corporal. Pacientes com mucosas secas e oligúria necessitam de avaliação hospitalar e possivelmente hidratação venosa."
+              }
+            }
+,
+            {
+              title: "Estimativa de Gravidade - Casos Graves",
+              content: `
+**Avaliação Hospitalar Necessária**
+
+O paciente com diarreia grave deve ser avaliado em hospital. Ele apresenta sinais de comprometimento sistêmico que indicam necessidade de intervenção imediata.
+
+---
+
+### **Desidratação Grave**
+
+**Sinais Clínicos:**
+- Olhos fundos, pele seca e com turgor diminuído
+- Letargia ou alteração do nível de consciência
+- Taquicardia (>100 bpm), hipotensão (PA <90/60 mmHg)
+- Oligúria (<1 micção a cada 8 horas) ou anúria
+- Perda de peso >9% do peso corporal
+
+---
+
+### **Diarreia Grave**
+
+**Critérios:**
+- ≥10 evacuações/dia
+- Sangue nas fezes (hematoquesia)
+- Dor abdominal intensa ou distensão
+- Diarreia persistente (>14 dias)
+
+---
+
+### **Sinais Sistêmicos**
+
+**Indicadores de Gravidade:**
+- Febre alta (>39°C) ou hipotermia (<36°C)
+- Confusão mental (especialmente em idosos)
+- Sinais de sepse ou choque séptico
+
+---
+
+**Importante:** A presença de qualquer um desses sinais indica necessidade de avaliação hospitalar imediata para hidratação venosa, investigação etiológica e tratamento específico.
+              `,
+              question: {
+                text: "Um paciente de 68 anos procura o pronto-socorro com quadro de diarreia há 2 dias. Ao exame físico, apresenta olhos fundos, pele com turgor diminuído, PA 85/55 mmHg, FC 115 bpm e relata ter urinado apenas uma vez nas últimas 12 horas. Qual a conduta mais adequada?",
+                options: {
+                  A: "Prescrever soro de reidratação oral e orientar retorno se piorar",
+                  B: "Solicitar internação hospitalar para hidratação venosa e monitorização",
+                  C: "Prescrever loperamida para controle da diarreia e liberar para casa",
+                  D: "Orientar aumentar ingesta hídrica oral e retornar em 48 horas"
+                },
+                correct: "B",
+                explanation: "O paciente apresenta sinais claros de desidratação grave: olhos fundos, turgor diminuído, hipotensão (PA <90/60 mmHg), taquicardia (>100 bpm) e oligúria (<1 micção a cada 8 horas). Além disso, a idade avançada é fator de risco adicional. Esses sinais indicam necessidade de avaliação hospitalar imediata para hidratação venosa, correção de distúrbios hidroeletrolíticos e monitorização contínua. A reidratação oral não é suficiente em casos de desidratação grave, e o uso de loperamida está contraindicado sem investigação adequada."
               }
             }
           ]
