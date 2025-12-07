@@ -15666,8 +15666,8 @@ const App = () => {
         {
           id: 19,
           title: "Infecções do Trato Gastrointestinal",
-          duration: "96 min",
-          xp: 480,
+          duration: "104 min",
+          xp: 520,
           sections: [
             {
               title: "Introdução",
@@ -16738,6 +16738,87 @@ A classificação de Hinchey é fundamental para decidir entre tratamento **ambu
                 },
                 correct: "C",
                 explanation: "O paciente apresenta abscesso pericólico de 5 cm, que se enquadra no Estágio II de Hinchey (abscesso ≥3 cm). A conduta adequada é drenagem percutânea guiada por TC associada a antibióticos IV. O Estágio Ia refere-se apenas a inflamação pericólica sem abscesso. O Estágio Ib corresponde a abscessos pequenos (<3 cm) que podem ser tratados conservadoramente. Os Estágios III e IV referem-se a peritonite (purulenta ou fecal) e requerem cirurgia de emergência, o que não é o caso deste paciente que tem abscesso contido."
+              }
+            }
+,
+            {
+              title: "Tratamento da Diverticulite",
+              content: `
+**Manejo Ambulatorial da Diverticulite Não Complicada**
+
+O tratamento ambulatorial é adequado para casos selecionados de diverticulite leve (Estágios 0 e Ia de Hinchey).
+
+---
+
+### **Casos Ambulatoriais**
+
+**Indicações (Estágios 0 e Ia):**
+
+✓ **Dor controlável** com analgésicos orais
+
+✓ **Ausência de febre alta**, toxemia ou sinais de irritação peritoneal
+
+✓ **Paciente consegue ingerir** líquidos/alimentos
+
+✓ **Ausência de comorbidades significativas** (diabetes descompensado, imunossupressão, insuficiência renal)
+
+✓ **Possibilidade de acompanhamento** ambulatorial próximo
+
+---
+
+### **Regime Terapêutico**
+
+**Opção 1:**
+- **Amoxicilina/Clavulanato** 875/125mg 12/12h
+- **Duração:** 7-10 dias
+
+**Opção 2:**
+- **Ciprofloxacino** 500mg 12/12h
+- **+ Metronidazol** 500mg 8/8h
+- **Duração:** 7-10 dias
+
+**Opção 3:**
+- **Cefuroxima** 500mg 12/12h
+- **+ Metronidazol** 500mg 8/8h
+- **Duração:** 7-10 dias
+
+---
+
+### 💡 **Medidas Adjuvantes**
+
+**Dieta:**
+- Dieta líquida/pastosa nos primeiros dias
+- Progressão gradual conforme tolerância
+- Evitar alimentos ricos em fibras na fase aguda
+
+**Analgesia:**
+- Paracetamol ou dipirona
+- Evitar AINEs (risco de perfuração)
+
+**Acompanhamento:**
+- Reavaliação em 48-72 horas
+- Orientar retorno imediato se piora
+
+---
+
+### ⚠️ **Sinais de Alerta para Hospitalização**
+
+- Piora da dor ou febre persistente
+- Vômitos incoercíveis
+- Incapacidade de tolerar via oral
+- Sinais de peritonite
+- Ausência de melhora em 48-72 horas
+              `,
+              question: {
+                text: "Um paciente de 55 anos com diverticulite não complicada (Hinchey 0) será tratado ambulatorialmente. Qual esquema antibiótico está CORRETO para o tratamento oral?",
+                options: {
+                  A: "Amoxicilina 500mg 8/8h por 7 dias",
+                  B: "Ciprofloxacino 500mg 12/12h + Metronidazol 500mg 8/8h por 7-10 dias",
+                  C: "Azitromicina 500mg/dia por 3 dias",
+                  D: "Cefalexina 500mg 6/6h por 7 dias"
+                },
+                correct: "B",
+                explanation: "O esquema correto é Ciprofloxacino 500mg 12/12h + Metronidazol 500mg 8/8h por 7-10 dias. A diverticulite é uma infecção polimicrobiana que requer cobertura para Gram-negativos (principalmente E. coli) e anaeróbios (principalmente Bacteroides fragilis). O ciprofloxacino cobre Gram-negativos e o metronidazol cobre anaeróbios. Outras opções incluem Amoxicilina/Clavulanato (que já tem cobertura mista) ou Cefuroxima + Metronidazol. Amoxicilina isolada não cobre anaeróbios adequadamente. Azitromicina não tem cobertura adequada para este tipo de infecção. Cefalexina não cobre anaeróbios."
               }
             }
           ]
