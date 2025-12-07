@@ -15666,8 +15666,8 @@ const App = () => {
         {
           id: 19,
           title: "Infecções do Trato Gastrointestinal",
-          duration: "40 min",
-          xp: 200,
+          duration: "48 min",
+          xp: 240,
           sections: [
             {
               title: "Introdução",
@@ -16280,6 +16280,70 @@ O paciente com diarreia grave deve ser avaliado em hospital. Ele apresenta sinai
                 },
                 correct: "B",
                 explanation: "O paciente apresenta sinais claros de desidratação grave: olhos fundos, turgor diminuído, hipotensão (PA <90/60 mmHg), taquicardia (>100 bpm) e oligúria (<1 micção a cada 8 horas). Além disso, a idade avançada é fator de risco adicional. Esses sinais indicam necessidade de avaliação hospitalar imediata para hidratação venosa, correção de distúrbios hidroeletrolíticos e monitorização contínua. A reidratação oral não é suficiente em casos de desidratação grave, e o uso de loperamida está contraindicado sem investigação adequada."
+              }
+            }
+,
+            {
+              title: "Fatores de Risco para GECA Grave",
+              content: `
+**Identificação de Pacientes de Alto Risco**
+
+Vários são os fatores de risco para gastroenterocolite aguda (GECA) grave. Abaixo os mais importantes:
+
+---
+
+### **Idade**
+
+**Extremos de Idade:**
+- **>65 anos** ou **<1 ano**
+- Crianças pequenas e idosos têm menor reserva fisiológica e desidratam mais rapidamente
+- Maior risco de complicações e descompensação clínica
+
+---
+
+### **Comorbidades**
+
+**Condições Associadas:**
+- **Diabetes mellitus**
+- **Insuficiência renal crônica**
+- **Insuficiência cardíaca**
+- **Doença inflamatória intestinal**
+- **Imunossupressão** (HIV, transplantados, quimioterapia)
+
+---
+
+### **Medicações**
+
+**Fármacos de Risco:**
+- **Diuréticos** (aumentam risco de desidratação)
+- **Anti-hipertensivos** (podem agravar hipotensão)
+- **Imunossupressores** (aumentam risco de infecções graves)
+- **Antibióticos de amplo espectro** (terapia recente - risco de *Clostridioides difficile*)
+
+---
+
+### **Fatores Sociais**
+
+**Determinantes Sociais:**
+- Condições precárias de moradia
+- Falta de acesso à água potável
+- Saneamento básico inadequado
+- Dificuldade de acesso a serviços de saúde
+
+---
+
+**Importante:** A presença de um ou mais desses fatores de risco indica necessidade de monitorização mais rigorosa e menor limiar para avaliação hospitalar.
+              `,
+              question: {
+                text: "Uma paciente de 72 anos, diabética e hipertensa em uso de enalapril e hidroclorotiazida, procura atendimento com quadro de diarreia há 24 horas. Qual fator NÃO aumenta o risco de evolução grave nesta paciente?",
+                options: {
+                  A: "Idade >65 anos",
+                  B: "Uso de diuréticos (hidroclorotiazida)",
+                  C: "Diabetes mellitus",
+                  D: "Sexo feminino"
+                },
+                correct: "D",
+                explanation: "O sexo feminino não é considerado fator de risco para gastroenterocolite aguda grave. Os principais fatores de risco incluem extremos de idade (>65 anos ou <1 ano), comorbidades como diabetes mellitus e insuficiência cardíaca, e uso de medicações como diuréticos e anti-hipertensivos. Nesta paciente, a idade avançada, o diabetes e o uso de hidroclorotiazida (diurético) são fatores que aumentam o risco de desidratação grave e complicações, exigindo monitorização mais rigorosa e menor limiar para avaliação hospitalar."
               }
             }
           ]
