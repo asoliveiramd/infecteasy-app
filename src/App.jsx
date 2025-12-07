@@ -15666,8 +15666,8 @@ const App = () => {
         {
           id: 19,
           title: "Infecções do Trato Gastrointestinal",
-          duration: "56 min",
-          xp: 280,
+          duration: "64 min",
+          xp: 320,
           sections: [
             {
               title: "Introdução",
@@ -16411,6 +16411,62 @@ O uso indiscriminado de antibióticos pode:
                 },
                 correct: "C",
                 explanation: "A conduta correta é orientar reidratação oral, dieta leve e retorno se houver piora. O paciente apresenta quadro de GECA leve (diarreia aquosa sem sangue, sem febre, sem vômitos, sem desidratação), sem indicação de antibioticoterapia. A maioria dos casos de GECA é autolimitada e não necessita de antibióticos. Antibióticos estão indicados apenas em casos selecionados: diarreia sanguinolenta, febre alta, suspeita de etiologia bacteriana invasiva com toxemia, ou pacientes com fatores de risco. Loperamida deve ser evitada em infecções bacterianas, e não há indicação de internação neste caso leve."
+              }
+            }
+,
+            {
+              title: "Antibioticoterapia na GECA Bacteriana",
+              content: `
+**Tratamento Antimicrobiano Específico**
+
+Quando indicada, a antibioticoterapia deve ser direcionada ao patógeno suspeito ou identificado.
+
+---
+
+### **Esquemas Terapêuticos por Patógeno**
+
+| **Patógeno** | **Antibiótico de Escolha** | **Alternativas** | **Duração** |
+|:-------------|:---------------------------|:-----------------|:------------|
+| **Salmonella sp** (grave) | Tratamento hospitalar | - | - |
+| **Shigella** | Azitromicina 500mg/dia | Ciprofloxacino 500mg 12/12h | 3 dias |
+| **Campylobacter** | Azitromicina 500mg/dia | Ciprofloxacino 500mg 12/12h | 3 dias |
+| **Yersinia** | TMP-SMX 160/800mg 12/12h | Ciprofloxacino 500mg 12/12h | 5 dias |
+
+---
+
+### ⚠️ **Observação Importante sobre Salmonella**
+
+**Casos de infecção por *Salmonella* não-tifoide geralmente NÃO necessitam de antibióticos**, exceto em:
+
+- Pacientes com **doença grave** (sepse, bacteremia)
+- **Imunossupressão** (HIV, transplantados, quimioterapia)
+- **Extremos de idade** (<3 meses ou >65 anos)
+- Presença de **próteses vasculares** ou **valvopatias**
+
+Nesses casos, o tratamento deve ser **hospitalar** com antibioticoterapia parenteral.
+
+---
+
+### 💡 **Pontos-Chave**
+
+✓ **Azitromicina** é primeira escolha para *Shigella* e *Campylobacter*
+
+✓ **Ciprofloxacino** é alternativa eficaz, mas resistência crescente
+
+✓ **TMP-SMX** permanece opção para *Yersinia*
+
+✓ Duração curta (3-5 dias) é suficiente na maioria dos casos
+              `,
+              question: {
+                text: "Um paciente de 28 anos, previamente hígido, apresenta diarreia sanguinolenta há 2 dias, com febre de 38,5°C. Coprocultura identifica Shigella sp. Qual o antibiótico de escolha e duração do tratamento?",
+                options: {
+                  A: "Ciprofloxacino 500mg 12/12h por 7 dias",
+                  B: "Azitromicina 500mg/dia por 3 dias",
+                  C: "Amoxicilina 500mg 8/8h por 5 dias",
+                  D: "TMP-SMX 160/800mg 12/12h por 5 dias"
+                },
+                correct: "B",
+                explanation: "O antibiótico de escolha para infecção por Shigella é azitromicina 500mg/dia por 3 dias. A azitromicina apresenta boa eficácia, baixa resistência e curta duração de tratamento. O ciprofloxacino é alternativa válida, mas a resistência tem aumentado em algumas regiões. A duração de 3 dias é suficiente para Shigella. Amoxicilina não é eficaz devido à alta resistência, e TMP-SMX é opção para Yersinia, não para Shigella."
               }
             }
           ]
