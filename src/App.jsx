@@ -15666,8 +15666,8 @@ const App = () => {
         {
           id: 19,
           title: "Infecções do Trato Gastrointestinal",
-          duration: "80 min",
-          xp: 400,
+          duration: "88 min",
+          xp: 440,
           sections: [
             {
               title: "Introdução",
@@ -16601,6 +16601,77 @@ A diverticulite é uma infecção **polimicrobiana mista** (aeróbios + anaerób
                 },
                 correct: "C",
                 explanation: "A diverticulite aguda é uma infecção polimicrobiana que envolve bactérias aeróbias (principalmente E. coli) e anaeróbias (principalmente Bacteroides fragilis) da flora intestinal. Não é causada exclusivamente por E. coli. Ocorre predominantemente no retossigmoide (90%), não no cólon ascendente. A fisiopatologia envolve formação de microabscessos na base do divertículo, microperfuração contida e possível progressão para abscessos maiores, fístulas ou peritonite. O tratamento antimicrobiano, quando indicado, deve cobrir tanto aeróbios quanto anaeróbios."
+              }
+            }
+,
+            {
+              title: "Diverticulite - Sintomas",
+              content: `
+**Apresentação Clínica**
+
+O quadro clínico pode variar desde muito leve (somente com dor abdominal) até grave, com o paciente se apresentando séptico.
+
+---
+
+### **Dor Abdominal**
+
+**Características:**
+- Localizada no **quadrante inferior esquerdo (90% dos casos)**
+- **Constante**, agravada por movimentos ou tosse
+- Início geralmente **gradual**, com piora progressiva
+- Pode ser referida como "apendicite do lado esquerdo"
+
+---
+
+### **Manifestações Sistêmicas**
+
+**Sinais de Infecção:**
+- **Febre** (38°C ou mais) e calafrios
+- **Náuseas e vômitos** (sugerem obstrução ou abscesso)
+- Mal-estar geral
+- Anorexia
+
+---
+
+### **Sintomas Intestinais**
+
+**Alterações Funcionais:**
+- **Alterações do hábito intestinal** (diarreia ou constipação)
+- **Distensão abdominal** (suspeitar de perfuração ou obstrução)
+- Sangramento retal (raro, mais comum na doença diverticular não complicada)
+
+---
+
+### **Exame Físico**
+
+**Achados Principais:**
+- **Dor à palpação na fossa ilíaca esquerda (FIE)**
+- **Defesa muscular localizada** (contratura involuntária)
+- Pode haver **massa palpável** (abscesso ou flegmão)
+- **Sinais de irritação peritoneal** sugerem perfuração:
+  - Descompressão brusca positiva (Blumberg)
+  - Rigidez abdominal difusa
+  - Ausência de ruídos hidroaéreos
+
+---
+
+### ⚠️ **Sinais de Alerta**
+
+- Febre alta (>39°C) ou hipotensão → Sepse
+- Rigidez abdominal difusa → Perfuração livre
+- Massa palpável → Abscesso
+- Distensão importante → Obstrução ou íleo paralítico
+              `,
+              question: {
+                text: "Um paciente de 58 anos procura atendimento com dor constante em quadrante inferior esquerdo há 2 dias, febre de 38,2°C e náuseas. Ao exame físico, apresenta dor à palpação em FIE com defesa muscular localizada, sem sinais de irritação peritoneal difusa. Qual a hipótese diagnóstica mais provável?",
+                options: {
+                  A: "Apendicite aguda",
+                  B: "Diverticulite aguda não complicada",
+                  C: "Perfuração intestinal com peritonite",
+                  D: "Gastroenterocolite aguda"
+                },
+                correct: "B",
+                explanation: "O quadro é compatível com diverticulite aguda não complicada. Os achados clássicos estão presentes: dor em quadrante inferior esquerdo (90% dos casos), febre, náuseas, dor à palpação em FIE com defesa muscular localizada. A ausência de sinais de irritação peritoneal difusa afasta perfuração livre. Apendicite causa dor em quadrante inferior direito. Gastroenterocolite cursa principalmente com diarreia e não tem dor localizada persistente. A presença de defesa muscular localizada e febre sugerem processo inflamatório/infeccioso focal, característico da diverticulite."
               }
             }
           ]
