@@ -15666,8 +15666,8 @@ const App = () => {
         {
           id: 19,
           title: "Infecções do Trato Gastrointestinal",
-          duration: "48 min",
-          xp: 240,
+          duration: "56 min",
+          xp: 280,
           sections: [
             {
               title: "Introdução",
@@ -16344,6 +16344,73 @@ Vários são os fatores de risco para gastroenterocolite aguda (GECA) grave. Aba
                 },
                 correct: "D",
                 explanation: "O sexo feminino não é considerado fator de risco para gastroenterocolite aguda grave. Os principais fatores de risco incluem extremos de idade (>65 anos ou <1 ano), comorbidades como diabetes mellitus e insuficiência cardíaca, e uso de medicações como diuréticos e anti-hipertensivos. Nesta paciente, a idade avançada, o diabetes e o uso de hidroclorotiazida (diurético) são fatores que aumentam o risco de desidratação grave e complicações, exigindo monitorização mais rigorosa e menor limiar para avaliação hospitalar."
+              }
+            }
+,
+            {
+              title: "Tratamento da GECA - Casos Ambulatoriais",
+              content: `
+**Abordagem Terapêutica no Contexto Ambulatorial**
+
+O tratamento da gastroenterocolite aguda (GECA) em casos ambulatoriais baseia-se principalmente em medidas de suporte e uso criterioso de medicações.
+
+---
+
+### **Medidas Gerais**
+
+**Pilares do Tratamento:**
+- **Reidratação oral** (soro de reidratação oral ou soluções caseiras)
+- **Dieta leve** (evitar lactose, gordura e cafeína)
+- **Retorno gradual à alimentação normal** conforme tolerância
+
+---
+
+### **Tratamento Sintomático**
+
+**Medicações de Suporte:**
+- **Antieméticos** se necessário (ondansetrona, metoclopramida)
+- **Analgésicos** para dor abdominal (paracetamol, dipirona)
+- **Evitar antidiarreicos** em infecções bacterianas (risco de complicações)
+
+---
+
+### **Antibioticoterapia**
+
+**Indicada APENAS em casos selecionados:**
+
+✓ **Diarreia sanguinolenta** ou **febre alta**
+
+✓ **Suspeita de etiologia bacteriana invasiva** com:
+  - Prostração
+  - Sinais de toxemia
+  - Alterações de estado geral desproporcionais a um quadro viral típico
+
+✓ **Pacientes com fatores de risco:**
+  - Idosos
+  - Imunossuprimidos
+  - Comorbidades graves
+
+---
+
+### ⚠️ **Ponto-Chave**
+
+**A maioria dos casos de GECA não necessita de antibióticos!**
+
+O uso indiscriminado de antibióticos pode:
+- Prolongar o quadro diarreico
+- Selecionar bactérias resistentes
+- Aumentar risco de infecção por *Clostridioides difficile*
+              `,
+              question: {
+                text: "Um paciente de 35 anos, previamente hígido, procura atendimento com diarreia aquosa há 2 dias (4-5 evacuações/dia), sem sangue, febre ou vômitos. Exame físico: bom estado geral, mucosas úmidas, sem sinais de desidratação. Qual a conduta mais adequada?",
+                options: {
+                  A: "Prescrever ciprofloxacino 500mg 12/12h por 5 dias",
+                  B: "Prescrever loperamida e solicitar coprocultura",
+                  C: "Orientar reidratação oral, dieta leve e retorno se piorar",
+                  D: "Solicitar internação hospitalar para hidratação venosa"
+                },
+                correct: "C",
+                explanation: "A conduta correta é orientar reidratação oral, dieta leve e retorno se houver piora. O paciente apresenta quadro de GECA leve (diarreia aquosa sem sangue, sem febre, sem vômitos, sem desidratação), sem indicação de antibioticoterapia. A maioria dos casos de GECA é autolimitada e não necessita de antibióticos. Antibióticos estão indicados apenas em casos selecionados: diarreia sanguinolenta, febre alta, suspeita de etiologia bacteriana invasiva com toxemia, ou pacientes com fatores de risco. Loperamida deve ser evitada em infecções bacterianas, e não há indicação de internação neste caso leve."
               }
             }
           ]
