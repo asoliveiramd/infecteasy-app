@@ -15666,8 +15666,8 @@ const App = () => {
         {
           id: 19,
           title: "Infecções do Trato Gastrointestinal",
-          duration: "72 min",
-          xp: 360,
+          duration: "80 min",
+          xp: 400,
           sections: [
             {
               title: "Introdução",
@@ -16537,6 +16537,70 @@ Resumo dos conceitos essenciais para o manejo adequado da gastroenterocolite agu
                 },
                 correct: "B",
                 explanation: "A afirmação correta é que a hidratação oral é o pilar do tratamento e a maioria dos casos não necessita de antibióticos. A GECA é predominantemente viral ou autolimitada, e o tratamento baseia-se em reidratação e suporte sintomático. Antibióticos têm indicação restrita (diarreia sanguinolenta, febre alta, fatores de risco). Pacientes com >10 evacuações/dia têm critério de gravidade e necessitam avaliação hospitalar, não tratamento ambulatorial com loperamida. A coprocultura não é obrigatória no manejo inicial de casos leves."
+              }
+            }
+,
+            {
+              title: "Diverticulite Aguda - Definição",
+              content: `
+**Conceito e Epidemiologia**
+
+A diverticulite é a **inflamação e infecção de divertículos**, que são herniações saculares da mucosa e submucosa através da camada muscular do cólon. Ocorre predominantemente no **retossigmoide (90% dos casos)**.
+
+---
+
+### **Agentes Bacterianos**
+
+**Infecção polimicrobiana pela flora intestinal:**
+
+**Bactérias Gram-negativas:**
+- ***Escherichia coli*** (principal agente)
+- *Klebsiella* spp.
+- *Proteus* spp.
+
+**Bactérias anaeróbias:**
+- ***Bacteroides fragilis*** (principal anaeróbio)
+
+**Bactérias Gram-positivas:**
+- *Streptococcus* spp.
+- Enterococos
+
+---
+
+### **Fisiopatologia**
+
+**Sequência de Eventos:**
+
+1️⃣ **Formação inicial de microabscessos** na base do divertículo
+   - Obstrução do colo diverticular por fecalito ou material fecal
+   - Proliferação bacteriana local
+
+2️⃣ **Microperfuração contida**
+   - Ruptura microscópica da parede diverticular
+   - Inflamação pericolônica limitada
+
+3️⃣ **Possível progressão para complicações:**
+   - **Abscesso** pericolônico ou pélvico
+   - **Fístula** (colovesical, colovaginal, coloentérica)
+   - **Peritonite generalizada** (perfuração livre)
+   - **Estenose** colônica (sequela crônica)
+
+---
+
+### 💡 **Ponto-Chave**
+
+A diverticulite é uma infecção **polimicrobiana mista** (aeróbios + anaeróbios), exigindo cobertura antimicrobiana ampla quando indicada antibioticoterapia.
+              `,
+              question: {
+                text: "Em relação à diverticulite aguda, qual afirmação está CORRETA?",
+                options: {
+                  A: "É causada exclusivamente por Escherichia coli e requer antibiótico específico para Gram-negativos",
+                  B: "Ocorre predominantemente no cólon ascendente e ceco em 90% dos casos",
+                  C: "É uma infecção polimicrobiana que envolve bactérias aeróbias e anaeróbias da flora intestinal",
+                  D: "A fisiopatologia envolve invasão bacteriana transmural sem formação de abscessos"
+                },
+                correct: "C",
+                explanation: "A diverticulite aguda é uma infecção polimicrobiana que envolve bactérias aeróbias (principalmente E. coli) e anaeróbias (principalmente Bacteroides fragilis) da flora intestinal. Não é causada exclusivamente por E. coli. Ocorre predominantemente no retossigmoide (90%), não no cólon ascendente. A fisiopatologia envolve formação de microabscessos na base do divertículo, microperfuração contida e possível progressão para abscessos maiores, fístulas ou peritonite. O tratamento antimicrobiano, quando indicado, deve cobrir tanto aeróbios quanto anaeróbios."
               }
             }
           ]
