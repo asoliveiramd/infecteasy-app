@@ -15666,8 +15666,8 @@ const App = () => {
         {
           id: 19,
           title: "Infecções do Trato Gastrointestinal",
-          duration: "64 min",
-          xp: 320,
+          duration: "72 min",
+          xp: 360,
           sections: [
             {
               title: "Introdução",
@@ -16467,6 +16467,76 @@ Nesses casos, o tratamento deve ser **hospitalar** com antibioticoterapia parent
                 },
                 correct: "B",
                 explanation: "O antibiótico de escolha para infecção por Shigella é azitromicina 500mg/dia por 3 dias. A azitromicina apresenta boa eficácia, baixa resistência e curta duração de tratamento. O ciprofloxacino é alternativa válida, mas a resistência tem aumentado em algumas regiões. A duração de 3 dias é suficiente para Shigella. Amoxicilina não é eficaz devido à alta resistência, e TMP-SMX é opção para Yersinia, não para Shigella."
+              }
+            }
+,
+            {
+              title: "GECA - O que você não pode deixar de saber",
+              content: `
+**Pontos-Chave para a Prática Clínica**
+
+Resumo dos conceitos essenciais para o manejo adequado da gastroenterocolite aguda no contexto ambulatorial.
+
+---
+
+### 🎯 **Estadiamento é Fundamental**
+
+**Avaliação de Gravidade:**
+- Casos graves **NÃO devem ser tratados ambulatorialmente**
+- **Critérios de gravidade:**
+  - Desidratação intensa
+  - Sangue nas fezes (hematoquesia)
+  - Febre alta (>39°C)
+  - Mais de 10 evacuações/dia
+  - Alteração do nível de consciência
+  - Sinais de toxemia ou sepse
+
+**Ação:** Encaminhar imediatamente para avaliação hospitalar
+
+---
+
+### 💧 **Hidratação é o Pilar do Tratamento**
+
+**Priorize a reposição de fluidos e eletrólitos:**
+- A **solução de reidratação oral** é eficaz e deve ser a primeira escolha
+- Oferecer em **pequenas quantidades frequentes** para melhorar a tolerância
+- Evitar vômitos por sobrecarga de volume
+- Monitorar sinais de desidratação (mucosas, turgor, diurese)
+
+**Lembre-se:** A hidratação adequada resolve a maioria dos casos!
+
+---
+
+### 💊 **Antibióticos com Indicação Restrita**
+
+**Use antibióticos SOMENTE se houver:**
+- Evidência clara de **etiologia bacteriana invasiva**
+- **Fatores de risco associados** (extremos de idade, imunossupressão, comorbidades)
+- Diarreia sanguinolenta com febre alta
+- Sinais de toxemia ou prostração
+
+**Importante:** A maioria dos casos de GECA é **viral ou autolimitada** e não se beneficia de antibióticos!
+
+---
+
+### ✅ **Resumo da Conduta**
+
+1. **Avaliar gravidade** → Ambulatorial vs. Hospitalar
+2. **Hidratar adequadamente** → Reidratação oral
+3. **Tratar sintomas** → Antieméticos/analgésicos se necessário
+4. **Antibióticos criteriosamente** → Apenas casos selecionados
+5. **Orientar retorno** → Sinais de alerta e piora
+              `,
+              question: {
+                text: "Qual das seguintes afirmações resume CORRETAMENTE a abordagem da gastroenterocolite aguda no contexto ambulatorial?",
+                options: {
+                  A: "Antibióticos devem ser prescritos em todos os casos para prevenir complicações bacterianas",
+                  B: "A hidratação oral é o pilar do tratamento e a maioria dos casos não necessita de antibióticos",
+                  C: "Pacientes com mais de 10 evacuações/dia podem ser tratados ambulatorialmente com loperamida",
+                  D: "A investigação etiológica com coprocultura é obrigatória antes de iniciar qualquer tratamento"
+                },
+                correct: "B",
+                explanation: "A afirmação correta é que a hidratação oral é o pilar do tratamento e a maioria dos casos não necessita de antibióticos. A GECA é predominantemente viral ou autolimitada, e o tratamento baseia-se em reidratação e suporte sintomático. Antibióticos têm indicação restrita (diarreia sanguinolenta, febre alta, fatores de risco). Pacientes com >10 evacuações/dia têm critério de gravidade e necessitam avaliação hospitalar, não tratamento ambulatorial com loperamida. A coprocultura não é obrigatória no manejo inicial de casos leves."
               }
             }
           ]
