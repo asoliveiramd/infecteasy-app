@@ -15666,8 +15666,8 @@ const App = () => {
         {
           id: 19,
           title: "Infecções do Trato Gastrointestinal",
-          duration: "88 min",
-          xp: 440,
+          duration: "96 min",
+          xp: 480,
           sections: [
             {
               title: "Introdução",
@@ -16672,6 +16672,72 @@ O quadro clínico pode variar desde muito leve (somente com dor abdominal) até 
                 },
                 correct: "B",
                 explanation: "O quadro é compatível com diverticulite aguda não complicada. Os achados clássicos estão presentes: dor em quadrante inferior esquerdo (90% dos casos), febre, náuseas, dor à palpação em FIE com defesa muscular localizada. A ausência de sinais de irritação peritoneal difusa afasta perfuração livre. Apendicite causa dor em quadrante inferior direito. Gastroenterocolite cursa principalmente com diarreia e não tem dor localizada persistente. A presença de defesa muscular localizada e febre sugerem processo inflamatório/infeccioso focal, característico da diverticulite."
+              }
+            }
+,
+            {
+              title: "Estadiamento da Diverticulite",
+              content: `
+**Classificação de Hinchey**
+
+A classificação de Hinchey é utilizada para estadiar a gravidade da diverticulite e orientar a conduta terapêutica.
+
+---
+
+### **Critérios de Hinchey**
+
+| **Estágio** | **Descrição** | **Conduta** |
+|:------------|:--------------|:------------|
+| **0** | Diverticulite leve (sem complicações) | Ambulatorial + antibióticos orais |
+| **Ia** | Inflamação pericólica localizada | Ambulatorial + antibióticos orais |
+| **Ib** | Abscesso pequeno (<3 cm) | Antibióticos + observação |
+| **II** | Abscesso maior (≥3 cm) ou distante | Drenagem percutânea + antibióticos IV |
+| **III** | Peritonite purulenta | Cirurgia de emergência |
+| **IV** | Peritonite fecal | Cirurgia de emergência |
+
+---
+
+### 📊 **Interpretação Clínica**
+
+**Estágios 0 e Ia (Não Complicados):**
+- Tratamento ambulatorial viável
+- Antibioticoterapia oral
+- Dieta líquida/leve
+- Acompanhamento clínico
+
+**Estágio Ib (Abscesso Pequeno):**
+- Hospitalização para observação
+- Antibióticos IV ou VO
+- Possível resolução sem drenagem
+
+**Estágio II (Abscesso Grande):**
+- Hospitalização obrigatória
+- Drenagem percutânea guiada por TC
+- Antibióticos IV
+- Cirurgia eletiva posterior (6-8 semanas)
+
+**Estágios III e IV (Peritonite):**
+- Emergência cirúrgica
+- Ressecção do segmento afetado
+- Possível colostomia (cirurgia de Hartmann)
+- Antibióticos IV de amplo espectro
+
+---
+
+### 💡 **Ponto-Chave**
+
+A classificação de Hinchey é fundamental para decidir entre tratamento **ambulatorial**, **hospitalar conservador** ou **cirúrgico**.
+              `,
+              question: {
+                text: "Um paciente de 62 anos com diverticulite aguda realiza tomografia computadorizada que evidencia abscesso pericólico de 5 cm. Segundo a classificação de Hinchey, qual o estágio e a conduta mais adequada?",
+                options: {
+                  A: "Estágio Ia - Tratamento ambulatorial com antibióticos orais",
+                  B: "Estágio Ib - Antibióticos e observação hospitalar",
+                  C: "Estágio II - Drenagem percutânea + antibióticos IV",
+                  D: "Estágio III - Cirurgia de emergência"
+                },
+                correct: "C",
+                explanation: "O paciente apresenta abscesso pericólico de 5 cm, que se enquadra no Estágio II de Hinchey (abscesso ≥3 cm). A conduta adequada é drenagem percutânea guiada por TC associada a antibióticos IV. O Estágio Ia refere-se apenas a inflamação pericólica sem abscesso. O Estágio Ib corresponde a abscessos pequenos (<3 cm) que podem ser tratados conservadoramente. Os Estágios III e IV referem-se a peritonite (purulenta ou fecal) e requerem cirurgia de emergência, o que não é o caso deste paciente que tem abscesso contido."
               }
             }
           ]
