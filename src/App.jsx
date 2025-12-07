@@ -15666,8 +15666,8 @@ const App = () => {
         {
           id: 19,
           title: "Infecções do Trato Gastrointestinal",
-          duration: "104 min",
-          xp: 520,
+          duration: "112 min",
+          xp: 560,
           sections: [
             {
               title: "Introdução",
@@ -16819,6 +16819,86 @@ O tratamento ambulatorial é adequado para casos selecionados de diverticulite l
                 },
                 correct: "B",
                 explanation: "O esquema correto é Ciprofloxacino 500mg 12/12h + Metronidazol 500mg 8/8h por 7-10 dias. A diverticulite é uma infecção polimicrobiana que requer cobertura para Gram-negativos (principalmente E. coli) e anaeróbios (principalmente Bacteroides fragilis). O ciprofloxacino cobre Gram-negativos e o metronidazol cobre anaeróbios. Outras opções incluem Amoxicilina/Clavulanato (que já tem cobertura mista) ou Cefuroxima + Metronidazol. Amoxicilina isolada não cobre anaeróbios adequadamente. Azitromicina não tem cobertura adequada para este tipo de infecção. Cefalexina não cobre anaeróbios."
+              }
+            }
+,
+            {
+              title: "Diverticulite - O que você não pode deixar de saber",
+              content: `
+**Pontos-Chave para a Prática Clínica**
+
+Resumo dos conceitos essenciais para o diagnóstico e manejo adequado da diverticulite aguda no contexto ambulatorial.
+
+---
+
+### 🎯 **Localização Característica**
+
+**Apresentação Clássica:**
+- **Dor fixa em fossa ilíaca esquerda (FIE)**
+- Especialmente em pacientes com **história prévia de diverticulite**
+- Conhecida como **"apendicite do lado esquerdo"**
+- Dor constante, agravada por movimentos
+- Defesa muscular localizada ao exame físico
+
+**Lembre-se:** A localização em FIE em paciente >50 anos com dor persistente deve sempre levantar suspeita de diverticulite!
+
+---
+
+### 💊 **Cobertura Antimicrobiana**
+
+**Focar em Gram-negativos e anaeróbios da flora intestinal:**
+
+**Patógenos-alvo:**
+- ***Escherichia coli*** (principal Gram-negativo)
+- ***Bacteroides fragilis*** (principal anaeróbio)
+
+**Terapia empírica deve incluir:**
+- **Cobertura para E. coli:** Fluoroquinolonas, cefalosporinas, amoxicilina/clavulanato
+- **Cobertura para B. fragilis:** Metronidazol, amoxicilina/clavulanato
+
+**Esquemas adequados:**
+✓ Amoxicilina/Clavulanato (cobertura mista)
+✓ Ciprofloxacino + Metronidazol
+✓ Cefuroxima + Metronidazol
+
+---
+
+### 🏥 **Ambulatorial vs. Hospitalar**
+
+**Conduza ambulatorialmente APENAS:**
+- **Casos sem abscessos ou complicações**
+- **Hinchey 0-Ia** (diverticulite leve, inflamação pericólica)
+- Paciente **tolera via oral**
+- **Ausência de comorbidades** significativas
+- **Possibilidade de acompanhamento** próximo
+
+**Hospitalize se:**
+- Hinchey ≥Ib (abscesso, peritonite)
+- Febre alta ou toxemia
+- Vômitos incoercíveis
+- Comorbidades descompensadas
+- Falha do tratamento ambulatorial
+
+---
+
+### ✅ **Resumo da Conduta**
+
+1. **Suspeitar** → Dor em FIE + febre + história prévia
+2. **Estadiar** → Classificação de Hinchey (TC se necessário)
+3. **Decidir local** → Ambulatorial (0-Ia) vs. Hospitalar (≥Ib)
+4. **Antibióticos** → Cobertura para Gram-negativos + anaeróbios
+5. **Reavaliar** → 48-72 horas ou se piora
+              `,
+              question: {
+                text: "Qual das seguintes afirmações resume CORRETAMENTE o manejo da diverticulite aguda no contexto ambulatorial?",
+                options: {
+                  A: "Todos os casos de diverticulite podem ser tratados ambulatorialmente com antibióticos orais por 5 dias",
+                  B: "A antibioticoterapia deve focar exclusivamente em Gram-negativos, sem necessidade de cobertura para anaeróbios",
+                  C: "Apenas casos Hinchey 0-Ia, sem abscessos, que toleram via oral e sem comorbidades graves devem ser tratados ambulatorialmente",
+                  D: "A presença de dor em fossa ilíaca esquerda é suficiente para iniciar antibioticoterapia sem necessidade de avaliação adicional"
+                },
+                correct: "C",
+                explanation: "A afirmação correta é que apenas casos Hinchey 0-Ia (diverticulite leve sem abscessos ou complicações), que toleram via oral e sem comorbidades graves devem ser tratados ambulatorialmente. Casos com abscessos (≥Ib), complicações, intolerância oral ou comorbidades descompensadas necessitam hospitalização. A antibioticoterapia DEVE cobrir tanto Gram-negativos (E. coli) quanto anaeróbios (B. fragilis), pois é infecção polimicrobiana. A duração adequada é 7-10 dias, não 5 dias. Embora dor em FIE seja sugestiva, é necessária avaliação clínica completa e, em casos selecionados, TC para estadiamento antes de iniciar tratamento."
               }
             }
           ]
