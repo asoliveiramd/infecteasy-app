@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import './App.css'
 import { antimicrobianosModule } from './antimicrobianos_module.js'
-import markdownToHtml from './utils/markdownToHtml';
 
 const App = () => {
   // Estados principais
@@ -17450,7 +17449,7 @@ Resumo dos conceitos essenciais para o diagnóstico e manejo adequado da diverti
                 <div 
                   className="prose max-w-none"
                   dangerouslySetInnerHTML={{
-                    __html: markdownToHtml(currentLesson.sections[currentSection]?.content || '')
+                    __html: currentLesson.sections[currentSection]?.content || ''
                   }}
                 />
 
