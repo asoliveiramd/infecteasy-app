@@ -8387,8 +8387,8 @@ const App = () => {
         {
           id: 4,
           title: "Cefalosporinas",
-          duration: "20 min",
-          xp: 100,
+          duration: "28 min",
+          xp: 140,
           sections: [
             {
               title: "Gerações de Cefalosporinas",
@@ -8878,6 +8878,63 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "A cefuroxima, principal cefalosporina de 2ª geração no uso ambulatorial, apresenta três vantagens principais: (1) resistência a várias β-lactamases, permitindo cobertura de patógenos resistentes; (2) boa penetração em tecidos respiratórios, atingindo concentrações adequadas; e (3) posologia de 12/12h, facilitando a adesão ao tratamento. Essas características a tornam excelente escolha para sinusites, otites, pneumonias e exacerbações de DPOC."
+              }
+            },
+            {
+              title: "Cefalosporinas Orais de Terceira Geração",
+              content: `
+### Cefalosporinas Orais de Terceira Geração
+
+As cefalosporinas orais de terceira geração enfrentam limitações importantes apesar de seu uso em certas infecções.
+
+---
+
+### Uso em Infecções Respiratórias
+
+Medicamentos Disponíveis:
+- Cefdinir
+- Cefixima  
+- Cefpodoxima proxetil
+
+Atividade Antimicrobiana:
+- Cefdinir e Cefpodoxima possuem atividade similar à cefuroxima
+- São ativas contra cepas de *S. pneumoniae* sensíveis à penicilina
+- Aprovadas para tratamento oral de infecções respiratórias leves a moderadas
+
+---
+
+### Limitações em Infecções do Trato Urinário
+
+Potência vs. Penetração:
+- **Maior potência** contra *E. coli* e *K. pneumoniae*
+- **Penetração urinária marginal** para cefdinir
+- **Penetração urinária limitada** para cefixima e cefpodoxima
+
+Isso limita sua utilidade em ITU complicadas, apesar da potência in vitro.
+
+---
+
+### Alerta Crítico
+
+**⚠️ Deve-se evitar o uso rotineiro dessas medicações.**
+
+Razões:
+- Não adicionam valor significativo às opções já existentes
+- Aumentam o risco de resistência bacteriana
+- Custo-benefício desfavorável em relação às cefalosporinas de 2ª geração
+
+**Recomendação:** Preferir cefuroxima para infecções respiratórias ambulatoriais, reservando cefalosporinas de 3ª geração orais apenas para situações específicas e bem justificadas.
+              `,
+              question: {
+                text: "Um médico considera prescrever cefdinir para uma paciente de 35 anos com cistite não complicada, argumentando que é uma cefalosporina de 3ª geração com maior potência contra E. coli. Qual é a principal limitação dessa escolha?",
+                options: {
+                  A: "O cefdinir não tem atividade contra E. coli",
+                  B: "A penetração urinária do cefdinir é marginal, limitando sua eficácia em ITU",
+                  C: "O cefdinir só pode ser usado em infecções respiratórias",
+                  D: "O cefdinir tem alta taxa de resistência bacteriana"
+                },
+                correct: "B",
+                explanation: "Apesar da maior potência in vitro das cefalosporinas orais de 3ª geração (como cefdinir, cefixima e cefpodoxima) contra E. coli e K. pneumoniae, sua penetração urinária é marginal (cefdinir) ou limitada (cefixima e cefpodoxima). Isso compromete significativamente sua eficácia em ITU, mesmo não complicadas. Além disso, o uso rotineiro dessas medicações deve ser evitado pois não adicionam valor significativo às opções já existentes e aumentam o risco de resistência bacteriana. Para ITU não complicadas, outras opções como nitrofurantoína, fosfomicina ou sulfametoxazol-trimetoprima são mais apropriadas."
               }
             }
           ]
