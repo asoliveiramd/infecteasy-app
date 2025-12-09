@@ -112,7 +112,7 @@ export function markdownToHtml(markdown) {
       colorIndex++;
       
       currentSection = scheme;
-      sectionContent.push(`<div style="background: ${scheme.bg}; padding: 20px; border-radius: 8px; margin: 15px 0;">`);
+      sectionContent.push(`<div style="background: ${scheme.bg}; padding: 20px; border-radius: 8px; margin: 15px 0; border: 2px solid ${scheme.border};">`);
       sectionContent.push(`<h3 style="color: ${scheme.text}; margin-bottom: 15px; font-size: 18px; font-weight: 600;">💡 ${text}</h3>`);
       continue;
     }
@@ -124,7 +124,7 @@ export function markdownToHtml(markdown) {
       const text = trimmed.replace(':', '');
       const scheme = currentSection || colorPalette[0];
       
-      sectionContent.push(`<div style="background: ${scheme.lightBg}; padding: 15px; border-radius: 8px; border-left: 4px solid ${scheme.border}; margin-bottom: 15px;">`);
+        sectionContent.push(`<div style="background: ${scheme.lightBg}; padding: 15px; border-radius: 8px; border-left: 4px solid ${scheme.border}; border: 1px solid ${scheme.border}; margin-bottom: 15px;">`);
       sectionContent.push(`<h4 style="color: ${scheme.darkText}; margin-bottom: 10px; font-weight: 600;">${text}</h4>`);
       inSubsection = true;
       continue;
