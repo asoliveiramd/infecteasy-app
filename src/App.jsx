@@ -16964,8 +16964,8 @@ Resumo dos conceitos essenciais para o diagnóstico e manejo adequado da diverti
         ,{
           id: 20,
           title: "Infecção do Trato Urinário (ITU)",
-          duration: "8 min",
-          xp: 40,
+          duration: "16 min",
+          xp: 80,
           sections: [
             {
               title: "Definição",
@@ -17031,6 +17031,75 @@ A Infecção do Trato Urinário (ITU) é a presença de microrganismos patogêni
                 },
                 correct: "C",
                 explanation: "A afirmação correta é que quanto mais superior a localização no trato urinário (mais próximo dos rins), mais grave tende a ser a infecção. Assim, a pielonefrite (infecção renal) é mais grave que a cistite (infecção vesical). No entanto, existe uma exceção importante: a prostatite pode ser muito grave mesmo não sendo uma infecção de 'andar superior', devido às características anatômicas e à dificuldade de penetração de antibióticos na próstata. A cistite, embora seja a forma mais comum de ITU, geralmente é de evolução benigna e menos grave que a pielonefrite."
+              }
+            }
+            ,{
+              title: "Agentes Etiológicos e Fatores de Risco",
+              content: `
+### Agentes Etiológicos
+
+As bactérias mais comuns nas ITUs são **Gram-negativas**, provenientes da flora intestinal.
+
+---
+
+### Principais Bactérias
+
+**Gram-negativas (maioria):**
+- ***Escherichia coli*** (80-90% dos casos) ⭐
+- *Klebsiella pneumoniae*
+- *Proteus mirabilis*
+- *Enterobacter* spp.
+
+**Gram-positivas (menos comuns):**
+- *Staphylococcus saprophyticus* (jovens mulheres sexualmente ativas)
+- *Enterococcus faecalis* (ITUs hospitalares ou complicadas)
+
+---
+
+### Fatores de Risco
+
+**Anatômicos:**
+- Sexo feminino (uretra curta, proximidade com ânus)
+- Anomalias anatômicas do trato urinário
+- Obstrução urinária (cálculos, hipertrofia prostática)
+
+**Comportamentais:**
+- Atividade sexual
+- Uso de espermicidas
+- Higiene inadequada
+
+**Hormonais:**
+- Alterações hormonais (menopausa)
+- Gravidez
+
+**Iatrogênicos:**
+- Cateterismo urinário
+- Instrumentação do trato urinário
+
+---
+
+### Alerta: Uso Racional de Antibióticos
+
+**⚠️ Problema:** A infecção urinária de repetição é muito comum, especialmente em mulheres.
+
+**Consequência:** O uso corriqueiro de antibióticos pode levar à resistência bacteriana.
+
+**Conduta:** Devemos praticar o **uso racional de antibióticos** nessa população:
+- Confirmar diagnóstico antes de tratar
+- Evitar tratamentos empíricos repetidos
+- Considerar profilaxia não-antibiótica quando apropriado
+- Investigar causas de ITU de repetição
+              `,
+              question: {
+                text: "Uma mulher de 25 anos, sexualmente ativa, apresenta seu terceiro episódio de cistite no último ano. Qual é a principal bactéria causadora de ITU não complicada e qual a principal preocupação em casos de ITU de repetição?",
+                options: {
+                  A: "Staphylococcus saprophyticus é o principal agente; a preocupação é o desenvolvimento de pielonefrite",
+                  B: "Escherichia coli é o principal agente (80-90%); a preocupação é o desenvolvimento de resistência bacteriana pelo uso corriqueiro de antibióticos",
+                  C: "Klebsiella pneumoniae é o principal agente; a preocupação é a disseminação hematogênica",
+                  D: "Enterococcus faecalis é o principal agente; a preocupação é a necessidade de hospitalização"
+                },
+                correct: "B",
+                explanation: "A Escherichia coli é responsável por 80-90% das ITUs não complicadas, sendo o principal agente etiológico. Em casos de ITU de repetição, que são muito comuns especialmente em mulheres jovens sexualmente ativas, a principal preocupação é o desenvolvimento de resistência bacteriana devido ao uso corriqueiro e repetido de antibióticos. Por isso, é fundamental praticar o uso racional de antibióticos: confirmar diagnóstico antes de tratar, evitar tratamentos empíricos repetidos, considerar profilaxia não-antibiótica quando apropriado e investigar causas subjacentes de ITU de repetição."
               }
             }
           ]
