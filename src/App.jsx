@@ -16964,8 +16964,8 @@ Resumo dos conceitos essenciais para o diagnóstico e manejo adequado da diverti
         ,{
           id: 20,
           title: "Infecção do Trato Urinário (ITU)",
-          duration: "24 min",
-          xp: 120,
+          duration: "32 min",
+          xp: 160,
           sections: [
             {
               title: "Definição",
@@ -17169,6 +17169,80 @@ A cistite é a forma mais comum de ITU, caracterizada por sintomas urinários ir
                 },
                 correct: "B",
                 explanation: "A conduta correta é NÃO tratar, pois trata-se de bacteriúria assintomática. A presença de bactérias na urina sem sintomas é comum, especialmente em idosos, e representa colonização, não infecção. O tratamento de bacteriúria assintomática (exceto em gestantes e antes de procedimentos urológicos instrumentalizados) é considerado má prática médica pelo Choose Wisely, pois não traz benefício clínico e aumenta a resistência bacteriana. A solicitação de urocultura para pacientes sem queixa urinária também é considerada inadequada. O tratamento só está indicado se a paciente desenvolver sintomas urinários (disúria, polaciúria, urgência) ou sistêmicos (febre)."
+              }
+            }
+            ,{
+              title: "Pielonefrite (ITU Alta)",
+              content: `
+### Pielonefrite (ITU Alta)
+
+A pielonefrite é a infecção do parênquima renal e sistema coletor, representando uma **condição potencialmente grave** que pode evoluir para sepse se não tratada adequadamente.
+
+---
+
+### Manifestações Clínicas
+
+**Sintomas Cardinais:**
+- **Febre alta (>38°C)** e calafrios ⭐
+- **Dor lombar** unilateral ou bilateral (dor em flanco) ⭐
+
+**Sintomas Associados:**
+- Náuseas e vômitos
+- Sintomas de cistite frequentemente presentes (disúria, polaciúria)
+- Mal-estar geral e prostração
+
+**Ao exame físico:**
+- **Dor à percussão do ângulo costovertebral** (sinal de Giordano positivo)
+
+---
+
+### Sinais de Alarme
+
+**Indicam gravidade e necessidade de hospitalização:**
+
+**Sinais de sepse urinária:**
+- Hipotensão (PA sistólica <90 mmHg)
+- Taquicardia (FC >100 bpm)
+- Confusão mental
+- Taquipneia
+
+**Sinais de disfunção renal:**
+- Oligúria (<400 mL/dia ou <1 micção/8h)
+- Anúria (ausência de diurese)
+
+**Outros sinais de gravidade:**
+- Vômitos incoercíveis
+- Desidratação grave
+- Impossibilidade de via oral
+
+---
+
+### Complicações Possíveis
+
+**Locais:**
+- Abscesso renal ou perirrenal
+- Necrose papilar
+- Pionefrose
+
+**Sistêmicas:**
+- Sepse e choque séptico
+- Insuficiência renal aguda
+- Coagulação intravascular disseminada (CIVD)
+- Síndrome da resposta inflamatória sistêmica (SIRS)
+- Disfunção de múltiplos órgãos
+
+**⚠️ Importante:** A pielonefrite requer tratamento agressivo e, frequentemente, hospitalização, especialmente na presença de sinais de alarme.
+              `,
+              question: {
+                text: "Uma paciente de 35 anos apresenta febre de 39°C há 2 dias, calafrios, dor lombar direita, náuseas e disúria. Ao exame, apresenta dor à percussão do ângulo costovertebral direito. PA 100/60 mmHg, FC 110 bpm. Qual é o diagnóstico mais provável e qual sinal indica maior gravidade?",
+                options: {
+                  A: "Cistite complicada; a febre alta indica gravidade",
+                  B: "Pielonefrite aguda; a taquicardia e PA limítrofe sugerem possível sepse urinária",
+                  C: "Cálculo renal; a dor lombar é o principal sinal de gravidade",
+                  D: "ITU recorrente; a disúria indica necessidade de antibiótico oral"
+                },
+                correct: "B",
+                explanation: "O diagnóstico mais provável é pielonefrite aguda, caracterizada pela tríade: febre alta (>38°C), dor lombar e sinal de Giordano positivo. A presença de taquicardia (FC 110 bpm) e PA limítrofe (100/60 mmHg) são sinais de alarme que sugerem possível evolução para sepse urinária, indicando maior gravidade e necessidade de hospitalização para antibioticoterapia venosa e monitorização. A pielonefrite é uma condição potencialmente grave que pode evoluir para sepse, insuficiência renal aguda e outras complicações sistêmicas se não tratada adequadamente. Outros sinais de alarme incluem hipotensão franca, oligúria/anúria, vômitos incoercíveis e confusão mental."
               }
             }
           ]
