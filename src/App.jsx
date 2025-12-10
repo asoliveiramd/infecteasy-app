@@ -16964,8 +16964,8 @@ Resumo dos conceitos essenciais para o diagnóstico e manejo adequado da diverti
         ,{
           id: 20,
           title: "Infecção do Trato Urinário (ITU)",
-          duration: "16 min",
-          xp: 80,
+          duration: "24 min",
+          xp: 120,
           sections: [
             {
               title: "Definição",
@@ -17100,6 +17100,75 @@ As bactérias mais comuns nas ITUs são **Gram-negativas**, provenientes da flor
                 },
                 correct: "B",
                 explanation: "A Escherichia coli é responsável por 80-90% das ITUs não complicadas, sendo o principal agente etiológico. Em casos de ITU de repetição, que são muito comuns especialmente em mulheres jovens sexualmente ativas, a principal preocupação é o desenvolvimento de resistência bacteriana devido ao uso corriqueiro e repetido de antibióticos. Por isso, é fundamental praticar o uso racional de antibióticos: confirmar diagnóstico antes de tratar, evitar tratamentos empíricos repetidos, considerar profilaxia não-antibiótica quando apropriado e investigar causas subjacentes de ITU de repetição."
+              }
+            }
+            ,{
+              title: "Sintomas da Cistite (ITU Baixa)",
+              content: `
+### Sintomas da Cistite (ITU Baixa)
+
+A cistite é a forma mais comum de ITU, caracterizada por sintomas urinários irritativos sem comprometimento sistêmico.
+
+---
+
+### Principais Manifestações
+
+**Sintoma Cardinal:**
+- **Disúria** (ardor ou dor ao urinar) ⭐
+
+**Sintomas Irritativos:**
+- **Polaciúria** (aumento da frequência urinária)
+- **Urgência miccional** (vontade súbita e inadiável de urinar)
+
+**Outros Sintomas:**
+- **Hematúria** (sangue na urina) - macroscópica ou microscópica
+- **Dor suprapúbica** ou desconforto pélvico
+
+---
+
+### Características Importantes
+
+**Apresentação Clínica:**
+- Início geralmente **abrupto** dos sintomas
+- **Febre baixa ou ausente** na cistite não complicada
+- Presença de febre sugere pielonefrite
+
+**Alterações da Urina:**
+- Alteração da **cor e odor** da urina **não devem ser valorizados isoladamente**
+- São achados inespecíficos e não diagnósticos
+
+---
+
+### Bacteriúria Assintomática
+
+**Definição:**
+- Presença de bactérias na urina **sem sintomas** urinários
+
+**Prevalência:**
+- Comum em idosos e gestantes
+- Não é doença, é colonização
+
+**Conduta:**
+- **NÃO necessita tratamento** na maioria dos casos
+- **Exceções (tratar):**
+  - Gestantes
+  - Antes de procedimentos urológicos instrumentalizados
+
+**⚠️ Choose Wisely - Má Prática Médica:**
+- Solicitar urocultura para pacientes **sem queixa urinária**
+- "Tratar" bacteriúria assintomática fora das exceções
+- Essas práticas aumentam resistência bacteriana sem benefício clínico
+              `,
+              question: {
+                text: "Uma paciente de 70 anos realiza exame de rotina que mostra urocultura positiva para E. coli (100.000 UFC/mL). Ela nega qualquer sintoma urinário, não tem febre e está clinicamente bem. Qual é a conduta mais adequada?",
+                options: {
+                  A: "Iniciar antibioticoterapia imediatamente para prevenir pielonefrite",
+                  B: "Não tratar, pois trata-se de bacteriúria assintomática que não necessita tratamento em idosos assintomáticos",
+                  C: "Solicitar nova urocultura para confirmar o resultado",
+                  D: "Prescrever antibiótico profilático por 6 meses"
+                },
+                correct: "B",
+                explanation: "A conduta correta é NÃO tratar, pois trata-se de bacteriúria assintomática. A presença de bactérias na urina sem sintomas é comum, especialmente em idosos, e representa colonização, não infecção. O tratamento de bacteriúria assintomática (exceto em gestantes e antes de procedimentos urológicos instrumentalizados) é considerado má prática médica pelo Choose Wisely, pois não traz benefício clínico e aumenta a resistência bacteriana. A solicitação de urocultura para pacientes sem queixa urinária também é considerada inadequada. O tratamento só está indicado se a paciente desenvolver sintomas urinários (disúria, polaciúria, urgência) ou sistêmicos (febre)."
               }
             }
           ]
