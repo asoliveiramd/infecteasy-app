@@ -16961,6 +16961,80 @@ Resumo dos conceitos essenciais para o diagnóstico e manejo adequado da diverti
             }
           ]
         }
+        ,{
+          id: 20,
+          title: "Infecção do Trato Urinário (ITU)",
+          duration: "8 min",
+          xp: 40,
+          sections: [
+            {
+              title: "Definição",
+              content: `
+### Infecção do Trato Urinário (ITU) - Definição
+
+A Infecção do Trato Urinário (ITU) é a presença de microrganismos patogênicos invadindo os tecidos de qualquer parte do sistema urinário.
+
+---
+
+### Localizações Possíveis
+
+**Bexiga (Cistite):**
+- Forma mais comum de ITU
+- Geralmente de evolução benigna
+
+**Rins (Pielonefrite):**
+- Forma grave de ITU
+- Requer tratamento agressivo
+
+**Uretra (Uretrite):**
+- Infecção da uretra
+- Pode ser confundida com DST
+
+**Próstata (Prostatite):**
+- Exclusiva do sexo masculino
+- Pode ser muito grave
+
+---
+
+### Epidemiologia
+
+**Prevalência:**
+- Entre as infecções bacterianas mais comuns na prática clínica
+- **Predominância no sexo feminino** devido a fatores anatômicos
+
+**Fatores de risco femininos:**
+- Uretra mais curta
+- Proximidade anatômica com ânus
+- Atividade sexual
+- Gestação
+
+---
+
+### Gravidade Conforme Localização
+
+**Princípio geral:**
+- Quanto mais a infecção atinge **andares superiores** do trato urinário, mais grave tende a ser
+- **Exceção importante:** Prostatite pode ser muito grave mesmo não sendo "andar superior"
+
+**Hierarquia de gravidade:**
+1. Cistite → Geralmente leve
+2. Pielonefrite → Grave
+3. Prostatite → Pode ser muito grave (exceção à regra)
+              `,
+              question: {
+                text: "Uma paciente de 28 anos apresenta disúria e polaciúria há 2 dias, sem febre ou dor lombar. O médico suspeita de cistite. Qual afirmação está CORRETA sobre a gravidade das ITUs?",
+                options: {
+                  A: "Todas as ITUs têm a mesma gravidade independente da localização",
+                  B: "A cistite é sempre mais grave que a pielonefrite por ser mais comum",
+                  C: "Quanto mais superior a localização no trato urinário, mais grave tende a ser, exceto a prostatite que pode ser muito grave",
+                  D: "A uretrite é a forma mais grave de ITU"
+                },
+                correct: "C",
+                explanation: "A afirmação correta é que quanto mais superior a localização no trato urinário (mais próximo dos rins), mais grave tende a ser a infecção. Assim, a pielonefrite (infecção renal) é mais grave que a cistite (infecção vesical). No entanto, existe uma exceção importante: a prostatite pode ser muito grave mesmo não sendo uma infecção de 'andar superior', devido às características anatômicas e à dificuldade de penetração de antibióticos na próstata. A cistite, embora seja a forma mais comum de ITU, geralmente é de evolução benigna e menos grave que a pielonefrite."
+              }
+            }
+          ]
+        }
       ]
     },
     antimicrobianos: antimicrobianosModule
