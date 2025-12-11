@@ -16964,8 +16964,8 @@ Resumo dos conceitos essenciais para o diagnóstico e manejo adequado da diverti
         ,{
           id: 20,
           title: "Infecção do Trato Urinário (ITU)",
-          duration: "32 min",
-          xp: 160,
+          duration: "40 min",
+          xp: 200,
           sections: [
             {
               title: "Definição",
@@ -17243,6 +17243,97 @@ A pielonefrite é a infecção do parênquima renal e sistema coletor, represent
                 },
                 correct: "B",
                 explanation: "O diagnóstico mais provável é pielonefrite aguda, caracterizada pela tríade: febre alta (>38°C), dor lombar e sinal de Giordano positivo. A presença de taquicardia (FC 110 bpm) e PA limítrofe (100/60 mmHg) são sinais de alarme que sugerem possível evolução para sepse urinária, indicando maior gravidade e necessidade de hospitalização para antibioticoterapia venosa e monitorização. A pielonefrite é uma condição potencialmente grave que pode evoluir para sepse, insuficiência renal aguda e outras complicações sistêmicas se não tratada adequadamente. Outros sinais de alarme incluem hipotensão franca, oligúria/anúria, vômitos incoercíveis e confusão mental."
+              }
+            }
+            ,{
+              title: "Prostatite",
+              content: `
+### Prostatite
+
+A prostatite é a infecção da próstata, exclusiva do sexo masculino, que pode apresentar-se de forma aguda ou crônica.
+
+---
+
+### Sintomas Urinários
+
+**Sintomas irritativos:**
+- Disúria e polaciúria
+- Urgência miccional
+
+**Sintomas obstrutivos:**
+- Dificuldade para iniciar a micção (jato fraco ou interrompido)
+- Sensação de esvaziamento incompleto
+- Retenção urinária (em casos graves)
+
+---
+
+### Manifestações Dolorosas
+
+**Dores características:**
+- **Dor perineal** (entre escroto e ânus)
+- Dor ao evacuar
+- **Dor ejaculatória**
+- Desconforto retal
+
+---
+
+### Prostatite Aguda Bacteriana
+
+**Manifestações sistêmicas:**
+- **Febre alta (>38,5°C)** e calafrios
+- Mal-estar geral e prostração
+
+**Ao toque retal:**
+- Próstata **aumentada**
+- **Tensa e dolorosa**
+- Quente ao toque
+- ⚠️ **Atenção:** Toque retal deve ser gentil para evitar bacteremia
+
+---
+
+### Prostatite Crônica
+
+**Características:**
+- Sintomas **menos intensos** e mais persistentes
+- Episódios recorrentes de ITU
+- Dor pélvica crônica
+- Sintomas por >3 meses
+
+**Origem:**
+- Geralmente proveniente de **prostatite aguda parcialmente tratada** que cronifica
+- Tratamento inadequado ou insuficiente da forma aguda
+
+**Desafios:**
+- Difícil penetração de antibióticos na próstata
+- Tratamento prolongado necessário (4-6 semanas ou mais)
+- Recorrências frequentes
+
+---
+
+### Diferenças Importantes
+
+**Prostatite Aguda:**
+- Início abrupto
+- Febre alta e toxemia
+- Próstata muito dolorosa
+- Tratamento: 2-4 semanas
+
+**Prostatite Crônica:**
+- Início insidioso
+- Febre ausente ou baixa
+- Sintomas persistentes
+- Tratamento: 4-6 semanas ou mais
+              `,
+              question: {
+                text: "Um paciente de 45 anos apresenta febre de 39°C, calafrios, disúria, dor perineal e dor ao evacuar há 2 dias. Ao toque retal, a próstata está aumentada, tensa e muito dolorosa. Qual é o diagnóstico mais provável e qual é a principal origem da forma crônica dessa condição?",
+                options: {
+                  A: "Cistite complicada; a forma crônica surge por infecção por bactérias resistentes",
+                  B: "Prostatite aguda bacteriana; a forma crônica geralmente provém de prostatite aguda parcialmente tratada que cronifica",
+                  C: "Pielonefrite; a forma crônica é causada por refluxo vesicoureteral",
+                  D: "Hiperplasia prostática benigna; a forma crônica é resultado de obstrução prolongada"
+                },
+                correct: "B",
+                explanation: "O diagnóstico é prostatite aguda bacteriana, caracterizada pela tríade: febre alta (>38,5°C) com calafrios, sintomas urinários (disúria) e dor perineal/ao evacuar. O achado de próstata aumentada, tensa e dolorosa ao toque retal confirma o diagnóstico. A prostatite crônica geralmente provém de uma prostatite aguda parcialmente tratada ou inadequadamente tratada que cronifica. Por isso, é fundamental o tratamento adequado da forma aguda com antibióticos por 2-4 semanas para prevenir a cronificação. A prostatite crônica apresenta sintomas menos intensos mas persistentes, episódios recorrentes de ITU e requer tratamento prolongado (4-6 semanas ou mais) devido à difícil penetração de antibióticos na próstata."
               }
             }
           ]
