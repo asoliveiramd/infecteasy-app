@@ -16964,8 +16964,8 @@ Resumo dos conceitos essenciais para o diagnóstico e manejo adequado da diverti
         ,{
           id: 20,
           title: "Infecção do Trato Urinário (ITU)",
-          duration: "40 min",
-          xp: 200,
+          duration: "48 min",
+          xp: 240,
           sections: [
             {
               title: "Definição",
@@ -17334,6 +17334,86 @@ A prostatite é a infecção da próstata, exclusiva do sexo masculino, que pode
                 },
                 correct: "B",
                 explanation: "O diagnóstico é prostatite aguda bacteriana, caracterizada pela tríade: febre alta (>38,5°C) com calafrios, sintomas urinários (disúria) e dor perineal/ao evacuar. O achado de próstata aumentada, tensa e dolorosa ao toque retal confirma o diagnóstico. A prostatite crônica geralmente provém de uma prostatite aguda parcialmente tratada ou inadequadamente tratada que cronifica. Por isso, é fundamental o tratamento adequado da forma aguda com antibióticos por 2-4 semanas para prevenir a cronificação. A prostatite crônica apresenta sintomas menos intensos mas persistentes, episódios recorrentes de ITU e requer tratamento prolongado (4-6 semanas ou mais) devido à difícil penetração de antibióticos na próstata."
+              }
+            }
+            ,{
+              title: "Prostatite - Separando o Joio do Trigo",
+              content: `
+### Prostatite - Separando o Joio do Trigo
+
+Diferenciar entre prostatite aguda verdadeira e agudização de prostatite crônica é fundamental para definir a duração adequada do tratamento.
+
+---
+
+### Como Suspeitar de Agudização de Prostatite Crônica
+
+**Critério 1: ITU de Repetição em Homens**
+- Homem **raramente** tem ITU de repetição
+- Quando acontece, devemos suspeitar de:
+  - Agudizações de prostatite crônica
+  - Anomalias do trato urinário
+  - Obstrução (hiperplasia prostática)
+
+**⚠️ Importante:** ITU de repetição em homem jovem sem fatores de risco = pensar em prostatite crônica!
+
+---
+
+### Critério 2: Padrão Microbiológico
+
+**Característica da prostatite crônica:**
+- Normalmente, trata-se da **mesma bactéria** que agudiza repetidamente
+- Se fizermos rastreio das uroculturas de cada episódio agudo:
+  - **Sempre será a mesma espécie**
+  - **Com a mesma assinatura de resistência**
+
+**Exemplo típico:**
+- Episódio 1: *E. coli* resistente a quinolonas
+- Episódio 2: *E. coli* resistente a quinolonas (mesmo perfil)
+- Episódio 3: *E. coli* resistente a quinolonas (mesmo perfil)
+
+**Isso sugere:** Reservatório prostático com infecção crônica que agudiza periodicamente
+
+---
+
+### Diferenças no Tratamento
+
+**Prostatite Aguda (primeira vez):**
+- Duração: **2 semanas** (14 dias)
+- Objetivo: Erradicar infecção aguda
+
+**Prostatite Crônica (ou agudização):**
+- Duração: **4-8 semanas** (28-56 dias)
+- Objetivo: Erradicar reservatório prostático
+- Penetração prostática é difícil → tratamento prolongado necessário
+
+**⚠️ Essencial:** Definir corretamente se é aguda ou crônica para evitar:
+- Subtratamento da forma crônica (cronificação)
+- Sobretratamento da forma aguda (custos, efeitos adversos)
+
+---
+
+### Resumo Prático
+
+**Suspeite de prostatite crônica se:**
+1. ✓ Homem com ITU de repetição
+2. ✓ Mesma bactéria com mesmo perfil de resistência
+3. ✓ História de episódios prévios semelhantes
+
+**Conduza:**
+- Prostatite aguda → 2 semanas de antibiótico
+- Prostatite crônica → 4-8 semanas de antibiótico
+- Investigar fatores predisponentes
+              `,
+              question: {
+                text: "Um homem de 42 anos apresenta seu terceiro episódio de sintomas urinários e febre no último ano. As uroculturas dos três episódios mostram E. coli resistente a ciprofloxacino e sensível a sulfametoxazol-trimetoprima. Qual é a hipótese diagnóstica mais provável e qual a duração adequada do tratamento?",
+                options: {
+                  A: "Cistite de repetição; tratar por 7 dias",
+                  B: "Prostatite aguda; tratar por 2 semanas",
+                  C: "Agudização de prostatite crônica; tratar por 4-8 semanas",
+                  D: "Pielonefrite recorrente; tratar por 14 dias"
+                },
+                correct: "C",
+                explanation: "A hipótese mais provável é agudização de prostatite crônica. Dois critérios importantes suportam esse diagnóstico: (1) ITU de repetição em homem jovem é rara e sugere prostatite crônica ou anomalia anatômica; (2) A mesma bactéria (E. coli) com o mesmo perfil de resistência (resistente a ciprofloxacino, sensível a SMX-TMP) em todos os três episódios sugere reservatório prostático com infecção crônica que agudiza periodicamente. O tratamento adequado da prostatite crônica é prolongado (4-8 semanas) devido à difícil penetração de antibióticos na próstata, sendo necessário para erradicar o reservatório bacteriano e prevenir novas agudizações. Tratamento curto (2 semanas) seria adequado apenas para prostatite aguda de primeira vez."
               }
             }
           ]
