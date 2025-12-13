@@ -16964,8 +16964,8 @@ Resumo dos conceitos essenciais para o diagnóstico e manejo adequado da diverti
         ,{
           id: 20,
           title: "Infecção do Trato Urinário (ITU)",
-          duration: "56 min",
-          xp: 280,
+          duration: "64 min",
+          xp: 320,
           sections: [
             {
               title: "Definição",
@@ -17510,6 +17510,103 @@ O tratamento da cistite não complicada em mulheres deve priorizar antibióticos
                 },
                 correct: "B",
                 explanation: "Para cistite não complicada causada por E. coli produtora de ESBL, as melhores opções são Fosfomicina (3g dose única) ou Nitrofurantoína (100mg 6/6h por 5 dias). Ambas têm excelente atividade contra ESBL, alta concentração urinária e baixa resistência. A Fosfomicina tem a vantagem da dose única e o BrCAST tem ponto de corte específico para E. coli. A Nitrofurantoína é contraindicada apenas se TFG <30 mL/min ou em pielonefrite. Fluoroquinolonas devem ser reservadas para casos graves. Amoxicilina/Clavulanato não é eficaz contra ESBL. TMP-SMX tem resistência crescente e só deve ser usado se sensibilidade local conhecida."
+              }
+            }
+            ,{
+              title: "Tratamento de Pielonefrite e Prostatite",
+              content: `
+### Tratamento de Pielonefrite e Prostatite
+
+O tratamento dessas duas condições é relativamente semelhante, ambos exigindo antibióticos com boa penetração tecidual e duração prolongada.
+
+---
+
+### Pielonefrite Leve (Ambulatorial)
+
+**Critérios para tratamento ambulatorial:**
+- Paciente hemodinamicamente estável
+- Ausência de sinais de sepse
+- Tolerância de via oral
+- Ausência de comorbidades graves
+
+**Opções terapêuticas:**
+
+**Primeira linha:**
+- **Ciprofloxacino** 500mg 12/12h por **10-14 dias** OU
+- **Levofloxacino** 750mg 1x/dia por **10-14 dias**
+
+**Alternativa:**
+- **Cefuroxima** 500mg 12/12h por **10-14 dias**
+
+**⚠️ Essencial:**
+- **Reavaliar em 48-72h** para confirmar melhora clínica
+- Se sem melhora → considerar hospitalização
+- Solicitar urocultura antes de iniciar antibiótico
+
+---
+
+### Prostatite Aguda
+
+**Opções terapêuticas:**
+
+**Primeira linha (melhor penetração prostática):**
+- **Ciprofloxacino** 500mg 12/12h por **14-28 dias** (2-4 semanas) OU
+- **Levofloxacino** 500mg 1x/dia por **14-28 dias** (2-4 semanas)
+
+**Alternativa:**
+- **TMP-SMX** 160/800mg 12/12h por **14-28 dias** (2-4 semanas)
+
+**Justificativa do tratamento prolongado:**
+- Difícil penetração dos antibióticos no tecido prostático
+- Necessário para erradicar reservatório bacteriano
+- Prevenir cronificação
+
+**Preferência por quinolonas:**
+- Excelente penetração prostática
+- Alta concentração no tecido prostático
+- TMP-SMX também alcança bem os tecidos da próstata
+
+---
+
+### Comparação das Durações
+
+**Cistite não complicada:**
+- 3-5 dias (curta duração)
+
+**Pielonefrite leve:**
+- 10-14 dias (duração intermediária)
+
+**Prostatite aguda:**
+- 14-28 dias (duração prolongada)
+
+**Prostatite crônica:**
+- 28-56 dias (4-8 semanas - muito prolongada)
+
+---
+
+### Pontos Importantes
+
+**Pielonefrite:**
+- ✓ Reavaliação em 48-72h é mandatória
+- ✓ Se sem melhora → hospitalizar
+- ✓ Urocultura antes do tratamento
+
+**Prostatite:**
+- ✓ Tratamento prolongado (mínimo 2 semanas)
+- ✓ Preferir quinolonas (melhor penetração)
+- ✓ Evitar toque retal vigoroso (risco de bacteremia)
+- ✓ Reavaliar resposta clínica
+              `,
+              question: {
+                text: "Um homem de 50 anos é diagnosticado com prostatite aguda. Função renal normal, sem alergias. Qual é o antibiótico de escolha e a duração mínima adequada do tratamento?",
+                options: {
+                  A: "Nitrofurantoína 100mg 6/6h por 5 dias",
+                  B: "Ciprofloxacino 500mg 12/12h por 10-14 dias",
+                  C: "Ciprofloxacino 500mg 12/12h por 14-28 dias (mínimo 2 semanas)",
+                  D: "Amoxicilina/Clavulanato 875/125mg 12/12h por 7 dias"
+                },
+                correct: "C",
+                explanation: "Para prostatite aguda, o antibiótico de escolha é Ciprofloxacino (ou Levofloxacino) por 14-28 dias (2-4 semanas). As quinolonas são preferidas pela excelente penetração prostática e alta concentração no tecido prostático. O tratamento prolongado (mínimo 2 semanas) é essencial devido à difícil penetração dos antibióticos no tecido prostático e para erradicar completamente o reservatório bacteriano, prevenindo cronificação. TMP-SMX é alternativa válida (também alcança bem a próstata). Nitrofurantoína não atinge concentração sistêmica adequada. Tratamento de 7-10 dias seria insuficiente para prostatite, podendo levar à cronificação."
               }
             }
           ]
