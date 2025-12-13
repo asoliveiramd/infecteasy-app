@@ -16964,8 +16964,8 @@ Resumo dos conceitos essenciais para o diagnóstico e manejo adequado da diverti
         ,{
           id: 20,
           title: "Infecção do Trato Urinário (ITU)",
-          duration: "48 min",
-          xp: 240,
+          duration: "56 min",
+          xp: 280,
           sections: [
             {
               title: "Definição",
@@ -17414,6 +17414,102 @@ Diferenciar entre prostatite aguda verdadeira e agudização de prostatite crôn
                 },
                 correct: "C",
                 explanation: "A hipótese mais provável é agudização de prostatite crônica. Dois critérios importantes suportam esse diagnóstico: (1) ITU de repetição em homem jovem é rara e sugere prostatite crônica ou anomalia anatômica; (2) A mesma bactéria (E. coli) com o mesmo perfil de resistência (resistente a ciprofloxacino, sensível a SMX-TMP) em todos os três episódios sugere reservatório prostático com infecção crônica que agudiza periodicamente. O tratamento adequado da prostatite crônica é prolongado (4-8 semanas) devido à difícil penetração de antibióticos na próstata, sendo necessário para erradicar o reservatório bacteriano e prevenir novas agudizações. Tratamento curto (2 semanas) seria adequado apenas para prostatite aguda de primeira vez."
+              }
+            }
+            ,{
+              title: "Tratamento da Cistite Não Complicada",
+              content: `
+### Tratamento da Cistite Não Complicada
+
+O tratamento da cistite não complicada em mulheres deve priorizar antibióticos com alta concentração urinária e baixa resistência.
+
+---
+
+### Primeira Linha
+
+**Nitrofurantoína ⭐**
+- **Dose:** 100mg 6/6h por **5 dias**
+- **Vantagens:**
+  - Alta concentração na urina
+  - Baixa resistência bacteriana
+  - Alternativa para ESBL
+- **Contraindicações:**
+  - TFG <30 mL/min (insuficiência renal)
+  - Pielonefrite (não atinge concentração sistêmica adequada)
+
+**Fosfomicina ⭐**
+- **Dose:** 3g **dose única**
+- **Vantagens:**
+  - Excelente para *E. coli* produtora de ESBL
+  - Boa penetração na urina
+  - Baixa resistência
+  - Comodidade (dose única)
+- **Observação:** BrCAST tem ponto de corte da fosfomicina **somente para *E. coli***
+
+---
+
+### Outras Opções
+
+**Sulfametoxazol-Trimetoprima (TMP-SMX)**
+- **Dose:** 160/800mg 12/12h por **3 dias**
+- **Usar apenas se:**
+  - Sensibilidade local conhecida
+  - Resistência <20% na comunidade
+- **Problema:** Resistência crescente no Brasil
+
+**Cefalosporinas de 1ª e 2ª gerações**
+- Cefalexina, Cefadroxil, Cefuroxima
+- **Dose:** Variável, geralmente por 5-7 dias
+- Opção quando primeira linha contraindicada
+
+---
+
+### Profilaxia para ITU Recorrente
+
+**Indicação:**
+- Mulheres com **≥3 episódios/ano**
+
+**Opções:**
+1. **Profilaxia pós-coital:**
+   - Nitrofurantoína 50-100mg dose única após relação
+   - TMP-SMX 40/200mg dose única após relação
+
+2. **Profilaxia contínua em baixa dose:**
+   - Nitrofurantoína 50-100mg à noite
+   - TMP-SMX 40/200mg à noite
+   - Duração: 6-12 meses
+
+**Medidas não-farmacológicas:**
+- Hidratação adequada
+- Micção pós-coital
+- Evitar espermicidas
+- Cranberry (evidência limitada)
+
+---
+
+### Resumo Prático
+
+**Primeira escolha:**
+- Nitrofurantoína 5 dias OU Fosfomicina dose única
+
+**Evitar se possível:**
+- Fluoroquinolonas (reservar para casos graves)
+- Amoxicilina (alta resistência)
+
+**Não usar:**
+- Nitrofurantoína em pielonefrite ou TFG <30
+- Fosfomicina para bactérias sem ponto de corte definido
+              `,
+              question: {
+                text: "Uma mulher de 30 anos, hígida, apresenta cistite não complicada. Urocultura prévia mostra E. coli produtora de ESBL. Função renal normal. Qual é a melhor opção terapêutica?",
+                options: {
+                  A: "Ciprofloxacino 500mg 12/12h por 3 dias",
+                  B: "Fosfomicina 3g dose única ou Nitrofurantoína 100mg 6/6h por 5 dias",
+                  C: "Amoxicilina/Clavulanato 875/125mg 12/12h por 7 dias",
+                  D: "TMP-SMX 160/800mg 12/12h por 3 dias"
+                },
+                correct: "B",
+                explanation: "Para cistite não complicada causada por E. coli produtora de ESBL, as melhores opções são Fosfomicina (3g dose única) ou Nitrofurantoína (100mg 6/6h por 5 dias). Ambas têm excelente atividade contra ESBL, alta concentração urinária e baixa resistência. A Fosfomicina tem a vantagem da dose única e o BrCAST tem ponto de corte específico para E. coli. A Nitrofurantoína é contraindicada apenas se TFG <30 mL/min ou em pielonefrite. Fluoroquinolonas devem ser reservadas para casos graves. Amoxicilina/Clavulanato não é eficaz contra ESBL. TMP-SMX tem resistência crescente e só deve ser usado se sensibilidade local conhecida."
               }
             }
           ]
