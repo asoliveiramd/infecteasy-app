@@ -16964,8 +16964,8 @@ Resumo dos conceitos essenciais para o diagnóstico e manejo adequado da diverti
         ,{
           id: 20,
           title: "Infecção do Trato Urinário (ITU)",
-          duration: "64 min",
-          xp: 320,
+          duration: "72 min",
+          xp: 360,
           sections: [
             {
               title: "Definição",
@@ -17607,6 +17607,106 @@ O tratamento dessas duas condições é relativamente semelhante, ambos exigindo
                 },
                 correct: "C",
                 explanation: "Para prostatite aguda, o antibiótico de escolha é Ciprofloxacino (ou Levofloxacino) por 14-28 dias (2-4 semanas). As quinolonas são preferidas pela excelente penetração prostática e alta concentração no tecido prostático. O tratamento prolongado (mínimo 2 semanas) é essencial devido à difícil penetração dos antibióticos no tecido prostático e para erradicar completamente o reservatório bacteriano, prevenindo cronificação. TMP-SMX é alternativa válida (também alcança bem a próstata). Nitrofurantoína não atinge concentração sistêmica adequada. Tratamento de 7-10 dias seria insuficiente para prostatite, podendo levar à cronificação."
+              }
+            }
+            ,{
+              title: "ITU - O que você não pode deixar de saber",
+              content: `
+### ITU - O que você não pode deixar de saber
+
+Conceitos essenciais para o manejo adequado das infecções do trato urinário na prática clínica.
+
+---
+
+### Febre = Órgão Maciço ⭐
+
+**Conceito fundamental:**
+- A presença de **febre** na ITU indica envolvimento de **órgão maciço**:
+  - **Rim** (pielonefrite)
+  - **Próstata** (prostatite)
+
+**Implicações terapêuticas:**
+- Requer antibióticos com **boa penetração tecidual**
+- Esquemas **mais prolongados**:
+  - Pielonefrite: 10-14 dias
+  - Prostatite aguda: 14-28 dias
+  - Prostatite crônica: 28-56 dias
+
+**Cistite não tem febre!**
+- Se houver febre → não é cistite simples
+- Investigar pielonefrite ou prostatite
+
+---
+
+### Etiologia Predominante
+
+**Bactérias Gram-negativas:**
+- **E. coli** é responsável por **80-90%** dos casos
+- Outras: *Klebsiella*, *Proteus*, *Enterobacter*
+
+**Epidemiologia:**
+- **Mais comum no sexo feminino** (uretra curta, proximidade com ânus)
+- Homens jovens raramente têm ITU (suspeitar de anomalia se recorrente)
+
+**Bacteriúria Assintomática:**
+- Presença de bactérias na urina **sem sintomas**
+- **NÃO é doença** → **NÃO precisa de tratamento**
+- Exceções: gestantes e pré-procedimentos urológicos instrumentalizados
+- Choose Wisely: tratar bacteriúria assintomática = má prática médica
+
+---
+
+### Recorrências - Padrões Diferentes
+
+**Em Mulheres:**
+- Geralmente representam **reinfecções** por **novas bactérias**
+- Diferentes espécies ou perfis de resistência
+- Causas: atividade sexual, espermicidas, alterações hormonais
+- Considerar profilaxia se ≥3 episódios/ano
+
+**Em Homens:**
+- Suspeite de **prostatite crônica** recidivante
+- **Mesma bactéria** com **mesmo perfil de resistência**
+- Reservatório prostático que agudiza periodicamente
+- Requer tratamento prolongado (4-8 semanas)
+
+**Investigação Urológica:**
+- Recorrências frequentes justificam investigação
+- Procurar: anomalias anatômicas, cálculos, obstrução
+- Ultrassonografia de vias urinárias
+- Considerar cistoscopia se indicado
+
+---
+
+### Resumo dos Conceitos-Chave
+
+**1. Febre:**
+- ✓ Febre = órgão maciço (rim ou próstata)
+- ✓ Tratamento mais prolongado necessário
+
+**2. Etiologia:**
+- ✓ E. coli em 80-90% dos casos
+- ✓ Mais comum em mulheres
+
+**3. Bacteriúria assintomática:**
+- ✓ NÃO tratar (exceto gestantes e pré-procedimentos)
+- ✓ Não é doença
+
+**4. Recorrências:**
+- ✓ Mulheres: reinfecções (novas bactérias)
+- ✓ Homens: prostatite crônica (mesma bactéria)
+- ✓ Investigar se frequentes
+              `,
+              question: {
+                text: "Uma mulher de 65 anos, assintomática, realiza urocultura de rotina que mostra E. coli >100.000 UFC/mL. Qual é a conduta mais adequada?",
+                options: {
+                  A: "Tratar com nitrofurantoína por 5 dias para erradicar a bactéria",
+                  B: "Não tratar, pois trata-se de bacteriúria assintomática que não necessita tratamento em idosos assintomáticos",
+                  C: "Tratar com ciprofloxacino por 10 dias devido à idade avançada",
+                  D: "Solicitar nova urocultura e tratar se persistir positiva"
+                },
+                correct: "B",
+                explanation: "A conduta correta é NÃO tratar, pois trata-se de bacteriúria assintomática. Bacteriúria assintomática é a presença de bactérias na urina sem sintomas e NÃO é doença, portanto NÃO necessita de tratamento, exceto em duas situações específicas: gestantes e antes de procedimentos urológicos instrumentalizados. O Choose Wisely considera a solicitação de urocultura para pacientes sem queixa urinária e o 'tratamento' de bacteriúria assintomática uma má prática médica. Tratar bacteriúria assintomática não traz benefícios, aumenta custos, expõe a efeitos adversos e contribui para resistência bacteriana. A idade avançada não é indicação para tratamento de bacteriúria assintomática."
               }
             }
           ]
