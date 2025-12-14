@@ -16964,8 +16964,8 @@ Resumo dos conceitos essenciais para o diagnóstico e manejo adequado da diverti
         ,{
           id: 20,
           title: "Infecção do Trato Urinário (ITU)",
-          duration: "72 min",
-          xp: 360,
+          duration: "80 min",
+          xp: 400,
           sections: [
             {
               title: "Definição",
@@ -17707,6 +17707,133 @@ Conceitos essenciais para o manejo adequado das infecções do trato urinário n
                 },
                 correct: "B",
                 explanation: "A conduta correta é NÃO tratar, pois trata-se de bacteriúria assintomática. Bacteriúria assintomática é a presença de bactérias na urina sem sintomas e NÃO é doença, portanto NÃO necessita de tratamento, exceto em duas situações específicas: gestantes e antes de procedimentos urológicos instrumentalizados. O Choose Wisely considera a solicitação de urocultura para pacientes sem queixa urinária e o 'tratamento' de bacteriúria assintomática uma má prática médica. Tratar bacteriúria assintomática não traz benefícios, aumenta custos, expõe a efeitos adversos e contribui para resistência bacteriana. A idade avançada não é indicação para tratamento de bacteriúria assintomática."
+              }
+            }
+            ,{
+              title: "ITU - O Que Você Não Pode Deixar de Saber sobre o Tratamento",
+              content: `
+### ITU - O Que Você Não Pode Deixar de Saber sobre o Tratamento
+
+Resumo prático das principais condutas terapêuticas para cada tipo de ITU.
+
+---
+
+### Cistite
+
+**Primeira escolha:**
+- **Nitrofurantoína** 100mg 6/6h por **5 dias**
+- Vantagem: **baixa resistência bacteriana**
+- Contraindicação: TFG <30 mL/min
+
+**Para E. coli produtora de ESBL:**
+- **Fosfomicina** 3g **dose única**
+- Excelente opção, conveniente
+
+**⚠️ Evite fluoroquinolonas para cistite!**
+- Reservar para casos mais graves
+- Prevenir resistência bacteriana
+
+**Duração:** 3-5 dias (curta)
+
+---
+
+### Pielonefrite
+
+**Características do tratamento:**
+- Tratamento **mais longo:** 10-14 dias
+- Antibióticos de **amplo espectro**
+
+**Boas opções:**
+- **Quinolonas:**
+  - Ciprofloxacino 500mg 12/12h
+  - Levofloxacino 750mg 1x/dia
+- **Cefalosporinas de 2ª geração:**
+  - Cefuroxima 500mg 12/12h
+
+**⚠️ Essencial:**
+- Reavaliar em 48-72h
+- Se sem melhora → hospitalizar
+
+**Duração:** 10-14 dias (intermediária)
+
+---
+
+### Prostatite
+
+**Características do tratamento:**
+- Tratamento **ainda mais prolongado:** 14-28 dias
+- Antibióticos que **penetrem bem** no tecido prostático
+
+**Preferir:**
+- **Quinolonas:**
+  - Ciprofloxacino 500mg 12/12h
+  - Levofloxacino 500mg 1x/dia
+- **Cotrimoxazol (TMP-SMX):**
+  - 160/800mg 12/12h
+
+**Justificativa:**
+- Difícil penetração prostática
+- Necessário para erradicar reservatório
+
+**⚠️ Recidivas:**
+- Podem indicar **prostatite crônica**
+- Requer tratamento de 4-8 semanas
+
+**Duração:** 14-28 dias (prolongada)
+
+---
+
+### Quando Coletar Urocultura
+
+**Recomendado:**
+- **Gestantes** (sempre)
+- Pacientes com **fatores de risco** para resistência:
+  - ITU recorrente
+  - Uso recente de antibióticos
+  - Hospitalização recente
+  - Imunossupressão
+  - Anomalias do trato urinário
+- **Pielonefrite** e **prostatite**
+- Falha terapêutica
+
+**Dispensável:**
+- **Cistites não complicadas** em mulheres jovens
+- Tratamento empírico é geralmente suficiente
+
+**⚠️ Importante:**
+- Coletar **antes** do início do tratamento
+- Aguardar resultado em casos selecionados
+
+---
+
+### Resumo Comparativo
+
+**Cistite:**
+- ✓ Nitrofurantoína 5 dias
+- ✓ Evitar quinolonas
+- ✓ Urocultura dispensável se não complicada
+
+**Pielonefrite:**
+- ✓ Quinolonas ou cefuroxima 10-14 dias
+- ✓ Reavaliar em 48-72h
+- ✓ Urocultura recomendada
+
+**Prostatite:**
+- ✓ Quinolonas ou TMP-SMX 14-28 dias
+- ✓ Tratamento prolongado essencial
+- ✓ Urocultura recomendada
+- ✓ Atenção a recidivas (prostatite crônica)
+              `,
+              question: {
+                text: "Uma mulher de 25 anos, hígida, apresenta cistite não complicada. Qual é a melhor conduta terapêutica?",
+                options: {
+                  A: "Ciprofloxacino 500mg 12/12h por 3 dias, sem necessidade de urocultura",
+                  B: "Nitrofurantoína 100mg 6/6h por 5 dias, sem necessidade de urocultura em cistite não complicada",
+                  C: "Solicitar urocultura e aguardar resultado antes de iniciar tratamento",
+                  D: "Levofloxacino 750mg 1x/dia por 10 dias para garantir erradicação"
+                },
+                correct: "B",
+                explanation: "Para cistite não complicada em mulher jovem, a melhor conduta é Nitrofurantoína 100mg 6/6h por 5 dias, sem necessidade de urocultura. A nitrofurantoína é preferida devido à baixa resistência bacteriana. Em cistites não complicadas em mulheres jovens, o tratamento empírico é geralmente suficiente, dispensando urocultura. Fluoroquinolonas (ciprofloxacino, levofloxacino) devem ser evitadas para cistite simples, sendo reservadas para casos mais graves (pielonefrite) para prevenir resistência bacteriana. Tratamento de 10 dias seria excessivo para cistite (indicado para pielonefrite). A urocultura é recomendada em gestantes, pacientes com fatores de risco para resistência, pielonefrite, prostatite ou falha terapêutica."
               }
             }
           ]
