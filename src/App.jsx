@@ -7324,6 +7324,13 @@ const App = () => {
     antibioticoterapia: {
       title: "Antibioticoterapia Ambulatorial",
       description: "Aprenda os fundamentos da prescrição de antibióticos no ambulatório",
+      welcomeMessage: `Caro estudante,
+
+Nosso corpo abriga diferentes comunidades de microrganismos, conhecidas como microbiota, que variam de uma região para outra. Em muitas situações, as doenças infecciosas são causadas justamente por bactérias que fazem parte dessa microbiota habitual. Agentes externos também podem ser responsáveis, mas essa não é a regra. Por isso, conhecer bem a microbiota da área afetada é um passo essencial para orientar a melhor escolha do antibiótico.
+
+O segredo para selecionar o antimicrobiano mais adequado está em compreender as características dos possíveis agentes envolvidos. Pergunte-se: o patógeno possui parede celular? Se sim, um inibidor da síntese da parede pode ser indicado. Existe a suspeita de um microrganismo anaeróbio? Nesse caso, devem ser incluídos agentes com atividade anaerobicida. Já os agentes atípicos, que caracteristicamente não possuem parede celular, exigem outras classes de antibióticos.
+
+Perceba como o processo se torna lógico e natural. Quando entendemos o perfil dos prováveis agentes, a escolha do tratamento deixa de ser algo decorado e se transforma em um raciocínio clínico fluido e fundamentado. Vamos em frente — aproveite esta jornada de aprendizado!`,
       lessons: [
         {
           id: 1,
@@ -18303,6 +18310,22 @@ Resumo prático das principais condutas terapêuticas para cada tipo de ITU.
             <div className="bg-white rounded-xl shadow-lg p-6">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Antibioticoterapia Ambulatorial</h3>
               <p className="text-gray-600 mb-4">Aprenda os fundamentos da prescrição de antibióticos no ambulatório</p>
+              
+              {/* Mensagem de Boas-Vindas */}
+              {modulesData.antibioticoterapia?.welcomeMessage && (
+                <div className="mb-6 p-5 bg-gradient-to-r from-purple-50 to-indigo-50 border-l-4 border-purple-600 rounded-lg">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0">
+                      <span className="text-2xl">📚</span>
+                    </div>
+                    <div className="ml-3">
+                      <p className="text-sm text-gray-700 whitespace-pre-line leading-relaxed">
+                        {modulesData.antibioticoterapia.welcomeMessage}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
               <div className="mb-4">
                 <div className="flex justify-between text-sm text-gray-600 mb-1">
                   <span>Progresso</span>
