@@ -17940,6 +17940,96 @@ Resumo prático das principais condutas terapêuticas para cada tipo de ITU.
             }
           ]
         }
+,
+        {
+          id: 21,
+          title: "Principais Sítios X Grupos Bacterianos X Antibióticos",
+          duration: "8 min",
+          xp: 40,
+          sections: [
+            {
+              title: "Trato Gastrointestinal",
+              content: `
+### Trato Gastrointestinal
+
+Compreender a microbiota do trato gastrointestinal é fundamental para a escolha racional de antibióticos nas infecções abdominais.
+
+---
+
+### Microbiota e Antibióticos
+
+| Categoria | Microrganismos | Antibióticos Comuns |
+|-----------|----------------|---------------------|
+| **Predominantes** | Gram-negativos (*E. coli*, *Salmonella*, *Shigella*) | Ciprofloxacino, Amoxicilina/clavulanato |
+| **Secundários** | Anaeróbios (*Bacteroides*, *Clostridium*) em abscessos e diverticulite | Metronidazol, Amoxicilina/clavulanato |
+
+---
+
+### Características do Ambiente Abdominal
+
+O abdômen é uma **estrutura fechada**. Em geral, esses compartimentos fechados são colonizados por:
+
+**Bactérias Gram-negativas:**
+- Predominam no trato gastrointestinal
+- *E. coli* é o principal agente em infecções abdominais
+- *Salmonella* e *Shigella* em gastroenterocolites
+
+**Anaeróbios:**
+- Preferem ambientes fechados para evitar contato com o oxigênio
+- Para eles, o oxigênio é **tóxico**
+- *Bacteroides fragilis* é o principal anaeróbio em abscessos intra-abdominais
+- *Clostridium* em diverticulite e abscessos
+
+---
+
+### Implicações Terapêuticas
+
+**Para infecções gastrointestinais, considere:**
+
+**Cobertura Gram-negativa:**
+- Ciprofloxacino (quinolona)
+- Cefalosporinas de 2ª/3ª geração
+- Amoxicilina/clavulanato
+
+**Cobertura Anaeróbica:**
+- Metronidazol (anaerobicida potente)
+- Amoxicilina/clavulanato (cobertura dupla)
+
+**Infecções polimicrobianas (ex: diverticulite):**
+- Necessitam cobertura para **Gram-negativos + anaeróbios**
+- Ciprofloxacino + Metronidazol OU
+- Amoxicilina/clavulanato (monoterapia)
+
+---
+
+### Pontos-Chave
+
+**Ambiente fechado:**
+- ✓ Favorece anaeróbios (oxigênio é tóxico para eles)
+- ✓ Gram-negativos predominam
+
+**Infecções abdominais:**
+- ✓ Geralmente polimicrobianas
+- ✓ Requerem cobertura dupla (Gram-negativos + anaeróbios)
+
+**Escolha racional:**
+- ✓ Baseada na microbiota esperada
+- ✓ Considerar se infecção é polimicrobiana
+              `,
+              question: {
+                text: "Por que o abdômen, sendo uma estrutura fechada, favorece a colonização por bactérias anaeróbias?",
+                options: {
+                  A: "Porque os anaeróbios precisam de alta temperatura corporal para sobreviver",
+                  B: "Porque o oxigênio é tóxico para os anaeróbios, e ambientes fechados têm menos oxigênio disponível",
+                  C: "Porque os anaeróbios só conseguem se reproduzir em ambientes com pH ácido",
+                  D: "Porque os Gram-negativos produzem substâncias que atraem anaeróbios"
+                },
+                correct: "B",
+                explanation: "O abdômen, sendo uma estrutura fechada, favorece a colonização por bactérias anaeróbias porque o oxigênio é tóxico para esses microrganismos. Anaeróbios preferem ambientes fechados para evitar contato com o oxigênio. Esse conceito é fundamental para entender por que infecções intra-abdominais (como abscessos e diverticulite) frequentemente envolvem anaeróbios como Bacteroides fragilis e Clostridium, e por que necessitam de cobertura anaerobicida (ex: metronidazol). A temperatura corporal é constante em todo o corpo. O pH abdominal não é especialmente ácido. Gram-negativos não produzem substâncias que atraem anaeróbios - ambos coexistem naturalmente na microbiota intestinal."
+              }
+            }
+          ]
+        }
       ]
     },
     antimicrobianos: antimicrobianosModule
