@@ -9,6 +9,7 @@ const App = () => {
   const [user, setUser] = useState(null)
   const [showWelcome, setShowWelcome] = useState(false)
   const [currentModule, setCurrentModule] = useState(null)
+  const [selectedModuleId, setSelectedModuleId] = useState(null)
   const [currentLesson, setCurrentLesson] = useState(null)
   const [currentSection, setCurrentSection] = useState(0)
   const [currentQuestion, setCurrentQuestion] = useState(null)
@@ -17997,6 +17998,16 @@ O abdômen é uma **estrutura fechada**. Em geral, esses compartimentos fechados
   }
 
   // Funções de navegação
+  const openModule = (moduleId) => {
+    setSelectedModuleId(moduleId)
+    setCurrentView('moduleView')
+  }
+
+  const backToDashboard = () => {
+    setSelectedModuleId(null)
+    setCurrentView('dashboard')
+  }
+
   const startLesson = (moduleId, lessonId) => {
     const module = modulesData[moduleId]
     const lesson = module.lessons.find(l => l.id === lessonId)
@@ -18337,121 +18348,182 @@ O abdômen é uma **estrutura fechada**. Em geral, esses compartimentos fechados
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Módulo de Microbiologia */}
-            <div className="bg-white rounded-xl shadow-lg p-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Fundamentos da Microbiologia</h3>
-              <p className="text-gray-600 mb-4">Aprenda os conceitos essenciais da microbiologia clínica</p>
+            <button
+              onClick={() => openModule('microbiologia')}
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-left"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Fundamentos da Microbiologia</h3>
+                  <p className="text-gray-600">Aprenda os conceitos essenciais da microbiologia clínica</p>
+                </div>
+                <div className="text-4xl">🦠</div>
+              </div>
               <div className="mb-4">
                 <div className="flex justify-between text-sm text-gray-600 mb-1">
                   <span>Progresso</span>
-                  <span>0/10</span>
+                  <span>0/{modulesData.microbiologia.lessons.length}</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
                   <div className="bg-blue-600 h-2 rounded-full" style={{width: '0%'}}></div>
                 </div>
               </div>
-              
-              <div className="space-y-3">
-                {modulesData.microbiologia.lessons.map((lesson, index) => (
-                  <button
-                    key={lesson.id}
-                    onClick={() => startLesson('microbiologia', lesson.id)}
-                    className="w-full text-left p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors"
-                  >
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h4 className="font-medium text-gray-900">{lesson.title}</h4>
-                        <p className="text-sm text-gray-600">{lesson.duration} • {lesson.xp} XP</p>
-                      </div>
-                      <div className="text-blue-600">▶️</div>
-                    </div>
-                  </button>
-                ))}
+              <div className="flex items-center justify-between text-blue-600 font-medium">
+                <span>Ver {modulesData.microbiologia.lessons.length} lições</span>
+                <span>→</span>
               </div>
-            </div>
+            </button>
 
             {/* Módulo de Antibiograma */}
-            <div className="bg-white rounded-xl shadow-lg p-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Teste de Suscetibilidade Antimicrobiana</h3>
-              <p className="text-gray-600 mb-4">Domine os conceitos e técnicas do antibiograma</p>
+            <button
+              onClick={() => openModule('antibiograma')}
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-left"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Teste de Suscetibilidade Antimicrobiana</h3>
+                  <p className="text-gray-600">Domine os conceitos e técnicas do antibiograma</p>
+                </div>
+                <div className="text-4xl">🧪</div>
+              </div>
               <div className="mb-4">
                 <div className="flex justify-between text-sm text-gray-600 mb-1">
                   <span>Progresso</span>
-                  <span>0/10</span>
+                  <span>0/{modulesData.antibiograma.lessons.length}</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
                   <div className="bg-green-600 h-2 rounded-full" style={{width: '0%'}}></div>
                 </div>
               </div>
-              
-              <div className="space-y-3">
-                {modulesData.antibiograma.lessons.map((lesson, index) => (
-                  <button
-                    key={lesson.id}
-                    onClick={() => startLesson('antibiograma', lesson.id)}
-                    className="w-full text-left p-4 rounded-lg border border-gray-200 hover:border-green-300 hover:bg-green-50 transition-colors"
-                  >
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h4 className="font-medium text-gray-900">{lesson.title}</h4>
-                        <p className="text-sm text-gray-600">{lesson.duration} • {lesson.xp} XP</p>
-                      </div>
-                      <div className="text-green-600">▶️</div>
-                    </div>
-                  </button>
-                ))}
+              <div className="flex items-center justify-between text-green-600 font-medium">
+                <span>Ver {modulesData.antibiograma.lessons.length} lições</span>
+                <span>→</span>
               </div>
-            </div>
+            </button>
 
             {/* Módulo de Antibioticoterapia Ambulatorial */}
-            <div className="bg-white rounded-xl shadow-lg p-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Antibioticoterapia Ambulatorial</h3>
-              <p className="text-gray-600 mb-4">Aprenda os fundamentos da prescrição de antibióticos no ambulatório</p>
-              
-              {/* Mensagem de Boas-Vindas */}
-              {modulesData.antibioticoterapia?.welcomeMessage && (
-                <div className="mb-6 p-5 bg-gradient-to-r from-purple-50 to-indigo-50 border-l-4 border-purple-600 rounded-lg">
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0">
-                      <span className="text-2xl">📚</span>
-                    </div>
-                    <div className="ml-3">
-                      <p className="text-sm text-gray-700 whitespace-pre-line leading-relaxed">
-                        {modulesData.antibioticoterapia.welcomeMessage}
-                      </p>
-                    </div>
-                  </div>
+            <button
+              onClick={() => openModule('antibioticoterapia')}
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-left"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Antibioticoterapia Ambulatorial</h3>
+                  <p className="text-gray-600">Aprenda os fundamentos da prescrição de antibióticos no ambulatório</p>
                 </div>
-              )}
+                <div className="text-4xl">💊</div>
+              </div>
               <div className="mb-4">
                 <div className="flex justify-between text-sm text-gray-600 mb-1">
                   <span>Progresso</span>
-                  <span>0/3</span>
+                  <span>0/{modulesData.antibioticoterapia?.lessons.length || 0}</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
                   <div className="bg-purple-600 h-2 rounded-full" style={{width: '0%'}}></div>
                 </div>
               </div>
-              
-              <div className="space-y-3">
-                {modulesData.antibioticoterapia?.lessons.map((lesson, index) => (
-                  <button
-                    key={lesson.id}
-                    onClick={() => startLesson('antibioticoterapia', lesson.id)}
-                    className="w-full text-left p-4 rounded-lg border border-gray-200 hover:border-purple-300 hover:bg-purple-50 transition-colors"
-                  >
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h4 className="font-medium text-gray-900">{lesson.title}</h4>
-                        <p className="text-sm text-gray-600">{lesson.duration} • {lesson.xp} XP</p>
-                      </div>
-                      <div className="text-purple-600">▶️</div>
-                    </div>
-                  </button>
-                ))}
+              <div className="flex items-center justify-between text-purple-600 font-medium">
+                <span>Ver {modulesData.antibioticoterapia?.lessons.length || 0} lições</span>
+                <span>→</span>
+              </div>
+            </button>
+
+
+          </div>
+        </main>
+      </div>
+    )
+  }
+
+  if (currentView === 'moduleView' && selectedModuleId) {
+    const selectedModule = modulesData[selectedModuleId]
+    const moduleColors = {
+      microbiologia: { primary: 'blue', bg: 'bg-blue-50', border: 'border-blue-300', text: 'text-blue-600', hover: 'hover:bg-blue-50' },
+      antibiograma: { primary: 'green', bg: 'bg-green-50', border: 'border-green-300', text: 'text-green-600', hover: 'hover:bg-green-50' },
+      antibioticoterapia: { primary: 'purple', bg: 'bg-purple-50', border: 'border-purple-300', text: 'text-purple-600', hover: 'hover:bg-purple-50' }
+    }
+    const colors = moduleColors[selectedModuleId] || moduleColors.microbiologia
+
+    return (
+      <div className="min-h-screen bg-gray-50">
+        <header className="bg-white shadow-sm border-b">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16">
+              <button
+                onClick={backToDashboard}
+                className="flex items-center text-gray-600 hover:text-gray-900"
+              >
+                ← Voltar aos Módulos
+              </button>
+              <div className="flex items-center space-x-4">
+                <span className="text-sm bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">
+                  💎 {userProgress.xp} XP
+                </span>
+                <span className="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">
+                  Level {userProgress.level}
+                </span>
               </div>
             </div>
+          </div>
+        </header>
 
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">{selectedModule.title}</h2>
+            <p className="text-gray-600">{selectedModule.description}</p>
+            
+            {/* Mensagem de Boas-Vindas do Módulo */}
+            {selectedModule.welcomeMessage && (
+              <div className="mt-6 p-6 bg-gradient-to-r from-purple-50 to-indigo-50 border-l-4 border-purple-600 rounded-lg">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <span className="text-3xl">📚</span>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Mensagem de Boas-Vindas</h3>
+                    <p className="text-sm text-gray-700 whitespace-pre-line leading-relaxed">
+                      {selectedModule.welcomeMessage}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            
+            <div className="mt-6">
+              <div className="flex justify-between text-sm text-gray-600 mb-2">
+                <span>Progresso do Módulo</span>
+                <span>0/{selectedModule.lessons.length} lições concluídas</span>
+              </div>
+              <div className="w-full bg-gray-200 rounded-full h-3">
+                <div className={`bg-${colors.primary}-600 h-3 rounded-full`} style={{width: '0%'}}></div>
+              </div>
+            </div>
+          </div>
 
+          <div className="grid gap-4">
+            {selectedModule.lessons.map((lesson, index) => (
+              <button
+                key={lesson.id}
+                onClick={() => startLesson(selectedModuleId, lesson.id)}
+                className={`w-full text-left p-6 rounded-lg border-2 ${colors.border} ${colors.hover} bg-white transition-all hover:shadow-md`}
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="text-sm font-semibold text-gray-500">Lição {lesson.id}</span>
+                      <span className={`text-xs px-2 py-1 rounded-full ${colors.bg} ${colors.text}`}>
+                        {lesson.duration}
+                      </span>
+                      <span className="text-xs px-2 py-1 rounded-full bg-yellow-100 text-yellow-800">
+                        {lesson.xp} XP
+                      </span>
+                    </div>
+                    <h4 className="font-semibold text-gray-900 text-lg">{lesson.title}</h4>
+                  </div>
+                  <div className={`text-2xl ${colors.text}`}>▶️</div>
+                </div>
+              </button>
+            ))}
           </div>
         </main>
       </div>
