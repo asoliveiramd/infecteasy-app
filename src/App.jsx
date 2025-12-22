@@ -18058,20 +18058,44 @@ O abdômen é uma **estrutura fechada**. Em geral, esses compartimentos fechados
   }
 
   const completeLesson = () => {
-    if (currentLesson) {
+    if (currentLesson && currentModule) {
+      const lessonKey = `${currentModule}-${currentLesson.id}`
       setUserProgress(prev => ({
         ...prev,
         xp: prev.xp + currentLesson.xp,
-        completedLessons: [...prev.completedLessons, currentLesson.id]
+        completedLessons: [...prev.completedLessons, lessonKey]
       }))
-      setCurrentView('dashboard')
-      setCurrentModule(null)
+      setCurrentView('moduleView')
+      setSelectedModuleId(currentModule)
       setCurrentLesson(null)
       setCurrentSection(0)
       setCurrentQuestion(null)
       setShowQuestionFeedback(false)
       setSelectedAnswer(null)
     }
+  }
+
+  const isLessonCompleted = (moduleId, lessonId) => {
+    const lessonKey = `${moduleId}-${lessonId}`
+    return userProgress.completedLessons.includes(lessonKey)
+  }
+
+  const isLessonUnlocked = (moduleId, lessonId) => {
+    // Primeira lição sempre desbloqueada
+    if (lessonId === 1) return true
+    
+    // Verifica se a lição anterior foi concluída
+    const previousLessonKey = `${moduleId}-${lessonId - 1}`
+    return userProgress.completedLessons.includes(previousLessonKey)
+  }
+
+  const getNextLesson = (moduleId, lessons) => {
+    for (let lesson of lessons) {
+      if (!isLessonCompleted(moduleId, lesson.id)) {
+        return lesson.id
+      }
+    }
+    return null
   }
 
   // Renderização condicional
@@ -18492,38 +18516,81 @@ O abdômen é uma **estrutura fechada**. Em geral, esses compartimentos fechados
             <div className="mt-6">
               <div className="flex justify-between text-sm text-gray-600 mb-2">
                 <span>Progresso do Módulo</span>
-                <span>0/{selectedModule.lessons.length} lições concluídas</span>
+                <span>{selectedModule.lessons.filter(l => isLessonCompleted(selectedModuleId, l.id)).length}/{selectedModule.lessons.length} lições concluídas</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-3">
-                <div className={`bg-${colors.primary}-600 h-3 rounded-full`} style={{width: '0%'}}></div>
+                <div className={`bg-${colors.primary}-600 h-3 rounded-full transition-all duration-500`} style={{width: `${(selectedModule.lessons.filter(l => isLessonCompleted(selectedModuleId, l.id)).length / selectedModule.lessons.length) * 100}%`}}></div>
               </div>
             </div>
           </div>
 
           <div className="grid gap-4">
-            {selectedModule.lessons.map((lesson, index) => (
-              <button
-                key={lesson.id}
-                onClick={() => startLesson(selectedModuleId, lesson.id)}
-                className={`w-full text-left p-6 rounded-lg border-2 ${colors.border} ${colors.hover} bg-white transition-all hover:shadow-md`}
-              >
-                <div className="flex items-center justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="text-sm font-semibold text-gray-500">Lição {lesson.id}</span>
-                      <span className={`text-xs px-2 py-1 rounded-full ${colors.bg} ${colors.text}`}>
-                        {lesson.duration}
-                      </span>
-                      <span className="text-xs px-2 py-1 rounded-full bg-yellow-100 text-yellow-800">
-                        {lesson.xp} XP
-                      </span>
+            {selectedModule.lessons.map((lesson, index) => {
+              const isCompleted = isLessonCompleted(selectedModuleId, lesson.id)
+              const isUnlocked = isLessonUnlocked(selectedModuleId, lesson.id)
+              const nextLesson = getNextLesson(selectedModuleId, selectedModule.lessons)
+              const isNext = lesson.id === nextLesson
+              
+              return (
+                <button
+                  key={lesson.id}
+                  onClick={() => isUnlocked ? startLesson(selectedModuleId, lesson.id) : null}
+                  disabled={!isUnlocked}
+                  className={`w-full text-left p-6 rounded-lg border-2 transition-all ${
+                    isCompleted 
+                      ? `${colors.border} bg-white opacity-75 hover:opacity-100` 
+                      : isNext
+                      ? `border-${colors.primary}-500 bg-gradient-to-r ${colors.bg} shadow-lg hover:shadow-xl animate-pulse`
+                      : isUnlocked
+                      ? `${colors.border} ${colors.hover} bg-white hover:shadow-md`
+                      : 'border-gray-300 bg-gray-50 cursor-not-allowed opacity-50'
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-2">
+                        <span className={`text-sm font-semibold ${
+                          isCompleted ? 'text-green-600' : isNext ? colors.text : 'text-gray-500'
+                        }`}>
+                          Lição {lesson.id}
+                        </span>
+                        {isCompleted && (
+                          <span className="text-xs px-2 py-1 rounded-full bg-green-100 text-green-800 font-semibold">
+                            ✅ Concluída
+                          </span>
+                        )}
+                        {isNext && !isCompleted && (
+                          <span className={`text-xs px-2 py-1 rounded-full ${colors.bg} ${colors.text} font-semibold animate-bounce`}>
+                            🎯 Próxima
+                          </span>
+                        )}
+                        {!isUnlocked && (
+                          <span className="text-xs px-2 py-1 rounded-full bg-gray-200 text-gray-600">
+                            🔒 Bloqueada
+                          </span>
+                        )}
+                        <span className={`text-xs px-2 py-1 rounded-full ${isUnlocked ? colors.bg + ' ' + colors.text : 'bg-gray-200 text-gray-500'}`}>
+                          {lesson.duration}
+                        </span>
+                        <span className={`text-xs px-2 py-1 rounded-full ${isUnlocked ? 'bg-yellow-100 text-yellow-800' : 'bg-gray-200 text-gray-500'}`}>
+                          {lesson.xp} XP
+                        </span>
+                      </div>
+                      <h4 className={`font-semibold text-lg ${
+                        isCompleted ? 'text-gray-700' : isNext ? 'text-gray-900' : isUnlocked ? 'text-gray-900' : 'text-gray-400'
+                      }`}>
+                        {lesson.title}
+                      </h4>
                     </div>
-                    <h4 className="font-semibold text-gray-900 text-lg">{lesson.title}</h4>
+                    <div className={`text-2xl ${
+                      isCompleted ? 'text-green-600' : isNext ? colors.text : isUnlocked ? colors.text : 'text-gray-400'
+                    }`}>
+                      {isCompleted ? '✅' : isUnlocked ? '▶️' : '🔒'}
+                    </div>
                   </div>
-                  <div className={`text-2xl ${colors.text}`}>▶️</div>
-                </div>
-              </button>
-            ))}
+                </button>
+              )
+            })}
           </div>
         </main>
       </div>
