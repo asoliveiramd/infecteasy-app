@@ -7331,13 +7331,7 @@ Nosso corpo abriga diferentes comunidades de microrganismos, conhecidas como mic
 
 O segredo para selecionar o antimicrobiano mais adequado está em compreender as características dos possíveis agentes envolvidos. Pergunte-se: o patógeno possui parede celular? Se sim, um inibidor da síntese da parede pode ser indicado. Existe a suspeita de um microrganismo anaeróbio? Nesse caso, devem ser incluídos agentes com atividade anaerobicida. Já os agentes atípicos, que caracteristicamente não possuem parede celular, exigem outras classes de antibióticos.
 
-Perceba como o processo se torna lógico e natural. Quando entendemos o perfil dos prováveis agentes, a escolha do tratamento deixa de ser algo decorado e se transforma em um raciocínio clínico fluido e fundamentado. Vamos em frente — aproveite esta jornada de aprendizado!
-
----
-
-Chegou o momento de conectar o que aprendemos até aqui. Cada sítio do corpo que estudamos possui sua própria microbiota característica, formada por microrganismos que normalmente convivem em equilíbrio com o hospedeiro.
-
-Vamos agora analisar em detalhes essa microbiota em cada local, refletindo sobre quais bactérias costumam estar presentes e, a partir disso, identificar as drogas mais adequadas para o tratamento das infecções que possam surgir nessas regiões. Assim, você poderá compreender de forma integrada como o conhecimento microbiológico orienta a escolha racional do antibiótico.`,
+Perceba como o processo se torna lógico e natural. Quando entendemos o perfil dos prováveis agentes, a escolha do tratamento deixa de ser algo decorado e se transforma em um raciocínio clínico fluido e fundamentado. Vamos em frente — aproveite esta jornada de aprendizado!`,
       lessons: [
         {
           id: 1,
@@ -17859,6 +17853,38 @@ Resumo prático das principais condutas terapêuticas para cada tipo de ITU.
           duration: "8 min",
           xp: 40,
           sections: [
+            {
+              title: "Introdução",
+              content: `
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+  <h2 style="color: white; margin: 0 0 15px 0; font-size: 26px;">🎯 Principais Sítios X Grupos Bacterianos X Antibióticos</h2>
+  <p style="color: rgba(255,255,255,0.95); margin: 0; font-size: 16px; line-height: 1.8;">
+    Chegou o momento de conectar o que aprendemos até aqui. Cada sítio do corpo que estudamos possui sua própria microbiota característica, formada por microrganismos que normalmente convivem em equilíbrio com o hospedeiro.
+  </p>
+</div>
+
+<div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
+  <h3 style="color: #2563eb; margin-bottom: 15px;">💡 Objetivo desta Lição</h3>
+  <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
+    Vamos agora analisar em detalhes essa microbiota em cada local, refletindo sobre quais bactérias costumam estar presentes e, a partir disso, identificar as drogas mais adequadas para o tratamento das infecções que possam surgir nessas regiões.
+  </p>
+  <p style="font-size: 16px; line-height: 1.6;">
+    Assim, você poderá compreender de forma integrada como o conhecimento microbiológico orienta a <strong>escolha racional do antibiótico</strong>.
+  </p>
+</div>
+
+<div style="background: #e0e7ff; padding: 15px; border-radius: 8px; margin: 15px 0;">
+  <h4 style="color: #3730a3; margin-bottom: 10px;">📚 Sítios que Estudaremos</h4>
+  <ul style="margin-left: 20px; line-height: 1.8; font-size: 15px;">
+    <li><strong>Trato Gastrointestinal</strong> - Gram-negativos e anaeróbios</li>
+    <li><strong>Trato Respiratório</strong> - Gram-positivos e atípicos</li>
+    <li><strong>Trato Urinário</strong> - Gram-negativos predominantes</li>
+    <li><strong>Pele e Partes Moles</strong> - Gram-positivos (especialmente <em>S. aureus</em>)</li>
+    <li><strong>Sistema Nervoso Central</strong> - Agentes de meningite</li>
+  </ul>
+</div>
+              `
+            },
             {
               title: "Trato Gastrointestinal",
               content: `
