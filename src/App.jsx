@@ -5531,9 +5531,9 @@ const App = () => {
               question: {
                 text: "O que significa quando um antibiograma indica resultado \"S\" (Sensível)?",
                 options: [
-                  "A) Que o antibiótico garante 100% de cura da infecção em qualquer situação clínica",
-                  "B) Que o microrganismo é suscetível ao antibiótico in vitro com alta probabilidade de sucesso em condições ideais, mas outros fatores clínicos podem influenciar o resultado",
-                  "C) Que o antibiótico é ineficaz e não deve ser utilizado no tratamento"
+                  "Que o antibiótico garante 100% de cura da infecção em qualquer situação clínica",
+                  "Que o microrganismo é suscetível ao antibiótico in vitro com alta probabilidade de sucesso em condições ideais, mas outros fatores clínicos podem influenciar o resultado",
+                  "Que o antibiótico é ineficaz e não deve ser utilizado no tratamento"
                 ],
                 correct: 1,
                 explanation: "O resultado 'Sensível' (S) indica que o antibiótico inibe o crescimento bacteriano in vitro em concentrações alcançáveis com dose padrão, apresentando alta probabilidade de sucesso terapêutico em condições ideais. Porém, não é garantia absoluta, pois fatores como gravidade da infecção, localização, imunidade do paciente e farmacocinética do antibiótico também influenciam o desfecho clínico."
@@ -5600,9 +5600,9 @@ const App = () => {
               question: {
                 text: "Por que a localização da infecção é um fator crítico mesmo quando o antibiograma mostra \"S\"?",
                 options: [
-                  "A) Porque a localização não afeta a eficácia do antibiótico",
-                  "B) Porque alguns sítios apresentam barreiras à penetração do antibiótico (SNC, próstata, osso, abscessos, biofilmes), limitando sua eficácia apesar da sensibilidade in vitro",
-                  "C) Porque todos os antibióticos penetram igualmente em todos os tecidos"
+                  "Porque a localização não afeta a eficácia do antibiótico",
+                  "Porque alguns sítios apresentam barreiras à penetração do antibiótico (SNC, próstata, osso, abscessos, biofilmes), limitando sua eficácia apesar da sensibilidade in vitro",
+                  "Porque todos os antibióticos penetram igualmente em todos os tecidos"
                 ],
                 correct: 1,
                 explanation: "A localização da infecção é crítica porque alguns sítios apresentam barreiras significativas à penetração do antibiótico: barreira hematoencefálica no SNC, barreira prostática, vascularização limitada no osso, pH baixo e necrose em abscessos, e matriz extracelular protetora em biofilmes. Mesmo com resultado 'S', o antibiótico pode não alcançar concentrações adequadas nesses locais, necessitando escolha específica ou drenagem cirúrgica."
@@ -5671,9 +5671,9 @@ const App = () => {
               question: {
                 text: "Qual é a principal diferença na escolha de antibióticos entre pacientes imunocompetentes e imunossuprimidos?",
                 options: [
-                  "A) Não há diferença, ambos podem usar qualquer antibiótico \"S\"",
-                  "B) Pacientes imunocompetentes podem usar bacteriostáticos, enquanto imunossuprimidos (neutropenia, HIV avançado, transplantados) necessitam bactericidas devido à incapacidade do sistema imune de completar a eliminação bacteriana",
-                  "C) Pacientes imunossuprimidos sempre precisam de doses menores de antibióticos"
+                  "Não há diferença, ambos podem usar qualquer antibiótico \"S\"",
+                  "Pacientes imunocompetentes podem usar bacteriostáticos, enquanto imunossuprimidos (neutropenia, HIV avançado, transplantados) necessitam bactericidas devido à incapacidade do sistema imune de completar a eliminação bacteriana",
+                  "Pacientes imunossuprimidos sempre precisam de doses menores de antibióticos"
                 ],
                 correct: 1,
                 explanation: "Em pacientes imunocompetentes, o sistema imune pode completar a eliminação bacteriana, permitindo uso de antibióticos bacteriostáticos. Já em pacientes imunossuprimidos (neutropenia, HIV avançado, transplantados, quimioterapia), o sistema imune está comprometido, sendo necessário antibiótico bactericida para eliminação efetiva das bactérias, além de tratamento prolongado e doses potencialmente mais altas."
@@ -5721,9 +5721,9 @@ const App = () => {
               question: {
                 text: "No caso de meningite pneumocócica com antibiograma \"S\" para Penicilina G, qual é a conduta adequada?",
                 options: [
-                  "A) Usar dose padrão de Penicilina G, pois o antibiograma mostra \"S\"",
-                  "B) Usar dose alta de Penicilina G (300.000-400.000 UI/kg/dia) devido à penetração limitada no SNC, mesmo com resultado \"S\"",
-                  "C) Trocar por outro antibiótico, pois Penicilina G nunca funciona em meningite"
+                  "Usar dose padrão de Penicilina G, pois o antibiograma mostra \"S\"",
+                  "Usar dose alta de Penicilina G (300.000-400.000 UI/kg/dia) devido à penetração limitada no SNC, mesmo com resultado \"S\"",
+                  "Trocar por outro antibiótico, pois Penicilina G nunca funciona em meningite"
                 ],
                 correct: 1,
                 explanation: "Mesmo com resultado 'Sensível', a meningite pneumocócica requer dose alta de Penicilina G (300.000-400.000 UI/kg/dia) porque: (1) é infecção grave com risco de morte/sequelas, (2) a barreira hematoencefálica limita a penetração do antibiótico no SNC, (3) dose padrão resultaria em concentrações subterapêuticas no líquor. Este caso ilustra perfeitamente como 'S' não garante sucesso com dose padrão em todas as situações."
@@ -5753,9 +5753,9 @@ const App = () => {
               question: {
                 text: "Por que é importante interpretar os mecanismos de resistência além da categorização S/I/R?",
                 options: [
-                  "A) Apenas para fins acadêmicos, sem impacto clínico prático",
-                  "B) Para predizer resistências cruzadas, escolher terapia adequada, evitar falhas terapêuticas e implementar controle de infecção apropriado",
-                  "C) Porque a categorização S/I/R é sempre incorreta"
+                  "Apenas para fins acadêmicos, sem impacto clínico prático",
+                  "Para predizer resistências cruzadas, escolher terapia adequada, evitar falhas terapêuticas e implementar controle de infecção apropriado",
+                  "Porque a categorização S/I/R é sempre incorreta"
                 ],
                 correct: 1,
                 explanation: "Interpretar mecanismos de resistência é essencial porque permite: (1) predizer resistências cruzadas a múltiplos antibióticos, (2) escolher terapia adequada considerando ajustes de dose, (3) evitar falhas terapêuticas mesmo com resultado 'S', (4) realizar vigilância epidemiológica, e (5) implementar precauções de controle de infecção apropriadas. Vai além da simples categorização S/I/R."
@@ -5797,9 +5797,9 @@ const App = () => {
               question: {
                 text: "Como diferenciar ESBL de carbapenemases no antibiograma?",
                 options: [
-                  "A) ESBL é sensível a carbapenêmicos e resistente a cefalosporinas de 3ª geração; carbapenemases são resistentes a carbapenêmicos",
-                  "B) Não é possível diferenciar pelo antibiograma",
-                  "C) ESBL sempre é sensível a todos os antibióticos"
+                  "ESBL é sensível a carbapenêmicos e resistente a cefalosporinas de 3ª geração; carbapenemases são resistentes a carbapenêmicos",
+                  "Não é possível diferenciar pelo antibiograma",
+                  "ESBL sempre é sensível a todos os antibióticos"
                 ],
                 correct: 0,
                 explanation: "ESBL (Extended-Spectrum β-Lactamase) apresenta resistência a penicilinas e cefalosporinas de 3ª geração (ceftriaxona, cefotaxima), mas mantém sensibilidade a carbapenêmicos. Já as carbapenemases (KPC, MBL) conferem resistência aos carbapenêmicos. MBL se diferencia por manter sensibilidade a aztreonam. Esta diferenciação é crucial para escolha terapêutica."
@@ -5840,9 +5840,9 @@ const App = () => {
               question: {
                 text: "Qual mecanismo explica MRSA (Staphylococcus aureus resistente à meticilina)?",
                 options: [
-                  "A) Bombas de efluxo que expulsam β-lactâmicos",
-                  "B) Modificação do alvo (PBP2a) que impede ligação de todos os β-lactâmicos",
-                  "C) Produção de β-lactamases"
+                  "Bombas de efluxo que expulsam β-lactâmicos",
+                  "Modificação do alvo (PBP2a) que impede ligação de todos os β-lactâmicos",
+                  "Produção de β-lactamases"
                 ],
                 correct: 1,
                 explanation: "MRSA apresenta resistência por modificação do alvo molecular através da produção de PBP2a (Penicillin-Binding Protein alterada), que tem baixa afinidade por todos os β-lactâmicos, incluindo meticilina e oxacilina. Este mecanismo é diferente de β-lactamases e confere resistência cruzada a toda a classe dos β-lactâmicos."
@@ -5888,9 +5888,9 @@ const App = () => {
               question: {
                 text: "No caso apresentado, qual é o mecanismo de resistência mais provável?",
                 options: [
-                  "A) Carbapenemase (KPC)",
-                  "B) ESBL (resistente a cefalosporinas 3ª geração, sensível a carbapenêmicos)",
-                  "C) Ausência de mecanismo de resistência"
+                  "Carbapenemase (KPC)",
+                  "ESBL (resistente a cefalosporinas 3ª geração, sensível a carbapenêmicos)",
+                  "Ausência de mecanismo de resistência"
                 ],
                 correct: 1,
                 explanation: "O padrão de resistência a ampicilina e ceftriaxona (cefalosporina de 3ª geração), mas sensibilidade a meropenem (carbapenêmico), é característico de ESBL (Extended-Spectrum β-Lactamase). Se fosse carbapenemase, haveria resistência ao meropenem. O tratamento de escolha são os carbapenêmicos."
@@ -5939,9 +5939,9 @@ const App = () => {
               question: {
                 text: "Por que antibióticos de moléculas grandes como vancomicina e colistina requerem técnica dilucional específica para teste de sensibilidade?",
                 options: [
-                  "A) Porque são antibióticos muito caros e precisam de métodos especiais de armazenamento",
-                  "B) Porque suas moléculas grandes não difundem adequadamente em métodos convencionais (disco-difusão), podendo gerar resultados imprecisos, sendo necessária microdiluição em caldo",
-                  "C) Porque são sempre resistentes a todos os métodos convencionais de teste"
+                  "Porque são antibióticos muito caros e precisam de métodos especiais de armazenamento",
+                  "Porque suas moléculas grandes não difundem adequadamente em métodos convencionais (disco-difusão), podendo gerar resultados imprecisos, sendo necessária microdiluição em caldo",
+                  "Porque são sempre resistentes a todos os métodos convencionais de teste"
                 ],
                 correct: 1,
                 explanation: "Glicopeptídeos (vancomicina) e polimixinas (colistina) possuem moléculas grandes que apresentam difusão limitada em métodos convencionais como disco-difusão ou tiras de gradiente. Isso pode levar a resultados imprecisos que subestimam a sensibilidade real. Por isso, a técnica dilucional (microdiluição em caldo) é o padrão-ouro para determinar a CIM desses antibióticos, especialmente em infecções graves onde a precisão é crítica."
@@ -5992,9 +5992,9 @@ const App = () => {
               question: {
                 text: "Qual é a importância clínica da verificação de sinergia com aminoglicosídeos em infecções por enterococos?",
                 options: [
-                  "A) Todos os microrganismos Gram-positivos apresentam sinergia com aminoglicosídeos, sendo necessário testar sempre",
-                  "B) Enterococos são os únicos patógenos com evidência clínica robusta de sinergia entre betalactâmicos e aminoglicosídeos, especialmente importante em endocardites",
-                  "C) A sinergia é irrelevante porque enterococos são sempre sensíveis a monoterapia com betalactâmicos"
+                  "Todos os microrganismos Gram-positivos apresentam sinergia com aminoglicosídeos, sendo necessário testar sempre",
+                  "Enterococos são os únicos patógenos com evidência clínica robusta de sinergia entre betalactâmicos e aminoglicosídeos, especialmente importante em endocardites",
+                  "A sinergia é irrelevante porque enterococos são sempre sensíveis a monoterapia com betalactâmicos"
                 ],
                 correct: 1,
                 explanation: "Enterococos são os únicos patógenos para os quais existe evidência clínica robusta de sinergia entre betalactâmicos (ampicilina/penicilina) e aminoglicosídeos (gentamicina). Essa combinação é especialmente importante no tratamento de endocardite enterocócica. O betalactâmico facilita a entrada do aminoglicosídeo na célula bacteriana, potencializando o efeito bactericida. No entanto, se houver resistência de alto nível a aminoglicosídeos (≥500 μg/mL), a sinergia é perdida e a terapia combinada não é eficaz."
@@ -6045,9 +6045,9 @@ const App = () => {
               question: {
                 text: "Por que não é recomendada monoterapia com aminoglicosídeos para enterococos, mesmo quando o antibiograma mostra sensibilidade?",
                 options: [
-                  "A) Porque aminoglicosídeos são sempre tóxicos e devem ser evitados em qualquer situação",
-                  "B) Porque aminoglicosídeos apresentam baixa eficácia clínica contra enterococos quando usados isoladamente, sendo necessária combinação com betalactâmicos para efeito bactericida",
-                  "C) Porque enterococos sempre desenvolvem resistência aos aminoglicosídeos durante o tratamento"
+                  "Porque aminoglicosídeos são sempre tóxicos e devem ser evitados em qualquer situação",
+                  "Porque aminoglicosídeos apresentam baixa eficácia clínica contra enterococos quando usados isoladamente, sendo necessária combinação com betalactâmicos para efeito bactericida",
+                  "Porque enterococos sempre desenvolvem resistência aos aminoglicosídeos durante o tratamento"
                 ],
                 correct: 1,
                 explanation: "Aminoglicosídeos, quando usados em monoterapia contra enterococos, apresentam apenas efeito bacteriostático e não bactericida, mesmo quando o antibiograma mostra sensibilidade. Isso resulta em alta taxa de falha terapêutica. A eficácia clínica só é alcançada quando aminoglicosídeos são combinados com betalactâmicos (ampicilina ou penicilina), que facilitam a penetração do aminoglicosídeo na célula bacteriana, criando sinergia bactericida. Este é um exemplo importante onde a sensibilidade in vitro não se traduz em eficácia clínica na monoterapia."
@@ -6123,9 +6123,9 @@ const App = () => {
               question: {
                 text: "Por que não devemos comparar CIMs de diferentes antibióticos para escolher o 'melhor' antibiótico contra uma mesma bactéria?",
                 options: [
-                  "A) Porque a CIM mais baixa sempre indica o melhor antibiótico, independentemente da classe",
-                  "B) Porque cada classe de antibiótico tem características farmacocinéticas e farmacodinâmicas próprias, tornando a comparação direta de CIMs inadequada, como comparar atletas em provas diferentes",
-                  "C) Porque a CIM não tem nenhuma utilidade clínica e deve ser ignorada"
+                  "Porque a CIM mais baixa sempre indica o melhor antibiótico, independentemente da classe",
+                  "Porque cada classe de antibiótico tem características farmacocinéticas e farmacodinâmicas próprias, tornando a comparação direta de CIMs inadequada, como comparar atletas em provas diferentes",
+                  "Porque a CIM não tem nenhuma utilidade clínica e deve ser ignorada"
                 ],
                 correct: 1,
                 explanation: "Comparar CIMs de diferentes antibióticos é como comparar tempos de atletas em provas diferentes (100m vs maratona). Cada classe de antibiótico tem características farmacocinéticas (como o corpo processa) e farmacodinâmicas (como age contra a bactéria) únicas. Por exemplo, ciprofloxacino com CIM 0,25 mg/L não é necessariamente 'melhor' que meropenem com CIM 0,5 mg/L - ambos podem ser igualmente eficazes se ambos forem sensíveis. A CIM deve ser usada para comparar com pontos de corte (S/I/R) e para otimização de dose, não para comparação direta entre classes diferentes."
@@ -6218,9 +6218,9 @@ const App = () => {
               question: {
                 text: "Por que nem toda cultura positiva deve ser tratada com antibióticos?",
                 options: [
-                  "A) Porque todas as culturas positivas representam colonização, nunca infecção",
-                  "B) Porque é necessário correlação clínico-laboratorial para diferenciar colonização (presença de microrganismos sem resposta inflamatória) de infecção (com resposta inflamatória e sintomas)",
-                  "C) Porque antibióticos nunca devem ser usados, independentemente dos sintomas"
+                  "Porque todas as culturas positivas representam colonização, nunca infecção",
+                  "Porque é necessário correlação clínico-laboratorial para diferenciar colonização (presença de microrganismos sem resposta inflamatória) de infecção (com resposta inflamatória e sintomas)",
+                  "Porque antibióticos nunca devem ser usados, independentemente dos sintomas"
                 ],
                 correct: 1,
                 explanation: "Nem toda cultura positiva significa infecção. A colonização é a presença de microrganismos sem resposta inflamatória ou sintomas, não requerendo tratamento. Já a infecção envolve resposta inflamatória e manifestações clínicas. Por exemplo, bacteriúria assintomática (urocultura positiva sem sintomas) é colonização e geralmente não deve ser tratada, exceto em gestantes e antes de procedimentos urológicos. A correlação clínico-laboratorial (sintomas + marcadores inflamatórios + imagem + contexto) é essencial para evitar uso desnecessário de antibióticos, que leva a resistência, efeitos adversos e custos."
@@ -6306,9 +6306,9 @@ const App = () => {
               question: {
                 text: "Qual é o padrão oficial de interpretação de antibiograma adotado no Brasil e por que é importante seguí-lo?",
                 options: [
-                  "A) CLSI (padrão americano), porque é o mais usado mundialmente",
-                  "B) BrCAST (baseado no EUCAST europeu), adotado desde 2018, com pontos de corte diferentes do CLSI que podem levar a interpretações distintas para a mesma CIM",
-                  "C) Qualquer padrão pode ser usado, pois todos têm os mesmos pontos de corte"
+                  "CLSI (padrão americano), porque é o mais usado mundialmente",
+                  "BrCAST (baseado no EUCAST europeu), adotado desde 2018, com pontos de corte diferentes do CLSI que podem levar a interpretações distintas para a mesma CIM",
+                  "Qualquer padrão pode ser usado, pois todos têm os mesmos pontos de corte"
                 ],
                 correct: 1,
                 explanation: "O Brasil adotou o BrCAST como padrão oficial em 2018, substituindo o CLSI americano. O BrCAST é baseado no EUCAST europeu e apresenta diferenças importantes: pontos de corte geralmente mais rigorosos, atualização anual (vs bianual do CLSI), e nova interpretação da categoria 'I' (Sensível com aumento de exposição). Por exemplo, E. coli com ciprofloxacino CIM=1 mg/L é 'Sensível' pelo CLSI mas 'Intermediário' pelo BrCAST. Usar o padrão correto é essencial para escolhas terapêuticas adequadas e segurança do paciente."
@@ -7050,30 +7050,30 @@ const App = () => {
             {
               text: "Q47. Por que a categorização S/I/R sozinha pode ser insuficiente para escolha terapêutica em algumas situações?",
               options: [
-                "A) Porque o antibiograma sempre está errado",
-                "B) Porque não considera fatores como gravidade da infecção, localização (ex: SNC), estado imunológico e características PK/PD do antibiótico",
-                "C) Porque todos os antibióticos são iguais",
-                "D) Porque a categoria S significa que qualquer dose funciona"
+                "Porque o antibiograma sempre está errado",
+                "Porque não considera fatores como gravidade da infecção, localização (ex: SNC), estado imunológico e características PK/PD do antibiótico",
+                "Porque todos os antibióticos são iguais",
+                "Porque a categoria S significa que qualquer dose funciona"
               ],
               correct: 1
             },
             {
               text: "Q48. Qual é a diferença fundamental entre colonização e infecção que impacta a decisão de tratar?",
               options: [
-                "A) Colonização sempre requer tratamento antibiótico",
-                "B) Colonização é presença de microrganismos SEM resposta inflamatória/sintomas (não tratar), enquanto infecção tem resposta inflamatória/sintomas (tratar)",
-                "C) Não há diferença, toda cultura positiva deve ser tratada",
-                "D) Infecção nunca requer antibiótico"
+                "Colonização sempre requer tratamento antibiótico",
+                "Colonização é presença de microrganismos SEM resposta inflamatória/sintomas (não tratar), enquanto infecção tem resposta inflamatória/sintomas (tratar)",
+                "Não há diferença, toda cultura positiva deve ser tratada",
+                "Infecção nunca requer antibiótico"
               ],
               correct: 1
             },
             {
               text: "Q49. Por que antibióticos de moléculas grandes como vancomicina e colistina requerem técnica dilucional específica?",
               options: [
-                "A) Porque são muito caros",
-                "B) Porque suas moléculas grandes não difundem adequadamente em métodos convencionais como disco-difusão",
-                "C) Porque são sempre resistentes",
-                "D) Porque não existem pontos de corte para eles"
+                "Porque são muito caros",
+                "Porque suas moléculas grandes não difundem adequadamente em métodos convencionais como disco-difusão",
+                "Porque são sempre resistentes",
+                "Porque não existem pontos de corte para eles"
               ],
               correct: 1
               }
@@ -7624,10 +7624,10 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
               question: {
                 text: "Qual é a principal vantagem de classificar os antibióticos por mecanismo de ação?",
                 options: [
-                  "A) Facilita a memorização dos nomes comerciais",
-                  "B) Ajuda a compreender o espectro de atividade e potenciais efeitos adversos",
-                  "C) Permite prescrever qualquer antibiótico para qualquer infecção",
-                  "D) Torna desnecessário conhecer o sítio de infecção"
+                  "Facilita a memorização dos nomes comerciais",
+                  "Ajuda a compreender o espectro de atividade e potenciais efeitos adversos",
+                  "Permite prescrever qualquer antibiótico para qualquer infecção",
+                  "Torna desnecessário conhecer o sítio de infecção"
                 ],
                 correct: 1
               }
@@ -7672,10 +7672,10 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
               question: {
                 text: "Qual é a principal diferença entre o mecanismo de ação dos β-lactâmicos e dos glicopeptídeos?",
                 options: [
-                  "A) β-lactâmicos atuam nas PBPs enquanto glicopeptídeos ligam-se aos precursores da parede celular",
-                  "B) β-lactâmicos inibem a síntese proteica enquanto glicopeptídeos inibem a parede celular",
-                  "C) Ambos atuam exatamente da mesma forma nas PBPs",
-                  "D) Glicopeptídeos atuam nas PBPs enquanto β-lactâmicos ligam-se aos precursores"
+                  "β-lactâmicos atuam nas PBPs enquanto glicopeptídeos ligam-se aos precursores da parede celular",
+                  "β-lactâmicos inibem a síntese proteica enquanto glicopeptídeos inibem a parede celular",
+                  "Ambos atuam exatamente da mesma forma nas PBPs",
+                  "Glicopeptídeos atuam nas PBPs enquanto β-lactâmicos ligam-se aos precursores"
                 ],
                 correct: 0,
                 explanation: "Embora ambos inibam a síntese da parede celular, os β-lactâmicos atuam ligando-se às PBPs (enzimas que sintetizam o peptidoglicano), enquanto os glicopeptídeos ligam-se diretamente aos precursores da parede celular, bloqueando sua incorporação."
@@ -7721,10 +7721,10 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
               question: {
                 text: "Por que os inibidores da síntese da parede celular apresentam menor toxicidade para as células humanas?",
                 options: [
-                  "A) Porque células humanas não possuem parede celular, tornando o mecanismo seletivo para bactérias",
-                  "B) Porque atuam apenas em bactérias em repouso, sem afetar células humanas",
-                  "C) Porque são rapidamente eliminados pelo fígado antes de causar toxicidade",
-                  "D) Porque as bactérias não desenvolvem resistência a esses antibióticos"
+                  "Porque células humanas não possuem parede celular, tornando o mecanismo seletivo para bactérias",
+                  "Porque atuam apenas em bactérias em repouso, sem afetar células humanas",
+                  "Porque são rapidamente eliminados pelo fígado antes de causar toxicidade",
+                  "Porque as bactérias não desenvolvem resistência a esses antibióticos"
                 ],
                 correct: 0,
                 explanation: "A seletividade dos inibidores da parede celular se deve ao fato de que células humanas não possuem parede celular. Assim, o mecanismo de ação afeta exclusivamente as bactérias, resultando em menor toxicidade para o hospedeiro."
@@ -7769,10 +7769,10 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
               question: {
                 text: "Qual característica estrutural é comum a todos os antibióticos β-lactâmicos?",
                 options: [
-                  "A) Presença do anel β-lactâmico em sua estrutura molecular",
-                  "B) Ausência de toxicidade para bactérias Gram-negativas",
-                  "C) Capacidade de atravessar a barreira hematoencefálica",
-                  "D) Resistência natural às β-lactamases"
+                  "Presença do anel β-lactâmico em sua estrutura molecular",
+                  "Ausência de toxicidade para bactérias Gram-negativas",
+                  "Capacidade de atravessar a barreira hematoencefálica",
+                  "Resistência natural às β-lactamases"
                 ],
                 correct: 0,
                 explanation: "Todos os antibióticos β-lactâmicos (penicilinas, cefalosporinas, carbapenêmicos e monobactâmicos) compartilham a presença do anel β-lactâmico em sua estrutura molecular, que é essencial para seu mecanismo de ação contra as PBPs bacterianas."
@@ -7829,10 +7829,10 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
               question: {
                 text: "Por que as penicilinas naturais apresentam alto grau de resistência atualmente?",
                 options: [
-                  "A) Porque são inativas contra bactérias Gram-positivas",
-                  "B) Porque a presença de β-lactamase é muito frequente nas bactérias",
-                  "C) Porque não são mais produzidas pelo fungo Penicillium",
-                  "D) Porque são rapidamente eliminadas pelo organismo"
+                  "Porque são inativas contra bactérias Gram-positivas",
+                  "Porque a presença de β-lactamase é muito frequente nas bactérias",
+                  "Porque não são mais produzidas pelo fungo Penicillium",
+                  "Porque são rapidamente eliminadas pelo organismo"
                 ],
                 correct: 1,
                 explanation: "As penicilinas naturais apresentam alto grau de resistência porque muitas bactérias desenvolveram a capacidade de produzir β-lactamases, enzimas que degradam o anel β-lactâmico, tornando o antibiótico inativo. Esta é uma das principais limitações do uso clínico das penicilinas naturais."
@@ -7884,10 +7884,10 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
               question: {
                 text: "Qual das seguintes afirmações sobre o espectro das penicilinas naturais está correta?",
                 options: [
-                  "A) Apresentam amplo espectro contra Gram-negativos",
-                  "B) São eficazes contra todos os Gram-positivos, independentemente da produção de β-lactamase",
-                  "C) Tem espectro bastante restrito, sendo ativas principalmente contra Gram-positivos não produtores de β-lactamase como S. pyogenes e T. pallidum",
-                  "D) São a primeira escolha para infecções por bactérias Gram-negativas"
+                  "Apresentam amplo espectro contra Gram-negativos",
+                  "São eficazes contra todos os Gram-positivos, independentemente da produção de β-lactamase",
+                  "Tem espectro bastante restrito, sendo ativas principalmente contra Gram-positivos não produtores de β-lactamase como S. pyogenes e T. pallidum",
+                  "São a primeira escolha para infecções por bactérias Gram-negativas"
                 ],
                 correct: 2,
                 explanation: "As penicilinas naturais têm espectro bastante restrito atualmente. São ativas principalmente contra Gram-positivos não produtores de β-lactamase, como Streptococcus pyogenes (faringite estreptocócica) e Treponema pallidum (sífilis). Apresentam pouca ou nenhuma atividade contra Gram-negativos."
@@ -7948,10 +7948,10 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
               question: {
                 text: "Qual é a penicilina natural mais utilizada atualmente e por quê?",
                 options: [
-                  "A) Penicilina V, porque é de uso oral e mais prática",
-                  "B) Penicilina G Procaína, porque tem ação intermediária ideal",
-                  "C) Penicilina G Benzatina, porque tem ação prolongada (até 4 semanas), sendo a mais usada entre as penicilinas naturais",
-                  "D) Todas são igualmente utilizadas na prática clínica"
+                  "Penicilina V, porque é de uso oral e mais prática",
+                  "Penicilina G Procaína, porque tem ação intermediária ideal",
+                  "Penicilina G Benzatina, porque tem ação prolongada (até 4 semanas), sendo a mais usada entre as penicilinas naturais",
+                  "Todas são igualmente utilizadas na prática clínica"
                 ],
                 correct: 2,
                 explanation: "A Penicilina G Benzatina é a mais utilizada entre as penicilinas naturais devido à sua ação prolongada (até 4 semanas), sendo especialmente útil na profilaxia da febre reumática e no tratamento da sífilis. A Penicilina G Procaína e a Penicilina V têm uso limitado devido à disponibilidade de opções melhores."
@@ -8009,10 +8009,10 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
               question: {
                 text: "Qual é a principal vantagem das aminopenicilinas em relação às penicilinas naturais?",
                 options: [
-                  "A) São resistentes a todas as β-lactamases",
-                  "B) Apresentam espectro ampliado mantendo a atividade das penicilinas naturais e maior biodisponibilidade oral",
-                  "C) Têm ação prolongada de até 4 semanas",
-                  "D) Não causam reações alérgicas"
+                  "São resistentes a todas as β-lactamases",
+                  "Apresentam espectro ampliado mantendo a atividade das penicilinas naturais e maior biodisponibilidade oral",
+                  "Têm ação prolongada de até 4 semanas",
+                  "Não causam reações alérgicas"
                 ],
                 correct: 1,
                 explanation: "As aminopenicilinas representam uma modificação estrutural que amplia o espectro de ação (mantendo a atividade contra Gram-positivos e adicionando cobertura para alguns Gram-negativos) e aumenta a biodisponibilidade oral, especialmente da amoxicilina. Porém, ainda são suscetíveis às β-lactamases."
@@ -8073,10 +8073,10 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
               question: {
                 text: "Qual das seguintes afirmações sobre o espectro das aminopenicilinas está correta?",
                 options: [
-                  "A) São eficazes contra Pseudomonas e Klebsiella",
-                  "B) Cobrem Gram-positivos (estreptococos, enterococos) e alguns Gram-negativos, mas não são ativas contra Pseudomonas, Klebsiella e outros produtores de β-lactamase",
-                  "C) Têm espectro restrito apenas a Gram-positivos",
-                  "D) São resistentes a todas as β-lactamases"
+                  "São eficazes contra Pseudomonas e Klebsiella",
+                  "Cobrem Gram-positivos (estreptococos, enterococos) e alguns Gram-negativos, mas não são ativas contra Pseudomonas, Klebsiella e outros produtores de β-lactamase",
+                  "Têm espectro restrito apenas a Gram-positivos",
+                  "São resistentes a todas as β-lactamases"
                 ],
                 correct: 1,
                 explanation: "As aminopenicilinas apresentam espectro ampliado que cobre Gram-positivos (como estreptococos e enterococos) e alguns Gram-negativos. Porém, não são ativas contra Pseudomonas, Klebsiella e outros microrganismos produtores de β-lactamase, que degradam o antibiótico."
@@ -8129,10 +8129,10 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
               question: {
                 text: "Por que a ampicilina é mais utilizada em contextos hospitalares do que ambulatoriais?",
                 options: [
-                  "A) Porque é mais barata que a amoxicilina",
-                  "B) Porque tem absorção oral inferior à amoxicilina, sendo preferencialmente usada por via intravenosa em infecções graves que exigem alta concentração sérica",
-                  "C) Porque tem espectro mais amplo que a amoxicilina",
-                  "D) Porque é resistente a todas as β-lactamases"
+                  "Porque é mais barata que a amoxicilina",
+                  "Porque tem absorção oral inferior à amoxicilina, sendo preferencialmente usada por via intravenosa em infecções graves que exigem alta concentração sérica",
+                  "Porque tem espectro mais amplo que a amoxicilina",
+                  "Porque é resistente a todas as β-lactamases"
                 ],
                 correct: 1,
                 explanation: "A ampicilina tem absorção oral inferior à amoxicilina, por isso é preferencialmente utilizada por via intravenosa em contextos hospitalares para infecções graves como meningite bacteriana, endocardite, infecções por Listeria e Shigella, e infecções neonatais, onde se necessita de alta concentração sérica."
@@ -8191,10 +8191,10 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
               question: {
                 text: "Qual é a principal vantagem da amoxicilina em relação à ampicilina no contexto ambulatorial?",
                 options: [
-                  "A) Tem espectro mais amplo contra Gram-negativos",
-                  "B) É resistente às β-lactamases",
-                  "C) Tem biodisponibilidade oral muito superior, atingindo níveis séricos mais altos e causando menos efeitos colaterais gastrointestinais",
-                  "D) Pode ser usada em infecções graves como meningite"
+                  "Tem espectro mais amplo contra Gram-negativos",
+                  "É resistente às β-lactamases",
+                  "Tem biodisponibilidade oral muito superior, atingindo níveis séricos mais altos e causando menos efeitos colaterais gastrointestinais",
+                  "Pode ser usada em infecções graves como meningite"
                 ],
                 correct: 2,
                 explanation: "A amoxicilina tem biodisponibilidade oral muito superior à ampicilina, atingindo níveis séricos mais altos quando administrada por via oral. Isso a torna a aminopenicilina de escolha para tratamento ambulatorial de infecções leves a moderadas (amigdalite, sinusite, otite, pneumonia de comunidade, ITU), além de causar menos efeitos colaterais gastrointestinais."
@@ -8254,10 +8254,10 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
               question: {
                 text: "Qual é a principal diferença prática entre ampicilina e amoxicilina que determina seu uso?",
                 options: [
-                  "A) A ampicilina tem espectro mais amplo que a amoxicilina",
-                  "B) A amoxicilina tem melhor absorção oral e menor influência de alimentos, sendo preferida para uso ambulatorial, enquanto a ampicilina é reservada para uso hospitalar venoso",
-                  "C) A ampicilina é resistente às β-lactamases e a amoxicilina não",
-                  "D) Ambas têm exatamente as mesmas indicações e podem ser usadas de forma intercambiável"
+                  "A ampicilina tem espectro mais amplo que a amoxicilina",
+                  "A amoxicilina tem melhor absorção oral e menor influência de alimentos, sendo preferida para uso ambulatorial, enquanto a ampicilina é reservada para uso hospitalar venoso",
+                  "A ampicilina é resistente às β-lactamases e a amoxicilina não",
+                  "Ambas têm exatamente as mesmas indicações e podem ser usadas de forma intercambiável"
                 ],
                 correct: 1,
                 explanation: "A principal diferença prática é que a amoxicilina tem absorção oral muito superior e sofre mínima influência de alimentos, tornando-a ideal para uso ambulatorial em infecções leves a moderadas. Já a ampicilina, com menor absorção oral e maior influência de alimentos, é preferencialmente usada por via intravenosa em contextos hospitalares para infecções graves. Ambas têm espectro semelhante."
@@ -8315,10 +8315,10 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
               question: {
                 text: "Como os inibidores de β-lactamase restauram a eficácia dos antibióticos β-lactâmicos?",
                 options: [
-                  "A) Aumentam a produção de antibiótico pela bactéria",
-                  "B) Ligam-se irreversivelmente às β-lactamases bacterianas, impedindo que degradem o antibiótico e restaurando sua atividade",
-                  "C) Destroem diretamente a parede celular bacteriana",
-                  "D) Impedem a bactéria de se multiplicar"
+                  "Aumentam a produção de antibiótico pela bactéria",
+                  "Ligam-se irreversivelmente às β-lactamases bacterianas, impedindo que degradem o antibiótico e restaurando sua atividade",
+                  "Destroem diretamente a parede celular bacteriana",
+                  "Impedem a bactéria de se multiplicar"
                 ],
                 correct: 1,
                 explanation: "Os inibidores de β-lactamase (como clavulanato e sulbactam) funcionam ligando-se irreversivelmente às β-lactamases bacterianas. Isso impede que essas enzimas degradem o antibiótico β-lactâmico, restaurando sua atividade original. É como um 'contra-contra-míssil' que neutraliza a defesa da bactéria (β-lactamase), permitindo que o antibiótico (míssil) atinja seu alvo."
@@ -8380,10 +8380,10 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
               question: {
                 text: "Qual é a principal vantagem de adicionar um inibidor de β-lactamase à amoxicilina?",
                 options: [
-                  "A) Reduz o custo do tratamento",
-                  "B) Amplia o espectro para bactérias produtoras de β-lactamase, incluindo anaeróbios, tornando-a mais eficaz em infecções mistas e moderadamente graves",
-                  "C) Elimina todos os efeitos colaterais do antibiótico",
-                  "D) Permite uso em infecções virais"
+                  "Reduz o custo do tratamento",
+                  "Amplia o espectro para bactérias produtoras de β-lactamase, incluindo anaeróbios, tornando-a mais eficaz em infecções mistas e moderadamente graves",
+                  "Elimina todos os efeitos colaterais do antibiótico",
+                  "Permite uso em infecções virais"
                 ],
                 correct: 1,
                 explanation: "A adição do inibidor de β-lactamase (clavulanato) à amoxicilina amplia significativamente o espectro antimicrobiano, permitindo cobertura de bactérias produtoras de β-lactamase que seriam resistentes à amoxicilina sozinha. Além disso, é ativo contra anaeróbios e mais eficaz em infecções mistas, tornando-se uma opção versátil para infecções comunitárias moderadamente graves."
@@ -8555,10 +8555,10 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
               question: {
                 text: "Qual das seguintes afirmações sobre as cefalosporinas de 1ª geração está correta?",
                 options: [
-                  "A) São eficazes contra MRSA e enterococos",
-                  "B) Têm melhor atividade contra Gram-positivos, são resistentes a algumas β-lactamases estafilocócicas, mas não são ativas contra MRSA, enterococos, Listeria, Haemophilus, Moraxella e anaeróbios",
-                  "C) São a primeira escolha para infecções por Haemophilus",
-                  "D) Têm ampla cobertura contra anaeróbios"
+                  "São eficazes contra MRSA e enterococos",
+                  "Têm melhor atividade contra Gram-positivos, são resistentes a algumas β-lactamases estafilocócicas, mas não são ativas contra MRSA, enterococos, Listeria, Haemophilus, Moraxella e anaeróbios",
+                  "São a primeira escolha para infecções por Haemophilus",
+                  "Têm ampla cobertura contra anaeróbios"
                 ],
                 correct: 1,
                 explanation: "As cefalosporinas de 1ª geração apresentam melhor atividade contra Gram-positivos e são resistentes a algumas β-lactamases estafilocócicas (vantagem sobre penicilinas naturais). Porém, não são ativas contra MRSA (resistência por alteração de PBPs), enterococos, Listeria, Haemophilus, Moraxella e anaeróbios."
@@ -8631,10 +8631,10 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
               question: {
                 text: "Qual é o principal grupo de microrganismos coberto pelas cefalosporinas de 1ª geração?",
                 options: [
-                  "A) Gram-negativos, incluindo Pseudomonas e Haemophilus",
-                  "B) Gram-positivos como S. aureus (não-MRSA), S. pyogenes e S. pneumoniae, com cobertura limitada para alguns Gram-negativos como E. coli, P. mirabilis e K. pneumoniae",
-                  "C) Anaeróbios e enterococos",
-                  "D) MRSA e Listeria"
+                  "Gram-negativos, incluindo Pseudomonas e Haemophilus",
+                  "Gram-positivos como S. aureus (não-MRSA), S. pyogenes e S. pneumoniae, com cobertura limitada para alguns Gram-negativos como E. coli, P. mirabilis e K. pneumoniae",
+                  "Anaeróbios e enterococos",
+                  "MRSA e Listeria"
                 ],
                 correct: 1,
                 explanation: "As cefalosporinas de 1ª geração têm espectro predominantemente voltado para Gram-positivos (S. aureus não-MRSA, S. pyogenes, S. pneumoniae), com cobertura limitada e variável para alguns Gram-negativos (E. coli, P. mirabilis, K. pneumoniae). Não são ativas contra MRSA, enterococos, Listeria, Haemophilus, Moraxella ou anaeróbios."
@@ -8713,10 +8713,10 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
               question: {
                 text: "Qual é a principal diferença entre as cefalosporinas de 2ª geração e as de 1ª geração?",
                 options: [
-                  "A) A 2ª geração tem melhor atividade contra Gram-positivos",
-                  "B) A 2ª geração tem espectro ampliado para Gram-negativos e maior resistência a β-lactamases, mas atividade geralmente menor contra Gram-positivos",
-                  "C) A 2ª geração é eficaz contra MRSA",
-                  "D) Não há diferenças significativas entre as gerações"
+                  "A 2ª geração tem melhor atividade contra Gram-positivos",
+                  "A 2ª geração tem espectro ampliado para Gram-negativos e maior resistência a β-lactamases, mas atividade geralmente menor contra Gram-positivos",
+                  "A 2ª geração é eficaz contra MRSA",
+                  "Não há diferenças significativas entre as gerações"
                 ],
                 correct: 1,
                 explanation: "As cefalosporinas de 2ª geração apresentam espectro ampliado para Gram-negativos e maior resistência a algumas β-lactamases em comparação com a 1ª geração. Porém, geralmente têm atividade menor contra Gram-positivos (embora ainda significativa), representando um equilíbrio entre as duas coberturas."
@@ -8801,10 +8801,10 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
               question: {
                 text: "Qual é a principal vantagem das cefalosporinas de 2ª geração em infecções respiratórias?",
                 options: [
-                  "A) São eficazes contra MRSA",
-                  "B) Por terem maior resistência a algumas β-lactamases, conseguem atingir Haemophilus influenzae e Moraxella catarrhalis, importantes em infecções respiratórias",
-                  "C) Têm melhor atividade contra Gram-positivos que a 1ª geração",
-                  "D) São ativas contra Pseudomonas aeruginosa"
+                  "São eficazes contra MRSA",
+                  "Por terem maior resistência a algumas β-lactamases, conseguem atingir Haemophilus influenzae e Moraxella catarrhalis, importantes em infecções respiratórias",
+                  "Têm melhor atividade contra Gram-positivos que a 1ª geração",
+                  "São ativas contra Pseudomonas aeruginosa"
                 ],
                 correct: 1,
                 explanation: "As cefalosporinas de 2ª geração têm maior resistência a algumas β-lactamases em comparação com a 1ª geração, permitindo cobertura de Haemophilus influenzae e Moraxella catarrhalis, patógenos frequentemente envolvidos em sinusites, otites médias e exacerbações de DPOC. Isso as torna especialmente úteis em infecções respiratórias."
@@ -8879,10 +8879,10 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
               question: {
                 text: "Quais são as principais vantagens da cefuroxima no tratamento de infecções respiratórias?",
                 options: [
-                  "A) É eficaz contra MRSA e tem posologia de 24/24h",
-                  "B) É resistente a várias β-lactamases, tem boa penetração em tecidos respiratórios e posologia de 12/12h (melhor adesão)",
-                  "C) Tem cobertura para Pseudomonas e anaeróbios",
-                  "D) É mais barata que as penicilinas e tem menor taxa de efeitos adversos"
+                  "É eficaz contra MRSA e tem posologia de 24/24h",
+                  "É resistente a várias β-lactamases, tem boa penetração em tecidos respiratórios e posologia de 12/12h (melhor adesão)",
+                  "Tem cobertura para Pseudomonas e anaeróbios",
+                  "É mais barata que as penicilinas e tem menor taxa de efeitos adversos"
                 ],
                 correct: 1,
                 explanation: "A cefuroxima, principal cefalosporina de 2ª geração no uso ambulatorial, apresenta três vantagens principais: (1) resistência a várias β-lactamases, permitindo cobertura de patógenos resistentes; (2) boa penetração em tecidos respiratórios, atingindo concentrações adequadas; e (3) posologia de 12/12h, facilitando a adesão ao tratamento. Essas características a tornam excelente escolha para sinusites, otites, pneumonias e exacerbações de DPOC."
@@ -9028,10 +9028,10 @@ Razões:
               question: {
                 text: "Qual é o mecanismo de ação dos inibidores da síntese proteica?",
                 options: [
-                  "A) Inibem a síntese da parede celular bacteriana",
-                  "B) Ligam-se aos ribossomos bacterianos (subunidades 30S e 50S), impedindo a síntese proteica essencial para a vida da bactéria",
-                  "C) Destroem a membrana celular bacteriana",
-                  "D) Inibem a replicação do DNA bacteriano"
+                  "Inibem a síntese da parede celular bacteriana",
+                  "Ligam-se aos ribossomos bacterianos (subunidades 30S e 50S), impedindo a síntese proteica essencial para a vida da bactéria",
+                  "Destroem a membrana celular bacteriana",
+                  "Inibem a replicação do DNA bacteriano"
                 ],
                 correct: 1,
                 explanation: "Os inibidores da síntese proteica atuam ligando-se aos ribossomos bacterianos, que possuem duas subunidades (30S e 50S). Diferentes classes de antibióticos atuam em diferentes subunidades: a subunidade 30S (aminoglicosídeos e tetraciclinas) ou a subunidade 50S (macrolídeos, lincosamidas, fenicol e oxazolidinonas). Ao impedir a síntese proteica, esses antibióticos impedem o crescimento e sobrevivência da bactéria."
@@ -9100,10 +9100,10 @@ Razões:
               question: {
                 text: "Quais são as principais classes de inibidores da síntese proteica utilizadas na prática ambulatorial?",
                 options: [
-                  "A) Aminoglicosídeos, Fenicol e Oxazolidinonas",
-                  "B) Macrolídeos (50S), Tetraciclinas (30S) e Lincosamidas (50S)",
-                  "C) Penicilinas, Cefalosporinas e Carbapenemas",
-                  "D) Quinolonas, Sulfonamidas e Trimetoprima"
+                  "Aminoglicosídeos, Fenicol e Oxazolidinonas",
+                  "Macrolídeos (50S), Tetraciclinas (30S) e Lincosamidas (50S)",
+                  "Penicilinas, Cefalosporinas e Carbapenemas",
+                  "Quinolonas, Sulfonamidas e Trimetoprima"
                 ],
                 correct: 1,
                 explanation: "Na prática ambulatorial, as principais classes de inibidores da síntese proteica são: (1) Macrolídeos (50S) - eritromicina, claritromicina, azitromicina, com boa cobertura para Gram-positivos e atípicos; (2) Tetraciclinas (30S) - doxiciclina, minociclina, com amplo espectro incluindo atípicos, anaeróbios e alguns protozoários; e (3) Lincosamidas (50S) - clindamicina, excelente para Gram-positivos e anaeróbios. Esses antibióticos são fundamentais especialmente em pacientes alérgicos aos β-lactâmicos."
@@ -9185,10 +9185,10 @@ Razões:
               question: {
                 text: "Qual é a principal vantagem da boa penetração intracelular dos macrolídeos?",
                 options: [
-                  "A) Permite tratamento de infecções do sistema nervoso central",
-                  "B) Torna-os eficazes contra agentes intracelulares como Chlamydia trachomatis, Mycoplasma pneumoniae e Legionella pneumophila",
-                  "C) Aumenta a resistência a β-lactamases",
-                  "D) Reduz a necessidade de doses múltiplas diárias"
+                  "Permite tratamento de infecções do sistema nervoso central",
+                  "Torna-os eficazes contra agentes intracelulares como Chlamydia trachomatis, Mycoplasma pneumoniae e Legionella pneumophila",
+                  "Aumenta a resistência a β-lactamases",
+                  "Reduz a necessidade de doses múltiplas diárias"
                 ],
                 correct: 1,
                 explanation: "A boa penetração intracelular dos macrolídeos é uma vantagem fundamental, pois permite o tratamento eficaz de agentes intracelulares como Chlamydia trachomatis (infecções genitais), Mycoplasma pneumoniae (pneumonia atípica) e Legionella pneumophila (doença dos legionários). Além disso, os macrolídeos inibem a translocação do ribossomo na subunidade 50S e alguns, como a azitromicina, possuem efeito anti-inflamatório adicional."
@@ -9251,10 +9251,10 @@ Razões:
               question: {
                 text: "Qual é a principal vantagem da azitromicina em relação à eritromicina?",
                 options: [
-                  "A) Tem espectro mais amplo contra Gram-negativos",
-                  "B) Meia-vida longa, dose única diária e menos interações medicamentosas, além de muito menos efeitos gastrointestinais",
-                  "C) É resistente a todas as β-lactamases",
-                  "D) Pode ser usada em infecções do sistema nervoso central"
+                  "Tem espectro mais amplo contra Gram-negativos",
+                  "Meia-vida longa, dose única diária e menos interações medicamentosas, além de muito menos efeitos gastrointestinais",
+                  "É resistente a todas as β-lactamases",
+                  "Pode ser usada em infecções do sistema nervoso central"
                 ],
                 correct: 1,
                 explanation: "A azitromicina apresenta várias vantagens em relação à eritromicina (1ª geração): (1) meia-vida longa permitindo dose única diária, melhorando a adesão; (2) muito menos efeitos gastrointestinais, que são intensos com eritromicina especialmente em adultos; (3) menos interações medicamentosas. A claritromicina também apresenta melhor perfil farmacocinético e menos efeitos GI que a eritromicina, sendo bastante segura quando bem indicada. Ambas (azitromicina e claritromicina) são superponíveis quanto às indicações terapêuticas."
@@ -9335,10 +9335,10 @@ Razões:
               question: {
                 text: "Por que os macrolídeos são considerados drogas estratégicas que complementam os β-lactâmicos?",
                 options: [
-                  "A) Porque são mais potentes que os β-lactâmicos contra Gram-negativos",
-                  "B) Porque tratam bactérias que escapam dos β-lactâmicos, especialmente atípicos intracelulares sem parede celular como Mycoplasma, Chlamydia e Legionella",
-                  "C) Porque são resistentes a todas as β-lactamases",
-                  "D) Porque podem ser usados em infecções do sistema nervoso central"
+                  "Porque são mais potentes que os β-lactâmicos contra Gram-negativos",
+                  "Porque tratam bactérias que escapam dos β-lactâmicos, especialmente atípicos intracelulares sem parede celular como Mycoplasma, Chlamydia e Legionella",
+                  "Porque são resistentes a todas as β-lactamases",
+                  "Porque podem ser usados em infecções do sistema nervoso central"
                 ],
                 correct: 1,
                 explanation: "Os macrolídeos são drogas estratégicas porque, embora não sejam muito potentes, tratam bactérias que escapam dos β-lactâmicos. Em especial, cobrem atípicos intracelulares que não têm parede celular (alvo dos β-lactâmicos): Mycoplasma pneumoniae, Chlamydia pneumoniae, C. trachomatis e Legionella pneumophila. Além disso, cobrem Gram-positivos importantes como S. pneumoniae, S. pyogenes e S. aureus (incluindo MRSA de comunidade). A excelente penetração intracelular dos macrolídeos os torna ideais para esses patógenos."
@@ -9420,10 +9420,10 @@ Razões:
               question: {
                 text: "Por que as tetraciclinas são contraindicadas em crianças menores de 8 anos e gestantes?",
                 options: [
-                  "A) Porque causam resistência bacteriana precoce",
-                  "B) Porque quelam cálcio, prejudicando a formação de ossos e dentes",
-                  "C) Porque não são eficazes nessa faixa etária",
-                  "D) Porque causam efeitos gastrointestinais graves"
+                  "Porque causam resistência bacteriana precoce",
+                  "Porque quelam cálcio, prejudicando a formação de ossos e dentes",
+                  "Porque não são eficazes nessa faixa etária",
+                  "Porque causam efeitos gastrointestinais graves"
                 ],
                 correct: 1,
                 explanation: "As tetraciclinas quelam cálcio, o que pode prejudicar a formação de ossos e dentes em crianças menores de 8 anos e em fetos de gestantes. Por isso, são contraindicadas nessas populações. Além disso, a quelação de cálcio também explica por que a absorção oral é prejudicada por alimentos com cálcio (leite, queijo) e antiácidos. A doxiciclina é o fármaco mais usado ambulatorialmente por ser mais estável e ter melhor perfil farmacocinético."
@@ -9525,10 +9525,10 @@ Razões:
               question: {
                 text: "Para quais infecções a doxiciclina é considerada tratamento prioritário?",
                 options: [
-                  "A) Infecções urinárias por E. coli",
-                  "B) Infecções por Anaplasma, Ehrlichia e Rickettsias (transmitidas por carrapatos)",
-                  "C) Meningite bacteriana por S. pneumoniae",
-                  "D) Infecções de pele por Pseudomonas"
+                  "Infecções urinárias por E. coli",
+                  "Infecções por Anaplasma, Ehrlichia e Rickettsias (transmitidas por carrapatos)",
+                  "Meningite bacteriana por S. pneumoniae",
+                  "Infecções de pele por Pseudomonas"
                 ],
                 correct: 1,
                 explanation: "A doxiciclina é tratamento prioritário para infecções por Anaplasma, Ehrlichia e Rickettsias, que são patógenos transmitidos por carrapatos. Além disso, tem espectro relativamente amplo cobrindo: Gram-positivos (S. pneumoniae, S. aureus incluindo alguns MRSA comunitários), Gram-negativos (H. influenzae), atípicos (Mycoplasma, Chlamydia) e anaeróbios orais. Apesar do espectro amplo, é estratégica e pouco usada no dia a dia ambulatorial, sendo reservada para situações específicas."
@@ -9612,10 +9612,10 @@ Razões:
               question: {
                 text: "Quais são as duas características mais importantes da clindamicina?",
                 options: [
-                  "A) Boa absorção oral e baixo custo",
-                  "B) Excelente penetração óssea e em abscessos, e boa atividade contra anaeróbios (inclusive orais)",
-                  "C) Resistência a β-lactamases e amplo espectro contra Gram-negativos",
-                  "D) Longa meia-vida e dose única diária"
+                  "Boa absorção oral e baixo custo",
+                  "Excelente penetração óssea e em abscessos, e boa atividade contra anaeróbios (inclusive orais)",
+                  "Resistência a β-lactamases e amplo espectro contra Gram-negativos",
+                  "Longa meia-vida e dose única diária"
                 ],
                 correct: 1,
                 explanation: "As duas características mais importantes da clindamicina são: (1) excelente penetração óssea e em abscessos, tornando-a ideal para osteomielite e abscessos profundos; (2) boa atividade contra anaeróbios, incluindo anaeróbios orais, sendo muito útil em infecções odontogênicas. A clindamicina é o único representante das lincosamidas em uso e está disponível em múltiplas vias de administração (oral, IV, IM e tópica), aumentando sua versatilidade clínica."
@@ -9692,10 +9692,10 @@ Razões:
               question: {
                 text: "Por que a clindamicina é considerada uma excelente opção para infecções odontogênicas?",
                 options: [
-                  "A) Porque tem amplo espectro contra Gram-negativos",
-                  "B) Porque tem excelente atividade contra anaeróbios orais e cobre Gram-positivos, disputando com amoxicilina/clavulanato como primeira escolha",
-                  "C) Porque é resistente a todas as β-lactamases",
-                  "D) Porque tem longa meia-vida e dose única diária"
+                  "Porque tem amplo espectro contra Gram-negativos",
+                  "Porque tem excelente atividade contra anaeróbios orais e cobre Gram-positivos, disputando com amoxicilina/clavulanato como primeira escolha",
+                  "Porque é resistente a todas as β-lactamases",
+                  "Porque tem longa meia-vida e dose única diária"
                 ],
                 correct: 1,
                 explanation: "A clindamicina é excelente para infecções odontogênicas devido à sua excelente atividade contra anaeróbios orais (que são os principais causadores dessas infecções) e boa cobertura de Gram-positivos (S. aureus, S. pyogenes, S. pneumoniae). Disputa com amoxicilina/clavulanato como primeira escolha para essas infecções. Além disso, é uma excelente opção para infecções por MRSA (Staphylococcus aureus resistente à oxacilina), incluindo cepas produtoras de β-lactamase."
@@ -9765,10 +9765,10 @@ Razões:
               question: {
                 text: "Qual é o principal alvo das quinolonas no mecanismo de ação antibacteriano?",
                 options: [
-                  "A) RNA polimerase bacteriana, bloqueando a síntese de RNA",
-                  "B) DNA girase e topoisomerase IV, impedindo o superenovelamento do DNA",
-                  "C) Ribossomos bacterianos, inibindo a síntese proteica",
-                  "D) Parede celular bacteriana, impedindo sua síntese"
+                  "RNA polimerase bacteriana, bloqueando a síntese de RNA",
+                  "DNA girase e topoisomerase IV, impedindo o superenovelamento do DNA",
+                  "Ribossomos bacterianos, inibindo a síntese proteica",
+                  "Parede celular bacteriana, impedindo sua síntese"
                 ],
                 correct: 1,
                 explanation: "As quinolonas atuam inibindo a DNA girase e a topoisomerase IV, enzimas essenciais para o superenovelamento do DNA bacteriano durante a replicação. Esse mecanismo impede a replicação do DNA bacteriano, levando à morte celular. As rifamicinas inibem a RNA polimerase (opção A), e os nitrofuranos formam metabólitos reativos que danificam o DNA diretamente."
@@ -9842,10 +9842,10 @@ Razões:
               question: {
                 text: "Qual característica dos inibidores da síntese de ácido nucleico, especialmente as quinolonas, os torna particularmente úteis em diversas condições clínicas?",
                 options: [
-                  "A) Baixo custo e disponibilidade em todas as unidades de saúde",
-                  "B) Excelente penetração tissular e intracelular, além de serem drogas potentes e de amplo espectro",
-                  "C) Ausência completa de efeitos adversos e contraindicações",
-                  "D) Ação exclusiva contra bactérias Gram-positivas"
+                  "Baixo custo e disponibilidade em todas as unidades de saúde",
+                  "Excelente penetração tissular e intracelular, além de serem drogas potentes e de amplo espectro",
+                  "Ausência completa de efeitos adversos e contraindicações",
+                  "Ação exclusiva contra bactérias Gram-positivas"
                 ],
                 correct: 1,
                 explanation: "Os inibidores da síntese de ácido nucleico, particularmente as quinolonas, são drogas potentes e de amplo espectro com excelente penetração tissular e intracelular. Essas características permitem que sejam usadas em várias condições clínicas diversas, desde infecções urinárias até infecções respiratórias, intra-abdominais e de tecidos profundos. A excelente penetração intracelular também as torna úteis para infecções causadas por patógenos intracelulares."
@@ -9946,10 +9946,10 @@ Razões:
               question: {
                 text: "Qual é a principal diferença entre as gerações de quinolonas em termos de espectro de ação?",
                 options: [
-                  "A) Todas as gerações têm o mesmo espectro, variando apenas a potência",
-                  "B) A evolução das gerações ampliou progressivamente o espectro: da 1ª geração (limitada a ITU) até a 4ª geração (cobertura de anaeróbios)",
-                  "C) As gerações mais antigas têm espectro mais amplo que as mais recentes",
-                  "D) Apenas a 1ª geração tem atividade bactericida"
+                  "Todas as gerações têm o mesmo espectro, variando apenas a potência",
+                  "A evolução das gerações ampliou progressivamente o espectro: da 1ª geração (limitada a ITU) até a 4ª geração (cobertura de anaeróbios)",
+                  "As gerações mais antigas têm espectro mais amplo que as mais recentes",
+                  "Apenas a 1ª geração tem atividade bactericida"
                 ],
                 correct: 1,
                 explanation: "A evolução das quinolonas ao longo das gerações resultou em ampliação progressiva do espectro de ação: a 1ª geração (ácido nalidíxico) tinha uso limitado a ITU; a 2ª geração (norfloxacino, ciprofloxacino) ampliou para Gram-negativos; a 3ª geração (levofloxacino) melhorou a cobertura de Gram-positivos e atípicos; e a 4ª geração (moxifloxacino) ampliou para anaeróbios. Todas as gerações são bactericidas e compartilham características gerais como boa biodisponibilidade oral e excelente penetração tissular."
@@ -10040,10 +10040,10 @@ Razões:
               question: {
                 text: "Qual é a conduta adequada em relação aos efeitos adversos das quinolonas?",
                 options: [
-                  "A) Evitar sempre o uso de quinolonas devido aos efeitos adversos graves e irreversíveis",
-                  "B) Não abrir mão das quinolonas quando forem amplamente vantajosas, pois os efeitos adversos são reversíveis, mas aconselhar pacientes a observarem sintomas como dor em tendões",
-                  "C) Usar quinolonas sem restrições, pois os efeitos adversos são raros e não requerem monitoramento",
-                  "D) Prescrever quinolonas apenas em ambiente hospitalar devido ao risco de efeitos adversos"
+                  "Evitar sempre o uso de quinolonas devido aos efeitos adversos graves e irreversíveis",
+                  "Não abrir mão das quinolonas quando forem amplamente vantajosas, pois os efeitos adversos são reversíveis, mas aconselhar pacientes a observarem sintomas como dor em tendões",
+                  "Usar quinolonas sem restrições, pois os efeitos adversos são raros e não requerem monitoramento",
+                  "Prescrever quinolonas apenas em ambiente hospitalar devido ao risco de efeitos adversos"
                 ],
                 correct: 1,
                 explanation: "A conduta adequada é não abrir mão das quinolonas quando elas forem amplamente vantajosas, pois apesar dos efeitos adversos relevantes (tendinopatias, prolongamento do QT, neuropatia periférica, fotossensibilidade e alterações no SNC), esses efeitos são reversíveis uma vez retirada a medicação. No entanto, é importante ficar atento e aconselhar os pacientes a observarem sintomas como dor em tendões. As quinolonas são drogas extremamente úteis e seu uso não deve ser evitado quando indicado, mas requer monitoramento adequado."
@@ -10120,10 +10120,10 @@ Razões:
               question: {
                 text: "Por que as quinolonas são contraindicadas em pacientes com miastenia gravis?",
                 options: [
-                  "A) Porque causam fotossensibilidade grave nesses pacientes",
-                  "B) Porque podem ocasionar piora clínica, assim como os aminoglicosídeos",
-                  "C) Porque aumentam o risco de ruptura de tendão de Aquiles",
-                  "D) Porque não têm boa biodisponibilidade oral em pacientes com miastenia"
+                  "Porque causam fotossensibilidade grave nesses pacientes",
+                  "Porque podem ocasionar piora clínica, assim como os aminoglicosídeos",
+                  "Porque aumentam o risco de ruptura de tendão de Aquiles",
+                  "Porque não têm boa biodisponibilidade oral em pacientes com miastenia"
                 ],
                 correct: 1,
                 explanation: "As quinolonas são contraindicadas em pacientes com miastenia gravis porque podem ocasionar piora clínica da doença, assim como os aminoglicosídeos. Ambas as classes de antibióticos podem interferir na transmissão neuromuscular, agravando os sintomas da miastenia gravis. As outras contraindicações importantes incluem crianças e adolescentes em crescimento (embora o uso tenha sido paulatinamente liberado quando não há opções), gestantes e lactantes, e pacientes com histórico de tendinopatia por quinolonas."
@@ -10220,10 +10220,10 @@ Razões:
               question: {
                 text: "Qual geração de quinolonas tem excelente atividade contra atípicos e também adiciona cobertura de anaeróbios?",
                 options: [
-                  "A) 2ª geração (norfloxacino, ciprofloxacino)",
-                  "B) 3ª geração (levofloxacino)",
-                  "C) 4ª geração (moxifloxacino)",
-                  "D) 1ª geração (ácido nalidíxico)"
+                  "2ª geração (norfloxacino, ciprofloxacino)",
+                  "3ª geração (levofloxacino)",
+                  "4ª geração (moxifloxacino)",
+                  "1ª geração (ácido nalidíxico)"
                 ],
                 correct: 2,
                 explanation: "A 4ª geração de quinolonas (moxifloxacino) tem excelente atividade contra Gram-positivos e atípicos, além de adicionar boa cobertura de anaeróbios. A 2ª geração tem excelente atividade contra Gram-negativos mas limitada contra Gram-positivos e atípicos. A 3ª geração tem excelente atividade contra atípicos, muito boa contra Gram-negativos e boa contra Gram-positivos, mas não cobre anaeróbios. A 1ª geração está praticamente fora de uso."
@@ -10323,10 +10323,10 @@ Razões:
               question: {
                 text: "Qual é a principal limitação do ciprofloxacino (2ª geração) em relação ao espectro de ação?",
                 options: [
-                  "A) Não tem atividade contra Pseudomonas aeruginosa",
-                  "B) Não é ativo contra estreptococos, apesar de ter excelente atividade contra Gram-negativos",
-                  "C) Não tem atividade contra enterobactérias",
-                  "D) Não tem atividade contra Staphylococcus aureus"
+                  "Não tem atividade contra Pseudomonas aeruginosa",
+                  "Não é ativo contra estreptococos, apesar de ter excelente atividade contra Gram-negativos",
+                  "Não tem atividade contra enterobactérias",
+                  "Não tem atividade contra Staphylococcus aureus"
                 ],
                 correct: 1,
                 explanation: "A principal limitação do ciprofloxacino (2ª geração) é que não é ativo contra estreptococos, apesar de ter excelente atividade contra Gram-negativos. O ciprofloxacino tem excelente atividade contra enterobactérias (E. coli, Klebsiella, Proteus, Enterobacter), Salmonella, Shigella, Campylobacter e é a melhor opção contra Pseudomonas aeruginosa dentre as quinolonas. Tem atividade limitada contra Gram-positivos, cobrindo apenas Staphylococcus aureus, mas não estreptococos."
@@ -10403,10 +10403,10 @@ Razões:
               question: {
                 text: "Por que as quinolonas de 2ª geração são particularmente úteis para infecções de próstata e ósseas?",
                 options: [
-                  "A) Porque têm atividade específica contra anaeróbios",
-                  "B) Porque a farmacocinética das quinolonas favorece muito a penetração nesses tecidos de difícil acesso para muitas moléculas",
-                  "C) Porque são as únicas drogas ativas contra Gram-positivos",
-                  "D) Porque têm excelente atividade contra estreptococos"
+                  "Porque têm atividade específica contra anaeróbios",
+                  "Porque a farmacocinética das quinolonas favorece muito a penetração nesses tecidos de difícil acesso para muitas moléculas",
+                  "Porque são as únicas drogas ativas contra Gram-positivos",
+                  "Porque têm excelente atividade contra estreptococos"
                 ],
                 correct: 1,
                 explanation: "As quinolonas de 2ª geração são particularmente úteis para infecções de próstata e ósseas porque a farmacocinética das quinolonas favorece muito a penetração nesses tecidos de difícil acesso para muitas outras moléculas. Essa excelente penetração tecidual, além da boa biodisponibilidade oral e atividade contra Gram-negativos, torna as quinolonas excelentes para ITU (complicada e não complicada), gastroenterite bacteriana, prostatite, infecções ósseas e infecções por Pseudomonas (ciprofloxacino)."
@@ -10491,10 +10491,10 @@ Razões:
               question: {
                 text: "Qual é a principal vantagem da 3ª geração de quinolonas em relação à 2ª geração?",
                 options: [
-                  "A) Melhor atividade contra Pseudomonas aeruginosa",
-                  "B) Excelente atividade contra patógenos atípicos e melhor atividade contra Gram-positivos, mantendo boa atividade contra Gram-negativos",
-                  "C) Atividade contra anaeróbios",
-                  "D) Menor risco de efeitos adversos"
+                  "Melhor atividade contra Pseudomonas aeruginosa",
+                  "Excelente atividade contra patógenos atípicos e melhor atividade contra Gram-positivos, mantendo boa atividade contra Gram-negativos",
+                  "Atividade contra anaeróbios",
+                  "Menor risco de efeitos adversos"
                 ],
                 correct: 1,
                 explanation: "A principal vantagem da 3ª geração de quinolonas (levofloxacino) em relação à 2ª geração é a excelente atividade contra patógenos atípicos e melhor atividade contra Gram-positivos, mantendo boa atividade contra Gram-negativos. Com a evolução das moléculas, foi-se ganhando espectro de ação. O levofloxacino é o isômero ativo do ofloxacino e é duas vezes mais potente. A atividade contra anaeróbios é característica da 4ª geração (moxifloxacino)."
@@ -10594,10 +10594,10 @@ Razões:
               question: {
                 text: "Por que o levofloxacino (3ª geração) é conhecido como 'quinolona respiratória'?",
                 options: [
-                  "A) Porque tem melhor atividade contra Pseudomonas aeruginosa que o ciprofloxacino",
-                  "B) Porque tem ganho de atividade contra estreptococos e atípicos respiratórios (Mycoplasma, Chlamydia, Legionella)",
-                  "C) Porque é a única quinolona com atividade contra anaeróbios",
-                  "D) Porque tem atividade exclusiva contra Staphylococcus aureus"
+                  "Porque tem melhor atividade contra Pseudomonas aeruginosa que o ciprofloxacino",
+                  "Porque tem ganho de atividade contra estreptococos e atípicos respiratórios (Mycoplasma, Chlamydia, Legionella)",
+                  "Porque é a única quinolona com atividade contra anaeróbios",
+                  "Porque tem atividade exclusiva contra Staphylococcus aureus"
                 ],
                 correct: 1,
                 explanation: "O levofloxacino (3ª geração) é conhecido como 'quinolona respiratória' porque tem ganho de atividade contra estreptococos (incluindo S. pneumoniae resistente à penicilina) e atípicos respiratórios (Mycoplasma pneumoniae, Chlamydia pneumoniae, Legionella pneumophila). Essa combinação de cobertura é ideal para infecções respiratórias. Em compensação, tem menor atividade contra Pseudomonas em comparação com o ciprofloxacino. A atividade contra anaeróbios é característica da 4ª geração (moxifloxacino)."
@@ -10683,10 +10683,10 @@ Razões:
               question: {
                 text: "Qual é a principal diferença de foco entre a 2ª e a 3ª geração de quinolonas?",
                 options: [
-                  "A) A 2ª geração foca em infecções respiratórias e a 3ª geração em infecções urinárias",
-                  "B) A 2ª geração foca predominantemente em via urinária e a 3ª geração mira a via respiratória",
-                  "C) Ambas têm o mesmo foco em infecções urinárias",
-                  "D) A 2ª geração foca em anaeróbios e a 3ª geração em Gram-positivos"
+                  "A 2ª geração foca em infecções respiratórias e a 3ª geração em infecções urinárias",
+                  "A 2ª geração foca predominantemente em via urinária e a 3ª geração mira a via respiratória",
+                  "Ambas têm o mesmo foco em infecções urinárias",
+                  "A 2ª geração foca em anaeróbios e a 3ª geração em Gram-positivos"
                 ],
                 correct: 1,
                 explanation: "A principal diferença de foco entre as gerações é que a 2ª geração (ciprofloxacino, norfloxacino) tem foco predominantemente em via urinária (ITU, prostatite), enquanto a 3ª geração (levofloxacino) mira a via respiratória, sendo conhecida como 'quinolona respiratória'. As principais indicações da 3ª geração incluem pneumonia adquirida na comunidade, exacerbação de DPOC, sinusite bacteriana aguda, ITU complicada e infecções por patógenos respiratórios resistentes."
@@ -10749,10 +10749,10 @@ Razões:
               question: {
                 text: "Qual é o principal diferencial da 4ª geração de quinolonas (moxifloxacino) em relação às gerações anteriores?",
                 options: [
-                  "A) Melhor atividade contra Pseudomonas aeruginosa",
-                  "B) Atividade contra anaeróbios, além de manter amplo espectro contra Gram-positivos e atípicos",
-                  "C) Única quinolona com atividade contra Gram-negativos",
-                  "D) Menor risco de efeitos adversos"
+                  "Melhor atividade contra Pseudomonas aeruginosa",
+                  "Atividade contra anaeróbios, além de manter amplo espectro contra Gram-positivos e atípicos",
+                  "Única quinolona com atividade contra Gram-negativos",
+                  "Menor risco de efeitos adversos"
                 ],
                 correct: 1,
                 explanation: "O principal diferencial da 4ª geração de quinolonas (moxifloxacino) é a atividade contra anaeróbios, além de manter amplo espectro com potente atividade contra Gram-positivos e excelente atividade contra patógenos atípicos. Essa adição da cobertura de anaeróbios é o que diferencia a 4ª geração das anteriores. Em compensação, tem menor atividade contra Pseudomonas que o ciprofloxacino."
@@ -10850,10 +10850,10 @@ Razões:
               question: {
                 text: "Por que o moxifloxacino (4ª geração) deve ser evitado para tratar bactérias que as gerações anteriores possam cuidar?",
                 options: [
-                  "A) Porque tem mais efeitos adversos que as outras gerações",
-                  "B) Porque pelo seu perfil mais amplo, deve-se preservá-lo, e algumas vezes as gerações anteriores têm até melhor eficácia (ex: ciprofloxacino para P. aeruginosa)",
-                  "C) Porque não tem atividade contra Gram-positivos",
-                  "D) Porque é contraindicado em infecções respiratórias"
+                  "Porque tem mais efeitos adversos que as outras gerações",
+                  "Porque pelo seu perfil mais amplo, deve-se preservá-lo, e algumas vezes as gerações anteriores têm até melhor eficácia (ex: ciprofloxacino para P. aeruginosa)",
+                  "Porque não tem atividade contra Gram-positivos",
+                  "Porque é contraindicado em infecções respiratórias"
                 ],
                 correct: 1,
                 explanation: "O moxifloxacino (4ª geração) deve ser evitado para tratar bactérias que as gerações anteriores possam cuidar porque, pelo seu perfil mais amplo (incluindo anaeróbios), deve-se preservá-lo para situações que realmente necessitem dessa cobertura. Além disso, algumas vezes as gerações anteriores têm até melhor eficácia para patógenos específicos, como o ciprofloxacino para Pseudomonas aeruginosa. Esse é um princípio de economia antimicrobiana."
@@ -10941,10 +10941,10 @@ Razões:
               question: {
                 text: "Qual é o diferencial da 4ª geração de quinolonas (moxifloxacino) que permite sua indicação para infecções abdominais não urinárias?",
                 options: [
-                  "A) Melhor atividade contra Pseudomonas aeruginosa",
-                  "B) Efeito em anaeróbios, além do melhor perfil contra Gram-positivos e excelente cobertura de atípicos",
-                  "C) Única quinolona com atividade contra Gram-negativos",
-                  "D) Menor custo em comparação com outras quinolonas"
+                  "Melhor atividade contra Pseudomonas aeruginosa",
+                  "Efeito em anaeróbios, além do melhor perfil contra Gram-positivos e excelente cobertura de atípicos",
+                  "Única quinolona com atividade contra Gram-negativos",
+                  "Menor custo em comparação com outras quinolonas"
                 ],
                 correct: 1,
                 explanation: "O diferencial da 4ª geração de quinolonas (moxifloxacino) que permite sua indicação para infecções abdominais não urinárias (infecções intra-abdominais) é o efeito em anaeróbios, além de possuir o melhor perfil de atividade contra Gram-positivos entre todas as gerações e manter excelente cobertura para patógenos atípicos. As outras indicações incluem infecções respiratórias por patógenos resistentes e sinusite bacteriana complicada."
@@ -11015,10 +11015,10 @@ Razões:
               question: {
                 text: "Por que os nitrofuranos têm menor desenvolvimento de resistência bacteriana?",
                 options: [
-                  "A) Porque são usados apenas para infecções urinárias",
-                  "B) Porque possuem múltiplos mecanismos de ação, o que dificulta o desenvolvimento de resistência",
-                  "C) Porque são antibióticos naturais",
-                  "D) Porque têm baixa biodisponibilidade oral"
+                  "Porque são usados apenas para infecções urinárias",
+                  "Porque possuem múltiplos mecanismos de ação, o que dificulta o desenvolvimento de resistência",
+                  "Porque são antibióticos naturais",
+                  "Porque têm baixa biodisponibilidade oral"
                 ],
                 correct: 1,
                 explanation: "Os nitrofuranos têm menor desenvolvimento de resistência bacteriana porque possuem múltiplos mecanismos de ação, o que dificulta o desenvolvimento de resistência. São antibióticos sintéticos que danificam o DNA bacteriano. Seu uso é exclusivo para infecções urinárias, e a nitrofurantoína é a única com uso clínico significativo."
@@ -11126,10 +11126,10 @@ Razões:
               question: {
                 text: "Por que o uso de nitrofurantoína para bactérias diferentes de E. coli deve ser feito com cautela?",
                 options: [
-                  "A) Porque a nitrofurantoína não tem atividade contra outras bactérias",
-                  "B) Porque no BrCAST há ponto de corte apenas para E. coli, tornando o uso em outras bactérias menos validado",
-                  "C) Porque a nitrofurantoína é tóxica para pacientes com infecções por outras bactérias",
-                  "D) Porque a nitrofurantoína só pode ser usada em ITU complicada"
+                  "Porque a nitrofurantoína não tem atividade contra outras bactérias",
+                  "Porque no BrCAST há ponto de corte apenas para E. coli, tornando o uso em outras bactérias menos validado",
+                  "Porque a nitrofurantoína é tóxica para pacientes com infecções por outras bactérias",
+                  "Porque a nitrofurantoína só pode ser usada em ITU complicada"
                 ],
                 correct: 1,
                 explanation: "O uso de nitrofurantoína para bactérias diferentes de E. coli deve ser feito com cautela porque no BrCAST há ponto de corte apenas para E. coli, tornando o uso em outras bactérias menos validado clinicamente. Embora a nitrofurantoína tenha atividade in vitro contra outras enterobactérias (Klebsiella, Enterobacter, Citrobacter) e alguns Gram-positivos (S. saprophyticus, E. faecalis), a ausência de pontos de corte estabelecidos indica falta de evidências clínicas robustas para essas indicações. A nitrofurantoína não é ativa contra Proteus, Pseudomonas, Serratia e Morganella."
@@ -11249,10 +11249,10 @@ Razões:
               question: {
                 text: "Qual é a diferença entre o mecanismo de ação das sulfonamidas e da trimetoprima?",
                 options: [
-                  "A) Ambas inibem a mesma enzima (di-hidrofolato redutase)",
-                  "B) As sulfonamidas inibem a di-hidropteroato sintase (bloqueando PABA → ácido diidropteroico) e a trimetoprima inibe a di-hidrofolato redutase (bloqueando di-hidrofolato → tetra-hidrofolato)",
-                  "C) As sulfonamidas bloqueiam a síntese de DNA diretamente e a trimetoprima bloqueia a síntese de RNA",
-                  "D) Ambas inibem a di-hidropteroato sintase em etapas diferentes"
+                  "Ambas inibem a mesma enzima (di-hidrofolato redutase)",
+                  "As sulfonamidas inibem a di-hidropteroato sintase (bloqueando PABA → ácido diidropteroico) e a trimetoprima inibe a di-hidrofolato redutase (bloqueando di-hidrofolato → tetra-hidrofolato)",
+                  "As sulfonamidas bloqueiam a síntese de DNA diretamente e a trimetoprima bloqueia a síntese de RNA",
+                  "Ambas inibem a di-hidropteroato sintase em etapas diferentes"
                 ],
                 correct: 1,
                 explanation: "A diferença entre o mecanismo de ação das sulfonamidas e da trimetoprima está nas enzimas que cada uma inibe na via do folato. As sulfonamidas inibem a di-hidropteroato sintase, bloqueando a conversão de PABA em ácido diidropteroico (etapa inicial). Já a trimetoprima inibe a di-hidrofolato redutase, bloqueando a conversão de di-hidrofolato em tetra-hidrofolato (etapa posterior). Ambas bloqueiam a síntese de folato, essencial para a produção de purinas e pirimidinas (DNA e RNA bacteriano)."
@@ -11346,10 +11346,10 @@ Razões:
               question: {
                 text: "Por que as sulfas (sulfonamidas) são bacteriostáticas isoladamente mas bactericidas em combinação?",
                 options: [
-                  "A) Porque isoladamente têm baixa biodisponibilidade oral",
-                  "B) Porque apresentam efeito sinérgico quando usadas em combinação (geralmente com trimetoprima), bloqueando a via do folato em etapas diferentes",
-                  "C) Porque a combinação aumenta a penetração tecidual",
-                  "D) Porque isoladamente não atingem a próstata"
+                  "Porque isoladamente têm baixa biodisponibilidade oral",
+                  "Porque apresentam efeito sinérgico quando usadas em combinação (geralmente com trimetoprima), bloqueando a via do folato em etapas diferentes",
+                  "Porque a combinação aumenta a penetração tecidual",
+                  "Porque isoladamente não atingem a próstata"
                 ],
                 correct: 1,
                 explanation: "As sulfas são bacteriostáticas isoladamente mas bactericidas em combinação porque apresentam efeito sinérgico quando usadas em combinação (geralmente com trimetoprima), bloqueando a via do folato em etapas diferentes. As sulfonamidas inibem a di-hidropteroato sintase (PABA → ácido diidropteroico) e a trimetoprima inibe a di-hidrofolato redutase (di-hidrofolato → tetra-hidrofolato). Essa dupla inibição sequencial na via do folato resulta em efeito bactericida. As sulfas foram os primeiros antibióticos comercialmente usados e se mantêm úteis até hoje devido ao baixo custo, eficácia e excelente biodisponibilidade oral, apesar da resistência crescente em infecções comunitárias."
@@ -11469,10 +11469,10 @@ Razões:
               question: {
                 text: "Por que a combinação de sulfametoxazol com trimetoprima (cotrimoxazol) é mais eficaz que cada droga isoladamente?",
                 options: [
-                  "A) Porque aumenta a biodisponibilidade oral de ambas as drogas",
-                  "B) Porque a combinação sinérgica bloqueia duas etapas da síntese de folato, impedindo a produção de DNA e proteínas bacterianas, resultando em efeito bactericida",
-                  "C) Porque reduz os efeitos adversos de cada droga",
-                  "D) Porque aumenta a penetração no sistema nervoso central"
+                  "Porque aumenta a biodisponibilidade oral de ambas as drogas",
+                  "Porque a combinação sinérgica bloqueia duas etapas da síntese de folato, impedindo a produção de DNA e proteínas bacterianas, resultando em efeito bactericida",
+                  "Porque reduz os efeitos adversos de cada droga",
+                  "Porque aumenta a penetração no sistema nervoso central"
                 ],
                 correct: 1,
                 explanation: "A combinação de sulfametoxazol com trimetoprima (cotrimoxazol) é mais eficaz porque a combinação sinérgica bloqueia duas etapas da síntese de folato. O sulfametoxazol inibe a di-hidropteroato sintase (bloqueando PABA → ácido diidropteroico) e a trimetoprima inibe a di-hidrofolato redutase (bloqueando di-hidrofolato → tetra-hidrofolato). Esse duplo bloqueio sequencial impede a produção de DNA e proteínas bacterianas, inviabilizando a bactéria e resultando em efeito bactericida, diferentemente do efeito bacteriostático de cada droga isoladamente."
@@ -11601,10 +11601,10 @@ Razões:
               question: {
                 text: "Qual é a principal vantagem do cotrimoxazol (sulfametoxazol + trimetoprima) para o tratamento de prostatite?",
                 options: [
-                  "A) Porque tem atividade exclusiva contra Pseudomonas aeruginosa",
-                  "B) Porque tem excelente penetração em próstata, viabilizando seu uso na infecção desse órgão",
-                  "C) Porque é a droga mais eficaz contra infecções graves",
-                  "D) Porque não tem resistência bacteriana"
+                  "Porque tem atividade exclusiva contra Pseudomonas aeruginosa",
+                  "Porque tem excelente penetração em próstata, viabilizando seu uso na infecção desse órgão",
+                  "Porque é a droga mais eficaz contra infecções graves",
+                  "Porque não tem resistência bacteriana"
                 ],
                 correct: 1,
                 explanation: "A principal vantagem do cotrimoxazol para o tratamento de prostatite é que tem excelente penetração em próstata, viabilizando seu uso na infecção desse órgão. A próstata é um tecido de difícil penetração para muitos antibióticos, mas o cotrimoxazol atinge bons níveis teciduais nesse órgão. O cotrimoxazol é ideal para uso ambulatorial, cobrindo Gram-negativos (E. coli, Klebsiella, Enterobacter, Proteus, Salmonella, Shigella, H. influenzae) e Gram-positivos (S. pneumoniae, S. pyogenes, S. aureus incluindo alguns MRSA comunitários), mas é pouco eficaz contra infecções graves."
@@ -11720,10 +11720,10 @@ Razões:
               question: {
                 text: "Qual é a principal diferença entre metronidazol e clindamicina em relação ao espectro de ação contra anaeróbios?",
                 options: [
-                  "A) Metronidazol é eficaz contra anaeróbios de boca e clindamicina contra anaeróbios abdominais",
-                  "B) Metronidazol é importante para anaeróbios abdominais (diverticulite, abscessos) enquanto clindamicina trata predominantemente anaeróbios de boca (infecções odontogênicas)",
-                  "C) Ambos têm o mesmo espectro de ação contra anaeróbios",
-                  "D) Metronidazol não tem atividade contra anaeróbios"
+                  "Metronidazol é eficaz contra anaeróbios de boca e clindamicina contra anaeróbios abdominais",
+                  "Metronidazol é importante para anaeróbios abdominais (diverticulite, abscessos) enquanto clindamicina trata predominantemente anaeróbios de boca (infecções odontogênicas)",
+                  "Ambos têm o mesmo espectro de ação contra anaeróbios",
+                  "Metronidazol não tem atividade contra anaeróbios"
                 ],
                 correct: 1,
                 explanation: "A principal diferença entre metronidazol e clindamicina em relação ao espectro de ação contra anaeróbios é que o metronidazol é importante para anaeróbios abdominais (usado em diverticulite, abscessos intra-abdominais e infecções ginecológicas) enquanto a clindamicina trata predominantemente anaeróbios de boca (infecções odontogênicas). O metronidazol também é excelente para protozoários (Giardia, Trichomonas). Essa diferença de espectro é importante para a escolha adequada do antibiótico conforme o sítio de infecção."
@@ -11824,10 +11824,10 @@ Razões:
               question: {
                 text: "Por que a mupirocina é usada para infecções de pele pequenas?",
                 options: [
-                  "A) Porque tem excelente biodisponibilidade oral",
-                  "B) Porque é eficaz contra bactérias Gram-negativas",
-                  "C) Porque permite tratar infecções de pele pequenas sem necessidade de antibioticoterapia sistêmica, reduzindo efeitos adversos e resistência bacteriana",
-                  "D) Porque inibe a síntese de ácido nucleico bacteriano"
+                  "Porque tem excelente biodisponibilidade oral",
+                  "Porque é eficaz contra bactérias Gram-negativas",
+                  "Porque permite tratar infecções de pele pequenas sem necessidade de antibioticoterapia sistêmica, reduzindo efeitos adversos e resistência bacteriana",
+                  "Porque inibe a síntese de ácido nucleico bacteriano"
                 ],
                 correct: 2,
                 explanation: "A mupirocina é usada para infecções de pele pequenas porque permite tratar essas infecções sem necessidade de antibioticoterapia sistêmica, reduzindo efeitos adversos e resistência bacteriana. A mupirocina é um ácido graxo monocarboxílico que inibe a isoleucil-tRNA sintetase, uma enzima essencial para a síntese proteica bacteriana. É indicada para bactérias Gram-positivas e seu uso é somente tópico, sendo eficaz para impetigo, foliculite superficial e pequenas lesões infectadas."
@@ -11960,10 +11960,10 @@ Razões:
               question: {
                 text: "Por que solicitar urocultura para paciente assintomático é considerada má prática pelo movimento Choose Wisely?",
                 options: [
-                  "A) Porque a urocultura é um exame muito caro",
-                  "B) Porque a bactéria é um componente natural do corpo e encontrar uma bactéria em uma cultura não autoriza a dizer que encontrou um patógeno, especialmente em meios não estéreis como a urina",
-                  "C) Porque a urocultura não é um exame confiável",
-                  "D) Porque todos os pacientes com bacteriúria devem ser tratados"
+                  "Porque a urocultura é um exame muito caro",
+                  "Porque a bactéria é um componente natural do corpo e encontrar uma bactéria em uma cultura não autoriza a dizer que encontrou um patógeno, especialmente em meios não estéreis como a urina",
+                  "Porque a urocultura não é um exame confiável",
+                  "Porque todos os pacientes com bacteriúria devem ser tratados"
                 ],
                 correct: 1,
                 explanation: "Solicitar urocultura para paciente assintomático é considerada má prática pelo movimento Choose Wisely porque a bactéria é um componente natural do corpo. Temos cerca de 10 trilhões de células e 5 a 10 vezes mais que isso em número de bactérias. Portanto, o fato de encontrar uma bactéria em uma cultura não autoriza a dizer que encontrou um patógeno, especialmente se o meio não for estéril (como a urina). A bacteriúria assintomática é o maior exemplo disso no ambulatório. O movimento Choose Wisely promove práticas médicas baseadas em evidências, evitando exames e tratamentos desnecessários."
@@ -12099,10 +12099,10 @@ Razões:
               question: {
                 text: "Por que \"pecar por excesso\" ao prescrever antibióticos é considerado um problema?",
                 options: [
-                  "A) Porque os antibióticos são muito caros",
-                  "B) Porque o próprio excesso é o maior dos pecados, causando resistência bacteriana, efeitos adversos, custos desnecessários e disbiose",
-                  "C) Porque os antibióticos não são eficazes",
-                  "D) Porque os pacientes não gostam de tomar antibióticos"
+                  "Porque os antibióticos são muito caros",
+                  "Porque o próprio excesso é o maior dos pecados, causando resistência bacteriana, efeitos adversos, custos desnecessários e disbiose",
+                  "Porque os antibióticos não são eficazes",
+                  "Porque os pacientes não gostam de tomar antibióticos"
                 ],
                 correct: 1,
                 explanation: "\"Pecar por excesso\" ao prescrever antibióticos é considerado um problema porque o próprio excesso é o maior dos pecados. O uso irracional de antibióticos causa: resistência bacteriana (uso indiscriminado aumenta resistência), efeitos adversos (exposição desnecessária a efeitos colaterais), custos desnecessários e disbiose (alteração da microbiota normal). O uso racional de antibióticos é essencial para prevenir resistência. Se não é urgência, tem tempo para continuar a investigação e ponderar outras possibilidades - espere! Não abra mão do diagnóstico correto tão facilmente!"
@@ -12236,10 +12236,10 @@ Razões:
               question: {
                 text: "Qual é a verdade sobre retirar antibiótico \"antes do tempo\" e a produção de resistência?",
                 options: [
-                  "A) Retirar antibiótico antes do tempo sempre induz resistência bacteriana",
-                  "B) Retirar antibiótico \"antes do tempo\" NÃO induz resistência. A manutenção desnecessária do antibiótico, sim, pois a resistência obedece a um mecanismo darwiniano de adaptação da bactéria a uma pressão seletiva exercida pelo antibiótico",
-                  "C) A duração do tratamento não tem relação com resistência bacteriana",
-                  "D) Quanto mais tempo o antibiótico for mantido, menor a resistência"
+                  "Retirar antibiótico antes do tempo sempre induz resistência bacteriana",
+                  "Retirar antibiótico \"antes do tempo\" NÃO induz resistência. A manutenção desnecessária do antibiótico, sim, pois a resistência obedece a um mecanismo darwiniano de adaptação da bactéria a uma pressão seletiva exercida pelo antibiótico",
+                  "A duração do tratamento não tem relação com resistência bacteriana",
+                  "Quanto mais tempo o antibiótico for mantido, menor a resistência"
                 ],
                 correct: 1,
                 explanation: "A verdade sobre retirar antibiótico \"antes do tempo\" é que isso NÃO induz resistência. A manutenção desnecessária do antibiótico, sim, induz resistência! Se a infecção já deu fortes evidências de já ter sido resolvida e o paciente já tem dias sem sintomas, retire o antibiótico! A resistência obedece a um mecanismo darwiniano de adaptação da bactéria a uma pressão seletiva exercida pelo antibiótico. Se você mantém o antibiótico desnecessariamente, você induz resistência sem ganho para o paciente, pois as bactérias resistentes sobrevivem e se multiplicam sob pressão seletiva contínua."
@@ -12362,10 +12362,10 @@ Razões:
               question: {
                 text: "Qual é o raciocínio clínico correto para escolher o antibiótico adequado?",
                 options: [
-                  "A) Escolher sempre o antibiótico de espectro mais amplo disponível",
-                  "B) Basear a escolha no sítio anatômico, patógenos prováveis (Gram-positivo? Gram-negativo? Anaeróbios? Atípicos?) e fatores do paciente",
-                  "C) Escolher o antibiótico mais barato disponível",
-                  "D) Prescrever sempre o mesmo antibiótico independentemente do sítio de infecção"
+                  "Escolher sempre o antibiótico de espectro mais amplo disponível",
+                  "Basear a escolha no sítio anatômico, patógenos prováveis (Gram-positivo? Gram-negativo? Anaeróbios? Atípicos?) e fatores do paciente",
+                  "Escolher o antibiótico mais barato disponível",
+                  "Prescrever sempre o mesmo antibiótico independentemente do sítio de infecção"
                 ],
                 correct: 1,
                 explanation: "O raciocínio clínico correto para escolher o antibiótico adequado é basear a escolha no sítio anatômico, patógenos prováveis e fatores do paciente. Se tiver suspeita de infecção em um determinado sítio, pense: quais as bactérias que habitualmente estão presentes nessa parte do corpo? Gram-positivo? Gram-negativo? Tem anaeróbios ou atípicos? Baseado nisso, faça sua escolha. Este raciocínio permite uma antibioticoterapia racional e direcionada, evitando o uso de espectro mais amplo que o necessário e reduzindo resistência bacteriana."
@@ -12493,10 +12493,10 @@ Razões:
               question: {
                 text: "Por que uma mulher que usa amoxacilina aumenta substancialmente a chance de ter uma infecção urinária nos próximos dois meses?",
                 options: [
-                  "A) Porque a amoxacilina é um antibiótico fraco que não trata infecções",
-                  "B) Porque a amoxacilina mata as bactérias naturais da bexiga (disbiose) e facilita a entrada de patógenos que vão ocupar seu lugar",
-                  "C) Porque a amoxacilina causa resistência bacteriana imediata",
-                  "D) Porque a amoxacilina aumenta a produção de β-lactamase"
+                  "Porque a amoxacilina é um antibiótico fraco que não trata infecções",
+                  "Porque a amoxacilina mata as bactérias naturais da bexiga (disbiose) e facilita a entrada de patógenos que vão ocupar seu lugar",
+                  "Porque a amoxacilina causa resistência bacteriana imediata",
+                  "Porque a amoxacilina aumenta a produção de β-lactamase"
                 ],
                 correct: 1,
                 explanation: "Uma mulher que usa amoxacilina aumenta substancialmente a chance de ter uma infecção urinária nos próximos dois meses porque a amoxacilina mata as bactérias naturais da bexiga (causando disbiose) e facilita a entrada de patógenos que vão ocupar seu lugar. Este é um exemplo clássico de como o uso desnecessário de antibióticos pode causar malefícios que superam os benefícios. O princípio do benefício x malefício deve sempre guiar a prescrição de antibióticos: não usar espectro mais amplo que o necessário, não usar antibiótico quando não necessário, e sempre considerar os efeitos colaterais como disbiose, resistência bacteriana e aumento do risco de infecções futuras."
