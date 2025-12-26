@@ -18619,15 +18619,14 @@ O abdômen é uma **estrutura fechada**. Em geral, esses compartimentos fechados
             <div className="flex justify-between items-center h-16">
               <button
                 onClick={() => {
-                  setCurrentView('dashboard')
-                  // Restaurar posição de scroll após renderização
-                  setTimeout(() => {
-                    window.scrollTo(0, scrollPosition)
-                  }, 0)
+                  setCurrentView('moduleView')
+                  setCurrentLesson(null)
+                  setCurrentSection(0)
+                  setCurrentQuestion(null)
                 }}
                 className="flex items-center text-gray-600 hover:text-gray-900"
               >
-                ← Voltar ao Dashboard
+                ← Voltar ao Módulo
               </button>
               <div className="flex items-center space-x-4">
                 <span className="text-sm bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">
