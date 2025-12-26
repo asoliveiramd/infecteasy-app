@@ -18474,7 +18474,7 @@ O abdômen é uma **estrutura fechada**. Em geral, esses compartimentos fechados
     )
   }
 
-  if (currentView === 'moduleView' && selectedModuleId) {
+  else if (currentView === 'moduleView' && selectedModuleId) {
     const selectedModule = modulesData[selectedModuleId]
     const moduleColors = {
       microbiologia: { primary: 'blue', bg: 'bg-blue-50', border: 'border-blue-300', text: 'text-blue-600', hover: 'hover:bg-blue-50' },
@@ -18612,7 +18612,7 @@ O abdômen é uma **estrutura fechada**. Em geral, esses compartimentos fechados
     )
   }
 
-  if (currentView === 'lesson') {
+  else if (currentView === 'lesson') {
     return (
       <div className="min-h-screen bg-gray-50">
         <header className="bg-white shadow-sm border-b">
