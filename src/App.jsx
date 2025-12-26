@@ -17947,6 +17947,82 @@ O abdômen é uma **estrutura fechada**. Em geral, esses compartimentos fechados
                 correct: "B",
                 explanation: "O abdômen, sendo uma estrutura fechada, favorece a colonização por bactérias anaeróbias porque o oxigênio é tóxico para esses microrganismos. Anaeróbios preferem ambientes fechados para evitar contato com o oxigênio. Esse conceito é fundamental para entender por que infecções intra-abdominais (como abscessos e diverticulite) frequentemente envolvem anaeróbios como Bacteroides fragilis e Clostridium, e por que necessitam de cobertura anaerobicida (ex: metronidazol). A temperatura corporal é constante em todo o corpo. O pH abdominal não é especialmente ácido. Gram-negativos não produzem substâncias que atraem anaeróbios - ambos coexistem naturalmente na microbiota intestinal."
               }
+            },
+            {
+              title: "Trato Urinário",
+              content: `
+### Trato Urinário
+
+O trato urinário é frequentemente colonizado por bactérias provenientes do trato gastrointestinal, sendo fundamental conhecer os agentes mais comuns para orientar a terapia empírica.
+
+---
+
+### Microbiota e Antibióticos
+
+| Categoria | Microrganismos | Antibióticos Comuns |
+|-----------|----------------|---------------------|
+| **Predominantes** | Gram-negativos (*E. coli*, *Klebsiella*, *Proteus*) | Nitrofurantoína (baixa), Cotrimoxazol, Quinolonas ou Cefalosporinas de 2ª geração |
+| **Secundários** | Gram-positivos (*Enterococcus*, *S. saprophyticus*) | Amoxicilina, Nitrofurantoína |
+
+---
+
+### Características das Infecções Urinárias
+
+O trato urinário pode ser colonizado por bactérias, na maioria das vezes **Gram-negativas**, provenientes do trato gastrointestinal. Essas bactérias saem pelo ânus e colonizam a genitália, podendo invadir a uretra.
+
+**Agente predominante:**
+- ***E. coli*** representa **90% dos casos** de infecção urinária
+- Outros Gram-negativos: *Klebsiella*, *Proteus*
+
+**Agentes secundários:**
+- *Enterococcus* (Gram-positivo)
+- *Staphylococcus saprophyticus* (Gram-positivo, comum em mulheres jovens)
+
+---
+
+### Implicações Terapêuticas
+
+Ao tratar uma infecção urinária, devemos pensar primariamente em **Gram-negativos intestinais**, principalmente *E. coli*.
+
+**Antibióticos de primeira linha:**
+- **Nitrofurantoína** (cistite baixa não complicada)
+- **Cotrimoxazol** (sulfametoxazol + trimetoprima)
+- **Quinolonas** (ciprofloxacino, norfloxacino)
+- **Cefalosporinas de 2ª geração** (cefuroxima)
+
+**Considerações importantes:**
+- Nitrofurantoína: excelente para cistite baixa, mas não atinge níveis terapêuticos no rim (não usar em pielonefrite)
+- Cotrimoxazol: verificar padrão de resistência local
+- Quinolonas: reservar para casos mais graves devido ao aumento de resistência
+
+---
+
+### Pontos-Chave
+
+**Origem das bactérias:**
+- ✓ Trato gastrointestinal → genitália → uretra
+- ✓ Via ascendente de infecção
+
+**Agente principal:**
+- ✓ *E. coli* (90% dos casos)
+- ✓ Gram-negativos predominam
+
+**Escolha do antibiótico:**
+- ✓ Baseada na localização (baixa vs. alta)
+- ✓ Considerar resistência local
+- ✓ Nitrofurantoína apenas para cistite baixa
+              `,
+              question: {
+                text: "Qual é o principal agente etiológico das infecções do trato urinário e qual sua origem mais comum?",
+                options: {
+                  A: "Staphylococcus saprophyticus proveniente da pele",
+                  B: "Enterococcus proveniente da microbiota vaginal",
+                  C: "Escherichia coli proveniente do trato gastrointestinal, representando 90% dos casos",
+                  D: "Klebsiella pneumoniae proveniente do trato respiratório"
+                },
+                correct: "C",
+                explanation: "A Escherichia coli é o principal agente etiológico das infecções do trato urinário, representando aproximadamente 90% dos casos. Essas bactérias são provenientes do trato gastrointestinal: saem pelo ânus, colonizam a genitália e podem invadir a uretra de forma ascendente. Por isso, ao tratar uma infecção urinária, devemos pensar primariamente em Gram-negativos intestinais. Staphylococcus saprophyticus é um agente secundário (mais comum em mulheres jovens). Enterococcus também é secundário. Klebsiella pode causar ITU, mas é muito menos frequente que E. coli e também é de origem intestinal, não respiratória."
+              }
             }
           ]
         }
