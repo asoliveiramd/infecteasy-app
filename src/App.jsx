@@ -538,7 +538,7 @@ const App = () => {
           ]
         },
         {
-          id: 10,
+          id: 5,
           title: "Gram Positivos",
           duration: "18 min",
           xp: 90,
@@ -748,7 +748,7 @@ const App = () => {
           ]
         },
         {
-          id: 10,
+          id: 6,
           title: "Gram Negativos",
           duration: "15 min",
           xp: 75,
@@ -907,7 +907,7 @@ const App = () => {
           ]
         },
         {
-          id: 10,
+          id: 7,
           title: "Provas de Bancada",
           duration: "10 min",
           xp: 50,
@@ -1017,7 +1017,7 @@ const App = () => {
           ]
         },
         {
-          id: 10,
+          id: 8,
           title: "Cultura Bacteriana: Princípios",
           duration: "15 min",
           xp: 80,
@@ -1110,7 +1110,7 @@ const App = () => {
           ]
         },
         {
-          id: 10,
+          id: 9,
           title: "Testes Bioquímicos Rápidos",
           duration: "10 min",
           xp: 55,
@@ -1248,7 +1248,7 @@ const App = () => {
           ]
         },
         {
-          id: 10,
+          id: 11,
           title: "Identificação Avançada por MALDI-TOF",
           duration: "10 min",
           xp: 60,
@@ -3136,7 +3136,7 @@ const App = () => {
           ]
         },
                 {
-          id: 10,
+          id: 5,
           title: "Métodos Quantitativos",
           duration: "30 min",
           xp: 150,
@@ -3687,8 +3687,8 @@ const App = () => {
     }
   ]
         },
-                {
-          id: 10,
+        {
+          id: 6,
           title: "Sistemas Automatizados",
           duration: "12 min",
           xp: 60,
@@ -3856,8 +3856,8 @@ const App = () => {
   }
             }]
         },
-                {
-          id: 10,
+        {
+          id: 7,
           title: "Testes Fenotípicos Especiais",
           duration: "20 min",
           xp: 100,
@@ -4038,8 +4038,8 @@ const App = () => {
             }
           ]
         },
-                {
-          id: 10,
+        {
+          id: 8,
           title: "Métodos Moleculares em TSA",
           duration: "16 min",
           xp: 80,
@@ -4114,8 +4114,8 @@ const App = () => {
             }
           ]
         },
-                {
-          id: 10,
+        {
+          id: 9,
           title: "Interpretação Clínica dos Resultados",
           duration: "45 min",
           xp: 225,
@@ -4435,7 +4435,7 @@ const App = () => {
   }
           ]
         },
-                {
+        {
           id: 10,
           title: "Estrutura Básica do Antibiograma",
           duration: "45 min",
@@ -5489,7 +5489,7 @@ const App = () => {
           ]
         },
         {
-          id: 15,
+          id: 12,
           title: "Além da Categorização S/I/R",
           duration: "45 min",
           xp: 225,
@@ -5899,7 +5899,7 @@ const App = () => {
           ]
         },
         {
-          id: 16,
+          id: 13,
           title: "Situações Clínicas Especiais",
           duration: "30 min",
           xp: 180,
@@ -6060,7 +6060,7 @@ const App = () => {
           ]
         },
         {
-          id: 17,
+          id: 14,
           title: "Erros Comuns a Evitar",
           duration: "25 min",
           xp: 150,
@@ -6321,7 +6321,7 @@ const App = () => {
           ]
         },
         {
-          id: 18,
+          id: 15,
           title: "Revisão I - Fundamentos",
           duration: "25 min",
           xp: 150,
@@ -6559,7 +6559,7 @@ const App = () => {
           ]
         },
         {
-          id: 19,
+          id: 16,
           title: "Revisão II - Métodos",
           duration: "30 min",
           xp: 150,
@@ -6798,7 +6798,7 @@ const App = () => {
         },
 
         {
-          id: 20,
+          id: 17,
           title: "Revisão III - Interpretação",
           duration: "35 min",
           xp: 160,
@@ -7080,7 +7080,7 @@ const App = () => {
           ]
         },
         {
-          id: 21,
+          id: 18,
           title: "Revisão IV - Tópicos Avançados",
           duration: "30 min",
           xp: 150,
