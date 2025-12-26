@@ -18661,12 +18661,14 @@ O abdômen é uma **estrutura fechada**. Em geral, esses compartimentos fechados
 
                 {!currentQuestion && (
                   <div className="mt-8 flex justify-between">
-                    <button
-                      onClick={showQuestion}
-                      className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-                    >
-                      📝 Responder Pergunta
-                    </button>
+                    {currentLesson.sections[currentSection]?.question && (
+                      <button
+                        onClick={showQuestion}
+                        className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                      >
+                        📝 Responder Pergunta
+                      </button>
+                    )}
                     
                     {currentSection < currentLesson.sections.length - 1 ? (
                       <button
