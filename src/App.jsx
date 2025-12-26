@@ -18026,91 +18026,91 @@ Ao tratar uma infecção urinária, devemos pensar primariamente em **Gram-negat
             }
           ]
         },
-        {
-          title: "Pele e Partes Moles",
-          cards: [
             {
-              type: "info",
-              icon: "💡",
               title: "Pele e Partes Moles",
-              content: "Compreender a microbiota da pele e partes moles é essencial para a escolha racional de antibióticos nas infecções cutâneas."
-            },
-            {
-              type: "table",
-              icon: "💡",
-              title: "Microbiota e Antibióticos",
-              headers: ["Categoria", "Microrganismos", "Antibióticos Comuns"],
-              rows: [
-                ["Predominantes", "Gram-positivos (*S. aureus*, *S. pyogenes*)", "Cefalexina, Clindamicina, Amoxicilina/clavulanato"],
-                ["Secundários", "Anaeróbios em abscessos profundos", "Clindamicina, Amoxicilina/clavulanato"]
-              ]
-            },
-            {
-              type: "warning",
-              icon: "💡",
-              title: "Características das Infecções de Pele",
-              content: `A pele é a morada dos Gram-positivos. Pensou em pele, pensou em estafilococos e estreptococos. Dessa forma, sejam abscessos (furúnculo, impetigo) ou infecções difusas como erisipela e celulite, o foco sempre serão os Gram-positivos.
-
-**Agentes predominantes:**
-
-- ***Staphylococcus aureus***: principal agente em abscessos cutâneos (furúnculos, carbúnculos)
-- ***Streptococcus pyogenes*** (Estreptococo beta-hemolítico do grupo A): principal agente em infecções difusas (erisipela, celulite)
-
-**Agentes secundários:**
-
-- **Anaeróbios**: em abscessos profundos ou infecções polimicrobianas, especialmente em áreas próximas a mucosas`
-            },
-            {
-              type: "danger",
-              icon: "💡",
-              title: "Implicações Terapêuticas",
-              content: `Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em Gram-positivos, principalmente *S. aureus* e *S. pyogenes*.
-
-**Antibióticos de primeira linha:**
-
-- **Cefalexina** (cefalosporina de 1ª geração): excelente cobertura para *S. aureus* e *S. pyogenes*
-- **Clindamicina**: boa cobertura para Gram-positivos e anaeróbios
-- **Amoxicilina/clavulanato**: cobertura ampliada incluindo anaeróbios
-
-**Considerações importantes:**
-
-- **Cefalexina**: primeira escolha para celulite e erisipela não complicadas
-- **Clindamicina**: útil em alérgicos a beta-lactâmicos e quando há suspeita de anaeróbios
-- **Amoxicilina/clavulanato**: considerar em mordeduras ou infecções próximas a mucosas (anaeróbios)
-- **MRSA comunitário**: considerar sulfametoxazol-trimetoprima ou doxiciclina em áreas de alta prevalência`
-            },
-            {
-              type: "keypoints",
-              icon: "💡",
-              title: "Pontos-Chave",
-              content: `**Agentes principais:**
-
-✓ Gram-positivos predominam nas infecções de pele
-✓ *S. aureus*: abscessos (furúnculos, carbúnculos)
-✓ *S. pyogenes*: infecções difusas (erisipela, celulite)
-
-**Escolha do antibiótico:**
-
-✓ Cefalexina: primeira linha para celulite/erisipela
-✓ Clindamicina: alérgicos a beta-lactâmicos ou suspeita de anaeróbios
-✓ Amoxicilina/clavulanato: mordeduras ou infecções próximas a mucosas`
-            },
-            {
-              type: "quiz",
-              question: {
-                text: "Qual é o principal grupo de microrganismos envolvidos nas infecções de pele e partes moles, e quais são os dois agentes mais comuns?",
-                options: {
-                  A: "Gram-negativos, sendo E. coli e Klebsiella os mais comuns",
-                  B: "Gram-positivos, sendo S. aureus e S. pyogenes os mais comuns",
-                  C: "Anaeróbios, sendo Bacteroides e Clostridium os mais comuns",
-                  D: "Fungos, sendo Candida e Aspergillus os mais comuns"
+              cards: [
+                {
+                  type: "info",
+                  icon: "💡",
+                  title: "Pele e Partes Moles",
+                  content: "Compreender a microbiota da pele e partes moles é essencial para a escolha racional de antibióticos nas infecções cutâneas."
                 },
-                correct: "B",
-                explanation: "A pele é colonizada predominantemente por Gram-positivos. O Staphylococcus aureus é o principal agente em abscessos cutâneos (furúnculos, carbúnculos), enquanto o Streptococcus pyogenes é o principal agente em infecções difusas como erisipela e celulite. Por isso, ao pensar em infecções de pele, devemos sempre considerar primariamente os Gram-positivos. Anaeróbios são agentes secundários em abscessos profundos. Gram-negativos e fungos não são agentes comuns em infecções de pele e partes moles adquiridas na comunidade."
-              }
+                {
+                  type: "table",
+                  icon: "💡",
+                  title: "Microbiota e Antibióticos",
+                  headers: ["Categoria", "Microrganismos", "Antibióticos Comuns"],
+                  rows: [
+                    ["Predominantes", "Gram-positivos (*S. aureus*, *S. pyogenes*)", "Cefalexina, Clindamicina, Amoxicilina/clavulanato"],
+                    ["Secundários", "Anaeróbios em abscessos profundos", "Clindamicina, Amoxicilina/clavulanato"]
+                  ]
+                },
+                {
+                  type: "warning",
+                  icon: "💡",
+                  title: "Características das Infecções de Pele",
+                  content: `A pele é a morada dos Gram-positivos. Pensou em pele, pensou em estafilococos e estreptococos. Dessa forma, sejam abscessos (furúnculo, impetigo) ou infecções difusas como erisipela e celulite, o foco sempre serão os Gram-positivos.
+    
+    **Agentes predominantes:**
+    
+    - ***Staphylococcus aureus***: principal agente em abscessos cutâneos (furúnculos, carbúnculos)
+    - ***Streptococcus pyogenes*** (Estreptococo beta-hemolítico do grupo A): principal agente em infecções difusas (erisipela, celulite)
+    
+    **Agentes secundários:**
+    
+    - **Anaeróbios**: em abscessos profundos ou infecções polimicrobianas, especialmente em áreas próximas a mucosas`
+                },
+                {
+                  type: "danger",
+                  icon: "💡",
+                  title: "Implicações Terapêuticas",
+                  content: `Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em Gram-positivos, principalmente *S. aureus* e *S. pyogenes*.
+    
+    **Antibióticos de primeira linha:**
+    
+    - **Cefalexina** (cefalosporina de 1ª geração): excelente cobertura para *S. aureus* e *S. pyogenes*
+    - **Clindamicina**: boa cobertura para Gram-positivos e anaeróbios
+    - **Amoxicilina/clavulanato**: cobertura ampliada incluindo anaeróbios
+    
+    **Considerações importantes:**
+    
+    - **Cefalexina**: primeira escolha para celulite e erisipela não complicadas
+    - **Clindamicina**: útil em alérgicos a beta-lactâmicos e quando há suspeita de anaeróbios
+    - **Amoxicilina/clavulanato**: considerar em mordeduras ou infecções próximas a mucosas (anaeróbios)
+    - **MRSA comunitário**: considerar sulfametoxazol-trimetoprima ou doxiciclina em áreas de alta prevalência`
+                },
+                {
+                  type: "keypoints",
+                  icon: "💡",
+                  title: "Pontos-Chave",
+                  content: `**Agentes principais:**
+    
+    ✓ Gram-positivos predominam nas infecções de pele
+    ✓ *S. aureus*: abscessos (furúnculos, carbúnculos)
+    ✓ *S. pyogenes*: infecções difusas (erisipela, celulite)
+    
+    **Escolha do antibiótico:**
+    
+    ✓ Cefalexina: primeira linha para celulite/erisipela
+    ✓ Clindamicina: alérgicos a beta-lactâmicos ou suspeita de anaeróbios
+    ✓ Amoxicilina/clavulanato: mordeduras ou infecções próximas a mucosas`
+                },
+                {
+                  type: "quiz",
+                  question: {
+                    text: "Qual é o principal grupo de microrganismos envolvidos nas infecções de pele e partes moles, e quais são os dois agentes mais comuns?",
+                    options: {
+                      A: "Gram-negativos, sendo E. coli e Klebsiella os mais comuns",
+                      B: "Gram-positivos, sendo S. aureus e S. pyogenes os mais comuns",
+                      C: "Anaeróbios, sendo Bacteroides e Clostridium os mais comuns",
+                      D: "Fungos, sendo Candida e Aspergillus os mais comuns"
+                    },
+                    correct: "B",
+                    explanation: "A pele é colonizada predominantemente por Gram-positivos. O Staphylococcus aureus é o principal agente em abscessos cutâneos (furúnculos, carbúnculos), enquanto o Streptococcus pyogenes é o principal agente em infecções difusas como erisipela e celulite. Por isso, ao pensar em infecções de pele, devemos sempre considerar primariamente os Gram-positivos. Anaeróbios são agentes secundários em abscessos profundos. Gram-negativos e fungos não são agentes comuns em infecções de pele e partes moles adquiridas na comunidade."
+                  }
+                }
+              ]
             }
-          ]
-        }
       ]
     },
     antimicrobianos: antimicrobianosModule
