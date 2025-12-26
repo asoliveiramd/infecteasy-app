@@ -1304,7 +1304,7 @@ const App = () => {
           ]
         },
         {
-          id: 11,
+          id: 12,
           title: "Revisão: Pontos e Dicas",
           duration: "15 min",
           xp: 75,
@@ -1481,7 +1481,7 @@ const App = () => {
 
         }
         ,{
-          id: 12,
+          id: 13,
           title: "Revisão: Perguntas - Parte 1",
           duration: "45 min",
           xp: 225,
@@ -2304,7 +2304,7 @@ const App = () => {
           ]
         }
         ,{
-          id: 13,
+          id: 14,
           title: "Revisão: Perguntas - Parte 2",
           duration: "35 min",
           xp: 165,
@@ -18621,6 +18621,7 @@ O abdômen é uma **estrutura fechada**. Em geral, esses compartimentos fechados
               <button
                 onClick={() => {
                   setCurrentView('moduleView')
+                  setSelectedModuleId(currentModule)
                   setCurrentLesson(null)
                   setCurrentSection(0)
                   setCurrentQuestion(null)

@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import './App.css'
 import { antimicrobianosModule } from './antimicrobianos_module.js'
+import markdownToHtml from './utils/markdownToHtml';
 
 const App = () => {
   // Estados principais
@@ -7323,6 +7324,19 @@ const App = () => {
     antibioticoterapia: {
       title: "Antibioticoterapia Ambulatorial",
       description: "Aprenda os fundamentos da prescrição de antibióticos no ambulatório",
+      welcomeMessage: `Caro estudante,
+
+Nosso corpo abriga diferentes comunidades de microrganismos, conhecidas como microbiota, que variam de uma região para outra. Em muitas situações, as doenças infecciosas são causadas justamente por bactérias que fazem parte dessa microbiota habitual. Agentes externos também podem ser responsáveis, mas essa não é a regra. Por isso, conhecer bem a microbiota da área afetada é um passo essencial para orientar a melhor escolha do antibiótico.
+
+O segredo para selecionar o antimicrobiano mais adequado está em compreender as características dos possíveis agentes envolvidos. Pergunte-se: o patógeno possui parede celular? Se sim, um inibidor da síntese da parede pode ser indicado. Existe a suspeita de um microrganismo anaeróbio? Nesse caso, devem ser incluídos agentes com atividade anaerobicida. Já os agentes atípicos, que caracteristicamente não possuem parede celular, exigem outras classes de antibióticos.
+
+Perceba como o processo se torna lógico e natural. Quando entendemos o perfil dos prováveis agentes, a escolha do tratamento deixa de ser algo decorado e se transforma em um raciocínio clínico fluido e fundamentado. Vamos em frente — aproveite esta jornada de aprendizado!
+
+---
+
+Chegou o momento de conectar o que aprendemos até aqui. Cada sítio do corpo que estudamos possui sua própria microbiota característica, formada por microrganismos que normalmente convivem em equilíbrio com o hospedeiro.
+
+Vamos agora analisar em detalhes essa microbiota em cada local, refletindo sobre quais bactérias costumam estar presentes e, a partir disso, identificar as drogas mais adequadas para o tratamento das infecções que possam surgir nessas regiões. Assim, você poderá compreender de forma integrada como o conhecimento microbiológico orienta a escolha racional do antibiótico.`,
       lessons: [
         {
           id: 1,
@@ -8386,8 +8400,8 @@ const App = () => {
         {
           id: 4,
           title: "Cefalosporinas",
-          duration: "20 min",
-          xp: 100,
+          duration: "28 min",
+          xp: 140,
           sections: [
             {
               title: "Gerações de Cefalosporinas",
@@ -8877,6 +8891,63 @@ const App = () => {
                 ],
                 correct: 1,
                 explanation: "A cefuroxima, principal cefalosporina de 2ª geração no uso ambulatorial, apresenta três vantagens principais: (1) resistência a várias β-lactamases, permitindo cobertura de patógenos resistentes; (2) boa penetração em tecidos respiratórios, atingindo concentrações adequadas; e (3) posologia de 12/12h, facilitando a adesão ao tratamento. Essas características a tornam excelente escolha para sinusites, otites, pneumonias e exacerbações de DPOC."
+              }
+            },
+            {
+              title: "Cefalosporinas Orais de Terceira Geração",
+              content: `
+### Cefalosporinas Orais de Terceira Geração
+
+As cefalosporinas orais de terceira geração enfrentam limitações importantes apesar de seu uso em certas infecções.
+
+---
+
+### Uso em Infecções Respiratórias
+
+Medicamentos Disponíveis:
+- Cefdinir
+- Cefixima  
+- Cefpodoxima proxetil
+
+Atividade Antimicrobiana:
+- Cefdinir e Cefpodoxima possuem atividade similar à cefuroxima
+- São ativas contra cepas de *S. pneumoniae* sensíveis à penicilina
+- Aprovadas para tratamento oral de infecções respiratórias leves a moderadas
+
+---
+
+### Limitações em Infecções do Trato Urinário
+
+Potência vs. Penetração:
+- **Maior potência** contra *E. coli* e *K. pneumoniae*
+- **Penetração urinária marginal** para cefdinir
+- **Penetração urinária limitada** para cefixima e cefpodoxima
+
+Isso limita sua utilidade em ITU complicadas, apesar da potência in vitro.
+
+---
+
+### Alerta Crítico
+
+**⚠️ Deve-se evitar o uso rotineiro dessas medicações.**
+
+Razões:
+- Não adicionam valor significativo às opções já existentes
+- Aumentam o risco de resistência bacteriana
+- Custo-benefício desfavorável em relação às cefalosporinas de 2ª geração
+
+**Recomendação:** Preferir cefuroxima para infecções respiratórias ambulatoriais, reservando cefalosporinas de 3ª geração orais apenas para situações específicas e bem justificadas.
+              `,
+              question: {
+                text: "Um médico considera prescrever cefdinir para uma paciente de 35 anos com cistite não complicada, argumentando que é uma cefalosporina de 3ª geração com maior potência contra E. coli. Qual é a principal limitação dessa escolha?",
+                options: {
+                  A: "O cefdinir não tem atividade contra E. coli",
+                  B: "A penetração urinária do cefdinir é marginal, limitando sua eficácia em ITU",
+                  C: "O cefdinir só pode ser usado em infecções respiratórias",
+                  D: "O cefdinir tem alta taxa de resistência bacteriana"
+                },
+                correct: "B",
+                explanation: "Apesar da maior potência in vitro das cefalosporinas orais de 3ª geração (como cefdinir, cefixima e cefpodoxima) contra E. coli e K. pneumoniae, sua penetração urinária é marginal (cefdinir) ou limitada (cefixima e cefpodoxima). Isso compromete significativamente sua eficácia em ITU, mesmo não complicadas. Além disso, o uso rotineiro dessas medicações deve ser evitado pois não adicionam valor significativo às opções já existentes e aumentam o risco de resistência bacteriana. Para ITU não complicadas, outras opções como nitrofurantoína, fosfomicina ou sulfametoxazol-trimetoprima são mais apropriadas."
               }
             }
           ]
@@ -16903,6 +16974,973 @@ Resumo dos conceitos essenciais para o diagnóstico e manejo adequado da diverti
             }
           ]
         }
+        ,{
+          id: 20,
+          title: "Infecção do Trato Urinário (ITU)",
+          duration: "80 min",
+          xp: 400,
+          sections: [
+            {
+              title: "Definição",
+              content: `
+### Infecção do Trato Urinário (ITU) - Definição
+
+A Infecção do Trato Urinário (ITU) é a presença de microrganismos patogênicos invadindo os tecidos de qualquer parte do sistema urinário.
+
+---
+
+### Localizações Possíveis
+
+**Bexiga (Cistite):**
+- Forma mais comum de ITU
+- Geralmente de evolução benigna
+
+**Rins (Pielonefrite):**
+- Forma grave de ITU
+- Requer tratamento agressivo
+
+**Uretra (Uretrite):**
+- Infecção da uretra
+- Pode ser confundida com DST
+
+**Próstata (Prostatite):**
+- Exclusiva do sexo masculino
+- Pode ser muito grave
+
+---
+
+### Epidemiologia
+
+**Prevalência:**
+- Entre as infecções bacterianas mais comuns na prática clínica
+- **Predominância no sexo feminino** devido a fatores anatômicos
+
+**Fatores de risco femininos:**
+- Uretra mais curta
+- Proximidade anatômica com ânus
+- Atividade sexual
+- Gestação
+
+---
+
+### Gravidade Conforme Localização
+
+**Princípio geral:**
+- Quanto mais a infecção atinge **andares superiores** do trato urinário, mais grave tende a ser
+- **Exceção importante:** Prostatite pode ser muito grave mesmo não sendo "andar superior"
+
+**Hierarquia de gravidade:**
+1. Cistite → Geralmente leve
+2. Pielonefrite → Grave
+3. Prostatite → Pode ser muito grave (exceção à regra)
+              `,
+              question: {
+                text: "Uma paciente de 28 anos apresenta disúria e polaciúria há 2 dias, sem febre ou dor lombar. O médico suspeita de cistite. Qual afirmação está CORRETA sobre a gravidade das ITUs?",
+                options: {
+                  A: "Todas as ITUs têm a mesma gravidade independente da localização",
+                  B: "A cistite é sempre mais grave que a pielonefrite por ser mais comum",
+                  C: "Quanto mais superior a localização no trato urinário, mais grave tende a ser, exceto a prostatite que pode ser muito grave",
+                  D: "A uretrite é a forma mais grave de ITU"
+                },
+                correct: "C",
+                explanation: "A afirmação correta é que quanto mais superior a localização no trato urinário (mais próximo dos rins), mais grave tende a ser a infecção. Assim, a pielonefrite (infecção renal) é mais grave que a cistite (infecção vesical). No entanto, existe uma exceção importante: a prostatite pode ser muito grave mesmo não sendo uma infecção de 'andar superior', devido às características anatômicas e à dificuldade de penetração de antibióticos na próstata. A cistite, embora seja a forma mais comum de ITU, geralmente é de evolução benigna e menos grave que a pielonefrite."
+              }
+            }
+            ,{
+              title: "Agentes Etiológicos e Fatores de Risco",
+              content: `
+### Agentes Etiológicos
+
+As bactérias mais comuns nas ITUs são **Gram-negativas**, provenientes da flora intestinal.
+
+---
+
+### Principais Bactérias
+
+**Gram-negativas (maioria):**
+- ***Escherichia coli*** (80-90% dos casos) ⭐
+- *Klebsiella pneumoniae*
+- *Proteus mirabilis*
+- *Enterobacter* spp.
+
+**Gram-positivas (menos comuns):**
+- *Staphylococcus saprophyticus* (jovens mulheres sexualmente ativas)
+- *Enterococcus faecalis* (ITUs hospitalares ou complicadas)
+
+---
+
+### Fatores de Risco
+
+**Anatômicos:**
+- Sexo feminino (uretra curta, proximidade com ânus)
+- Anomalias anatômicas do trato urinário
+- Obstrução urinária (cálculos, hipertrofia prostática)
+
+**Comportamentais:**
+- Atividade sexual
+- Uso de espermicidas
+- Higiene inadequada
+
+**Hormonais:**
+- Alterações hormonais (menopausa)
+- Gravidez
+
+**Iatrogênicos:**
+- Cateterismo urinário
+- Instrumentação do trato urinário
+
+---
+
+### Alerta: Uso Racional de Antibióticos
+
+**⚠️ Problema:** A infecção urinária de repetição é muito comum, especialmente em mulheres.
+
+**Consequência:** O uso corriqueiro de antibióticos pode levar à resistência bacteriana.
+
+**Conduta:** Devemos praticar o **uso racional de antibióticos** nessa população:
+- Confirmar diagnóstico antes de tratar
+- Evitar tratamentos empíricos repetidos
+- Considerar profilaxia não-antibiótica quando apropriado
+- Investigar causas de ITU de repetição
+              `,
+              question: {
+                text: "Uma mulher de 25 anos, sexualmente ativa, apresenta seu terceiro episódio de cistite no último ano. Qual é a principal bactéria causadora de ITU não complicada e qual a principal preocupação em casos de ITU de repetição?",
+                options: {
+                  A: "Staphylococcus saprophyticus é o principal agente; a preocupação é o desenvolvimento de pielonefrite",
+                  B: "Escherichia coli é o principal agente (80-90%); a preocupação é o desenvolvimento de resistência bacteriana pelo uso corriqueiro de antibióticos",
+                  C: "Klebsiella pneumoniae é o principal agente; a preocupação é a disseminação hematogênica",
+                  D: "Enterococcus faecalis é o principal agente; a preocupação é a necessidade de hospitalização"
+                },
+                correct: "B",
+                explanation: "A Escherichia coli é responsável por 80-90% das ITUs não complicadas, sendo o principal agente etiológico. Em casos de ITU de repetição, que são muito comuns especialmente em mulheres jovens sexualmente ativas, a principal preocupação é o desenvolvimento de resistência bacteriana devido ao uso corriqueiro e repetido de antibióticos. Por isso, é fundamental praticar o uso racional de antibióticos: confirmar diagnóstico antes de tratar, evitar tratamentos empíricos repetidos, considerar profilaxia não-antibiótica quando apropriado e investigar causas subjacentes de ITU de repetição."
+              }
+            }
+            ,{
+              title: "Sintomas da Cistite (ITU Baixa)",
+              content: `
+### Sintomas da Cistite (ITU Baixa)
+
+A cistite é a forma mais comum de ITU, caracterizada por sintomas urinários irritativos sem comprometimento sistêmico.
+
+---
+
+### Principais Manifestações
+
+**Sintoma Cardinal:**
+- **Disúria** (ardor ou dor ao urinar) ⭐
+
+**Sintomas Irritativos:**
+- **Polaciúria** (aumento da frequência urinária)
+- **Urgência miccional** (vontade súbita e inadiável de urinar)
+
+**Outros Sintomas:**
+- **Hematúria** (sangue na urina) - macroscópica ou microscópica
+- **Dor suprapúbica** ou desconforto pélvico
+
+---
+
+### Características Importantes
+
+**Apresentação Clínica:**
+- Início geralmente **abrupto** dos sintomas
+- **Febre baixa ou ausente** na cistite não complicada
+- Presença de febre sugere pielonefrite
+
+**Alterações da Urina:**
+- Alteração da **cor e odor** da urina **não devem ser valorizados isoladamente**
+- São achados inespecíficos e não diagnósticos
+
+---
+
+### Bacteriúria Assintomática
+
+**Definição:**
+- Presença de bactérias na urina **sem sintomas** urinários
+
+**Prevalência:**
+- Comum em idosos e gestantes
+- Não é doença, é colonização
+
+**Conduta:**
+- **NÃO necessita tratamento** na maioria dos casos
+- **Exceções (tratar):**
+  - Gestantes
+  - Antes de procedimentos urológicos instrumentalizados
+
+**⚠️ Choose Wisely - Má Prática Médica:**
+- Solicitar urocultura para pacientes **sem queixa urinária**
+- "Tratar" bacteriúria assintomática fora das exceções
+- Essas práticas aumentam resistência bacteriana sem benefício clínico
+              `,
+              question: {
+                text: "Uma paciente de 70 anos realiza exame de rotina que mostra urocultura positiva para E. coli (100.000 UFC/mL). Ela nega qualquer sintoma urinário, não tem febre e está clinicamente bem. Qual é a conduta mais adequada?",
+                options: {
+                  A: "Iniciar antibioticoterapia imediatamente para prevenir pielonefrite",
+                  B: "Não tratar, pois trata-se de bacteriúria assintomática que não necessita tratamento em idosos assintomáticos",
+                  C: "Solicitar nova urocultura para confirmar o resultado",
+                  D: "Prescrever antibiótico profilático por 6 meses"
+                },
+                correct: "B",
+                explanation: "A conduta correta é NÃO tratar, pois trata-se de bacteriúria assintomática. A presença de bactérias na urina sem sintomas é comum, especialmente em idosos, e representa colonização, não infecção. O tratamento de bacteriúria assintomática (exceto em gestantes e antes de procedimentos urológicos instrumentalizados) é considerado má prática médica pelo Choose Wisely, pois não traz benefício clínico e aumenta a resistência bacteriana. A solicitação de urocultura para pacientes sem queixa urinária também é considerada inadequada. O tratamento só está indicado se a paciente desenvolver sintomas urinários (disúria, polaciúria, urgência) ou sistêmicos (febre)."
+              }
+            }
+            ,{
+              title: "Pielonefrite (ITU Alta)",
+              content: `
+### Pielonefrite (ITU Alta)
+
+A pielonefrite é a infecção do parênquima renal e sistema coletor, representando uma **condição potencialmente grave** que pode evoluir para sepse se não tratada adequadamente.
+
+---
+
+### Manifestações Clínicas
+
+**Sintomas Cardinais:**
+- **Febre alta (>38°C)** e calafrios ⭐
+- **Dor lombar** unilateral ou bilateral (dor em flanco) ⭐
+
+**Sintomas Associados:**
+- Náuseas e vômitos
+- Sintomas de cistite frequentemente presentes (disúria, polaciúria)
+- Mal-estar geral e prostração
+
+**Ao exame físico:**
+- **Dor à percussão do ângulo costovertebral** (sinal de Giordano positivo)
+
+---
+
+### Sinais de Alarme
+
+**Indicam gravidade e necessidade de hospitalização:**
+
+**Sinais de sepse urinária:**
+- Hipotensão (PA sistólica <90 mmHg)
+- Taquicardia (FC >100 bpm)
+- Confusão mental
+- Taquipneia
+
+**Sinais de disfunção renal:**
+- Oligúria (<400 mL/dia ou <1 micção/8h)
+- Anúria (ausência de diurese)
+
+**Outros sinais de gravidade:**
+- Vômitos incoercíveis
+- Desidratação grave
+- Impossibilidade de via oral
+
+---
+
+### Complicações Possíveis
+
+**Locais:**
+- Abscesso renal ou perirrenal
+- Necrose papilar
+- Pionefrose
+
+**Sistêmicas:**
+- Sepse e choque séptico
+- Insuficiência renal aguda
+- Coagulação intravascular disseminada (CIVD)
+- Síndrome da resposta inflamatória sistêmica (SIRS)
+- Disfunção de múltiplos órgãos
+
+**⚠️ Importante:** A pielonefrite requer tratamento agressivo e, frequentemente, hospitalização, especialmente na presença de sinais de alarme.
+              `,
+              question: {
+                text: "Uma paciente de 35 anos apresenta febre de 39°C há 2 dias, calafrios, dor lombar direita, náuseas e disúria. Ao exame, apresenta dor à percussão do ângulo costovertebral direito. PA 100/60 mmHg, FC 110 bpm. Qual é o diagnóstico mais provável e qual sinal indica maior gravidade?",
+                options: {
+                  A: "Cistite complicada; a febre alta indica gravidade",
+                  B: "Pielonefrite aguda; a taquicardia e PA limítrofe sugerem possível sepse urinária",
+                  C: "Cálculo renal; a dor lombar é o principal sinal de gravidade",
+                  D: "ITU recorrente; a disúria indica necessidade de antibiótico oral"
+                },
+                correct: "B",
+                explanation: "O diagnóstico mais provável é pielonefrite aguda, caracterizada pela tríade: febre alta (>38°C), dor lombar e sinal de Giordano positivo. A presença de taquicardia (FC 110 bpm) e PA limítrofe (100/60 mmHg) são sinais de alarme que sugerem possível evolução para sepse urinária, indicando maior gravidade e necessidade de hospitalização para antibioticoterapia venosa e monitorização. A pielonefrite é uma condição potencialmente grave que pode evoluir para sepse, insuficiência renal aguda e outras complicações sistêmicas se não tratada adequadamente. Outros sinais de alarme incluem hipotensão franca, oligúria/anúria, vômitos incoercíveis e confusão mental."
+              }
+            }
+            ,{
+              title: "Prostatite",
+              content: `
+### Prostatite
+
+A prostatite é a infecção da próstata, exclusiva do sexo masculino, que pode apresentar-se de forma aguda ou crônica.
+
+---
+
+### Sintomas Urinários
+
+**Sintomas irritativos:**
+- Disúria e polaciúria
+- Urgência miccional
+
+**Sintomas obstrutivos:**
+- Dificuldade para iniciar a micção (jato fraco ou interrompido)
+- Sensação de esvaziamento incompleto
+- Retenção urinária (em casos graves)
+
+---
+
+### Manifestações Dolorosas
+
+**Dores características:**
+- **Dor perineal** (entre escroto e ânus)
+- Dor ao evacuar
+- **Dor ejaculatória**
+- Desconforto retal
+
+---
+
+### Prostatite Aguda Bacteriana
+
+**Manifestações sistêmicas:**
+- **Febre alta (>38,5°C)** e calafrios
+- Mal-estar geral e prostração
+
+**Ao toque retal:**
+- Próstata **aumentada**
+- **Tensa e dolorosa**
+- Quente ao toque
+- ⚠️ **Atenção:** Toque retal deve ser gentil para evitar bacteremia
+
+---
+
+### Prostatite Crônica
+
+**Características:**
+- Sintomas **menos intensos** e mais persistentes
+- Episódios recorrentes de ITU
+- Dor pélvica crônica
+- Sintomas por >3 meses
+
+**Origem:**
+- Geralmente proveniente de **prostatite aguda parcialmente tratada** que cronifica
+- Tratamento inadequado ou insuficiente da forma aguda
+
+**Desafios:**
+- Difícil penetração de antibióticos na próstata
+- Tratamento prolongado necessário (4-6 semanas ou mais)
+- Recorrências frequentes
+
+---
+
+### Diferenças Importantes
+
+**Prostatite Aguda:**
+- Início abrupto
+- Febre alta e toxemia
+- Próstata muito dolorosa
+- Tratamento: 2-4 semanas
+
+**Prostatite Crônica:**
+- Início insidioso
+- Febre ausente ou baixa
+- Sintomas persistentes
+- Tratamento: 4-6 semanas ou mais
+              `,
+              question: {
+                text: "Um paciente de 45 anos apresenta febre de 39°C, calafrios, disúria, dor perineal e dor ao evacuar há 2 dias. Ao toque retal, a próstata está aumentada, tensa e muito dolorosa. Qual é o diagnóstico mais provável e qual é a principal origem da forma crônica dessa condição?",
+                options: {
+                  A: "Cistite complicada; a forma crônica surge por infecção por bactérias resistentes",
+                  B: "Prostatite aguda bacteriana; a forma crônica geralmente provém de prostatite aguda parcialmente tratada que cronifica",
+                  C: "Pielonefrite; a forma crônica é causada por refluxo vesicoureteral",
+                  D: "Hiperplasia prostática benigna; a forma crônica é resultado de obstrução prolongada"
+                },
+                correct: "B",
+                explanation: "O diagnóstico é prostatite aguda bacteriana, caracterizada pela tríade: febre alta (>38,5°C) com calafrios, sintomas urinários (disúria) e dor perineal/ao evacuar. O achado de próstata aumentada, tensa e dolorosa ao toque retal confirma o diagnóstico. A prostatite crônica geralmente provém de uma prostatite aguda parcialmente tratada ou inadequadamente tratada que cronifica. Por isso, é fundamental o tratamento adequado da forma aguda com antibióticos por 2-4 semanas para prevenir a cronificação. A prostatite crônica apresenta sintomas menos intensos mas persistentes, episódios recorrentes de ITU e requer tratamento prolongado (4-6 semanas ou mais) devido à difícil penetração de antibióticos na próstata."
+              }
+            }
+            ,{
+              title: "Prostatite - Separando o Joio do Trigo",
+              content: `
+### Prostatite - Separando o Joio do Trigo
+
+Diferenciar entre prostatite aguda verdadeira e agudização de prostatite crônica é fundamental para definir a duração adequada do tratamento.
+
+---
+
+### Como Suspeitar de Agudização de Prostatite Crônica
+
+**Critério 1: ITU de Repetição em Homens**
+- Homem **raramente** tem ITU de repetição
+- Quando acontece, devemos suspeitar de:
+  - Agudizações de prostatite crônica
+  - Anomalias do trato urinário
+  - Obstrução (hiperplasia prostática)
+
+**⚠️ Importante:** ITU de repetição em homem jovem sem fatores de risco = pensar em prostatite crônica!
+
+---
+
+### Critério 2: Padrão Microbiológico
+
+**Característica da prostatite crônica:**
+- Normalmente, trata-se da **mesma bactéria** que agudiza repetidamente
+- Se fizermos rastreio das uroculturas de cada episódio agudo:
+  - **Sempre será a mesma espécie**
+  - **Com a mesma assinatura de resistência**
+
+**Exemplo típico:**
+- Episódio 1: *E. coli* resistente a quinolonas
+- Episódio 2: *E. coli* resistente a quinolonas (mesmo perfil)
+- Episódio 3: *E. coli* resistente a quinolonas (mesmo perfil)
+
+**Isso sugere:** Reservatório prostático com infecção crônica que agudiza periodicamente
+
+---
+
+### Diferenças no Tratamento
+
+**Prostatite Aguda (primeira vez):**
+- Duração: **2 semanas** (14 dias)
+- Objetivo: Erradicar infecção aguda
+
+**Prostatite Crônica (ou agudização):**
+- Duração: **4-8 semanas** (28-56 dias)
+- Objetivo: Erradicar reservatório prostático
+- Penetração prostática é difícil → tratamento prolongado necessário
+
+**⚠️ Essencial:** Definir corretamente se é aguda ou crônica para evitar:
+- Subtratamento da forma crônica (cronificação)
+- Sobretratamento da forma aguda (custos, efeitos adversos)
+
+---
+
+### Resumo Prático
+
+**Suspeite de prostatite crônica se:**
+1. ✓ Homem com ITU de repetição
+2. ✓ Mesma bactéria com mesmo perfil de resistência
+3. ✓ História de episódios prévios semelhantes
+
+**Conduza:**
+- Prostatite aguda → 2 semanas de antibiótico
+- Prostatite crônica → 4-8 semanas de antibiótico
+- Investigar fatores predisponentes
+              `,
+              question: {
+                text: "Um homem de 42 anos apresenta seu terceiro episódio de sintomas urinários e febre no último ano. As uroculturas dos três episódios mostram E. coli resistente a ciprofloxacino e sensível a sulfametoxazol-trimetoprima. Qual é a hipótese diagnóstica mais provável e qual a duração adequada do tratamento?",
+                options: {
+                  A: "Cistite de repetição; tratar por 7 dias",
+                  B: "Prostatite aguda; tratar por 2 semanas",
+                  C: "Agudização de prostatite crônica; tratar por 4-8 semanas",
+                  D: "Pielonefrite recorrente; tratar por 14 dias"
+                },
+                correct: "C",
+                explanation: "A hipótese mais provável é agudização de prostatite crônica. Dois critérios importantes suportam esse diagnóstico: (1) ITU de repetição em homem jovem é rara e sugere prostatite crônica ou anomalia anatômica; (2) A mesma bactéria (E. coli) com o mesmo perfil de resistência (resistente a ciprofloxacino, sensível a SMX-TMP) em todos os três episódios sugere reservatório prostático com infecção crônica que agudiza periodicamente. O tratamento adequado da prostatite crônica é prolongado (4-8 semanas) devido à difícil penetração de antibióticos na próstata, sendo necessário para erradicar o reservatório bacteriano e prevenir novas agudizações. Tratamento curto (2 semanas) seria adequado apenas para prostatite aguda de primeira vez."
+              }
+            }
+            ,{
+              title: "Tratamento da Cistite Não Complicada",
+              content: `
+### Tratamento da Cistite Não Complicada
+
+O tratamento da cistite não complicada em mulheres deve priorizar antibióticos com alta concentração urinária e baixa resistência.
+
+---
+
+### Primeira Linha
+
+**Nitrofurantoína ⭐**
+- **Dose:** 100mg 6/6h por **5 dias**
+- **Vantagens:**
+  - Alta concentração na urina
+  - Baixa resistência bacteriana
+  - Alternativa para ESBL
+- **Contraindicações:**
+  - TFG <30 mL/min (insuficiência renal)
+  - Pielonefrite (não atinge concentração sistêmica adequada)
+
+**Fosfomicina ⭐**
+- **Dose:** 3g **dose única**
+- **Vantagens:**
+  - Excelente para *E. coli* produtora de ESBL
+  - Boa penetração na urina
+  - Baixa resistência
+  - Comodidade (dose única)
+- **Observação:** BrCAST tem ponto de corte da fosfomicina **somente para *E. coli***
+
+---
+
+### Outras Opções
+
+**Sulfametoxazol-Trimetoprima (TMP-SMX)**
+- **Dose:** 160/800mg 12/12h por **3 dias**
+- **Usar apenas se:**
+  - Sensibilidade local conhecida
+  - Resistência <20% na comunidade
+- **Problema:** Resistência crescente no Brasil
+
+**Cefalosporinas de 1ª e 2ª gerações**
+- Cefalexina, Cefadroxil, Cefuroxima
+- **Dose:** Variável, geralmente por 5-7 dias
+- Opção quando primeira linha contraindicada
+
+---
+
+### Profilaxia para ITU Recorrente
+
+**Indicação:**
+- Mulheres com **≥3 episódios/ano**
+
+**Opções:**
+1. **Profilaxia pós-coital:**
+   - Nitrofurantoína 50-100mg dose única após relação
+   - TMP-SMX 40/200mg dose única após relação
+
+2. **Profilaxia contínua em baixa dose:**
+   - Nitrofurantoína 50-100mg à noite
+   - TMP-SMX 40/200mg à noite
+   - Duração: 6-12 meses
+
+**Medidas não-farmacológicas:**
+- Hidratação adequada
+- Micção pós-coital
+- Evitar espermicidas
+- Cranberry (evidência limitada)
+
+---
+
+### Resumo Prático
+
+**Primeira escolha:**
+- Nitrofurantoína 5 dias OU Fosfomicina dose única
+
+**Evitar se possível:**
+- Fluoroquinolonas (reservar para casos graves)
+- Amoxicilina (alta resistência)
+
+**Não usar:**
+- Nitrofurantoína em pielonefrite ou TFG <30
+- Fosfomicina para bactérias sem ponto de corte definido
+              `,
+              question: {
+                text: "Uma mulher de 30 anos, hígida, apresenta cistite não complicada. Urocultura prévia mostra E. coli produtora de ESBL. Função renal normal. Qual é a melhor opção terapêutica?",
+                options: {
+                  A: "Ciprofloxacino 500mg 12/12h por 3 dias",
+                  B: "Fosfomicina 3g dose única ou Nitrofurantoína 100mg 6/6h por 5 dias",
+                  C: "Amoxicilina/Clavulanato 875/125mg 12/12h por 7 dias",
+                  D: "TMP-SMX 160/800mg 12/12h por 3 dias"
+                },
+                correct: "B",
+                explanation: "Para cistite não complicada causada por E. coli produtora de ESBL, as melhores opções são Fosfomicina (3g dose única) ou Nitrofurantoína (100mg 6/6h por 5 dias). Ambas têm excelente atividade contra ESBL, alta concentração urinária e baixa resistência. A Fosfomicina tem a vantagem da dose única e o BrCAST tem ponto de corte específico para E. coli. A Nitrofurantoína é contraindicada apenas se TFG <30 mL/min ou em pielonefrite. Fluoroquinolonas devem ser reservadas para casos graves. Amoxicilina/Clavulanato não é eficaz contra ESBL. TMP-SMX tem resistência crescente e só deve ser usado se sensibilidade local conhecida."
+              }
+            }
+            ,{
+              title: "Tratamento de Pielonefrite e Prostatite",
+              content: `
+### Tratamento de Pielonefrite e Prostatite
+
+O tratamento dessas duas condições é relativamente semelhante, ambos exigindo antibióticos com boa penetração tecidual e duração prolongada.
+
+---
+
+### Pielonefrite Leve (Ambulatorial)
+
+**Critérios para tratamento ambulatorial:**
+- Paciente hemodinamicamente estável
+- Ausência de sinais de sepse
+- Tolerância de via oral
+- Ausência de comorbidades graves
+
+**Opções terapêuticas:**
+
+**Primeira linha:**
+- **Ciprofloxacino** 500mg 12/12h por **10-14 dias** OU
+- **Levofloxacino** 750mg 1x/dia por **10-14 dias**
+
+**Alternativa:**
+- **Cefuroxima** 500mg 12/12h por **10-14 dias**
+
+**⚠️ Essencial:**
+- **Reavaliar em 48-72h** para confirmar melhora clínica
+- Se sem melhora → considerar hospitalização
+- Solicitar urocultura antes de iniciar antibiótico
+
+---
+
+### Prostatite Aguda
+
+**Opções terapêuticas:**
+
+**Primeira linha (melhor penetração prostática):**
+- **Ciprofloxacino** 500mg 12/12h por **14-28 dias** (2-4 semanas) OU
+- **Levofloxacino** 500mg 1x/dia por **14-28 dias** (2-4 semanas)
+
+**Alternativa:**
+- **TMP-SMX** 160/800mg 12/12h por **14-28 dias** (2-4 semanas)
+
+**Justificativa do tratamento prolongado:**
+- Difícil penetração dos antibióticos no tecido prostático
+- Necessário para erradicar reservatório bacteriano
+- Prevenir cronificação
+
+**Preferência por quinolonas:**
+- Excelente penetração prostática
+- Alta concentração no tecido prostático
+- TMP-SMX também alcança bem os tecidos da próstata
+
+---
+
+### Comparação das Durações
+
+**Cistite não complicada:**
+- 3-5 dias (curta duração)
+
+**Pielonefrite leve:**
+- 10-14 dias (duração intermediária)
+
+**Prostatite aguda:**
+- 14-28 dias (duração prolongada)
+
+**Prostatite crônica:**
+- 28-56 dias (4-8 semanas - muito prolongada)
+
+---
+
+### Pontos Importantes
+
+**Pielonefrite:**
+- ✓ Reavaliação em 48-72h é mandatória
+- ✓ Se sem melhora → hospitalizar
+- ✓ Urocultura antes do tratamento
+
+**Prostatite:**
+- ✓ Tratamento prolongado (mínimo 2 semanas)
+- ✓ Preferir quinolonas (melhor penetração)
+- ✓ Evitar toque retal vigoroso (risco de bacteremia)
+- ✓ Reavaliar resposta clínica
+              `,
+              question: {
+                text: "Um homem de 50 anos é diagnosticado com prostatite aguda. Função renal normal, sem alergias. Qual é o antibiótico de escolha e a duração mínima adequada do tratamento?",
+                options: {
+                  A: "Nitrofurantoína 100mg 6/6h por 5 dias",
+                  B: "Ciprofloxacino 500mg 12/12h por 10-14 dias",
+                  C: "Ciprofloxacino 500mg 12/12h por 14-28 dias (mínimo 2 semanas)",
+                  D: "Amoxicilina/Clavulanato 875/125mg 12/12h por 7 dias"
+                },
+                correct: "C",
+                explanation: "Para prostatite aguda, o antibiótico de escolha é Ciprofloxacino (ou Levofloxacino) por 14-28 dias (2-4 semanas). As quinolonas são preferidas pela excelente penetração prostática e alta concentração no tecido prostático. O tratamento prolongado (mínimo 2 semanas) é essencial devido à difícil penetração dos antibióticos no tecido prostático e para erradicar completamente o reservatório bacteriano, prevenindo cronificação. TMP-SMX é alternativa válida (também alcança bem a próstata). Nitrofurantoína não atinge concentração sistêmica adequada. Tratamento de 7-10 dias seria insuficiente para prostatite, podendo levar à cronificação."
+              }
+            }
+            ,{
+              title: "ITU - O que você não pode deixar de saber",
+              content: `
+### ITU - O que você não pode deixar de saber
+
+Conceitos essenciais para o manejo adequado das infecções do trato urinário na prática clínica.
+
+---
+
+### Febre = Órgão Maciço ⭐
+
+**Conceito fundamental:**
+- A presença de **febre** na ITU indica envolvimento de **órgão maciço**:
+  - **Rim** (pielonefrite)
+  - **Próstata** (prostatite)
+
+**Implicações terapêuticas:**
+- Requer antibióticos com **boa penetração tecidual**
+- Esquemas **mais prolongados**:
+  - Pielonefrite: 10-14 dias
+  - Prostatite aguda: 14-28 dias
+  - Prostatite crônica: 28-56 dias
+
+**Cistite não tem febre!**
+- Se houver febre → não é cistite simples
+- Investigar pielonefrite ou prostatite
+
+---
+
+### Etiologia Predominante
+
+**Bactérias Gram-negativas:**
+- **E. coli** é responsável por **80-90%** dos casos
+- Outras: *Klebsiella*, *Proteus*, *Enterobacter*
+
+**Epidemiologia:**
+- **Mais comum no sexo feminino** (uretra curta, proximidade com ânus)
+- Homens jovens raramente têm ITU (suspeitar de anomalia se recorrente)
+
+**Bacteriúria Assintomática:**
+- Presença de bactérias na urina **sem sintomas**
+- **NÃO é doença** → **NÃO precisa de tratamento**
+- Exceções: gestantes e pré-procedimentos urológicos instrumentalizados
+- Choose Wisely: tratar bacteriúria assintomática = má prática médica
+
+---
+
+### Recorrências - Padrões Diferentes
+
+**Em Mulheres:**
+- Geralmente representam **reinfecções** por **novas bactérias**
+- Diferentes espécies ou perfis de resistência
+- Causas: atividade sexual, espermicidas, alterações hormonais
+- Considerar profilaxia se ≥3 episódios/ano
+
+**Em Homens:**
+- Suspeite de **prostatite crônica** recidivante
+- **Mesma bactéria** com **mesmo perfil de resistência**
+- Reservatório prostático que agudiza periodicamente
+- Requer tratamento prolongado (4-8 semanas)
+
+**Investigação Urológica:**
+- Recorrências frequentes justificam investigação
+- Procurar: anomalias anatômicas, cálculos, obstrução
+- Ultrassonografia de vias urinárias
+- Considerar cistoscopia se indicado
+
+---
+
+### Resumo dos Conceitos-Chave
+
+**1. Febre:**
+- ✓ Febre = órgão maciço (rim ou próstata)
+- ✓ Tratamento mais prolongado necessário
+
+**2. Etiologia:**
+- ✓ E. coli em 80-90% dos casos
+- ✓ Mais comum em mulheres
+
+**3. Bacteriúria assintomática:**
+- ✓ NÃO tratar (exceto gestantes e pré-procedimentos)
+- ✓ Não é doença
+
+**4. Recorrências:**
+- ✓ Mulheres: reinfecções (novas bactérias)
+- ✓ Homens: prostatite crônica (mesma bactéria)
+- ✓ Investigar se frequentes
+              `,
+              question: {
+                text: "Uma mulher de 65 anos, assintomática, realiza urocultura de rotina que mostra E. coli >100.000 UFC/mL. Qual é a conduta mais adequada?",
+                options: {
+                  A: "Tratar com nitrofurantoína por 5 dias para erradicar a bactéria",
+                  B: "Não tratar, pois trata-se de bacteriúria assintomática que não necessita tratamento em idosos assintomáticos",
+                  C: "Tratar com ciprofloxacino por 10 dias devido à idade avançada",
+                  D: "Solicitar nova urocultura e tratar se persistir positiva"
+                },
+                correct: "B",
+                explanation: "A conduta correta é NÃO tratar, pois trata-se de bacteriúria assintomática. Bacteriúria assintomática é a presença de bactérias na urina sem sintomas e NÃO é doença, portanto NÃO necessita de tratamento, exceto em duas situações específicas: gestantes e antes de procedimentos urológicos instrumentalizados. O Choose Wisely considera a solicitação de urocultura para pacientes sem queixa urinária e o 'tratamento' de bacteriúria assintomática uma má prática médica. Tratar bacteriúria assintomática não traz benefícios, aumenta custos, expõe a efeitos adversos e contribui para resistência bacteriana. A idade avançada não é indicação para tratamento de bacteriúria assintomática."
+              }
+            }
+            ,{
+              title: "ITU - O Que Você Não Pode Deixar de Saber sobre o Tratamento",
+              content: `
+### ITU - O Que Você Não Pode Deixar de Saber sobre o Tratamento
+
+Resumo prático das principais condutas terapêuticas para cada tipo de ITU.
+
+---
+
+### Cistite
+
+**Primeira escolha:**
+- **Nitrofurantoína** 100mg 6/6h por **5 dias**
+- Vantagem: **baixa resistência bacteriana**
+- Contraindicação: TFG <30 mL/min
+
+**Para E. coli produtora de ESBL:**
+- **Fosfomicina** 3g **dose única**
+- Excelente opção, conveniente
+
+**⚠️ Evite fluoroquinolonas para cistite!**
+- Reservar para casos mais graves
+- Prevenir resistência bacteriana
+
+**Duração:** 3-5 dias (curta)
+
+---
+
+### Pielonefrite
+
+**Características do tratamento:**
+- Tratamento **mais longo:** 10-14 dias
+- Antibióticos de **amplo espectro**
+
+**Boas opções:**
+- **Quinolonas:**
+  - Ciprofloxacino 500mg 12/12h
+  - Levofloxacino 750mg 1x/dia
+- **Cefalosporinas de 2ª geração:**
+  - Cefuroxima 500mg 12/12h
+
+**⚠️ Essencial:**
+- Reavaliar em 48-72h
+- Se sem melhora → hospitalizar
+
+**Duração:** 10-14 dias (intermediária)
+
+---
+
+### Prostatite
+
+**Características do tratamento:**
+- Tratamento **ainda mais prolongado:** 14-28 dias
+- Antibióticos que **penetrem bem** no tecido prostático
+
+**Preferir:**
+- **Quinolonas:**
+  - Ciprofloxacino 500mg 12/12h
+  - Levofloxacino 500mg 1x/dia
+- **Cotrimoxazol (TMP-SMX):**
+  - 160/800mg 12/12h
+
+**Justificativa:**
+- Difícil penetração prostática
+- Necessário para erradicar reservatório
+
+**⚠️ Recidivas:**
+- Podem indicar **prostatite crônica**
+- Requer tratamento de 4-8 semanas
+
+**Duração:** 14-28 dias (prolongada)
+
+---
+
+### Quando Coletar Urocultura
+
+**Recomendado:**
+- **Gestantes** (sempre)
+- Pacientes com **fatores de risco** para resistência:
+  - ITU recorrente
+  - Uso recente de antibióticos
+  - Hospitalização recente
+  - Imunossupressão
+  - Anomalias do trato urinário
+- **Pielonefrite** e **prostatite**
+- Falha terapêutica
+
+**Dispensável:**
+- **Cistites não complicadas** em mulheres jovens
+- Tratamento empírico é geralmente suficiente
+
+**⚠️ Importante:**
+- Coletar **antes** do início do tratamento
+- Aguardar resultado em casos selecionados
+
+---
+
+### Resumo Comparativo
+
+**Cistite:**
+- ✓ Nitrofurantoína 5 dias
+- ✓ Evitar quinolonas
+- ✓ Urocultura dispensável se não complicada
+
+**Pielonefrite:**
+- ✓ Quinolonas ou cefuroxima 10-14 dias
+- ✓ Reavaliar em 48-72h
+- ✓ Urocultura recomendada
+
+**Prostatite:**
+- ✓ Quinolonas ou TMP-SMX 14-28 dias
+- ✓ Tratamento prolongado essencial
+- ✓ Urocultura recomendada
+- ✓ Atenção a recidivas (prostatite crônica)
+              `,
+              question: {
+                text: "Uma mulher de 25 anos, hígida, apresenta cistite não complicada. Qual é a melhor conduta terapêutica?",
+                options: {
+                  A: "Ciprofloxacino 500mg 12/12h por 3 dias, sem necessidade de urocultura",
+                  B: "Nitrofurantoína 100mg 6/6h por 5 dias, sem necessidade de urocultura em cistite não complicada",
+                  C: "Solicitar urocultura e aguardar resultado antes de iniciar tratamento",
+                  D: "Levofloxacino 750mg 1x/dia por 10 dias para garantir erradicação"
+                },
+                correct: "B",
+                explanation: "Para cistite não complicada em mulher jovem, a melhor conduta é Nitrofurantoína 100mg 6/6h por 5 dias, sem necessidade de urocultura. A nitrofurantoína é preferida devido à baixa resistência bacteriana. Em cistites não complicadas em mulheres jovens, o tratamento empírico é geralmente suficiente, dispensando urocultura. Fluoroquinolonas (ciprofloxacino, levofloxacino) devem ser evitadas para cistite simples, sendo reservadas para casos mais graves (pielonefrite) para prevenir resistência bacteriana. Tratamento de 10 dias seria excessivo para cistite (indicado para pielonefrite). A urocultura é recomendada em gestantes, pacientes com fatores de risco para resistência, pielonefrite, prostatite ou falha terapêutica."
+              }
+            }
+          ]
+        }
+,
+        {
+          id: 21,
+          title: "Principais Sítios X Grupos Bacterianos X Antibióticos",
+          duration: "8 min",
+          xp: 40,
+          sections: [
+            {
+              title: "Trato Gastrointestinal",
+              content: `
+### Trato Gastrointestinal
+
+Compreender a microbiota do trato gastrointestinal é fundamental para a escolha racional de antibióticos nas infecções abdominais.
+
+---
+
+### Microbiota e Antibióticos
+
+| Categoria | Microrganismos | Antibióticos Comuns |
+|-----------|----------------|---------------------|
+| **Predominantes** | Gram-negativos (*E. coli*, *Salmonella*, *Shigella*) | Ciprofloxacino, Amoxicilina/clavulanato |
+| **Secundários** | Anaeróbios (*Bacteroides*, *Clostridium*) em abscessos e diverticulite | Metronidazol, Amoxicilina/clavulanato |
+
+---
+
+### Características do Ambiente Abdominal
+
+O abdômen é uma **estrutura fechada**. Em geral, esses compartimentos fechados são colonizados por:
+
+**Bactérias Gram-negativas:**
+- Predominam no trato gastrointestinal
+- *E. coli* é o principal agente em infecções abdominais
+- *Salmonella* e *Shigella* em gastroenterocolites
+
+**Anaeróbios:**
+- Preferem ambientes fechados para evitar contato com o oxigênio
+- Para eles, o oxigênio é **tóxico**
+- *Bacteroides fragilis* é o principal anaeróbio em abscessos intra-abdominais
+- *Clostridium* em diverticulite e abscessos
+
+---
+
+### Implicações Terapêuticas
+
+**Para infecções gastrointestinais, considere:**
+
+**Cobertura Gram-negativa:**
+- Ciprofloxacino (quinolona)
+- Cefalosporinas de 2ª/3ª geração
+- Amoxicilina/clavulanato
+
+**Cobertura Anaeróbica:**
+- Metronidazol (anaerobicida potente)
+- Amoxicilina/clavulanato (cobertura dupla)
+
+**Infecções polimicrobianas (ex: diverticulite):**
+- Necessitam cobertura para **Gram-negativos + anaeróbios**
+- Ciprofloxacino + Metronidazol OU
+- Amoxicilina/clavulanato (monoterapia)
+
+---
+
+### Pontos-Chave
+
+**Ambiente fechado:**
+- ✓ Favorece anaeróbios (oxigênio é tóxico para eles)
+- ✓ Gram-negativos predominam
+
+**Infecções abdominais:**
+- ✓ Geralmente polimicrobianas
+- ✓ Requerem cobertura dupla (Gram-negativos + anaeróbios)
+
+**Escolha racional:**
+- ✓ Baseada na microbiota esperada
+- ✓ Considerar se infecção é polimicrobiana
+              `,
+              question: {
+                text: "Por que o abdômen, sendo uma estrutura fechada, favorece a colonização por bactérias anaeróbias?",
+                options: {
+                  A: "Porque os anaeróbios precisam de alta temperatura corporal para sobreviver",
+                  B: "Porque o oxigênio é tóxico para os anaeróbios, e ambientes fechados têm menos oxigênio disponível",
+                  C: "Porque os anaeróbios só conseguem se reproduzir em ambientes com pH ácido",
+                  D: "Porque os Gram-negativos produzem substâncias que atraem anaeróbios"
+                },
+                correct: "B",
+                explanation: "O abdômen, sendo uma estrutura fechada, favorece a colonização por bactérias anaeróbias porque o oxigênio é tóxico para esses microrganismos. Anaeróbios preferem ambientes fechados para evitar contato com o oxigênio. Esse conceito é fundamental para entender por que infecções intra-abdominais (como abscessos e diverticulite) frequentemente envolvem anaeróbios como Bacteroides fragilis e Clostridium, e por que necessitam de cobertura anaerobicida (ex: metronidazol). A temperatura corporal é constante em todo o corpo. O pH abdominal não é especialmente ácido. Gram-negativos não produzem substâncias que atraem anaeróbios - ambos coexistem naturalmente na microbiota intestinal."
+              }
+            }
+          ]
+        }
       ]
     },
     antimicrobianos: antimicrobianosModule
@@ -17368,6 +18406,22 @@ Resumo dos conceitos essenciais para o diagnóstico e manejo adequado da diverti
             <div className="bg-white rounded-xl shadow-lg p-6">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Antibioticoterapia Ambulatorial</h3>
               <p className="text-gray-600 mb-4">Aprenda os fundamentos da prescrição de antibióticos no ambulatório</p>
+              
+              {/* Mensagem de Boas-Vindas */}
+              {modulesData.antibioticoterapia?.welcomeMessage && (
+                <div className="mb-6 p-5 bg-gradient-to-r from-purple-50 to-indigo-50 border-l-4 border-purple-600 rounded-lg">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0">
+                      <span className="text-2xl">📚</span>
+                    </div>
+                    <div className="ml-3">
+                      <p className="text-sm text-gray-700 whitespace-pre-line leading-relaxed">
+                        {modulesData.antibioticoterapia.welcomeMessage}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
               <div className="mb-4">
                 <div className="flex justify-between text-sm text-gray-600 mb-1">
                   <span>Progresso</span>
@@ -17449,7 +18503,7 @@ Resumo dos conceitos essenciais para o diagnóstico e manejo adequado da diverti
                 <div 
                   className="prose max-w-none"
                   dangerouslySetInnerHTML={{
-                    __html: currentLesson.sections[currentSection]?.content || ''
+                    __html: markdownToHtml(currentLesson.sections[currentSection]?.content || '')
                   }}
                 />
 
