@@ -17856,9 +17856,9 @@ Resumo prático das principais condutas terapêuticas para cada tipo de ITU.
             {
               title: "Introdução",
               content: `
-Chegou o momento de conectar o que aprendemos até aqui. Cada sítio do corpo que estudamos possui sua própria microbiota característica, formada por microrganismos que normalmente convivem em equilíbrio com o hospedeiro.
-
-Vamos agora analisar em detalhes essa microbiota em cada local, refletindo sobre quais bactérias costumam estar presentes e, a partir disso, identificar as drogas mais adequadas para o tratamento das infecções que possam surgir nessas regiões. Assim, você poderá compreender de forma integrada como o conhecimento microbiológico orienta a escolha racional do antibiótico.
+                <p>Chegou o momento de conectar o que aprendemos até aqui. Cada sítio do corpo que estudamos possui sua própria microbiota característica, formada por microrganismos que normalmente convivem em equilíbrio com o hospedeiro.</p>
+                
+                <p>Vamos agora analisar em detalhes essa microbiota em cada local, refletindo sobre quais bactérias costumam estar presentes e, a partir disso, identificar as drogas mais adequadas para o tratamento das infecções que possam surgir nessas regiões. Assim, você poderá compreender de forma integrada como o conhecimento microbiológico orienta a escolha racional do antibiótico.</p>
               `
             },
             {
