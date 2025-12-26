@@ -18032,6 +18032,7 @@ O abdômen é uma **estrutura fechada**. Em geral, esses compartimentos fechados
     setCurrentQuestion(null)
     setShowQuestionFeedback(false)
     setSelectedAnswer(null)
+    setSelectedModuleId(null) // Limpar para evitar renderização da moduleView
     setCurrentView('lesson')
   }
 
