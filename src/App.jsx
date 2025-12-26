@@ -17955,11 +17955,14 @@ O abdômen é uma **estrutura fechada**. Em geral, esses compartimentos fechados
     const password = loginPasswordRef.current?.value
     
     if (username && password) {
-      setUser({ username, name: username })
+      // Verificar se é usuário admin
+      const isAdmin = username === 'admin' && password === 'admin123'
       
-      // Verificar se é a primeira vez do usuário
+      setUser({ username, name: username, isAdmin })
+      
+      // Verificar se é a primeira vez do usuário (não mostrar boas-vindas para admin)
       const hasSeenWelcome = localStorage.getItem('hasSeenWelcome')
-      if (!hasSeenWelcome) {
+      if (!hasSeenWelcome && !isAdmin) {
         setShowWelcome(true)
         setCurrentView('dashboard')
       } else {
@@ -18083,6 +18086,9 @@ O abdômen é uma **estrutura fechada**. Em geral, esses compartimentos fechados
   }
 
   const isLessonUnlocked = (moduleId, lessonId) => {
+    // Admin tem acesso total a todas as lições
+    if (user?.isAdmin) return true
+    
     // Primeira lição sempre desbloqueada
     if (lessonId === 1) return true
     
