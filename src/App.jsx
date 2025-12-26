@@ -17855,6 +17855,7 @@ Resumo prático das principais condutas terapêuticas para cada tipo de ITU.
           sections: [
             {
               title: "Introdução",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -18651,6 +18652,22 @@ O abdômen é uma **estrutura fechada**. Em geral, esses compartimentos fechados
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
                   {currentLesson.sections[currentSection]?.title}
                 </h2>
+                
+                {currentLesson.sections[currentSection]?.videoUrl && (
+                  <div className="mb-6">
+                    <div className="relative" style={{ paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
+                      <iframe
+                        src={currentLesson.sections[currentSection].videoUrl}
+                        title="Vídeo explicativo"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="absolute top-0 left-0 w-full h-full rounded-lg"
+                        style={{ border: '2px solid #e5e7eb' }}
+                      />
+                    </div>
+                  </div>
+                )}
                 
                 <div 
                   className="prose max-w-none"
