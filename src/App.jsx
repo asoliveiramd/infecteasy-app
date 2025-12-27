@@ -18023,9 +18023,7 @@ Ao tratar uma infecção urinária, devemos pensar primariamente em **Gram-negat
                 correct: "C",
                 explanation: "A Escherichia coli é o principal agente etiológico das infecções do trato urinário, representando aproximadamente 90% dos casos. Essas bactérias são provenientes do trato gastrointestinal: saem pelo ânus, colonizam a genitália e podem invadir a uretra de forma ascendente. Por isso, ao tratar uma infecção urinária, devemos pensar primariamente em Gram-negativos intestinais. Staphylococcus saprophyticus é um agente secundário (mais comum em mulheres jovens). Enterococcus também é secundário. Klebsiella pode causar ITU, mas é muito menos frequente que E. coli e também é de origem intestinal, não respiratória."
               }
-            }
-          ]
-        },
+            },
             {
               title: "Pele e Partes Moles",
               content: `
@@ -18105,6 +18103,8 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
               }
             }
 
+      ]
+    }
       ]
     },
     antimicrobianos: antimicrobianosModule
