@@ -18482,6 +18482,80 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
                 },
                 correct: "B",
                 explanation: "A pele é colonizada predominantemente por Gram-positivos. O Staphylococcus aureus é o principal agente em abscessos cutâneos (furúnculos, carbúnculos), enquanto o Streptococcus pyogenes é o principal agente em infecções difusas como erisipela e celulite. Por isso, ao pensar em infecções de pele, devemos sempre considerar primariamente os Gram-positivos. Anaeróbios são agentes secundários em abscessos profundos. Gram-negativos e fungos não são agentes comuns em infecções de pele e partes moles adquiridas na comunidade."
+              }            },
+            {
+              title: "Vias Aéreas Superiores",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+## 💡 Introdução
+
+As infecções de vias aéreas superiores (IVAS) representam uma das principais causas de consultas ambulatoriais. É fundamental compreender a etiologia predominantemente viral e saber identificar quando o tratamento antibiótico é realmente necessário.
+
+---
+
+## 📊 Patógenos e Tratamento
+
+| Categoria | Agentes | Tratamento |
+|-----------|---------|------------|
+| **Vírus (mais comuns)** | Rinovírus, Influenza, Parainfluenza, VSR | Sintomático (analgésicos, antitérmicos, hidratação) |
+| **Bactérias Gram-positivas** | *Streptococcus pyogenes* | Amoxicilina, Penicilina benzatina |
+| **Bactérias Gram-negativas** | *Haemophilus influenzae*, *Moraxella catarrhalis* | Amoxicilina/clavulanato, Cefalosporinas de 2ª geração |
+| **Casos refratários** | Patógenos resistentes | Levofloxacino (fluoroquinolona respiratória) |
+
+---
+
+## 📝 Características das Infecções de Vias Aéreas Superiores
+
+A grande maioria das IVAS é causada por **vírus**, especialmente rinovírus e influenza, sendo autolimitadas e requerendo apenas tratamento sintomático. O uso indiscriminado de antibióticos nessas situações contribui para a resistência bacteriana.
+
+Quando há suspeita de **infecção bacteriana** (febre alta persistente, secreção purulenta, piora após melhora inicial), os principais agentes são o *Streptococcus pyogenes* (faringoamigdalite) e os Gram-negativos de vias aéreas (*H. influenzae* e *Moraxella catarrhalis*), comuns em sinusites e otites.
+
+---
+
+## 💊 Implicações Terapêuticas
+
+O tratamento antibiótico deve ser reservado para casos com forte suspeita de etiologia bacteriana. As opções incluem:
+
+- **Primeira linha:** Amoxicilina/clavulanato (cobre Gram-positivos e Gram-negativos produtores de betalactamase)
+- **Alternativa:** Cefalosporinas de 2ª geração (cefuroxima, cefaclor)
+- **Casos graves ou alergia:** Levofloxacino (fluoroquinolona respiratória)
+
+---
+
+## 🔑 Pontos-Chave
+
+> **Conceito Central:** A maioria das IVAS é viral e autolimitada. O uso criterioso de antibióticos é essencial para evitar resistência bacteriana.
+
+> **Dica Prática:** Amoxicilina/clavulanato é a primeira escolha quando há indicação de antibioticoterapia, pois cobre tanto *S. pyogenes* quanto os Gram-negativos produtores de betalactamase.
+
+---
+
+## ❓ Questão para Fixação
+
+**Paciente de 35 anos apresenta quadro de rinossinusite com febre alta há 5 dias, secreção nasal purulenta e dor facial intensa. Qual é a conduta mais adequada?**
+
+A) Tratamento sintomático apenas, pois a maioria das rinossinusites é viral
+
+B) Prescrever amoxicilina/clavulanato, considerando provável etiologia bacteriana
+
+C) Iniciar levofloxacino como primeira escolha em todas as sinusites
+
+D) Aguardar mais 7 dias antes de considerar antibioticoterapia
+
+**Resposta correta: B**
+
+**Justificativa:** A presença de febre alta persistente (>5 dias), secreção purulenta e dor facial intensa sugere rinossinusite bacteriana. Nesse contexto, a amoxicilina/clavulanato é a primeira escolha por cobrir tanto *S. pyogenes* quanto os Gram-negativos de vias aéreas (*H. influenzae* e *M. catarrhalis*), incluindo cepas produtoras de betalactamase.
+              `,
+              question: {
+                text: "Paciente de 35 anos apresenta quadro de rinossinusite com febre alta há 5 dias, secreção nasal purulenta e dor facial intensa. Qual é a conduta mais adequada?",
+                options: {
+                  A: "Tratamento sintomático apenas, pois a maioria das rinossinusites é viral",
+                  B: "Prescrever amoxicilina/clavulanato, considerando provável etiologia bacteriana",
+                  C: "Iniciar levofloxacino como primeira escolha em todas as sinusites",
+                  D: "Aguardar mais 7 dias antes de considerar antibioticoterapia"
+                },
+                correct: "B",
+                explanation: "A presença de febre alta persistente (>5 dias), secreção purulenta e dor facial intensa sugere rinossinusite bacteriana. Nesse contexto, a amoxicilina/clavulanato é a primeira escolha por cobrir tanto S. pyogenes quanto os Gram-negativos de vias aéreas (H. influenzae e M. catarrhalis), incluindo cepas produtoras de betalactamase. O tratamento sintomático seria adequado para casos virais sem sinais de alarme. Levofloxacino não é primeira escolha. Aguardar mais tempo não é recomendado com sinais de infecção bacteriana."
               }
             }
 
