@@ -6,6 +6,8 @@ import markdownToHtml from './utils/markdownToHtml';
 const App = () => {
   // Estados principais
   const [currentView, setCurrentView] = useState('login')
+  const [showPassword, setShowPassword] = useState(false)
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [user, setUser] = useState(null)
   const [showWelcome, setShowWelcome] = useState(false)
   const [currentModule, setCurrentModule] = useState(null)
@@ -18942,22 +18944,40 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Senha</label>
-              <input
-                ref={registerSenhaRef}
-                type="password"
-                placeholder="Digite sua senha"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-              />
+              <div className="relative">
+                <input
+                  ref={registerSenhaRef}
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Digite sua senha"
+                  className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                >
+                  {showPassword ? '👁️' : '👁️‍🗨️'}
+                </button>
+              </div>
             </div>
             
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Confirmar Senha</label>
-              <input
-                ref={registerConfirmarSenhaRef}
-                type="password"
-                placeholder="Confirme sua senha"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-              />
+              <div className="relative">
+                <input
+                  ref={registerConfirmarSenhaRef}
+                  type={showConfirmPassword ? "text" : "password"}
+                  placeholder="Confirme sua senha"
+                  className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                >
+                  {showConfirmPassword ? '👁️' : '👁️‍🗨️'}
+                </button>
+              </div>
             </div>
             
             <button
