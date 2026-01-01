@@ -8,6 +8,7 @@ const App = () => {
   const [currentView, setCurrentView] = useState('login')
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+  const [cpfValid, setCpfValid] = useState(true)
   const [user, setUser] = useState(null)
   const [showWelcome, setShowWelcome] = useState(false)
   const [currentModule, setCurrentModule] = useState(null)
@@ -18674,11 +18675,81 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
     }
   }
 
+  
+  // Função para aplicar máscara de CPF
+  const formatCPF = (value) => {
+    // Remove tudo que não é dígito
+    const numbers = value.replace(/\D/g, '')
+    
+    // Limita a 11 dígitos
+    const limited = numbers.slice(0, 11)
+    
+    // Aplica a máscara XXX.XXX.XXX-XX
+    if (limited.length <= 3) return limited
+    if (limited.length <= 6) return `${limited.slice(0, 3)}.${limited.slice(3)}`
+    if (limited.length <= 9) return `${limited.slice(0, 3)}.${limited.slice(3, 6)}.${limited.slice(6)}`
+    return `${limited.slice(0, 3)}.${limited.slice(3, 6)}.${limited.slice(6, 9)}-${limited.slice(9)}`
+  }
+
+  // Função para validar CPF
+  const validateCPF = (cpf) => {
+    // Remove caracteres não numéricos
+    const numbers = cpf.replace(/\D/g, '')
+    
+    // Verifica se tem 11 dígitos
+    if (numbers.length !== 11) return false
+    
+    // Verifica se todos os dígitos são iguais (ex: 111.111.111-11)
+    if (/^(\d)\1{10}$/.test(numbers)) return false
+    
+    // Calcula o primeiro dígito verificador
+    let sum = 0
+    for (let i = 0; i < 9; i++) {
+      sum += parseInt(numbers[i]) * (10 - i)
+    }
+    let remainder = (sum * 10) % 11
+    if (remainder === 10 || remainder === 11) remainder = 0
+    if (remainder !== parseInt(numbers[9])) return false
+    
+    // Calcula o segundo dígito verificador
+    sum = 0
+    for (let i = 0; i < 10; i++) {
+      sum += parseInt(numbers[i]) * (11 - i)
+    }
+    remainder = (sum * 10) % 11
+    if (remainder === 10 || remainder === 11) remainder = 0
+    if (remainder !== parseInt(numbers[10])) return false
+    
+    return true
+  }
+
+  // Handler para mudança no campo CPF
+  const handleCPFChange = (e) => {
+    const formatted = formatCPF(e.target.value)
+    e.target.value = formatted
+    
+    // Valida apenas se tiver 11 dígitos
+    const numbers = formatted.replace(/\D/g, '')
+    if (numbers.length === 11) {
+      setCpfValid(validateCPF(formatted))
+    } else {
+      setCpfValid(true) // Não mostra erro enquanto está digitando
+    }
+  }
+
   const handleRegister = () => {
     const nome = registerNomeRef.current?.value
+    const cpf = registerCpfRef.current?.value
     const login = registerLoginRef.current?.value
     const senha = registerSenhaRef.current?.value
     const confirmarSenha = registerConfirmarSenhaRef.current?.value
+    
+    // Valida CPF
+    if (cpf && !validateCPF(cpf)) {
+      setCpfValid(false)
+      alert('Por favor, insira um CPF válido.')
+      return
+    }
     
     if (nome && login && senha && senha === confirmarSenha) {
       setUser({ username: login, name: nome })
@@ -18889,8 +18960,15 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
                 ref={registerCpfRef}
                 type="text"
                 placeholder="000.000.000-00"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                maxLength="14"
+                onChange={handleCPFChange}
+                className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent ${
+                  cpfValid ? 'border-gray-300' : 'border-red-500 bg-red-50'
+                }`}
               />
+              {!cpfValid && (
+                <p className="text-red-500 text-sm mt-1">CPF inválido</p>
+              )}
             </div>
             
             <div>
