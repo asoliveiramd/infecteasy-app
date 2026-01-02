@@ -18648,6 +18648,375 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
 
       ]
     }
+        ,{
+          id: 22,
+          title: "Revisão I",
+          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          duration: "45 min",
+          xp: 200,
+          sections: [
+            {
+              title: "Pergunta 1 - Fundamentos",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">📝 Revisão I</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #ede9fe;">
+                    Teste seus conhecimentos sobre as <strong style="color: white;">7 primeiras lições</strong> do módulo Antibioticoterapia Ambulatorial.
+                  </p>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 15px 0;">
+                  <h4 style="color: #92400e; margin-bottom: 10px;">💡 Instruções</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Esta revisão contém <strong>15 perguntas</strong> baseadas no conteúdo das lições 1 a 7. 
+                    Cada pergunta vale pontos de XP. Leia atentamente e escolha a melhor resposta.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal certeza ao prescrever um antibiótico que todo médico deve ter em mente?",
+                options: [
+                  "O antibiótico sempre vai curar a infecção",
+                  "O antibiótico vai fazer mal, causando efeitos adversos, alterando a microbiota e induzindo resistência",
+                  "O antibiótico não tem efeitos colaterais significativos",
+                  "O antibiótico pode ser usado preventivamente sem riscos"
+                ],
+                correct: 1,
+                explanation: "Uma certeza fundamental é que todo antibiótico vai fazer mal - tem potencial para causar efeitos adversos, alterar a microbiota e induzir resistência bacteriana. Por isso, o uso deve ser criterioso e baseado em indicação clara."
+              }
+            },
+            {
+              title: "Pergunta 2 - Fundamentos",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 2 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Continue testando seus conhecimentos sobre os fundamentos da antibioticoterapia.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Na escolha de um antibiótico para tratamento ambulatorial, qual dos seguintes NÃO é um fator fundamental a ser considerado?",
+                options: [
+                  "Espectro de ação adequado ao patógeno provável",
+                  "Penetração no sítio de infecção",
+                  "Preferência pessoal do paciente por marca comercial",
+                  "Perfil de segurança e custo-efetividade"
+                ],
+                correct: 2,
+                explanation: "A preferência do paciente por marca comercial não é um princípio fundamental na escolha de um antibiótico. A escolha deve ser baseada em critérios clínicos e farmacológicos: espectro de ação, penetração tecidual, perfil de segurança, facilidade de administração e custo-efetividade."
+              }
+            },
+            {
+              title: "Pergunta 3 - Inibidores da Parede Celular",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 3 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Agora vamos testar seus conhecimentos sobre o mecanismo de ação dos β-lactâmicos.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é o mecanismo de ação dos antibióticos β-lactâmicos?",
+                options: [
+                  "Inibem a síntese proteica bacteriana",
+                  "Inibem a síntese de ácido nucleico",
+                  "Inibem a síntese da parede celular bacteriana ligando-se às PBPs (Penicillin-Binding Proteins)",
+                  "Alteram a permeabilidade da membrana citoplasmática"
+                ],
+                correct: 2,
+                explanation: "Os β-lactâmicos (penicilinas, cefalosporinas, carbapenêmicos) inibem a síntese da parede celular bacteriana ao se ligarem às PBPs (Penicillin-Binding Proteins), enzimas responsáveis pela transpeptidação do peptideoglicano. Isso leva à lise celular bacteriana."
+              }
+            },
+            {
+              title: "Pergunta 4 - Penicilinas",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 4 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Vamos revisar as diferenças entre as aminopenicilinas.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que a amoxicilina é preferida em relação à ampicilina no tratamento ambulatorial de infecções leves a moderadas?",
+                options: [
+                  "Tem espectro mais amplo contra Gram-negativos",
+                  "É resistente às β-lactamases",
+                  "Tem biodisponibilidade oral muito superior, atingindo níveis séricos mais altos",
+                  "Pode ser usada em infecções graves como meningite"
+                ],
+                correct: 2,
+                explanation: "A amoxicilina tem biodisponibilidade oral muito superior à ampicilina, atingindo níveis séricos mais altos quando administrada por via oral. Isso a torna a aminopenicilina de escolha para tratamento ambulatorial de infecções leves a moderadas (amigdalite, sinusite, otite, pneumonia de comunidade, ITU), além de causar menos efeitos colaterais gastrointestinais."
+              }
+            },
+            {
+              title: "Pergunta 5 - Penicilinas",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 5 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Teste seus conhecimentos sobre associações de antibióticos.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal vantagem da associação amoxicilina + clavulanato?",
+                options: [
+                  "Amplia o espectro para cobrir Pseudomonas aeruginosa",
+                  "O clavulanato inibe β-lactamases, restaurando a atividade contra bactérias produtoras dessas enzimas",
+                  "Reduz os efeitos colaterais gastrointestinais",
+                  "Aumenta a penetração no sistema nervoso central"
+                ],
+                correct: 1,
+                explanation: "O clavulanato é um inibidor de β-lactamases que protege a amoxicilina da degradação enzimática, restaurando sua atividade contra bactérias produtoras de β-lactamases como S. aureus, H. influenzae, M. catarrhalis e anaeróbios. Isso amplia significativamente o espectro de ação da amoxicilina."
+              }
+            },
+            {
+              title: "Pergunta 6 - Penicilinas",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 6 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Continue revisando as diferenças práticas entre as penicilinas.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal diferença prática entre ampicilina e amoxicilina que determina seu uso clínico?",
+                options: [
+                  "A ampicilina tem espectro mais amplo que a amoxicilina",
+                  "A amoxicilina tem melhor absorção oral e menor influência de alimentos, sendo preferida para uso ambulatorial",
+                  "A ampicilina é resistente às β-lactamases e a amoxicilina não",
+                  "Ambas têm exatamente as mesmas indicações e podem ser usadas de forma intercambiável"
+                ],
+                correct: 1,
+                explanation: "A principal diferença prática é que a amoxicilina tem absorção oral muito superior e sofre mínima influência de alimentos, tornando-a ideal para uso ambulatorial em infecções leves a moderadas. Já a ampicilina, com menor absorção oral e maior influência de alimentos, é preferencialmente usada por via intravenosa em contextos hospitalares para infecções graves. Ambas têm espectro semelhante."
+              }
+            },
+            {
+              title: "Pergunta 7 - Cefalosporinas",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 7 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Vamos revisar as vantagens das cefalosporinas.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal vantagem das cefalosporinas em relação às penicilinas?",
+                options: [
+                  "São sempre mais baratas",
+                  "Têm menor taxa de reações alérgicas",
+                  "São resistentes a várias β-lactamases, ampliando o espectro contra Gram-negativos",
+                  "Podem ser usadas em todas as infecções sem restrições"
+                ],
+                correct: 2,
+                explanation: "As cefalosporinas são resistentes a várias β-lactamases produzidas por bactérias Gram-negativas, o que amplia seu espectro de ação em relação às penicilinas. Isso as torna úteis em infecções por patógenos resistentes às penicilinas, especialmente Gram-negativos."
+              }
+            },
+            {
+              title: "Pergunta 8 - Cefalosporinas",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 8 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Teste seus conhecimentos sobre a cefuroxima.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que a cefuroxima é considerada a principal cefalosporina de 2ª geração no uso ambulatorial?",
+                options: [
+                  "É a mais barata e tem menor taxa de efeitos adversos",
+                  "Apresenta resistência a β-lactamases, boa penetração em tecidos respiratórios e posologia de 12/12h",
+                  "Tem espectro exclusivo contra Gram-positivos",
+                  "É a única cefalosporina que pode ser usada em gestantes"
+                ],
+                correct: 1,
+                explanation: "A cefuroxima apresenta três vantagens principais: (1) resistência a várias β-lactamases, permitindo cobertura de patógenos resistentes; (2) boa penetração em tecidos respiratórios, atingindo concentrações adequadas; e (3) posologia de 12/12h, facilitando a adesão ao tratamento. Essas características a tornam excelente escolha para sinusites, otites, pneumonias e exacerbações de DPOC."
+              }
+            },
+            {
+              title: "Pergunta 9 - Inibidores da Síntese Proteica",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 9 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Vamos revisar as classes de inibidores da síntese proteica.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Quais são as principais classes de inibidores da síntese proteica utilizadas na prática ambulatorial?",
+                options: [
+                  "Aminoglicosídeos, Fenicol e Oxazolidinonas",
+                  "Macrolídeos (50S), Tetraciclinas (30S) e Lincosamidas (50S)",
+                  "Carbapenêmicos, Monobactâmicos e Glicopeptídeos",
+                  "Quinolonas, Sulfonamidas e Trimetoprima"
+                ],
+                correct: 1,
+                explanation: "Na prática ambulatorial, as principais classes de inibidores da síntese proteica são: (1) Macrolídeos (50S) - eritromicina, claritromicina, azitromicina, com boa cobertura para Gram-positivos e atípicos; (2) Tetraciclinas (30S) - doxiciclina, minociclina, com amplo espectro incluindo atípicos, anaeróbios e alguns protozoários; e (3) Lincosamidas (50S) - clindamicina, excelente para Gram-positivos e anaeróbios."
+              }
+            },
+            {
+              title: "Pergunta 10 - Macrolídeos",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 10 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Teste seus conhecimentos sobre a azitromicina.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal vantagem da azitromicina em relação à eritromicina no tratamento ambulatorial?",
+                options: [
+                  "Tem espectro mais amplo contra Gram-negativos",
+                  "Possui meia-vida longa permitindo dose única diária e curso curto de 3-5 dias, além de menos efeitos gastrointestinais",
+                  "É resistente a todas as β-lactamases",
+                  "Pode ser usada em infecções do sistema nervoso central"
+                ],
+                correct: 1,
+                explanation: "A azitromicina possui meia-vida longa que permite dose única diária e curso curto de tratamento (3-5 dias), além de causar significativamente menos efeitos gastrointestinais que a eritromicina. Essas características melhoram muito a adesão ao tratamento ambulatorial."
+              }
+            },
+            {
+              title: "Pergunta 11 - Macrolídeos",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 11 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Continue revisando o espectro de ação dos macrolídeos.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é o principal espectro de ação dos macrolídeos que os torna úteis na prática ambulatorial?",
+                options: [
+                  "Exclusivamente Gram-negativos entéricos",
+                  "Gram-positivos (S. pneumoniae, S. pyogenes) e atípicos (Mycoplasma, Chlamydia, Legionella)",
+                  "Apenas anaeróbios",
+                  "Pseudomonas aeruginosa e outros não-fermentadores"
+                ],
+                correct: 1,
+                explanation: "Os macrolídeos têm excelente cobertura para Gram-positivos (especialmente S. pneumoniae e S. pyogenes) e patógenos atípicos (Mycoplasma pneumoniae, Chlamydia pneumoniae, Legionella). Isso os torna fundamentais no tratamento de infecções respiratórias comunitárias, especialmente em pacientes alérgicos aos β-lactâmicos."
+              }
+            },
+            {
+              title: "Pergunta 12 - Tetraciclinas",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 12 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Vamos revisar as contraindicações das tetraciclinas.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que as tetraciclinas são contraindicadas em gestantes e crianças menores de 8 anos?",
+                options: [
+                  "Causam hepatotoxicidade grave nessas populações",
+                  "Quelam cálcio, prejudicando a formação de ossos e dentes",
+                  "Têm alto risco de reações alérgicas graves",
+                  "Causam efeitos gastrointestinais graves"
+                ],
+                correct: 1,
+                explanation: "As tetraciclinas quelam cálcio, o que pode prejudicar a formação de ossos e dentes em crianças menores de 8 anos e em fetos de gestantes. Por isso, são contraindicadas nessas populações. A quelação de cálcio também explica por que a absorção oral é prejudicada por alimentos com cálcio (leite, queijo) e antiácidos."
+              }
+            },
+            {
+              title: "Pergunta 13 - Tetraciclinas",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 13 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Teste seus conhecimentos sobre as indicações da doxiciclina.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Para quais infecções a doxiciclina é considerada tratamento prioritário?",
+                options: [
+                  "Meningite bacteriana",
+                  "Infecções por Anaplasma, Ehrlichia e Rickettsias (patógenos transmitidos por carrapatos)",
+                  "Endocardite bacteriana",
+                  "Infecções de pele por Pseudomonas"
+                ],
+                correct: 1,
+                explanation: "A doxiciclina é tratamento prioritário para infecções por Anaplasma, Ehrlichia e Rickettsias, que são patógenos transmitidos por carrapatos. Além disso, tem espectro relativamente amplo cobrindo Gram-positivos, Gram-negativos, atípicos e anaeróbios orais. Apesar do espectro amplo, é estratégica e pouco usada no dia a dia ambulatorial, sendo reservada para situações específicas."
+              }
+            },
+            {
+              title: "Pergunta 14 - β-lactâmicos",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 14 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Vamos revisar a importância clínica dos β-lactâmicos.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a importância clínica dos β-lactâmicos na prática ambulatorial?",
+                options: [
+                  "São os antibióticos mais caros, mas mais eficazes",
+                  "São os antibióticos mais amplamente utilizados devido ao amplo espectro, baixa toxicidade e eficácia comprovada",
+                  "São usados apenas em infecções graves hospitalares",
+                  "Têm ação exclusiva contra Gram-negativos"
+                ],
+                correct: 1,
+                explanation: "Os β-lactâmicos são os antibióticos mais amplamente utilizados na prática clínica ambulatorial devido ao seu amplo espectro, baixa toxicidade e eficácia comprovada em diversas infecções. Incluem penicilinas, cefalosporinas e carbapenêmicos, sendo primeira escolha em muitas infecções comunitárias."
+              }
+            },
+            {
+              title: "Pergunta 15 - Conceitos Gerais",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 15 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Última pergunta! Vamos revisar o princípio fundamental da escolha de antibióticos.
+                  </p>
+                </div>
+                
+                <div style="background: #d1fae5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin: 15px 0;">
+                  <h4 style="color: #065f46; margin-bottom: 10px;">🎉 Parabéns!</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Você chegou à última pergunta da Revisão I. Continue estudando e aprofundando seus conhecimentos!
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Ao escolher um antibiótico para tratamento ambulatorial, qual princípio fundamental deve guiar a decisão?",
+                options: [
+                  "Sempre usar o antibiótico de espectro mais amplo disponível",
+                  "Compreender a microbiota do sítio de infecção e as características dos possíveis patógenos envolvidos",
+                  "Prescrever sempre combinações de antibióticos para maior eficácia",
+                  "Usar sempre a menor dose possível para evitar efeitos adversos"
+                ],
+                correct: 1,
+                explanation: "O princípio fundamental é compreender a microbiota do sítio de infecção e as características dos possíveis patógenos envolvidos (presença de parede celular, se é anaeróbio, se é atípico). Quando entendemos o perfil dos prováveis agentes, a escolha do tratamento deixa de ser algo decorado e se transforma em um raciocínio clínico fluido e fundamentado."
+              }
+            }
+          ]
+        }
       ]
     },
     antimicrobianos: antimicrobianosModule
