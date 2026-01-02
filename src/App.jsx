@@ -19017,6 +19017,375 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             }
           ]
         }
+        ,{
+          id: 23,
+          title: "Revisão II",
+          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          duration: "45 min",
+          xp: 200,
+          sections: [
+            {
+              title: "Pergunta 1 - Lincosamidas",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">📝 Revisão II</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #d1fae5;">
+                    Teste seus conhecimentos sobre as <strong style="color: white;">lições 8 a 14</strong> do módulo Antibioticoterapia Ambulatorial.
+                  </p>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 15px 0;">
+                  <h4 style="color: #92400e; margin-bottom: 10px;">💡 Instruções</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Esta revisão contém <strong>15 perguntas</strong> baseadas no conteúdo das lições 8 a 14. 
+                    Cada pergunta vale pontos de XP. Leia atentamente e escolha a melhor resposta.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Quais são as duas características mais importantes da clindamicina que a tornam única na prática ambulatorial?",
+                options: [
+                  "Boa absorção oral e baixo custo",
+                  "Excelente penetração óssea e em abscessos, e boa atividade contra anaeróbios (inclusive orais)",
+                  "Resistência a β-lactamases e amplo espectro contra Gram-negativos",
+                  "Longa meia-vida e dose única diária"
+                ],
+                correct: 1,
+                explanation: "As duas características mais importantes da clindamicina são: (1) excelente penetração óssea e em abscessos, tornando-a ideal para osteomielite e abscessos profundos; (2) boa atividade contra anaeróbios, incluindo anaeróbios orais, sendo muito útil em infecções odontogênicas. A clindamicina está disponível em múltiplas vias de administração (oral, IV, IM e tópica), aumentando sua versatilidade clínica."
+              }
+            },
+            {
+              title: "Pergunta 2 - Lincosamidas",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 2 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Continue testando seus conhecimentos sobre lincosamidas.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que a clindamicina é considerada uma excelente opção para infecções odontogênicas?",
+                options: [
+                  "Porque tem amplo espectro contra Gram-negativos",
+                  "Porque tem excelente atividade contra anaeróbios orais e cobre Gram-positivos, disputando com amoxicilina/clavulanato como primeira escolha",
+                  "Porque é resistente a todas as β-lactamases",
+                  "Porque tem longa meia-vida e dose única diária"
+                ],
+                correct: 1,
+                explanation: "A clindamicina é excelente para infecções odontogênicas devido à sua excelente atividade contra anaeróbios orais (principais causadores dessas infecções) e boa cobertura de Gram-positivos (S. aureus, S. pyogenes, S. pneumoniae). Disputa com amoxicilina/clavulanato como primeira escolha. Além disso, é uma excelente opção para infecções por MRSA (Staphylococcus aureus resistente à oxacilina)."
+              }
+            },
+            {
+              title: "Pergunta 3 - Inibidores da Síntese de Ácido Nucleico",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 3 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Vamos revisar os mecanismos de ação dos inibidores de ácido nucleico.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é o principal mecanismo de ação dos inibidores da síntese de ácido nucleico?",
+                options: [
+                  "Inibem a síntese da parede celular bacteriana",
+                  "Inibem a síntese proteica bacteriana",
+                  "Inibem enzimas envolvidas na replicação, transcrição e reparo do DNA bacteriano",
+                  "Alteram a permeabilidade da membrana citoplasmática"
+                ],
+                correct: 2,
+                explanation: "Os inibidores da síntese de ácido nucleico atuam inibindo enzimas essenciais para a replicação, transcrição e reparo do DNA bacteriano. As quinolonas, por exemplo, inibem a DNA girase (topoisomerase II) e a topoisomerase IV, enzimas fundamentais para o superenrolamento e separação do DNA durante a replicação bacteriana."
+              }
+            },
+            {
+              title: "Pergunta 4 - Quinolonas",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 4 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Teste seus conhecimentos sobre quinolonas respiratórias.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Quais são as quinolonas consideradas 'respiratórias' devido à sua excelente cobertura para patógenos respiratórios, incluindo atípicos?",
+                options: [
+                  "Ciprofloxacino e Norfloxacino",
+                  "Levofloxacino e Moxifloxacino",
+                  "Ácido nalidíxico e Ácido pipemídico",
+                  "Ofloxacino e Pefloxacino"
+                ],
+                correct: 1,
+                explanation: "Levofloxacino e Moxifloxacino são consideradas quinolonas respiratórias (3ª e 4ª gerações) devido à sua excelente cobertura para patógenos respiratórios, incluindo S. pneumoniae e atípicos (Mycoplasma, Chlamydia, Legionella). Podem ser usadas em monoterapia para pneumonia adquirida na comunidade (PAC), pois cobrem simultaneamente típicos e atípicos."
+              }
+            },
+            {
+              title: "Pergunta 5 - Quinolonas",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 5 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Continue revisando as indicações das quinolonas.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que o ciprofloxacino é a quinolona de escolha para infecções do trato urinário complicadas e pielonefrite?",
+                options: [
+                  "Porque tem melhor cobertura para Gram-positivos",
+                  "Porque tem excelente atividade contra Gram-negativos, incluindo Pseudomonas aeruginosa, e boa penetração urinária",
+                  "Porque é a quinolona mais barata disponível",
+                  "Porque tem menor taxa de efeitos adversos"
+                ],
+                correct: 1,
+                explanation: "O ciprofloxacino é a quinolona de escolha para ITU complicadas e pielonefrite devido à sua excelente atividade contra Gram-negativos (incluindo E. coli, Klebsiella, Proteus) e Pseudomonas aeruginosa, além de boa penetração urinária. É uma quinolona de 2ª geração com foco em Gram-negativos, diferente das quinolonas respiratórias que têm melhor cobertura para Gram-positivos e atípicos."
+              }
+            },
+            {
+              title: "Pergunta 6 - Quinolonas",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 6 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Vamos revisar as contraindicações das quinolonas.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Quais são as principais contraindicações e precauções no uso de quinolonas?",
+                options: [
+                  "Apenas alergia conhecida",
+                  "Gestantes, lactantes, crianças/adolescentes em crescimento, e risco de tendinopatias (especialmente tendão de Aquiles)",
+                  "Apenas insuficiência renal grave",
+                  "Não há contraindicações significativas"
+                ],
+                correct: 1,
+                explanation: "As quinolonas são contraindicadas em gestantes, lactantes e crianças/adolescentes em crescimento devido ao risco de artropatias e danos às cartilagens de crescimento. Além disso, há risco importante de tendinopatias (especialmente ruptura do tendão de Aquiles), prolongamento do intervalo QT, e efeitos no sistema nervoso central (convulsões, confusão). Devem ser usadas com cautela em idosos e pacientes com histórico de problemas tendinosos."
+              }
+            },
+            {
+              title: "Pergunta 7 - Nitrofuranos",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 7 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Teste seus conhecimentos sobre nitrofurantoína.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal indicação clínica da nitrofurantoína na prática ambulatorial?",
+                options: [
+                  "Pneumonia adquirida na comunidade",
+                  "Infecções do trato urinário baixo não complicadas (cistite)",
+                  "Infecções de pele e tecidos moles",
+                  "Pielonefrite e ITU complicadas"
+                ],
+                correct: 1,
+                explanation: "A nitrofurantoína é indicada especificamente para infecções do trato urinário baixo não complicadas (cistite), pois atinge altas concentrações na urina. NÃO deve ser usada para pielonefrite ou ITU complicadas, pois não atinge concentrações adequadas no tecido renal. Tem boa atividade contra E. coli e outros uropatógenos comuns, sendo uma opção importante para preservar quinolonas."
+              }
+            },
+            {
+              title: "Pergunta 8 - Nitrofuranos",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 8 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Continue revisando as contraindicações da nitrofurantoína.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que a nitrofurantoína NÃO deve ser usada em pacientes com clearance de creatinina < 30-40 mL/min?",
+                options: [
+                  "Porque aumenta o risco de toxicidade renal",
+                  "Porque não atinge concentrações urinárias adequadas e aumenta o risco de toxicidade pulmonar e hepática",
+                  "Porque é completamente ineficaz nesses pacientes",
+                  "Porque causa hipoglicemia grave"
+                ],
+                correct: 1,
+                explanation: "Em pacientes com clearance de creatinina < 30-40 mL/min, a nitrofurantoína não atinge concentrações urinárias adequadas para ser eficaz, além de aumentar o risco de toxicidade pulmonar (fibrose pulmonar) e hepática. Por isso, é contraindicada em insuficiência renal moderada a grave. Também é contraindicada em gestantes no termo (risco de anemia hemolítica no recém-nascido) e pacientes com deficiência de G6PD."
+              }
+            },
+            {
+              title: "Pergunta 9 - Inibidores do Metabolismo Bacteriano",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 9 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Vamos revisar o mecanismo de ação das sulfonamidas e trimetoprima.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é o mecanismo de ação dos inibidores do metabolismo bacteriano (sulfonamidas e trimetoprima)?",
+                options: [
+                  "Inibem a síntese da parede celular",
+                  "Inibem sequencialmente a via de síntese do ácido fólico bacteriano",
+                  "Inibem a síntese proteica",
+                  "Inibem a síntese de ácido nucleico"
+                ],
+                correct: 1,
+                explanation: "Sulfonamidas e trimetoprima inibem sequencialmente a via de síntese do ácido fólico bacteriano. As sulfonamidas inibem a dihidropteroato sintetase (primeira etapa), e a trimetoprima inibe a dihidrofolato redutase (segunda etapa). Essa inibição sequencial resulta em efeito sinérgico quando usadas em combinação (sulfametoxazol + trimetoprima = cotrimoxazol), impedindo a síntese de purinas e pirimidinas necessárias para o DNA bacteriano."
+              }
+            },
+            {
+              title: "Pergunta 10 - Sulfametoxazol com Trimetoprima",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 10 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Teste seus conhecimentos sobre cotrimoxazol.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Quais são as principais indicações do cotrimoxazol (sulfametoxazol + trimetoprima) na prática ambulatorial?",
+                options: [
+                  "Apenas infecções respiratórias",
+                  "ITU não complicadas, exacerbações de bronquite crônica/DPOC, e profilaxia/tratamento de Pneumocystis jirovecii",
+                  "Apenas infecções de pele",
+                  "Meningite bacteriana"
+                ],
+                correct: 1,
+                explanation: "O cotrimoxazol tem três indicações principais na prática ambulatorial: (1) ITU não complicadas (alternativa às quinolonas e nitrofurantoína); (2) exacerbações de bronquite crônica/DPOC; (3) profilaxia e tratamento de Pneumocystis jirovecii em pacientes imunossuprimidos. Também é usado para infecções por MRSA comunitário em alguns casos. Tem amplo espectro cobrindo Gram-positivos e Gram-negativos."
+              }
+            },
+            {
+              title: "Pergunta 11 - Sulfametoxazol com Trimetoprima",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 11 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Continue revisando as contraindicações do cotrimoxazol.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Quais são as principais contraindicações e precauções no uso do cotrimoxazol?",
+                options: [
+                  "Apenas alergia a sulfonamidas",
+                  "Alergia a sulfonamidas, gestantes no 3º trimestre, lactantes, deficiência de G6PD, e risco de hipercalemia em pacientes com insuficiência renal",
+                  "Apenas insuficiência hepática",
+                  "Não há contraindicações significativas"
+                ],
+                correct: 1,
+                explanation: "O cotrimoxazol tem várias contraindicações importantes: alergia a sulfonamidas, gestantes no 3º trimestre (risco de kernicterus), lactantes, pacientes com deficiência de G6PD (risco de anemia hemolítica). Além disso, a trimetoprima pode causar hipercalemia (especialmente em pacientes com insuficiência renal ou em uso de IECA/BRA), e há risco de reações cutâneas graves (Stevens-Johnson, necrólise epidérmica tóxica)."
+              }
+            },
+            {
+              title: "Pergunta 12 - Outros Antibióticos Ambulatoriais",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 12 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Vamos revisar opções para MRSA comunitário.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual antibiótico é considerado uma opção importante para infecções por MRSA comunitário, com boa penetração em tecidos moles?",
+                options: [
+                  "Amoxicilina",
+                  "Ciprofloxacino",
+                  "Clindamicina",
+                  "Nitrofurantoína"
+                ],
+                correct: 2,
+                explanation: "A clindamicina é uma opção importante para infecções por MRSA comunitário devido à sua boa atividade contra S. aureus resistente à oxacilina e excelente penetração em tecidos moles, abscessos e tecido ósseo. Outras opções para MRSA comunitário incluem sulfametoxazol-trimetoprima e doxiciclina, mas a clindamicina se destaca pela penetração tecidual e cobertura de anaeróbios."
+              }
+            },
+            {
+              title: "Pergunta 13 - Conceitos Gerais",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 13 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Teste seus conhecimentos sobre quinolonas respiratórias em PAC.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal vantagem de usar quinolonas respiratórias (levofloxacino, moxifloxacino) em monoterapia para pneumonia adquirida na comunidade?",
+                options: [
+                  "São mais baratas que outras opções",
+                  "Cobrem simultaneamente patógenos típicos (S. pneumoniae) e atípicos (Mycoplasma, Chlamydia, Legionella), eliminando necessidade de terapia combinada",
+                  "Têm menos efeitos adversos que β-lactâmicos",
+                  "Podem ser usadas em gestantes"
+                ],
+                correct: 1,
+                explanation: "A principal vantagem das quinolonas respiratórias em monoterapia para PAC é que cobrem simultaneamente patógenos típicos (especialmente S. pneumoniae) e atípicos (Mycoplasma, Chlamydia, Legionella), eliminando a necessidade de terapia combinada (β-lactâmico + macrolídeo). Isso simplifica o tratamento e melhora a adesão. No entanto, devem ser usadas criteriosamente devido ao risco de resistência e efeitos adversos (tendinopatias, prolongamento QT)."
+              }
+            },
+            {
+              title: "Pergunta 14 - Conceitos Gerais",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 14 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Vamos revisar conceitos de stewardship antimicrobiano.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que é importante preservar o uso de quinolonas e usar alternativas como nitrofurantoína para cistites não complicadas?",
+                options: [
+                  "Porque quinolonas são muito caras",
+                  "Para prevenir o desenvolvimento de resistência bacteriana e preservar quinolonas para infecções mais graves",
+                  "Porque quinolonas não funcionam para ITU",
+                  "Porque nitrofurantoína é sempre superior às quinolonas"
+                ],
+                correct: 1,
+                explanation: "É importante preservar o uso de quinolonas (stewardship antimicrobiano) para prevenir o desenvolvimento de resistência bacteriana, especialmente em patógenos Gram-negativos. Quinolonas devem ser reservadas para infecções mais graves (pielonefrite, ITU complicadas, infecções por Pseudomonas). Para cistites não complicadas, alternativas como nitrofurantoína, fosfomicina ou cotrimoxazol são preferíveis, desde que o perfil de sensibilidade local seja favorável."
+              }
+            },
+            {
+              title: "Pergunta 15 - Conceitos Gerais",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 15 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Última pergunta! Vamos revisar princípios de escolha de antibióticos.
+                  </p>
+                </div>
+                
+                <div style="background: #d1fae5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981; margin: 15px 0;">
+                  <h4 style="color: #065f46; margin-bottom: 10px;">🎉 Parabéns!</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Você chegou à última pergunta da Revisão II. Continue estudando e aprofundando seus conhecimentos!
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Ao escolher um antibiótico entre as classes estudadas (lincosamidas, quinolonas, nitrofuranos, cotrimoxazol), qual princípio fundamental deve guiar a decisão?",
+                options: [
+                  "Sempre usar o antibiótico mais caro disponível",
+                  "Considerar o sítio de infecção, patógenos prováveis, penetração tecidual do antibiótico, perfil de segurança e estratégias de preservação (stewardship)",
+                  "Usar sempre quinolonas por serem de amplo espectro",
+                  "Escolher aleatoriamente entre as opções disponíveis"
+                ],
+                correct: 1,
+                explanation: "A escolha do antibiótico deve considerar múltiplos fatores: (1) sítio de infecção e patógenos prováveis; (2) penetração tecidual adequada (ex: clindamicina para osso, nitrofurantoína apenas para bexiga); (3) perfil de segurança e contraindicações específicas; (4) estratégias de preservação antimicrobiana (stewardship) para evitar resistência. Quinolonas, por exemplo, devem ser preservadas para infecções graves, não sendo primeira escolha para cistites simples. O uso racional e criterioso é fundamental para manter a eficácia dos antibióticos."
+              }
+            }
+          ]
+        }
       ]
     },
     antimicrobianos: antimicrobianosModule
