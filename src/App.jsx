@@ -1358,13 +1358,11 @@ const App = () => {
         {
           id: 12,
           title: "Revisão: Pontos e Dicas",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
           duration: "15 min",
           xp: 75,
           sections: [
             {
               title: "Pontos Essenciais Sobre o Gram I",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🔬 Pontos Essenciais Sobre o Gram I</h3>
@@ -1405,7 +1403,6 @@ const App = () => {
             },
             {
               title: "Pontos Essenciais Sobre o Gram II",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #dc2626; margin-bottom: 15px;">⚠️ Pontos Essenciais Sobre o Gram II</h3>
@@ -1446,7 +1443,6 @@ const App = () => {
             },
             {
               title: "Pontos Essenciais Sobre o Gram III",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d97706; margin-bottom: 15px;">⚠️ Pontos Essenciais Sobre o Gram III</h3>
@@ -1479,7 +1475,6 @@ const App = () => {
             },
             {
               title: "Dicas Práticas para Interpretação",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0fdfa; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0f766e; margin-bottom: 15px;">💡 Dicas Práticas para Interpretação</h3>
@@ -1540,13 +1535,11 @@ const App = () => {
         ,{
           id: 13,
           title: "Revisão: Perguntas - Parte 1",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
           duration: "45 min",
           xp: 225,
           sections: [
             {
               title: "I. Introdução e Qualidade da Amostra - Q1",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">📝 Seção I: Introdução e Qualidade da Amostra</h3>
@@ -1571,7 +1564,6 @@ const App = () => {
             },
             {
               title: "I. Introdução e Qualidade da Amostra - Q2",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -1592,7 +1584,6 @@ const App = () => {
             },
             {
               title: "I. Introdução e Qualidade da Amostra - Q3",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -1613,7 +1604,6 @@ const App = () => {
             },
             {
               title: "I. Introdução e Qualidade da Amostra - Q4",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -1634,7 +1624,6 @@ const App = () => {
             },
             {
               title: "I. Introdução e Qualidade da Amostra - Q5",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -1655,7 +1644,6 @@ const App = () => {
             },
             {
               title: "I. Introdução e Qualidade da Amostra - Q6",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -1676,7 +1664,6 @@ const App = () => {
             },
             {
               title: "I. Introdução e Qualidade da Amostra - Q7",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -1697,7 +1684,6 @@ const App = () => {
             },
             {
               title: "I. Introdução e Qualidade da Amostra - Q8",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -1718,7 +1704,6 @@ const App = () => {
             },
             {
               title: "I. Introdução e Qualidade da Amostra - Q9",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -1739,7 +1724,6 @@ const App = () => {
             },
             {
               title: "I. Introdução e Qualidade da Amostra - Q10",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -1760,7 +1744,6 @@ const App = () => {
             },
             {
               title: "I. Introdução e Qualidade da Amostra - Q11",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -1781,7 +1764,6 @@ const App = () => {
             },
             {
               title: "I. Introdução e Qualidade da Amostra - Q12",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -1802,7 +1784,6 @@ const App = () => {
             },
             {
               title: "I. Introdução e Qualidade da Amostra - Q13",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -1823,7 +1804,6 @@ const App = () => {
             },
             {
               title: "I. Introdução e Qualidade da Amostra - Q14",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -1849,7 +1829,6 @@ const App = () => {
 ,
             {
               title: "II. Coloração de Gram: Procedimento - Q1",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #c2410c; margin-bottom: 15px;">🔬 Seção II: Coloração de Gram - Procedimento</h3>
@@ -1874,7 +1853,6 @@ const App = () => {
             },
             {
               title: "II. Coloração de Gram: Procedimento - Q2",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -1895,7 +1873,6 @@ const App = () => {
             },
             {
               title: "II. Coloração de Gram: Procedimento - Q3",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -1916,7 +1893,6 @@ const App = () => {
             },
             {
               title: "II. Coloração de Gram: Procedimento - Q4",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -1937,7 +1913,6 @@ const App = () => {
             },
             {
               title: "II. Coloração de Gram: Procedimento - Q5",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -1958,7 +1933,6 @@ const App = () => {
             },
             {
               title: "II. Coloração de Gram: Procedimento - Q6",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -1979,7 +1953,6 @@ const App = () => {
             },
             {
               title: "II. Coloração de Gram: Procedimento - Q7",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2000,7 +1973,6 @@ const App = () => {
             },
             {
               title: "II. Coloração de Gram: Procedimento - Q8",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2021,7 +1993,6 @@ const App = () => {
             },
             {
               title: "II. Coloração de Gram: Procedimento - Q9",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2042,7 +2013,6 @@ const App = () => {
             },
             {
               title: "II. Coloração de Gram: Procedimento - Q10",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fff7ed; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2068,7 +2038,6 @@ const App = () => {
 ,
             {
               title: "III. Coloração de Gram: Interpretação - Q1",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #15803d; margin-bottom: 15px;">🎯 Seção III: Coloração de Gram - Interpretação e Conceitos</h3>
@@ -2093,7 +2062,6 @@ const App = () => {
             },
             {
               title: "III. Coloração de Gram: Interpretação - Q2",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2114,7 +2082,6 @@ const App = () => {
             },
             {
               title: "III. Coloração de Gram: Interpretação - Q3",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2135,7 +2102,6 @@ const App = () => {
             },
             {
               title: "III. Coloração de Gram: Interpretação - Q4",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2156,7 +2122,6 @@ const App = () => {
             },
             {
               title: "III. Coloração de Gram: Interpretação - Q5",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2177,7 +2142,6 @@ const App = () => {
             },
             {
               title: "III. Coloração de Gram: Interpretação - Q6",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2198,7 +2162,6 @@ const App = () => {
             },
             {
               title: "III. Coloração de Gram: Interpretação - Q7",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2222,7 +2185,6 @@ const App = () => {
             },
             {
               title: "IV. Morfologias Gram-Positivas - Q1",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #faf5ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #7c3aed; margin-bottom: 15px;">🦠 Seção IV: Morfologias Gram-Positivas</h3>
@@ -2247,7 +2209,6 @@ const App = () => {
             },
             {
               title: "IV. Morfologias Gram-Positivas - Q2",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #faf5ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2268,7 +2229,6 @@ const App = () => {
             },
             {
               title: "IV. Morfologias Gram-Positivas - Q3",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #faf5ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2289,7 +2249,6 @@ const App = () => {
             },
             {
               title: "IV. Morfologias Gram-Positivas - Q4",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #faf5ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2310,7 +2269,6 @@ const App = () => {
             },
             {
               title: "IV. Morfologias Gram-Positivas - Q5",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #faf5ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2331,7 +2289,6 @@ const App = () => {
             },
             {
               title: "IV. Morfologias Gram-Positivas - Q6",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #faf5ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2352,7 +2309,6 @@ const App = () => {
             },
             {
               title: "IV. Morfologias Gram-Positivas - Q7",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #faf5ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2373,7 +2329,6 @@ const App = () => {
             },
             {
               title: "IV. Morfologias Gram-Positivas - Q8",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #faf5ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2403,13 +2358,11 @@ const App = () => {
         ,{
           id: 14,
           title: "Revisão: Perguntas - Parte 2",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
           duration: "35 min",
           xp: 165,
           sections: [
             {
               title: "V. Morfologias Gram-Negativas - Q1",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #dc2626; margin-bottom: 15px;">🔴 Seção V: Morfologias Gram-Negativas</h3>
@@ -2434,7 +2387,6 @@ const App = () => {
             },
             {
               title: "V. Morfologias Gram-Negativas - Q2",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2455,7 +2407,6 @@ const App = () => {
             },
             {
               title: "V. Morfologias Gram-Negativas - Q3",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2476,7 +2427,6 @@ const App = () => {
             },
             {
               title: "V. Morfologias Gram-Negativas - Q4",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2500,7 +2450,6 @@ const App = () => {
             },
             {
               title: "VI. Cultura e Condições de Crescimento - Q1",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d97706; margin-bottom: 15px;">🧫 Seção VI: Cultura e Condições de Crescimento</h3>
@@ -2525,7 +2474,6 @@ const App = () => {
             },
             {
               title: "VI. Cultura e Condições de Crescimento - Q2",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2546,7 +2494,6 @@ const App = () => {
             },
             {
               title: "VI. Cultura e Condições de Crescimento - Q3",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2567,7 +2514,6 @@ const App = () => {
             },
             {
               title: "VI. Cultura e Condições de Crescimento - Q4",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2588,7 +2534,6 @@ const App = () => {
             },
             {
               title: "VI. Cultura e Condições de Crescimento - Q5",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2609,7 +2554,6 @@ const App = () => {
             },
             {
               title: "VI. Cultura e Condições de Crescimento - Q6",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2633,7 +2577,6 @@ const App = () => {
             },
             {
               title: "VII. Testes Bioquímicos e MALDI-TOF - Q1",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0fdfa; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0f766e; margin-bottom: 15px;">⚗️ Seção VII: Testes Bioquímicos e MALDI-TOF</h3>
@@ -2658,7 +2601,6 @@ const App = () => {
             },
             {
               title: "VII. Testes Bioquímicos e MALDI-TOF - Q2",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0fdfa; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -2679,7 +2621,6 @@ const App = () => {
             },
             {
               title: "VII. Testes Bioquímicos e MALDI-TOF - Q3",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #f0fdfa; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 14px; color: #64748b;">
@@ -6504,13 +6445,11 @@ const App = () => {
         {
           id: 15,
           title: "Revisão I - Fundamentos",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
           duration: "25 min",
           xp: 150,
           sections: [
             {
               title: "Introdução - Revisão de Fundamentos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
                   <h2 style="color: white; margin: 0 0 15px 0; font-size: 26px;">📝 Revisão I - Fundamentos</h2>
@@ -6545,7 +6484,6 @@ const App = () => {
             },
             {
               title: "Q2 - Definição do TSA",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 2:</strong> Sobre o Teste de Suscetibilidade Antimicrobiana in vitro</p>`,
               question: {
                 text: "Q2. O que o Teste de Suscetibilidade Antimicrobiana (TSA) in vitro especificamente determina?",
@@ -6560,7 +6498,6 @@ const App = () => {
             },
             {
               title: "Q3 - Importância do TSA",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 3:</strong> Relevância do TSA na era da resistência antimicrobiana</p>`,
               question: {
                 text: "Q3. Dado o crescente problema da resistência antimicrobiana, qual é a importância do TSA de rotina para as decisões terapêuticas?",
@@ -6575,7 +6512,6 @@ const App = () => {
             },
             {
               title: "Q4 - Requisitos dos Métodos de TSA",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 4:</strong> Características essenciais dos métodos de TSA</p>`,
               question: {
                 text: "Q4. Quais são os três requisitos essenciais que os métodos de TSA usados em laboratórios clínicos devem atender?",
@@ -6590,7 +6526,6 @@ const App = () => {
             },
             {
               title: "Q5 - Resistência Intrínseca",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 5:</strong> Conceito de resistência intrínseca</p>`,
               question: {
                 text: "Q5. O que define a resistência intrínseca em bactérias?",
@@ -6605,7 +6540,6 @@ const App = () => {
             },
             {
               title: "Q6 - Exemplo de Resistência Intrínseca",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 6:</strong> Exemplo clássico de resistência intrínseca</p>`,
               question: {
                 text: "Q6. Qual bactéria é citada como exemplo de resistência intrínseca ao antimicrobiano ampicilina?",
@@ -6620,7 +6554,6 @@ const App = () => {
             },
             {
               title: "Q7 - Resistência Adquirida",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 7:</strong> Mecanismos de resistência adquirida</p>`,
               question: {
                 text: "Q7. Como a resistência adquirida difere da resistência intrínseca e qual é o seu mecanismo de desenvolvimento?",
@@ -6635,7 +6568,6 @@ const App = () => {
             },
             {
               title: "Q8 - Expressão Induzível",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 8:</strong> Mecanismo de expressão induzível</p>`,
               question: {
                 text: "Q8. Qual é o mecanismo de resistência cuja expressão ocorre apenas após a exposição a um agente incitante específico?",
@@ -6650,7 +6582,6 @@ const App = () => {
             },
             {
               title: "Q9 - Beta-lactamase AmpC",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 9:</strong> Exemplo de resistência induzível</p>`,
               question: {
                 text: "Q9. Qual é o exemplo de resistência induzível que resulta em resistência a cefalosporinas de terceira geração?",
@@ -6665,7 +6596,6 @@ const App = () => {
             },
             {
               title: "Q10 - Heterorresistência",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 10:</strong> Conceito de heterorresistência</p>`,
               question: {
                 text: "Q10. O que a heterorresistência representa em termos de expressão fenotípica?",
@@ -6680,7 +6610,6 @@ const App = () => {
             },
             {
               title: "Q11 - hVISA",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 11:</strong> Staphylococcus aureus heterorresistente</p>`,
               question: {
                 text: "Q11. O que o Staphylococcus aureus heterorresistente vancomicina-intermediário (hVISA) representa?",
@@ -6695,7 +6624,6 @@ const App = () => {
             },
             {
               title: "Q12 - Definição de CIM",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 12:</strong> Concentração Inibitória Mínima</p>`,
               question: {
                 text: "Q12. Qual é a definição precisa da Concentração Inibitória Mínima (CIM)?",
@@ -6710,7 +6638,6 @@ const App = () => {
             },
             {
               title: "Q13 - Interpretação da CIM",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 13:</strong> Relação entre <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> e sensibilidade</p>`,
               question: {
                 text: "Q13. O que o valor numérico da CIM indica em relação à sensibilidade de um microrganismo?",
@@ -6725,7 +6652,6 @@ const App = () => {
             },
             {
               title: "Q14 - Indicações do TSA",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 14:</strong> Quando realizar o TSA</p>`,
               question: {
                 text: "Q14. Em geral, o TSA deve ser realizado quando isolados clinicamente significativos são obtidos de amostras de pacientes e...",
@@ -6740,7 +6666,6 @@ const App = () => {
             },
             {
               title: "Q15 - S. pyogenes e Penicilina",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 15:</strong> Suscetibilidade previsível</p>`,
               question: {
                 text: "Q15. Por que o teste de Streptococcus pyogenes para suscetibilidade à penicilina não é realizado rotineiramente?",
@@ -6758,13 +6683,11 @@ const App = () => {
         {
           id: 16,
           title: "Revisão II - Métodos",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
           duration: "30 min",
           xp: 150,
           sections: [
             {
               title: "Introdução - Revisão de Métodos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 25px; border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
                   <h2 style="color: white; margin: 0 0 15px 0; font-size: 26px;">📝 Revisão II - Métodos</h2>
@@ -6799,7 +6722,6 @@ const App = () => {
             },
             {
               title: "Q17 - Pacientes Imunossuprimidos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 17:</strong> Importância da informação clínica sobre imunossupressão</p>`,
               question: {
                 text: "Q17. Qual é a importância da notificação pelo médico sobre um paciente estar imunossuprimido, em relação ao TSA?",
@@ -6814,7 +6736,6 @@ const App = () => {
             },
             {
               title: "Q18 - Padronização do TSA",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 18:</strong> Papel das organizações profissionais</p>`,
               question: {
                 text: "Q18. O que as organizações profissionais como o CLSI e o EUCAST fornecem para garantir a precisão e a reprodutibilidade dos métodos de TSA?",
@@ -6829,7 +6750,6 @@ const App = () => {
             },
             {
               title: "Q19 - Método de Difusão em Disco",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 19:</strong> Método qualitativo mais comum</p>`,
               question: {
                 text: "Q19. Qual é o método qualitativo convencional mais comumente usado, devido à sua simplicidade, confiabilidade e alto grau de padronização?",
@@ -6844,7 +6764,6 @@ const App = () => {
             },
             {
               title: "Q20 - Inóculo Padronizado",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 20:</strong> Padronização do inóculo no Kirby-Bauer</p>`,
               question: {
                 text: "Q20. No procedimento de Kirby-Bauer, qual é o inóculo padronizado recomendado?",
@@ -6859,7 +6778,6 @@ const App = () => {
             },
             {
               title: "Q21 - Zona de Inibição",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 21:</strong> Interpretação da zona de inibição</p>`,
               question: {
                 text: "Q21. No método de difusão em disco, o que o diâmetro da zona de inibição indica?",
@@ -6874,7 +6792,6 @@ const App = () => {
             },
             {
               title: "Q22 - Relação Zona-CIM",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 22:</strong> Correlação entre zona de inibição e <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr></p>`,
               question: {
                 text: "Q22. Qual é a principal relação entre o tamanho da zona de inibição e a Concentração Inibitória Mínima (CIM)?",
@@ -6889,7 +6806,6 @@ const App = () => {
             },
             {
               title: "Q23 - Flexibilidade do Método",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 23:</strong> Vantagem da personalização</p>`,
               question: {
                 text: "Q23. Qual é a vantagem do método de difusão em disco em relação à flexibilidade na escolha dos antimicrobianos?",
@@ -6904,7 +6820,6 @@ const App = () => {
             },
             {
               title: "Q24 - Limitação: Automação",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 24:</strong> Desafio em laboratórios de alto volume</p>`,
               question: {
                 text: "Q24. Qual é uma limitação importante da difusão em disco em laboratórios de alto volume?",
@@ -6919,7 +6834,6 @@ const App = () => {
             },
             {
               title: "Q25 - Limitação: Natureza Qualitativa",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 25:</strong> Quando a <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> é necessária</p>`,
               question: {
                 text: "Q25. Qual é um exemplo de infecção para a qual a natureza qualitativa da difusão em disco é uma limitação, exigindo uma CIM quantitativa?",
@@ -6934,7 +6848,6 @@ const App = () => {
             },
             {
               title: "Q26 - Limitação: VISA",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 26:</strong> Combinação organismo-antimicrobiano problemática</p>`,
               question: {
                 text: "Q26. Para qual combinação organismo-antimicrobiano o método de difusão em disco é especificamente considerado insensível e não deve ser usado?",
@@ -6949,7 +6862,6 @@ const App = () => {
             },
             {
               title: "Q27 - Métodos Quantitativos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 27:</strong> Padrão-ouro para avaliação de sensibilidade</p>`,
               question: {
                 text: "Q27. Qual é a principal informação fornecida pelos métodos quantitativos de TSA, que é considerada o padrão-ouro para avaliação de sensibilidade?",
@@ -6964,7 +6876,6 @@ const App = () => {
             },
             {
               title: "Q28 - Diluição em Ágar",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 28:</strong> Limitações do método de referência</p>`,
               question: {
                 text: "Q28. Qual é a principal limitação do método de diluição em ágar para uso rotineiro em laboratórios clínicos?",
@@ -6979,7 +6890,6 @@ const App = () => {
             },
             {
               title: "Q29 - Aplicação Específica",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 29:</strong> Uso clínico da diluição em ágar</p>`,
               question: {
                 text: "Q29. Qual é um uso específico da diluição em ágar em laboratórios clínicos, além de seu uso como padrão de referência?",
@@ -6994,7 +6904,6 @@ const App = () => {
             },
             {
               title: "Q30 - Macrodiluição em Caldo",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 30:</strong> Limitações da macrodiluição</p>`,
               question: {
                 text: "Q30. Qual é a principal limitação que impede o uso rotineiro da macrodiluição em caldo nos laboratórios clínicos?",
@@ -7013,13 +6922,11 @@ const App = () => {
         {
           id: 17,
           title: "Revisão III - Interpretação",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
           duration: "35 min",
           xp: 160,
           sections: [
             {
               title: "Introdução - Revisão de Interpretação",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
                   <h2 style="color: white; margin: 0 0 15px 0; font-size: 26px;">📝 Revisão III - Interpretação</h2>
@@ -7054,7 +6961,6 @@ const App = () => {
             },
             {
               title: "Q32 - Heterorresistência",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 32:</strong> Limitação da microdiluição</p>`,
               question: {
                 text: "Q32. O que é considerado uma desvantagem da microdiluição em caldo, especialmente em relação à heterorresistência?",
@@ -7069,7 +6975,6 @@ const App = () => {
             },
             {
               title: "Q33 - Método de Gradiente",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 33:</strong> Definição do E-test</p>`,
               question: {
                 text: "Q33. O que define o método de gradiente antimicrobiano?",
@@ -7084,7 +6989,6 @@ const App = () => {
             },
             {
               title: "Q34 - Leitura do E-test",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 34:</strong> Determinação da <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> no método de gradiente</p>`,
               question: {
                 text: "Q34. Como a CIM de um antimicrobiano é determinada no método de gradiente antimicrobiano?",
@@ -7099,7 +7003,6 @@ const App = () => {
             },
             {
               title: "Q35 - Categoria Sensível",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 35:</strong> Definição de Suscetível (S)</p>`,
               question: {
                 text: "Q35. De acordo com o CLSI, o que a categoria 'Suscetível' indica em relação à concentração de antibiótico e à eficácia clínica?",
@@ -7114,7 +7017,6 @@ const App = () => {
             },
             {
               title: "Q36 - Categoria I/SDD",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 36:</strong> Sensível com Aumento de Exposição</p>`,
               question: {
                 text: "Q36. O que a categoria 'Sensível com Aumento de Exposição' (BrCast) ou 'Suscetível-Dose Dependente' (CLSI) exige para que se espere eficácia clínica?",
@@ -7129,7 +7031,6 @@ const App = () => {
             },
             {
               title: "Q37 - Categoria Intermediário",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 37:</strong> Situações especiais para categoria I</p>`,
               question: {
                 text: "Q37. Em que situação a eficácia clínica pode ser alcançada para um isolado classificado como 'Intermediário'?",
@@ -7144,7 +7045,6 @@ const App = () => {
             },
             {
               title: "Q38 - Categoria Resistente",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 38:</strong> Definição de Resistente (R)</p>`,
               question: {
                 text: "Q38. Qual é a principal característica da categoria 'Resistente'?",
@@ -7159,7 +7059,6 @@ const App = () => {
             },
             {
               title: "Q39 - BrCast vs CLSI",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 39:</strong> Implicação prática do BrCast</p>`,
               question: {
                 text: "Q39. Qual é uma implicação prática do BrCast (padrão nacional brasileiro) em relação à categoria 'I'?",
@@ -7174,7 +7073,6 @@ const App = () => {
             },
             {
               title: "Q40 - Limitações S/I/R",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 40:</strong> Limitações da categorização</p>`,
               question: {
                 text: "Q40. Qual é a limitação da categorização S/I/R?",
@@ -7189,7 +7087,6 @@ const App = () => {
             },
             {
               title: "Q41 - Sistemas Automatizados",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 41:</strong> Detecção de crescimento</p>`,
               question: {
                 text: "Q41. De que dependem a maioria dos sistemas automatizados para detectar o crescimento bacteriano?",
@@ -7204,7 +7101,6 @@ const App = () => {
             },
             {
               title: "Q42 - Vantagem de Velocidade",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 42:</strong> Rapidez dos sistemas automatizados</p>`,
               question: {
                 text: "Q42. Qual é a principal vantagem de velocidade dos sistemas automatizados em comparação com os métodos convencionais?",
@@ -7219,7 +7115,6 @@ const App = () => {
             },
             {
               title: "Q43 - Custo dos Automatizados",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 43:</strong> Limitação econômica</p>`,
               question: {
                 text: "Q43. Qual é a principal limitação dos sistemas automatizados que pode ser proibitiva para alguns laboratórios de microbiologia clínica?",
@@ -7234,7 +7129,6 @@ const App = () => {
             },
             {
               title: "Q44 - Teste de Beta-lactamase",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 44:</strong> Rapidez da detecção enzimática</p>`,
               question: {
                 text: "Q44. Qual é a vantagem de tempo do teste de beta-lactamase usando hidrólise enzimática em comparação com o TSA dependente de crescimento?",
@@ -7249,7 +7143,6 @@ const App = () => {
             },
             {
               title: "Q45 - Teste D-zone",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 45:</strong> Resistência induzível à clindamicina</p>`,
               question: {
                 text: "Q45. Qual é o resultado visual de um teste D-zone positivo, indicando resistência induzível à clindamicina?",
@@ -7264,7 +7157,6 @@ const App = () => {
             },
             {
               title: "Q46 - Métodos Moleculares",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 46:</strong> Vantagem de velocidade dos métodos genotípicos</p>`,
               question: {
                 text: "Q46. Qual é uma vantagem de velocidade dos ensaios moleculares em comparação com os métodos convencionais de TSA?",
@@ -7312,13 +7204,11 @@ const App = () => {
         {
           id: 18,
           title: "Revisão IV - Tópicos Avançados",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
           duration: "30 min",
           xp: 150,
           sections: [
             {
               title: "Introdução - Revisão de Tópicos Avançados",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 25px; border-radius: 12px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
                   <h2 style="color: white; margin: 0 0 15px 0; font-size: 26px;">📝 Revisão IV - Tópicos Avançados</h2>
@@ -7353,7 +7243,6 @@ const App = () => {
             },
             {
               title: "Q48 - Categoria Sensível",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 48:</strong> Implicações da categoria S</p>`,
               question: {
                 text: "Q48. O que significa quando um isolado é categorizado como 'Sensível' (S) a um antimicrobiano?",
@@ -7368,7 +7257,6 @@ const App = () => {
             },
             {
               title: "Q49 - Reportagem Seletiva",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 49:</strong> Conceito de reportagem seletiva</p>`,
               question: {
                 text: "Q49. Qual é o principal objetivo da reportagem seletiva (ou em cascata) no antibiograma?",
@@ -7383,7 +7271,6 @@ const App = () => {
             },
             {
               title: "Q50 - Estrutura do Antibiograma",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 50:</strong> Elementos essenciais do antibiograma</p>`,
               question: {
                 text: "Q50. Quais são os elementos essenciais que devem constar em um antibiograma bem estruturado?",
@@ -7398,7 +7285,6 @@ const App = () => {
             },
             {
               title: "Q51 - Comentários Interpretativos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 51:</strong> Importância dos comentários</p>`,
               question: {
                 text: "Q51. Por que os comentários interpretativos são importantes no antibiograma?",
@@ -7413,7 +7299,6 @@ const App = () => {
             },
             {
               title: "Q52 - CLSI vs BrCast",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 52:</strong> Principais diferenças entre diretrizes</p>`,
               question: {
                 text: "Q52. Qual é uma das principais diferenças entre CLSI e BrCast/EUCAST na interpretação de resultados?",
@@ -7428,7 +7313,6 @@ const App = () => {
             },
             {
               title: "Q53 - Breakpoints",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 53:</strong> Definição de breakpoints</p>`,
               question: {
                 text: "Q53. O que são breakpoints no contexto do TSA?",
@@ -7443,7 +7327,6 @@ const App = () => {
             },
             {
               title: "Q54 - Limitações do Antibiograma",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 54:</strong> Limitações da interpretação in vitro</p>`,
               question: {
                 text: "Q54. Qual é uma limitação importante do antibiograma que os clínicos devem reconhecer?",
@@ -7458,7 +7341,6 @@ const App = () => {
             },
             {
               title: "Q55 - Antibiograma Cumulativo",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 55:</strong> Utilidade epidemiológica</p>`,
               question: {
                 text: "Q55. Qual é a utilidade do antibiograma cumulativo (cumulative antibiogram) para uma instituição?",
@@ -7473,7 +7355,6 @@ const App = () => {
             },
             {
               title: "Q56 - Discrepâncias Maior/Menor",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 56:</strong> Discrepâncias entre métodos</p>`,
               question: {
                 text: "Q56. O que caracteriza uma 'discrepância maior' entre dois métodos de TSA?",
@@ -7488,7 +7369,6 @@ const App = () => {
             },
             {
               title: "Q57 - Terapia Combinada",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 57:</strong> Indicações para terapia combinada</p>`,
               question: {
                 text: "Q57. Em quais situações clínicas a terapia antimicrobiana combinada é frequentemente recomendada, mesmo quando o antibiograma mostra sensibilidade a monoterapia?",
@@ -7503,7 +7383,6 @@ const App = () => {
             },
             {
               title: "Q58 - Heterorresistência",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 58:</strong> Desafio da heterorresistência</p>`,
               question: {
                 text: "Q58. Por que a heterorresistência representa um desafio para o TSA convencional?",
@@ -7518,7 +7397,6 @@ const App = () => {
             },
             {
               title: "Q59 - Efeito Inóculo",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 59:</strong> Impacto do tamanho do inóculo</p>`,
               question: {
                 text: "Q59. O que é o 'efeito inóculo' e qual sua relevância clínica?",
@@ -7533,7 +7411,6 @@ const App = () => {
             },
             {
               title: "Q60 - ESKAPE",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 60:</strong> Patógenos prioritários</p>`,
               question: {
                 text: "Q60. O que representa o acrônimo ESKAPE no contexto de resistência antimicrobiana?",
@@ -7548,7 +7425,6 @@ const App = () => {
             },
             {
               title: "Q61 - Stewardship",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `<p style="font-size: 16px; line-height: 1.6;"><strong>Questão 61:</strong> Papel do laboratório no stewardship</p>`,
               question: {
                 text: "Q61. Como o laboratório de microbiologia contribui para programas de stewardship antimicrobiano?",
@@ -18651,13 +18527,11 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
         ,{
           id: 22,
           title: "Revisão I",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
           duration: "45 min",
           xp: 200,
           sections: [
             {
               title: "Pergunta 1 - Fundamentos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">📝 Revisão I</h3>
@@ -18688,7 +18562,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 2 - Fundamentos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 2 de 15</h4>
@@ -18711,7 +18584,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 3 - Inibidores da Parede Celular",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 3 de 15</h4>
@@ -18734,7 +18606,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 4 - Penicilinas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 4 de 15</h4>
@@ -18757,7 +18628,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 5 - Penicilinas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 5 de 15</h4>
@@ -18780,7 +18650,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 6 - Penicilinas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 6 de 15</h4>
@@ -18803,7 +18672,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 7 - Cefalosporinas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 7 de 15</h4>
@@ -18826,7 +18694,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 8 - Cefalosporinas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 8 de 15</h4>
@@ -18849,7 +18716,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 9 - Inibidores da Síntese Proteica",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 9 de 15</h4>
@@ -18872,7 +18738,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 10 - Macrolídeos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 10 de 15</h4>
@@ -18895,7 +18760,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 11 - Macrolídeos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 11 de 15</h4>
@@ -18918,7 +18782,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 12 - Tetraciclinas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 12 de 15</h4>
@@ -18941,7 +18804,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 13 - Tetraciclinas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 13 de 15</h4>
@@ -18964,7 +18826,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 14 - β-lactâmicos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 14 de 15</h4>
@@ -18987,7 +18848,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 15 - Conceitos Gerais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 15 de 15</h4>
@@ -19020,13 +18880,11 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
         ,{
           id: 23,
           title: "Revisão II",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
           duration: "45 min",
           xp: 200,
           sections: [
             {
               title: "Pergunta 1 - Lincosamidas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">📝 Revisão II</h3>
@@ -19057,7 +18915,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 2 - Lincosamidas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 2 de 15</h4>
@@ -19080,7 +18937,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 3 - Inibidores da Síntese de Ácido Nucleico",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 3 de 15</h4>
@@ -19103,7 +18959,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 4 - Quinolonas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 4 de 15</h4>
@@ -19126,7 +18981,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 5 - Quinolonas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 5 de 15</h4>
@@ -19149,7 +19003,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 6 - Quinolonas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 6 de 15</h4>
@@ -19172,7 +19025,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 7 - Nitrofuranos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 7 de 15</h4>
@@ -19195,7 +19047,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 8 - Nitrofuranos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 8 de 15</h4>
@@ -19218,7 +19069,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 9 - Inibidores do Metabolismo Bacteriano",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 9 de 15</h4>
@@ -19241,7 +19091,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 10 - Sulfametoxazol com Trimetoprima",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 10 de 15</h4>
@@ -19264,7 +19113,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 11 - Sulfametoxazol com Trimetoprima",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 11 de 15</h4>
@@ -19287,7 +19135,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 12 - Outros Antibióticos Ambulatoriais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 12 de 15</h4>
@@ -19310,7 +19157,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 13 - Conceitos Gerais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 13 de 15</h4>
@@ -19333,7 +19179,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 14 - Conceitos Gerais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 14 de 15</h4>
@@ -19356,7 +19201,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 15 - Conceitos Gerais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 15 de 15</h4>
@@ -19389,13 +19233,11 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
         ,{
           id: 24,
           title: "Revisão III",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
           duration: "50 min",
           xp: 250,
           sections: [
             {
               title: "Pergunta 1 - Considerações Sobre Antibioticoterapia",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">📝 Revisão III</h3>
@@ -19426,7 +19268,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 2 - Infecções da Pele",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 2 de 15</h4>
@@ -19449,7 +19290,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 3 - Infecções da Pele",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 3 de 15</h4>
@@ -19472,7 +19312,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 4 - IVAS",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 4 de 15</h4>
@@ -19495,7 +19334,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 5 - IVAS",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 5 de 15</h4>
@@ -19518,7 +19356,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 6 - IVAS",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 6 de 15</h4>
@@ -19541,7 +19378,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 7 - Pneumonia Adquirida na Comunidade",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 7 de 15</h4>
@@ -19564,7 +19400,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 8 - Pneumonia Adquirida na Comunidade",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 8 de 15</h4>
@@ -19587,7 +19422,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 9 - Infecções do Trato Gastrointestinal",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 9 de 15</h4>
@@ -19610,7 +19444,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 10 - Infecções do Trato Gastrointestinal",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 10 de 15</h4>
@@ -19633,7 +19466,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 11 - Infecção do Trato Urinário",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 11 de 15</h4>
@@ -19656,7 +19488,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 12 - Infecção do Trato Urinário",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 12 de 15</h4>
@@ -19679,7 +19510,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 13 - Infecção do Trato Urinário",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 13 de 15</h4>
@@ -19702,7 +19532,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 14 - Principais Sítios X Grupos Bacterianos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 14 de 15</h4>
@@ -19725,7 +19554,6 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             },
             {
               title: "Pergunta 15 - Conceitos Gerais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 15 de 15</h4>
