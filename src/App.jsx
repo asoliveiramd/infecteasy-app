@@ -19386,6 +19386,375 @@ D) A via respiratória não apresenta diferenças em relação a outros sítios,
             }
           ]
         }
+        ,{
+          id: 24,
+          title: "Revisão III",
+          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          duration: "50 min",
+          xp: 250,
+          sections: [
+            {
+              title: "Pergunta 1 - Considerações Sobre Antibioticoterapia",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">📝 Revisão III</h3>
+                  <p style="font-size: 16px; line-height: 1.7; color: #fef3c7;">
+                    Teste seus conhecimentos sobre as <strong style="color: white;">lições 15 a 21</strong> - Síndromes Clínicas e Abordagem Prática.
+                  </p>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 15px 0;">
+                  <h4 style="color: #92400e; margin-bottom: 10px;">💡 Instruções</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Esta revisão contém <strong>15 perguntas</strong> baseadas no conteúdo das lições 15 a 21. 
+                    Foco em síndromes clínicas: pele, IVAS, PAC, GI e ITU. Cada pergunta vale pontos de XP.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Quais são os três pilares fundamentais a considerar antes de prescrever um antibiótico?",
+                options: [
+                  "Preço, disponibilidade e cor do comprimido",
+                  "Diagnóstico correto (infecção bacteriana?), identificação do sítio de infecção e conhecimento da microbiota local",
+                  "Apenas a preferência do paciente",
+                  "Sempre usar o antibiótico de espectro mais amplo disponível"
+                ],
+                correct: 1,
+                explanation: "Os três pilares fundamentais são: (1) Diagnóstico correto - confirmar que é uma infecção bacteriana e não viral; (2) Identificação do sítio de infecção - pele, respiratório, urinário, etc.; (3) Conhecimento da microbiota local - saber quais são os patógenos mais prováveis naquele sítio. Esses pilares permitem uma escolha racional e direcionada do antibiótico, evitando uso desnecessário e resistência bacteriana."
+              }
+            },
+            {
+              title: "Pergunta 2 - Infecções da Pele",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 2 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Vamos revisar os patógenos em infecções de pele.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Quais são os principais patógenos em infecções de pele não complicadas (impetigo, celulite, erisipela)?",
+                options: [
+                  "Pseudomonas aeruginosa e Acinetobacter",
+                  "Staphylococcus aureus e Streptococcus pyogenes (SBHGA)",
+                  "Escherichia coli e Klebsiella",
+                  "Apenas anaeróbios"
+                ],
+                correct: 1,
+                explanation: "As infecções de pele não complicadas (impetigo, celulite, erisipela) são causadas principalmente por Staphylococcus aureus e Streptococcus pyogenes (SBHGA - Streptococcus beta-hemolítico do grupo A). A pele é colonizada por esses Gram-positivos, que são os principais responsáveis por infecções quando há quebra da barreira cutânea."
+              }
+            },
+            {
+              title: "Pergunta 3 - Infecções da Pele",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 3 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Teste seus conhecimentos sobre tratamento de celulite.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é o antibiótico de primeira escolha para celulite e erisipela não complicadas em pacientes sem alergia a β-lactâmicos?",
+                options: [
+                  "Ciprofloxacino",
+                  "Cefalexina ou Amoxicilina/clavulanato",
+                  "Azitromicina",
+                  "Nitrofurantoína"
+                ],
+                correct: 1,
+                explanation: "Para celulite e erisipela não complicadas, os antibióticos de primeira escolha são cefalexina (cefalosporina de 1ª geração) ou amoxicilina/clavulanato, pois cobrem adequadamente S. aureus e S. pyogenes. Em pacientes alérgicos a β-lactâmicos, alternativas incluem clindamicina ou macrolídeos. Se houver suspeita de MRSA comunitário, considerar clindamicina, sulfametoxazol-trimetoprima ou doxiciclina."
+              }
+            },
+            {
+              title: "Pergunta 4 - IVAS",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 4 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Vamos revisar quando NÃO usar antibióticos em IVAS.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que a maioria das infecções de vias aéreas superiores (resfriados, faringites virais, sinusites agudas iniciais) NÃO deve ser tratada com antibióticos?",
+                options: [
+                  "Porque antibióticos são muito caros",
+                  "Porque a maioria das IVAS é de origem viral, e antibióticos não têm efeito contra vírus",
+                  "Porque todos os pacientes são alérgicos a antibióticos",
+                  "Porque não existem antibióticos eficazes para IVAS"
+                ],
+                correct: 1,
+                explanation: "A maioria das IVAS (resfriados comuns, faringites virais, sinusites agudas iniciais) é de origem viral, e antibióticos não têm efeito contra vírus. O uso desnecessário de antibióticos contribui para resistência bacteriana, efeitos adversos e custos desnecessários. Antibióticos devem ser reservados para casos com evidência de infecção bacteriana, como faringite estreptocócica confirmada, sinusite bacteriana (sintomas > 10 dias ou piora após melhora inicial) ou otite média aguda em situações específicas."
+              }
+            },
+            {
+              title: "Pergunta 5 - IVAS",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 5 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Teste seus conhecimentos sobre faringite estreptocócica.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é o antibiótico de escolha para faringite estreptocócica (causada por Streptococcus pyogenes)?",
+                options: [
+                  "Ciprofloxacino",
+                  "Penicilina V (fenoximetilpenicilina) ou Amoxicilina",
+                  "Nitrofurantoína",
+                  "Moxifloxacino"
+                ],
+                correct: 1,
+                explanation: "O antibiótico de escolha para faringite estreptocócica é penicilina V (fenoximetilpenicilina) ou amoxicilina, pois S. pyogenes permanece universalmente sensível às penicilinas. A amoxicilina é frequentemente preferida por ter melhor sabor (importante em crianças) e posologia mais conveniente. Em alérgicos a β-lactâmicos, usar macrolídeos (azitromicina, claritromicina) ou cefalosporinas de 1ª geração (se alergia não for grave)."
+              }
+            },
+            {
+              title: "Pergunta 6 - IVAS",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 6 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Continue revisando critérios para sinusite bacteriana.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Quais são os critérios que sugerem sinusite bacteriana aguda, indicando necessidade de antibiótico?",
+                options: [
+                  "Qualquer coriza ou congestão nasal",
+                  "Sintomas persistentes por mais de 10 dias sem melhora, ou piora após melhora inicial (\"double sickening\")",
+                  "Apenas dor de cabeça leve",
+                  "Espirros frequentes"
+                ],
+                correct: 1,
+                explanation: "Sinusite bacteriana aguda é sugerida por: (1) sintomas persistentes por mais de 10 dias sem melhora; (2) piora após melhora inicial (\"double sickening\"); (3) sintomas graves (febre alta ≥39°C, dor facial intensa, secreção purulenta) desde o início. Nesses casos, antibióticos são indicados. A primeira escolha é amoxicilina/clavulanato devido à cobertura de S. pneumoniae, H. influenzae e M. catarrhalis."
+              }
+            },
+            {
+              title: "Pergunta 7 - Pneumonia Adquirida na Comunidade",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 7 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Vamos revisar os patógenos em PAC.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Quais são os principais patógenos na pneumonia adquirida na comunidade (PAC)?",
+                options: [
+                  "Apenas Pseudomonas aeruginosa",
+                  "Streptococcus pneumoniae (típico) e atípicos (Mycoplasma, Chlamydophila, Legionella)",
+                  "Apenas anaeróbios orais",
+                  "Escherichia coli e Klebsiella"
+                ],
+                correct: 1,
+                explanation: "Os principais patógenos na PAC são: (1) Streptococcus pneumoniae (pneumococo) - agente típico mais comum; (2) Atípicos - Mycoplasma pneumoniae, Chlamydophila pneumoniae, Legionella pneumophila; (3) Haemophilus influenzae (em pacientes com DPOC). A via respiratória está em contato constante com agentes ambientais, diferente de outros sítios, justificando a necessidade de cobertura para atípicos."
+              }
+            },
+            {
+              title: "Pergunta 8 - Pneumonia Adquirida na Comunidade",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 8 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Teste seus conhecimentos sobre tratamento de PAC.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é o esquema antibiótico recomendado para PAC em pacientes ambulatoriais previamente hígidos?",
+                options: [
+                  "Apenas nitrofurantoína",
+                  "Amoxicilina (ou amoxicilina/clavulanato) + Macrolídeo (azitromicina ou claritromicina), OU Quinolona respiratória em monoterapia",
+                  "Apenas clindamicina",
+                  "Apenas cefalexina"
+                ],
+                correct: 1,
+                explanation: "Para PAC em pacientes ambulatoriais previamente hígidos, as opções são: (1) Terapia combinada: β-lactâmico (amoxicilina ou amoxicilina/clavulanato) + macrolídeo (azitromicina ou claritromicina) - cobre típicos e atípicos; (2) Monoterapia: quinolona respiratória (levofloxacino ou moxifloxacino) - cobre simultaneamente típicos e atípicos. A escolha depende de fatores locais de resistência, comorbidades e preferências."
+              }
+            },
+            {
+              title: "Pergunta 9 - Infecções do Trato Gastrointestinal",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 9 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Vamos revisar quando NÃO usar antibióticos em gastroenterite.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Por que a maioria das gastroenterites agudas (diarreia aguda) NÃO deve ser tratada com antibióticos?",
+                options: [
+                  "Porque antibióticos são muito caros",
+                  "Porque a maioria é autolimitada (viral ou bacteriana não invasiva), e antibióticos podem prolongar a eliminação de patógenos, além de causar efeitos adversos",
+                  "Porque todos os pacientes são alérgicos",
+                  "Porque não existem antibióticos para gastroenterite"
+                ],
+                correct: 1,
+                explanation: "A maioria das gastroenterites agudas é autolimitada (viral ou bacteriana não invasiva) e não requer antibióticos. O tratamento é suporte (hidratação, reposição eletrolítica). Antibióticos podem prolongar a eliminação de patógenos (ex: Salmonella não tifóide), causar efeitos adversos e contribuir para resistência. Antibióticos são indicados apenas em casos específicos: disenteria (febre + sangue/muco nas fezes), suspeita de cólera, diarreia do viajante moderada a grave, ou pacientes imunossuprimidos."
+              }
+            },
+            {
+              title: "Pergunta 10 - Infecções do Trato Gastrointestinal",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 10 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Teste seus conhecimentos sobre diarreia do viajante.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é o antibiótico de escolha para diarreia do viajante moderada a grave?",
+                options: [
+                  "Nitrofurantoína",
+                  "Ciprofloxacino ou Azitromicina",
+                  "Cefalexina",
+                  "Penicilina V"
+                ],
+                correct: 1,
+                explanation: "Para diarreia do viajante moderada a grave, os antibióticos de escolha são: (1) Ciprofloxacino (quinolona) - excelente cobertura para Gram-negativos entéricos (E. coli enterotoxigênica, Shigella, Salmonella); (2) Azitromicina - preferível em áreas com resistência a quinolonas ou para Campylobacter. O tratamento reduz a duração dos sintomas de 3-5 dias para 1-2 dias."
+              }
+            },
+            {
+              title: "Pergunta 11 - Infecção do Trato Urinário",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 11 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Vamos revisar os patógenos em ITU.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é o principal patógeno em infecções do trato urinário (ITU) não complicadas?",
+                options: [
+                  "Staphylococcus aureus",
+                  "Escherichia coli (responsável por 75-95% dos casos)",
+                  "Streptococcus pneumoniae",
+                  "Pseudomonas aeruginosa"
+                ],
+                correct: 1,
+                explanation: "Escherichia coli é o principal patógeno em ITU não complicadas, responsável por 75-95% dos casos. Outros patógenos incluem Klebsiella pneumoniae, Proteus mirabilis, Enterococcus spp. e Staphylococcus saprophyticus (especialmente em mulheres jovens sexualmente ativas). A microbiota intestinal (Gram-negativos entéricos) é a origem da maioria das ITU, que ascendem pela uretra até a bexiga."
+              }
+            },
+            {
+              title: "Pergunta 12 - Infecção do Trato Urinário",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 12 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Teste seus conhecimentos sobre tratamento de cistite.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Quais são os antibióticos de primeira escolha para cistite não complicada em mulheres?",
+                options: [
+                  "Sempre quinolonas",
+                  "Nitrofurantoína, Fosfomicina ou Sulfametoxazol-trimetoprima (se resistência local < 20%)",
+                  "Apenas penicilina V",
+                  "Apenas clindamicina"
+                ],
+                correct: 1,
+                explanation: "Para cistite não complicada em mulheres, os antibióticos de primeira escolha são: (1) Nitrofurantoína (5-7 dias); (2) Fosfomicina (dose única); (3) Sulfametoxazol-trimetoprima (3 dias) - se resistência local de E. coli < 20%. Quinolonas devem ser preservadas (stewardship) para infecções mais graves (pielonefrite, ITU complicadas). β-lactâmicos (amoxicilina/clavulanato, cefalosporinas) são alternativas, mas com eficácia ligeiramente inferior."
+              }
+            },
+            {
+              title: "Pergunta 13 - Infecção do Trato Urinário",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 13 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Continue revisando tratamento de pielonefrite.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é o antibiótico de escolha para pielonefrite aguda não complicada em pacientes ambulatoriais?",
+                options: [
+                  "Nitrofurantoína",
+                  "Ciprofloxacino (quinolona) ou Ceftriaxona seguida de terapia oral",
+                  "Apenas azitromicina",
+                  "Penicilina V"
+                ],
+                correct: 1,
+                explanation: "Para pielonefrite aguda não complicada em pacientes ambulatoriais, as opções são: (1) Ciprofloxacino oral (quinolona) - se sensibilidade local > 90%; (2) Ceftriaxona IM/IV dose única seguida de terapia oral (ciprofloxacino, levofloxacino ou cefalosporina oral). Nitrofurantoína NÃO deve ser usada para pielonefrite, pois não atinge concentrações adequadas no tecido renal. O tratamento dura 7-14 dias."
+              }
+            },
+            {
+              title: "Pergunta 14 - Principais Sítios X Grupos Bacterianos",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 14 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Vamos revisar diferenças entre microbiotas.
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Qual é a principal diferença entre a microbiota da pele e a microbiota do trato gastrointestinal que influencia a escolha de antibióticos?",
+                options: [
+                  "Não há diferença, ambas têm os mesmos patógenos",
+                  "Pele é colonizada por Gram-positivos (S. aureus, S. pyogenes), enquanto TGI é colonizado por Gram-negativos entéricos (E. coli, Klebsiella) e anaeróbios",
+                  "Pele tem apenas vírus",
+                  "TGI tem apenas fungos"
+                ],
+                correct: 1,
+                explanation: "A pele é colonizada principalmente por Gram-positivos (Staphylococcus aureus, Streptococcus pyogenes), justificando o uso de antibióticos com boa cobertura para esses patógenos (cefalexina, amoxicilina/clavulanato, clindamicina). Já o trato gastrointestinal é colonizado por Gram-negativos entéricos (E. coli, Klebsiella) e anaeróbios, exigindo cobertura diferente. O conhecimento da microbiota de cada sítio é fundamental para escolha racional do antibiótico."
+              }
+            },
+            {
+              title: "Pergunta 15 - Conceitos Gerais",
+              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+              content: `
+                <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h4 style="color: #1e40af; margin-bottom: 10px;">📌 Pergunta 15 de 15</h4>
+                  <p style="font-size: 14px; line-height: 1.5; color: #1e3a8a;">
+                    Última pergunta! Vamos revisar o raciocínio clínico completo.
+                  </p>
+                </div>
+                
+                <div style="background: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 15px 0;">
+                  <h4 style="color: #92400e; margin-bottom: 10px;">🎉 Parabéns!</h4>
+                  <p style="font-size: 14px; line-height: 1.5;">
+                    Você completou a Revisão III! Agora você domina a abordagem prática de síndromes infecciosas comuns. Continue estudando!
+                  </p>
+                </div>
+              `,
+              question: {
+                text: "Ao abordar uma síndrome infecciosa (pele, respiratória, urinária, gastrointestinal), qual é a sequência lógica de raciocínio para escolha do antibiótico?",
+                options: [
+                  "Escolher aleatoriamente qualquer antibiótico",
+                  "Identificar o sítio de infecção → Conhecer a microbiota habitual → Determinar patógenos prováveis → Escolher antibiótico com cobertura adequada e boa penetração tecidual",
+                  "Sempre usar o antibiótico mais caro",
+                  "Nunca usar antibióticos"
+                ],
+                correct: 1,
+                explanation: "A sequência lógica é: (1) Identificar o sítio de infecção (pele, respiratório, urinário, GI); (2) Conhecer a microbiota habitual daquele sítio; (3) Determinar os patógenos mais prováveis; (4) Escolher antibiótico com cobertura adequada e boa penetração tecidual. Por exemplo: pele → Gram-positivos → cefalexina; ITU → Gram-negativos → nitrofurantoína/ciprofloxacino; PAC → pneumococo + atípicos → β-lactâmico + macrolídeo. Esse raciocínio transforma a escolha de antibiótico em um processo lógico e fundamentado, não decorado."
+              }
+            }
+          ]
+        }
       ]
     },
     antimicrobianos: antimicrobianosModule
