@@ -7168,37 +7168,7 @@ const App = () => {
                 correct: 1,
                 explanation: "Métodos moleculares (PCR, sequenciamento, hibridização) detectam genes de resistência diretamente de amostras clínicas ou culturas, fornecendo resultados em 1-2 horas versus 24-48 horas do TSA convencional. Exemplos: detecção de mecA para MRSA, genes bla para carbapenemases (KPC, NDM, OXA-48), vanA/vanB para VRE. Painéis multiplex podem detectar múltiplos genes simultaneamente. A rapidez permite terapia direcionada precoce, isolamento apropriado e controle de infecção. Limitação: detectam apenas genes conhecidos, não fornecem CIM, e não substituem completamente o TSA fenotípico."
               }
-            },
-            {
-              text: "Q47. Por que a categorização S/I/R sozinha pode ser insuficiente para escolha terapêutica em algumas situações?",
-              options: [
-                "Porque o antibiograma sempre está errado",
-                "Porque não considera fatores como gravidade da infecção, localização (ex: SNC), estado imunológico e características PK/PD do antibiótico",
-                "Porque todos os antibióticos são iguais",
-                "Porque a categoria S significa que qualquer dose funciona"
-              ],
-              correct: 1
-            },
-            {
-              text: "Q48. Qual é a diferença fundamental entre colonização e infecção que impacta a decisão de tratar?",
-              options: [
-                "Colonização sempre requer tratamento antibiótico",
-                "Colonização é presença de microrganismos SEM resposta inflamatória/sintomas (não tratar), enquanto infecção tem resposta inflamatória/sintomas (tratar)",
-                "Não há diferença, toda cultura positiva deve ser tratada",
-                "Infecção nunca requer antibiótico"
-              ],
-              correct: 1
-            },
-            {
-              text: "Q49. Por que antibióticos de moléculas grandes como vancomicina e colistina requerem técnica dilucional específica?",
-              options: [
-                "Porque são muito caros",
-                "Porque suas moléculas grandes não difundem adequadamente em métodos convencionais como disco-difusão",
-                "Porque são sempre resistentes",
-                "Porque não existem pontos de corte para eles"
-              ],
-              correct: 1
-              }
+            }
           ]
         },
         {
