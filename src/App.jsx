@@ -18336,64 +18336,83 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
               title: "Vias Aéreas Superiores",
               videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
-## 💡 Introdução
+                <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h2 style="color: white; margin: 0 0 15px 0; font-size: 26px;">💡 Vias Aéreas Superiores</h2>
+                  <p style="font-size: 16px; line-height: 1.7; color: #dbeafe;">
+                    As infecções de vias aéreas superiores (IVAS) representam uma das principais causas de consultas ambulatoriais. É fundamental compreender a etiologia predominantemente viral e saber identificar quando o tratamento antibiótico é realmente necessário.
+                  </p>
+                </div>
 
-As infecções de vias aéreas superiores (IVAS) representam uma das principais causas de consultas ambulatoriais. É fundamental compreender a etiologia predominantemente viral e saber identificar quando o tratamento antibiótico é realmente necessário.
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #1e40af; margin-bottom: 15px;">📊 Patógenos e Tratamento</h3>
+                  <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">
+                    <thead>
+                      <tr style="background: #dbeafe;">
+                        <th style="padding: 12px; text-align: left; border: 1px solid #93c5fd;">Categoria</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #93c5fd;">Agentes</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #93c5fd;">Tratamento</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="padding: 10px; border: 1px solid #93c5fd;"><strong>Vírus (mais comuns)</strong></td>
+                        <td style="padding: 10px; border: 1px solid #93c5fd;">Rinovírus, Influenza, Parainfluenza, VSR</td>
+                        <td style="padding: 10px; border: 1px solid #93c5fd;">Sintomático (analgésicos, antitérmicos, hidratação)</td>
+                      </tr>
+                      <tr style="background: #f0f9ff;">
+                        <td style="padding: 10px; border: 1px solid #93c5fd;"><strong>Bactérias Gram-positivas</strong></td>
+                        <td style="padding: 10px; border: 1px solid #93c5fd;"><em>Streptococcus pyogenes</em></td>
+                        <td style="padding: 10px; border: 1px solid #93c5fd;">Amoxicilina, Penicilina benzatina</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 10px; border: 1px solid #93c5fd;"><strong>Bactérias Gram-negativas</strong></td>
+                        <td style="padding: 10px; border: 1px solid #93c5fd;"><em>Haemophilus influenzae</em>, <em>Moraxella catarrhalis</em></td>
+                        <td style="padding: 10px; border: 1px solid #93c5fd;">Amoxicilina/clavulanato, Cefalosporinas de 2ª geração</td>
+                      </tr>
+                      <tr style="background: #f0f9ff;">
+                        <td style="padding: 10px; border: 1px solid #93c5fd;"><strong>Casos refratários</strong></td>
+                        <td style="padding: 10px; border: 1px solid #93c5fd;">Patógenos resistentes</td>
+                        <td style="padding: 10px; border: 1px solid #93c5fd;">Levofloxacino (fluoroquinolona respiratória)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
 
----
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 15px 0;">
+                  <h3 style="color: #92400e; margin-bottom: 10px;">📝 Características das IVAS</h3>
+                  <p style="font-size: 15px; line-height: 1.6; color: #78350f;">
+                    A grande maioria das IVAS é causada por <strong>vírus</strong>, especialmente rinovírus e influenza, sendo autolimitadas e requerendo apenas tratamento sintomático. O uso indiscriminado de antibióticos nessas situações contribui para a resistência bacteriana.
+                  </p>
+                  <p style="font-size: 15px; line-height: 1.6; color: #78350f; margin-top: 10px;">
+                    Quando há suspeita de <strong>infecção bacteriana</strong> (febre alta persistente, secreção purulenta, piora após melhora inicial), os principais agentes são o <em>Streptococcus pyogenes</em> (faringoamigdalite) e os Gram-negativos de vias aéreas (<em>H. influenzae</em> e <em>Moraxella catarrhalis</em>), comuns em sinusites e otites.
+                  </p>
+                </div>
 
-## 📊 Patógenos e Tratamento
+                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; border-left: 4px solid #10b981; margin: 15px 0;">
+                  <h3 style="color: #065f46; margin-bottom: 10px;">💊 Implicações Terapêuticas</h3>
+                  <p style="font-size: 15px; line-height: 1.6; color: #064e3b; margin-bottom: 10px;">
+                    O tratamento antibiótico deve ser reservado para casos com forte suspeita de etiologia bacteriana:
+                  </p>
+                  <ul style="font-size: 15px; line-height: 1.8; color: #064e3b;">
+                    <li><strong>Primeira linha:</strong> Amoxicilina/clavulanato (cobre Gram-positivos e Gram-negativos produtores de betalactamase)</li>
+                    <li><strong>Alternativa:</strong> Cefalosporinas de 2ª geração (cefuroxima, cefaclor)</li>
+                    <li><strong>Casos graves ou alergia:</strong> Levofloxacino (fluoroquinolona respiratória)</li>
+                  </ul>
+                </div>
 
-| Categoria | Agentes | Tratamento |
-|-----------|---------|------------|
-| **Vírus (mais comuns)** | Rinovírus, Influenza, Parainfluenza, VSR | Sintomático (analgésicos, antitérmicos, hidratação) |
-| **Bactérias Gram-positivas** | *Streptococcus pyogenes* | Amoxicilina, Penicilina benzatina |
-| **Bactérias Gram-negativas** | *Haemophilus influenzae*, *Moraxella catarrhalis* | Amoxicilina/clavulanato, Cefalosporinas de 2ª geração |
-| **Casos refratários** | Patógenos resistentes | Levofloxacino (fluoroquinolona respiratória) |
-
----
-
-## 📝 Características das Infecções de Vias Aéreas Superiores
-
-A grande maioria das IVAS é causada por **vírus**, especialmente rinovírus e influenza, sendo autolimitadas e requerendo apenas tratamento sintomático. O uso indiscriminado de antibióticos nessas situações contribui para a resistência bacteriana.
-
-Quando há suspeita de **infecção bacteriana** (febre alta persistente, secreção purulenta, piora após melhora inicial), os principais agentes são o *Streptococcus pyogenes* (faringoamigdalite) e os Gram-negativos de vias aéreas (*H. influenzae* e *Moraxella catarrhalis*), comuns em sinusites e otites.
-
----
-
-## 💊 Implicações Terapêuticas
-
-O tratamento antibiótico deve ser reservado para casos com forte suspeita de etiologia bacteriana. As opções incluem:
-
-- **Primeira linha:** Amoxicilina/clavulanato (cobre Gram-positivos e Gram-negativos produtores de betalactamase)
-- **Alternativa:** Cefalosporinas de 2ª geração (cefuroxima, cefaclor)
-- **Casos graves ou alergia:** Levofloxacino (fluoroquinolona respiratória)
-
----
-
-## 🔑 Pontos-Chave
-
-> **Conceito Central:** A maioria das IVAS é viral e autolimitada. O uso criterioso de antibióticos é essencial para evitar resistência bacteriana.
-
-> **Dica Prática:** Amoxicilina/clavulanato é a primeira escolha quando há indicação de antibioticoterapia, pois cobre tanto *S. pyogenes* quanto os Gram-negativos produtores de betalactamase.
-
----
-
-## ❓ Questão para Fixação
-
-**Paciente de 35 anos apresenta quadro de rinossinusite com febre alta há 5 dias, secreção nasal purulenta e dor facial intensa. Qual é a conduta mais adequada?**
-
-A) Tratamento sintomático apenas, pois a maioria das rinossinusites é viral
-
-B) Prescrever amoxicilina/clavulanato, considerando provável etiologia bacteriana
-
-C) Iniciar levofloxacino como primeira escolha em todas as sinusites
-
-D) Aguardar mais 7 dias antes de considerar antibioticoterapia
-
-**Resposta correta: B**
-
-**Justificativa:** A presença de febre alta persistente (>5 dias), secreção purulenta e dor facial intensa sugere rinossinusite bacteriana. Nesse contexto, a amoxicilina/clavulanato é a primeira escolha por cobrir tanto *S. pyogenes* quanto os Gram-negativos de vias aéreas (*H. influenzae* e *M. catarrhalis*), incluindo cepas produtoras de betalactamase.
+                <div style="background: #ede9fe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #5b21b6; margin-bottom: 10px;">🔑 Pontos-Chave</h3>
+                  <div style="background: white; padding: 15px; border-radius: 6px; margin: 10px 0; border-left: 3px solid #8b5cf6;">
+                    <p style="font-size: 15px; line-height: 1.6; color: #1f2937; margin: 0;">
+                      <strong>Conceito Central:</strong> A maioria das IVAS é viral e autolimitada. O uso criterioso de antibióticos é essencial para evitar resistência bacteriana.
+                    </p>
+                  </div>
+                  <div style="background: white; padding: 15px; border-radius: 6px; margin: 10px 0; border-left: 3px solid #8b5cf6;">
+                    <p style="font-size: 15px; line-height: 1.6; color: #1f2937; margin: 0;">
+                      <strong>Dica Prática:</strong> Amoxicilina/clavulanato é a primeira escolha quando há indicação de antibioticoterapia, pois cobre tanto <em>S. pyogenes</em> quanto os Gram-negativos produtores de betalactamase.
+                    </p>
+                  </div>
+                </div>
               `,
               question: {
                 text: "Paciente de 35 anos apresenta quadro de rinossinusite com febre alta há 5 dias, secreção nasal purulenta e dor facial intensa. Qual é a conduta mais adequada?",
@@ -18412,82 +18431,106 @@ D) Aguardar mais 7 dias antes de considerar antibioticoterapia
               title: "Pneumonia Adquirida na Comunidade (PAC)",
               videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
               content: `
-## 💡 Pneumonia Adquirida na Comunidade (PAC)
+                <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
+                  <h2 style="color: white; margin: 0 0 15px 0; font-size: 26px;">💡 Pneumonia Adquirida na Comunidade (PAC)</h2>
+                  <p style="font-size: 16px; line-height: 1.7; color: #dbeafe;">
+                    Compreender os agentes causadores da pneumonia adquirida na comunidade é essencial para a escolha racional de antibióticos.
+                  </p>
+                </div>
 
-Compreender os agentes causadores da pneumonia adquirida na comunidade é essencial para a escolha racional de antibióticos.
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #1e40af; margin-bottom: 15px;">📊 Agentes e Antibióticos</h3>
+                  <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">
+                    <thead>
+                      <tr style="background: #dbeafe;">
+                        <th style="padding: 12px; text-align: left; border: 1px solid #93c5fd;">Categoria</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #93c5fd;">Agentes</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #93c5fd;">Antibióticos Comuns</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="padding: 10px; border: 1px solid #93c5fd;"><strong>Típicos</strong></td>
+                        <td style="padding: 10px; border: 1px solid #93c5fd;"><em>Streptococcus pneumoniae</em></td>
+                        <td style="padding: 10px; border: 1px solid #93c5fd;">Amoxicilina/clavulanato, Cefuroxima</td>
+                      </tr>
+                      <tr style="background: #f0f9ff;">
+                        <td style="padding: 10px; border: 1px solid #93c5fd;"><strong>Atípicos</strong></td>
+                        <td style="padding: 10px; border: 1px solid #93c5fd;"><em>Mycoplasma</em>, <em>Chlamydophila</em>, <em>Legionella</em></td>
+                        <td style="padding: 10px; border: 1px solid #93c5fd;">Macrolídeos, Quinolona respiratória</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                  <div style="margin-top: 15px;">
+                    <h4 style="color: #1e40af; margin-bottom: 10px;">Esquemas terapêuticos:</h4>
+                    <ul style="font-size: 15px; line-height: 1.8; color: #1e3a8a;">
+                      <li><strong>Monoterapia:</strong> Quinolona respiratória (Levofloxacino, Moxifloxacino)</li>
+                      <li><strong>Terapia combinada:</strong> Beta-lactâmico + Macrolídeo</li>
+                    </ul>
+                  </div>
+                </div>
 
----
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 15px 0;">
+                  <h3 style="color: #92400e; margin-bottom: 10px;">📝 Características da Via Respiratória</h3>
+                  <p style="font-size: 15px; line-height: 1.6; color: #78350f;">
+                    Ao contrário de outros sítios (pele, intra-abdominal), a via respiratória entra em contato frequente com agentes externos do meio ambiente. Esses agentes frequentemente colonizam a via aérea superior e podem gerar infecções tanto altas quanto baixas.
+                  </p>
+                </div>
 
-## 📊 Agentes e Antibióticos
+                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; border-left: 4px solid #10b981; margin: 15px 0;">
+                  <h3 style="color: #065f46; margin-bottom: 10px;">💊 Implicações Terapêuticas</h3>
+                  
+                  <h4 style="color: #065f46; margin: 15px 0 10px 0;">Cobertura necessária:</h4>
+                  <ul style="font-size: 15px; line-height: 1.8; color: #064e3b;">
+                    <li>Sempre considerar <em>S. pneumoniae</em> (agente mais comum)</li>
+                    <li>Avaliar necessidade de cobertura para atípicos</li>
+                    <li>Pacientes com comorbidades podem necessitar de cobertura ampliada</li>
+                  </ul>
 
-| Categoria | Agentes | Antibióticos Comuns |
-|-----------|---------|---------------------|
-| **Típicos** | *Streptococcus pneumoniae* | Amoxicilina/clavulanato, Cefuroxima |
-| **Atípicos** | *Mycoplasma*, *Chlamydophila*, *Legionella* | Macrolídeos, Quinolona respiratória |
+                  <h4 style="color: #065f46; margin: 15px 0 10px 0;">Antibióticos de primeira linha:</h4>
+                  <ul style="font-size: 15px; line-height: 1.8; color: #064e3b;">
+                    <li>Amoxicilina/clavulanato + Macrolídeo (Azitromicina, Claritromicina)</li>
+                    <li>Cefuroxima + Macrolídeo</li>
+                    <li>Quinolona respiratória em monoterapia (Levofloxacino, Moxifloxacino)</li>
+                  </ul>
 
-**Esquemas terapêuticos:**
-- **Monoterapia:** Quinolona respiratória (Levofloxacino, Moxifloxacino)
-- **Terapia combinada:** Beta-lactâmico + Macrolídeo
+                  <h4 style="color: #065f46; margin: 15px 0 10px 0;">Considerações importantes:</h4>
+                  <ul style="font-size: 15px; line-height: 1.8; color: #064e3b;">
+                    <li>Quinolonas respiratórias: cobertura simultânea para típicos e atípicos</li>
+                    <li>Macrolídeos: essenciais para cobertura de atípicos</li>
+                    <li>Duração do tratamento: geralmente 5-7 dias</li>
+                  </ul>
+                </div>
 
----
+                <div style="background: #ede9fe; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                  <h3 style="color: #5b21b6; margin-bottom: 15px;">🔑 Pontos-Chave</h3>
+                  
+                  <div style="background: white; padding: 15px; border-radius: 6px; margin: 10px 0; border-left: 3px solid #8b5cf6;">
+                    <h4 style="color: #5b21b6; margin: 0 0 8px 0;">Origem das infecções:</h4>
+                    <ul style="font-size: 15px; line-height: 1.6; color: #1f2937; margin: 0;">
+                      <li>Via respiratória em contato constante com meio ambiente</li>
+                      <li>Colonização de vias aéreas superiores → infecções altas e baixas</li>
+                    </ul>
+                  </div>
 
-## 📝 Características da Via Respiratória
+                  <div style="background: white; padding: 15px; border-radius: 6px; margin: 10px 0; border-left: 3px solid #8b5cf6;">
+                    <h4 style="color: #5b21b6; margin: 0 0 8px 0;">Agentes principais:</h4>
+                    <ul style="font-size: 15px; line-height: 1.6; color: #1f2937; margin: 0;">
+                      <li><em>S. pneumoniae</em>: agente típico mais comum</li>
+                      <li>Atípicos: <em>Mycoplasma</em>, <em>Chlamydophila</em>, <em>Legionella</em></li>
+                    </ul>
+                  </div>
 
-Ao contrário de outros sítios (pele, intra-abdominal), a via respiratória entra em contato frequente com agentes externos do meio ambiente. Esses agentes frequentemente colonizam a via aérea superior e podem gerar infecções tanto altas quanto baixas.
-
----
-
-## 💊 Implicações Terapêuticas
-
-**Cobertura necessária:**
-- Sempre considerar *S. pneumoniae* (agente mais comum)
-- Avaliar necessidade de cobertura para atípicos
-- Pacientes com comorbidades podem necessitar de cobertura ampliada
-
-**Antibióticos de primeira linha:**
-- Amoxicilina/clavulanato + Macrolídeo (Azitromicina, Claritromicina)
-- Cefuroxima + Macrolídeo
-- Quinolona respiratória em monoterapia (Levofloxacino, Moxifloxacino)
-
-**Considerações importantes:**
-- Quinolonas respiratórias: cobertura simultânea para típicos e atípicos
-- Macrolídeos: essenciais para cobertura de atípicos
-- Duração do tratamento: geralmente 5-7 dias
-
----
-
-## 🔑 Pontos-Chave
-
-**Origem das infecções:**
-- Via respiratória em contato constante com meio ambiente
-- Colonização de vias aéreas superiores → infecções altas e baixas
-
-**Agentes principais:**
-- *S. pneumoniae*: agente típico mais comum
-- Atípicos: *Mycoplasma*, *Chlamydophila*, *Legionella*
-
-**Escolha do antibiótico:**
-- Monoterapia: Quinolona respiratória
-- Terapia combinada: Beta-lactâmico + Macrolídeo
-- Sempre considerar cobertura para atípicos em PAC
-
----
-
-## ❓ Questão
-
-**Por que a via respiratória apresenta características únicas em relação a outros sítios de infecção, e qual é a implicação terapêutica na pneumonia adquirida na comunidade?**
-
-A) A via respiratória é estéril, por isso as infecções são sempre causadas por bactérias da pele, devendo-se usar apenas cefalexina
-
-B) A via respiratória entra em contato frequente com agentes ambientais que colonizam as vias aéreas superiores, necessitando de cobertura para *S. pneumoniae* e atípicos ✅
-
-C) A via respiratória é similar ao trato gastrointestinal, devendo-se usar apenas metronidazol para anaeróbios
-
-D) A via respiratória não apresenta diferenças em relação a outros sítios, podendo-se usar qualquer antibiótico
-
-**Resposta correta: B**
-
-**Justificativa:** A via respiratória, ao contrário de outros sítios como pele e intra-abdominal, está em contato constante com agentes externos do meio ambiente. Esses agentes colonizam as vias aéreas superiores e podem causar infecções tanto altas quanto baixas. Na pneumonia adquirida na comunidade (PAC), é essencial considerar cobertura para *S. pneumoniae* (agente típico mais comum) e para agentes atípicos (*Mycoplasma*, *Chlamydophila*, *Legionella*), justificando o uso de quinolonas respiratórias em monoterapia ou a combinação de beta-lactâmico com macrolídeo.
+                  <div style="background: white; padding: 15px; border-radius: 6px; margin: 10px 0; border-left: 3px solid #8b5cf6;">
+                    <h4 style="color: #5b21b6; margin: 0 0 8px 0;">Escolha do antibiótico:</h4>
+                    <ul style="font-size: 15px; line-height: 1.6; color: #1f2937; margin: 0;">
+                      <li>Monoterapia: Quinolona respiratória</li>
+                      <li>Terapia combinada: Beta-lactâmico + Macrolídeo</li>
+                      <li>Sempre considerar cobertura para atípicos em PAC</li>
+                    </ul>
+                  </div>
+                </div>
               `
             }
 
