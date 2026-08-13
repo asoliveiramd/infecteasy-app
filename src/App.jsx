@@ -93,15 +93,15 @@ const App = () => {
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #2563eb; margin-bottom: 15px;">🔬 Conceito Fundamental</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    A <strong>coloração de Gram</strong>, também conhecida como bacterioscopia, é uma das técnicas mais importantes na microbiologia clínica. 
-                    Desenvolvida pelo médico dinamarquês Hans Christian Gram em 1884, esta técnica revolucionou 
+                    A <strong>coloração de Gram</strong>, também conhecida como bacterioscopia, é uma das técnicas mais importantes na microbiologia clínica.
+                    Desenvolvida pelo médico dinamarquês Hans Christian Gram em 1884, esta técnica revolucionou
                     o diagnóstico microbiológico.
                   </p>
                   <p style="font-size: 16px; line-height: 1.6;">
-                    Em geral, a coloração de Gram permite a categorização dos microrganismos observados em 
-                    <strong>dois grandes grupos</strong>: gram-positivos e gram-negativos. As bactérias gram-positivas 
+                    Em geral, a coloração de Gram permite a categorização dos microrganismos observados em
+                    <strong>dois grandes grupos</strong>: Gram-positivos e Gram-negativos. As bactérias Gram-positivas
                     retêm o cristal violeta e aparecem <span style="color: #7c3aed; font-weight: bold;">roxas</span> 
-                    na coloração de Gram; as bactérias gram-negativas não retêm o cristal violeta, mas absorvem 
+                    na coloração de Gram; as bactérias Gram-negativas não retêm o cristal violeta, mas absorvem
                     o contra-corante safranina e, portanto, aparecem <span style="color: #dc2626; font-weight: bold;">rosas</span>.
                   </p>
                 </div>
@@ -109,7 +109,7 @@ const App = () => {
                 <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
                   <h4 style="color: #059669; margin-bottom: 10px;">💡 Importância Clínica</h4>
                   <p style="font-size: 14px; line-height: 1.5;">
-                    Esta diferenciação é crucial porque bactérias gram-positivas e gram-negativas respondem 
+                    Esta diferenciação é crucial porque bactérias Gram-positivas e Gram-negativas respondem
                     de forma diferente aos antibióticos, permitindo uma orientação terapêutica mais precisa.
                   </p>
                 </div>
@@ -138,7 +138,7 @@ const App = () => {
                   </p>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
                     Depois realiza-se uma <strong>descoloração rápida</strong> (questão de segundos) com acetona ou álcool 
-                    onde as bactérias Gram-negativas perdem o complexo cristal violeta-iodo e ficam incolores devido à sua 
+                    onde as bactérias Gram-negativas perdem o complexo cristal violeta-iodo e ficam incolores devido à sua
                     parede celular mais fina e rica em lipídios.
                   </p>
                   <p style="font-size: 16px; line-height: 1.6;">
@@ -167,29 +167,29 @@ const App = () => {
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
                     Deve-se realizar uma <strong>descoloração rápida</strong> (questão de segundos) com acetona ou álcool. 
                     A etapa de descoloração é crítica e deve ser cronometrada corretamente; se o agente descolorante 
-                    for deixado por muito tempo, o corante cristal violeta será removido tanto das células gram-positivas 
-                    quanto das gram-negativas.
+                    for deixado por muito tempo, o corante cristal violeta será removido tanto das células Gram-positivas
+                    quanto das Gram-negativas.
                   </p>
                 </div>
                 
                 <div style="background: #f3f4f6; padding: 15px; border-radius: 8px;">
                   <h4 style="color: #374151; margin-bottom: 10px;">🕐 Timing é Fundamental</h4>
                   <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li>Descoloração muito rápida: bactérias gram-negativas podem reter o cristal violeta</li>
-                    <li>Descoloração muito lenta: bactérias gram-positivas podem perder o corante</li>
+                    <li>Descoloração muito rápida: bactérias Gram-negativas podem reter o cristal violeta</li>
+                    <li>Descoloração muito lenta: bactérias Gram-positivas podem perder o corante</li>
                     <li>Resultado: interpretação incorreta da coloração</li>
                   </ul>
                 </div>
               `,
               question: {
-                text: "No procedimento da coloração de Gram, qual passo é considerado crítico e, se realizado por muito tempo, pode descolorir até mesmo as bactérias gram-positivas?",
+                text: "No procedimento da coloração de Gram, qual passo é considerado crítico e, se realizado por muito tempo, pode descolorir até mesmo as bactérias Gram-positivas?",
                 options: [
                   "A aplicação do cristal violeta.",
                   "A imersão no mordente (iodo de Gram).",
                   "A descoloração com álcool ou acetona."
                 ],
                 correct: 2,
-                explanation: "A etapa de descoloração com álcool ou acetona é o passo mais crítico. Se for muito longa, pode remover o complexo cristal violeta-iodo das bactérias gram-positivas, levando a uma interpretação incorreta como gram-negativas."
+                explanation: "A etapa de descoloração com álcool ou acetona é o passo mais crítico. Se for muito longa, pode remover o complexo cristal violeta-iodo das bactérias Gram-positivas, levando a uma interpretação incorreta como Gram-negativas."
               }
             }
           ]
@@ -343,7 +343,7 @@ const App = () => {
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #2563eb; margin-bottom: 15px;">🏥 Locais Estéreis vs. Não Estéreis</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    A interpretação do Gram depende fundamentalmente da origem da amostra. Em <strong>locais estéreis</strong> 
+                    A interpretação do Gram depende fundamentalmente da origem da amostra. Em <strong>locais estéreis</strong>
                     (ex: líquido cefalorraquidiano, sangue, líquido pleural), qualquer bactéria visualizada é potencialmente 
                     significativa. Em <strong>locais não estéreis</strong> (ex: trato respiratório, pele), a presença de 
                     bactérias deve ser interpretada no contexto da microbiota normal e da resposta inflamatória.
@@ -355,7 +355,7 @@ const App = () => {
                 options: [
                   "Nenhuma, a interpretação é a mesma.",
                   "No líquido pleural, qualquer bactéria é significativa, enquanto na orofaringe, deve-se considerar a microbiota normal.",
-                  "Apenas bactérias gram-negativas são relevantes no líquido pleural."
+                  "Apenas bactérias Gram-negativas são relevantes no líquido pleural."
                 ],
                 correct: 1,
                 explanation: "O líquido pleural é um sítio estéril, então qualquer bactéria é um achado crítico. A orofaringe possui uma microbiota comensal rica, e os achados devem ser correlacionados com a clínica e a presença de inflamação."
@@ -377,7 +377,7 @@ const App = () => {
                 <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d97706; margin-bottom: 15px;">⚠️ Limitações Importantes</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Embora a coloração de Gram seja extremamente útil, é importante reconhecer suas limitações. 
+                    Embora a coloração de Gram seja extremamente útil, é importante reconhecer suas limitações.
                     Alguns microrganismos clinicamente importantes <strong>não podem ser visualizados</strong> 
                     ou são mal visualizados por esta técnica.
                   </p>
@@ -410,7 +410,7 @@ const App = () => {
                   "Espécies de Candida."
                 ],
                 correct: 1,
-                explanation: "Mycoplasma não possui parede celular, que é a estrutura alvo da coloração de Gram. Portanto, não pode ser classificado como gram-positivo ou gram-negativo por este método."
+                explanation: "Mycoplasma não possui parede celular, que é a estrutura alvo da coloração de Gram. Portanto, não pode ser classificado como Gram-positivo ou Gram-negativo por este método."
               }
             },
             {
@@ -420,7 +420,7 @@ const App = () => {
                 <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #6d28d9; margin-bottom: 15px;">🍄 Nem Tudo é Bactéria</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Nem tudo que se cora pelo Gram é bactéria. Agentes não bacterianos podem corar de roxo 
+                    Nem tudo que se cora pelo Gram é bactéria. Agentes não bacterianos podem corar de roxo
                     (como espécies de <strong>Candida</strong>), mas geralmente são diferenciados pela morfologia:
                   </p>
                 </div>
@@ -453,20 +453,20 @@ const App = () => {
                   <h3 style="color: #ca8a04; margin-bottom: 15px;">🤔 Gram-Variáveis</h3>
                   <p style="font-size: 16px; line-height: 1.6;">
                     Alguns organismos, como <strong>Gardnerella vaginalis</strong> e <strong>Acinetobacter spp.</strong>, 
-                    podem apresentar coloração inconsistente, aparecendo como gram-positivos e gram-negativos na mesma lâmina. 
+                    podem apresentar coloração inconsistente, aparecendo como Gram-positivos e Gram-negativos na mesma lâmina.
                     Isso ocorre por características da parede celular ou por fatores técnicos.
                   </p>
                 </div>
               `,
               question: {
-                text: "Qual bactéria é classicamente descrita como gram-variável e associada à vaginose bacteriana?",
+                text: "Qual bactéria é classicamente descrita como Gram-variável e associada à vaginose bacteriana?",
                 options: [
                   "Lactobacillus spp.",
                   "Gardnerella vaginalis.",
                   "Candida albicans."
                 ],
                 correct: 1,
-                explanation: "Gardnerella vaginalis é a principal bactéria associada à vaginose bacteriana e é caracteristicamente gram-variável, o que pode ser uma pista diagnóstica importante."
+                explanation: "Gardnerella vaginalis é a principal bactéria associada à vaginose bacteriana e é caracteristicamente Gram-variável, o que pode ser uma pista diagnóstica importante."
               }
             }
           ]
@@ -652,7 +652,7 @@ const App = () => {
                 <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #374151; margin-bottom: 10px;">🎯 Características Morfológicas</h4>
                   <ul style="font-size: 14px; line-height: 1.5; margin-left: 20px;">
-                    <li><strong>Forma:</strong> Cocos gram-positivos</li>
+                    <li><strong>Forma:</strong> Cocos Gram-positivos</li>
                     <li><strong>Arranjo:</strong> Aos pares (diplococos) ou cadeias curtas</li>
                     <li><strong>Formato:</strong> Lanceolados (formato de lança)</li>
                     <li><strong>Cápsula:</strong> Frequentemente visível como halo claro</li>
@@ -669,14 +669,14 @@ const App = () => {
                 </div>
               `,
               question: {
-                text: "Um achado de cocos gram-positivos em pares (diplococos), com formato ligeiramente alongado, é considerado patognomônico para qual organismo?",
+                text: "Um achado de cocos Gram-positivos em pares (diplococos), com formato ligeiramente alongado, é considerado patognomônico para qual organismo?",
                 options: [
                   "Staphylococcus aureus.",
                   "Streptococcus pneumoniae.",
                   "Espécies de Enterococcus."
                 ],
                 correct: 1,
-                explanation: "O achado de diplococos gram-positivos lanceolados (formato de lança) é uma característica clássica e patognomônica de Streptococcus pneumoniae, auxiliando na sua rápida identificação presuntiva."
+                explanation: "O achado de diplococos Gram-positivos lanceolados (formato de lança) é uma característica clássica e patognomônica de Streptococcus pneumoniae, auxiliando na sua rápida identificação presuntiva."
               }
             },
             {
@@ -730,7 +730,7 @@ const App = () => {
                 <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #374151; margin-bottom: 15px;">🌿 Bacilos Ramificados</h3>
                   <p style="font-size: 16px; line-height: 1.6;">
-                    A observação de bacilos gram-positivos com filamentos ramificados é uma pista importante. 
+                    A observação de bacilos Gram-positivos com filamentos ramificados é uma pista importante.
                     <strong>Nocardia spp.</strong> são aeróbios e parcialmente ácido-resistentes, enquanto 
                     <strong>Actinomyces spp.</strong> são anaeróbios e não ácido-resistentes. Essa distinção é 
                     crucial para o diagnóstico de nocardiose e actinomicose.
@@ -738,14 +738,14 @@ const App = () => {
                 </div>
               `,
               question: {
-                text: "A presença de bacilos gram-positivos ramificados em uma amostra clínica sugere principalmente quais gêneros?",
+                text: "A presença de bacilos Gram-positivos ramificados em uma amostra clínica sugere principalmente quais gêneros?",
                 options: [
                   "Listeria ou Corynebacterium.",
                   "Nocardia (aeróbio) ou Actinomyces (anaeróbio).",
                   "Clostridium ou Bacillus."
                 ],
                 correct: 1,
-                explanation: "A morfologia de bacilos gram-positivos ramificados é característica de Nocardia e Actinomyces, e a coloração de Ziehl-Neelsen modificada pode ajudar a diferenciá-los (Nocardia é parcialmente ácido-resistente)."
+                explanation: "A morfologia de bacilos Gram-positivos ramificados é característica de Nocardia e Actinomyces, e a coloração de Ziehl-Neelsen modificada pode ajudar a diferenciá-los (Nocardia é parcialmente ácido-resistente)."
               }
             },
             {
@@ -755,7 +755,7 @@ const App = () => {
                 <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #dc2626; margin-bottom: 15px;">☠️ Gangrena Gasosa</h3>
                   <p style="font-size: 16px; line-height: 1.6;">
-                    Um achado de alerta no Gram de amostras de tecidos moles é a presença de bacilos gram-positivos 
+                    Um achado de alerta no Gram de amostras de tecidos moles é a presença de bacilos Gram-positivos
                     grandes (em forma de caixa de trem ou 'boxcar') na <strong>ausência de células inflamatórias (leucócitos)</strong>. 
                     Isso deve levantar a suspeita de gangrena gasosa, uma infecção necrosante causada por 
                     <strong>Clostridium perfringens</strong>, que produz toxinas que lisam os leucócitos.
@@ -763,7 +763,7 @@ const App = () => {
                 </div>
               `,
               question: {
-                text: "Em uma coloração de Gram de tecido mole, a presença de bacilos gram-positivos sem a presença de leucócitos deve levantar a suspeita de qual condição?",
+                text: "Em uma coloração de Gram de tecido mole, a presença de bacilos Gram-positivos sem a presença de leucócitos deve levantar a suspeita de qual condição?",
                 options: [
                   "Infecção por Listeria.",
                   "Gangrena gasosa (causada por Clostridium).",
@@ -827,9 +827,9 @@ const App = () => {
                 <div style="background: #fdf2f8; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #be185d; margin-bottom: 15px;">☕ Diplococos Gram-Negativos</h3>
                   <p style="font-size: 16px; line-height: 1.6;">
-                    Cocos gram-negativos são menos comuns, e sua visualização é muito significativa. 
+                    Cocos Gram-negativos são menos comuns, e sua visualização é muito significativa.
                     <strong>Neisseria spp.</strong> (como N. meningitidis e N. gonorrhoeae) classicamente se apresentam 
-                    como <strong>diplococos gram-negativos</strong> com lados achatados, lembrando grãos de café. 
+                    como <strong>diplococos Gram-negativos</strong> com lados achatados, lembrando grãos de café.
                     A observação de diplococos intracelulares em neutrófilos é altamente sugestiva de infecção por Neisseria.
                   </p>
                 </div>
@@ -837,12 +837,12 @@ const App = () => {
               question: {
                 text: "Qual a aparência típica das espécies de Neisseria na coloração de Gram?",
                 options: [
-                  "Cocos gram-positivos em cachos.",
-                  "Bacilos gram-negativos finos.",
-                  "Cocos gram-negativos em pares (diplococos)."
+                  "Cocos Gram-positivos em cachos.",
+                  "Bacilos Gram-negativos finos.",
+                  "Cocos Gram-negativos em pares (diplococos)."
                 ],
                 correct: 2,
-                explanation: "As espécies de Neisseria são caracterizadas por sua morfologia de diplococos gram-negativos, frequentemente com formato de 'grão de café' e localização intracelular em leucócitos."
+                explanation: "As espécies de Neisseria são caracterizadas por sua morfologia de diplococos Gram-negativos, frequentemente com formato de 'grão de café' e localização intracelular em leucócitos."
               }
             },
             {
@@ -920,7 +920,7 @@ const App = () => {
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🌙 Bacilos Curvos</h3>
                   <p style="font-size: 16px; line-height: 1.6;">
-                    A morfologia curva de bacilos gram-negativos pode sugerir certos patógenos. <strong>Vibrio spp.</strong> 
+                    A morfologia curva de bacilos Gram-negativos pode sugerir certos patógenos. <strong>Vibrio spp.</strong>
                     tem formato de vírgula, <strong>Campylobacter spp.</strong> tem formato de 'asa de gaivota' ou 'S', 
                     e <strong>Helicobacter spp.</strong> é espiralado. Essas pistas morfológicas são importantes para 
                     orientar a cultura em meios específicos.
@@ -928,7 +928,7 @@ const App = () => {
                 </div>
               `,
               question: {
-                text: "Um bacilo gram-negativo com formato de 'asa de gaivota' é sugestivo de qual gênero?",
+                text: "Um bacilo Gram-negativo com formato de 'asa de gaivota' é sugestivo de qual gênero?",
                 options: [
                   "Vibrio",
                   "Campylobacter",
@@ -964,7 +964,7 @@ const App = () => {
                 <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #374151; margin-bottom: 10px;">🎯 Catalase em Cocos Gram Positivos</h4>
                   <p style="font-size: 14px; line-height: 1.5; margin-bottom: 10px;">
-                    No caso dos cocos Gram positivos, duas provas são essenciais. A primeira é a <strong>catalase</strong>. 
+                    No caso dos cocos Gram positivos, duas provas são essenciais. A primeira é a <strong>catalase</strong>.
                     Ela distingue entre o grupo dos <strong>estafilococos</strong> (prova da catalase positiva) e dos 
                     <strong>estreptococos/enterococos</strong> (catalase negativa).
                   </p>
@@ -1025,7 +1025,7 @@ const App = () => {
                 <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #6d28d9; margin-bottom: 15px;">🧪 Fermentação de Açúcares</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    Uma importante prova bioquímica a ser realizada nos bacilos Gram negativos é a <strong>fermentação 
+                    Uma importante prova bioquímica a ser realizada nos bacilos Gram negativos é a <strong>fermentação
                     de açúcares</strong> (glicose, lactose). Essa prova tem elevada importância clínica, já que os 
                     <strong>não fermentadores</strong> são importantes produtores de mecanismos de resistência.
                   </p>
@@ -1034,7 +1034,7 @@ const App = () => {
                 <div style="background: #f3f4f6; padding: 15px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #374151; margin-bottom: 10px;">🔬 Métodos de Teste</h4>
                   <p style="font-size: 14px; line-height: 1.5;">
-                    A diferenciação entre Gram-negativos fermentadores e não fermentadores é baseada principalmente em 
+                    A diferenciação entre Gram-negativos fermentadores e não fermentadores é baseada principalmente em
                     testes de fermentação/oxidação de carboidratos. Existem vários métodos para definir essa prova. 
                     Testes de fermentação de carboidratos em meios como <strong>MacConkey</strong> ou outros meios 
                     diferenciais podem ser utilizados.
@@ -1102,8 +1102,8 @@ const App = () => {
                 <div style="background: #fdf2f8; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #be185d; margin-bottom: 15px;">🩷 Ágar MacConkey</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-                    O <strong>ágar MacConkey</strong> é um meio de cultura seletivo e diferencial, fundamental para o isolamento de bacilos gram-negativos. 
-                    Ele contém sais biliares e cristal violeta, que inibem o crescimento da maioria das bactérias gram-positivas.
+                    O <strong>ágar MacConkey</strong> é um meio de cultura seletivo e diferencial, fundamental para o isolamento de bacilos Gram-negativos.
+                    Ele contém sais biliares e cristal violeta, que inibem o crescimento da maioria das bactérias Gram-positivas.
                   </p>
                   <p style="font-size: 16px; line-height: 1.6;">
                     Além disso, ele diferencia as bactérias com base na sua capacidade de fermentar a <strong>lactose</strong>. 
@@ -1116,12 +1116,12 @@ const App = () => {
               question: {
                 text: "O ágar MacConkey é um meio seletivo e diferencial usado para:",
                 options: [
-                  "Inibir o crescimento de bactérias gram-positivas e diferenciar as fermentadoras de lactose (colônias rosas).",
+                  "Inibir o crescimento de bactérias Gram-positivas e diferenciar as fermentadoras de lactose (colônias rosas).",
                   "Cultivar organismos fastidiosos como Haemophilus influenzae.",
                   "Observar os padrões de hemólise em espécies de Streptococcus."
                 ],
                 correct: 0,
-                explanation: "O ágar MacConkey inibe o crescimento de gram-positivos e diferencia os gram-negativos pela fermentação da lactose. Fermentadores de lactose formam colônias rosas/vermelhas, enquanto não fermentadores permanecem incolores."
+                explanation: "O ágar MacConkey inibe o crescimento de Gram-positivos e diferencia os Gram-negativos pela fermentação da lactose. Fermentadores de lactose formam colônias rosas/vermelhas, enquanto não fermentadores permanecem incolores."
               }
             },
             {
@@ -1141,8 +1141,8 @@ const App = () => {
               question: {
                 text: "Para qual finalidade o ágar chocolate é utilizado?",
                 options: [
-                  "Para detectar a fermentação de lactose por bacilos gram-negativos.",
-                  "Para inibir o crescimento de bactérias gram-positivas.",
+                  "Para detectar a fermentação de lactose por bacilos Gram-negativos.",
+                  "Para inibir o crescimento de bactérias Gram-positivas.",
                   "Para o crescimento de organismos fastidiosos como Haemophilus influenzae."
                 ],
                 correct: 2,
@@ -1168,7 +1168,7 @@ const App = () => {
                     Após 24 a 48 horas de incubação, as colônias bacterianas se desenvolvem nos meios de cultura, permitindo sua análise macroscópica (forma, tamanho, cor, presença de hemólise). Testes bioquímicos rápidos podem facilitar a identificação preliminar ou presuntiva das bactérias isoladas, direcionando a terapia antimicrobiana antes dos resultados definitivos.
                   </p>
                   <p style="font-size: 16px; line-height: 1.6;">
-                    O <strong>teste da catalase</strong> é um teste rápido e crucial para diferenciar cocos gram-positivos. 
+                    O <strong>teste da catalase</strong> é um teste rápido e crucial para diferenciar cocos Gram-positivos.
                     A enzima catalase converte peróxido de hidrogênio (H₂O₂) em água e oxigênio, produzindo bolhas visíveis. 
                     <strong>Staphylococcus spp.</strong> são catalase-positivos, enquanto <strong>Streptococcus spp.</strong> 
                     e <strong>Enterococcus spp.</strong> são catalase-negativos.
@@ -1179,7 +1179,7 @@ const App = () => {
                 text: "O teste da catalase é utilizado para diferenciar quais grupos de bactérias?",
                 options: [
                   "S. aureus de outros estafilococos.",
-                  "Bacilos gram-negativos fermentadores de lactose dos não fermentadores.",
+                  "Bacilos Gram-negativos fermentadores de lactose dos não fermentadores.",
                   "Staphylococcus (catalase-positivos) de Streptococcus e Enterococcus (catalase-negativos)."
                 ],
                 correct: 2,
@@ -1347,7 +1347,7 @@ const App = () => {
                 options: [
                   "É um método muito lento, levando dias para o resultado.",
                   "Não fornece informações sobre o perfil de resistência da bactéria aos antibióticos.",
-                  "Só consegue identificar bactérias gram-positivas."
+                  "Só consegue identificar bactérias Gram-positivas."
                 ],
                 correct: 1,
                 explanation: "Apesar de sua rapidez na identificação, o MALDI-TOF não realiza testes de suscetibilidade. Portanto, após a identificação, ainda são necessários métodos fenotípicos ou genotípicos para determinar o perfil de resistência do microrganismo."
@@ -1378,7 +1378,7 @@ const App = () => {
                 <div style="background: #fef2f2; padding: 15px; border-radius: 8px; margin: 15px 0;">
                   <h4 style="color: #dc2626; margin-bottom: 10px;">🧱 Base Estrutural</h4>
                   <p style="font-size: 14px; line-height: 1.5;">
-                    Bactérias Gram-positivas não têm membrana externa e possuem uma parede celular espessa de peptidoglicano 
+                    Bactérias Gram-positivas não têm membrana externa e possuem uma parede celular espessa de peptidoglicano
                     que cora fortemente com violeta cristal.
                   </p>
                 </div>
@@ -2813,7 +2813,7 @@ const App = () => {
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🧬 Tipos de Resistência</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
                     A <strong>resistência intrínseca</strong> é uma característica natural e inerente de uma espécie bacteriana. 
-                    Por exemplo, todas as bactérias gram-negativas são intrinsecamente resistentes à vancomicina devido à 
+                    Por exemplo, todas as bactérias Gram-negativas são intrinsecamente resistentes à vancomicina devido à
                     sua estrutura de parede celular.
                   </p>
                   <p style="font-size: 16px; line-height: 1.6;">
@@ -8521,7 +8521,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
                   <h3 style="color: #059669; margin-bottom: 15px;">🏥 Classificação por Gerações</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
                     As <strong>cefalosporinas</strong> são classificadas em gerações (1ª a 5ª) com base em seu 
-                    espectro de atividade. As primeiras gerações são mais ativas contra bactérias Gram-positivas, 
+                    espectro de atividade. As primeiras gerações são mais ativas contra bactérias Gram-positivas,
                     enquanto as gerações posteriores têm maior atividade contra Gram-negativas.
                   </p>
                   
@@ -8569,7 +8569,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
                   <h3 style="color: #d97706; margin-bottom: 15px;">💊 Primeira Geração</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
                     As cefalosporinas de <strong>1ª geração</strong>, como a cefalexina, são eficazes contra 
-                    cocos Gram-positivos (Staphylococcus e Streptococcus) e algumas bactérias Gram-negativas. 
+                    cocos Gram-positivos (Staphylococcus e Streptococcus) e algumas bactérias Gram-negativas.
                     São comumente usadas para infecções de pele e tecidos moles.
                   </p>
                   <p style="font-size: 16px; line-height: 1.6;">
@@ -20281,7 +20281,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
           </div>
 
           <div className="grid gap-4">
-            {selectedModule.lessons.map((lesson, index) => {
+            {selectedModule.lessons.map((lesson) => {
               const isCompleted = isLessonCompleted(selectedModuleId, lesson.id)
               const isUnlocked = isLessonUnlocked(selectedModuleId, lesson.id)
               const nextLesson = getNextLesson(selectedModuleId, selectedModule.lessons)

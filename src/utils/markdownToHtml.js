@@ -137,7 +137,7 @@ export function markdownToHtml(markdown) {
         inList = true;
       }
       let content = trimmed.startsWith('✓ ') ? trimmed.substring(2) : trimmed.substring(2);
-      content = content.replace(/\*\*([^\*]+)\*\*/g, '<strong>$1</strong>');
+      content = content.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
       sectionContent.push(`<li style="margin: 5px 0;">${content}</li>`);
       continue;
     }
@@ -171,7 +171,7 @@ export function markdownToHtml(markdown) {
 
       sectionContent.push('<tr>');
       cells.forEach(cell => {
-        let content = cell.replace(/\*\*([^\*]+)\*\*/g, '<strong>$1</strong>');
+        let content = cell.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
         sectionContent.push(`<${tag} style="${style}">${content}</${tag}>`);
       });
       sectionContent.push('</tr>');
@@ -186,7 +186,7 @@ export function markdownToHtml(markdown) {
 
     // Parágrafo normal
     let content = trimmed;
-    content = content.replace(/\*\*([^\*]+)\*\*/g, '<strong>$1</strong>');
+    content = content.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
     
     const scheme = currentSection || colorPalette[0];
     const textColor = content.startsWith('<strong>') ? scheme.darkText : '#4b5563';
