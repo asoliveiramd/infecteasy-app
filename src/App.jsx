@@ -1,15 +1,21 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useCallback } from 'react'
 import './App.css'
 import { antimicrobianosModule } from './antimicrobianos_module.js'
 import markdownToHtml from './utils/markdownToHtml';
+import { isSupabaseConfigured, supabase } from './lib/supabase';
+
+const getProgressLevel = (xp) => Math.max(1, Math.floor(xp / 500) + 1)
 
 const App = () => {
   // Estados principais
   const [currentView, setCurrentView] = useState('login')
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
-  const [cpfValid, setCpfValid] = useState(true)
   const [user, setUser] = useState(null)
+  const [authLoading, setAuthLoading] = useState(true)
+  const [authSubmitting, setAuthSubmitting] = useState(false)
+  const [authMessage, setAuthMessage] = useState('')
+  const [authError, setAuthError] = useState('')
   const [showWelcome, setShowWelcome] = useState(false)
   const [currentModule, setCurrentModule] = useState(null)
   const [selectedModuleId, setSelectedModuleId] = useState(null)
@@ -19,9 +25,9 @@ const App = () => {
   const [showQuestionFeedback, setShowQuestionFeedback] = useState(false)
   const [selectedAnswer, setSelectedAnswer] = useState(null)
   const [userProgress, setUserProgress] = useState({
-    xp: 1000,
-    level: 2,
-    streak: 5,
+    xp: 0,
+    level: 1,
+    streak: 0,
     completedLessons: []
   })
   const [scrollPosition, setScrollPosition] = useState(0)
@@ -59,18 +65,148 @@ const App = () => {
     }
   }, [currentView])
 
-  // Refs para inputs não controlados
-  const loginUsernameRef = useRef(null)
+  // Refs dos campos de autenticação
+  const loginEmailRef = useRef(null)
   const loginPasswordRef = useRef(null)
-  const registerNomeRef = useRef(null)
-  const registerCpfRef = useRef(null)
-  const registerDataNascimentoRef = useRef(null)
-  const registerTelefoneRef = useRef(null)
+  const registerFullNameRef = useRef(null)
   const registerEmailRef = useRef(null)
-  const registerLoginRef = useRef(null)
-  const registerAtividadeRef = useRef(null)
-  const registerSenhaRef = useRef(null)
-  const registerConfirmarSenhaRef = useRef(null)
+  const registerPasswordRef = useRef(null)
+  const registerConfirmPasswordRef = useRef(null)
+  const resetEmailRef = useRef(null)
+  const newPasswordRef = useRef(null)
+  const confirmNewPasswordRef = useRef(null)
+  const progressSaveQueueRef = useRef(Promise.resolve())
+
+  const clearAuthFeedback = () => {
+    setAuthError('')
+    setAuthMessage('')
+  }
+
+  const persistProgress = useCallback((nextProgress) => {
+    if (!supabase || !user?.id) return
+
+    const payload = {
+      user_id: user.id,
+      xp: nextProgress.xp,
+      level: getProgressLevel(nextProgress.xp),
+      streak: nextProgress.streak,
+      completed_lessons: nextProgress.completedLessons,
+    }
+
+    progressSaveQueueRef.current = progressSaveQueueRef.current
+      .catch(() => undefined)
+      .then(async () => {
+        const { error } = await supabase
+          .from('user_progress')
+          .upsert(payload, { onConflict: 'user_id' })
+
+        if (error) {
+          console.error('Não foi possível salvar o progresso de estudo.', error)
+        }
+      })
+  }, [user?.id])
+
+  const loadAuthenticatedUser = useCallback(async (authUser) => {
+    if (!supabase || !authUser) return
+
+    const [{ data: profile, error: profileError }, { data: progress, error: progressError }] = await Promise.all([
+      supabase
+        .from('profiles')
+        .select('full_name, role')
+        .eq('id', authUser.id)
+        .maybeSingle(),
+      supabase
+        .from('user_progress')
+        .select('xp, level, streak, completed_lessons')
+        .eq('user_id', authUser.id)
+        .maybeSingle(),
+    ])
+
+    if (profileError || progressError) {
+      console.error('Não foi possível carregar o perfil ou o progresso.', profileError || progressError)
+    }
+
+    const fullName = profile?.full_name || authUser.user_metadata?.full_name || authUser.email?.split('@')[0] || 'Estudante'
+    const savedProgress = progress || { xp: 0, level: 1, streak: 0, completed_lessons: [] }
+    const normalizedProgress = {
+      xp: savedProgress.xp || 0,
+      level: savedProgress.level || getProgressLevel(savedProgress.xp || 0),
+      streak: savedProgress.streak || 0,
+      completedLessons: Array.isArray(savedProgress.completed_lessons) ? savedProgress.completed_lessons : [],
+    }
+
+    setUser({
+      id: authUser.id,
+      email: authUser.email,
+      name: fullName,
+      role: profile?.role || 'student',
+    })
+    setUserProgress(normalizedProgress)
+    setShowWelcome(!localStorage.getItem(`infecteasy:welcome:${authUser.id}`))
+    setCurrentView('dashboard')
+  }, [])
+
+  useEffect(() => {
+    let active = true
+
+    const initializeSession = async () => {
+      if (!isSupabaseConfigured || !supabase) {
+        if (active) {
+          setAuthLoading(false)
+          setCurrentView('configuration')
+        }
+        return
+      }
+
+      const { data, error } = await supabase.auth.getSession()
+      if (error) {
+        console.error('Não foi possível restaurar a sessão.', error)
+      }
+
+      if (active && data.session?.user) {
+        await loadAuthenticatedUser(data.session.user)
+      }
+
+      if (active) {
+        setAuthLoading(false)
+      }
+    }
+
+    initializeSession()
+
+    if (!supabase) {
+      return () => {
+        active = false
+      }
+    }
+
+    const { data: listener } = supabase.auth.onAuthStateChange((event, session) => {
+      if (!active) return
+
+      if (event === 'PASSWORD_RECOVERY') {
+        setAuthError('')
+        setAuthMessage('')
+        setCurrentView('updatePassword')
+        setAuthLoading(false)
+        return
+      }
+
+      if (session?.user) {
+        window.setTimeout(() => {
+          if (active) loadAuthenticatedUser(session.user)
+        }, 0)
+      } else if (event === 'SIGNED_OUT') {
+        setUser(null)
+        setUserProgress({ xp: 0, level: 1, streak: 0, completedLessons: [] })
+        setCurrentView('login')
+      }
+    })
+
+    return () => {
+      active = false
+      listener.subscription.unsubscribe()
+    }
+  }, [loadAuthenticatedUser])
 
   // Dados educacionais completos - MICROBIOLOGIA EXPANDIDA + ANTIBIOGRAMA TÉCNICO EXPANDIDO + ANTIBIOTICOTERAPIA AMBULATORIAL
   const modulesData = {
@@ -19601,120 +19737,169 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
     antimicrobianos: antimicrobianosModule
   }
 
-  // Funções de autenticação
-  const handleLogin = () => {
-    const username = loginUsernameRef.current?.value
+  // Funções de autenticação com Supabase
+  const handleLogin = async () => {
+    const email = loginEmailRef.current?.value?.trim().toLowerCase()
     const password = loginPasswordRef.current?.value
-    
-    if (username && password) {
-      // Verificar se é usuário admin
-      const isAdmin = username === 'admin' && password === 'admin123'
-      
-      setUser({ username, name: username, isAdmin })
-      
-      // Verificar se é a primeira vez do usuário (não mostrar boas-vindas para admin)
-      const hasSeenWelcome = localStorage.getItem('hasSeenWelcome')
-      if (!hasSeenWelcome && !isAdmin) {
-        setShowWelcome(true)
-        setCurrentView('dashboard')
-      } else {
-        setCurrentView('dashboard')
-      }
-    }
-  }
 
-  
-  // Função para aplicar máscara de CPF
-  const formatCPF = (value) => {
-    // Remove tudo que não é dígito
-    const numbers = value.replace(/\D/g, '')
-    
-    // Limita a 11 dígitos
-    const limited = numbers.slice(0, 11)
-    
-    // Aplica a máscara XXX.XXX.XXX-XX
-    if (limited.length <= 3) return limited
-    if (limited.length <= 6) return `${limited.slice(0, 3)}.${limited.slice(3)}`
-    if (limited.length <= 9) return `${limited.slice(0, 3)}.${limited.slice(3, 6)}.${limited.slice(6)}`
-    return `${limited.slice(0, 3)}.${limited.slice(3, 6)}.${limited.slice(6, 9)}-${limited.slice(9)}`
-  }
+    clearAuthFeedback()
 
-  // Função para validar CPF
-  const validateCPF = (cpf) => {
-    // Remove caracteres não numéricos
-    const numbers = cpf.replace(/\D/g, '')
-    
-    // Verifica se tem 11 dígitos
-    if (numbers.length !== 11) return false
-    
-    // Verifica se todos os dígitos são iguais (ex: 111.111.111-11)
-    if (/^(\d)\1{10}$/.test(numbers)) return false
-    
-    // Calcula o primeiro dígito verificador
-    let sum = 0
-    for (let i = 0; i < 9; i++) {
-      sum += parseInt(numbers[i]) * (10 - i)
-    }
-    let remainder = (sum * 10) % 11
-    if (remainder === 10 || remainder === 11) remainder = 0
-    if (remainder !== parseInt(numbers[9])) return false
-    
-    // Calcula o segundo dígito verificador
-    sum = 0
-    for (let i = 0; i < 10; i++) {
-      sum += parseInt(numbers[i]) * (11 - i)
-    }
-    remainder = (sum * 10) % 11
-    if (remainder === 10 || remainder === 11) remainder = 0
-    if (remainder !== parseInt(numbers[10])) return false
-    
-    return true
-  }
-
-  // Handler para mudança no campo CPF
-  const handleCPFChange = (e) => {
-    const formatted = formatCPF(e.target.value)
-    e.target.value = formatted
-    
-    // Valida apenas se tiver 11 dígitos
-    const numbers = formatted.replace(/\D/g, '')
-    if (numbers.length === 11) {
-      setCpfValid(validateCPF(formatted))
-    } else {
-      setCpfValid(true) // Não mostra erro enquanto está digitando
-    }
-  }
-
-  const handleRegister = () => {
-    const nome = registerNomeRef.current?.value
-    const cpf = registerCpfRef.current?.value
-    const login = registerLoginRef.current?.value
-    const senha = registerSenhaRef.current?.value
-    const confirmarSenha = registerConfirmarSenhaRef.current?.value
-    
-    // Valida CPF
-    if (cpf && !validateCPF(cpf)) {
-      setCpfValid(false)
-      alert('Por favor, insira um CPF válido.')
+    if (!email || !password) {
+      setAuthError('Informe seu e-mail e sua senha para entrar.')
       return
     }
-    
-    if (nome && login && senha && senha === confirmarSenha) {
-      setUser({ username: login, name: nome })
-      
-      // Verificar se é a primeira vez do usuário
-      const hasSeenWelcome = localStorage.getItem('hasSeenWelcome')
-      if (!hasSeenWelcome) {
-        setShowWelcome(true)
-        setCurrentView('dashboard')
-      } else {
-        setCurrentView('dashboard')
-      }
+
+    if (!supabase) {
+      setAuthError('A autenticação ainda não está configurada neste ambiente.')
+      return
+    }
+
+    setAuthSubmitting(true)
+    const { error } = await supabase.auth.signInWithPassword({ email, password })
+    setAuthSubmitting(false)
+
+    if (error) {
+      setAuthError('E-mail ou senha inválidos. Verifique seus dados e tente novamente.')
     }
   }
 
-  const handleLogout = () => {
+  const handleRegister = async () => {
+    const fullName = registerFullNameRef.current?.value?.trim()
+    const email = registerEmailRef.current?.value?.trim().toLowerCase()
+    const password = registerPasswordRef.current?.value
+    const confirmPassword = registerConfirmPasswordRef.current?.value
+
+    clearAuthFeedback()
+
+    if (!fullName || !email || !password || !confirmPassword) {
+      setAuthError('Preencha nome completo, e-mail, senha e confirmação de senha.')
+      return
+    }
+
+    if (fullName.length < 2) {
+      setAuthError('Informe seu nome completo para criar a conta.')
+      return
+    }
+
+    if (password.length < 8) {
+      setAuthError('A senha deve ter pelo menos 8 caracteres.')
+      return
+    }
+
+    if (password !== confirmPassword) {
+      setAuthError('As senhas informadas não coincidem.')
+      return
+    }
+
+    if (!supabase) {
+      setAuthError('A autenticação ainda não está configurada neste ambiente.')
+      return
+    }
+
+    setAuthSubmitting(true)
+    const { data, error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        emailRedirectTo: window.location.origin,
+        data: { full_name: fullName },
+      },
+    })
+    setAuthSubmitting(false)
+
+    if (error) {
+      setAuthError(error.message || 'Não foi possível criar sua conta. Tente novamente.')
+      return
+    }
+
+    if (data.session?.user) {
+      setAuthMessage('Conta criada com sucesso. Seu acesso já está ativo.')
+      return
+    }
+
+    setAuthMessage('Conta criada. Verifique seu e-mail e confirme o cadastro para acessar o Infecteasy.')
+    setCurrentView('login')
+  }
+
+  const handlePasswordResetRequest = async () => {
+    const email = resetEmailRef.current?.value?.trim().toLowerCase()
+    clearAuthFeedback()
+
+    if (!email) {
+      setAuthError('Informe o e-mail cadastrado para receber o link de redefinição.')
+      return
+    }
+
+    if (!supabase) {
+      setAuthError('A autenticação ainda não está configurada neste ambiente.')
+      return
+    }
+
+    setAuthSubmitting(true)
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: window.location.origin,
+    })
+    setAuthSubmitting(false)
+
+    if (error) {
+      setAuthError('Não foi possível solicitar a redefinição agora. Tente novamente mais tarde.')
+      return
+    }
+
+    setAuthMessage('Se houver uma conta para esse e-mail, você receberá as instruções de redefinição.')
+  }
+
+  const handleUpdatePassword = async () => {
+    const password = newPasswordRef.current?.value
+    const confirmPassword = confirmNewPasswordRef.current?.value
+    clearAuthFeedback()
+
+    if (!password || !confirmPassword) {
+      setAuthError('Informe e confirme sua nova senha.')
+      return
+    }
+
+    if (password.length < 8) {
+      setAuthError('A nova senha deve ter pelo menos 8 caracteres.')
+      return
+    }
+
+    if (password !== confirmPassword) {
+      setAuthError('As senhas informadas não coincidem.')
+      return
+    }
+
+    if (!supabase) {
+      setAuthError('A autenticação ainda não está configurada neste ambiente.')
+      return
+    }
+
+    setAuthSubmitting(true)
+    const { error } = await supabase.auth.updateUser({ password })
+    setAuthSubmitting(false)
+
+    if (error) {
+      setAuthError('Não foi possível atualizar sua senha. Solicite um novo link de redefinição.')
+      return
+    }
+
+    setAuthMessage('Senha atualizada com sucesso. Agora você pode continuar seus estudos.')
+    setCurrentView('dashboard')
+  }
+
+  const handleLogout = async () => {
+    clearAuthFeedback()
+
+    if (supabase) {
+      const { error } = await supabase.auth.signOut()
+      if (error) {
+        setAuthError('Não foi possível encerrar a sessão. Tente novamente.')
+        return
+      }
+    }
+
     setUser(null)
+    setUserProgress({ xp: 0, level: 1, streak: 0, completedLessons: [] })
     setCurrentView('login')
     setCurrentModule(null)
     setCurrentLesson(null)
@@ -19774,25 +19959,38 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
   }
 
   const submitAnswer = () => {
-    if (selectedAnswer !== null && currentQuestion) {
-      setShowQuestionFeedback(true)
-      if (selectedAnswer === currentQuestion.correct) {
-        setUserProgress(prev => ({
+    if (showQuestionFeedback || selectedAnswer === null || !currentQuestion) return
+
+    setShowQuestionFeedback(true)
+    if (selectedAnswer === currentQuestion.correct) {
+      setUserProgress(prev => {
+        const nextProgress = {
           ...prev,
-          xp: prev.xp + 25
-        }))
-      }
+          xp: prev.xp + 25,
+          level: getProgressLevel(prev.xp + 25),
+        }
+        persistProgress(nextProgress)
+        return nextProgress
+      })
     }
   }
 
   const completeLesson = () => {
     if (currentLesson && currentModule) {
       const lessonKey = `${currentModule}-${currentLesson.id}`
-      setUserProgress(prev => ({
-        ...prev,
-        xp: prev.xp + currentLesson.xp,
-        completedLessons: [...prev.completedLessons, lessonKey]
-      }))
+      setUserProgress(prev => {
+        if (prev.completedLessons.includes(lessonKey)) return prev
+
+        const nextXp = prev.xp + currentLesson.xp
+        const nextProgress = {
+          ...prev,
+          xp: nextXp,
+          level: getProgressLevel(nextXp),
+          completedLessons: [...prev.completedLessons, lessonKey],
+        }
+        persistProgress(nextProgress)
+        return nextProgress
+      })
       setCurrentView('moduleView')
       setSelectedModuleId(currentModule)
       setCurrentLesson(null)
@@ -19809,13 +20007,10 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
   }
 
   const isLessonUnlocked = (moduleId, lessonId) => {
-    // Admin tem acesso total a todas as lições
-    if (user?.isAdmin) return true
-    
-    // Primeira lição sempre desbloqueada
+    // A primeira lição de cada módulo está sempre disponível.
     if (lessonId === 1) return true
-    
-    // Verifica se a lição anterior foi concluída
+
+    // As demais são liberadas pela conclusão da lição anterior.
     const previousLessonKey = `${moduleId}-${lessonId - 1}`
     return userProgress.completedLessons.includes(previousLessonKey)
   }
@@ -19830,47 +20025,110 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
   }
 
   // Renderização condicional
-  if (currentView === 'login') {
+  const authFeedback = (
+    <>
+      {authError && (
+        <div role="alert" className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+          {authError}
+        </div>
+      )}
+      {authMessage && (
+        <div role="status" className="rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
+          {authMessage}
+        </div>
+      )}
+    </>
+  )
+
+  if (authLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md text-center">
+          <div className="text-3xl mb-3">🦠</div>
+          <h1 className="text-xl font-bold text-gray-800">Preparando seu ambiente de estudo</h1>
+          <p className="text-gray-600 mt-2">Verificando sua sessão com segurança...</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (currentView === 'configuration') {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md text-center">
+          <div className="text-3xl mb-3">🔐</div>
+          <h1 className="text-xl font-bold text-gray-800">Autenticação em configuração</h1>
+          <p className="text-gray-600 mt-2">A conexão segura do Infecteasy ainda não foi disponibilizada neste ambiente. Tente novamente em alguns instantes.</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (currentView === 'login') {
+    return (
+      <div key="login-view" className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
         <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-gray-800 mb-2">🦠 Infecteasy</h1>
             <p className="text-gray-600">Plataforma de Aprendizado em Doenças Infecciosas</p>
           </div>
-          
+
           <div className="space-y-4">
+            {authFeedback}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Usuário</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
               <input
-                ref={loginUsernameRef}
-                type="text"
-                placeholder="Digite seu usuário"
+                ref={loginEmailRef}
+                type="email"
+                autoComplete="email"
+                placeholder="seu@email.com"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
               />
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Senha</label>
-              <input
-                ref={loginPasswordRef}
-                type="password"
-                placeholder="Digite sua senha"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-              />
+              <div className="relative">
+                <input
+                  ref={loginPasswordRef}
+                  type={showPassword ? 'text' : 'password'}
+                  autoComplete="current-password"
+                  placeholder="Digite sua senha"
+                  className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                />
+                <button
+                  type="button"
+                  aria-label={showPassword ? 'Ocultar senha' : 'Mostrar senha'}
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                >
+                  {showPassword ? '👁️' : '👁️‍🗨️'}
+                </button>
+              </div>
             </div>
-            
+
             <button
+              type="button"
+              disabled={authSubmitting}
               onClick={handleLogin}
-              className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors font-medium"
+              className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors font-medium disabled:bg-indigo-300"
             >
-              Entrar
+              {authSubmitting ? 'Entrando...' : 'Entrar'}
             </button>
-            
+
+            <button
+              type="button"
+              onClick={() => { clearAuthFeedback(); setCurrentView('forgotPassword') }}
+              className="w-full text-sm text-indigo-600 hover:text-indigo-800"
+            >
+              Esqueci minha senha
+            </button>
+
             <div className="text-center">
               <span className="text-gray-600">Não tem conta? </span>
               <button
-                onClick={() => setCurrentView('register')}
+                type="button"
+                onClick={() => { clearAuthFeedback(); setCurrentView('register') }}
                 className="text-indigo-600 hover:text-indigo-800 font-medium"
               >
                 Cadastre-se
@@ -19884,101 +20142,50 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
 
   if (currentView === 'register') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
+      <div key="register-view" className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
         <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-800 mb-2">📝 Cadastro</h1>
-            <p className="text-gray-600">Crie sua conta no Infecteasy</p>
+            <h1 className="text-3xl font-bold text-gray-800 mb-2">📝 Criar conta</h1>
+            <p className="text-gray-600">Use seu e-mail para acompanhar seu progresso com segurança.</p>
           </div>
-          
+
           <div className="space-y-4">
+            {authFeedback}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Nome completo</label>
               <input
-                ref={registerNomeRef}
+                ref={registerFullNameRef}
                 type="text"
+                autoComplete="name"
                 placeholder="Digite seu nome completo"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
               />
             </div>
-            
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">CPF</label>
-              <input
-                ref={registerCpfRef}
-                type="text"
-                placeholder="000.000.000-00"
-                maxLength="14"
-                onChange={handleCPFChange}
-                className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent ${
-                  cpfValid ? 'border-gray-300' : 'border-red-500 bg-red-50'
-                }`}
-              />
-              {!cpfValid && (
-                <p className="text-red-500 text-sm mt-1">CPF inválido</p>
-              )}
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Data de Nascimento</label>
-              <input
-                ref={registerDataNascimentoRef}
-                type="date"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-              />
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
-              <input
-                ref={registerTelefoneRef}
-                type="tel"
-                placeholder="(00) 00000-0000"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-              />
-            </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
               <input
                 ref={registerEmailRef}
                 type="email"
+                autoComplete="email"
                 placeholder="seu@email.com"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
               />
             </div>
-            
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Login</label>
-              <input
-                ref={registerLoginRef}
-                type="text"
-                placeholder="Digite seu login"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-              />
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Atividade</label>
-              <input
-                ref={registerAtividadeRef}
-                type="text"
-                placeholder="Ex: Estudante de Medicina"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-              />
-            </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Senha</label>
               <div className="relative">
                 <input
-                  ref={registerSenhaRef}
-                  type={showPassword ? "text" : "password"}
-                  placeholder="Digite sua senha"
+                  ref={registerPasswordRef}
+                  type={showPassword ? 'text' : 'password'}
+                  autoComplete="new-password"
+                  placeholder="Mínimo de 8 caracteres"
                   className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                 />
                 <button
                   type="button"
+                  aria-label={showPassword ? 'Ocultar senha' : 'Mostrar senha'}
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
                 >
@@ -19986,18 +20193,20 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
                 </button>
               </div>
             </div>
-            
+
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Confirmar Senha</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Confirmar senha</label>
               <div className="relative">
                 <input
-                  ref={registerConfirmarSenhaRef}
-                  type={showConfirmPassword ? "text" : "password"}
-                  placeholder="Confirme sua senha"
+                  ref={registerConfirmPasswordRef}
+                  type={showConfirmPassword ? 'text' : 'password'}
+                  autoComplete="new-password"
+                  placeholder="Repita sua senha"
                   className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                 />
                 <button
                   type="button"
+                  aria-label={showConfirmPassword ? 'Ocultar confirmação de senha' : 'Mostrar confirmação de senha'}
                   onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                   className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
                 >
@@ -20005,22 +20214,114 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
                 </button>
               </div>
             </div>
-            
+
             <button
+              type="button"
+              disabled={authSubmitting}
               onClick={handleRegister}
-              className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors font-medium"
+              className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors font-medium disabled:bg-indigo-300"
             >
-              Cadastrar
+              {authSubmitting ? 'Criando conta...' : 'Criar conta'}
             </button>
-            
+
+            <p className="text-xs leading-relaxed text-gray-500">
+              Usamos somente seu nome e e-mail para identificar sua conta e manter seu progresso de estudo. Não solicitamos CPF nesta etapa.
+            </p>
+
             <div className="text-center">
               <button
-                onClick={() => setCurrentView('login')}
+                type="button"
+                onClick={() => { clearAuthFeedback(); setCurrentView('login') }}
                 className="text-indigo-600 hover:text-indigo-800 font-medium"
               >
-                ← Voltar ao Login
+                ← Voltar ao login
               </button>
             </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  if (currentView === 'forgotPassword') {
+    return (
+      <div key="forgot-password-view" className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
+          <div className="text-center mb-8">
+            <h1 className="text-2xl font-bold text-gray-800 mb-2">Redefinir senha</h1>
+            <p className="text-gray-600">Enviaremos um link seguro para o seu e-mail.</p>
+          </div>
+          <div className="space-y-4">
+            {authFeedback}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">E-mail cadastrado</label>
+              <input
+                ref={resetEmailRef}
+                type="email"
+                autoComplete="email"
+                placeholder="seu@email.com"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              />
+            </div>
+            <button
+              type="button"
+              disabled={authSubmitting}
+              onClick={handlePasswordResetRequest}
+              className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors font-medium disabled:bg-indigo-300"
+            >
+              {authSubmitting ? 'Enviando...' : 'Enviar link de redefinição'}
+            </button>
+            <button
+              type="button"
+              onClick={() => { clearAuthFeedback(); setCurrentView('login') }}
+              className="w-full text-indigo-600 hover:text-indigo-800 font-medium"
+            >
+              ← Voltar ao login
+            </button>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  if (currentView === 'updatePassword') {
+    return (
+      <div key="update-password-view" className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
+          <div className="text-center mb-8">
+            <h1 className="text-2xl font-bold text-gray-800 mb-2">Definir nova senha</h1>
+            <p className="text-gray-600">Escolha uma senha forte com pelo menos 8 caracteres.</p>
+          </div>
+          <div className="space-y-4">
+            {authFeedback}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Nova senha</label>
+              <input
+                ref={newPasswordRef}
+                type="password"
+                autoComplete="new-password"
+                placeholder="Mínimo de 8 caracteres"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Confirmar nova senha</label>
+              <input
+                ref={confirmNewPasswordRef}
+                type="password"
+                autoComplete="new-password"
+                placeholder="Repita sua nova senha"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              />
+            </div>
+            <button
+              type="button"
+              disabled={authSubmitting}
+              onClick={handleUpdatePassword}
+              className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors font-medium disabled:bg-indigo-300"
+            >
+              {authSubmitting ? 'Atualizando...' : 'Atualizar senha'}
+            </button>
           </div>
         </div>
       </div>
@@ -20075,7 +20376,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
                 <div className="flex flex-col sm:flex-row gap-3 pt-4">
                   <button
                     onClick={() => {
-                      localStorage.setItem('hasSeenWelcome', 'true')
+                      if (user?.id) localStorage.setItem(`infecteasy:welcome:${user.id}`, 'true')
                       setShowWelcome(false)
                     }}
                     className="flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg"
