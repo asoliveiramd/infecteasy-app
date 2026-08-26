@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react'
 import './App.css'
 import { antimicrobianosModule } from './antimicrobianos_module.js'
-import markdownToHtml from './utils/markdownToHtml';
 import { isSupabaseConfigured, supabase } from './lib/supabase';
+import { ClinicalFocusDashboard, ClinicalFocusLesson, ClinicalFocusModule } from './components/ClinicalFocus.jsx'
 
 const getProgressLevel = (xp) => Math.max(1, Math.floor(xp / 500) + 1)
 
@@ -31,6 +31,7 @@ const App = () => {
     completedLessons: []
   })
   const [scrollPosition, setScrollPosition] = useState(0)
+  const isClinicalPreview = import.meta.env.DEV && new URLSearchParams(window.location.search).get('preview') === 'clinical'
 
   // Gerenciar histórico do navegador
   useEffect(() => {
@@ -150,6 +151,10 @@ const App = () => {
     let active = true
 
     const initializeSession = async () => {
+      if (isClinicalPreview) {
+        if (active) setAuthLoading(false)
+        return
+      }
       if (!isSupabaseConfigured || !supabase) {
         if (active) {
           setAuthLoading(false)
@@ -206,7 +211,7 @@ const App = () => {
       active = false
       listener.subscription.unsubscribe()
     }
-  }, [loadAuthenticatedUser])
+  }, [loadAuthenticatedUser, isClinicalPreview])
 
   // Dados educacionais completos - MICROBIOLOGIA EXPANDIDA + ANTIBIOGRAMA TÉCNICO EXPANDIDO + ANTIBIOTICOTERAPIA AMBULATORIAL
   const modulesData = {
@@ -20024,6 +20029,11 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
     return null
   }
 
+  const previewUser = { name: 'Dra. Mariana Costa', email: 'mariana.costa@exemplo.com' }
+  const displayUser = isClinicalPreview ? (user || previewUser) : user
+  const displayProgress = isClinicalPreview ? { ...userProgress, xp: Math.max(userProgress.xp || 0, 860), level: Math.max(userProgress.level || 1, 3) } : userProgress
+  const displayView = isClinicalPreview && currentView === 'login' ? 'dashboard' : currentView
+
   // Renderização condicional
   const authFeedback = (
     <>
@@ -20040,11 +20050,11 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
     </>
   )
 
-  if (authLoading) {
+  if (authLoading && !isClinicalPreview) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
-        <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md text-center">
-          <div className="text-3xl mb-3">🦠</div>
+      <div className="min-h-screen bg-[#F2F7F8] flex items-center justify-center p-4">
+        <div className="bg-white rounded-3xl border border-[#D9E7E9] shadow-[0_18px_42px_rgba(15,76,92,0.10)] p-8 w-full max-w-md text-center">
+          <div className="text-3xl mb-3"></div>
           <h1 className="text-xl font-bold text-gray-800">Preparando seu ambiente de estudo</h1>
           <p className="text-gray-600 mt-2">Verificando sua sessão com segurança...</p>
         </div>
@@ -20052,11 +20062,11 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
     )
   }
 
-  if (currentView === 'configuration') {
+  if (currentView === 'configuration' && !isClinicalPreview) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
-        <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md text-center">
-          <div className="text-3xl mb-3">🔐</div>
+      <div className="min-h-screen bg-[#F2F7F8] flex items-center justify-center p-4">
+        <div className="bg-white rounded-3xl border border-[#D9E7E9] shadow-[0_18px_42px_rgba(15,76,92,0.10)] p-8 w-full max-w-md text-center">
+          <div className="text-3xl mb-3"></div>
           <h1 className="text-xl font-bold text-gray-800">Autenticação em configuração</h1>
           <p className="text-gray-600 mt-2">A conexão segura do Infecteasy ainda não foi disponibilizada neste ambiente. Tente novamente em alguns instantes.</p>
         </div>
@@ -20064,13 +20074,13 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
     )
   }
 
-  if (currentView === 'login') {
+  if (currentView === 'login' && !isClinicalPreview) {
     return (
-      <div key="login-view" className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
-        <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
+      <div key="login-view" className="min-h-screen bg-[#F2F7F8] flex items-center justify-center p-4">
+        <div className="bg-white rounded-3xl border border-[#D9E7E9] shadow-[0_18px_42px_rgba(15,76,92,0.10)] p-8 w-full max-w-md">
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-800 mb-2">🦠 Infecteasy</h1>
-            <p className="text-gray-600">Plataforma de Aprendizado em Doenças Infecciosas</p>
+            <h1 className="text-3xl font-bold text-gray-800 mb-2">InfectEasy</h1>
+            <p className="text-gray-600">Plataforma de aprendizagem em doenças infecciosas</p>
           </div>
 
           <div className="space-y-4">
@@ -20082,7 +20092,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
                 type="email"
                 autoComplete="email"
                 placeholder="seu@email.com"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-[#4E8A92] focus:ring-2 focus:ring-[#CFE6E7]"
               />
             </div>
 
@@ -20094,7 +20104,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
                   type={showPassword ? 'text' : 'password'}
                   autoComplete="current-password"
                   placeholder="Digite sua senha"
-                  className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:border-[#4E8A92] focus:ring-2 focus:ring-[#CFE6E7]"
                 />
                 <button
                   type="button"
@@ -20111,7 +20121,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
               type="button"
               disabled={authSubmitting}
               onClick={handleLogin}
-              className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors font-medium disabled:bg-indigo-300"
+              className="w-full bg-[#0F4C5C] text-white py-2.5 px-4 rounded-xl hover:bg-[#103F4D] transition-colors font-semibold disabled:bg-[#9CB7BC]"
             >
               {authSubmitting ? 'Entrando...' : 'Entrar'}
             </button>
@@ -20119,7 +20129,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
             <button
               type="button"
               onClick={() => { clearAuthFeedback(); setCurrentView('forgotPassword') }}
-              className="w-full text-sm text-indigo-600 hover:text-indigo-800"
+              className="w-full text-sm text-[#0F5C73] hover:text-[#103F4D]"
             >
               Esqueci minha senha
             </button>
@@ -20129,7 +20139,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
               <button
                 type="button"
                 onClick={() => { clearAuthFeedback(); setCurrentView('register') }}
-                className="text-indigo-600 hover:text-indigo-800 font-medium"
+                className="text-[#0F5C73] hover:text-[#103F4D] font-medium"
               >
                 Cadastre-se
               </button>
@@ -20142,10 +20152,10 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
 
   if (currentView === 'register') {
     return (
-      <div key="register-view" className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
-        <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
+      <div key="register-view" className="min-h-screen bg-[#F2F7F8] flex items-center justify-center p-4">
+        <div className="bg-white rounded-3xl border border-[#D9E7E9] shadow-[0_18px_42px_rgba(15,76,92,0.10)] p-8 w-full max-w-md">
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-800 mb-2">📝 Criar conta</h1>
+            <h1 className="text-3xl font-bold text-gray-800 mb-2">Criar conta</h1>
             <p className="text-gray-600">Use seu e-mail para acompanhar seu progresso com segurança.</p>
           </div>
 
@@ -20158,7 +20168,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
                 type="text"
                 autoComplete="name"
                 placeholder="Digite seu nome completo"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-[#4E8A92] focus:ring-2 focus:ring-[#CFE6E7]"
               />
             </div>
 
@@ -20169,7 +20179,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
                 type="email"
                 autoComplete="email"
                 placeholder="seu@email.com"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-[#4E8A92] focus:ring-2 focus:ring-[#CFE6E7]"
               />
             </div>
 
@@ -20181,7 +20191,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
                   type={showPassword ? 'text' : 'password'}
                   autoComplete="new-password"
                   placeholder="Mínimo de 8 caracteres"
-                  className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:border-[#4E8A92] focus:ring-2 focus:ring-[#CFE6E7]"
                 />
                 <button
                   type="button"
@@ -20202,7 +20212,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
                   type={showConfirmPassword ? 'text' : 'password'}
                   autoComplete="new-password"
                   placeholder="Repita sua senha"
-                  className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:border-[#4E8A92] focus:ring-2 focus:ring-[#CFE6E7]"
                 />
                 <button
                   type="button"
@@ -20219,7 +20229,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
               type="button"
               disabled={authSubmitting}
               onClick={handleRegister}
-              className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors font-medium disabled:bg-indigo-300"
+              className="w-full bg-[#0F4C5C] text-white py-2.5 px-4 rounded-xl hover:bg-[#103F4D] transition-colors font-semibold disabled:bg-[#9CB7BC]"
             >
               {authSubmitting ? 'Criando conta...' : 'Criar conta'}
             </button>
@@ -20232,7 +20242,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
               <button
                 type="button"
                 onClick={() => { clearAuthFeedback(); setCurrentView('login') }}
-                className="text-indigo-600 hover:text-indigo-800 font-medium"
+                className="text-[#0F5C73] hover:text-[#103F4D] font-medium"
               >
                 ← Voltar ao login
               </button>
@@ -20245,8 +20255,8 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
 
   if (currentView === 'forgotPassword') {
     return (
-      <div key="forgot-password-view" className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
-        <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
+      <div key="forgot-password-view" className="min-h-screen bg-[#F2F7F8] flex items-center justify-center p-4">
+        <div className="bg-white rounded-3xl border border-[#D9E7E9] shadow-[0_18px_42px_rgba(15,76,92,0.10)] p-8 w-full max-w-md">
           <div className="text-center mb-8">
             <h1 className="text-2xl font-bold text-gray-800 mb-2">Redefinir senha</h1>
             <p className="text-gray-600">Enviaremos um link seguro para o seu e-mail.</p>
@@ -20260,21 +20270,21 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
                 type="email"
                 autoComplete="email"
                 placeholder="seu@email.com"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-[#4E8A92] focus:ring-2 focus:ring-[#CFE6E7]"
               />
             </div>
             <button
               type="button"
               disabled={authSubmitting}
               onClick={handlePasswordResetRequest}
-              className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors font-medium disabled:bg-indigo-300"
+              className="w-full bg-[#0F4C5C] text-white py-2.5 px-4 rounded-xl hover:bg-[#103F4D] transition-colors font-semibold disabled:bg-[#9CB7BC]"
             >
               {authSubmitting ? 'Enviando...' : 'Enviar link de redefinição'}
             </button>
             <button
               type="button"
               onClick={() => { clearAuthFeedback(); setCurrentView('login') }}
-              className="w-full text-indigo-600 hover:text-indigo-800 font-medium"
+              className="w-full text-[#0F5C73] hover:text-[#103F4D] font-medium"
             >
               ← Voltar ao login
             </button>
@@ -20286,8 +20296,8 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
 
   if (currentView === 'updatePassword') {
     return (
-      <div key="update-password-view" className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
-        <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
+      <div key="update-password-view" className="min-h-screen bg-[#F2F7F8] flex items-center justify-center p-4">
+        <div className="bg-white rounded-3xl border border-[#D9E7E9] shadow-[0_18px_42px_rgba(15,76,92,0.10)] p-8 w-full max-w-md">
           <div className="text-center mb-8">
             <h1 className="text-2xl font-bold text-gray-800 mb-2">Definir nova senha</h1>
             <p className="text-gray-600">Escolha uma senha forte com pelo menos 8 caracteres.</p>
@@ -20301,7 +20311,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
                 type="password"
                 autoComplete="new-password"
                 placeholder="Mínimo de 8 caracteres"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-[#4E8A92] focus:ring-2 focus:ring-[#CFE6E7]"
               />
             </div>
             <div>
@@ -20311,14 +20321,14 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
                 type="password"
                 autoComplete="new-password"
                 placeholder="Repita sua nova senha"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-[#4E8A92] focus:ring-2 focus:ring-[#CFE6E7]"
               />
             </div>
             <button
               type="button"
               disabled={authSubmitting}
               onClick={handleUpdatePassword}
-              className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors font-medium disabled:bg-indigo-300"
+              className="w-full bg-[#0F4C5C] text-white py-2.5 px-4 rounded-xl hover:bg-[#103F4D] transition-colors font-semibold disabled:bg-[#9CB7BC]"
             >
               {authSubmitting ? 'Atualizando...' : 'Atualizar senha'}
             </button>
@@ -20328,514 +20338,78 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
     )
   }
 
-  if (currentView === 'dashboard') {
+  // Renderização condicional
+  if (displayView === 'dashboard') {
     return (
-      <div className="min-h-screen bg-gray-50">
-        {/* Modal de Boas-vindas */}
-        {showWelcome && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-            <div className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto animate-fade-in">
-              <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-8 rounded-t-2xl text-white">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">🦠</div>
-                  <h2 className="text-3xl font-bold mb-2">Seja bem-vindo ao Infecteasy!</h2>
-                  <p className="text-indigo-100 text-lg">Seu novo espaço de aprendizagem em Infectologia</p>
-                </div>
-              </div>
-              
-              <div className="p-8 space-y-6">
-                <div className="prose prose-lg max-w-none">
-                  <p className="text-gray-700 leading-relaxed">
-                    As <strong>doenças infecciosas</strong> estão entre as condições mais frequentes na prática clínica, 
-                    desafiando médicos todos os dias — do atendimento primário às unidades de emergência. Dominar o 
-                    diagnóstico, a interpretação de exames e a antibioticoterapia adequada não só melhora o cuidado ao 
-                    paciente, como também ajuda a combater um dos maiores problemas de saúde global: a 
-                    <strong>resistência antimicrobiana</strong>.
-                  </p>
-                  
-                  <div className="bg-indigo-50 border-l-4 border-indigo-600 p-4 rounded">
-                    <p className="text-gray-700 leading-relaxed">
-                      Neste aplicativo, você aprenderá de forma <strong>leve, rápida e gamificada</strong>, usando princípios 
-                      de <em>microlearning</em> para transformar conteúdos complexos em passos simples e objetivos. Começamos 
-                      pelo básico da microbiologia, passamos pela interpretação de antibiogramas e avançamos para o uso 
-                      seguro e eficaz dos antimicrobianos.
-                    </p>
-                  </div>
-                  
-                  <p className="text-gray-700 leading-relaxed">
-                    Aqui, cada lição é um pequeno avanço rumo a uma prática médica mais <strong>segura, precisa e confiante</strong>.
-                  </p>
-                  
-                  <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-6 rounded-lg text-center">
-                    <p className="text-xl font-semibold text-indigo-900 mb-2">
-                      🎯 Prepare-se para evoluir, missão após missão, até dominar a arte de pensar e tratar infecções como um verdadeiro especialista.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex flex-col sm:flex-row gap-3 pt-4">
-                  <button
-                    onClick={() => {
-                      if (user?.id) localStorage.setItem(`infecteasy:welcome:${user.id}`, 'true')
-                      setShowWelcome(false)
-                    }}
-                    className="flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg"
-                  >
-                    🚀 Vamos começar!
-                  </button>
-                  <button
-                    onClick={() => {
-                      setShowWelcome(false)
-                    }}
-                    className="sm:w-auto px-6 py-4 text-gray-600 hover:text-gray-800 font-medium"
-                  >
-                    Lembrar depois
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-        
-        {/* Dashboard normal */}
-        <header className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
-              <div className="flex items-center">
-                <h1 className="text-2xl font-bold text-indigo-600">🦠 Infecteasy</h1>
-                <span className="ml-4 text-gray-600">Olá, {user?.name}!</span>
-              </div>
-              <div className="flex items-center space-x-4">
-                <div className="flex items-center space-x-2">
-                  <span className="text-sm text-gray-600">💎 {userProgress.xp} XP</span>
-                  <span className="text-sm text-gray-600">🏆 Nível {userProgress.level}</span>
-                </div>
-                <button
-                  onClick={handleLogout}
-                  className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors"
-                >
-                  Sair
-                </button>
-              </div>
-            </div>
-          </div>
-        </header>
-
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">Módulos de Aprendizado</h2>
-            <p className="text-gray-600">Escolha um módulo para começar sua jornada de aprendizado</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Módulo de Microbiologia */}
-            <button
-              onClick={() => openModule('microbiologia')}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-left"
-            >
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Fundamentos da Microbiologia</h3>
-                  <p className="text-gray-600">Aprenda os conceitos essenciais da microbiologia clínica</p>
-                </div>
-                <div className="text-4xl">🦠</div>
-              </div>
-              <div className="mb-4">
-                <div className="flex justify-between text-sm text-gray-600 mb-1">
-                  <span>Progresso</span>
-                  <span>0/{modulesData.microbiologia.lessons.length}</span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div className="bg-blue-600 h-2 rounded-full" style={{width: '0%'}}></div>
-                </div>
-              </div>
-              <div className="flex items-center justify-between text-blue-600 font-medium">
-                <span>Ver {modulesData.microbiologia.lessons.length} lições</span>
-                <span>→</span>
-              </div>
-            </button>
-
-            {/* Módulo de Antibiograma */}
-            <button
-              onClick={() => openModule('antibiograma')}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-left"
-            >
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Teste de Suscetibilidade Antimicrobiana</h3>
-                  <p className="text-gray-600">Domine os conceitos e técnicas do antibiograma</p>
-                </div>
-                <div className="text-4xl">🧪</div>
-              </div>
-              <div className="mb-4">
-                <div className="flex justify-between text-sm text-gray-600 mb-1">
-                  <span>Progresso</span>
-                  <span>0/{modulesData.antibiograma.lessons.length}</span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div className="bg-green-600 h-2 rounded-full" style={{width: '0%'}}></div>
-                </div>
-              </div>
-              <div className="flex items-center justify-between text-green-600 font-medium">
-                <span>Ver {modulesData.antibiograma.lessons.length} lições</span>
-                <span>→</span>
-              </div>
-            </button>
-
-            {/* Módulo de Antibioticoterapia Ambulatorial */}
-            <button
-              onClick={() => openModule('antibioticoterapia')}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-left"
-            >
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Antibioticoterapia Ambulatorial</h3>
-                  <p className="text-gray-600">Aprenda os fundamentos da prescrição de antibióticos no ambulatório</p>
-                </div>
-                <div className="text-4xl">💊</div>
-              </div>
-              <div className="mb-4">
-                <div className="flex justify-between text-sm text-gray-600 mb-1">
-                  <span>Progresso</span>
-                  <span>0/{modulesData.antibioticoterapia?.lessons.length || 0}</span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div className="bg-purple-600 h-2 rounded-full" style={{width: '0%'}}></div>
-                </div>
-              </div>
-              <div className="flex items-center justify-between text-purple-600 font-medium">
-                <span>Ver {modulesData.antibioticoterapia?.lessons.length || 0} lições</span>
-                <span>→</span>
-              </div>
-            </button>
-
-
-          </div>
-        </main>
-      </div>
+      <ClinicalFocusDashboard
+        modulesData={modulesData}
+        user={displayUser}
+        userProgress={displayProgress}
+        showWelcome={showWelcome && !isClinicalPreview}
+        onDismissWelcome={() => {
+          if (user?.id) localStorage.setItem(`infecteasy:welcome:${user.id}`, 'true')
+          setShowWelcome(false)
+        }}
+        isLessonCompleted={isLessonCompleted}
+        getNextLesson={getNextLesson}
+        onOpenModule={openModule}
+        onStartLesson={startLesson}
+        onLogout={handleLogout}
+      />
     )
   }
 
-  else if (currentView === 'moduleView' && selectedModuleId) {
+  if (displayView === 'moduleView' && selectedModuleId) {
     const selectedModule = modulesData[selectedModuleId]
-    const moduleColors = {
-      microbiologia: { primary: 'blue', bg: 'bg-blue-50', border: 'border-blue-300', text: 'text-blue-600', hover: 'hover:bg-blue-50' },
-      antibiograma: { primary: 'green', bg: 'bg-green-50', border: 'border-green-300', text: 'text-green-600', hover: 'hover:bg-green-50' },
-      antibioticoterapia: { primary: 'purple', bg: 'bg-purple-50', border: 'border-purple-300', text: 'text-purple-600', hover: 'hover:bg-purple-50' }
-    }
-    const colors = moduleColors[selectedModuleId] || moduleColors.microbiologia
-
     return (
-      <div className="min-h-screen bg-gray-50">
-        <header className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
-              <button
-                onClick={backToDashboard}
-                className="flex items-center text-gray-600 hover:text-gray-900"
-              >
-                ← Voltar aos Módulos
-              </button>
-              <div className="flex items-center space-x-4">
-                <span className="text-sm bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">
-                  💎 {userProgress.xp} XP
-                </span>
-                <span className="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">
-                  Level {userProgress.level}
-                </span>
-              </div>
-            </div>
-          </div>
-        </header>
-
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">{selectedModule.title}</h2>
-            <p className="text-gray-600">{selectedModule.description}</p>
-            
-            {/* Mensagem de Boas-Vindas do Módulo */}
-            {selectedModule.welcomeMessage && (
-              <div className="mt-6 p-6 bg-gradient-to-r from-purple-50 to-indigo-50 border-l-4 border-purple-600 rounded-lg">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <span className="text-3xl">📚</span>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Mensagem de Boas-Vindas</h3>
-                    <p className="text-sm text-gray-700 whitespace-pre-line leading-relaxed">
-                      {selectedModule.welcomeMessage}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
-            
-            <div className="mt-6">
-              <div className="flex justify-between text-sm text-gray-600 mb-2">
-                <span>Progresso do Módulo</span>
-                <span>{selectedModule.lessons.filter(l => isLessonCompleted(selectedModuleId, l.id)).length}/{selectedModule.lessons.length} lições concluídas</span>
-              </div>
-              <div className="w-full bg-gray-200 rounded-full h-3">
-                <div className={`bg-${colors.primary}-600 h-3 rounded-full transition-all duration-500`} style={{width: `${(selectedModule.lessons.filter(l => isLessonCompleted(selectedModuleId, l.id)).length / selectedModule.lessons.length) * 100}%`}}></div>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid gap-4">
-            {selectedModule.lessons.map((lesson) => {
-              const isCompleted = isLessonCompleted(selectedModuleId, lesson.id)
-              const isUnlocked = isLessonUnlocked(selectedModuleId, lesson.id)
-              const nextLesson = getNextLesson(selectedModuleId, selectedModule.lessons)
-              const isNext = lesson.id === nextLesson
-              
-              return (
-                <button
-                  key={lesson.id}
-                  onClick={() => isUnlocked ? startLesson(selectedModuleId, lesson.id) : null}
-                  disabled={!isUnlocked}
-                  className={`w-full text-left p-6 rounded-lg border-2 transition-all ${
-                    isCompleted 
-                      ? `${colors.border} bg-white opacity-75 hover:opacity-100` 
-                      : isNext
-                      ? `border-${colors.primary}-500 bg-gradient-to-r ${colors.bg} shadow-lg hover:shadow-xl animate-pulse`
-                      : isUnlocked
-                      ? `${colors.border} ${colors.hover} bg-white hover:shadow-md`
-                      : 'border-gray-300 bg-gray-50 cursor-not-allowed opacity-50'
-                  }`}
-                >
-                  <div className="flex items-center justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-2">
-                        <span className={`text-sm font-semibold ${
-                          isCompleted ? 'text-green-600' : isNext ? colors.text : 'text-gray-500'
-                        }`}>
-                          Lição {lesson.id}
-                        </span>
-                        {isCompleted && (
-                          <span className="text-xs px-2 py-1 rounded-full bg-green-100 text-green-800 font-semibold">
-                            ✅ Concluída
-                          </span>
-                        )}
-                        {isNext && !isCompleted && (
-                          <span className={`text-xs px-2 py-1 rounded-full ${colors.bg} ${colors.text} font-semibold animate-bounce`}>
-                            🎯 Próxima
-                          </span>
-                        )}
-                        {!isUnlocked && (
-                          <span className="text-xs px-2 py-1 rounded-full bg-gray-200 text-gray-600">
-                            🔒 Bloqueada
-                          </span>
-                        )}
-                        <span className={`text-xs px-2 py-1 rounded-full ${isUnlocked ? colors.bg + ' ' + colors.text : 'bg-gray-200 text-gray-500'}`}>
-                          {lesson.duration}
-                        </span>
-                        <span className={`text-xs px-2 py-1 rounded-full ${isUnlocked ? 'bg-yellow-100 text-yellow-800' : 'bg-gray-200 text-gray-500'}`}>
-                          {lesson.xp} XP
-                        </span>
-                      </div>
-                      <h4 className={`font-semibold text-lg ${
-                        isCompleted ? 'text-gray-700' : isNext ? 'text-gray-900' : isUnlocked ? 'text-gray-900' : 'text-gray-400'
-                      }`}>
-                        {lesson.title}
-                      </h4>
-                    </div>
-                    <div className={`text-2xl ${
-                      isCompleted ? 'text-green-600' : isNext ? colors.text : isUnlocked ? colors.text : 'text-gray-400'
-                    }`}>
-                      {isCompleted ? '✅' : isUnlocked ? '▶️' : '🔒'}
-                    </div>
-                  </div>
-                </button>
-              )
-            })}
-          </div>
-        </main>
-      </div>
+      <ClinicalFocusModule
+        moduleId={selectedModuleId}
+        module={selectedModule}
+        user={displayUser}
+        userProgress={displayProgress}
+        isLessonCompleted={isLessonCompleted}
+        isLessonUnlocked={isLessonUnlocked}
+        getNextLesson={getNextLesson}
+        onStartLesson={startLesson}
+        onDashboard={backToDashboard}
+        onLogout={handleLogout}
+      />
     )
   }
 
-  else if (currentView === 'lesson') {
+  if (displayView === 'lesson') {
     return (
-      <div className="min-h-screen bg-gray-50">
-        <header className="bg-white shadow-sm border-b">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
-              <button
-                onClick={() => {
-                  setCurrentView('moduleView')
-                  setSelectedModuleId(currentModule)
-                  setCurrentLesson(null)
-                  setCurrentSection(0)
-                  setCurrentQuestion(null)
-                }}
-                className="flex items-center text-gray-600 hover:text-gray-900"
-              >
-                ← Voltar ao Módulo
-              </button>
-              <div className="flex items-center space-x-4">
-                <span className="text-sm bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">
-                  💎 {currentLesson?.xp} XP
-                </span>
-              </div>
-            </div>
-          </div>
-        </header>
-
-        <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          {currentLesson && (
-            <>
-              <div className="mb-8">
-                <h1 className="text-3xl font-bold text-gray-900 mb-2">{currentLesson.title}</h1>
-                <p className="text-gray-600">
-                  Seção {currentSection + 1} de {currentLesson.sections.length}
-                </p>
-              </div>
-
-              <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  {currentLesson.sections[currentSection]?.title}
-                </h2>
-                
-                {currentLesson.sections[currentSection]?.videoUrl && (
-                  <div className="mb-6">
-                    <div className="relative" style={{ paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
-                      <iframe
-                        src={currentLesson.sections[currentSection].videoUrl}
-                        title="Vídeo explicativo"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="absolute top-0 left-0 w-full h-full rounded-lg"
-                        style={{ border: '2px solid #e5e7eb' }}
-                      />
-                    </div>
-                  </div>
-                )}
-                
-                <div 
-                  className="prose max-w-none"
-                  dangerouslySetInnerHTML={{
-                    __html: markdownToHtml(currentLesson.sections[currentSection]?.content || '')
-                  }}
-                />
-
-                {!currentQuestion && (
-                  <div className="mt-8 flex justify-between">
-                    {currentLesson.sections[currentSection]?.question && (
-                      <button
-                        onClick={showQuestion}
-                        className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-                      >
-                        📝 Responder Pergunta
-                      </button>
-                    )}
-                    
-                    {currentSection < currentLesson.sections.length - 1 ? (
-                      <button
-                        onClick={nextSection}
-                        className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors"
-                      >
-                        Próxima Seção →
-                      </button>
-                    ) : (
-                      <button
-                        onClick={completeLesson}
-                        className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors"
-                      >
-                        🎉 Concluir Lição
-                      </button>
-                    )}
-                  </div>
-                )}
-
-                {currentQuestion && (
-                  <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">
-                      {currentQuestion.text}
-                    </h3>
-                    
-                    <div className="space-y-3 mb-6">
-                      {currentQuestion.options.map((option, index) => (
-                        <button
-                          key={index}
-                          onClick={() => selectAnswer(index)}
-                          className={`w-full text-left p-4 rounded-lg border transition-colors ${
-                            selectedAnswer === index
-                              ? 'border-blue-500 bg-blue-50'
-                              : 'border-gray-200 hover:border-gray-300'
-                          }`}
-                        >
-                          {String.fromCharCode(97 + index)}) {option}
-                        </button>
-                      ))}
-                    </div>
-
-                    {!showQuestionFeedback && (
-                      <button
-                        onClick={submitAnswer}
-                        disabled={selectedAnswer === null}
-                        className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors disabled:bg-gray-400"
-                      >
-                        Confirmar Resposta
-                      </button>
-                    )}
-
-                    {showQuestionFeedback && (
-                      <div className={`p-4 rounded-lg ${
-                        selectedAnswer === currentQuestion.correct
-                          ? 'bg-green-100 border border-green-300'
-                          : 'bg-red-100 border border-red-300'
-                      }`}>
-                        <h4 className={`font-bold mb-2 ${
-                          selectedAnswer === currentQuestion.correct
-                            ? 'text-green-800'
-                            : 'text-red-800'
-                        }`}>
-                          {selectedAnswer === currentQuestion.correct ? '✅ Correto!' : '❌ Incorreto'}
-                        </h4>
-                        <p className="text-gray-700">{currentQuestion.explanation}</p>
-                        
-                        <div className="mt-4 flex justify-between">
-                          <button
-                            onClick={() => {
-                              setCurrentQuestion(null)
-                              setShowQuestionFeedback(false)
-                              setSelectedAnswer(null)
-                            }}
-                            className="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
-                          >
-                            Continuar
-                          </button>
-                          
-                          {currentSection < currentLesson.sections.length - 1 ? (
-                            <button
-                              onClick={nextSection}
-                              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-                            >
-                              Próxima Seção →
-                            </button>
-                          ) : (
-                            <button
-                              onClick={completeLesson}
-                              className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
-                            >
-                              🎉 Concluir Lição
-                            </button>
-                          )}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                )}
-              </div>
-
-              <div className="text-center text-gray-600">
-                Seção {currentSection + 1} de {currentLesson.sections.length}
-              </div>
-            </>
-          )}
-        </main>
-      </div>
+      <ClinicalFocusLesson
+        lesson={currentLesson}
+        moduleId={currentModule}
+        currentSection={currentSection}
+        currentQuestion={currentQuestion}
+        selectedAnswer={selectedAnswer}
+        showQuestionFeedback={showQuestionFeedback}
+        user={displayUser}
+        userProgress={displayProgress}
+        onDashboard={backToDashboard}
+        onLogout={handleLogout}
+        onBack={() => {
+          setCurrentView('moduleView')
+          setSelectedModuleId(currentModule)
+          setCurrentLesson(null)
+          setCurrentSection(0)
+          setCurrentQuestion(null)
+          setShowQuestionFeedback(false)
+          setSelectedAnswer(null)
+        }}
+        onShowQuestion={showQuestion}
+        onSelectAnswer={selectAnswer}
+        onSubmitAnswer={submitAnswer}
+        onNextSection={nextSection}
+        onCompleteLesson={completeLesson}
+        onContinue={() => {
+          setCurrentQuestion(null)
+          setShowQuestionFeedback(false)
+          setSelectedAnswer(null)
+        }}
+      />
     )
   }
 
