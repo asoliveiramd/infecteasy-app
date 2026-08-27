@@ -202,8 +202,23 @@ function ModuleCard({ moduleId, module, progress, onOpen }) {
   )
 }
 
-export function ClinicalFocusDashboard({ modulesData, user, userProgress, showWelcome, onDismissWelcome, isLessonCompleted, getNextLesson, onOpenModule, onStartLesson, onLogout }) {
+export function ClinicalFocusDashboard({ modulesData, user, userProgress, showWelcome, onDismissWelcome, isLessonCompleted, isLessonUnlocked, getNextLesson, onOpenModule, onStartLesson, learningInsights, onOpenRecommendation, onLogout }) {
   const moduleIds = ['microbiologia', 'antibiograma', 'antibioticoterapia'].filter((id) => modulesData[id])
+  const recommendations = Array.isArray(learningInsights?.recommendations) ? learningInsights.recommendations : []
+  const achievements = Array.isArray(learningInsights?.achievements) ? learningInsights.achievements : []
+  const insightsLoading = Boolean(learningInsights?.loading)
+  const insightsReady = Boolean(learningInsights?.ready)
+  const getModuleLabel = (moduleId) => modulesData[moduleId]?.title || 'Trilha de estudo'
+  const getAchievementDetails = (achievement) => {
+    const catalog = Array.isArray(achievement?.achievement_catalog)
+      ? achievement.achievement_catalog[0]
+      : achievement?.achievement_catalog
+    return {
+      title: catalog?.title || 'Marco de competência',
+      description: catalog?.description || 'Um marco privado do seu percurso de estudo.',
+      category: catalog?.category || 'progresso',
+    }
+  }
   const progressFor = (moduleId) => {
     const module = modulesData[moduleId]
     const completed = module.lessons.filter((lesson) => isLessonCompleted(moduleId, lesson.id)).length
@@ -256,9 +271,42 @@ export function ClinicalFocusDashboard({ modulesData, user, userProgress, showWe
         <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">{moduleIds.map((moduleId) => <ModuleCard key={moduleId} moduleId={moduleId} module={modulesData[moduleId]} progress={progressFor(moduleId)} onOpen={() => onOpenModule(moduleId)} />)}</div>
       </section>
 
-      <section className="mt-8 rounded-2xl border border-[#E2EBEC] bg-white p-5 sm:flex sm:items-center sm:justify-between">
-        <div className="flex gap-3"><div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#F0F5F6] text-[#315A65]"><GraduationCap size={20} /></div><div><h3 className="font-semibold text-[#17313A]">Revisões orientadas por desempenho</h3><p className="mt-1 text-sm text-[#688087]">Ao concluir uma trilha, você encontrará revisões para consolidar os temas essenciais.</p></div></div>
-        <span className="mt-4 inline-flex rounded-lg bg-[#F3F7F8] px-3 py-2 text-xs font-semibold text-[#60777E] sm:mt-0">Incluídas nas trilhas</span>
+      <section className="mt-8 grid gap-5 xl:grid-cols-[minmax(0,1.45fr)_minmax(300px,0.9fr)]">
+        <div className="rounded-2xl border border-[#DCE8E9] bg-white p-5 shadow-[0_1px_2px_rgba(15,46,56,0.03)] sm:p-6">
+          <div className="flex flex-col gap-3 border-b border-[#E3ECEE] pb-5 sm:flex-row sm:items-start sm:justify-between">
+            <div className="flex gap-3"><div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EAF4F4] text-[#197477]"><GraduationCap size={20} /></div><div><p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#69838A]">Plano individual</p><h3 className="mt-1 font-semibold text-[#17313A]">Revisões orientadas pela sua aprendizagem</h3><p className="mt-1 max-w-xl text-sm leading-5 text-[#688087]">Sugestões privadas geradas a partir das suas respostas e do intervalo desde o último estudo.</p></div></div>
+            <span className="inline-flex w-fit items-center gap-1.5 rounded-lg bg-[#F2F7F7] px-3 py-2 text-[11px] font-semibold text-[#60777E]"><LockKeyhole size={13} /> Somente você</span>
+          </div>
+
+          <div className="mt-5 space-y-3">
+            {insightsLoading && <div className="rounded-xl border border-dashed border-[#D9E6E8] bg-[#FAFCFC] px-4 py-5 text-sm text-[#6C848B]">Atualizando suas recomendações clínicas...</div>}
+            {!insightsLoading && recommendations.map((recommendation) => {
+              const reviewIsUnlocked = isLessonUnlocked?.(recommendation.module_id, recommendation.lesson_id)
+              const isLowAccuracy = recommendation.reason_code === 'low_accuracy'
+              const supportingText = isLowAccuracy
+                ? `${Number(recommendation.accuracy_percent || 0).toFixed(0)}% de precisão em ${recommendation.attempts_count || 0} questões respondidas.`
+                : `${recommendation.days_since_last_completion || 14} dias desde sua última conclusão nesta trilha.`
+              return <article key={`${recommendation.module_id}-${recommendation.lesson_id}-${recommendation.reason_code}`} className="rounded-xl border border-[#DCE8E9] bg-[#FBFDFD] p-4 transition-colors hover:border-[#BFD5D9]">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"><div className="min-w-0"><div className="flex flex-wrap items-center gap-2"><span className={`rounded-md px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] ${getMeta(recommendation.module_id).soft} ${getMeta(recommendation.module_id).ink}`}>{getModuleLabel(recommendation.module_id)}</span><span className="text-xs text-[#71888E]">Revisão sugerida</span></div><h4 className="mt-2 font-semibold text-[#1B3A43]">{recommendation.review_title}</h4><p className="mt-1 text-sm leading-5 text-[#617B82]">{recommendation.reason_text}</p><p className="mt-2 text-xs font-medium text-[#507079]">{supportingText}</p></div><button type="button" onClick={() => onOpenRecommendation?.(recommendation)} className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg border border-[#BFD4D8] bg-white px-3.5 py-2.5 text-sm font-semibold text-[#28525D] transition-colors hover:bg-[#EFF7F7]">{reviewIsUnlocked ? 'Abrir revisão' : 'Ver trilha'}<ArrowRight size={15} /></button></div>
+              </article>
+            })}
+            {!insightsLoading && insightsReady && recommendations.length === 0 && <div className="rounded-xl border border-[#DDE8EA] bg-[#F8FBFB] px-4 py-5"><div className="flex gap-3"><Check className="mt-0.5 shrink-0 text-[#20806C]" size={18} /><div><p className="text-sm font-semibold text-[#28535B]">Nenhuma revisão prioritária no momento</p><p className="mt-1 text-sm leading-5 text-[#698188]">Continue a trilha no seu ritmo. Novas recomendações aparecerão quando houver evidência suficiente para personalizar a revisão.</p></div></div></div>}
+            {!insightsLoading && !insightsReady && <div className="rounded-xl border border-[#DDE8EA] bg-[#F8FBFB] px-4 py-5 text-sm leading-5 text-[#698188]">As recomendações serão atualizadas ao iniciar sua sessão de estudo.</div>}
+          </div>
+        </div>
+
+        <aside className="rounded-2xl border border-[#DFE8EA] bg-[#F7FAFA] p-5 sm:p-6">
+          <div className="flex items-center justify-between gap-3"><div><p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#6D858C]">Competência</p><h3 className="mt-1 font-semibold text-[#17313A]">Seus marcos</h3></div><Trophy size={20} className="text-[#5A8785]" /></div>
+          <p className="mt-2 text-sm leading-5 text-[#698087]">Reconhecimentos individuais do seu percurso — sem comparações públicas.</p>
+          <div className="mt-5 space-y-3">
+            {achievements.slice(0, 3).map((achievement) => {
+              const details = getAchievementDetails(achievement)
+              return <div key={`${achievement.achievement_code}-${achievement.module_id}`} className="rounded-xl border border-[#E0EAEB] bg-white p-3.5"><div className="flex gap-3"><div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#E9F3F3] text-[#28636A]"><Award size={16} /></div><div><p className="text-sm font-semibold text-[#28515B]">{details.title}</p><p className="mt-1 text-xs leading-5 text-[#6A8288]">{details.description}</p>{achievement.module_id && achievement.module_id !== 'global' && <p className="mt-1.5 text-[11px] font-semibold text-[#52757E]">{getModuleLabel(achievement.module_id)}</p>}</div></div></div>
+            })}
+            {!insightsLoading && insightsReady && achievements.length === 0 && <div className="rounded-xl border border-dashed border-[#D6E3E5] bg-white/70 p-4 text-sm leading-5 text-[#6A838A]">Conclua lições, revisões e sequências de estudo para registrar seus primeiros marcos.</div>}
+            {insightsLoading && <div className="rounded-xl border border-dashed border-[#D6E3E5] bg-white/70 p-4 text-sm text-[#6A838A]">Atualizando seus marcos privados...</div>}
+          </div>
+        </aside>
       </section>
     </ClinicalFocusLayout>
   )

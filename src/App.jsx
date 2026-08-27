@@ -59,6 +59,12 @@ const App = () => {
     lastStudyDate: null,
     completedLessons: []
   })
+  const [learningInsights, setLearningInsights] = useState({
+    recommendations: [],
+    achievements: [],
+    loading: false,
+    ready: false,
+  })
   const [scrollPosition, setScrollPosition] = useState(0)
   const isClinicalPreview = import.meta.env.DEV && new URLSearchParams(window.location.search).get('preview') === 'clinical'
 
@@ -107,6 +113,7 @@ const App = () => {
   const confirmNewPasswordRef = useRef(null)
   const studySessionIdRef = useRef(null)
   const checkpointQueueRef = useRef(Promise.resolve())
+  const attemptTokenRef = useRef(null)
 
   const clearAuthFeedback = () => {
     setAuthError('')
@@ -115,13 +122,19 @@ const App = () => {
 
   const updateStudyProgress = (data) => {
     if (!data) return
-    setUserProgress((prev) => ({
-      ...prev,
-      streak: Number.isFinite(Number(data.streak)) ? Number(data.streak) : prev.streak,
-      totalStudySeconds: Number.isFinite(Number(data.total_study_seconds))
+    setUserProgress((prev) => {
+      const totalStudySeconds = Number.isFinite(Number(data.total_study_seconds))
         ? Number(data.total_study_seconds)
-        : prev.totalStudySeconds,
-    }))
+        : Number.isFinite(Number(data.seconds_added))
+          ? prev.totalStudySeconds + Number(data.seconds_added)
+          : prev.totalStudySeconds
+
+      return {
+        ...prev,
+        streak: Number.isFinite(Number(data.streak)) ? Number(data.streak) : prev.streak,
+        totalStudySeconds,
+      }
+    })
   }
 
   const saveStudyCheckpoint = async (sectionIndex, endSession = false) => {
@@ -169,6 +182,40 @@ const App = () => {
       return 0
     }
   }
+
+  const loadLearningInsights = useCallback(async () => {
+    if (isClinicalPreview || !supabase || !user?.id) return
+
+    setLearningInsights((previous) => ({ ...previous, loading: true }))
+    try {
+      const { error: refreshError } = await supabase.rpc('refresh_learning_achievements')
+      if (refreshError) throw refreshError
+
+      const [{ data: recommendations, error: recommendationsError }, { data: achievements, error: achievementsError }] = await Promise.all([
+        supabase.rpc('get_review_recommendations'),
+        supabase
+          .from('user_achievements')
+          .select('achievement_code, module_id, earned_at, metadata, achievement_catalog(title, description, category, display_order)')
+          .order('earned_at', { ascending: false }),
+      ])
+
+      if (recommendationsError || achievementsError) throw recommendationsError || achievementsError
+      setLearningInsights({
+        recommendations: Array.isArray(recommendations) ? recommendations : [],
+        achievements: Array.isArray(achievements) ? achievements : [],
+        loading: false,
+        ready: true,
+      })
+    } catch (error) {
+      console.error('Não foi possível atualizar suas recomendações e marcos de competência.', error)
+      setLearningInsights((previous) => ({ ...previous, loading: false, ready: true }))
+    }
+  }, [isClinicalPreview, user?.id])
+
+  useEffect(() => {
+    if (!user?.id || isClinicalPreview) return
+    void loadLearningInsights()
+  }, [isClinicalPreview, loadLearningInsights, user?.id])
 
   const loadAuthenticatedUser = useCallback(async (authUser) => {
     if (!supabase || !authUser) return
@@ -20034,6 +20081,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
 
   const showQuestion = () => {
     if (currentLesson && currentLesson.sections[currentSection]?.question) {
+      attemptTokenRef.current = createAttemptToken()
       setCurrentQuestion(normalizeQuestion(currentLesson.sections[currentSection].question))
       setShowQuestionFeedback(false)
       setSelectedAnswer(null)
@@ -20059,10 +20107,12 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
         p_lesson_id: currentLesson.id,
         p_section_index: currentSection,
         p_selected_option: selectedAnswer,
-        p_attempt_token: createAttemptToken(),
+        p_attempt_token: attemptTokenRef.current || createAttemptToken(),
       })
 
       if (error) throw error
+      attemptTokenRef.current = null
+      void loadLearningInsights()
     } catch (error) {
       console.error('Não foi possível registrar a tentativa da questão.', error)
     }
@@ -20102,6 +20152,8 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
     }
 
     try {
+      // O tempo é um complemento analítico. Uma falha de checkpoint não bloqueia a conclusão idempotente da lição.
+      // A tentativa fica registrada no console e será retomada na próxima sessão, sem perder XP ou conclusão.
       await saveStudyCheckpoint(currentSection, true)
 
       const { data, error } = await supabase.rpc('complete_lesson', {
@@ -20128,6 +20180,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
         }
       })
 
+      void loadLearningInsights()
       returnToModule()
     } catch (error) {
       console.error('Não foi possível registrar a conclusão da lição.', error)
@@ -20159,8 +20212,44 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
   }
 
   const previewUser = { name: 'Dra. Mariana Costa', email: 'mariana.costa@exemplo.com' }
+  const previewInsights = {
+    recommendations: [{
+      module_id: 'antibiograma',
+      lesson_id: 15,
+      review_title: 'Revisão I - Fundamentos',
+      reason_code: 'low_accuracy',
+      reason_text: 'Sua precisão recente indica que este tema merece uma revisão orientada.',
+      accuracy_percent: 65,
+      attempts_count: 12,
+      days_since_last_completion: null,
+    }],
+    achievements: [{
+      achievement_code: 'first_lesson_completed',
+      module_id: 'global',
+      earned_at: '2026-08-27T12:00:00.000Z',
+      metadata: { completed_lessons: 1 },
+      achievement_catalog: {
+        title: 'Primeiro passo clínico',
+        description: 'Concluiu sua primeira lição no InfectEasy.',
+        category: 'progresso',
+      },
+    }, {
+      achievement_code: 'module_mastery',
+      module_id: 'microbiologia',
+      earned_at: '2026-08-27T12:00:00.000Z',
+      metadata: { attempts: 14, accuracy_percent: 86 },
+      achievement_catalog: {
+        title: 'Domínio consistente',
+        description: 'Alcançou pelo menos 80% de precisão em uma trilha com volume mínimo de respostas.',
+        category: 'dominio',
+      },
+    }],
+    loading: false,
+    ready: true,
+  }
   const displayUser = isClinicalPreview ? (user || previewUser) : user
   const displayProgress = isClinicalPreview ? { ...userProgress, xp: Math.max(userProgress.xp || 0, 860), level: Math.max(userProgress.level || 1, 3) } : userProgress
+  const displayInsights = isClinicalPreview ? previewInsights : learningInsights
   const displayView = isClinicalPreview && currentView === 'login' ? 'dashboard' : currentView
 
   // Renderização condicional
@@ -20480,9 +20569,21 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
           setShowWelcome(false)
         }}
         isLessonCompleted={isLessonCompleted}
+        isLessonUnlocked={isLessonUnlocked}
         getNextLesson={getNextLesson}
         onOpenModule={openModule}
         onStartLesson={startLesson}
+        learningInsights={displayInsights}
+        onOpenRecommendation={(recommendation) => {
+          const module = modulesData[recommendation?.module_id]
+          const lesson = module?.lessons?.find((item) => item.id === recommendation?.lesson_id)
+          if (!module || !lesson) return
+          if (isLessonUnlocked(recommendation.module_id, recommendation.lesson_id)) {
+            void startLesson(recommendation.module_id, recommendation.lesson_id)
+            return
+          }
+          openModule(recommendation.module_id)
+        }}
         onLogout={handleLogout}
       />
     )
