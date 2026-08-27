@@ -6,6 +6,33 @@ import { ClinicalFocusDashboard, ClinicalFocusLesson, ClinicalFocusModule } from
 
 const getProgressLevel = (xp) => Math.max(1, Math.floor(xp / 500) + 1)
 
+// O conteúdo histórico usa tanto arrays numéricos quanto objetos A/B/C/D.
+// A normalização preserva ambos os formatos na mesma interface e no registro seguro de tentativas.
+const normalizeQuestion = (question) => {
+  if (!question) return null
+
+  const optionEntries = Array.isArray(question.options)
+    ? question.options.map((option, index) => [String.fromCharCode(65 + index), option])
+    : Object.entries(question.options || {})
+
+  const options = optionEntries.map(([, option]) => option)
+  const rawCorrect = question.correct
+  const correct = typeof rawCorrect === 'string' && /^[A-D]$/i.test(rawCorrect)
+    ? rawCorrect.toUpperCase().charCodeAt(0) - 65
+    : Number(rawCorrect)
+
+  return {
+    ...question,
+    options,
+    correct: Number.isInteger(correct) ? correct : 0,
+  }
+}
+
+const createAttemptToken = () => (
+  globalThis.crypto?.randomUUID?.()
+    || `${Date.now()}-${Math.random().toString(16).slice(2)}-0000-4000-8000-000000000000`
+)
+
 const App = () => {
   // Estados principais
   const [currentView, setCurrentView] = useState('login')
@@ -28,6 +55,8 @@ const App = () => {
     xp: 0,
     level: 1,
     streak: 0,
+    totalStudySeconds: 0,
+    lastStudyDate: null,
     completedLessons: []
   })
   const [scrollPosition, setScrollPosition] = useState(0)
@@ -76,36 +105,70 @@ const App = () => {
   const resetEmailRef = useRef(null)
   const newPasswordRef = useRef(null)
   const confirmNewPasswordRef = useRef(null)
-  const progressSaveQueueRef = useRef(Promise.resolve())
+  const studySessionIdRef = useRef(null)
+  const checkpointQueueRef = useRef(Promise.resolve())
 
   const clearAuthFeedback = () => {
     setAuthError('')
     setAuthMessage('')
   }
 
-  const persistProgress = useCallback((nextProgress) => {
-    if (!supabase || !user?.id) return
+  const updateStudyProgress = (data) => {
+    if (!data) return
+    setUserProgress((prev) => ({
+      ...prev,
+      streak: Number.isFinite(Number(data.streak)) ? Number(data.streak) : prev.streak,
+      totalStudySeconds: Number.isFinite(Number(data.total_study_seconds))
+        ? Number(data.total_study_seconds)
+        : prev.totalStudySeconds,
+    }))
+  }
 
-    const payload = {
-      user_id: user.id,
-      xp: nextProgress.xp,
-      level: getProgressLevel(nextProgress.xp),
-      streak: nextProgress.streak,
-      completed_lessons: nextProgress.completedLessons,
-    }
+  const saveStudyCheckpoint = async (sectionIndex, endSession = false) => {
+    const sessionId = studySessionIdRef.current
+    if (isClinicalPreview || !supabase || !user?.id || !sessionId) return null
 
-    progressSaveQueueRef.current = progressSaveQueueRef.current
+    const task = checkpointQueueRef.current
       .catch(() => undefined)
       .then(async () => {
-        const { error } = await supabase
-          .from('user_progress')
-          .upsert(payload, { onConflict: 'user_id' })
-
-        if (error) {
-          console.error('Não foi possível salvar o progresso de estudo.', error)
-        }
+        const { data, error } = await supabase.rpc('save_lesson_checkpoint', {
+          p_session_id: sessionId,
+          p_last_section: Math.max(0, sectionIndex),
+          p_end_session: endSession,
+        })
+        if (error) throw error
+        updateStudyProgress(data)
+        if (endSession && studySessionIdRef.current === sessionId) studySessionIdRef.current = null
+        return data
       })
-  }, [user?.id])
+
+    checkpointQueueRef.current = task
+    try {
+      return await task
+    } catch (error) {
+      console.error('Não foi possível salvar o ponto de estudo.', error)
+      return null
+    }
+  }
+
+  const startStudySession = async (moduleId, lessonId) => {
+    if (isClinicalPreview || !supabase || !user?.id) return 0
+
+    try {
+      const { data, error } = await supabase.rpc('start_lesson_session', {
+        p_module_id: moduleId,
+        p_lesson_id: lessonId,
+      })
+      if (error) throw error
+
+      studySessionIdRef.current = data?.session_id || null
+      updateStudyProgress(data)
+      return Math.max(0, Number(data?.resume_section) || 0)
+    } catch (error) {
+      console.error('Não foi possível iniciar a sessão de estudo.', error)
+      return 0
+    }
+  }
 
   const loadAuthenticatedUser = useCallback(async (authUser) => {
     if (!supabase || !authUser) return
@@ -118,7 +181,7 @@ const App = () => {
         .maybeSingle(),
       supabase
         .from('user_progress')
-        .select('xp, level, streak, completed_lessons')
+        .select('xp, level, streak, completed_lessons, last_study_date, total_study_seconds')
         .eq('user_id', authUser.id)
         .maybeSingle(),
     ])
@@ -128,11 +191,13 @@ const App = () => {
     }
 
     const fullName = profile?.full_name || authUser.user_metadata?.full_name || authUser.email?.split('@')[0] || 'Estudante'
-    const savedProgress = progress || { xp: 0, level: 1, streak: 0, completed_lessons: [] }
+    const savedProgress = progress || { xp: 0, level: 1, streak: 0, completed_lessons: [], total_study_seconds: 0, last_study_date: null }
     const normalizedProgress = {
       xp: savedProgress.xp || 0,
       level: savedProgress.level || getProgressLevel(savedProgress.xp || 0),
       streak: savedProgress.streak || 0,
+      totalStudySeconds: savedProgress.total_study_seconds || 0,
+      lastStudyDate: savedProgress.last_study_date || null,
       completedLessons: Array.isArray(savedProgress.completed_lessons) ? savedProgress.completed_lessons : [],
     }
 
@@ -19894,6 +19959,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
 
   const handleLogout = async () => {
     clearAuthFeedback()
+    await saveStudyCheckpoint(currentSection, true)
 
     if (supabase) {
       const { error } = await supabase.auth.signOut()
@@ -19904,7 +19970,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
     }
 
     setUser(null)
-    setUserProgress({ xp: 0, level: 1, streak: 0, completedLessons: [] })
+    setUserProgress({ xp: 0, level: 1, streak: 0, totalStudySeconds: 0, lastStudyDate: null, completedLessons: [] })
     setCurrentView('login')
     setCurrentModule(null)
     setCurrentLesson(null)
@@ -19925,25 +19991,40 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
     setCurrentView('dashboard')
   }
 
-  const startLesson = (moduleId, lessonId) => {
-    const module = modulesData[moduleId]
-    const lesson = module.lessons.find(l => l.id === lessonId)
-    
-    // Salvar posição de scroll antes de abrir a lição
-    setScrollPosition(window.scrollY || window.pageYOffset)
-    
-    setCurrentModule(moduleId)
-    setCurrentLesson(lesson)
-    setCurrentSection(0)
+  const leaveLessonToDashboard = () => {
+    void saveStudyCheckpoint(currentSection, true)
+    setSelectedModuleId(null)
+    setCurrentLesson(null)
     setCurrentQuestion(null)
     setShowQuestionFeedback(false)
     setSelectedAnswer(null)
-    setSelectedModuleId(null) // Limpar para evitar renderização da moduleView
+    setCurrentView('dashboard')
+  }
+
+  const startLesson = async (moduleId, lessonId) => {
+    const module = modulesData[moduleId]
+    const lesson = module.lessons.find(l => l.id === lessonId)
+    if (!lesson) return
+
+    // Salvar posição de scroll antes de abrir a lição.
+    setScrollPosition(window.scrollY || window.pageYOffset)
+
+    const resumeSection = await startStudySession(moduleId, lessonId)
+    const safeResumeSection = Math.min(Math.max(0, resumeSection), Math.max(0, lesson.sections.length - 1))
+
+    setCurrentModule(moduleId)
+    setCurrentLesson(lesson)
+    setCurrentSection(safeResumeSection)
+    setCurrentQuestion(null)
+    setShowQuestionFeedback(false)
+    setSelectedAnswer(null)
+    setSelectedModuleId(null)
     setCurrentView('lesson')
   }
 
   const nextSection = () => {
     if (currentLesson && currentSection < currentLesson.sections.length - 1) {
+      void saveStudyCheckpoint(currentSection)
       setCurrentSection(currentSection + 1)
       setCurrentQuestion(null)
       setShowQuestionFeedback(false)
@@ -19953,7 +20034,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
 
   const showQuestion = () => {
     if (currentLesson && currentLesson.sections[currentSection]?.question) {
-      setCurrentQuestion(currentLesson.sections[currentSection].question)
+      setCurrentQuestion(normalizeQuestion(currentLesson.sections[currentSection].question))
       setShowQuestionFeedback(false)
       setSelectedAnswer(null)
     }
@@ -19963,20 +20044,27 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
     setSelectedAnswer(answerIndex)
   }
 
-  const submitAnswer = () => {
+  const submitAnswer = async () => {
     if (showQuestionFeedback || selectedAnswer === null || !currentQuestion) return
 
+    // O feedback pedagógico é imediato, mas não há mais XP calculado ou gravado pelo navegador.
     setShowQuestionFeedback(true)
-    if (selectedAnswer === currentQuestion.correct) {
-      setUserProgress(prev => {
-        const nextProgress = {
-          ...prev,
-          xp: prev.xp + 25,
-          level: getProgressLevel(prev.xp + 25),
-        }
-        persistProgress(nextProgress)
-        return nextProgress
+
+    // A pré-visualização não acessa dados reais. Em produção, o banco valida a resposta pelo catálogo oficial.
+    if (isClinicalPreview || !supabase || !user?.id || !currentLesson || !currentModule) return
+
+    try {
+      const { error } = await supabase.rpc('record_question_attempt', {
+        p_module_id: currentModule,
+        p_lesson_id: currentLesson.id,
+        p_section_index: currentSection,
+        p_selected_option: selectedAnswer,
+        p_attempt_token: createAttemptToken(),
       })
+
+      if (error) throw error
+    } catch (error) {
+      console.error('Não foi possível registrar a tentativa da questão.', error)
     }
   }
 
@@ -20014,8 +20102,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
     }
 
     try {
-      // Aguarda quaisquer salvamentos anteriores (por exemplo, pontos de questão) antes de calcular o total no servidor.
-      await progressSaveQueueRef.current.catch(() => undefined)
+      await saveStudyCheckpoint(currentSection, true)
 
       const { data, error } = await supabase.rpc('complete_lesson', {
         p_module_id: moduleId,
@@ -20430,9 +20517,10 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
         showQuestionFeedback={showQuestionFeedback}
         user={displayUser}
         userProgress={displayProgress}
-        onDashboard={backToDashboard}
+        onDashboard={leaveLessonToDashboard}
         onLogout={handleLogout}
         onBack={() => {
+          void saveStudyCheckpoint(currentSection, true)
           setCurrentView('moduleView')
           setSelectedModuleId(currentModule)
           setCurrentLesson(null)

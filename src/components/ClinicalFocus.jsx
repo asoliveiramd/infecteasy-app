@@ -157,6 +157,14 @@ export function ClinicalFocusLayout({ children, currentView, user, userProgress,
   )
 }
 
+function formatStudyTime(totalSeconds = 0) {
+  const minutes = Math.max(0, Math.floor((Number(totalSeconds) || 0) / 60))
+  if (minutes < 60) return `${minutes} min`
+  const hours = Math.floor(minutes / 60)
+  const remainingMinutes = minutes % 60
+  return remainingMinutes ? `${hours} h ${remainingMinutes} min` : `${hours} h`
+}
+
 function Metric({ icon, label, value, hint }) {
   return (
     <div className="rounded-2xl border border-[#E1EAEC] bg-white p-4 shadow-[0_1px_2px_rgba(15,46,56,0.03)]">
@@ -236,10 +244,11 @@ export function ClinicalFocusDashboard({ modulesData, user, userProgress, showWe
         </div>
       </section>
 
-      <section className="mt-8 grid gap-4 sm:grid-cols-3">
+      <section className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <Metric icon={BookOpen} label="Lições concluídas" value={totalCompleted} hint={`de ${totalLessons} disponíveis`} />
         <Metric icon={Award} label="Pontos de estudo" value={userProgress?.xp || 0} hint="Reconhecem sua consistência" />
-        <Metric icon={Trophy} label="Nível atual" value={userProgress?.level || 1} hint="Evolução da trilha clínica" />
+        <Metric icon={TrendingUp} label="Sequência de estudo" value={`${userProgress?.streak || 0} dias`} hint="Atualizada no fuso de Salvador" />
+        <Metric icon={Clock3} label="Tempo de estudo" value={formatStudyTime(userProgress?.totalStudySeconds)} hint="Registrado em sessões ativas" />
       </section>
 
       <section className="mt-10">
