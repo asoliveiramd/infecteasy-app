@@ -19980,29 +19980,71 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
     }
   }
 
-  const completeLesson = () => {
-    if (currentLesson && currentModule) {
-      const lessonKey = `${currentModule}-${currentLesson.id}`
-      setUserProgress(prev => {
-        if (prev.completedLessons.includes(lessonKey)) return prev
+  const completeLesson = async () => {
+    if (!currentLesson || !currentModule) return
 
-        const nextXp = prev.xp + currentLesson.xp
-        const nextProgress = {
-          ...prev,
-          xp: nextXp,
-          level: getProgressLevel(nextXp),
-          completedLessons: [...prev.completedLessons, lessonKey],
-        }
-        persistProgress(nextProgress)
-        return nextProgress
-      })
+    const moduleId = currentModule
+    const lessonId = currentLesson.id
+    const lessonKey = `${moduleId}-${lessonId}`
+
+    const returnToModule = () => {
       setCurrentView('moduleView')
-      setSelectedModuleId(currentModule)
+      setSelectedModuleId(moduleId)
       setCurrentLesson(null)
       setCurrentSection(0)
       setCurrentQuestion(null)
       setShowQuestionFeedback(false)
       setSelectedAnswer(null)
+    }
+
+    // A pré-visualização não acessa o banco e mantém o comportamento demonstrativo local.
+    if (isClinicalPreview || !supabase || !user?.id) {
+      setUserProgress(prev => {
+        if (prev.completedLessons.includes(lessonKey)) return prev
+        const nextXp = prev.xp + currentLesson.xp
+        return {
+          ...prev,
+          xp: nextXp,
+          level: getProgressLevel(nextXp),
+          completedLessons: [...prev.completedLessons, lessonKey],
+        }
+      })
+      returnToModule()
+      return
+    }
+
+    try {
+      // Aguarda quaisquer salvamentos anteriores (por exemplo, pontos de questão) antes de calcular o total no servidor.
+      await progressSaveQueueRef.current.catch(() => undefined)
+
+      const { data, error } = await supabase.rpc('complete_lesson', {
+        p_module_id: moduleId,
+        p_lesson_id: lessonId,
+        p_last_section: currentSection,
+        p_time_spent_seconds: 0,
+      })
+
+      if (error) throw error
+
+      setUserProgress(prev => {
+        const completedLessons = prev.completedLessons.includes(lessonKey)
+          ? prev.completedLessons
+          : [...prev.completedLessons, lessonKey]
+        const nextXp = Number.isFinite(Number(data?.xp_total)) ? Number(data.xp_total) : prev.xp
+        const nextLevel = Number.isFinite(Number(data?.level)) ? Number(data.level) : getProgressLevel(nextXp)
+
+        return {
+          ...prev,
+          xp: nextXp,
+          level: nextLevel,
+          completedLessons,
+        }
+      })
+
+      returnToModule()
+    } catch (error) {
+      console.error('Não foi possível registrar a conclusão da lição.', error)
+      window.alert('Não foi possível registrar a conclusão agora. Verifique sua conexão e tente novamente.')
     }
   }
 
