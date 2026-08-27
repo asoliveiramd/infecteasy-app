@@ -74,6 +74,7 @@ const App = () => {
     error: '',
   })
   const [scrollPosition, setScrollPosition] = useState(0)
+  const activeUserIdRef = useRef(null)
   const previewSearch = new URLSearchParams(window.location.search)
   const isClinicalPreview = import.meta.env.DEV && previewSearch.get('preview') === 'clinical'
   const isSyncErrorPreview = isClinicalPreview && previewSearch.get('sync') === 'error'
@@ -303,8 +304,12 @@ const App = () => {
       completedLessons: Array.isArray(savedProgress.completed_lessons) ? savedProgress.completed_lessons : [],
     }
 
-    setLearningInsights({ recommendations: [], achievements: [], loading: true, ready: false, error: '' })
-    setPerformanceReport({ modules: [], activities: [], loading: true, ready: false, error: '' })
+    const isDifferentUser = activeUserIdRef.current !== authUser.id
+    if (isDifferentUser) {
+      setLearningInsights({ recommendations: [], achievements: [], loading: true, ready: false, error: '' })
+      setPerformanceReport({ modules: [], activities: [], loading: true, ready: false, error: '' })
+    }
+    activeUserIdRef.current = authUser.id
     setUser({
       id: authUser.id,
       email: authUser.email,
@@ -370,6 +375,7 @@ const App = () => {
           if (active) loadAuthenticatedUser(session.user)
         }, 0)
       } else if (event === 'SIGNED_OUT') {
+        activeUserIdRef.current = null
         setUser(null)
         setUserProgress({ xp: 0, level: 1, streak: 0, totalStudySeconds: 0, lastStudyDate: null, completedLessons: [] })
         setLearningInsights({ recommendations: [], achievements: [], loading: false, ready: false, error: '' })
@@ -19814,6 +19820,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
       }
     }
 
+    activeUserIdRef.current = null
     setUser(null)
     setUserProgress({ xp: 0, level: 1, streak: 0, totalStudySeconds: 0, lastStudyDate: null, completedLessons: [] })
     setLearningInsights({ recommendations: [], achievements: [], loading: false, ready: false, error: '' })
