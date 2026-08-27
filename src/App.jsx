@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect, useCallback } from 'react'
 import './App.css'
 import { antimicrobianosModule } from './antimicrobianos_module.js'
 import { isSupabaseConfigured, supabase } from './lib/supabase';
-import { ClinicalFocusDashboard, ClinicalFocusLesson, ClinicalFocusModule, ClinicalFocusPerformance } from './components/ClinicalFocus.jsx'
+import { ClinicalFocusDashboard, ClinicalFocusLesson, ClinicalFocusModule, ClinicalFocusPerformance, ClinicalFocusTransparency } from './components/ClinicalFocus.jsx'
 
 const getProgressLevel = (xp) => Math.max(1, Math.floor(xp / 500) + 1)
 
@@ -64,15 +64,20 @@ const App = () => {
     achievements: [],
     loading: false,
     ready: false,
+    error: '',
   })
   const [performanceReport, setPerformanceReport] = useState({
     modules: [],
     activities: [],
     loading: false,
     ready: false,
+    error: '',
   })
   const [scrollPosition, setScrollPosition] = useState(0)
-  const isClinicalPreview = import.meta.env.DEV && new URLSearchParams(window.location.search).get('preview') === 'clinical'
+  const previewSearch = new URLSearchParams(window.location.search)
+  const isClinicalPreview = import.meta.env.DEV && previewSearch.get('preview') === 'clinical'
+  const isSyncErrorPreview = isClinicalPreview && previewSearch.get('sync') === 'error'
+  const [previewSyncError, setPreviewSyncError] = useState(isSyncErrorPreview)
 
   // Gerenciar histórico do navegador
   useEffect(() => {
@@ -102,6 +107,8 @@ const App = () => {
       window.history.pushState({ view: 'dashboard' }, '', '#dashboard')
     } else if (currentView === 'performance') {
       window.history.pushState({ view: 'performance' }, '', '#desempenho')
+    } else if (currentView === 'transparency') {
+      window.history.pushState({ view: 'transparency' }, '', '#uso-privacidade')
     } else if (currentView === 'lesson') {
       window.history.pushState({ view: 'lesson' }, '', '#lesson')
     } else if (currentView === 'login') {
@@ -194,7 +201,7 @@ const App = () => {
   const loadLearningInsights = useCallback(async () => {
     if (isClinicalPreview || !supabase || !user?.id) return
 
-    setLearningInsights((previous) => ({ ...previous, loading: true }))
+    setLearningInsights((previous) => ({ ...previous, loading: true, error: '' }))
     try {
       const { error: refreshError } = await supabase.rpc('refresh_learning_achievements')
       if (refreshError) throw refreshError
@@ -213,10 +220,16 @@ const App = () => {
         achievements: Array.isArray(achievements) ? achievements : [],
         loading: false,
         ready: true,
+        error: '',
       })
     } catch (error) {
       console.error('Não foi possível atualizar suas recomendações e marcos de competência.', error)
-      setLearningInsights((previous) => ({ ...previous, loading: false, ready: true }))
+      setLearningInsights((previous) => ({
+        ...previous,
+        loading: false,
+        ready: true,
+        error: 'Não foi possível atualizar suas recomendações agora. Verifique sua conexão e tente novamente.',
+      }))
     }
   }, [isClinicalPreview, user?.id])
 
@@ -228,7 +241,7 @@ const App = () => {
   const loadPerformanceReport = useCallback(async () => {
     if (isClinicalPreview || !supabase || !user?.id) return
 
-    setPerformanceReport((previous) => ({ ...previous, loading: true }))
+    setPerformanceReport((previous) => ({ ...previous, loading: true, error: '' }))
     try {
       const [{ data: modules, error: modulesError }, { data: activities, error: activitiesError }] = await Promise.all([
         supabase.rpc('get_my_learning_report'),
@@ -241,10 +254,16 @@ const App = () => {
         activities: Array.isArray(activities) ? activities : [],
         loading: false,
         ready: true,
+        error: '',
       })
     } catch (error) {
       console.error('Não foi possível carregar seu relatório pessoal de desempenho.', error)
-      setPerformanceReport((previous) => ({ ...previous, loading: false, ready: true }))
+      setPerformanceReport((previous) => ({
+        ...previous,
+        loading: false,
+        ready: true,
+        error: 'Não foi possível atualizar seu relatório agora. Verifique sua conexão e tente novamente.',
+      }))
     }
   }, [isClinicalPreview, user?.id])
 
@@ -284,6 +303,8 @@ const App = () => {
       completedLessons: Array.isArray(savedProgress.completed_lessons) ? savedProgress.completed_lessons : [],
     }
 
+    setLearningInsights({ recommendations: [], achievements: [], loading: true, ready: false, error: '' })
+    setPerformanceReport({ modules: [], activities: [], loading: true, ready: false, error: '' })
     setUser({
       id: authUser.id,
       email: authUser.email,
@@ -350,7 +371,9 @@ const App = () => {
         }, 0)
       } else if (event === 'SIGNED_OUT') {
         setUser(null)
-        setUserProgress({ xp: 0, level: 1, streak: 0, completedLessons: [] })
+        setUserProgress({ xp: 0, level: 1, streak: 0, totalStudySeconds: 0, lastStudyDate: null, completedLessons: [] })
+        setLearningInsights({ recommendations: [], achievements: [], loading: false, ready: false, error: '' })
+        setPerformanceReport({ modules: [], activities: [], loading: false, ready: false, error: '' })
         setCurrentView('login')
       }
     })
@@ -365,20 +388,17 @@ const App = () => {
   const modulesData = {
     microbiologia: {
       title: "Fundamentos da Microbiologia",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      description: "Aprenda os conceitos essenciais da microbiologia clínica",
+            description: "Aprenda os conceitos essenciais da microbiologia clínica",
       lessons: [
         {
           id: 1,
           title: "Introdução à Coloração de Gram",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "8 min",
+                    duration: "8 min",
           xp: 50,
           sections: [
             {
               title: "O que é a Coloração de Gram?",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #2563eb; margin-bottom: 15px;">🔬 Conceito Fundamental</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -416,8 +436,7 @@ const App = () => {
             },
             {
               title: "Procedimentos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🧪 Etapas do Procedimento</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -449,8 +468,7 @@ const App = () => {
             },
             {
               title: "Etapa Crítica: Descoloração",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d97706; margin-bottom: 15px;">⚠️ Passo Crítico</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -486,14 +504,12 @@ const App = () => {
         {
           id: 2,
           title: "Espécimes Clínicos",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "8 min",
+                    duration: "8 min",
           xp: 45,
           sections: [
             {
               title: "Espécimes de Locais Estéreis",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #15803d; margin-bottom: 15px;">🏥 Espécimes de Locais Estéreis</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -517,8 +533,7 @@ const App = () => {
             },
             {
               title: "Limitações",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d97706; margin-bottom: 15px;">⚠️ Limitações</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -545,8 +560,7 @@ const App = () => {
             },
             {
               title: "Espécimes de Locais Não Estéreis",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #dc2626; margin-bottom: 15px;">🦠 Espécimes de Locais Não Estéreis</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -569,8 +583,7 @@ const App = () => {
             },
             {
               title: "Critérios para Escarro",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🫁 Avaliação de Escarro</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -627,8 +640,7 @@ const App = () => {
             },
             {
               title: "Amostras de Locais Estéreis vs. Não Estéreis",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #2563eb; margin-bottom: 15px;">🏥 Locais Estéreis vs. Não Estéreis</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -655,14 +667,12 @@ const App = () => {
         {
           id: 3,
           title: "Limitações da Coloração de Gram",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "6 min",
+                    duration: "6 min",
           xp: 40,
           sections: [
             {
               title: "Organismos Não Visualizáveis",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d97706; margin-bottom: 15px;">⚠️ Limitações Importantes</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -704,8 +714,7 @@ const App = () => {
             },
             {
               title: "Agentes Não Bacterianos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #6d28d9; margin-bottom: 15px;">🍄 Nem Tudo é Bactéria</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -736,8 +745,7 @@ const App = () => {
             },
             {
               title: "Organismos Gram-Variáveis",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fef9c3; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #ca8a04; margin-bottom: 15px;">🤔 Gram-Variáveis</h3>
                   <p style="font-size: 16px; line-height: 1.6;">
@@ -763,14 +771,12 @@ const App = () => {
         {
           id: 4,
           title: "Morfologias e Arranjos Bacterianos",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "4 min",
+                    duration: "4 min",
           xp: 20,
           sections: [
             {
               title: "Morfologias Bacterianas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🔬 Morfologias Bacterianas</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -808,8 +814,7 @@ const App = () => {
             },
             {
               title: "Arranjos Bacterianos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #b45309; margin-bottom: 15px;">🔗 Arranjos Bacterianos</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -850,14 +855,12 @@ const App = () => {
         {
           id: 5,
           title: "Gram Positivos",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "18 min",
+                    duration: "18 min",
           xp: 90,
           sections: [
             {
               title: "Cocos Gram Positivos em Cachos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #166534; margin-bottom: 15px;">🍇 Cocos Gram Positivos em Cachos</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -895,8 +898,7 @@ const App = () => {
             },
             {
               title: "Cocos Gram Positivos em Cadeia",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d97706; margin-bottom: 15px;">⛓️ Cocos Gram Positivos em Cadeia</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -927,8 +929,7 @@ const App = () => {
             },
             {
               title: "Streptococcus pneumoniae",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🔬 Pneumococo</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -970,8 +971,7 @@ const App = () => {
             },
             {
               title: "Bacilos Gram Positivos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #166534; margin-bottom: 15px;">🦠 Bacilos Gram Positivos</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -1014,8 +1014,7 @@ const App = () => {
             },
             {
               title: "Bacilos Ramificados: Nocardia e Actinomyces",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #374151; margin-bottom: 15px;">🌿 Bacilos Ramificados</h3>
                   <p style="font-size: 16px; line-height: 1.6;">
@@ -1039,8 +1038,7 @@ const App = () => {
             },
             {
               title: "Suspeita de Gangrena Gasosa",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #dc2626; margin-bottom: 15px;">☠️ Gangrena Gasosa</h3>
                   <p style="font-size: 16px; line-height: 1.6;">
@@ -1067,14 +1065,12 @@ const App = () => {
         {
           id: 6,
           title: "Gram Negativos",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "15 min",
+                    duration: "15 min",
           xp: 75,
           sections: [
             {
               title: "Cocos Gram Negativos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d97706; margin-bottom: 15px;">⚪ Cocos Gram Negativos</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -1111,8 +1107,7 @@ const App = () => {
             },
             {
               title: "Neisseria",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fdf2f8; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #be185d; margin-bottom: 15px;">☕ Diplococos Gram-Negativos</h3>
                   <p style="font-size: 16px; line-height: 1.6;">
@@ -1136,8 +1131,7 @@ const App = () => {
             },
             {
               title: "Bacilos Gram Negativos de Tamanho Variável",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">📏 Bacilos Gram Negativos de Tamanho Variável</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -1168,8 +1162,7 @@ const App = () => {
             },
             {
               title: "Bacilos Gram Negativos Pequenos e Curvos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fdf2f8; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #be185d; margin-bottom: 15px;">🌊 Bacilos Gram Negativos Pequenos e Curvos</h3>
                 </div>
@@ -1204,8 +1197,7 @@ const App = () => {
             },
             {
               title: "Bacilos Gram-Negativos Curvos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🌙 Bacilos Curvos</h3>
                   <p style="font-size: 16px; line-height: 1.6;">
@@ -1232,14 +1224,12 @@ const App = () => {
         {
           id: 7,
           title: "Provas de Bancada",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "10 min",
+                    duration: "10 min",
           xp: 50,
           sections: [
             {
               title: "A prova da catalase",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🧪 A Prova da Catalase</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -1272,8 +1262,7 @@ const App = () => {
             },
             {
               title: "A prova da coagulase",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #b45309; margin-bottom: 15px;">🔬 A Prova da Coagulase</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -1309,8 +1298,7 @@ const App = () => {
             },
             {
               title: "Fermentação de Açúcares em Bacilos Gram Negativos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #6d28d9; margin-bottom: 15px;">🧪 Fermentação de Açúcares</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -1346,14 +1334,12 @@ const App = () => {
         {
           id: 8,
           title: "Cultura Bacteriana: Princípios",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "15 min",
+                    duration: "15 min",
           xp: 80,
           sections: [
             {
               title: "Meios de Cultura",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🧫 Meios de Cultura</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -1386,8 +1372,7 @@ const App = () => {
             },
             {
               title: "Um pouco mais sobre o Ágar MacConkey",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fdf2f8; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #be185d; margin-bottom: 15px;">🩷 Ágar MacConkey</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -1415,8 +1400,7 @@ const App = () => {
             },
             {
               title: "Um pouco mais sobre o Ágar Chocolate",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #6d28d9; margin-bottom: 15px;">🍫 Ágar Chocolate</h3>
                   <p style="font-size: 16px; line-height: 1.6;">
@@ -1443,14 +1427,12 @@ const App = () => {
         {
           id: 9,
           title: "Testes Bioquímicos Rápidos",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "10 min",
+                    duration: "10 min",
           xp: 55,
           sections: [
             {
               title: "Teste da Catalase",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #059669; margin-bottom: 15px;">💨 Teste da Catalase</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -1477,8 +1459,7 @@ const App = () => {
             },
             {
               title: "Teste da Coagulase",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🩸 Teste da Coagulase</h3>
                   <p style="font-size: 16px; line-height: 1.6;">
@@ -1502,8 +1483,7 @@ const App = () => {
             },
             {
               title: "Outros testes",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #b45309; margin-bottom: 15px;">🧪 Outros testes</h3>
                   <ul style="font-size: 15px; line-height: 1.6; margin-left: 20px;">
@@ -1529,14 +1509,12 @@ const App = () => {
         {
           id: 10,
           title: "Hemólise e Agrupamento de Lancefield",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "12 min",
+                    duration: "12 min",
           xp: 65,
           sections: [
             {
               title: "Padrões de Hemólise",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #dc2626; margin-bottom: 15px;">🩸 Padrões de Hemólise</h3>
                   <p style="font-size: 16px; line-height: 1.6;">
@@ -1560,8 +1538,7 @@ const App = () => {
             },
             {
               title: "Agrupamento de Lancefield",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #6d28d9; margin-bottom: 15px;">🏷️ Agrupamento de Lancefield</h3>
                   <p style="font-size: 16px; line-height: 1.6;">
@@ -1588,14 +1565,12 @@ const App = () => {
         {
           id: 11,
           title: "Identificação Avançada por MALDI-TOF",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "10 min",
+                    duration: "10 min",
           xp: 60,
           sections: [
             {
               title: "Princípio do MALDI-TOF",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #eef2ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #4338ca; margin-bottom: 15px;">🚀 MALDI-TOF MS</h3>
                   <p style="font-size: 16px; line-height: 1.6;">
@@ -1619,8 +1594,7 @@ const App = () => {
             },
             {
               title: "Vantagens e Limitações",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #374151; margin-bottom: 15px;">✅ Vantagens e ❌ Limitações</h3>
                   <p style="font-size: 16px; line-height: 1.6;">
@@ -2953,20 +2927,17 @@ const App = () => {
     },
     antibiograma: {
       title: "Teste de Suscetibilidade Antimicrobiana",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      description: "Domine os conceitos e técnicas do antibiograma",
+            description: "Domine os conceitos e técnicas do antibiograma",
       lessons: [
         {
           id: 1,
           title: "Definição e Métodos",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "8 min",
+                    duration: "8 min",
           xp: 40,
           sections: [
             {
               title: "Definição",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🔬 O que é o Antibiograma?</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -3001,8 +2972,7 @@ const App = () => {
             },
             {
               title: "Métodos de Testes de Sensibilidade Antimicrobiana",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fffbeb; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #b45309; margin-bottom: 15px;">🧪 Métodos de TSA</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -3049,8 +3019,7 @@ const App = () => {
             },
             {
               title: "Indicações Clínicas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #059669; margin-bottom: 15px;">📋 Critérios para TSA</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -3090,14 +3059,12 @@ const App = () => {
         {
           id: 2,
           title: "Conceitos Fundamentais de Resistência",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "12 min",
+                    duration: "12 min",
           xp: 60,
           sections: [
             {
               title: "Resistência Intrínseca vs Adquirida",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🧬 Tipos de Resistência</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -3132,8 +3099,7 @@ const App = () => {
             },
             {
               title: "Mecanismos Moleculares",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #374151; margin-bottom: 15px;">🔬 Mecanismos de Ação</h3>
                   <p style="font-size: 16px; line-height: 1.6;">
@@ -3159,14 +3125,12 @@ const App = () => {
         {
           id: 3,
           title: "Mecanismos de Resistência",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "15 min",
+                    duration: "15 min",
           xp: 70,
           sections: [
             {
               title: "Beta-lactamases",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #dc2626; margin-bottom: 15px;">🧪 Enzimas Beta-lactamases</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -3194,8 +3158,7 @@ const App = () => {
             },
             {
               title: "Alteração de Alvo",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🎯 Modificação do Sítio de Ação</h3>
                   <p style="font-size: 16px; line-height: 1.6;">
@@ -3219,8 +3182,7 @@ const App = () => {
             },
             {
               title: "Conceito e Detecção",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #6d28d9; margin-bottom: 15px;">🧬 Heterorresistência</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -3254,15 +3216,13 @@ const App = () => {
         {
           id: 4,
           title: "Métodos Convencionais de TSA",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "18 min",
+                    duration: "18 min",
           xp: 90,
           sections: [
             // Card 1: Características e Limitações
 {
   title: "Características e Limitações",
-  videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  content: `
+    content: `
     <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
       <h3 style="color: #0369a1; margin-bottom: 15px;">🔬 Natureza Fenotípica</h3>
       <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -3300,8 +3260,7 @@ const App = () => {
 // Card 2: Elementos Críticos para Padronização do TSA
 {
   title: "Elementos Críticos para Padronização do TSA",
-  videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  content: `
+    content: `
     <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
       <h3 style="color: #7c3aed; margin-bottom: 15px;">🎯 Seleção de Colônias</h3>
       <p style="font-size: 16px; line-height: 1.6;">
@@ -3341,8 +3300,7 @@ const App = () => {
 // Card 3: O Método Qualitativo de Disco-Difusão (Kirby-Bauer) - MODIFICADO
 {
   title: "O Método Qualitativo de Disco-Difusão (Kirby-Bauer)",
-  videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  content: `
+    content: `
     <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
       <h3 style="color: #2563eb; margin-bottom: 15px;">🎯 Método de Disco-Difusão</h3>
       <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -3399,8 +3357,7 @@ const App = () => {
 // Card 4: Correlação entre Zona de Inibição e CIM
 {
   title: "Correlação entre Zona de Inibição e CIM",
-  videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  content: `
+    content: `
     <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
       <h3 style="color: #0369a1; margin-bottom: 15px;">📊 Fatores que Afetam a Zona de Inibição</h3>
       <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -3447,8 +3404,7 @@ const App = () => {
 // Card 5: Limitações do Método de Difusão em Disco
 {
   title: "Limitações do Método de Difusão em Disco",
-  videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  content: `
+    content: `
     <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #dc2626;">
       <h3 style="color: #dc2626; margin-bottom: 15px;">⚠️ Baixa Automação</h3>
       <p style="font-size: 16px; line-height: 1.6;">
@@ -3497,14 +3453,12 @@ const App = () => {
                 {
           id: 5,
           title: "Métodos Quantitativos",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "30 min",
+                    duration: "30 min",
           xp: 150,
           sections: [
     {
       title: "Vantagens dos Métodos Quantitativos",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      content: `
+            content: `
         <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
           <h3 style="color: #0369a1; margin-bottom: 15px;">✅ Vantagens dos Métodos Quantitativos</h3>
           <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -3604,8 +3558,7 @@ const App = () => {
     },
     {
       title: "Concentração Inibitória Mínima (CIM)",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      content: `
+            content: `
         <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
           <h3 style="color: #dc2626; margin-bottom: 15px;">🎯 Concentração Inibitória Mínima (<abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>)</h3>
           <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -3685,8 +3638,7 @@ const App = () => {
     },
     {
       title: "Métodos de Determinação da CIM",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      content: `
+            content: `
         <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
           <h3 style="color: #7c3aed; margin-bottom: 15px;">🔬 Métodos de Determinação da <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr></h3>
           <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -3766,8 +3718,7 @@ const App = () => {
     },
     {
       title: "Principais Métodos Quantitativos",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      content: `
+            content: `
         <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
           <h3 style="color: #d97706; margin-bottom: 15px;">🧪 Principais Métodos Quantitativos</h3>
           <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -3900,8 +3851,7 @@ const App = () => {
     },
     {
       title: "Métodos de Gradiente Antimicrobiano",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      content: `
+            content: `
         <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0;">
           <h3 style="color: #059669; margin-bottom: 15px;">📏 Métodos de Gradiente Antimicrobiano</h3>
           <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -4055,14 +4005,12 @@ const App = () => {
         {
           id: 6,
           title: "Sistemas Automatizados",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "12 min",
+                    duration: "12 min",
           xp: 60,
           sections: [
             {
               title: "Princípios dos Sistemas Automatizados",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🤖 Automação em Microbiologia</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -4096,8 +4044,7 @@ const App = () => {
           ,
             {
               title: "Funcionamento dos Sistemas Automatizados",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  content: `
+                content: `
     <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
       <h3 style="color: #0369a1; margin-bottom: 15px;">⚙️ Funcionamento dos Sistemas Automatizados</h3>
       <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -4227,14 +4174,12 @@ const App = () => {
         {
           id: 7,
           title: "Testes Fenotípicos Especiais",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "20 min",
+                    duration: "20 min",
           xp: 100,
           sections: [
             {
               title: "Detecção de Resistências Específicas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  content: `
+                content: `
     <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
       <h3 style="color: #d97706; margin-bottom: 15px;">🎯 Detecção de Resistências Específicas</h3>
       <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -4343,8 +4288,7 @@ const App = () => {
             },
             {
               title: "Detecção de Beta-lactamases",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #dc2626; margin-bottom: 15px;">🧪 Teste da Nitrocefina</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -4377,8 +4321,7 @@ const App = () => {
             },
             {
               title: "Teste D (Clindamicina)",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f5f3ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #6d28d9; margin-bottom: 15px;">🧬 Resistência Induzível à Clindamicina</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -4413,14 +4356,12 @@ const App = () => {
         {
           id: 8,
           title: "Métodos Moleculares em TSA",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "16 min",
+                    duration: "16 min",
           xp: 80,
           sections: [
             {
               title: "Detecção Genotípica de Resistência",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #eef2ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #4338ca; margin-bottom: 15px;">🧬 Métodos Moleculares</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -4453,8 +4394,7 @@ const App = () => {
             },
             {
               title: "Limitações dos Métodos Moleculares",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #dc2626; margin-bottom: 15px;">⚠️ Limitações Importantes</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -4492,14 +4432,12 @@ const App = () => {
         {
           id: 9,
           title: "Interpretação Clínica dos Resultados",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "45 min",
+                    duration: "45 min",
           xp: 225,
           sections: [
             {
     title: "Interpretação de Resultados: Sensível",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    content: `
+        content: `
       <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
         <h3 style="color: #059669; margin-bottom: 15px;">✅ Interpretação: Sensível (S)</h3>
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -4594,8 +4532,7 @@ const App = () => {
   },
   {
     title: "Interpretação: Sensível com Aumento de Exposição",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    content: `
+        content: `
       <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
         <h3 style="color: #d97706; margin-bottom: 15px;">⚡ Interpretação: Sensível com Aumento de Exposição (I)</h3>
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -4696,8 +4633,7 @@ const App = () => {
   },
   {
     title: "Interpretação de Resultados: Resistente",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    content: `
+        content: `
       <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0;">
         <h3 style="color: #dc2626; margin-bottom: 15px;">❌ Interpretação: Resistente (R)</h3>
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -4817,14 +4753,12 @@ const App = () => {
         {
           id: 10,
           title: "Estrutura Básica do Antibiograma",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "45 min",
+                    duration: "45 min",
           xp: 225,
           sections: [
             {
     title: "Analisando a Identificação do Microrganismo e Observações",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    content: `
+        content: `
       <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
         <h3 style="color: #0369a1; margin-bottom: 15px;">🔬 Identificação do Microrganismo e Observações</h3>
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -4944,8 +4878,7 @@ const App = () => {
   },
   {
     title: "Valores de CIM e Interpretação",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    content: `
+        content: `
       <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
         <h3 style="color: #0369a1; margin-bottom: 15px;">📊 Valores de <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr> e Interpretação</h3>
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -5096,8 +5029,7 @@ const App = () => {
   },
   {
     title: "Avaliação Crítica do Antibiograma",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    content: `
+        content: `
       <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
         <h3 style="color: #d97706; margin-bottom: 15px;">🔍 Avaliação Crítica do Antibiograma</h3>
         <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -5252,14 +5184,12 @@ const App = () => {
                 {
           id: 11,
           title: "CLSI vs. BrCast: Diferenças Fundamentais",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "45 min",
+                    duration: "45 min",
           xp: 225,
           sections: [
             {
               title: "Mudança de Paradigma no Brasil",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d97706; margin-bottom: 15px;">🌎 Mudança de Paradigma no Brasil</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -5295,8 +5225,7 @@ const App = () => {
             },
             {
               title: "Pontos de Corte: O Que Mudou?",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🎯 Pontos de Corte</h3>
                   <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
@@ -5338,8 +5267,7 @@ const App = () => {
             },
             {
               title: "Exemplo Prático: E. coli e Ciprofloxacino",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #4b5563; margin-bottom: 15px;">📋 Exemplo Comparativo</h3>
                   <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
@@ -5387,8 +5315,7 @@ const App = () => {
             },
             {
               title: "Vantagens e Desafios do BrCAST",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #059669; margin-bottom: 15px;">✅ Vantagens do <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê brasileiro de testes de sensibilidade" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr></h3>
                   <ul style="margin-left: 20px; line-height: 1.8; font-size: 15px;">
@@ -5432,8 +5359,7 @@ const App = () => {
             },
             {
               title: "Nova Categoria \"I\": Conceito",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🔄 Mudança Conceitual Importante</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -5496,8 +5422,7 @@ const App = () => {
             },
             {
               title: "Estratégias de Aumento de Exposição",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #059669; margin-bottom: 15px;">⚙️ Estratégias de Exposição</h3>
                   <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
@@ -5579,8 +5504,7 @@ const App = () => {
             },
             {
               title: "Quando Considerar Alternativas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #dc2626; margin-bottom: 15px;">⚠️ Quando Considerar Alternativas</h3>
                   <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
@@ -5651,8 +5575,7 @@ const App = () => {
 
             {
               title: "Evidências Insuficientes: O Que Significa?",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d97706; margin-bottom: 15px;">❓ Evidências Insuficientes</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -5733,8 +5656,7 @@ const App = () => {
             },
             {
               title: "Reavaliação da Categoria \"I\"",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #059669; margin-bottom: 15px;">🔄 Reavaliação do "I"</h3>
                   <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
@@ -5804,8 +5726,7 @@ const App = () => {
             },
             {
               title: "Desafios Práticos e Princípios",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #4b5563; margin-bottom: 15px;">📚 Desafios Práticos do <abbr title="Brazilian Committee on Antimicrobial Susceptibility Testing - Comitê brasileiro de testes de sensibilidade" style="text-decoration: underline dotted; cursor: help; border: none;">BrCAST</abbr></h3>
                   
@@ -5885,14 +5806,12 @@ const App = () => {
         {
           id: 12,
           title: "Além da Categorização S/I/R",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "45 min",
+                    duration: "45 min",
           xp: 225,
           sections: [
             {
               title: "O Que \"S\" Realmente Significa",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d97706; margin-bottom: 15px;">⚠️ O "S" Não É Garantia Absoluta</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -5937,8 +5856,7 @@ const App = () => {
             },
             {
               title: "Gravidade e Localização da Infecção",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #dc2626; margin-bottom: 15px;">🔍 Fatores que Influenciam o Desfecho</h3>
                   
@@ -6007,8 +5925,7 @@ const App = () => {
             },
             {
               title: "Imunidade e Farmacocinética",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f3e8ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #7c3aed; margin-bottom: 15px;">👤 Estado Imunológico e Propriedades <abbr title="Farmacocinética/Farmacodinâmica - Estudo de como o corpo processa o medicamento e como ele age" style="text-decoration: underline dotted; cursor: help; border: none;">PK/PD</abbr></h3>
                   
@@ -6079,8 +5996,7 @@ const App = () => {
             },
             {
               title: "Exemplo Prático: Meningite Pneumocócica",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #4b5563; margin-bottom: 15px;">📊 Exemplo Prático Integrado</h3>
                   <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
@@ -6130,8 +6046,7 @@ const App = () => {
             },
             {
               title: "Por Que Interpretar Mecanismos de Resistência",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #eef2ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #4338ca; margin-bottom: 15px;">🔬 Além do S/I/R</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -6163,8 +6078,7 @@ const App = () => {
             },
             {
               title: "β-Lactamases: ESBL e Carbapenemases",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #059669; margin-bottom: 15px;">🎯 β-Lactamases</h3>
                   <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
@@ -6208,8 +6122,7 @@ const App = () => {
             },
             {
               title: "Outros Mecanismos de Resistência",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d97706; margin-bottom: 15px;">⚙️ Mecanismos Adicionais</h3>
                   
@@ -6252,8 +6165,7 @@ const App = () => {
             },
             {
               title: "Exemplo Prático: Interpretando Antibiograma",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #4b5563; margin-bottom: 15px;">📊 Caso Clínico</h3>
                   <p style="font-size: 15px; line-height: 1.6; margin-bottom: 10px;">
@@ -6304,14 +6216,12 @@ const App = () => {
         {
           id: 13,
           title: "Situações Clínicas Especiais",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "30 min",
+                    duration: "30 min",
           xp: 180,
           sections: [
             {
               title: "Antibióticos de Moléculas Grandes",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d97706; margin-bottom: 15px;">💊 Antibióticos de Moléculas Grandes</h3>
                   
@@ -6354,8 +6264,7 @@ const App = () => {
             },
             {
               title: "Infecções por Enterococos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #1e40af; margin-bottom: 15px;">🦠 Infecções por Enterococos</h3>
                   
@@ -6408,8 +6317,7 @@ const App = () => {
             },
             {
               title: "Uso de Aminoglicosídeos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fee2e2; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #991b1b; margin-bottom: 15px;">⚠️ Uso de Aminoglicosídeos</h3>
                   
@@ -6469,14 +6377,12 @@ const App = () => {
         {
           id: 14,
           title: "Erros Comuns a Evitar",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "25 min",
+                    duration: "25 min",
           xp: 150,
           sections: [
             {
               title: "Comparação Inadequada",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d97706; margin-bottom: 15px;">⚠️ Comparação Inadequada de <abbr title="Concentração Inibitória Mínima - Menor concentração de antibiótico que inibe crescimento bacteriano" style="text-decoration: underline dotted; cursor: help; border: none;">CIM</abbr>s</h3>
                   
@@ -6542,8 +6448,7 @@ const App = () => {
             },
             {
               title: "Colonização vs. Infecção",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d97706; margin-bottom: 15px;">⚠️ Colonização vs. Infecção</h3>
                   
@@ -6638,8 +6543,7 @@ const App = () => {
             },
             {
               title: "Padronização Nacional",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #dbeafe; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #1e40af; margin-bottom: 15px;">🇧🇷 Padronização Nacional</h3>
                   
@@ -7705,8 +7609,7 @@ const App = () => {
     },
     antibioticoterapia: {
       title: "Antibioticoterapia Ambulatorial",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      description: "Aprenda os fundamentos da prescrição de antibióticos no ambulatório",
+            description: "Aprenda os fundamentos da prescrição de antibióticos no ambulatório",
       welcomeMessage: `Caro estudante,
 
 Nosso corpo abriga diferentes comunidades de microrganismos, conhecidas como microbiota, que variam de uma região para outra. Em muitas situações, as doenças infecciosas são causadas justamente por bactérias que fazem parte dessa microbiota habitual. Agentes externos também podem ser responsáveis, mas essa não é a regra. Por isso, conhecer bem a microbiota da área afetada é um passo essencial para orientar a melhor escolha do antibiótico.
@@ -7718,15 +7621,13 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
         {
           id: 1,
           title: "Fundamentos da Antibioticoterapia",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "15 min",
+                    duration: "15 min",
           xp: 80,
           sections: [
 
             {
               title: "Princípios Gerais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #7c3aed; margin-bottom: 15px;">💊 Princípios da Antibioticoterapia</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -7765,8 +7666,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "Uma Dúvida, Uma Certeza e Um Princípio",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🦠 Uma Dúvida, Uma Certeza e Um Princípio</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -7816,8 +7716,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "Principais Sítios Acometidos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🏥 Principais Sítios Acometidos</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -7892,8 +7791,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "Principais Sítios X Grupos Bacterianos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🦠 Principais Sítios X Grupos Bacterianos</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -7977,8 +7875,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "Classes de Antibióticos de Uso Ambulatorial",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <p><strong>Aqui temos todas as classes de antibióticos de interesse ambulatorial para as principais infecções.</strong></p>
                 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0;">
@@ -8027,14 +7924,12 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
         {
           id: 2,
           title: "Inibidores da Síntese da Parede Celular",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "15 min",
+                    duration: "15 min",
           xp: 80,
           sections: [
             {
               title: "Mecanismo de ação e Principais grupos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🧱 Inibidores da Síntese da Parede Celular</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -8073,8 +7968,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "Características gerais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #059669; margin-bottom: 15px;">✅ Características dos Inibidores da Parede Celular</h3>
                 </div>
@@ -8123,8 +8017,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "β-lactâmicos",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #eff6ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #1e40af; margin-bottom: 15px;">💊 β-lactâmicos</h3>
                   <p style="font-size: 15px; line-height: 1.6; margin-bottom: 15px;">
@@ -8176,14 +8069,12 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
         {
           id: 3,
           title: "Penicilinas",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "18 min",
+                    duration: "18 min",
           xp: 90,
           sections: [
             {
               title: "Penicilinas Naturais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #92400e; margin-bottom: 15px;">🍄 Penicilinas Naturais</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -8234,8 +8125,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "Penicilinas Naturais - Espectro e indicações",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🎯 Espectro e Indicações</h3>
                   <p style="font-size: 15px; line-height: 1.6; color: #0c4a6e;">
@@ -8290,8 +8180,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "Penicilinas naturais - Exemplos e limitações",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #eff6ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #1e40af; margin-bottom: 15px;">💡 Exemplos e Limitações</h3>
                 </div>
@@ -8355,8 +8244,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "Aminopenicilinas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🔬 Aminopenicilinas</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #f3f4f6;">
@@ -8417,8 +8305,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "Aminopenicilinas - Similaridades",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🤝 Similaridades entre Aminopenicilinas</h3>
                   <p style="font-size: 15px; line-height: 1.6; color: #0c4a6e;">
@@ -8482,8 +8369,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "Aminopenicilinas - Ampicilina",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">💉 Ampicilina</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #fce7f3;">
@@ -8539,8 +8425,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "Aminopenicilinas - Amoxicilina",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">💊 Amoxicilina</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #d1fae5;">
@@ -8602,8 +8487,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "Aminopenicilinas - Comparativo Resumido",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">📊 Comparativo Resumido</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #e0e7ff;">
@@ -8666,8 +8550,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "Aminopenicilinas Combinadas com Inibidores de β-lactamase",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🛡️ Inibidores de β-lactamase</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #fef3c7;">
@@ -8728,8 +8611,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "Aminopenicilinas com Inibidores de β-lactamase - Vantagens",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">✨ Vantagens da Combinação</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #d1fae5;">
@@ -8798,14 +8680,12 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
         {
           id: 4,
           title: "Cefalosporinas",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "28 min",
+                    duration: "28 min",
           xp: 140,
           sections: [
             {
               title: "Gerações de Cefalosporinas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #ecfdf5; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #059669; margin-bottom: 15px;">🏥 Classificação por Gerações</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -8852,8 +8732,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "Cefalosporinas de 1ª Geração",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d97706; margin-bottom: 15px;">💊 Primeira Geração</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -8892,8 +8771,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "Cefalosporinas de 1ª Geração - Características gerais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">📊 Características Gerais</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #fef3c7;">
@@ -8973,8 +8851,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "Cefalosporinas de 1ª Geração - Espectro de ação",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Espectro de Ação</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #dbeafe;">
@@ -9050,8 +8927,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "Cefalosporinas de 2ª Geração - Características Gerais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🔄 2ª Geração</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #ede9fe;">
@@ -9133,8 +9009,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "Cefalosporinas de 2ª Geração - Espectro de Ação",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Espectro de Ação - 2ª Geração</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #cffafe;">
@@ -9222,8 +9097,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "Cefuroxima - a grande representante",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">⭐ Cefuroxima</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #fce7f3;">
@@ -9301,8 +9175,7 @@ Perceba como o processo se torna lógico e natural. Quando entendemos o perfil d
             },
             {
               title: "Cefalosporinas Orais de Terceira Geração",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 ### Cefalosporinas Orais de Terceira Geração
 
 As cefalosporinas orais de terceira geração enfrentam limitações importantes apesar de seu uso em certas infecções.
@@ -9362,14 +9235,12 @@ Razões:
         {
           id: 5,
           title: "Inibidores da Síntese Proteica",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "18 min",
+                    duration: "18 min",
           xp: 90,
           sections: [
             {
               title: "Mecanismo de ação",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🧬 Mecanismo de Ação</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #ede9fe;">
@@ -9453,8 +9324,7 @@ Razões:
             },
             {
               title: "Os Inibidores da Síntese Proteica Ambulatoriais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🏥 Uso Ambulatorial</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #d1fae5;">
@@ -9529,14 +9399,12 @@ Razões:
         {
           id: 6,
           title: "Macrolídeos",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "20 min",
+                    duration: "20 min",
           xp: 95,
           sections: [
             {
               title: "Características gerais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">💊 Macrolídeos</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #fce7f3;">
@@ -9613,8 +9481,7 @@ Razões:
             },
             {
               title: "Fármacos mais usados",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">💊 Fármacos Ambulatoriais</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #dbeafe;">
@@ -9680,8 +9547,7 @@ Razões:
             },
             {
               title: "Espectro de ação",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Espectro de Ação</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #d1fae5;">
@@ -9768,14 +9634,12 @@ Razões:
         {
           id: 7,
           title: "Tetraciclinas",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "16 min",
+                    duration: "16 min",
           xp: 85,
           sections: [
             {
               title: "Características gerais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">💊 Tetraciclinas</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #fef3c7;">
@@ -9852,8 +9716,7 @@ Razões:
             },
             {
               title: "Espectro de ação",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Espectro de Ação</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #ede9fe;">
@@ -9961,14 +9824,12 @@ Razões:
         {
           id: 8,
           title: "Lincosamidas",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "12 min",
+                    duration: "12 min",
           xp: 75,
           sections: [
             {
               title: "Características gerais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">💊 Lincosamidas</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #fce7f3;">
@@ -10047,8 +9908,7 @@ Razões:
             },
             {
               title: "Espectro de ação",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Espectro de Ação</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #cffafe;">
@@ -10131,14 +9991,12 @@ Razões:
         {
           id: 9,
           title: "Inibidores da Síntese de Ácido Nucleico",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "16 min",
+                    duration: "16 min",
           xp: 85,
           sections: [
             {
               title: "Mecanismo de ação",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🧬 Mecanismo de Ação</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #ede9fe;">
@@ -10203,8 +10061,7 @@ Razões:
             },
             {
               title: "Características clínicas importantes",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">⭐ Características Clínicas Importantes</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #d1fae5;">
@@ -10284,14 +10141,12 @@ Razões:
         {
           id: 10,
           title: "Quinolonas",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "18 min",
+                    duration: "18 min",
           xp: 90,
           sections: [
             {
               title: "Características gerais e Evolução das quinolonas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🌟 Quinolonas</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #dbeafe;">
@@ -10387,8 +10242,7 @@ Razões:
             },
             {
               title: "Efeitos adversos relevantes",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">⚠️ Efeitos Adversos Relevantes</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #fecaca;">
@@ -10482,8 +10336,7 @@ Razões:
             },
             {
               title: "Contraindicações importantes",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🚫 Contraindicações Importantes</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #fef3c7;">
@@ -10563,8 +10416,7 @@ Razões:
             },
             {
               title: "Características por Geração",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">📊 Características por Geração</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #e0e7ff;">
@@ -10664,8 +10516,7 @@ Razões:
             },
             {
               title: "2ª Geração - Características Principais e Espectro de Ação",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🔵 2ª Geração</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #dbeafe;">
@@ -10768,8 +10619,7 @@ Razões:
             },
             {
               title: "2ª Geração - Indicações principais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Indicações Principais</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #d1fae5;">
@@ -10849,8 +10699,7 @@ Razões:
             },
             {
               title: "3ª Geração - Características principais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🔵 3ª Geração</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #e0e7ff;">
@@ -10938,8 +10787,7 @@ Razões:
             },
             {
               title: "3ª Geração - Espectro de ação",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Espectro de Ação</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #ede9fe;">
@@ -11042,8 +10890,7 @@ Razões:
             },
             {
               title: "3ª Geração - Indicações principais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Indicações Principais</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #d1fae5;">
@@ -11132,8 +10979,7 @@ Razões:
             },
             {
               title: "4ª Geração - Características principais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🔴 4ª Geração</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #fecaca;">
@@ -11199,8 +11045,7 @@ Razões:
             },
             {
               title: "4ª Geração - Espectro de ação",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Espectro de Ação</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #fef3c7;">
@@ -11301,8 +11146,7 @@ Razões:
             },
             {
               title: "4ª Geração - Indicações principais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Indicações Principais</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #d1fae5;">
@@ -11396,14 +11240,12 @@ Razões:
         {
           id: 11,
           title: "Nitrofuranos",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "8 min",
+                    duration: "8 min",
           xp: 40,
           sections: [
             {
               title: "Características gerais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">💊 Nitrofuranos</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #fef3c7;">
@@ -11469,8 +11311,7 @@ Razões:
             },
             {
               title: "Espectro de ação",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Espectro de Ação</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #dbeafe;">
@@ -11584,14 +11425,12 @@ Razões:
         {
           id: 12,
           title: "Inibidores do Metabolismo Bacteriano",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "10 min",
+                    duration: "10 min",
           xp: 50,
           sections: [
             {
               title: "Mecanismo de ação e componentes",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🧬 Inibidores do Metabolismo Bacteriano</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #ede9fe;">
@@ -11706,8 +11545,7 @@ Razões:
             },
             {
               title: "Características clínicas importantes",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">📊 Características Clínicas Importantes</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #d1fae5;">
@@ -11807,14 +11645,12 @@ Razões:
         {
           id: 13,
           title: "Sulfametoxazol com Trimetoprima (Cotrimoxazol)",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "12 min",
+                    duration: "12 min",
           xp: 60,
           sections: [
             {
               title: "Mecanismo de ação",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🔬 Mecanismo de Ação</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #fef3c7;">
@@ -11929,8 +11765,7 @@ Razões:
             },
             {
               title: "Espectro de ação",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Espectro de Ação</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #dbeafe;">
@@ -12065,14 +11900,12 @@ Razões:
         {
           id: 14,
           title: "Outros Antibióticos Ambulatoriais",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "15 min",
+                    duration: "15 min",
           xp: 75,
           sections: [
             {
               title: "Nitroimidazóis",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🔬 Nitroimidazóis</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #ede9fe;">
@@ -12183,8 +12016,7 @@ Razões:
             },
             {
               title: "Ácido graxo monocarboxílico",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🧪 Ácido Graxo Monocarboxílico</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #fef3c7;">
@@ -12291,14 +12123,12 @@ Razões:
         {
           id: 15,
           title: "Considerações Sobre Antibioticoterapia",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "12 min",
+                    duration: "12 min",
           xp: 60,
           sections: [
             {
               title: "Componente Natural do Corpo",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🦠 Componente Natural do Corpo</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #d1fae5;">
@@ -12426,8 +12256,7 @@ Razões:
             },
             {
               title: "Uso Racional",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">⚖️ Uso Racional</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #fee2e2;">
@@ -12566,8 +12395,7 @@ Razões:
             },
             {
               title: "Produção de resistência",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🦠 Produção de Resistência</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #fee2e2;">
@@ -12704,8 +12532,7 @@ Razões:
             },
             {
               title: "Critério para escolha correta",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #6366f1 0%, #4338ca 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">🎯 Critério para Escolha Correta</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #e0e7ff;">
@@ -12831,8 +12658,7 @@ Razões:
             },
             {
               title: "Benefício x Malefício",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h3 style="color: white; margin-bottom: 15px; font-size: 22px;">⚖️ Benefício x Malefício</h3>
                   <p style="font-size: 16px; line-height: 1.7; color: #fef3c7;">
@@ -12966,14 +12792,12 @@ Razões:
         {
           id: 16,
           title: "Infecções da Pele",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "80 min",
+                    duration: "80 min",
           xp: 400,
           sections: [
             {
               title: "Celulite",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #dc2626; margin-bottom: 15px;">🦠 Celulite Bacteriana</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -13053,8 +12877,7 @@ Razões:
             },
             {
               title: "Erisipela",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #dc2626; margin-bottom: 15px;">🔴 Erisipela</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -13126,8 +12949,7 @@ Razões:
             },
             {
               title: "Diferenciação",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🔍 Diferenciação entre Celulite e Erisipela</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -13192,8 +13014,7 @@ Razões:
             },
             {
               title: "Furúnculo/Abscesso",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #dc2626; margin-bottom: 15px;">🟡 Furúnculo/Abscesso</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -13280,8 +13101,7 @@ Razões:
             },
             {
               title: "Impetigo",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #fef9e7 0%, #fef5e7 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d68910; margin-bottom: 15px;">🦠 Impetigo</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
@@ -13362,8 +13182,7 @@ Razões:
             },
             {
               title: "Agentes Etiológicos e Portas de Entrada",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">📊 Agentes Etiológicos e Portas de Entrada</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
@@ -13447,8 +13266,7 @@ Razões:
             },
             {
               title: "Tratamento de Erisipela e Celulite",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #15803d; margin-bottom: 15px;">💊 Tratamento de Erisipela e Celulite</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
@@ -13555,8 +13373,7 @@ Razões:
             },
             {
               title: "Tratamento de Furúnculo/Abscesso",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #fef9e7 0%, #fef5e7 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d68910; margin-bottom: 15px;">🩹 Tratamento de Furúnculo/Abscesso</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
@@ -13659,8 +13476,7 @@ Razões:
             },
             {
               title: "Tratamento de Impetigo",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #fef9e7 0%, #fef5e7 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d68910; margin-bottom: 15px;">🧴 Tratamento de Impetigo</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
@@ -13763,8 +13579,7 @@ Razões:
             },
             {
               title: "Resumo",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">📝 Resumo - Infecções da Pele</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
@@ -13866,14 +13681,12 @@ Razões:
         {
           id: 17,
           title: "Infecções de Vias Aéreas Superiores (IVAS)",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "88 min",
+                    duration: "88 min",
           xp: 440,
           sections: [
             {
               title: "Introdução",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🩸 Introdução - IVAS</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
@@ -13955,8 +13768,7 @@ Razões:
             },
             {
               title: "Agentes Etiológicos das IVAS",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🦠 Agentes Etiológicos das IVAS</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
@@ -14093,8 +13905,7 @@ Razões:
             },
             {
               title: "Principais IVAS Bacterianas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #fef9e7 0%, #fef5e7 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d68910; margin-bottom: 15px;">🩺 Principais IVAS Bacterianas</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
@@ -14220,8 +14031,7 @@ Razões:
             },
             {
               title: "Amigdalite",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #fef9e7 0%, #fef5e7 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d68910; margin-bottom: 15px;">🩺 Amigdalite - Tratamento</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
@@ -14340,8 +14150,7 @@ Razões:
             },
             {
               title: "Falha do tratamento com amoxicilina - O que fazer?",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #fef9e7 0%, #fef5e7 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d68910; margin-bottom: 15px;">⚠️ Falha do Tratamento com Amoxicilina</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
@@ -14474,8 +14283,7 @@ Razões:
             },
             {
               title: "Sinusite Bacteriana Aguda",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">👃 Sinusite Bacteriana Aguda</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
@@ -14602,8 +14410,7 @@ Razões:
             },
             {
               title: "Pontos de Atenção",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #fef9e7 0%, #fef5e7 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d68910; margin-bottom: 15px;">⚠️ Pontos de Atenção</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
@@ -14740,8 +14547,7 @@ Razões:
             },
             {
               title: "Agentes Etiológicos das Sinusites Bacterianas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🦠 Agentes Etiológicos das Sinusites Bacterianas</h3>
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
@@ -14873,8 +14679,7 @@ Razões:
             },
             {
               title: "Otite Média Aguda - Características",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #fef3c7 0%, #fef9e7 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #b45309; margin-bottom: 15px;">👂 Otite Média Aguda - Características</h3>
                   
@@ -15038,8 +14843,7 @@ Razões:
             },
             {
               title: "Otite Média Aguda e Sinusite - Tratamento",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #dcfce7 0%, #d1fae5 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #166534; margin-bottom: 15px;">💊 Otite Média Aguda e Sinusite - Tratamento</h3>
                   
@@ -15198,8 +15002,7 @@ Razões:
             },
             {
               title: "IVAS - O que você não pode deixar de saber",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #fef9e7 0%, #fef3c7 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #d68910; margin-bottom: 15px;">💡 IVAS - O que você não pode deixar de saber</h3>
                   
@@ -15333,14 +15136,12 @@ Razões:
         {
           id: 18,
           title: "Pneumonia Adquirida na Comunidade (PAC)",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "56 min",
+                    duration: "56 min",
           xp: 280,
           sections: [
             {
               title: "Definição",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">💨 Pneumonia Adquirida na Comunidade (PAC)</h3>
                   
@@ -15418,8 +15219,7 @@ Razões:
             },
             {
               title: "Critérios Diagnósticos da PAC",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🔍 Critérios Diagnósticos da PAC</h3>
                   
@@ -15563,8 +15363,7 @@ Razões:
 ,
             {
               title: "Classificação de Gravidade - Escala CURB-65",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #92400e; margin-bottom: 15px;">📊 Classificação de Gravidade - Escala CURB-65</h3>
                   
@@ -15693,8 +15492,7 @@ Razões:
 ,
             {
               title: "Interpretação da Escala CURB-65",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">📊 Interpretação da Escala CURB-65</h3>
                   
@@ -15824,8 +15622,7 @@ Razões:
 ,
             {
               title: "Agentes Etiológicos da PAC",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #0369a1; margin-bottom: 15px;">🦠 Agentes Etiológicos da PAC</h3>
                   
@@ -15971,8 +15768,7 @@ Razões:
 ,
             {
               title: "Tratamento da PAC",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #059669; margin-bottom: 15px;">💊 Tratamento da PAC</h3>
                   
@@ -16102,8 +15898,7 @@ Razões:
 ,
             {
               title: "PAC - O que você não pode deixar de saber",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #92400e; margin-bottom: 15px;">💡 PAC - O que você não pode deixar de saber</h3>
                   
@@ -16222,14 +16017,12 @@ Razões:
         {
           id: 19,
           title: "Infecções do Trato Gastrointestinal",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "112 min",
+                    duration: "112 min",
           xp: 560,
           sections: [
             {
               title: "Introdução",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #92400e; margin-bottom: 15px;">🩺 Introdução - Infecções do Trato Gastrointestinal</h3>
                   
@@ -16346,8 +16139,7 @@ Razões:
 ,
             {
               title: "Gastroenterocolite Aguda - Conceito",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #dbeafe 0%, #bae6fd 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #075985; margin-bottom: 15px;">🤢 Gastroenterocolite Aguda - Conceito</h3>
                   
@@ -16503,8 +16295,7 @@ Razões:
 ,
             {
               title: "Causas da Gastroenterocolite Aguda",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #92400e; margin-bottom: 15px;">🦠 Causas da Gastroenterocolite Aguda</h3>
                   
@@ -16638,8 +16429,7 @@ Razões:
 ,
             {
               title: "Estimativa de Gravidade - Casos Leves/Moderados",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <h3 style="color: #059669; margin-bottom: 15px;">📊 Estimativa de Gravidade - Casos Leves/Moderados</h3>
                   
@@ -16792,8 +16582,7 @@ Razões:
 ,
             {
               title: "Estimativa de Gravidade - Casos Graves",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 **Avaliação Hospitalar Necessária**
 
 O paciente com diarreia grave deve ser avaliado em hospital. Ele apresenta sinais de comprometimento sistêmico que indicam necessidade de intervenção imediata.
@@ -16847,8 +16636,7 @@ O paciente com diarreia grave deve ser avaliado em hospital. Ele apresenta sinai
 ,
             {
               title: "Fatores de Risco para GECA Grave",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 **Identificação de Pacientes de Alto Risco**
 
 Vários são os fatores de risco para gastroenterocolite aguda (GECA) grave. Abaixo os mais importantes:
@@ -16912,8 +16700,7 @@ Vários são os fatores de risco para gastroenterocolite aguda (GECA) grave. Aba
 ,
             {
               title: "Tratamento da GECA - Casos Ambulatoriais",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 **Abordagem Terapêutica no Contexto Ambulatorial**
 
 O tratamento da gastroenterocolite aguda (GECA) em casos ambulatoriais baseia-se principalmente em medidas de suporte e uso criterioso de medicações.
@@ -16980,8 +16767,7 @@ O uso indiscriminado de antibióticos pode:
 ,
             {
               title: "Antibioticoterapia na GECA Bacteriana",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 **Tratamento Antimicrobiano Específico**
 
 Quando indicada, a antibioticoterapia deve ser direcionada ao patógeno suspeito ou identificado.
@@ -17037,8 +16823,7 @@ Nesses casos, o tratamento deve ser **hospitalar** com antibioticoterapia parent
 ,
             {
               title: "GECA - O que você não pode deixar de saber",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 **Pontos-Chave para a Prática Clínica**
 
 Resumo dos conceitos essenciais para o manejo adequado da gastroenterocolite aguda no contexto ambulatorial.
@@ -17108,8 +16893,7 @@ Resumo dos conceitos essenciais para o manejo adequado da gastroenterocolite agu
 ,
             {
               title: "Diverticulite Aguda - Definição",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 **Conceito e Epidemiologia**
 
 A diverticulite é a **inflamação e infecção de divertículos**, que são herniações saculares da mucosa e submucosa através da camada muscular do cólon. Ocorre predominantemente no **retossigmoide (90% dos casos)**.
@@ -17173,8 +16957,7 @@ A diverticulite é uma infecção **polimicrobiana mista** (aeróbios + anaerób
 ,
             {
               title: "Diverticulite - Sintomas",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 **Apresentação Clínica**
 
 O quadro clínico pode variar desde muito leve (somente com dor abdominal) até grave, com o paciente se apresentando séptico.
@@ -17245,8 +17028,7 @@ O quadro clínico pode variar desde muito leve (somente com dor abdominal) até 
 ,
             {
               title: "Estadiamento da Diverticulite",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 **Classificação de Hinchey**
 
 A classificação de Hinchey é utilizada para estadiar a gravidade da diverticulite e orientar a conduta terapêutica.
@@ -17312,8 +17094,7 @@ A classificação de Hinchey é fundamental para decidir entre tratamento **ambu
 ,
             {
               title: "Tratamento da Diverticulite",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 **Manejo Ambulatorial da Diverticulite Não Complicada**
 
 O tratamento ambulatorial é adequado para casos selecionados de diverticulite leve (Estágios 0 e Ia de Hinchey).
@@ -17394,8 +17175,7 @@ O tratamento ambulatorial é adequado para casos selecionados de diverticulite l
 ,
             {
               title: "Diverticulite - O que você não pode deixar de saber",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 **Pontos-Chave para a Prática Clínica**
 
 Resumo dos conceitos essenciais para o diagnóstico e manejo adequado da diverticulite aguda no contexto ambulatorial.
@@ -17477,14 +17257,12 @@ Resumo dos conceitos essenciais para o diagnóstico e manejo adequado da diverti
         ,{
           id: 20,
           title: "Infecção do Trato Urinário (ITU)",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "80 min",
+                    duration: "80 min",
           xp: 400,
           sections: [
             {
               title: "Definição",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 ### Infecção do Trato Urinário (ITU) - Definição
 
 A Infecção do Trato Urinário (ITU) é a presença de microrganismos patogênicos invadindo os tecidos de qualquer parte do sistema urinário.
@@ -17550,8 +17328,7 @@ A Infecção do Trato Urinário (ITU) é a presença de microrganismos patogêni
             }
             ,{
               title: "Agentes Etiológicos e Fatores de Risco",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 ### Agentes Etiológicos
 
 As bactérias mais comuns nas ITUs são **Gram-negativas**, provenientes da flora intestinal.
@@ -17620,8 +17397,7 @@ As bactérias mais comuns nas ITUs são **Gram-negativas**, provenientes da flor
             }
             ,{
               title: "Sintomas da Cistite (ITU Baixa)",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 ### Sintomas da Cistite (ITU Baixa)
 
 A cistite é a forma mais comum de ITU, caracterizada por sintomas urinários irritativos sem comprometimento sistêmico.
@@ -17690,8 +17466,7 @@ A cistite é a forma mais comum de ITU, caracterizada por sintomas urinários ir
             }
             ,{
               title: "Pielonefrite (ITU Alta)",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 ### Pielonefrite (ITU Alta)
 
 A pielonefrite é a infecção do parênquima renal e sistema coletor, representando uma **condição potencialmente grave** que pode evoluir para sepse se não tratada adequadamente.
@@ -17765,8 +17540,7 @@ A pielonefrite é a infecção do parênquima renal e sistema coletor, represent
             }
             ,{
               title: "Prostatite",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 ### Prostatite
 
 A prostatite é a infecção da próstata, exclusiva do sexo masculino, que pode apresentar-se de forma aguda ou crônica.
@@ -17857,8 +17631,7 @@ A prostatite é a infecção da próstata, exclusiva do sexo masculino, que pode
             }
             ,{
               title: "Prostatite - Separando o Joio do Trigo",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 ### Prostatite - Separando o Joio do Trigo
 
 Diferenciar entre prostatite aguda verdadeira e agudização de prostatite crônica é fundamental para definir a duração adequada do tratamento.
@@ -17938,8 +17711,7 @@ Diferenciar entre prostatite aguda verdadeira e agudização de prostatite crôn
             }
             ,{
               title: "Tratamento da Cistite Não Complicada",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 ### Tratamento da Cistite Não Complicada
 
 O tratamento da cistite não complicada em mulheres deve priorizar antibióticos com alta concentração urinária e baixa resistência.
@@ -18035,8 +17807,7 @@ O tratamento da cistite não complicada em mulheres deve priorizar antibióticos
             }
             ,{
               title: "Tratamento de Pielonefrite e Prostatite",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 ### Tratamento de Pielonefrite e Prostatite
 
 O tratamento dessas duas condições é relativamente semelhante, ambos exigindo antibióticos com boa penetração tecidual e duração prolongada.
@@ -18133,8 +17904,7 @@ O tratamento dessas duas condições é relativamente semelhante, ambos exigindo
             }
             ,{
               title: "ITU - O que você não pode deixar de saber",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 ### ITU - O que você não pode deixar de saber
 
 Conceitos essenciais para o manejo adequado das infecções do trato urinário na prática clínica.
@@ -18234,8 +18004,7 @@ Conceitos essenciais para o manejo adequado das infecções do trato urinário n
             }
             ,{
               title: "ITU - O Que Você Não Pode Deixar de Saber sobre o Tratamento",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 ### ITU - O Que Você Não Pode Deixar de Saber sobre o Tratamento
 
 Resumo prático das principais condutas terapêuticas para cada tipo de ITU.
@@ -18366,14 +18135,12 @@ Resumo prático das principais condutas terapêuticas para cada tipo de ITU.
         {
           id: 21,
           title: "Principais Sítios X Grupos Bacterianos X Antibióticos",
-          videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-          duration: "8 min",
+                    duration: "8 min",
           xp: 40,
           sections: [
             {
               title: "Introdução",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0;">
                   <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
                     Chegou o momento de conectar o que aprendemos até aqui. Cada sítio do corpo que estudamos possui sua própria microbiota característica, formada por microrganismos que normalmente convivem em equilíbrio com o hospedeiro.
@@ -18386,8 +18153,7 @@ Resumo prático das principais condutas terapêuticas para cada tipo de ITU.
             },
             {
               title: "Trato Gastrointestinal",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 ### Trato Gastrointestinal
 
 Compreender a microbiota do trato gastrointestinal é fundamental para a escolha racional de antibióticos nas infecções abdominais.
@@ -18468,8 +18234,7 @@ O abdômen é uma **estrutura fechada**. Em geral, esses compartimentos fechados
             },
             {
               title: "Trato Urinário",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 ### Trato Urinário
 
 O trato urinário é frequentemente colonizado por bactérias provenientes do trato gastrointestinal, sendo fundamental conhecer os agentes mais comuns para orientar a terapia empírica.
@@ -18545,8 +18310,7 @@ Ao tratar uma infecção urinária, devemos pensar primariamente em **Gram-negat
             },
             {
               title: "Pele e Partes Moles",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
 ### Pele e Partes Moles
 
 Compreender a microbiota da pele e partes moles é essencial para a escolha racional de antibióticos nas infecções cutâneas.
@@ -18623,8 +18387,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
               }            },
             {
               title: "Vias Aéreas Superiores",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h2 style="color: white; margin: 0 0 15px 0; font-size: 26px;">💡 Vias Aéreas Superiores</h2>
                   <p style="font-size: 16px; line-height: 1.7; color: #dbeafe;">
@@ -18718,8 +18481,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
 ,
             {
               title: "Pneumonia Adquirida na Comunidade (PAC)",
-              videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-              content: `
+                            content: `
                 <div style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); padding: 25px; border-radius: 12px; margin: 15px 0; color: white;">
                   <h2 style="color: white; margin: 0 0 15px 0; font-size: 26px;">💡 Pneumonia Adquirida na Comunidade (PAC)</h2>
                   <p style="font-size: 16px; line-height: 1.7; color: #dbeafe;">
@@ -20054,6 +19816,8 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
 
     setUser(null)
     setUserProgress({ xp: 0, level: 1, streak: 0, totalStudySeconds: 0, lastStudyDate: null, completedLessons: [] })
+    setLearningInsights({ recommendations: [], achievements: [], loading: false, ready: false, error: '' })
+    setPerformanceReport({ modules: [], activities: [], loading: false, ready: false, error: '' })
     setCurrentView('login')
     setCurrentModule(null)
     setCurrentLesson(null)
@@ -20081,6 +19845,31 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
   const backToDashboard = () => {
     setSelectedModuleId(null)
     setCurrentView('dashboard')
+  }
+
+  const openTransparency = () => {
+    setSelectedModuleId(null)
+    setCurrentLesson(null)
+    setCurrentQuestion(null)
+    setShowQuestionFeedback(false)
+    setSelectedAnswer(null)
+    setCurrentView('transparency')
+  }
+
+  const retryLearningInsights = () => {
+    if (isClinicalPreview) {
+      setPreviewSyncError(false)
+      return
+    }
+    void loadLearningInsights()
+  }
+
+  const retryPerformanceReport = () => {
+    if (isClinicalPreview) {
+      setPreviewSyncError(false)
+      return
+    }
+    void loadPerformanceReport()
   }
 
   const leaveLessonToDashboard = () => {
@@ -20332,8 +20121,12 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
     streak: Math.max(userProgress.streak || 0, 4),
     totalStudySeconds: Math.max(userProgress.totalStudySeconds || 0, 8060),
   } : userProgress
-  const displayInsights = isClinicalPreview ? previewInsights : learningInsights
-  const displayPerformanceReport = isClinicalPreview ? previewPerformanceReport : performanceReport
+  const displayInsights = isClinicalPreview
+    ? { ...previewInsights, error: previewSyncError ? 'Não foi possível atualizar suas recomendações agora. Verifique sua conexão e tente novamente.' : '' }
+    : learningInsights
+  const displayPerformanceReport = isClinicalPreview
+    ? { ...previewPerformanceReport, error: previewSyncError ? 'Não foi possível atualizar seu relatório agora. Verifique sua conexão e tente novamente.' : '' }
+    : performanceReport
   const displayView = isClinicalPreview && currentView === 'login' ? 'dashboard' : currentView
 
   // Renderização condicional
@@ -20658,7 +20451,9 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
         onOpenModule={openModule}
         onStartLesson={startLesson}
         onPerformance={openPerformance}
+        onTransparency={openTransparency}
         learningInsights={displayInsights}
+        onRefreshInsights={retryLearningInsights}
         onOpenRecommendation={(recommendation) => {
           const module = modulesData[recommendation?.module_id]
           const lesson = module?.lessons?.find((item) => item.id === recommendation?.lesson_id)
@@ -20688,6 +20483,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
         onStartLesson={startLesson}
         onDashboard={backToDashboard}
         onPerformance={openPerformance}
+        onTransparency={openTransparency}
         onLogout={handleLogout}
       />
     )
@@ -20700,8 +20496,23 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
         user={displayUser}
         userProgress={displayProgress}
         performanceReport={displayPerformanceReport}
+        onRefreshReport={retryPerformanceReport}
         onDashboard={backToDashboard}
         onPerformance={openPerformance}
+        onTransparency={openTransparency}
+        onLogout={handleLogout}
+      />
+    )
+  }
+
+  if (displayView === 'transparency') {
+    return (
+      <ClinicalFocusTransparency
+        user={displayUser}
+        userProgress={displayProgress}
+        onDashboard={backToDashboard}
+        onPerformance={openPerformance}
+        onTransparency={openTransparency}
         onLogout={handleLogout}
       />
     )
@@ -20720,6 +20531,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
         userProgress={displayProgress}
         onDashboard={leaveLessonToDashboard}
         onPerformance={openPerformance}
+        onTransparency={openTransparency}
         onLogout={handleLogout}
         onBack={() => {
           void saveStudyCheckpoint(currentSection, true)

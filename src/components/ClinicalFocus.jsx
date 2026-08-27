@@ -11,6 +11,7 @@ import {
   ChevronRight,
   Clock3,
   ClipboardCheck,
+  FileText,
   FlaskConical,
   GraduationCap,
   LayoutDashboard,
@@ -19,6 +20,7 @@ import {
   Microscope,
   Pill,
   Play,
+  RefreshCw,
   ShieldCheck,
   Target,
   TrendingUp,
@@ -97,8 +99,24 @@ function NavItem({ icon, label, active, onClick }) {
   )
 }
 
-export function ClinicalFocusLayout({ children, currentView, user, userProgress, onDashboard, onPerformance, onLogout, onBack, backLabel }) {
-  const viewLabel = currentView === 'lesson' ? 'Lição' : currentView === 'moduleView' ? 'Trilha' : currentView === 'performance' ? 'Meu desempenho' : 'Visão geral'
+function MobileNavItem({ icon, label, active, onClick }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-current={active ? 'page' : undefined}
+      className={`flex min-w-0 flex-1 flex-col items-center justify-center gap-1 rounded-xl px-2 py-2 text-[11px] font-semibold transition-colors ${
+        active ? 'bg-[#E6F3F6] text-[#0F4C5C]' : 'text-[#668087] hover:bg-[#F3F8F8] hover:text-[#17313A]'
+      }`}
+    >
+      {React.createElement(icon, { size: 18, strokeWidth: active ? 2.2 : 1.9 })}
+      <span className="truncate">{label}</span>
+    </button>
+  )
+}
+
+export function ClinicalFocusLayout({ children, currentView, user, userProgress, onDashboard, onPerformance, onTransparency, onLogout, onBack, backLabel }) {
+  const viewLabel = currentView === 'lesson' ? 'Lição' : currentView === 'moduleView' ? 'Trilha' : currentView === 'performance' ? 'Meu desempenho' : currentView === 'transparency' ? 'Uso e privacidade' : 'Visão geral'
   const initials = (user?.name || user?.email || 'IE')
     .split(' ')
     .filter(Boolean)
@@ -155,8 +173,21 @@ export function ClinicalFocusLayout({ children, currentView, user, userProgress,
             </div>
           </div>
         </header>
-        <main className="mx-auto w-full max-w-7xl px-4 py-7 sm:px-6 lg:px-8 lg:py-9">{children}</main>
+        <main id="conteudo-principal" className="mx-auto w-full max-w-7xl px-4 py-7 pb-28 sm:px-6 lg:px-8 lg:py-9">
+          {children}
+          <footer className="mt-10 border-t border-[#DCE7E9] pt-5 text-xs leading-5 text-[#6A8288]">
+            <p><span className="font-semibold text-[#315A65]">Uso educacional:</span> o InfectEasy apoia o estudo e não substitui avaliação clínica individual, protocolos institucionais, microbiologia, diretrizes vigentes ou decisão profissional.</p>
+            <button type="button" onClick={onTransparency || onDashboard} className="mt-3 inline-flex items-center gap-1.5 font-semibold text-[#315A65] underline-offset-4 hover:text-[#0F4C5C] hover:underline"><FileText size={14} />Uso educacional e privacidade</button>
+          </footer>
+        </main>
       </div>
+      <nav aria-label="Navegação principal" className="fixed inset-x-0 bottom-0 z-30 border-t border-[#DCE6E8] bg-white/95 px-3 pb-[calc(env(safe-area-inset-bottom)+0.5rem)] pt-2 shadow-[0_-8px_24px_rgba(15,46,56,0.08)] backdrop-blur lg:hidden">
+        <div className="mx-auto flex max-w-md gap-1">
+          <MobileNavItem icon={LayoutDashboard} label="Visão geral" active={currentView === 'dashboard'} onClick={onDashboard} />
+          <MobileNavItem icon={BookOpen} label="Trilhas" active={currentView === 'moduleView' || currentView === 'lesson'} onClick={onDashboard} />
+          <MobileNavItem icon={BarChart3} label="Desempenho" active={currentView === 'performance'} onClick={onPerformance || onDashboard} />
+        </div>
+      </nav>
     </div>
   )
 }
@@ -206,12 +237,13 @@ function ModuleCard({ moduleId, module, progress, onOpen }) {
   )
 }
 
-export function ClinicalFocusDashboard({ modulesData, user, userProgress, showWelcome, onDismissWelcome, isLessonCompleted, isLessonUnlocked, getNextLesson, onOpenModule, onStartLesson, onPerformance, learningInsights, onOpenRecommendation, onLogout }) {
+export function ClinicalFocusDashboard({ modulesData, user, userProgress, showWelcome, onDismissWelcome, isLessonCompleted, isLessonUnlocked, getNextLesson, onOpenModule, onStartLesson, onPerformance, onTransparency, learningInsights, onRefreshInsights, onOpenRecommendation, onLogout }) {
   const moduleIds = ['microbiologia', 'antibiograma', 'antibioticoterapia'].filter((id) => modulesData[id])
   const recommendations = Array.isArray(learningInsights?.recommendations) ? learningInsights.recommendations : []
   const achievements = Array.isArray(learningInsights?.achievements) ? learningInsights.achievements : []
   const insightsLoading = Boolean(learningInsights?.loading)
   const insightsReady = Boolean(learningInsights?.ready)
+  const insightsError = learningInsights?.error || ''
   const getModuleLabel = (moduleId) => modulesData[moduleId]?.title || 'Trilha de estudo'
   const getAchievementDetails = (achievement) => {
     const catalog = Array.isArray(achievement?.achievement_catalog)
@@ -236,7 +268,7 @@ export function ClinicalFocusDashboard({ modulesData, user, userProgress, showWe
   const totalLessons = moduleIds.reduce((total, moduleId) => total + modulesData[moduleId].lessons.length, 0)
 
   return (
-    <ClinicalFocusLayout currentView="dashboard" user={user} userProgress={userProgress} onDashboard={() => {}} onPerformance={onPerformance} onLogout={onLogout}>
+    <ClinicalFocusLayout currentView="dashboard" user={user} userProgress={userProgress} onDashboard={() => {}} onPerformance={onPerformance} onTransparency={onTransparency} onLogout={onLogout}>
       {showWelcome && <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#102B33]/45 p-4 backdrop-blur-sm"><div role="dialog" aria-modal="true" aria-label="Boas-vindas" className="w-full max-w-xl overflow-hidden rounded-3xl bg-white shadow-[0_24px_64px_rgba(7,44,54,0.24)]"><div className="border-b border-[#D9E7E9] bg-[#F1F8F8] p-6 sm:p-8"><div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#0F4C5C] text-white"><ShieldCheck size={22} /></div><p className="mt-5 text-xs font-semibold uppercase tracking-[0.16em] text-[#51737B]">Ambiente de estudo clínico</p><h2 className="mt-2 text-2xl font-semibold tracking-[-0.035em] text-[#17313A]">Bem-vindo ao InfectEasy</h2><p className="mt-3 max-w-lg text-sm leading-6 text-[#58747B]">Organize seu estudo em blocos curtos, pratique decisões clínicas e acompanhe sua evolução com clareza.</p></div><div className="p-6 sm:p-8"><div className="grid gap-3 sm:grid-cols-3"><div className="rounded-xl bg-[#F6FAFA] p-3"><BookOpen size={18} className="text-[#0F5C73]" /><p className="mt-3 text-sm font-semibold text-[#244C55]">Trilhas estruturadas</p><p className="mt-1 text-xs leading-5 text-[#6B838A]">Conteúdo organizado por competência.</p></div><div className="rounded-xl bg-[#F6FAFA] p-3"><Target size={18} className="text-[#15756D]" /><p className="mt-3 text-sm font-semibold text-[#244C55]">Prática aplicada</p><p className="mt-1 text-xs leading-5 text-[#6B838A]">Questões para consolidar decisões.</p></div><div className="rounded-xl bg-[#F6FAFA] p-3"><TrendingUp size={18} className="text-[#496C9E]" /><p className="mt-3 text-sm font-semibold text-[#244C55]">Progresso visível</p><p className="mt-1 text-xs leading-5 text-[#6B838A]">Evolução acompanhada ao longo do tempo.</p></div></div><div className="mt-7 flex flex-col-reverse gap-2 sm:flex-row sm:justify-end"><button type="button" onClick={onDismissWelcome} className="rounded-xl px-4 py-2.5 text-sm font-semibold text-[#5C767E] hover:bg-[#F2F7F7]">Explorar depois</button><button type="button" onClick={onDismissWelcome} className="rounded-xl bg-[#0F4C5C] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#103F4D]">Começar a estudar</button></div></div></div></div>}
       <section className="grid gap-6 xl:grid-cols-[minmax(0,1.6fr)_minmax(260px,0.72fr)]">
         <div className="overflow-hidden rounded-3xl bg-[#103F4D] p-6 text-white shadow-[0_18px_42px_rgba(15,76,92,0.18)] sm:p-8">
@@ -284,6 +316,7 @@ export function ClinicalFocusDashboard({ modulesData, user, userProgress, showWe
 
           <div className="mt-5 space-y-3">
             {insightsLoading && <div className="rounded-xl border border-dashed border-[#D9E6E8] bg-[#FAFCFC] px-4 py-5 text-sm text-[#6C848B]">Atualizando suas recomendações clínicas...</div>}
+            {!insightsLoading && insightsError && <div role="alert" className="flex flex-col gap-3 rounded-xl border border-[#E4CFB1] bg-[#FFF9F1] px-4 py-4 text-sm leading-5 text-[#80572C] sm:flex-row sm:items-center sm:justify-between"><span>{insightsError}</span><button type="button" onClick={onRefreshInsights} className="inline-flex w-fit items-center gap-1.5 rounded-lg border border-[#D9BE94] bg-white px-3 py-2 text-xs font-semibold text-[#765126] hover:bg-[#FFF5E7]"><RefreshCw size={14} />Tentar novamente</button></div>}
             {!insightsLoading && recommendations.map((recommendation) => {
               const reviewIsUnlocked = isLessonUnlocked?.(recommendation.module_id, recommendation.lesson_id)
               const isLowAccuracy = recommendation.reason_code === 'low_accuracy'
@@ -294,8 +327,8 @@ export function ClinicalFocusDashboard({ modulesData, user, userProgress, showWe
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"><div className="min-w-0"><div className="flex flex-wrap items-center gap-2"><span className={`rounded-md px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] ${getMeta(recommendation.module_id).soft} ${getMeta(recommendation.module_id).ink}`}>{getModuleLabel(recommendation.module_id)}</span><span className="text-xs text-[#71888E]">Revisão sugerida</span></div><h4 className="mt-2 font-semibold text-[#1B3A43]">{recommendation.review_title}</h4><p className="mt-1 text-sm leading-5 text-[#617B82]">{recommendation.reason_text}</p><p className="mt-2 text-xs font-medium text-[#507079]">{supportingText}</p></div><button type="button" onClick={() => onOpenRecommendation?.(recommendation)} className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg border border-[#BFD4D8] bg-white px-3.5 py-2.5 text-sm font-semibold text-[#28525D] transition-colors hover:bg-[#EFF7F7]">{reviewIsUnlocked ? 'Abrir revisão' : 'Ver trilha'}<ArrowRight size={15} /></button></div>
               </article>
             })}
-            {!insightsLoading && insightsReady && recommendations.length === 0 && <div className="rounded-xl border border-[#DDE8EA] bg-[#F8FBFB] px-4 py-5"><div className="flex gap-3"><Check className="mt-0.5 shrink-0 text-[#20806C]" size={18} /><div><p className="text-sm font-semibold text-[#28535B]">Nenhuma revisão prioritária no momento</p><p className="mt-1 text-sm leading-5 text-[#698188]">Continue a trilha no seu ritmo. Novas recomendações aparecerão quando houver evidência suficiente para personalizar a revisão.</p></div></div></div>}
-            {!insightsLoading && !insightsReady && <div className="rounded-xl border border-[#DDE8EA] bg-[#F8FBFB] px-4 py-5 text-sm leading-5 text-[#698188]">As recomendações serão atualizadas ao iniciar sua sessão de estudo.</div>}
+            {!insightsLoading && !insightsError && insightsReady && recommendations.length === 0 && <div className="rounded-xl border border-[#DDE8EA] bg-[#F8FBFB] px-4 py-5"><div className="flex gap-3"><Check className="mt-0.5 shrink-0 text-[#20806C]" size={18} /><div><p className="text-sm font-semibold text-[#28535B]">Nenhuma revisão prioritária no momento</p><p className="mt-1 text-sm leading-5 text-[#698188]">Continue a trilha no seu ritmo. Novas recomendações aparecerão quando houver evidência suficiente para personalizar a revisão.</p></div></div></div>}
+            {!insightsLoading && !insightsError && !insightsReady && <div className="rounded-xl border border-[#DDE8EA] bg-[#F8FBFB] px-4 py-5 text-sm leading-5 text-[#698188]">As recomendações serão atualizadas ao iniciar sua sessão de estudo.</div>}
           </div>
         </div>
 
@@ -342,23 +375,25 @@ function getCompetencyStyle(status) {
   return { label: 'Em formação', className: 'bg-[#F1F5F6] text-[#60777E]' }
 }
 
-export function ClinicalFocusPerformance({ modulesData, user, userProgress, performanceReport, onDashboard, onPerformance, onLogout }) {
+export function ClinicalFocusPerformance({ modulesData, user, userProgress, performanceReport, onRefreshReport, onDashboard, onPerformance, onTransparency, onLogout }) {
   const reportModules = Array.isArray(performanceReport?.modules) ? performanceReport.modules : []
   const activities = Array.isArray(performanceReport?.activities) ? performanceReport.activities : []
   const loading = Boolean(performanceReport?.loading)
   const ready = Boolean(performanceReport?.ready)
+  const reportError = performanceReport?.error || ''
   const totalLessons = reportModules.reduce((total, item) => total + (Number(item.total_lessons) || 0), 0)
   const completedLessons = reportModules.reduce((total, item) => total + (Number(item.completed_lessons) || 0), 0)
   const totalAttempts = reportModules.reduce((total, item) => total + (Number(item.attempts_count) || 0), 0)
   const correctAnswers = reportModules.reduce((total, item) => total + (Number(item.correct_answers) || 0), 0)
   const activeModules = reportModules.filter((item) => (Number(item.completed_lessons) || 0) > 0 || (Number(item.attempts_count) || 0) > 0).length
 
-  return <ClinicalFocusLayout currentView="performance" user={user} userProgress={userProgress} onDashboard={onDashboard} onPerformance={onPerformance} onLogout={onLogout} onBack={onDashboard} backLabel="Visão geral">
+  return <ClinicalFocusLayout currentView="performance" user={user} userProgress={userProgress} onDashboard={onDashboard} onPerformance={onPerformance} onTransparency={onTransparency} onLogout={onLogout} onBack={onDashboard} backLabel="Visão geral">
     <section className="rounded-3xl border border-[#DCE8E9] bg-white p-6 shadow-[0_1px_2px_rgba(15,46,56,0.03)] sm:p-8">
       <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between"><div className="max-w-2xl"><div className="flex items-center gap-2 text-[#315A65]"><BarChart3 size={19} /><span className="text-xs font-semibold uppercase tracking-[0.14em]">Acompanhamento individual</span></div><h1 className="mt-3 text-3xl font-semibold tracking-[-0.04em] text-[#17313A]">Meu desempenho</h1><p className="mt-3 text-sm leading-6 text-[#637E85]">Acompanhe a evolução do seu estudo por trilha, com foco em progresso, prática e consolidação do conhecimento.</p></div><div className="inline-flex w-fit items-center gap-2 rounded-xl border border-[#DCE8E9] bg-[#F7FBFB] px-3.5 py-2.5 text-xs font-semibold text-[#547078]"><LockKeyhole size={15} /> Dados visíveis somente para você</div></div>
     </section>
 
     {loading && <section className="mt-7 rounded-2xl border border-dashed border-[#D9E6E8] bg-white px-5 py-8 text-center text-sm text-[#6B858C]">Atualizando o seu relatório de aprendizagem...</section>}
+    {!loading && reportError && <section role="alert" className="mt-7 flex flex-col gap-3 rounded-2xl border border-[#E4CFB1] bg-[#FFF9F1] p-5 text-sm leading-6 text-[#80572C] sm:flex-row sm:items-center sm:justify-between"><span>{reportError}</span><button type="button" onClick={onRefreshReport} className="inline-flex w-fit items-center gap-1.5 rounded-lg border border-[#D9BE94] bg-white px-3 py-2 text-xs font-semibold text-[#765126] hover:bg-[#FFF5E7]"><RefreshCw size={14} />Tentar novamente</button></section>}
 
     {!loading && <>
       <section className="mt-7 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
@@ -370,16 +405,33 @@ export function ClinicalFocusPerformance({ modulesData, user, userProgress, perf
 
       <section className="mt-9"><div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-end"><div><p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#6D858C]">Evolução por trilha</p><h2 className="mt-1 text-2xl font-semibold tracking-[-0.03em] text-[#17313A]">Indicadores de aprendizagem</h2></div><p className="text-sm text-[#6A8188]">Precisão interpretada a partir de 4 questões.</p></div>
         <div className="mt-5 grid gap-4 xl:grid-cols-3">{reportModules.map((item) => { const meta = getMeta(item.module_id); const Icon = meta.icon; const status = getCompetencyStyle(item.competency_status); const moduleTitle = modulesData[item.module_id]?.title || 'Trilha de estudo'; return <article key={item.module_id} className="rounded-2xl border border-[#DFE9EB] bg-white p-5 shadow-[0_1px_2px_rgba(15,46,56,0.03)]"><div className="flex items-start justify-between gap-3"><div className={`flex h-10 w-10 items-center justify-center rounded-xl ${meta.soft} ${meta.ink}`}><Icon size={20} /></div><span className={`rounded-md px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.07em] ${status.className}`}>{status.label}</span></div><p className={`mt-5 text-[11px] font-semibold uppercase tracking-[0.12em] ${meta.ink}`}>{meta.label}</p><h3 className="mt-2 min-h-12 text-lg font-semibold leading-snug text-[#17313A]">{moduleTitle}</h3><div className="mt-5 flex items-end justify-between"><span className="text-sm font-medium text-[#637B82]">{item.completed_lessons || 0} de {item.total_lessons || 0} lições</span><span className="text-xl font-semibold text-[#1B3A43]">{Math.round(Number(item.progress_percent) || 0)}%</span></div><div className="mt-2"><ProgressBar value={Number(item.progress_percent) || 0} color={meta.accent} /></div><div className="mt-5 grid grid-cols-2 gap-3 border-t border-[#E5ECEE] pt-4"><div><p className="text-[11px] font-medium text-[#758B91]">Prática</p><p className="mt-1 text-sm font-semibold text-[#2D515A]">{item.attempts_count || 0} questões</p></div><div><p className="text-[11px] font-medium text-[#758B91]">Precisão</p><p className="mt-1 text-sm font-semibold text-[#2D515A]">{item.attempts_count >= 4 ? `${Math.round(Number(item.accuracy_percent) || 0)}%` : 'Em formação'}</p></div></div><p className="mt-4 min-h-10 text-xs leading-5 text-[#667F86]">{item.competency_message}</p>{item.last_activity_at && <p className="mt-3 text-[11px] font-medium text-[#738A90]">Última atividade: {formatReportDate(item.last_activity_at)}</p>}</article> })}</div>
-        {ready && reportModules.length === 0 && <div className="mt-5 rounded-2xl border border-dashed border-[#D7E4E6] bg-white p-6 text-sm leading-6 text-[#6A838A]">Ainda não há indicadores disponíveis. Inicie uma lição para registrar o seu primeiro progresso.</div>}
+        {ready && !reportError && reportModules.length === 0 && <div className="mt-5 rounded-2xl border border-dashed border-[#D7E4E6] bg-white p-6 text-sm leading-6 text-[#6A838A]">Ainda não há indicadores disponíveis. Inicie uma lição para registrar o seu primeiro progresso.</div>}
       </section>
 
-      <section className="mt-9 grid gap-5 xl:grid-cols-[minmax(0,1.15fr)_minmax(340px,0.85fr)]"><div className="rounded-2xl border border-[#DFE9EB] bg-white p-5 sm:p-6"><div className="flex items-center gap-2 text-[#315A65]"><Activity size={18} /><div><p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#6D858C]">Linha do tempo privada</p><h2 className="mt-1 text-xl font-semibold text-[#17313A]">Atividades recentes</h2></div></div><div className="mt-5 space-y-3">{activities.map((activity, index) => { const meta = getMeta(activity.module_id); const moduleTitle = modulesData[activity.module_id]?.title || 'Trilha de estudo'; return <div key={`${activity.activity_type}-${activity.activity_at}-${index}`} className="flex gap-3 rounded-xl border border-[#E2EBEC] bg-[#FBFDFD] p-3.5"><div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${meta.soft} ${meta.ink}`}>{activity.activity_type === 'lesson_completed' ? <Check size={16} /> : activity.activity_type === 'question_correct' ? <Award size={16} /> : <Clock3 size={16} />}</div><div className="min-w-0"><div className="flex flex-wrap items-center gap-x-2 gap-y-1"><p className="text-sm font-semibold text-[#294E57]">{activity.activity_title}</p><span className="text-xs text-[#6F878D]">{moduleTitle}</span></div><p className="mt-1 text-xs leading-5 text-[#6A8288]">{activity.activity_detail}</p><p className="mt-1.5 text-[11px] font-medium text-[#799097]">{formatReportDate(activity.activity_at)}</p></div></div> })}{ready && activities.length === 0 && <div className="rounded-xl border border-dashed border-[#D7E4E6] bg-[#F8FBFB] p-5 text-sm leading-6 text-[#6A838A]">Suas conclusões, respostas e sessões aparecerão aqui à medida que você estudar.</div>}</div></div>
+      <section className="mt-9 grid gap-5 xl:grid-cols-[minmax(0,1.15fr)_minmax(340px,0.85fr)]"><div className="rounded-2xl border border-[#DFE9EB] bg-white p-5 sm:p-6"><div className="flex items-center gap-2 text-[#315A65]"><Activity size={18} /><div><p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#6D858C]">Linha do tempo privada</p><h2 className="mt-1 text-xl font-semibold text-[#17313A]">Atividades recentes</h2></div></div><div className="mt-5 space-y-3">{activities.map((activity, index) => { const meta = getMeta(activity.module_id); const moduleTitle = modulesData[activity.module_id]?.title || 'Trilha de estudo'; return <div key={`${activity.activity_type}-${activity.activity_at}-${index}`} className="flex gap-3 rounded-xl border border-[#E2EBEC] bg-[#FBFDFD] p-3.5"><div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${meta.soft} ${meta.ink}`}>{activity.activity_type === 'lesson_completed' ? <Check size={16} /> : activity.activity_type === 'question_correct' ? <Award size={16} /> : <Clock3 size={16} />}</div><div className="min-w-0"><div className="flex flex-wrap items-center gap-x-2 gap-y-1"><p className="text-sm font-semibold text-[#294E57]">{activity.activity_title}</p><span className="text-xs text-[#6F878D]">{moduleTitle}</span></div><p className="mt-1 text-xs leading-5 text-[#6A8288]">{activity.activity_detail}</p><p className="mt-1.5 text-[11px] font-medium text-[#799097]">{formatReportDate(activity.activity_at)}</p></div></div> })}{ready && !reportError && activities.length === 0 && <div className="rounded-xl border border-dashed border-[#D7E4E6] bg-[#F8FBFB] p-5 text-sm leading-6 text-[#6A838A]">Suas conclusões, respostas e sessões aparecerão aqui à medida que você estudar.</div>}</div></div>
         <aside className="rounded-2xl border border-[#D5E5E7] bg-[#EFF7F7] p-5 sm:p-6"><div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-[#2C7376]"><Target size={20} /></div><p className="mt-5 text-xs font-semibold uppercase tracking-[0.14em] text-[#54767D]">Leitura dos indicadores</p><h2 className="mt-2 text-xl font-semibold text-[#17313A]">Evolução antes de pontuação</h2><p className="mt-3 text-sm leading-6 text-[#5D7880]">A precisão apoia a escolha de revisões, mas não define a sua capacidade clínica isoladamente. Use este painel para reconhecer padrões de estudo e consolidar os temas prioritários.</p><div className="mt-5 rounded-xl border border-[#D4E6E8] bg-white/75 p-4 text-xs leading-5 text-[#5D787F]"><span className="font-semibold text-[#315A65]">Critério de interpretação:</span> a precisão é exibida como indicador apenas após quatro ou mais questões respondidas na trilha.</div></aside></section>
     </>}
   </ClinicalFocusLayout>
 }
 
-export function ClinicalFocusModule({ moduleId, module, user, userProgress, isLessonCompleted, isLessonUnlocked, getNextLesson, onStartLesson, onDashboard, onPerformance, onLogout }) {
+export function ClinicalFocusTransparency({ user, userProgress, onDashboard, onPerformance, onTransparency, onLogout }) {
+  return (
+    <ClinicalFocusLayout currentView="transparency" user={user} userProgress={userProgress} onDashboard={onDashboard} onPerformance={onPerformance} onTransparency={onTransparency} onLogout={onLogout} onBack={onDashboard} backLabel="Visão geral">
+      <section className="mx-auto max-w-4xl rounded-3xl border border-[#DCE8E9] bg-white p-6 shadow-[0_1px_2px_rgba(15,46,56,0.03)] sm:p-8">
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between"><div className="max-w-2xl"><div className="flex items-center gap-2 text-[#315A65]"><ShieldCheck size={19} /><span className="text-xs font-semibold uppercase tracking-[0.14em]">Transparência</span></div><h1 className="mt-3 text-3xl font-semibold tracking-[-0.04em] text-[#17313A]">Uso educacional e privacidade</h1><p className="mt-3 text-sm leading-6 text-[#637E85]">Informações essenciais sobre o propósito do InfectEasy, os limites do conteúdo e o tratamento do seu percurso de aprendizagem.</p></div><div className="inline-flex w-fit items-center gap-2 rounded-xl border border-[#DCE8E9] bg-[#F7FBFB] px-3.5 py-2.5 text-xs font-semibold text-[#547078]"><LockKeyhole size={15} /> Ambiente individual</div></div>
+
+        <div className="mt-8 grid gap-4">
+          <article className="rounded-2xl border border-[#DDE9EA] bg-[#FBFDFD] p-5"><h2 className="text-lg font-semibold text-[#17313A]">Finalidade educacional</h2><p className="mt-2 text-sm leading-6 text-[#607B82]">O InfectEasy foi desenvolvido para apoiar o microaprendizado em infectologia e antibioticoterapia. O conteúdo não deve ser utilizado como prescrição, diagnóstico, conduta individual ou substituto para avaliação clínica, protocolos do serviço, resultados microbiológicos e diretrizes vigentes.</p></article>
+          <article className="rounded-2xl border border-[#DDE9EA] bg-[#FBFDFD] p-5"><h2 className="text-lg font-semibold text-[#17313A]">Atualização do conteúdo</h2><p className="mt-2 text-sm leading-6 text-[#607B82]">Pontos de corte, recomendações terapêuticas e orientações de stewardship podem mudar. Ao estudar, considere o contexto clínico e consulte as fontes técnicas atualizadas e os protocolos locais aplicáveis.</p></article>
+          <article className="rounded-2xl border border-[#DDE9EA] bg-[#FBFDFD] p-5"><h2 className="text-lg font-semibold text-[#17313A]">Dados do seu percurso</h2><p className="mt-2 text-sm leading-6 text-[#607B82]">Para permitir sua experiência de estudo, o aplicativo mantém dados da conta, lições concluídas, respostas, sessões, tempo de estudo, sequência, recomendações e marcos. Esses dados sustentam o seu acesso e o acompanhamento individual do progresso.</p></article>
+          <article className="rounded-2xl border border-[#DDE9EA] bg-[#FBFDFD] p-5"><h2 className="text-lg font-semibold text-[#17313A]">Visibilidade e controles</h2><p className="mt-2 text-sm leading-6 text-[#607B82]">O relatório de desempenho, as recomendações e os marcos são privados e exibidos somente para a sua conta autenticada. Não há ranking público nem comparação entre estudantes. Você pode encerrar a sessão a qualquer momento e usar o fluxo de redefinição de senha na tela de acesso.</p></article>
+        </div>
+      </section>
+    </ClinicalFocusLayout>
+  )
+}
+
+export function ClinicalFocusModule({ moduleId, module, user, userProgress, isLessonCompleted, isLessonUnlocked, getNextLesson, onStartLesson, onDashboard, onPerformance, onTransparency, onLogout }) {
   const meta = getMeta(moduleId)
   const Icon = meta.icon
   const completed = module.lessons.filter((lesson) => isLessonCompleted(moduleId, lesson.id)).length
@@ -387,7 +439,7 @@ export function ClinicalFocusModule({ moduleId, module, user, userProgress, isLe
   const nextLessonId = getNextLesson(moduleId, module.lessons)
 
   return (
-    <ClinicalFocusLayout currentView="moduleView" user={user} userProgress={userProgress} onDashboard={onDashboard} onPerformance={onPerformance} onLogout={onLogout} onBack={onDashboard} backLabel="Visão geral">
+    <ClinicalFocusLayout currentView="moduleView" user={user} userProgress={userProgress} onDashboard={onDashboard} onPerformance={onPerformance} onTransparency={onTransparency} onLogout={onLogout} onBack={onDashboard} backLabel="Visão geral">
       <section className="rounded-3xl border border-[#DCE8E9] bg-white p-6 shadow-[0_1px_2px_rgba(15,46,56,0.03)] sm:p-8">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
           <div className="flex max-w-2xl gap-4"><div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${meta.soft} ${meta.ink}`}><Icon size={24} /></div><div><p className={`text-xs font-semibold uppercase tracking-[0.14em] ${meta.ink}`}>{meta.label}</p><h1 className="mt-2 text-2xl font-semibold tracking-[-0.035em] text-[#17313A] sm:text-3xl">{module.title}</h1><p className="mt-3 text-sm leading-6 text-[#657E85]">{module.description}</p></div></div>
@@ -413,7 +465,7 @@ export function ClinicalFocusModule({ moduleId, module, user, userProgress, isLe
   )
 }
 
-export function ClinicalFocusLesson({ lesson, moduleId, currentSection, currentQuestion, selectedAnswer, showQuestionFeedback, user, userProgress, onDashboard, onPerformance, onLogout, onBack, onShowQuestion, onSelectAnswer, onSubmitAnswer, onNextSection, onCompleteLesson, onContinue }) {
+export function ClinicalFocusLesson({ lesson, moduleId, currentSection, currentQuestion, selectedAnswer, showQuestionFeedback, user, userProgress, onDashboard, onPerformance, onTransparency, onLogout, onBack, onShowQuestion, onSelectAnswer, onSubmitAnswer, onNextSection, onCompleteLesson, onContinue }) {
   const meta = getMeta(moduleId)
   const section = lesson?.sections?.[currentSection]
   const total = lesson?.sections?.length || 0
@@ -421,7 +473,7 @@ export function ClinicalFocusLesson({ lesson, moduleId, currentSection, currentQ
   if (!lesson || !section) return null
 
   return (
-    <ClinicalFocusLayout currentView="lesson" user={user} userProgress={userProgress} onDashboard={onDashboard} onPerformance={onPerformance} onLogout={onLogout} onBack={onBack} backLabel="Voltar à trilha">
+    <ClinicalFocusLayout currentView="lesson" user={user} userProgress={userProgress} onDashboard={onDashboard} onPerformance={onPerformance} onTransparency={onTransparency} onLogout={onLogout} onBack={onBack} backLabel="Voltar à trilha">
       <section className="mx-auto max-w-4xl">
         <div className="mb-7"><div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs font-medium text-[#6E858C]"><span>{lesson.title}</span><span className="h-1 w-1 rounded-full bg-[#9CB0B5]" /><span>Seção {currentSection + 1} de {total}</span><span className="h-1 w-1 rounded-full bg-[#9CB0B5]" /><span>{lesson.duration}</span></div><div className="mt-4 flex items-end justify-between gap-4"><h1 className="text-2xl font-semibold tracking-[-0.035em] text-[#17313A] sm:text-3xl">{section.title}</h1><span className={`hidden rounded-lg px-3 py-2 text-xs font-semibold sm:inline-flex ${meta.soft} ${meta.ink}`}>{lesson.xp} pontos ao concluir</span></div><div className="mt-5"><ProgressBar value={progress} color={meta.accent} /></div></div>
 

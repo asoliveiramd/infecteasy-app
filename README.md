@@ -1,136 +1,68 @@
-# 🦠 Infecteasy
+# InfectEasy
 
-**Aplicativo de Infectologia e Doenças Infecciosas para Clínicos**
+O **InfectEasy** é uma plataforma de microaprendizado em infectologia e antibioticoterapia para estudo clínico continuado. A aplicação organiza trilhas curtas, questões de consolidação e acompanhamento individual de progresso em uma interface profissional.
 
-Aprenda Infectologia e Antibioticoterapia de forma interativa, com conteúdo baseado em evidências científicas e foco na prática clínica.
+> **Uso educacional:** o InfectEasy apoia o estudo. Não deve ser usado como prescrição, diagnóstico, conduta individual ou substituto de avaliação clínica, protocolos institucionais, resultados microbiológicos, diretrizes vigentes ou decisão profissional.
 
-## 🎯 Funcionalidades
+## Funcionalidades atuais
 
-### 📚 **Conteúdo Educacional**
-- **11 lições** no módulo "Fundamentos da Infectologia"
-- **5 lições** no módulo "Interpretação de Antibiograma"
-- **Glossário interativo** com balões de definição
-- **Desafios interativos** com feedback educativo
-- **Sistema de XP e progressão** gamificado
+| Área | Recursos disponíveis |
+|---|---|
+| **Conteúdo estruturado** | 56 lições nas trilhas de Fundamentos da Microbiologia, Teste de Suscetibilidade Antimicrobiana e Antibioticoterapia Ambulatorial. |
+| **Prática** | 372 questões catalogadas, com resposta validada no banco e feedback pedagógico. |
+| **Progresso seguro** | Conclusão de lições idempotente, XP oficial por lição e proteção contra duplicidade em cliques repetidos. |
+| **Sessões de estudo** | Retomada de seção, checkpoints, tempo acumulado e sequência diária calculada no fuso de Salvador. |
+| **Plano individual** | Recomendações privadas de revisão e marcos de competência, sem ranking público. |
+| **Meu desempenho** | Progresso, prática, precisão, tempo e atividades recentes por trilha, visíveis somente para a conta autenticada. |
+| **Transparência** | Página de uso educacional e privacidade integrada à aplicação. |
 
-### 🔐 **Sistema de Autenticação**
-- **Cadastro completo** com validações
-- **Login seguro** com persistência
-- **Recuperação de senha** via SMS/Email/WhatsApp
-- **Configurações da conta** editáveis
-- **Alteração de senha** com validação tripla
+## Conteúdo audiovisual
 
-### 📱 **Interface Moderna**
-- **Design responsivo** para desktop e mobile
-- **Interface intuitiva** baseada em componentes
-- **Navegação fluida** entre módulos e lições
-- **Feedback visual** em tempo real
+Os vídeos-placeholder foram removidos da versão ativa para preservar a qualidade profissional. Vídeos novos devem ser publicados somente após curadoria de conteúdo, validação técnica, transcrição e revisão de acessibilidade.
 
-## 🚀 Deploy no Vercel
+## Desenvolvimento local
 
-### **Pré-requisitos**
-- Conta no [GitHub](https://github.com)
-- Conta no [Vercel](https://vercel.com)
+O projeto utiliza React 19, Vite, Tailwind CSS e Supabase.
 
-### **Passo 1: Criar Repositório**
-1. Faça fork ou clone este repositório
-2. Suba o código para seu GitHub:
 ```bash
-git init
-git add .
-git commit -m "Infecteasy - Deploy inicial"
-git branch -M main
-git remote add origin https://github.com/SEU_USUARIO/infecteasy-app.git
-git push -u origin main
-```
-
-### **Passo 2: Deploy no Vercel**
-1. Acesse [vercel.com](https://vercel.com) e faça login com GitHub
-2. Clique em "New Project"
-3. Selecione o repositório `infecteasy-app`
-4. Configure:
-   - **Framework:** Vite
-   - **Build Command:** `npm run build`
-   - **Output Directory:** `dist`
-5. Clique "Deploy"
-
-### **Passo 3: Deploy Automático Configurado! 🎉**
-- ✅ Cada commit → Deploy automático
-- ✅ URL permanente gerada
-- ✅ SSL gratuito incluído
-- ✅ CDN global para performance
-
-## 🛠️ Desenvolvimento Local
-
-### **Instalação**
-```bash
-# Clone o repositório
-git clone https://github.com/SEU_USUARIO/infecteasy-app.git
-cd infecteasy-app
-
-# Instale as dependências
 npm install
-# ou
-pnpm install
-
-# Inicie o servidor de desenvolvimento
 npm run dev
-# ou
-pnpm run dev
 ```
 
-### **Scripts Disponíveis**
-- `npm run dev` - Servidor de desenvolvimento
-- `npm run build` - Build para produção
-- `npm run preview` - Preview do build
+Para compilar a versão de produção e verificar a qualidade do código:
 
-## 📋 Tecnologias Utilizadas
+```bash
+npm run lint
+npm run build
+```
 
-- **React 18** - Biblioteca principal
-- **Vite** - Build tool e dev server
-- **Tailwind CSS** - Framework de CSS
-- **Lucide React** - Ícones
-- **Radix UI** - Componentes acessíveis
+O lint possui seis avisos preexistentes relacionados ao Fast Refresh de componentes de interface, mas não apresenta erros.
 
-## 🎓 Conteúdo Educacional
+## Configuração do Supabase
 
-### **Módulo 1: Fundamentos da Infectologia**
-1. O Método de Gram na Prática
-2. Tipos de Espécimes Clínicos
-3. Espécimes Clínicos e Interpretação
-4. Qualidade e Coleta de Espécimes
-5. Interpretação do Gram
-6. Sítios Estéreis vs Não-Estéreis
-7. Meios de Cultura e Identificação
-8. Correlação Gram e Cultura
-9. Gram-positivos: Morfologia e Arranjo
-10. Gram-negativos: Morfologia e Arranjo
-11. Cultura e Identificação Laboratorial
+Copie `.env.example` para um arquivo `.env.local` e informe somente as credenciais públicas do cliente:
 
-### **Módulo 2: Interpretação de Antibiograma**
-1. Conceitos Fundamentais
-2. Métodos de Teste: Disco-Difusão
-3. Concentração Inibitória Mínima (CIM)
-4. Mecanismos de Resistência
-5. Aplicação Clínica do Antibiograma
+```bash
+cp .env.example .env.local
+```
 
-## 🔬 Características Técnicas
+| Variável | Uso |
+|---|---|
+| `VITE_SUPABASE_URL` | URL pública do projeto Supabase. |
+| `VITE_SUPABASE_PUBLISHABLE_KEY` | Chave pública `anon` ou `publishable` do cliente. |
 
-- **Terminologia científica correta** (microbiota, não "flora")
-- **Linguagem em português** sem anglicismos desnecessários
-- **Questões clinicamente relevantes** baseadas na prática médica
-- **Sistema de pré-requisitos** para questões de revisão
-- **Validações de segurança** em autenticação
+Nunca use `SERVICE_ROLE_KEY`, senhas ou outros segredos no frontend. A proteção dos dados depende das políticas RLS e das funções controladas no Supabase.
 
-## 📞 Suporte
+## Migrações e dados
 
-Para dúvidas sobre o conteúdo educacional ou sugestões de melhorias, entre em contato através dos canais oficiais.
+Os scripts suplementares aplicados para P0, P1, P2 e P3A estão documentados em [`supabase/migrations/README.md`](supabase/migrations/README.md). Eles devem ser executados manualmente e de forma controlada pelo SQL Editor do Supabase, sempre com preflight somente de leitura, backup lógico e validação posterior.
 
-## 📄 Licença
+Não substitua ou exclua tabelas de contas, perfis, progresso, sessões, tentativas, conteúdo, uploads, integrações ou variáveis de ambiente sem avaliação de impacto e autorização explícita.
 
-Este projeto é destinado ao uso educacional em infectologia e doenças infecciosas.
+## Publicação
 
----
+A produção é construída pelo Vercel a partir da branch `main` do repositório. Antes de qualquer envio, execute `npm run lint` e `npm run build`, revise as alterações e valide a pré-visualização local. A publicação deve ocorrer apenas após autorização explícita.
 
-**Desenvolvido com ❤️ para profissionais de saúde e estudantes de medicina**
+## Governança de conteúdo clínico
 
+Cada atualização clínica deve ser revisada por responsável técnico e indicar fonte, versão e data de revisão. Alterações em recomendações terapêuticas, pontos de corte e interpretação de suscetibilidade devem considerar as diretrizes vigentes e os protocolos locais.

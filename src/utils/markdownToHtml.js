@@ -1,7 +1,29 @@
 /**
- * Converte Markdown simples para HTML inline com estilos ricos
- * Cada seção ### cria uma caixa colorida independente
+ * Converte Markdown simples para HTML inline com estilos ricos.
+ * O resultado é sanitizado antes da renderização para evitar que futuras
+ * migrações de conteúdo introduzam scripts ou elementos ativos.
  */
+import DOMPurify from 'dompurify';
+
+const CLINICAL_ALLOWED_TAGS = [
+  'a', 'blockquote', 'br', 'div', 'em', 'h1', 'h2', 'h3', 'h4', 'li',
+  'ol', 'p', 'span', 'strong', 'table', 'tbody', 'td', 'th', 'thead', 'tr', 'ul',
+];
+
+const CLINICAL_ALLOWED_ATTR = [
+  'colspan', 'href', 'rel', 'rowspan', 'style', 'target', 'title',
+];
+
+function sanitizeClinicalHtml(html) {
+  return DOMPurify.sanitize(html, {
+    ALLOWED_TAGS: CLINICAL_ALLOWED_TAGS,
+    ALLOWED_ATTR: CLINICAL_ALLOWED_ATTR,
+    FORBID_TAGS: ['button', 'embed', 'form', 'iframe', 'input', 'object', 'script', 'style', 'svg'],
+    ALLOW_DATA_ATTR: false,
+    ALLOW_ARIA_ATTR: false,
+    ALLOWED_URI_REGEXP: /^(?:(?:https?|mailto):|[^a-z]|[a-z+.-]+(?:[^-a-z+.:]|$))/i,
+  });
+}
 
 // Paleta de cores rotativa para seções
 const colorPalette = [
@@ -49,9 +71,9 @@ export function markdownToHtml(markdown) {
 
   let html = markdown.trim();
 
-  // Se já é HTML (contém tags div com style), retorna como está
+  // Conteúdos HTML legados também são filtrados antes da renderização.
   if (html.includes('<div style=') || html.includes('linear-gradient')) {
-    return html;
+    return sanitizeClinicalHtml(html);
   }
 
   const lines = html.split('\n');
@@ -197,7 +219,7 @@ export function markdownToHtml(markdown) {
   // Fechar seção final
   closeSection();
 
-  return result.join('\n');
+  return sanitizeClinicalHtml(result.join('\n'));
 }
 
 export default markdownToHtml;
