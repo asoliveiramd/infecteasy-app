@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect, useCallback } from 'react'
 import './App.css'
 import { antimicrobianosModule } from './antimicrobianos_module.js'
 import { isSupabaseConfigured, supabase } from './lib/supabase';
-import { ClinicalFocusDashboard, ClinicalFocusLesson, ClinicalFocusModule } from './components/ClinicalFocus.jsx'
+import { ClinicalFocusDashboard, ClinicalFocusLesson, ClinicalFocusModule, ClinicalFocusPerformance } from './components/ClinicalFocus.jsx'
 
 const getProgressLevel = (xp) => Math.max(1, Math.floor(xp / 500) + 1)
 
@@ -65,6 +65,12 @@ const App = () => {
     loading: false,
     ready: false,
   })
+  const [performanceReport, setPerformanceReport] = useState({
+    modules: [],
+    activities: [],
+    loading: false,
+    ready: false,
+  })
   const [scrollPosition, setScrollPosition] = useState(0)
   const isClinicalPreview = import.meta.env.DEV && new URLSearchParams(window.location.search).get('preview') === 'clinical'
 
@@ -94,6 +100,8 @@ const App = () => {
   useEffect(() => {
     if (currentView === 'dashboard') {
       window.history.pushState({ view: 'dashboard' }, '', '#dashboard')
+    } else if (currentView === 'performance') {
+      window.history.pushState({ view: 'performance' }, '', '#desempenho')
     } else if (currentView === 'lesson') {
       window.history.pushState({ view: 'lesson' }, '', '#lesson')
     } else if (currentView === 'login') {
@@ -216,6 +224,34 @@ const App = () => {
     if (!user?.id || isClinicalPreview) return
     void loadLearningInsights()
   }, [isClinicalPreview, loadLearningInsights, user?.id])
+
+  const loadPerformanceReport = useCallback(async () => {
+    if (isClinicalPreview || !supabase || !user?.id) return
+
+    setPerformanceReport((previous) => ({ ...previous, loading: true }))
+    try {
+      const [{ data: modules, error: modulesError }, { data: activities, error: activitiesError }] = await Promise.all([
+        supabase.rpc('get_my_learning_report'),
+        supabase.rpc('get_my_recent_learning_activity', { p_limit: 8 }),
+      ])
+
+      if (modulesError || activitiesError) throw modulesError || activitiesError
+      setPerformanceReport({
+        modules: Array.isArray(modules) ? modules : [],
+        activities: Array.isArray(activities) ? activities : [],
+        loading: false,
+        ready: true,
+      })
+    } catch (error) {
+      console.error('Não foi possível carregar seu relatório pessoal de desempenho.', error)
+      setPerformanceReport((previous) => ({ ...previous, loading: false, ready: true }))
+    }
+  }, [isClinicalPreview, user?.id])
+
+  useEffect(() => {
+    if (!user?.id || isClinicalPreview) return
+    void loadPerformanceReport()
+  }, [isClinicalPreview, loadPerformanceReport, user?.id])
 
   const loadAuthenticatedUser = useCallback(async (authUser) => {
     if (!supabase || !authUser) return
@@ -20033,6 +20069,15 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
     setCurrentView('moduleView')
   }
 
+  const openPerformance = () => {
+    setSelectedModuleId(null)
+    setCurrentLesson(null)
+    setCurrentQuestion(null)
+    setShowQuestionFeedback(false)
+    setSelectedAnswer(null)
+    setCurrentView('performance')
+  }
+
   const backToDashboard = () => {
     setSelectedModuleId(null)
     setCurrentView('dashboard')
@@ -20113,6 +20158,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
       if (error) throw error
       attemptTokenRef.current = null
       void loadLearningInsights()
+      void loadPerformanceReport()
     } catch (error) {
       console.error('Não foi possível registrar a tentativa da questão.', error)
     }
@@ -20181,6 +20227,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
       })
 
       void loadLearningInsights()
+      void loadPerformanceReport()
       returnToModule()
     } catch (error) {
       console.error('Não foi possível registrar a conclusão da lição.', error)
@@ -20212,6 +20259,36 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
   }
 
   const previewUser = { name: 'Dra. Mariana Costa', email: 'mariana.costa@exemplo.com' }
+  const previewPerformanceReport = {
+    modules: [{
+      module_id: 'microbiologia', total_lessons: 14, completed_lessons: 9, progress_percent: 64.3,
+      attempts_count: 22, correct_answers: 18, accuracy_percent: 81.8, total_study_seconds: 4520,
+      last_activity_at: '2026-08-27T14:30:00.000Z', competency_status: 'dominio_consolidado',
+      competency_message: 'Desempenho consistente nesta trilha.',
+    }, {
+      module_id: 'antibiograma', total_lessons: 18, completed_lessons: 6, progress_percent: 33.3,
+      attempts_count: 12, correct_answers: 8, accuracy_percent: 66.7, total_study_seconds: 2580,
+      last_activity_at: '2026-08-26T17:15:00.000Z', competency_status: 'revisao_recomendada',
+      competency_message: 'A precisão atual indica oportunidade de revisão orientada.',
+    }, {
+      module_id: 'antibioticoterapia', total_lessons: 24, completed_lessons: 3, progress_percent: 12.5,
+      attempts_count: 2, correct_answers: 2, accuracy_percent: 100, total_study_seconds: 960,
+      last_activity_at: '2026-08-24T12:00:00.000Z', competency_status: 'dados_insuficientes',
+      competency_message: 'Continue praticando para formar um indicador confiável de precisão.',
+    }],
+    activities: [{
+      activity_type: 'question_correct', module_id: 'microbiologia', lesson_id: 9,
+      activity_at: '2026-08-27T14:30:00.000Z', activity_title: 'Questão respondida corretamente', activity_detail: 'Registro de prática clínica realizado.',
+    }, {
+      activity_type: 'lesson_completed', module_id: 'microbiologia', lesson_id: 9,
+      activity_at: '2026-08-27T14:20:00.000Z', activity_title: 'Lição concluída', activity_detail: 'Conclusão registrada no seu percurso de estudo.',
+    }, {
+      activity_type: 'study_session', module_id: 'antibiograma', lesson_id: 6,
+      activity_at: '2026-08-26T17:15:00.000Z', activity_title: 'Sessão de estudo registrada', activity_detail: '24 min de estudo contabilizados.',
+    }],
+    loading: false,
+    ready: true,
+  }
   const previewInsights = {
     recommendations: [{
       module_id: 'antibiograma',
@@ -20248,8 +20325,15 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
     ready: true,
   }
   const displayUser = isClinicalPreview ? (user || previewUser) : user
-  const displayProgress = isClinicalPreview ? { ...userProgress, xp: Math.max(userProgress.xp || 0, 860), level: Math.max(userProgress.level || 1, 3) } : userProgress
+  const displayProgress = isClinicalPreview ? {
+    ...userProgress,
+    xp: Math.max(userProgress.xp || 0, 860),
+    level: Math.max(userProgress.level || 1, 3),
+    streak: Math.max(userProgress.streak || 0, 4),
+    totalStudySeconds: Math.max(userProgress.totalStudySeconds || 0, 8060),
+  } : userProgress
   const displayInsights = isClinicalPreview ? previewInsights : learningInsights
+  const displayPerformanceReport = isClinicalPreview ? previewPerformanceReport : performanceReport
   const displayView = isClinicalPreview && currentView === 'login' ? 'dashboard' : currentView
 
   // Renderização condicional
@@ -20573,6 +20657,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
         getNextLesson={getNextLesson}
         onOpenModule={openModule}
         onStartLesson={startLesson}
+        onPerformance={openPerformance}
         learningInsights={displayInsights}
         onOpenRecommendation={(recommendation) => {
           const module = modulesData[recommendation?.module_id]
@@ -20602,6 +20687,21 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
         getNextLesson={getNextLesson}
         onStartLesson={startLesson}
         onDashboard={backToDashboard}
+        onPerformance={openPerformance}
+        onLogout={handleLogout}
+      />
+    )
+  }
+
+  if (displayView === 'performance') {
+    return (
+      <ClinicalFocusPerformance
+        modulesData={modulesData}
+        user={displayUser}
+        userProgress={displayProgress}
+        performanceReport={displayPerformanceReport}
+        onDashboard={backToDashboard}
+        onPerformance={openPerformance}
         onLogout={handleLogout}
       />
     )
@@ -20619,6 +20719,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
         user={displayUser}
         userProgress={displayProgress}
         onDashboard={leaveLessonToDashboard}
+        onPerformance={openPerformance}
         onLogout={handleLogout}
         onBack={() => {
           void saveStudyCheckpoint(currentSection, true)
