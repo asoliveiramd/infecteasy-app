@@ -3,7 +3,11 @@
  * O resultado é sanitizado antes da renderização para evitar que futuras
  * migrações de conteúdo introduzam scripts ou elementos ativos.
  */
-import DOMPurify from 'dompurify';
+import createDOMPurify from 'dompurify';
+
+// A biblioteca é fornecida como fábrica. A inicialização explícita com a janela
+// do navegador impede que ela opere em modo sem suporte e devolva HTML sem filtrar.
+const DOMPurify = createDOMPurify(globalThis.window);
 
 const CLINICAL_ALLOWED_TAGS = [
   'a', 'blockquote', 'br', 'div', 'em', 'h1', 'h2', 'h3', 'h4', 'li',

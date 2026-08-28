@@ -3,35 +3,7 @@ import './App.css'
 import { antimicrobianosModule } from './antimicrobianos_module.js'
 import { isSupabaseConfigured, supabase } from './lib/supabase';
 import { ClinicalFocusDashboard, ClinicalFocusLesson, ClinicalFocusModule, ClinicalFocusPerformance, ClinicalFocusTransparency } from './components/ClinicalFocus.jsx'
-
-const getProgressLevel = (xp) => Math.max(1, Math.floor(xp / 500) + 1)
-
-// O conteúdo histórico usa tanto arrays numéricos quanto objetos A/B/C/D.
-// A normalização preserva ambos os formatos na mesma interface e no registro seguro de tentativas.
-const normalizeQuestion = (question) => {
-  if (!question) return null
-
-  const optionEntries = Array.isArray(question.options)
-    ? question.options.map((option, index) => [String.fromCharCode(65 + index), option])
-    : Object.entries(question.options || {})
-
-  const options = optionEntries.map(([, option]) => option)
-  const rawCorrect = question.correct
-  const correct = typeof rawCorrect === 'string' && /^[A-D]$/i.test(rawCorrect)
-    ? rawCorrect.toUpperCase().charCodeAt(0) - 65
-    : Number(rawCorrect)
-
-  return {
-    ...question,
-    options,
-    correct: Number.isInteger(correct) ? correct : 0,
-  }
-}
-
-const createAttemptToken = () => (
-  globalThis.crypto?.randomUUID?.()
-    || `${Date.now()}-${Math.random().toString(16).slice(2)}-0000-4000-8000-000000000000`
-)
+import { createAttemptToken, getProgressLevel, normalizeQuestion, resolveTotalStudySeconds } from './utils/learningRules.js'
 
 const App = () => {
   // Estados principais
@@ -69,6 +41,14 @@ const App = () => {
   const [performanceReport, setPerformanceReport] = useState({
     modules: [],
     activities: [],
+    loading: false,
+    ready: false,
+    error: '',
+  })
+  const [editorialGovernance, setEditorialGovernance] = useState({
+    statuses: [],
+    sources: [],
+    links: [],
     loading: false,
     ready: false,
     error: '',
@@ -139,11 +119,7 @@ const App = () => {
   const updateStudyProgress = (data) => {
     if (!data) return
     setUserProgress((prev) => {
-      const totalStudySeconds = Number.isFinite(Number(data.total_study_seconds))
-        ? Number(data.total_study_seconds)
-        : Number.isFinite(Number(data.seconds_added))
-          ? prev.totalStudySeconds + Number(data.seconds_added)
-          : prev.totalStudySeconds
+      const totalStudySeconds = resolveTotalStudySeconds(prev.totalStudySeconds, data)
 
       return {
         ...prev,
@@ -273,6 +249,48 @@ const App = () => {
     void loadPerformanceReport()
   }, [isClinicalPreview, loadPerformanceReport, user?.id])
 
+  const loadEditorialGovernance = useCallback(async () => {
+    if (isClinicalPreview || !supabase || !user?.id) return
+
+    setEditorialGovernance((previous) => ({ ...previous, loading: true, error: '' }))
+    try {
+      const [{ data: statuses, error: statusesError }, { data: sources, error: sourcesError }, { data: links, error: linksError }] = await Promise.all([
+        supabase
+          .from('lesson_editorial_status')
+          .select('module_id, lesson_id, review_status, reviewed_at, review_due_at, editorial_owner, notes'),
+        supabase
+          .from('clinical_source_catalog')
+          .select('source_code, title, organization, source_url, document_version, published_on, checked_at, source_type, scope_note, status'),
+        supabase
+          .from('lesson_clinical_sources')
+          .select('module_id, lesson_id, source_code, reference_role, source_note'),
+      ])
+
+      if (statusesError || sourcesError || linksError) throw statusesError || sourcesError || linksError
+      setEditorialGovernance({
+        statuses: Array.isArray(statuses) ? statuses : [],
+        sources: Array.isArray(sources) ? sources : [],
+        links: Array.isArray(links) ? links : [],
+        loading: false,
+        ready: true,
+        error: '',
+      })
+    } catch (error) {
+      console.error('Não foi possível carregar a governança editorial desta lição.', error)
+      setEditorialGovernance((previous) => ({
+        ...previous,
+        loading: false,
+        ready: true,
+        error: 'As informações de fontes não puderam ser atualizadas agora.',
+      }))
+    }
+  }, [isClinicalPreview, user?.id])
+
+  useEffect(() => {
+    if (!user?.id || isClinicalPreview) return
+    void loadEditorialGovernance()
+  }, [isClinicalPreview, loadEditorialGovernance, user?.id])
+
   const loadAuthenticatedUser = useCallback(async (authUser) => {
     if (!supabase || !authUser) return
 
@@ -308,6 +326,7 @@ const App = () => {
     if (isDifferentUser) {
       setLearningInsights({ recommendations: [], achievements: [], loading: true, ready: false, error: '' })
       setPerformanceReport({ modules: [], activities: [], loading: true, ready: false, error: '' })
+      setEditorialGovernance({ statuses: [], sources: [], links: [], loading: true, ready: false, error: '' })
     }
     activeUserIdRef.current = authUser.id
     setUser({
@@ -380,6 +399,7 @@ const App = () => {
         setUserProgress({ xp: 0, level: 1, streak: 0, totalStudySeconds: 0, lastStudyDate: null, completedLessons: [] })
         setLearningInsights({ recommendations: [], achievements: [], loading: false, ready: false, error: '' })
         setPerformanceReport({ modules: [], activities: [], loading: false, ready: false, error: '' })
+        setEditorialGovernance({ statuses: [], sources: [], links: [], loading: false, ready: false, error: '' })
         setCurrentView('login')
       }
     })
@@ -19825,6 +19845,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
     setUserProgress({ xp: 0, level: 1, streak: 0, totalStudySeconds: 0, lastStudyDate: null, completedLessons: [] })
     setLearningInsights({ recommendations: [], achievements: [], loading: false, ready: false, error: '' })
     setPerformanceReport({ modules: [], activities: [], loading: false, ready: false, error: '' })
+    setEditorialGovernance({ statuses: [], sources: [], links: [], loading: false, ready: false, error: '' })
     setCurrentView('login')
     setCurrentModule(null)
     setCurrentLesson(null)
@@ -20120,6 +20141,39 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
     loading: false,
     ready: true,
   }
+  const previewEditorialGovernance = {
+    statuses: [{
+      module_id: 'antibiograma',
+      lesson_id: 1,
+      review_status: 'pending_review',
+      reviewed_at: null,
+      review_due_at: null,
+      editorial_owner: 'content_team',
+      notes: 'Registro editorial inicial. Não representa revisão clínica concluída.',
+    }],
+    sources: [{
+      source_code: 'brcast_2026_breakpoints',
+      title: 'Tabela de pontos de corte clínicos BrCAST',
+      organization: 'Brazilian Committee on Antimicrobial Susceptibility Testing',
+      source_url: 'https://brcast.org.br/documentos/documentos-3/',
+      document_version: '15-04-2026',
+      published_on: '2026-04-15',
+      checked_at: '2026-08-28',
+      source_type: 'breakpoint_table',
+      scope_note: 'Referência educacional para interpretação de TSA/antibiograma. Conferir a versão vigente e o protocolo institucional antes de qualquer aplicação clínica.',
+      status: 'active',
+    }],
+    links: [{
+      module_id: 'antibiograma',
+      lesson_id: 1,
+      source_code: 'brcast_2026_breakpoints',
+      reference_role: 'contextual_reference',
+      source_note: 'Usar como referência de atualização para conteúdos de teste de suscetibilidade e antibiograma.',
+    }],
+    loading: false,
+    ready: true,
+    error: '',
+  }
   const displayUser = isClinicalPreview ? (user || previewUser) : user
   const displayProgress = isClinicalPreview ? {
     ...userProgress,
@@ -20134,6 +20188,9 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
   const displayPerformanceReport = isClinicalPreview
     ? { ...previewPerformanceReport, error: previewSyncError ? 'Não foi possível atualizar seu relatório agora. Verifique sua conexão e tente novamente.' : '' }
     : performanceReport
+  const displayEditorialGovernance = isClinicalPreview
+    ? previewEditorialGovernance
+    : editorialGovernance
   const displayView = isClinicalPreview && currentView === 'login' ? 'dashboard' : currentView
 
   // Renderização condicional
@@ -20536,6 +20593,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
         showQuestionFeedback={showQuestionFeedback}
         user={displayUser}
         userProgress={displayProgress}
+        editorialGovernance={displayEditorialGovernance}
         onDashboard={leaveLessonToDashboard}
         onPerformance={openPerformance}
         onTransparency={openTransparency}

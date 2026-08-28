@@ -1,6 +1,6 @@
 # Migrações suplementares do InfectEasy
 
-Este diretório preserva os scripts SQL que foram aplicados manualmente no Supabase para sustentar as prioridades P0 a P3A. O objetivo é permitir revisão, auditoria e restauração controlada da infraestrutura de progresso do aplicativo.
+Este diretório preserva os scripts SQL que foram aplicados manualmente no Supabase para sustentar as prioridades P0 a P5A. O objetivo é permitir revisão, auditoria e restauração controlada da infraestrutura de progresso e da governança editorial do aplicativo.
 
 > **Atenção:** estes arquivos não representam a criação inicial completa do projeto Supabase. Eles pressupõem que as tabelas-base de autenticação, `profiles` e `user_progress` já existam. Não execute todos os arquivos automaticamente em um banco com dados sem antes realizar preflight, backup lógico e revisão do impacto.
 
@@ -11,6 +11,11 @@ Este diretório preserva os scripts SQL que foram aplicados manualmente no Supab
 | 3 | `20260820_03_study_sessions_checkpoints.sql` | Sessões, checkpoints, tempo acumulado e sequência diária no fuso de Salvador. | Aplicada. |
 | 4 | `20260827_01_review_recommendations_achievements.sql` | Revisões privadas e marcos de competência. | Aplicada. |
 | 5 | `20260827_02_personal_learning_report.sql` | Relatório individual e linha do tempo privada de estudo. | Aplicada. |
+| 6 | `20260827_03_fix_refresh_learning_achievements.sql` | Correção da atualização idempotente de marcos e recomendações privadas. | Aplicada. |
+| 7 | `20260828_00_preflight_p5_editorial_governance.sql` | Verificação somente de leitura da base editorial P5A. | Executada. |
+| 8 | `20260828_01_backup_p5_lesson_catalog.sql` | Backup lógico protegido do catálogo de 56 lições. | Executada. |
+| 9 | `20260828_02_editorial_governance.sql` | Fontes clínicas, status editorial e vínculos por lição. | Aplicada. |
+| 10 | `20260828_03_validate_p5_editorial_governance.sql` | Validação somente de leitura da estrutura P5A. | Executada. |
 
 ## Procedimento obrigatório antes de uma nova migração
 

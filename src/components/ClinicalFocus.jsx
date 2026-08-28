@@ -11,6 +11,7 @@ import {
   ChevronRight,
   Clock3,
   ClipboardCheck,
+  ExternalLink,
   FileText,
   FlaskConical,
   GraduationCap,
@@ -81,6 +82,49 @@ function ProgressBar({ value = 0, color = 'bg-[#15807A]' }) {
     <div className="h-2 overflow-hidden rounded-full bg-[#DFE8EB]" aria-label={`${Math.round(safeValue)}% concluído`}>
       <div className={`h-full rounded-full ${color} transition-[width] duration-300`} style={{ width: `${safeValue}%` }} />
     </div>
+  )
+}
+
+function formatEditorialDate(value) {
+  if (!value) return null
+  const date = new Date(`${value}T12:00:00`)
+  return Number.isNaN(date.getTime())
+    ? value
+    : new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: 'short', year: 'numeric' }).format(date)
+}
+
+function EditorialGovernancePanel({ governance, moduleId, lessonId }) {
+  const status = governance?.statuses?.find((item) => item.module_id === moduleId && Number(item.lesson_id) === Number(lessonId))
+  const linkedSources = (governance?.links || [])
+    .filter((item) => item.module_id === moduleId && Number(item.lesson_id) === Number(lessonId))
+    .map((link) => ({ ...link, source: (governance?.sources || []).find((source) => source.source_code === link.source_code) }))
+    .filter((item) => item.source)
+
+  if (governance?.loading) {
+    return <aside className="border-t border-[#E2EAEC] bg-[#F8FBFB] px-6 py-5 sm:px-8" aria-live="polite"><p className="text-sm text-[#647B82]">Carregando informações de revisão editorial...</p></aside>
+  }
+
+  if (governance?.error) {
+    return <aside className="border-t border-[#E9D9C3] bg-[#FFFCF7] px-6 py-5 sm:px-8" aria-live="polite"><p className="text-sm text-[#7A5A2A]">{governance.error} O conteúdo da lição continua disponível para estudo.</p></aside>
+  }
+
+  const reviewed = status?.review_status === 'reviewed'
+  const statusLabel = reviewed ? 'Revisão editorial registrada' : status?.review_status === 'in_review' ? 'Em revisão editorial' : status?.review_status === 'outdated' ? 'Atualização necessária' : 'Revisão editorial pendente'
+  const statusStyle = reviewed ? 'border-[#BFE1D2] bg-[#F0FAF5] text-[#1B6A50]' : status?.review_status === 'outdated' ? 'border-[#ECD5B7] bg-[#FFF8ED] text-[#8A5A17]' : 'border-[#D8E5E8] bg-white text-[#527078]'
+
+  return (
+    <aside className="border-t border-[#E2EAEC] bg-[#F8FBFB] px-6 py-5 sm:px-8" aria-label="Fontes e revisão editorial">
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div className="flex items-start gap-3"><div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#E8F2F3] text-[#285F6A]"><FileText size={16} /></div><div><p className="text-xs font-semibold uppercase tracking-[0.13em] text-[#668087]">Transparência editorial</p><h2 className="mt-1 text-base font-semibold text-[#183841]">Fontes e status de revisão</h2></div></div>
+        <span className={`rounded-lg border px-3 py-1.5 text-xs font-semibold ${statusStyle}`}>{statusLabel}</span>
+      </div>
+
+      <p className="mt-4 text-sm leading-6 text-[#526B72]">{reviewed ? 'A revisão editorial desta lição está registrada no catálogo de governança.' : 'Esta lição permanece disponível para estudo, mas ainda aguarda revisão editorial humana. As fontes abaixo servem como referência de atualização e não substituem protocolo institucional, microbiologia, diretrizes vigentes ou avaliação profissional.'}</p>
+
+      {status?.reviewed_at && <p className="mt-3 text-xs text-[#6B8389]">Revisão registrada em {formatEditorialDate(status.reviewed_at)}{status.review_due_at ? ` · nova avaliação prevista até ${formatEditorialDate(status.review_due_at)}` : ''}.</p>}
+
+      {linkedSources.length > 0 ? <div className="mt-4 space-y-2">{linkedSources.map(({ source, reference_role, source_note }) => <a key={source.source_code} href={source.source_url} target="_blank" rel="noreferrer" className="group flex items-start justify-between gap-3 rounded-xl border border-[#DCE8EA] bg-white px-4 py-3 transition-colors hover:border-[#AFC9CE] hover:bg-[#FCFEFE]"><span><span className="block text-sm font-semibold text-[#264A54]">{source.title}{source.document_version ? ` · ${source.document_version}` : ''}</span><span className="mt-1 block text-xs leading-5 text-[#637B82]">{source.organization} · {reference_role === 'primary_reference' ? 'referência principal' : 'referência de contexto'}{source_note ? ` · ${source_note}` : ''}</span></span><ExternalLink size={16} className="mt-0.5 shrink-0 text-[#557B84] transition-transform group-hover:translate-x-0.5" /></a>)}</div> : <p className="mt-4 rounded-xl border border-dashed border-[#D6E2E5] bg-white px-4 py-3 text-xs leading-5 text-[#668087]">A fonte específica desta lição será vinculada após a curadoria editorial humana.</p>}
+    </aside>
   )
 }
 
@@ -465,7 +509,7 @@ export function ClinicalFocusModule({ moduleId, module, user, userProgress, isLe
   )
 }
 
-export function ClinicalFocusLesson({ lesson, moduleId, currentSection, currentQuestion, selectedAnswer, showQuestionFeedback, user, userProgress, onDashboard, onPerformance, onTransparency, onLogout, onBack, onShowQuestion, onSelectAnswer, onSubmitAnswer, onNextSection, onCompleteLesson, onContinue }) {
+export function ClinicalFocusLesson({ lesson, moduleId, currentSection, currentQuestion, selectedAnswer, showQuestionFeedback, user, userProgress, editorialGovernance, onDashboard, onPerformance, onTransparency, onLogout, onBack, onShowQuestion, onSelectAnswer, onSubmitAnswer, onNextSection, onCompleteLesson, onContinue }) {
   const meta = getMeta(moduleId)
   const section = lesson?.sections?.[currentSection]
   const total = lesson?.sections?.length || 0
@@ -480,6 +524,7 @@ export function ClinicalFocusLesson({ lesson, moduleId, currentSection, currentQ
         <article className="overflow-hidden rounded-3xl border border-[#DFE9EB] bg-white shadow-[0_2px_4px_rgba(15,46,56,0.03)]">
           {section.videoUrl && <div className="border-b border-[#DFE9EB] bg-[#F5F9F9] p-4 sm:p-6"><div className="overflow-hidden rounded-2xl border border-[#D8E5E7] bg-[#0F2D37]" style={{ aspectRatio: '16 / 9' }}><iframe src={section.videoUrl} title="Vídeo explicativo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="h-full w-full" /></div></div>}
           <div className="clinical-content p-6 sm:p-8" dangerouslySetInnerHTML={{ __html: markdownToHtml(section.content || '') }} />
+          <EditorialGovernancePanel governance={editorialGovernance} moduleId={moduleId} lessonId={lesson.id} />
           <div className="border-t border-[#E2EAEC] bg-[#FBFCFC] p-5 sm:p-6">
             {!currentQuestion && <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"><p className="text-sm text-[#6D858C]">{section.question ? 'Teste a aplicação deste conteúdo antes de avançar.' : 'Quando estiver pronto, avance para a próxima seção.'}</p><div className="flex flex-wrap gap-2">{section.question && <button type="button" onClick={onShowQuestion} className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#0F4C5C] px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#103F4D]"><Target size={16} />Responder questão</button>}{currentSection < total - 1 ? <button type="button" onClick={onNextSection} className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#C9D9DC] bg-white px-4 py-2.5 text-sm font-semibold text-[#315A65] transition-colors hover:bg-[#F2F7F7]">Próxima seção<ArrowRight size={16} /></button> : <button type="button" onClick={onCompleteLesson} className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#15756D] px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#10665F]"><Check size={16} />Concluir lição</button>}</div></div>}
 
