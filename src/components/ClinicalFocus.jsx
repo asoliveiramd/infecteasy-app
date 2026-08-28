@@ -1,11 +1,14 @@
 import React from 'react'
 import markdownToHtml from '../utils/markdownToHtml'
+import { filterLessonCatalog, flattenLessonCatalog, savedLessonKey, sortSavedLessons } from '../utils/personalLibrary'
 import {
   Activity,
   ArrowLeft,
   ArrowRight,
   Award,
   BarChart3,
+  Bookmark,
+
   BookOpen,
   Check,
   ChevronRight,
@@ -23,6 +26,7 @@ import {
   Play,
   RefreshCw,
   ShieldCheck,
+  Search,
   Target,
   TrendingUp,
   Trophy,
@@ -159,8 +163,8 @@ function MobileNavItem({ icon, label, active, onClick }) {
   )
 }
 
-export function ClinicalFocusLayout({ children, currentView, user, userProgress, onDashboard, onPerformance, onTransparency, onLogout, onBack, backLabel }) {
-  const viewLabel = currentView === 'lesson' ? 'Lição' : currentView === 'moduleView' ? 'Trilha' : currentView === 'performance' ? 'Meu desempenho' : currentView === 'transparency' ? 'Uso e privacidade' : 'Visão geral'
+export function ClinicalFocusLayout({ children, currentView, user, userProgress, onDashboard, onPerformance, onLibrary, onTransparency, onLogout, onBack, backLabel }) {
+  const viewLabel = currentView === 'lesson' ? 'Lição' : currentView === 'moduleView' ? 'Trilha' : currentView === 'performance' ? 'Meu desempenho' : currentView === 'library' ? 'Biblioteca' : currentView === 'transparency' ? 'Uso e privacidade' : 'Visão geral'
   const initials = (user?.name || user?.email || 'IE')
     .split(' ')
     .filter(Boolean)
@@ -178,6 +182,7 @@ export function ClinicalFocusLayout({ children, currentView, user, userProgress,
           <NavItem icon={LayoutDashboard} label="Visão geral" active={currentView === 'dashboard'} onClick={onDashboard} />
           <NavItem icon={BookOpen} label="Trilhas de estudo" active={currentView === 'moduleView' || currentView === 'lesson'} onClick={onDashboard} />
           <NavItem icon={BarChart3} label="Meu desempenho" active={currentView === 'performance'} onClick={onPerformance || onDashboard} />
+          <NavItem icon={Bookmark} label="Biblioteca" active={currentView === 'library'} onClick={onLibrary || onDashboard} />
         </div>
         <div className="mt-auto rounded-2xl border border-[#DCE8E9] bg-[#F7FBFB] p-4">
           <div className="flex items-center gap-2 text-[#315A65]">
@@ -230,6 +235,7 @@ export function ClinicalFocusLayout({ children, currentView, user, userProgress,
           <MobileNavItem icon={LayoutDashboard} label="Visão geral" active={currentView === 'dashboard'} onClick={onDashboard} />
           <MobileNavItem icon={BookOpen} label="Trilhas" active={currentView === 'moduleView' || currentView === 'lesson'} onClick={onDashboard} />
           <MobileNavItem icon={BarChart3} label="Desempenho" active={currentView === 'performance'} onClick={onPerformance || onDashboard} />
+          <MobileNavItem icon={Bookmark} label="Biblioteca" active={currentView === 'library'} onClick={onLibrary || onDashboard} />
         </div>
       </nav>
     </div>
@@ -281,7 +287,7 @@ function ModuleCard({ moduleId, module, progress, onOpen }) {
   )
 }
 
-export function ClinicalFocusDashboard({ modulesData, user, userProgress, showWelcome, onDismissWelcome, isLessonCompleted, isLessonUnlocked, getNextLesson, onOpenModule, onStartLesson, onPerformance, onTransparency, learningInsights, onRefreshInsights, onOpenRecommendation, onLogout }) {
+export function ClinicalFocusDashboard({ modulesData, user, userProgress, showWelcome, onDismissWelcome, isLessonCompleted, isLessonUnlocked, getNextLesson, onOpenModule, onStartLesson, onPerformance, onLibrary, onTransparency, learningInsights, onRefreshInsights, onOpenRecommendation, onLogout }) {
   const moduleIds = ['microbiologia', 'antibiograma', 'antibioticoterapia'].filter((id) => modulesData[id])
   const recommendations = Array.isArray(learningInsights?.recommendations) ? learningInsights.recommendations : []
   const achievements = Array.isArray(learningInsights?.achievements) ? learningInsights.achievements : []
@@ -312,7 +318,7 @@ export function ClinicalFocusDashboard({ modulesData, user, userProgress, showWe
   const totalLessons = moduleIds.reduce((total, moduleId) => total + modulesData[moduleId].lessons.length, 0)
 
   return (
-    <ClinicalFocusLayout currentView="dashboard" user={user} userProgress={userProgress} onDashboard={() => {}} onPerformance={onPerformance} onTransparency={onTransparency} onLogout={onLogout}>
+    <ClinicalFocusLayout currentView="dashboard" user={user} userProgress={userProgress} onDashboard={() => {}} onPerformance={onPerformance} onLibrary={onLibrary} onTransparency={onTransparency} onLogout={onLogout}>
       {showWelcome && <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#102B33]/45 p-4 backdrop-blur-sm"><div role="dialog" aria-modal="true" aria-label="Boas-vindas" className="w-full max-w-xl overflow-hidden rounded-3xl bg-white shadow-[0_24px_64px_rgba(7,44,54,0.24)]"><div className="border-b border-[#D9E7E9] bg-[#F1F8F8] p-6 sm:p-8"><div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#0F4C5C] text-white"><ShieldCheck size={22} /></div><p className="mt-5 text-xs font-semibold uppercase tracking-[0.16em] text-[#51737B]">Ambiente de estudo clínico</p><h2 className="mt-2 text-2xl font-semibold tracking-[-0.035em] text-[#17313A]">Bem-vindo ao InfectEasy</h2><p className="mt-3 max-w-lg text-sm leading-6 text-[#58747B]">Organize seu estudo em blocos curtos, pratique decisões clínicas e acompanhe sua evolução com clareza.</p></div><div className="p-6 sm:p-8"><div className="grid gap-3 sm:grid-cols-3"><div className="rounded-xl bg-[#F6FAFA] p-3"><BookOpen size={18} className="text-[#0F5C73]" /><p className="mt-3 text-sm font-semibold text-[#244C55]">Trilhas estruturadas</p><p className="mt-1 text-xs leading-5 text-[#6B838A]">Conteúdo organizado por competência.</p></div><div className="rounded-xl bg-[#F6FAFA] p-3"><Target size={18} className="text-[#15756D]" /><p className="mt-3 text-sm font-semibold text-[#244C55]">Prática aplicada</p><p className="mt-1 text-xs leading-5 text-[#6B838A]">Questões para consolidar decisões.</p></div><div className="rounded-xl bg-[#F6FAFA] p-3"><TrendingUp size={18} className="text-[#496C9E]" /><p className="mt-3 text-sm font-semibold text-[#244C55]">Progresso visível</p><p className="mt-1 text-xs leading-5 text-[#6B838A]">Evolução acompanhada ao longo do tempo.</p></div></div><div className="mt-7 flex flex-col-reverse gap-2 sm:flex-row sm:justify-end"><button type="button" onClick={onDismissWelcome} className="rounded-xl px-4 py-2.5 text-sm font-semibold text-[#5C767E] hover:bg-[#F2F7F7]">Explorar depois</button><button type="button" onClick={onDismissWelcome} className="rounded-xl bg-[#0F4C5C] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#103F4D]">Começar a estudar</button></div></div></div></div>}
       <section className="grid gap-6 xl:grid-cols-[minmax(0,1.6fr)_minmax(260px,0.72fr)]">
         <div className="overflow-hidden rounded-3xl bg-[#103F4D] p-6 text-white shadow-[0_18px_42px_rgba(15,76,92,0.18)] sm:p-8">
@@ -419,7 +425,7 @@ function getCompetencyStyle(status) {
   return { label: 'Em formação', className: 'bg-[#F1F5F6] text-[#60777E]' }
 }
 
-export function ClinicalFocusPerformance({ modulesData, user, userProgress, performanceReport, onRefreshReport, onDashboard, onPerformance, onTransparency, onLogout }) {
+export function ClinicalFocusPerformance({ modulesData, user, userProgress, performanceReport, onRefreshReport, onDashboard, onPerformance, onLibrary, onTransparency, onLogout }) {
   const reportModules = Array.isArray(performanceReport?.modules) ? performanceReport.modules : []
   const activities = Array.isArray(performanceReport?.activities) ? performanceReport.activities : []
   const loading = Boolean(performanceReport?.loading)
@@ -431,7 +437,7 @@ export function ClinicalFocusPerformance({ modulesData, user, userProgress, perf
   const correctAnswers = reportModules.reduce((total, item) => total + (Number(item.correct_answers) || 0), 0)
   const activeModules = reportModules.filter((item) => (Number(item.completed_lessons) || 0) > 0 || (Number(item.attempts_count) || 0) > 0).length
 
-  return <ClinicalFocusLayout currentView="performance" user={user} userProgress={userProgress} onDashboard={onDashboard} onPerformance={onPerformance} onTransparency={onTransparency} onLogout={onLogout} onBack={onDashboard} backLabel="Visão geral">
+  return <ClinicalFocusLayout currentView="performance" user={user} userProgress={userProgress} onDashboard={onDashboard} onPerformance={onPerformance} onLibrary={onLibrary} onTransparency={onTransparency} onLogout={onLogout} onBack={onDashboard} backLabel="Visão geral">
     <section className="rounded-3xl border border-[#DCE8E9] bg-white p-6 shadow-[0_1px_2px_rgba(15,46,56,0.03)] sm:p-8">
       <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between"><div className="max-w-2xl"><div className="flex items-center gap-2 text-[#315A65]"><BarChart3 size={19} /><span className="text-xs font-semibold uppercase tracking-[0.14em]">Acompanhamento individual</span></div><h1 className="mt-3 text-3xl font-semibold tracking-[-0.04em] text-[#17313A]">Meu desempenho</h1><p className="mt-3 text-sm leading-6 text-[#637E85]">Acompanhe a evolução do seu estudo por trilha, com foco em progresso, prática e consolidação do conhecimento.</p></div><div className="inline-flex w-fit items-center gap-2 rounded-xl border border-[#DCE8E9] bg-[#F7FBFB] px-3.5 py-2.5 text-xs font-semibold text-[#547078]"><LockKeyhole size={15} /> Dados visíveis somente para você</div></div>
     </section>
@@ -458,9 +464,52 @@ export function ClinicalFocusPerformance({ modulesData, user, userProgress, perf
   </ClinicalFocusLayout>
 }
 
-export function ClinicalFocusTransparency({ user, userProgress, onDashboard, onPerformance, onTransparency, onLogout }) {
+export function ClinicalFocusLibrary({ modulesData, user, userProgress, personalLibrary, isLessonUnlocked, onToggleSaved, onRefreshLibrary, onOpenLesson, onDashboard, onPerformance, onLibrary, onTransparency, onLogout }) {
+  const [searchTerm, setSearchTerm] = React.useState('')
+  const lessons = React.useMemo(() => flattenLessonCatalog(modulesData), [modulesData])
+  const savedEntries = React.useMemo(
+    () => (Array.isArray(personalLibrary?.entries) ? personalLibrary.entries : []),
+    [personalLibrary?.entries],
+  )
+  const savedLessons = React.useMemo(() => sortSavedLessons(lessons, savedEntries), [lessons, savedEntries])
+  const results = React.useMemo(() => filterLessonCatalog(lessons, searchTerm), [lessons, searchTerm])
+  const visibleLessons = searchTerm.trim() ? results : savedLessons
+  const savingKeys = new Set(personalLibrary?.savingKeys || [])
+  const loading = Boolean(personalLibrary?.loading)
+  const ready = Boolean(personalLibrary?.ready)
+  const libraryError = personalLibrary?.error || ''
+
+  const LessonRow = ({ lesson }) => {
+    const saved = savedEntries.some((entry) => savedLessonKey(entry.module_id, entry.lesson_id) === savedLessonKey(lesson.moduleId, lesson.lessonId))
+    const saving = savingKeys.has(savedLessonKey(lesson.moduleId, lesson.lessonId))
+    const unlocked = isLessonUnlocked?.(lesson.moduleId, lesson.lessonId)
+    const meta = getMeta(lesson.moduleId)
+    const Icon = meta.icon
+
+    return <article className="flex flex-col gap-4 rounded-2xl border border-[#DDE8EA] bg-white p-4 shadow-[0_1px_2px_rgba(15,46,56,0.03)] sm:flex-row sm:items-center sm:justify-between sm:p-5">
+      <div className="flex min-w-0 gap-3"><div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${meta.soft} ${meta.ink}`}><Icon size={19} /></div><div className="min-w-0"><div className="flex flex-wrap items-center gap-2"><span className={`rounded-md px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] ${meta.soft} ${meta.ink}`}>{meta.label}</span><span className="text-xs text-[#71878E]">Lição {lesson.lessonId} · {lesson.duration}</span></div><h2 className="mt-2 truncate font-semibold text-[#1B3A43]">{lesson.lessonTitle}</h2><p className="mt-1 line-clamp-2 text-sm leading-5 text-[#698087]">{lesson.moduleTitle}</p></div></div>
+      <div className="flex shrink-0 flex-wrap gap-2"><button type="button" disabled={saving} onClick={() => onToggleSaved?.(lesson.moduleId, lesson.lessonId)} aria-label={`${saved ? 'Remover' : 'Salvar'} ${lesson.lessonTitle} da Biblioteca`} className={`inline-flex items-center justify-center gap-2 rounded-lg border px-3.5 py-2.5 text-sm font-semibold transition-colors disabled:cursor-wait disabled:opacity-60 ${saved ? 'border-[#B8D5D2] bg-[#EFF8F7] text-[#23655F] hover:bg-[#E4F3F1]' : 'border-[#C9D9DC] bg-white text-[#315A65] hover:bg-[#F2F7F7]'}`}><Bookmark size={15} fill={saved ? 'currentColor' : 'none'} />{saving ? 'Atualizando...' : saved ? 'Remover' : 'Salvar'}</button><button type="button" onClick={() => onOpenLesson?.(lesson.moduleId, lesson.lessonId)} className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#0F4C5C] px-3.5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#103F4D]">{unlocked ? 'Abrir lição' : 'Ver trilha'}<ArrowRight size={15} /></button></div>
+    </article>
+  }
+
+  return <ClinicalFocusLayout currentView="library" user={user} userProgress={userProgress} onDashboard={onDashboard} onPerformance={onPerformance} onLibrary={onLibrary} onTransparency={onTransparency} onLogout={onLogout} onBack={onDashboard} backLabel="Visão geral">
+    <section className="rounded-3xl border border-[#DCE8E9] bg-white p-6 shadow-[0_1px_2px_rgba(15,46,56,0.03)] sm:p-8"><div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between"><div className="max-w-2xl"><div className="flex items-center gap-2 text-[#315A65]"><Bookmark size={19} /><span className="text-xs font-semibold uppercase tracking-[0.14em]">Biblioteca pessoal</span></div><h1 className="mt-3 text-3xl font-semibold tracking-[-0.04em] text-[#17313A]">Organize o seu estudo</h1><p className="mt-3 text-sm leading-6 text-[#637E85]">Pesquise as lições do InfectEasy e salve os temas que deseja retomar. A sua Biblioteca é privada e não altera o seu progresso.</p></div><div className="inline-flex w-fit items-center gap-2 rounded-xl border border-[#DCE8E9] bg-[#F7FBFB] px-3.5 py-2.5 text-xs font-semibold text-[#547078]"><LockKeyhole size={15} /> Visível somente para você</div></div>
+      <div className="mt-7"><label htmlFor="library-search" className="text-sm font-semibold text-[#315A65]">Pesquisar lições</label><div className="relative mt-2"><Search size={18} aria-hidden="true" className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-[#668087]" /><input id="library-search" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} placeholder="Ex.: Gram, antibiograma, revisão ou lição 12" className="w-full rounded-xl border border-[#C9DADD] bg-[#FCFEFE] py-3 pl-11 pr-4 text-sm text-[#213F48] outline-none transition-colors placeholder:text-[#91A4A9] focus:border-[#4C8C95] focus:ring-4 focus:ring-[#DDF0F0]" /></div><p className="mt-2 text-xs text-[#718990]" aria-live="polite">{searchTerm.trim() ? `${visibleLessons.length} ${visibleLessons.length === 1 ? 'lição encontrada' : 'lições encontradas'}` : `${savedLessons.length} ${savedLessons.length === 1 ? 'lição salva' : 'lições salvas'} na sua Biblioteca`}</p></div>
+    </section>
+
+    {loading && <section className="mt-7 rounded-2xl border border-dashed border-[#D9E6E8] bg-white px-5 py-8 text-center text-sm text-[#6B858C]" aria-live="polite">Atualizando sua Biblioteca pessoal...</section>}
+    {!loading && libraryError && <section role="alert" className="mt-7 flex flex-col gap-3 rounded-2xl border border-[#E4CFB1] bg-[#FFF9F1] p-5 text-sm leading-6 text-[#80572C] sm:flex-row sm:items-center sm:justify-between"><span>{libraryError}</span><button type="button" onClick={onRefreshLibrary} className="inline-flex w-fit items-center gap-1.5 rounded-lg border border-[#D9BE94] bg-white px-3 py-2 text-xs font-semibold text-[#765126] hover:bg-[#FFF5E7]"><RefreshCw size={14} />Tentar novamente</button></section>}
+
+    {!loading && <section className="mt-8"><div className="mb-5 flex flex-col justify-between gap-2 sm:flex-row sm:items-end"><div><p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#6D858C]">{searchTerm.trim() ? 'Resultados da pesquisa' : 'Sua seleção'}</p><h2 className="mt-1 text-2xl font-semibold tracking-[-0.03em] text-[#17313A]">{searchTerm.trim() ? 'Lições encontradas' : 'Lições salvas'}</h2></div>{searchTerm.trim() && <button type="button" onClick={() => setSearchTerm('')} className="w-fit text-sm font-semibold text-[#315A65] hover:text-[#0F4C5C] hover:underline">Limpar pesquisa</button>}</div>
+      <div className="space-y-3">{visibleLessons.map((lesson) => <LessonRow key={`${lesson.moduleId}-${lesson.lessonId}`} lesson={lesson} />)}</div>
+      {!libraryError && ready && visibleLessons.length === 0 && <div className="rounded-2xl border border-dashed border-[#D7E4E6] bg-white p-6 text-center"><Bookmark size={22} className="mx-auto text-[#6A9292]" /><h3 className="mt-3 font-semibold text-[#294E57]">{searchTerm.trim() ? 'Nenhuma lição corresponde à pesquisa' : 'Sua Biblioteca ainda está vazia'}</h3><p className="mx-auto mt-2 max-w-lg text-sm leading-6 text-[#6A838A]">{searchTerm.trim() ? 'Tente pesquisar por parte do título, uma trilha ou o número da lição.' : 'Abra uma lição e selecione Salvar para mantê-la disponível aqui quando desejar retomar o estudo.'}</p></div>}
+    </section>}
+  </ClinicalFocusLayout>
+}
+
+export function ClinicalFocusTransparency({ user, userProgress, onDashboard, onPerformance, onLibrary, onTransparency, onLogout }) {
   return (
-    <ClinicalFocusLayout currentView="transparency" user={user} userProgress={userProgress} onDashboard={onDashboard} onPerformance={onPerformance} onTransparency={onTransparency} onLogout={onLogout} onBack={onDashboard} backLabel="Visão geral">
+    <ClinicalFocusLayout currentView="transparency" user={user} userProgress={userProgress} onDashboard={onDashboard} onPerformance={onPerformance} onLibrary={onLibrary} onTransparency={onTransparency} onLogout={onLogout} onBack={onDashboard} backLabel="Visão geral">
       <section className="mx-auto max-w-4xl rounded-3xl border border-[#DCE8E9] bg-white p-6 shadow-[0_1px_2px_rgba(15,46,56,0.03)] sm:p-8">
         <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between"><div className="max-w-2xl"><div className="flex items-center gap-2 text-[#315A65]"><ShieldCheck size={19} /><span className="text-xs font-semibold uppercase tracking-[0.14em]">Transparência</span></div><h1 className="mt-3 text-3xl font-semibold tracking-[-0.04em] text-[#17313A]">Uso educacional e privacidade</h1><p className="mt-3 text-sm leading-6 text-[#637E85]">Informações essenciais sobre o propósito do InfectEasy, os limites do conteúdo e o tratamento do seu percurso de aprendizagem.</p></div><div className="inline-flex w-fit items-center gap-2 rounded-xl border border-[#DCE8E9] bg-[#F7FBFB] px-3.5 py-2.5 text-xs font-semibold text-[#547078]"><LockKeyhole size={15} /> Ambiente individual</div></div>
 
@@ -475,7 +524,7 @@ export function ClinicalFocusTransparency({ user, userProgress, onDashboard, onP
   )
 }
 
-export function ClinicalFocusModule({ moduleId, module, user, userProgress, isLessonCompleted, isLessonUnlocked, getNextLesson, onStartLesson, onDashboard, onPerformance, onTransparency, onLogout }) {
+export function ClinicalFocusModule({ moduleId, module, user, userProgress, isLessonCompleted, isLessonUnlocked, getNextLesson, onStartLesson, onDashboard, onPerformance, onLibrary, onTransparency, onLogout }) {
   const meta = getMeta(moduleId)
   const Icon = meta.icon
   const completed = module.lessons.filter((lesson) => isLessonCompleted(moduleId, lesson.id)).length
@@ -483,7 +532,7 @@ export function ClinicalFocusModule({ moduleId, module, user, userProgress, isLe
   const nextLessonId = getNextLesson(moduleId, module.lessons)
 
   return (
-    <ClinicalFocusLayout currentView="moduleView" user={user} userProgress={userProgress} onDashboard={onDashboard} onPerformance={onPerformance} onTransparency={onTransparency} onLogout={onLogout} onBack={onDashboard} backLabel="Visão geral">
+    <ClinicalFocusLayout currentView="moduleView" user={user} userProgress={userProgress} onDashboard={onDashboard} onPerformance={onPerformance} onLibrary={onLibrary} onTransparency={onTransparency} onLogout={onLogout} onBack={onDashboard} backLabel="Visão geral">
       <section className="rounded-3xl border border-[#DCE8E9] bg-white p-6 shadow-[0_1px_2px_rgba(15,46,56,0.03)] sm:p-8">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
           <div className="flex max-w-2xl gap-4"><div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${meta.soft} ${meta.ink}`}><Icon size={24} /></div><div><p className={`text-xs font-semibold uppercase tracking-[0.14em] ${meta.ink}`}>{meta.label}</p><h1 className="mt-2 text-2xl font-semibold tracking-[-0.035em] text-[#17313A] sm:text-3xl">{module.title}</h1><p className="mt-3 text-sm leading-6 text-[#657E85]">{module.description}</p></div></div>
@@ -509,17 +558,20 @@ export function ClinicalFocusModule({ moduleId, module, user, userProgress, isLe
   )
 }
 
-export function ClinicalFocusLesson({ lesson, moduleId, currentSection, currentQuestion, selectedAnswer, showQuestionFeedback, user, userProgress, editorialGovernance, onDashboard, onPerformance, onTransparency, onLogout, onBack, onShowQuestion, onSelectAnswer, onSubmitAnswer, onNextSection, onCompleteLesson, onContinue }) {
+export function ClinicalFocusLesson({ lesson, moduleId, currentSection, currentQuestion, selectedAnswer, showQuestionFeedback, user, userProgress, editorialGovernance, personalLibrary, onToggleSaved, onDashboard, onPerformance, onLibrary, onTransparency, onLogout, onBack, onShowQuestion, onSelectAnswer, onSubmitAnswer, onNextSection, onCompleteLesson, onContinue }) {
   const meta = getMeta(moduleId)
   const section = lesson?.sections?.[currentSection]
   const total = lesson?.sections?.length || 0
   const progress = total ? ((currentSection + 1) / total) * 100 : 0
+  const lessonKey = savedLessonKey(moduleId, lesson?.id)
+  const isSaved = Array.isArray(personalLibrary?.entries) && personalLibrary.entries.some((entry) => savedLessonKey(entry.module_id, entry.lesson_id) === lessonKey)
+  const isSaving = Array.isArray(personalLibrary?.savingKeys) && personalLibrary.savingKeys.includes(lessonKey)
   if (!lesson || !section) return null
 
   return (
-    <ClinicalFocusLayout currentView="lesson" user={user} userProgress={userProgress} onDashboard={onDashboard} onPerformance={onPerformance} onTransparency={onTransparency} onLogout={onLogout} onBack={onBack} backLabel="Voltar à trilha">
+    <ClinicalFocusLayout currentView="lesson" user={user} userProgress={userProgress} onDashboard={onDashboard} onPerformance={onPerformance} onLibrary={onLibrary} onTransparency={onTransparency} onLogout={onLogout} onBack={onBack} backLabel="Voltar à trilha">
       <section className="mx-auto max-w-4xl">
-        <div className="mb-7"><div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs font-medium text-[#6E858C]"><span>{lesson.title}</span><span className="h-1 w-1 rounded-full bg-[#9CB0B5]" /><span>Seção {currentSection + 1} de {total}</span><span className="h-1 w-1 rounded-full bg-[#9CB0B5]" /><span>{lesson.duration}</span></div><div className="mt-4 flex items-end justify-between gap-4"><h1 className="text-2xl font-semibold tracking-[-0.035em] text-[#17313A] sm:text-3xl">{section.title}</h1><span className={`hidden rounded-lg px-3 py-2 text-xs font-semibold sm:inline-flex ${meta.soft} ${meta.ink}`}>{lesson.xp} pontos ao concluir</span></div><div className="mt-5"><ProgressBar value={progress} color={meta.accent} /></div></div>
+        <div className="mb-7"><div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs font-medium text-[#6E858C]"><span>{lesson.title}</span><span className="h-1 w-1 rounded-full bg-[#9CB0B5]" /><span>Seção {currentSection + 1} de {total}</span><span className="h-1 w-1 rounded-full bg-[#9CB0B5]" /><span>{lesson.duration}</span></div><div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"><h1 className="text-2xl font-semibold tracking-[-0.035em] text-[#17313A] sm:text-3xl">{section.title}</h1><div className="flex flex-wrap items-center gap-2"><button type="button" disabled={isSaving} onClick={() => onToggleSaved?.(moduleId, lesson.id)} aria-label={`${isSaved ? 'Remover' : 'Salvar'} ${lesson.title} da Biblioteca`} className={`inline-flex items-center gap-2 rounded-lg border px-3 py-2 text-xs font-semibold transition-colors disabled:cursor-wait disabled:opacity-60 ${isSaved ? 'border-[#B8D5D2] bg-[#EFF8F7] text-[#23655F] hover:bg-[#E4F3F1]' : 'border-[#C9D9DC] bg-white text-[#315A65] hover:bg-[#F2F7F7]'}`}><Bookmark size={14} fill={isSaved ? 'currentColor' : 'none'} />{isSaving ? 'Atualizando...' : isSaved ? 'Salva na Biblioteca' : 'Salvar na Biblioteca'}</button><span className={`hidden rounded-lg px-3 py-2 text-xs font-semibold sm:inline-flex ${meta.soft} ${meta.ink}`}>{lesson.xp} pontos ao concluir</span></div></div><div className="mt-5"><ProgressBar value={progress} color={meta.accent} /></div></div>
 
         <article className="overflow-hidden rounded-3xl border border-[#DFE9EB] bg-white shadow-[0_2px_4px_rgba(15,46,56,0.03)]">
           {section.videoUrl && <div className="border-b border-[#DFE9EB] bg-[#F5F9F9] p-4 sm:p-6"><div className="overflow-hidden rounded-2xl border border-[#D8E5E7] bg-[#0F2D37]" style={{ aspectRatio: '16 / 9' }}><iframe src={section.videoUrl} title="Vídeo explicativo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="h-full w-full" /></div></div>}

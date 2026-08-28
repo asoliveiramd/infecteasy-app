@@ -2,8 +2,14 @@ import React, { useState, useRef, useEffect, useCallback } from 'react'
 import './App.css'
 import { antimicrobianosModule } from './antimicrobianos_module.js'
 import { isSupabaseConfigured, supabase } from './lib/supabase';
-import { ClinicalFocusDashboard, ClinicalFocusLesson, ClinicalFocusModule, ClinicalFocusPerformance, ClinicalFocusTransparency } from './components/ClinicalFocus.jsx'
+import { ClinicalFocusDashboard, ClinicalFocusLesson, ClinicalFocusLibrary, ClinicalFocusModule, ClinicalFocusPerformance, ClinicalFocusTransparency } from './components/ClinicalFocus.jsx'
 import { createAttemptToken, getProgressLevel, normalizeQuestion, resolveTotalStudySeconds } from './utils/learningRules.js'
+import { savedLessonKey } from './utils/personalLibrary.js'
+
+const PREVIEW_LIBRARY_ENTRIES = [
+  { module_id: 'microbiologia', lesson_id: 1, saved_at: '2026-08-28T12:00:00.000Z' },
+  { module_id: 'antibiograma', lesson_id: 1, saved_at: '2026-08-27T14:00:00.000Z' },
+]
 
 const App = () => {
   // Estados principais
@@ -53,6 +59,13 @@ const App = () => {
     ready: false,
     error: '',
   })
+  const [personalLibrary, setPersonalLibrary] = useState({
+    entries: [],
+    loading: false,
+    ready: false,
+    error: '',
+    savingKeys: [],
+  })
   const [scrollPosition, setScrollPosition] = useState(0)
   const activeUserIdRef = useRef(null)
   const previewSearch = new URLSearchParams(window.location.search)
@@ -90,6 +103,8 @@ const App = () => {
       window.history.pushState({ view: 'performance' }, '', '#desempenho')
     } else if (currentView === 'transparency') {
       window.history.pushState({ view: 'transparency' }, '', '#uso-privacidade')
+    } else if (currentView === 'library') {
+      window.history.pushState({ view: 'library' }, '', '#biblioteca')
     } else if (currentView === 'lesson') {
       window.history.pushState({ view: 'lesson' }, '', '#lesson')
     } else if (currentView === 'login') {
@@ -291,6 +306,40 @@ const App = () => {
     void loadEditorialGovernance()
   }, [isClinicalPreview, loadEditorialGovernance, user?.id])
 
+  const loadPersonalLibrary = useCallback(async () => {
+    if (isClinicalPreview || !supabase || !user?.id) return
+
+    setPersonalLibrary((previous) => ({ ...previous, loading: true, error: '' }))
+    try {
+      const { data, error } = await supabase
+        .from('user_saved_lessons')
+        .select('module_id, lesson_id, saved_at')
+        .order('saved_at', { ascending: false })
+
+      if (error) throw error
+      setPersonalLibrary((previous) => ({
+        ...previous,
+        entries: Array.isArray(data) ? data : [],
+        loading: false,
+        ready: true,
+        error: '',
+      }))
+    } catch (error) {
+      console.error('Não foi possível carregar sua Biblioteca pessoal.', error)
+      setPersonalLibrary((previous) => ({
+        ...previous,
+        loading: false,
+        ready: true,
+        error: 'Não foi possível atualizar sua Biblioteca agora. Verifique sua conexão e tente novamente.',
+      }))
+    }
+  }, [isClinicalPreview, user?.id])
+
+  useEffect(() => {
+    if (!user?.id || isClinicalPreview) return
+    void loadPersonalLibrary()
+  }, [isClinicalPreview, loadPersonalLibrary, user?.id])
+
   const loadAuthenticatedUser = useCallback(async (authUser) => {
     if (!supabase || !authUser) return
 
@@ -327,6 +376,7 @@ const App = () => {
       setLearningInsights({ recommendations: [], achievements: [], loading: true, ready: false, error: '' })
       setPerformanceReport({ modules: [], activities: [], loading: true, ready: false, error: '' })
       setEditorialGovernance({ statuses: [], sources: [], links: [], loading: true, ready: false, error: '' })
+      setPersonalLibrary({ entries: [], loading: true, ready: false, error: '', savingKeys: [] })
     }
     activeUserIdRef.current = authUser.id
     setUser({
@@ -400,6 +450,7 @@ const App = () => {
         setLearningInsights({ recommendations: [], achievements: [], loading: false, ready: false, error: '' })
         setPerformanceReport({ modules: [], activities: [], loading: false, ready: false, error: '' })
         setEditorialGovernance({ statuses: [], sources: [], links: [], loading: false, ready: false, error: '' })
+        setPersonalLibrary({ entries: [], loading: false, ready: false, error: '', savingKeys: [] })
         setCurrentView('login')
       }
     })
@@ -19846,6 +19897,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
     setLearningInsights({ recommendations: [], achievements: [], loading: false, ready: false, error: '' })
     setPerformanceReport({ modules: [], activities: [], loading: false, ready: false, error: '' })
     setEditorialGovernance({ statuses: [], sources: [], links: [], loading: false, ready: false, error: '' })
+    setPersonalLibrary({ entries: [], loading: false, ready: false, error: '', savingKeys: [] })
     setCurrentView('login')
     setCurrentModule(null)
     setCurrentLesson(null)
@@ -19898,6 +19950,76 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
       return
     }
     void loadPerformanceReport()
+  }
+
+  const retryPersonalLibrary = () => {
+    if (isClinicalPreview) return
+    void loadPersonalLibrary()
+  }
+
+  const openLibrary = () => {
+    setSelectedModuleId(null)
+    setCurrentLesson(null)
+    setCurrentQuestion(null)
+    setShowQuestionFeedback(false)
+    setSelectedAnswer(null)
+    setCurrentView('library')
+  }
+
+  const toggleSavedLesson = async (moduleId, lessonId) => {
+    const key = savedLessonKey(moduleId, lessonId)
+    if (personalLibrary.savingKeys.includes(key)) return
+    const effectiveEntries = isClinicalPreview && !personalLibrary.ready
+      ? PREVIEW_LIBRARY_ENTRIES
+      : personalLibrary.entries
+    const wasSaved = effectiveEntries.some((entry) => savedLessonKey(entry.module_id, entry.lesson_id) === key)
+
+    setPersonalLibrary((previous) => ({ ...previous, savingKeys: [...previous.savingKeys, key], error: '' }))
+
+    if (isClinicalPreview) {
+      setPersonalLibrary((previous) => ({
+        ...previous,
+        entries: wasSaved
+          ? effectiveEntries.filter((entry) => savedLessonKey(entry.module_id, entry.lesson_id) !== key)
+          : [{ module_id: moduleId, lesson_id: lessonId, saved_at: new Date().toISOString() }, ...effectiveEntries],
+        ready: true,
+        savingKeys: previous.savingKeys.filter((item) => item !== key),
+      }))
+      return
+    }
+
+    if (!supabase || !user?.id) {
+      setPersonalLibrary((previous) => ({
+        ...previous,
+        savingKeys: previous.savingKeys.filter((item) => item !== key),
+        error: 'Não foi possível atualizar sua Biblioteca sem uma sessão autenticada.',
+      }))
+      return
+    }
+
+    try {
+      const { data, error } = await supabase.rpc(
+        wasSaved ? 'remove_lesson_from_library' : 'save_lesson_to_library',
+        { p_module_id: moduleId, p_lesson_id: lessonId },
+      )
+      if (error) throw error
+
+      setPersonalLibrary((previous) => ({
+        ...previous,
+        entries: wasSaved
+          ? previous.entries.filter((entry) => savedLessonKey(entry.module_id, entry.lesson_id) !== key)
+          : [{ module_id: moduleId, lesson_id: lessonId, saved_at: data?.saved_at || new Date().toISOString() }, ...previous.entries],
+        ready: true,
+        savingKeys: previous.savingKeys.filter((item) => item !== key),
+      }))
+    } catch (error) {
+      console.error('Não foi possível atualizar sua Biblioteca pessoal.', error)
+      setPersonalLibrary((previous) => ({
+        ...previous,
+        savingKeys: previous.savingKeys.filter((item) => item !== key),
+        error: 'Não foi possível atualizar sua Biblioteca agora. Verifique sua conexão e tente novamente.',
+      }))
+    }
   }
 
   const leaveLessonToDashboard = () => {
@@ -20141,6 +20263,13 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
     loading: false,
     ready: true,
   }
+  const previewPersonalLibrary = {
+    entries: PREVIEW_LIBRARY_ENTRIES,
+    loading: false,
+    ready: true,
+    error: '',
+    savingKeys: [],
+  }
   const previewEditorialGovernance = {
     statuses: [{
       module_id: 'antibiograma',
@@ -20191,6 +20320,9 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
   const displayEditorialGovernance = isClinicalPreview
     ? previewEditorialGovernance
     : editorialGovernance
+  const displayPersonalLibrary = isClinicalPreview
+    ? personalLibrary.ready ? personalLibrary : previewPersonalLibrary
+    : personalLibrary
   const displayView = isClinicalPreview && currentView === 'login' ? 'dashboard' : currentView
 
   // Renderização condicional
@@ -20515,6 +20647,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
         onOpenModule={openModule}
         onStartLesson={startLesson}
         onPerformance={openPerformance}
+        onLibrary={openLibrary}
         onTransparency={openTransparency}
         learningInsights={displayInsights}
         onRefreshInsights={retryLearningInsights}
@@ -20547,6 +20680,33 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
         onStartLesson={startLesson}
         onDashboard={backToDashboard}
         onPerformance={openPerformance}
+        onLibrary={openLibrary}
+        onTransparency={openTransparency}
+        onLogout={handleLogout}
+      />
+    )
+  }
+
+  if (displayView === 'library') {
+    return (
+      <ClinicalFocusLibrary
+        modulesData={modulesData}
+        user={displayUser}
+        userProgress={displayProgress}
+        personalLibrary={displayPersonalLibrary}
+        isLessonUnlocked={isLessonUnlocked}
+        onToggleSaved={toggleSavedLesson}
+        onRefreshLibrary={retryPersonalLibrary}
+        onOpenLesson={(moduleId, lessonId) => {
+          if (isLessonUnlocked(moduleId, lessonId)) {
+            void startLesson(moduleId, lessonId)
+            return
+          }
+          openModule(moduleId)
+        }}
+        onDashboard={backToDashboard}
+        onPerformance={openPerformance}
+        onLibrary={openLibrary}
         onTransparency={openTransparency}
         onLogout={handleLogout}
       />
@@ -20563,6 +20723,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
         onRefreshReport={retryPerformanceReport}
         onDashboard={backToDashboard}
         onPerformance={openPerformance}
+        onLibrary={openLibrary}
         onTransparency={openTransparency}
         onLogout={handleLogout}
       />
@@ -20576,6 +20737,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
         userProgress={displayProgress}
         onDashboard={backToDashboard}
         onPerformance={openPerformance}
+        onLibrary={openLibrary}
         onTransparency={openTransparency}
         onLogout={handleLogout}
       />
@@ -20596,8 +20758,11 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
         editorialGovernance={displayEditorialGovernance}
         onDashboard={leaveLessonToDashboard}
         onPerformance={openPerformance}
+        onLibrary={openLibrary}
         onTransparency={openTransparency}
         onLogout={handleLogout}
+        personalLibrary={displayPersonalLibrary}
+        onToggleSaved={toggleSavedLesson}
         onBack={() => {
           void saveStudyCheckpoint(currentSection, true)
           setCurrentView('moduleView')
