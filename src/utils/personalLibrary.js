@@ -1,3 +1,5 @@
+const OFFICIAL_MODULE_IDS = new Set(['microbiologia', 'antibiograma', 'antibioticoterapia'])
+
 const normalizeSearchText = (value) => String(value || '')
   .normalize('NFD')
   .replace(/[\u0300-\u036f]/g, '')
@@ -7,6 +9,7 @@ const normalizeSearchText = (value) => String(value || '')
 export const savedLessonKey = (moduleId, lessonId) => `${moduleId}:${Number(lessonId)}`
 
 export const flattenLessonCatalog = (modulesData = {}) => Object.entries(modulesData)
+  .filter(([moduleId]) => OFFICIAL_MODULE_IDS.has(moduleId))
   .flatMap(([moduleId, module]) => (module?.lessons || []).map((lesson) => ({
     moduleId,
     moduleTitle: module.title || 'Trilha de estudo',

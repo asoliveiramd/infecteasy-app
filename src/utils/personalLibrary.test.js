@@ -25,6 +25,19 @@ describe('Biblioteca pessoal', () => {
     ]))
   })
 
+  it('ignora módulos que não pertencem ao catálogo oficial', () => {
+    const lessons = flattenLessonCatalog({
+      ...modules,
+      curso_externo: {
+        title: 'Curso externo',
+        lessons: [{ id: 1, title: 'Conteúdo fora do catálogo' }],
+      },
+    })
+
+    expect(lessons).toHaveLength(2)
+    expect(lessons.some((lesson) => lesson.moduleId === 'curso_externo')).toBe(false)
+  })
+
   it('encontra texto sem depender de acentos ou maiúsculas', () => {
     const lessons = flattenLessonCatalog(modules)
 
