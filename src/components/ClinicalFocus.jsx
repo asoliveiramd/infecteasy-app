@@ -1,5 +1,6 @@
 import React from 'react'
 import markdownToHtml from '../utils/markdownToHtml'
+import { useConnectivity } from '../contexts/connectivity.js'
 import { filterLessonCatalog, flattenLessonCatalog, savedLessonKey, sortSavedLessons } from '../utils/personalLibrary'
 import {
   Activity,
@@ -31,6 +32,7 @@ import {
   TrendingUp,
   Trophy,
   UserRound,
+  WifiOff,
 } from 'lucide-react'
 
 const moduleMeta = {
@@ -164,6 +166,7 @@ function MobileNavItem({ icon, label, active, onClick }) {
 }
 
 export function ClinicalFocusLayout({ children, currentView, user, userProgress, onDashboard, onPerformance, onLibrary, onTransparency, onLogout, onBack, backLabel }) {
+  const { isOnline } = useConnectivity()
   const viewLabel = currentView === 'lesson' ? 'Lição' : currentView === 'moduleView' ? 'Trilha' : currentView === 'performance' ? 'Meu desempenho' : currentView === 'library' ? 'Biblioteca' : currentView === 'transparency' ? 'Uso e privacidade' : 'Visão geral'
   const initials = (user?.name || user?.email || 'IE')
     .split(' ')
@@ -194,6 +197,11 @@ export function ClinicalFocusLayout({ children, currentView, user, userProgress,
       </aside>
 
       <div className="lg:pl-64">
+        {!isOnline && (
+          <div role="status" aria-live="polite" className="border-b border-[#EACD9B] bg-[#FFF8E9] px-4 py-2.5 text-sm text-[#72531F] sm:px-6 lg:px-8">
+            <div className="mx-auto flex max-w-7xl items-center gap-2"><WifiOff size={17} aria-hidden="true" /><span><strong>Você está sem conexão.</strong> A leitura pode continuar, mas respostas, progresso e itens salvos serão registrados somente quando a internet voltar.</span></div>
+          </div>
+        )}
         <header className="sticky top-0 z-20 border-b border-[#DCE6E8] bg-white/95 backdrop-blur">
           <div className="mx-auto flex h-[68px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-3">

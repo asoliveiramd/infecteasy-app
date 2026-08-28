@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="InfectEasy">
+  <rect width="512" height="512" rx="112" fill="#0F4C5C"/>
+  <path d="M256 92c47 45 101 60 147 64v108c0 88-61 137-147 169-86-32-147-81-147-169V156c46-4 100-19 147-64Z" fill="#EAF7F6"/>
+  <path d="M232 164h48v68h68v48h-68v68h-48v-68h-68v-48h68z" fill="#15756D"/>
+</svg>

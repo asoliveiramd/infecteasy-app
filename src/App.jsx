@@ -5,6 +5,7 @@ import { isSupabaseConfigured, supabase } from './lib/supabase';
 import { ClinicalFocusDashboard, ClinicalFocusLesson, ClinicalFocusLibrary, ClinicalFocusModule, ClinicalFocusPerformance, ClinicalFocusTransparency } from './components/ClinicalFocus.jsx'
 import { createAttemptToken, getProgressLevel, normalizeQuestion, resolveTotalStudySeconds } from './utils/learningRules.js'
 import { savedLessonKey } from './utils/personalLibrary.js'
+import { useConnectivity } from './contexts/connectivity.js'
 
 const PREVIEW_LIBRARY_ENTRIES = [
   { module_id: 'microbiologia', lesson_id: 1, saved_at: '2026-08-28T12:00:00.000Z' },
@@ -71,6 +72,7 @@ const App = () => {
   const previewSearch = new URLSearchParams(window.location.search)
   const isClinicalPreview = import.meta.env.DEV && previewSearch.get('preview') === 'clinical'
   const isSyncErrorPreview = isClinicalPreview && previewSearch.get('sync') === 'error'
+  const { isOnline } = useConnectivity()
   const [previewSyncError, setPreviewSyncError] = useState(isSyncErrorPreview)
 
   // Gerenciar histórico do navegador
@@ -146,7 +148,7 @@ const App = () => {
 
   const saveStudyCheckpoint = async (sectionIndex, endSession = false) => {
     const sessionId = studySessionIdRef.current
-    if (isClinicalPreview || !supabase || !user?.id || !sessionId) return null
+    if (isClinicalPreview || !isOnline || !supabase || !user?.id || !sessionId) return null
 
     const task = checkpointQueueRef.current
       .catch(() => undefined)
@@ -172,7 +174,7 @@ const App = () => {
   }
 
   const startStudySession = async (moduleId, lessonId) => {
-    if (isClinicalPreview || !supabase || !user?.id) return 0
+    if (isClinicalPreview || !isOnline || !supabase || !user?.id) return 0
 
     try {
       const { data, error } = await supabase.rpc('start_lesson_session', {
@@ -191,7 +193,7 @@ const App = () => {
   }
 
   const loadLearningInsights = useCallback(async () => {
-    if (isClinicalPreview || !supabase || !user?.id) return
+    if (isClinicalPreview || !isOnline || !supabase || !user?.id) return
 
     setLearningInsights((previous) => ({ ...previous, loading: true, error: '' }))
     try {
@@ -223,7 +225,7 @@ const App = () => {
         error: 'Não foi possível atualizar suas recomendações agora. Verifique sua conexão e tente novamente.',
       }))
     }
-  }, [isClinicalPreview, user?.id])
+  }, [isClinicalPreview, isOnline, user?.id])
 
   useEffect(() => {
     if (!user?.id || isClinicalPreview) return
@@ -231,7 +233,7 @@ const App = () => {
   }, [isClinicalPreview, loadLearningInsights, user?.id])
 
   const loadPerformanceReport = useCallback(async () => {
-    if (isClinicalPreview || !supabase || !user?.id) return
+    if (isClinicalPreview || !isOnline || !supabase || !user?.id) return
 
     setPerformanceReport((previous) => ({ ...previous, loading: true, error: '' }))
     try {
@@ -257,7 +259,7 @@ const App = () => {
         error: 'Não foi possível atualizar seu relatório agora. Verifique sua conexão e tente novamente.',
       }))
     }
-  }, [isClinicalPreview, user?.id])
+  }, [isClinicalPreview, isOnline, user?.id])
 
   useEffect(() => {
     if (!user?.id || isClinicalPreview) return
@@ -265,7 +267,7 @@ const App = () => {
   }, [isClinicalPreview, loadPerformanceReport, user?.id])
 
   const loadEditorialGovernance = useCallback(async () => {
-    if (isClinicalPreview || !supabase || !user?.id) return
+    if (isClinicalPreview || !isOnline || !supabase || !user?.id) return
 
     setEditorialGovernance((previous) => ({ ...previous, loading: true, error: '' }))
     try {
@@ -299,7 +301,7 @@ const App = () => {
         error: 'As informações de fontes não puderam ser atualizadas agora.',
       }))
     }
-  }, [isClinicalPreview, user?.id])
+  }, [isClinicalPreview, isOnline, user?.id])
 
   useEffect(() => {
     if (!user?.id || isClinicalPreview) return
@@ -307,7 +309,7 @@ const App = () => {
   }, [isClinicalPreview, loadEditorialGovernance, user?.id])
 
   const loadPersonalLibrary = useCallback(async () => {
-    if (isClinicalPreview || !supabase || !user?.id) return
+    if (isClinicalPreview || !isOnline || !supabase || !user?.id) return
 
     setPersonalLibrary((previous) => ({ ...previous, loading: true, error: '' }))
     try {
@@ -333,7 +335,7 @@ const App = () => {
         error: 'Não foi possível atualizar sua Biblioteca agora. Verifique sua conexão e tente novamente.',
       }))
     }
-  }, [isClinicalPreview, user?.id])
+  }, [isClinicalPreview, isOnline, user?.id])
 
   useEffect(() => {
     if (!user?.id || isClinicalPreview) return
@@ -19972,6 +19974,15 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
     const effectiveEntries = isClinicalPreview && !personalLibrary.ready
       ? PREVIEW_LIBRARY_ENTRIES
       : personalLibrary.entries
+
+    if (!isClinicalPreview && !isOnline) {
+      setPersonalLibrary((previous) => ({
+        ...previous,
+        error: 'Você está sem conexão. Reconecte-se para salvar ou remover itens da Biblioteca.',
+      }))
+      return
+    }
+
     const wasSaved = effectiveEntries.some((entry) => savedLessonKey(entry.module_id, entry.lesson_id) === key)
 
     setPersonalLibrary((previous) => ({ ...previous, savingKeys: [...previous.savingKeys, key], error: '' }))
@@ -20078,6 +20089,7 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
 
   const submitAnswer = async () => {
     if (showQuestionFeedback || selectedAnswer === null || !currentQuestion) return
+    if (!isClinicalPreview && !isOnline) return
 
     // O feedback pedagógico é imediato, mas não há mais XP calculado ou gravado pelo navegador.
     setShowQuestionFeedback(true)
@@ -20135,6 +20147,8 @@ Ao tratar uma infecção de pele e partes moles, devemos pensar primariamente em
       returnToModule()
       return
     }
+
+    if (!isOnline) return
 
     try {
       // O tempo é um complemento analítico. Uma falha de checkpoint não bloqueia a conclusão idempotente da lição.
